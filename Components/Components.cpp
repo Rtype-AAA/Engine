@@ -10,8 +10,9 @@
 //}
 
 template<typename T>
-inline Components::ComponentTypeID Components::getComponentTypeID() noexcept {
+Components::ComponentTypeID Components::getComponentTypeID() noexcept {
     static_assert(std::is_base_of<Components,T>::value, "Type not base on components!");
-    static const ComponentTypeID typeID = getUniqueComponentID();
+    T* comp = new T();
+    static const ComponentTypeID typeID = comp->getBit();
     return typeID;
 }

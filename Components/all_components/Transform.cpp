@@ -8,35 +8,28 @@ int Transform::getBit() const {
     return bit;
 }
 
-float Transform::getPositionX() const {
-    return position_x;
+std::vector<float> Transform::getPositionVector() const {
+    return position;
 }
 
-float Transform::getPositionY() const {
-    return position_y;
+std::vector<float> Transform::getRotationVector() const {
+    return rotation;
 }
 
-float Transform::getRotationX() const {
-    return rotation_x;
+std::vector<float> Transform::getScaleVector() const {
+    return scale;
 }
 
-float Transform::getRotationY() const {
-    return rotation_y;
-}
-
-float Transform::getScaleX() const {
-    return scale_x;
-}
-
-float Transform::getScaleY() const {
-    return scale_y;
-}
-
-inline void Transform::setTransform(float px, float py, float rx, float ry, float sx, float sy) {
-    position_x = (px != inf) ? px : position_x;
-    position_y = (py != inf) ? py : position_y;
-    rotation_x = (rx != inf) ? rx : rotation_x;
-    rotation_y = (ry != inf) ? ry : rotation_y;
-    scale_x = (sx != inf) ? sx : scale_x;
-    scale_y = (sy != inf) ? sy : scale_y;
+void Transform::setTransform(const std::map<std::string, std::vector<float>>& mapTransform) {
+    for(const auto& element : mapTransform) {
+        if ((element.first == "Position" or element.first == "position") and element.second.size() == 2) {
+            position = element.second;
+        }
+        if ((element.first == "Rotation" or element.first == "rotation") and element.second.size() == 2) {
+            rotation = element.second;
+        }
+        if ((element.first == "Scale" or element.first == "scale") and element.second.size() == 2) {
+            scale = element.second;
+        }
+    }
 }

@@ -23,8 +23,8 @@ public:
 
 //    static inline ComponentTypeID getUniqueComponentID();
 //
-//    template<typename T>
-//    inline ComponentTypeID getComponentTypeID() noexcept;
+    template<typename T>
+    ComponentTypeID getComponentTypeID() noexcept;
 };
 
 #include "Components.cpp"
