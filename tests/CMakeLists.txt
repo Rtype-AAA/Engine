@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+project(R-TypeTests)
+
+add_executable(all_tests
+    TestMain.cpp
+    Entity/TestEntity.cpp
+    Components/all_components/TestTransform.cpp
+    # Ajoutez d'autres fichiers de tests si nécessaire
+)
+
+target_include_directories(all_tests
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../Entity
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include
+)
+
+target_link_libraries(all_tests PRIVATE all_components gtest gtest_main)
+
+set_target_properties(all_tests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../"
+)
+
+include(GoogleTest)
+gtest_discover_tests(all_tests)
