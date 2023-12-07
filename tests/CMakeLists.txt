@@ -5,7 +5,6 @@ add_executable(all_tests
     TestMain.cpp
     Entity/TestEntity.cpp
     Components/all_components/TestTransform.cpp
-    # Ajoutez d'autres fichiers de tests si nécessaire
 )
 
 target_include_directories(all_tests
