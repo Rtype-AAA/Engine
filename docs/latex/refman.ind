@@ -1,0 +1,68 @@
+\begin{theindex}
+
+  \item {$\sim$Entity}
+    \subitem {Entity}, \hyperpage{9}
+  \item {$\sim$Transform}
+    \subitem {Transform}, \hyperpage{13}
+
+  \indexspace
+
+  \item {addComponent}
+    \subitem {Entity}, \hyperpage{9}
+  \item {Archetypes}, \hyperpage{7}
+  \item {Audio}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Components}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Entity}, \hyperpage{8}
+    \subitem {$\sim$Entity}, \hyperpage{9}
+    \subitem {addComponent}, \hyperpage{9}
+    \subitem {Entity}, \hyperpage{8, 9}
+    \subitem {getComponent}, \hyperpage{10}
+    \subitem {getName}, \hyperpage{10}
+    \subitem {setName}, \hyperpage{11}
+  \item {EntityTest}, \hyperpage{11}
+
+  \indexspace
+
+  \item {getBit}
+    \subitem {Transform}, \hyperpage{13}
+  \item {getComponent}
+    \subitem {Entity}, \hyperpage{10}
+  \item {getName}
+    \subitem {Entity}, \hyperpage{10}
+  \item {getPositionVector}
+    \subitem {Transform}, \hyperpage{14}
+  \item {getRotationVector}
+    \subitem {Transform}, \hyperpage{14}
+  \item {getScaleVector}
+    \subitem {Transform}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Rendering}, \hyperpage{11}
+
+  \indexspace
+
+  \item {setName}
+    \subitem {Entity}, \hyperpage{11}
+  \item {setTransform}
+    \subitem {Transform}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Transform}, \hyperpage{12}
+    \subitem {$\sim$Transform}, \hyperpage{13}
+    \subitem {getBit}, \hyperpage{13}
+    \subitem {getPositionVector}, \hyperpage{14}
+    \subitem {getRotationVector}, \hyperpage{14}
+    \subitem {getScaleVector}, \hyperpage{14}
+    \subitem {setTransform}, \hyperpage{15}
+    \subitem {Transform}, \hyperpage{12, 13}
+  \item {TransformTest}, \hyperpage{15}
+
+\end{theindex}

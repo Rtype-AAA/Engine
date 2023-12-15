@@ -20,8 +20,9 @@ T& Entity::addComponent(TArgs&&... args) {
     components.emplace_back(std::move(uptr));
     if (comp->init()) {
         componentArray[comp->getBit()] = comp;
-        componentBitset[comp->getBit()] = true;
         std::cout << comp << std::endl;
+        std::cout << componentArray[comp->getBit()] << std::endl;
+        componentBitset[comp->getBit()] = true;
         return *comp;
     }
     return *static_cast<T*>(nullptr);
@@ -29,5 +30,6 @@ T& Entity::addComponent(TArgs&&... args) {
 
 template<typename T>
 T& Entity::getComponent() {
-    return 0;
+    auto ptr = componentArray[Components::getComponentTypeID<T>()];
+    return *static_cast<T*>(ptr);
 }

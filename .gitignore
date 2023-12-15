@@ -37,3 +37,5 @@ cmd_cmake
 
 *build
 engine
+all_tests
+vgcore.*
