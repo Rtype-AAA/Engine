@@ -19,7 +19,7 @@ target_include_directories(engine
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(engine PRIVATE all_components)
+target_link_libraries(engine PRIVATE all_components sfml-system sfml-window sfml-graphics sfml-audio)
 
 set_target_properties(engine PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
