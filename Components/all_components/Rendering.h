@@ -45,18 +45,18 @@ public:
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
     /// @param texturePath: Path to the texture file for the sprite.
-    /// @return void
-    void createSprite(const std::string& texturePath);
+    /// @return bool: True if the sprite has been created, false otherwise
+    bool createSprite(const std::string& texturePath);
 
     /// @brief createSprite(): Create the SFML Sprite with an existing texture for rendering.
     /// @param existingTexture: SFML Texture for the sprite
-    /// @return void
-    void createSprite(const sf::Texture& existingTexture);
+    /// @return bool: True if the sprite has been created, false otherwise
+    bool createSprite(const sf::Texture& existingTexture);
 
     /// @brief createSprite(): Create the SFML Sprite with the component's texture for rendering.
-    /// @param void
-    /// @return void
-    void createSprite();
+    /// @param bool
+    /// @return bool: True if the sprite has been created, false otherwise
+    bool createSprite();
 
     /// @brief getSprite(): Get the SFML Sprite for rendering.
     /// @param void
@@ -70,18 +70,18 @@ public:
 
     /// @brief setSprite(): Set the SFML Sprite with an existing one for rendering.
     /// @param sprite: SFML Sprite for rendering
-    /// @return void
-    void setSprite(const sf::Sprite& sprite);
+    /// @return bool: True if the sprite has been set, false otherwise
+    bool setSprite(const sf::Sprite& sprite);
 
-    /// @brief setTexture(): Set the texture with a texture path for the sprite.
+    /// @brief setTexture(): Set the texture with a texture path for the sprite. Automatically create the sprite.
     /// @param texturePath: Path to the texture file for the sprite.
-    /// @return void
-    void setTexture(const std::string& texturePath);
+    /// @return bool: True if the texture has been set, false otherwise
+    bool setTexture(const std::string& texturePath);
 
-    /// @brief setTexture(): Set the texture with an existing one for the sprite.
+    /// @brief setTexture(): Set the texture with an existing one for the sprite. Automatically create the sprite.
     /// @param existingTexture: SFML Texture for the sprite
-    /// @return void
-    void setTexture(const sf::Texture& existingTexture);
+    /// @return bool: True if the texture has been set, false otherwise
+    bool setTexture(const sf::Texture& existingTexture);
 };
 
 #endif //R_TYPE_RENDERING_H

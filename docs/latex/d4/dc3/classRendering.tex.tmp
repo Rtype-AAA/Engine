@@ -1,0 +1,260 @@
+\hypertarget{classRendering}{}\doxysection{Rendering Class Reference}
+\label{classRendering}\index{Rendering@{Rendering}}
+
+
+\mbox{\hyperlink{classRendering}{Rendering}} class\+: \mbox{\hyperlink{classRendering}{Rendering}} is a class that represents the rendering properties of a Component.  
+
+
+
+
+{\ttfamily \#include $<$Rendering.\+h$>$}
+
+
+
+Inheritance diagram for Rendering\+:
+% FIG 0
+
+
+Collaboration diagram for Rendering\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRendering_a78cb4b0352ff753372bff8e2124f52c1}{Rendering}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classRendering}{Rendering}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRendering_afc990a89d361a4058322cb3079f0c952}{Rendering}} (const std\+::string \&texture\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering}{Rendering}} constructor with an existing texture path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRendering_a7338dc263d06de7c2da16fca09bd01e8}{$\sim$\+Rendering}} () override=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering}{Rendering}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_abb2d8092fcd5ccfcdcdc2623184ad0e4}{create\+Sprite}} (const std\+::string \&texture\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with a texture path for rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_a0a7af030e2c40553e5aca9d9e0ec5cc7}{create\+Sprite}} (const sf\+::\+Texture \&existing\+Texture)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with an existing texture for rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with the component\textquotesingle{}s texture for rendering. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{classRendering_ac62ac77287281703f53ac1f285346c35}{get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_ac62ac77287281703f53ac1f285346c35}{get\+Sprite()}}\+: Get the SFML Sprite for rendering. \end{DoxyCompactList}\item 
+sf\+::\+Texture \mbox{\hyperlink{classRendering_aa0c90382135574729684f73400f79685}{get\+Texture}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_aa0c90382135574729684f73400f79685}{get\+Texture()}}\+: Get the SFML Texture for the sprite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_a582bdc3557b46dfaafc610d203948709}{set\+Sprite}} (const sf\+::\+Sprite \&sprite)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_a582bdc3557b46dfaafc610d203948709}{set\+Sprite()}}\+: Set the SFML Sprite with an existing one for rendering. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_a0c1783b7df3faf69b35e854f2136c212}{set\+Texture}} (const std\+::string \&texture\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_a0c1783b7df3faf69b35e854f2136c212}{set\+Texture()}}\+: Set the texture with a texture path for the sprite. Automatically create the sprite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRendering_ace0cf6e6bb476402171b71db9f236dcd}{set\+Texture}} (const sf\+::\+Texture \&existing\+Texture)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRendering_a0c1783b7df3faf69b35e854f2136c212}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. Automatically create the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classRendering}{Rendering}} class\+: \mbox{\hyperlink{classRendering}{Rendering}} is a class that represents the rendering properties of a Component. 
+
+The \mbox{\hyperlink{classRendering}{Rendering}} class manages the graphical representation of a Component using SFML. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRendering_a78cb4b0352ff753372bff8e2124f52c1}\label{classRendering_a78cb4b0352ff753372bff8e2124f52c1}} 
+\index{Rendering@{Rendering}!Rendering@{Rendering}}
+\index{Rendering@{Rendering}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{Rendering()}{Rendering()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rendering\+::\+Rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classRendering}{Rendering}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_afc990a89d361a4058322cb3079f0c952}\label{classRendering_afc990a89d361a4058322cb3079f0c952}} 
+\index{Rendering@{Rendering}!Rendering@{Rendering}}
+\index{Rendering@{Rendering}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{Rendering()}{Rendering()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Rendering\+::\+Rendering (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classRendering}{Rendering}} constructor with an existing texture path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Path} & Path to the texture file for the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_a7338dc263d06de7c2da16fca09bd01e8}\label{classRendering_a7338dc263d06de7c2da16fca09bd01e8}} 
+\index{Rendering@{Rendering}!````~Rendering@{$\sim$Rendering}}
+\index{````~Rendering@{$\sim$Rendering}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rendering()}{~Rendering()}}
+{\footnotesize\ttfamily Rendering\+::$\sim$\+Rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classRendering}{Rendering}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRendering_ac42ae75eb8533663f077f5e05e035d94}\label{classRendering_ac42ae75eb8533663f077f5e05e035d94}} 
+\index{Rendering@{Rendering}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Rendering\+::create\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with the component\textquotesingle{}s texture for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the sprite has been created, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_a0a7af030e2c40553e5aca9d9e0ec5cc7}\label{classRendering_a0a7af030e2c40553e5aca9d9e0ec5cc7}} 
+\index{Rendering@{Rendering}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Rendering\+::create\+Sprite (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{existing\+Texture }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with an existing texture for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em existing\+Texture} & SFML Texture for the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the sprite has been created, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_abb2d8092fcd5ccfcdcdc2623184ad0e4}\label{classRendering_abb2d8092fcd5ccfcdcdc2623184ad0e4}} 
+\index{Rendering@{Rendering}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Rendering\+::create\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_ac42ae75eb8533663f077f5e05e035d94}{create\+Sprite()}}\+: Create the SFML Sprite with a texture path for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Path} & Path to the texture file for the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the sprite has been created, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_ac62ac77287281703f53ac1f285346c35}\label{classRendering_ac62ac77287281703f53ac1f285346c35}} 
+\index{Rendering@{Rendering}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite Rendering\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classRendering_ac62ac77287281703f53ac1f285346c35}{get\+Sprite()}}\+: Get the SFML Sprite for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Sprite\+: SFML Sprite for rendering 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_aa0c90382135574729684f73400f79685}\label{classRendering_aa0c90382135574729684f73400f79685}} 
+\index{Rendering@{Rendering}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily sf\+::\+Texture Rendering\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classRendering_aa0c90382135574729684f73400f79685}{get\+Texture()}}\+: Get the SFML Texture for the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Texture\+: SFML Texture for the sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_a582bdc3557b46dfaafc610d203948709}\label{classRendering_a582bdc3557b46dfaafc610d203948709}} 
+\index{Rendering@{Rendering}!setSprite@{setSprite}}
+\index{setSprite@{setSprite}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{setSprite()}{setSprite()}}
+{\footnotesize\ttfamily bool Rendering\+::set\+Sprite (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{sprite }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_a582bdc3557b46dfaafc610d203948709}{set\+Sprite()}}\+: Set the SFML Sprite with an existing one for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & SFML Sprite for rendering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the sprite has been set, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_ace0cf6e6bb476402171b71db9f236dcd}\label{classRendering_ace0cf6e6bb476402171b71db9f236dcd}} 
+\index{Rendering@{Rendering}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Rendering\+::set\+Texture (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{existing\+Texture }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_a0c1783b7df3faf69b35e854f2136c212}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. Automatically create the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em existing\+Texture} & SFML Texture for the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the texture has been set, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRendering_a0c1783b7df3faf69b35e854f2136c212}\label{classRendering_a0c1783b7df3faf69b35e854f2136c212}} 
+\index{Rendering@{Rendering}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Rendering@{Rendering}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Rendering\+::set\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classRendering_a0c1783b7df3faf69b35e854f2136c212}{set\+Texture()}}\+: Set the texture with a texture path for the sprite. Automatically create the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Path} & Path to the texture file for the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the texture has been set, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Components/all\+\_\+components/Rendering.\+h\item 
+Components/all\+\_\+components/Rendering.\+cpp\end{DoxyCompactItemize}

@@ -43,7 +43,11 @@
   \indexspace
 
   \item {getBit}
+<<<<<<< HEAD
     \subitem {Transform}, \hyperpage{17}
+=======
+    \subitem {Transform}, \hyperpage{14}
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
   \item {getComponent}
     \subitem {Entity}, \hyperpage{10}
   \item {getEntities}
@@ -57,6 +61,7 @@
   \item {getPositionVector}
     \subitem {Transform}, \hyperpage{18}
   \item {getRotationVector}
+<<<<<<< HEAD
     \subitem {Transform}, \hyperpage{18}
   \item {getScaleVector}
     \subitem {Transform}, \hyperpage{18}
@@ -69,6 +74,16 @@
   \indexspace
 
   \item {Rendering}, \hyperpage{15}
+=======
+    \subitem {Transform}, \hyperpage{15}
+  \item {getScaleVector}
+    \subitem {Transform}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Rendering}, \hyperpage{11}
+  \item {RenderingTest}, \hyperpage{12}
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 
   \indexspace
 
@@ -79,6 +94,7 @@
 
   \indexspace
 
+<<<<<<< HEAD
   \item {Transform}, \hyperpage{15}
     \subitem {$\sim$Transform}, \hyperpage{17}
     \subitem {getBit}, \hyperpage{17}
@@ -88,5 +104,16 @@
     \subitem {setTransform}, \hyperpage{19}
     \subitem {Transform}, \hyperpage{16}
   \item {TransformTest}, \hyperpage{19}
+=======
+  \item {Transform}, \hyperpage{12}
+    \subitem {$\sim$Transform}, \hyperpage{13}
+    \subitem {getBit}, \hyperpage{14}
+    \subitem {getPositionVector}, \hyperpage{14}
+    \subitem {getRotationVector}, \hyperpage{15}
+    \subitem {getScaleVector}, \hyperpage{15}
+    \subitem {setTransform}, \hyperpage{15}
+    \subitem {Transform}, \hyperpage{13}
+  \item {TransformTest}, \hyperpage{16}
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 
 \end{theindex}

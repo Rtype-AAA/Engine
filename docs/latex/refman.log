@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  20 DEC 2023 19:14
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  19 DEC 2023 14:21
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,6 +977,7 @@ Underfull \hbox (badness 10000) detected at line 195
 [][][]
  []
 
+<<<<<<< HEAD
 
 Underfull \hbox (badness 10000) detected at line 217
 [][][]
@@ -1010,6 +1015,10 @@ Underfull \hbox (badness 10000) detected at line 162
 
 [14]) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex)
 (./d4/dc3/classRendering.tex) (./db/daf/classTransform.tex [15]
+=======
+) (./df/d2b/classEntityTest.tex) (./d4/dc3/classRendering.tex)
+(./d7/da1/classRenderingTest.tex [11]) (./db/daf/classTransform.tex [12]
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 Underfull \hbox (badness 10000) detected at line 63
 [][][]
  []
@@ -1026,12 +1035,16 @@ Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
 
-
+[13]
 Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
+<<<<<<< HEAD
 [17]
+=======
+
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 Underfull \hbox (badness 10000) detected at line 120
 [][][]
  []
@@ -1041,28 +1054,38 @@ Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
-
+[14]
 Underfull \hbox (badness 10000) detected at line 156
 [][][]
  []
 
+<<<<<<< HEAD
 [18]
+=======
+
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
 
-
+[15]
 Underfull \hbox (badness 10000) detected at line 192
 [][][]
  []
 
+<<<<<<< HEAD
 ) (./d6/d2b/classTransformTest.tex) [19] [20
+=======
+) (./d6/d2b/classTransformTest.tex) [16] (./refman.ind [17
+
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 
 ] (./refman.ind [21
 
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
+<<<<<<< HEAD
 (rerunfilecheck)             Checksum: F13678896AE31C53874C330075619B2A;9373.
  ) 
 Here is how much of TeX's memory you used:
@@ -1071,8 +1094,18 @@ Here is how much of TeX's memory you used:
  583703 words of memory out of 5000000
  34984 multiletter control sequences out of 15000+600000
  530331 words of font info for 101 fonts, out of 8000000 for 9000
+=======
+(rerunfilecheck)             Checksum: DF12ED0C71E0A789442B65E10DB9120D;7096.
+ ) 
+Here is how much of TeX's memory you used:
+ 17478 strings out of 480247
+ 280539 string characters out of 5896152
+ 581897 words of memory out of 5000000
+ 34950 multiletter control sequences out of 15000+600000
+ 529980 words of font info for 100 fonts, out of 8000000 for 9000
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
  14 hyphenation exceptions out of 8191
- 99i,15n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,15n,117p,473b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
@@ -1084,10 +1117,19 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
+<<<<<<< HEAD
 Output written on refman.pdf (25 pages, 140789 bytes).
 PDF statistics:
  701 PDF objects out of 1000 (max. 8388607)
  645 compressed objects within 7 object streams
  149 named destinations out of 1000 (max. 500000)
  385 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on refman.pdf (21 pages, 130937 bytes).
+PDF statistics:
+ 555 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
 

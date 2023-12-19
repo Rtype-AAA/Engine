@@ -12,33 +12,43 @@ sf::Texture Rendering::getTexture() const {
     return texture;
 }
 
-void Rendering::createSprite(const std::string& texturePath) {
+bool Rendering::createSprite(const std::string& texturePath) {
     if (texture.loadFromFile(texturePath)) {
         sprite.setTexture(texture);
+        return true;
     } else {
         std::cerr << "Error: Texture not found" << std::endl;
+        return false;
     }
 }
 
-void Rendering::createSprite(const sf::Texture& existingTexture) {
+bool Rendering::createSprite(const sf::Texture& existingTexture) {
     sprite.setTexture(existingTexture);
+    return true;
 }
 
-void Rendering::createSprite() {
+bool Rendering::createSprite() {
     sprite.setTexture(texture);
+    return true;
 }
 
-void Rendering::setSprite(const sf::Sprite& sprite) {
+bool Rendering::setSprite(const sf::Sprite& sprite) {
     Rendering::sprite = sprite;
+    return true;
 }
 
-void Rendering::setTexture(const std::string& texturePath) {
+bool Rendering::setTexture(const std::string& texturePath) {
     if (texture.loadFromFile(texturePath)) {
+        sprite.setTexture(texture);
+        return true;
     } else {
         std::cerr << "Error: Texture not found" << std::endl;
+        return false;
     }
 }
 
-void Rendering::setTexture(const sf::Texture& existingTexture) {
+bool Rendering::setTexture(const sf::Texture& existingTexture) {
     texture = existingTexture;
+    sprite.setTexture(texture);
+    return true;
 }

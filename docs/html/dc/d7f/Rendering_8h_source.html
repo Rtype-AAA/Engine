@@ -76,16 +76,58 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef R_TYPE_RENDERING_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define R_TYPE_RENDERING_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d4/dc3/classRendering.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/dc3/classRendering.html">Rendering</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="../../d4/dc3/classRendering.html">Rendering</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span>  ~<a class="code" href="../../d4/dc3/classRendering.html">Rendering</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//R_TYPE_RENDERING_H</span></div>
-<div class="ttc" id="aclassRendering_html"><div class="ttname"><a href="../../d4/dc3/classRendering.html">Rendering</a></div><div class="ttdef"><b>Definition:</b> Rendering.h:9</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;SFML/System.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Components.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d4/dc3/classRendering.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/dc3/classRendering.html">Rendering</a> : <span class="keyword">public</span> <a class="code" href="../../db/d46/classComponents.html">Components</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    sf::Sprite sprite; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Texture texture; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d4/dc3/classRendering.html#a78cb4b0352ff753372bff8e2124f52c1">   28</a></span>&#160;    <a class="code" href="../../d4/dc3/classRendering.html#a78cb4b0352ff753372bff8e2124f52c1">Rendering</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/dc3/classRendering.html#afc990a89d361a4058322cb3079f0c952">   33</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d4/dc3/classRendering.html#afc990a89d361a4058322cb3079f0c952">Rendering</a>(<span class="keyword">const</span> std::string&amp; texturePath) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (texture.loadFromFile(texturePath)) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            sprite.setTexture(texture);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Texture not found&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d4/dc3/classRendering.html#a7338dc263d06de7c2da16fca09bd01e8">   44</a></span>&#160;    <a class="code" href="../../d4/dc3/classRendering.html#a7338dc263d06de7c2da16fca09bd01e8">~Rendering</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#ac42ae75eb8533663f077f5e05e035d94">createSprite</a>(<span class="keyword">const</span> std::string&amp; texturePath);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#ac42ae75eb8533663f077f5e05e035d94">createSprite</a>(<span class="keyword">const</span> sf::Texture&amp; existingTexture);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#ac42ae75eb8533663f077f5e05e035d94">createSprite</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    [[nodiscard]] sf::Sprite <a class="code" href="../../d4/dc3/classRendering.html#ac62ac77287281703f53ac1f285346c35">getSprite</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    [[nodiscard]] sf::Texture <a class="code" href="../../d4/dc3/classRendering.html#aa0c90382135574729684f73400f79685">getTexture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#a582bdc3557b46dfaafc610d203948709">setSprite</a>(<span class="keyword">const</span> sf::Sprite&amp; sprite);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#a0c1783b7df3faf69b35e854f2136c212">setTexture</a>(<span class="keyword">const</span> std::string&amp; texturePath);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d4/dc3/classRendering.html#a0c1783b7df3faf69b35e854f2136c212">setTexture</a>(<span class="keyword">const</span> sf::Texture&amp; existingTexture);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//R_TYPE_RENDERING_H</span></div>
+<div class="ttc" id="aclassComponents_html"><div class="ttname"><a href="../../db/d46/classComponents.html">Components</a></div><div class="ttdef"><b>Definition:</b> Components.h:11</div></div>
+<div class="ttc" id="aclassRendering_html"><div class="ttname"><a href="../../d4/dc3/classRendering.html">Rendering</a></div><div class="ttdoc">Rendering class: Rendering is a class that represents the rendering properties of a Component.</div><div class="ttdef"><b>Definition:</b> Rendering.h:19</div></div>
+<div class="ttc" id="aclassRendering_html_a0c1783b7df3faf69b35e854f2136c212"><div class="ttname"><a href="../../d4/dc3/classRendering.html#a0c1783b7df3faf69b35e854f2136c212">Rendering::setTexture</a></div><div class="ttdeci">bool setTexture(const std::string &amp;texturePath)</div><div class="ttdoc">setTexture(): Set the texture with a texture path for the sprite. Automatically create the sprite.</div><div class="ttdef"><b>Definition:</b> Rendering.cpp:40</div></div>
+<div class="ttc" id="aclassRendering_html_a582bdc3557b46dfaafc610d203948709"><div class="ttname"><a href="../../d4/dc3/classRendering.html#a582bdc3557b46dfaafc610d203948709">Rendering::setSprite</a></div><div class="ttdeci">bool setSprite(const sf::Sprite &amp;sprite)</div><div class="ttdoc">setSprite(): Set the SFML Sprite with an existing one for rendering.</div><div class="ttdef"><b>Definition:</b> Rendering.cpp:35</div></div>
+<div class="ttc" id="aclassRendering_html_a7338dc263d06de7c2da16fca09bd01e8"><div class="ttname"><a href="../../d4/dc3/classRendering.html#a7338dc263d06de7c2da16fca09bd01e8">Rendering::~Rendering</a></div><div class="ttdeci">~Rendering() override=default</div><div class="ttdoc">Rendering destructor.</div></div>
+<div class="ttc" id="aclassRendering_html_a78cb4b0352ff753372bff8e2124f52c1"><div class="ttname"><a href="../../d4/dc3/classRendering.html#a78cb4b0352ff753372bff8e2124f52c1">Rendering::Rendering</a></div><div class="ttdeci">Rendering()=default</div><div class="ttdoc">Default Rendering constructor.</div></div>
+<div class="ttc" id="aclassRendering_html_aa0c90382135574729684f73400f79685"><div class="ttname"><a href="../../d4/dc3/classRendering.html#aa0c90382135574729684f73400f79685">Rendering::getTexture</a></div><div class="ttdeci">sf::Texture getTexture() const</div><div class="ttdoc">getTexture(): Get the SFML Texture for the sprite.</div><div class="ttdef"><b>Definition:</b> Rendering.cpp:11</div></div>
+<div class="ttc" id="aclassRendering_html_ac42ae75eb8533663f077f5e05e035d94"><div class="ttname"><a href="../../d4/dc3/classRendering.html#ac42ae75eb8533663f077f5e05e035d94">Rendering::createSprite</a></div><div class="ttdeci">bool createSprite()</div><div class="ttdoc">createSprite(): Create the SFML Sprite with the component's texture for rendering.</div><div class="ttdef"><b>Definition:</b> Rendering.cpp:30</div></div>
+<div class="ttc" id="aclassRendering_html_ac62ac77287281703f53ac1f285346c35"><div class="ttname"><a href="../../d4/dc3/classRendering.html#ac62ac77287281703f53ac1f285346c35">Rendering::getSprite</a></div><div class="ttdeci">sf::Sprite getSprite() const</div><div class="ttdoc">getSprite(): Get the SFML Sprite for rendering.</div><div class="ttdef"><b>Definition:</b> Rendering.cpp:7</div></div>
+<div class="ttc" id="aclassRendering_html_afc990a89d361a4058322cb3079f0c952"><div class="ttname"><a href="../../d4/dc3/classRendering.html#afc990a89d361a4058322cb3079f0c952">Rendering::Rendering</a></div><div class="ttdeci">Rendering(const std::string &amp;texturePath)</div><div class="ttdoc">Rendering constructor with an existing texture path.</div><div class="ttdef"><b>Definition:</b> Rendering.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
