@@ -29,7 +29,7 @@ public:
     /// @return void
     Audio() = default;
 
-    /// @brief Audio constructor with an existing sound buffer.
+    /// @brief Audio constructor with an existing sound buffer. Automatically set the sound.
     /// @param buffer: SFML SoundBuffer for audio.
     /// @return void
     explicit Audio(const sf::SoundBuffer& buffer);
@@ -39,12 +39,12 @@ public:
     /// @return void
     ~Audio() override = default;
 
-    /// @brief loadSoundBuffer(): Load the sound buffer from a file. /!\ Only supports .wav, .ogg and FLAC files.
+    /// @brief loadSoundBuffer(): Load the sound buffer from a file. Automatically set the component sound. /!\ Only supports .wav, .ogg and FLAC files.
     /// @param filePath: Path to the audio file.
     /// @return bool: True if the sound buffer has been loaded, false otherwise.
     bool loadSoundBuffer(const std::string& filePath);
 
-    /// @brief setSoundBuffer(): Set the sound buffer with an existing one.
+    /// @brief setSoundBuffer(): Set the sound buffer with an existing one. Automatically set the component sound.
     /// @param buffer: SFML SoundBuffer for audio.
     /// @return bool: True if the sound buffer has been set, false otherwise.
     bool setSoundBuffer(const sf::SoundBuffer& buffer);
@@ -54,7 +54,7 @@ public:
     /// @return sf::SoundBuffer: SFML SoundBuffer for audio.
     const sf::SoundBuffer& getSoundBuffer() const;
 
-    /// @brief setSound(): Set the sound with an existing one.
+    /// @brief setSound(): Set the sound with an existing one. Automatically set the component sound buffer.
     /// @param sound: SFML Sound for audio.
     /// @return bool: True if the sound has been set, false otherwise.
     bool setSound(const sf::Sound& sound);

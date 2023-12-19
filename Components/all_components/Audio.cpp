@@ -30,6 +30,7 @@ const sf::SoundBuffer& Audio::getSoundBuffer() const {
 
 bool Audio::setSound(const sf::Sound& sound) {
     this->sound = sound;
+    this->soundBuffer = *sound.getBuffer();
     return true;
 }
 

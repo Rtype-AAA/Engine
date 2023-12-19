@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  20 DEC 2023 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  20 DEC 2023 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,11 +917,9 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 7.
 )
-(./d7/ddb/classAudio.tex) (./db/d46/classComponents.tex
+(./d7/ddb/classAudio.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 7.
-)
-(./da/d61/classEntity.tex [7]
+(Font)              scaled to size 10.79993pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -932,17 +930,98 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
+ [7]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 56.
- [8]
-Underfull \hbox (badness 10000) detected at line 68
+(Font)              scaled to size 7.19995pt on input line 65.
+
+Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 84.
+[8]
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+[9]
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
+
+[10]
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 195.
+
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 224
+[][][]
+ []
+
+
+Overfull \vbox (10.07678pt too high) has occurred while \output is active []
+
+
+[11]
+Underfull \hbox (badness 10000) detected at line 242
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 260
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 296
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 314
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 332
+[][][]
+ []
+
+) (./db/d5c/classAudioTest.tex [13]) (./db/d46/classComponents.tex)
+(./da/d61/classEntity.tex [14] [15]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
 
 Underfull \hbox (badness 10000) detected at line 88
 [][][]
@@ -953,7 +1032,7 @@ Underfull \hbox (badness 10000) detected at line 106
 [][][]
  []
 
-[9]
+[16]
 Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
@@ -963,7 +1042,7 @@ Underfull \hbox (badness 10000) detected at line 159
 [][][]
  []
 
-[10]
+[17]
 Underfull \hbox (badness 10000) detected at line 177
 [][][]
  []
@@ -978,12 +1057,12 @@ Underfull \hbox (badness 10000) detected at line 217
 [][][]
  []
 
-) (./dd/d5f/classEntityManager.tex [11]
+) (./dd/d5f/classEntityManager.tex [18]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 32.
- [12]
+ [19]
 Underfull \hbox (badness 10000) detected at line 58
 [][][]
  []
@@ -993,7 +1072,7 @@ Underfull \hbox (badness 10000) detected at line 76
 [][][]
  []
 
-[13]
+[20]
 Underfull \hbox (badness 10000) detected at line 120
 [][][]
  []
@@ -1008,8 +1087,8 @@ Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
 
-[14]) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex)
-(./d4/dc3/classRendering.tex) (./db/daf/classTransform.tex [15]
+[21]) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex)
+(./d4/dc3/classRendering.tex) (./db/daf/classTransform.tex [22]
 Underfull \hbox (badness 10000) detected at line 63
 [][][]
  []
@@ -1021,7 +1100,7 @@ g, std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 float $\OML/cmm/m/it/8 >$$>$
 \T1/pcr/m/n/8 & \T1/pcr/m/sl/8 map[]Transform \T1/pcr/m/n/8 ) [inline],
  []
 
-[16]
+[23]
 Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
@@ -1031,7 +1110,7 @@ Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
-[17]
+[24]
 Underfull \hbox (badness 10000) detected at line 120
 [][][]
  []
@@ -1046,7 +1125,7 @@ Underfull \hbox (badness 10000) detected at line 156
 [][][]
  []
 
-[18]
+[25]
 Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
@@ -1056,20 +1135,21 @@ Underfull \hbox (badness 10000) detected at line 192
 [][][]
  []
 
-) (./d6/d2b/classTransformTest.tex) [19] [20
+) (./d6/d2b/classTransformTest.tex) [26] (./refman.ind [27
 
-] (./refman.ind [21
 
+
+] [28
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: F13678896AE31C53874C330075619B2A;9373.
+(rerunfilecheck)             Checksum: A3BE7F72755F3D12CEA8CC9FBDDFAB4F;13068.
  ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 480247
- 282172 string characters out of 5896152
- 583703 words of memory out of 5000000
- 34984 multiletter control sequences out of 15000+600000
+ 17672 strings out of 480247
+ 285174 string characters out of 5896152
+ 589184 words of memory out of 5000000
+ 35040 multiletter control sequences out of 15000+600000
  530331 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,15n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1084,10 +1164,10 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 140789 bytes).
+Output written on refman.pdf (32 pages, 158902 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 149 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 961 PDF objects out of 1000 (max. 8388607)
+ 896 compressed objects within 9 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

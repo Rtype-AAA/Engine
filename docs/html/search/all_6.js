@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setname_21',['setName',['../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1',1,'Entity']]],
-  ['settransform_22',['setTransform',['../db/daf/classTransform.html#a7bb9f58811ecce0054a4413bd08d5371',1,'Transform']]]
+  ['pause_26',['pause',['../d7/ddb/classAudio.html#a82c1018cf778eccc8819acfb64be53b2',1,'Audio']]],
+  ['play_27',['play',['../d7/ddb/classAudio.html#a2916f9015031bee9abb98adf0d83e7ee',1,'Audio']]]
 ];

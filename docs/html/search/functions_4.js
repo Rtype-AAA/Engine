@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setname_52',['setName',['../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1',1,'Entity']]],
-  ['settransform_53',['setTransform',['../db/daf/classTransform.html#a7bb9f58811ecce0054a4413bd08d5371',1,'Transform']]]
+  ['loadsoundbuffer_72',['loadSoundBuffer',['../d7/ddb/classAudio.html#afb03e151c86b97d2e7d888f67ed95740',1,'Audio']]]
 ];
