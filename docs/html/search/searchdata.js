@@ -2,11 +2,7 @@ var indexSectionsWithContent =
 {
   0: "acegirst~",
   1: "acert",
-<<<<<<< HEAD
-  2: "aegist~",
-=======
-  2: "acegrst~",
->>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
+  2: "acegirst~",
   3: "e"
 };
 

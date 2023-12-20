@@ -7,13 +7,10 @@ digraph "Graphical Class Hierarchy"
   Node0 [label="Components",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d46/classComponents.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 [label="Entity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d61/classEntity.html",tooltip="Entity class: Entity is a class that represents an entity in the game."];
-<<<<<<< HEAD
   Node1 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="EntityManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d5f/classEntityManager.html",tooltip="EntityManager class: EntityManager is a class that represents an entity manager in the game."];
-=======
-  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Rendering",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dc3/classRendering.html",tooltip="Rendering class: Rendering is a class that represents the rendering properties of a Component."];
->>>>>>> 5f2b614 ([+~] Engine: Modified returns of Rendering functions, added tests and docs for Rendering)
   Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/daf/classTransform.html",tooltip="Transform class: Transform is a class that represents the transform of a Component."];
+  Node3 [label="Rendering",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dc3/classRendering.html",tooltip="Rendering class: Rendering is a class that represents the rendering properties of a Component."];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/daf/classTransform.html",tooltip="Transform class: Transform is a class that represents the transform of a Component."];
 }
