@@ -1,0 +1,170 @@
+\hypertarget{classEntityManager}{}\doxysection{Entity\+Manager Class Reference}
+\label{classEntityManager}\index{EntityManager@{EntityManager}}
+
+
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} class\+: \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} is a class that represents an entity manager in the game.  
+
+
+
+
+{\ttfamily \#include $<$entity\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Entity\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Entity\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}{Entity\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}{$\sim$\+Entity\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename... TArgs$>$ }\\T \& \mbox{\hyperlink{classEntityManager_a661a9a6ca372d14a30ff386edcac16b1}{add\+Entity}} (TArgs \&\&...args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a661a9a6ca372d14a30ff386edcac16b1}{add\+Entity()}}\+: Create and add a new entity to the entity manager. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEntityManager_a98cc42fe11b848783e0956035fca0e70}{get\+Entity}} (std\+::string name\+Entity)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a98cc42fe11b848783e0956035fca0e70}{get\+Entity()}}\+: Get an entity from the entity manager by its name. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classEntityManager_a0807ef15a8889ef58d7466e693ff0a9f}{get\+Entities}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a0807ef15a8889ef58d7466e693ff0a9f}{get\+Entities()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entities. \end{DoxyCompactList}\item 
+Entity\+::\+Entity\+Map \mbox{\hyperlink{classEntityManager_a944a4e52d51d2e07b8aab7ef84e6709c}{get\+Entity\+Map}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a944a4e52d51d2e07b8aab7ef84e6709c}{get\+Entity\+Map()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entity map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} class\+: \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} is a class that represents an entity manager in the game. 
+
+The \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} class manages entities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}\label{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}} 
+\index{EntityManager@{EntityManager}!EntityManager@{EntityManager}}
+\index{EntityManager@{EntityManager}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{EntityManager()}{EntityManager()}}
+{\footnotesize\ttfamily Entity\+Manager\+::\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}\label{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}} 
+\index{EntityManager@{EntityManager}!````~EntityManager@{$\sim$EntityManager}}
+\index{````~EntityManager@{$\sim$EntityManager}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$EntityManager()}{~EntityManager()}}
+{\footnotesize\ttfamily Entity\+Manager\+::$\sim$\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntityManager_a661a9a6ca372d14a30ff386edcac16b1}\label{classEntityManager_a661a9a6ca372d14a30ff386edcac16b1}} 
+\index{EntityManager@{EntityManager}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily template$<$typename T , typename... TArgs$>$ \\
+T \& Entity\+Manager\+::add\+Entity (\begin{DoxyParamCaption}\item[{TArgs \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntityManager_a661a9a6ca372d14a30ff386edcac16b1}{add\+Entity()}}\+: Create and add a new entity to the entity manager. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the entity. \\
+\hline
+{\em TArgs} & Type of the arguments. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Arguments of the entity. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntityManager_a0807ef15a8889ef58d7466e693ff0a9f}\label{classEntityManager_a0807ef15a8889ef58d7466e693ff0a9f}} 
+\index{EntityManager@{EntityManager}!getEntities@{getEntities}}
+\index{getEntities@{getEntities}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{getEntities()}{getEntities()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$$>$ Entity\+Manager\+::get\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEntityManager_a0807ef15a8889ef58d7466e693ff0a9f}{get\+Entities()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, Entity $\ast$$>$\+: Entities. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntityManager_a98cc42fe11b848783e0956035fca0e70}\label{classEntityManager_a98cc42fe11b848783e0956035fca0e70}} 
+\index{EntityManager@{EntityManager}!getEntity@{getEntity}}
+\index{getEntity@{getEntity}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{getEntity()}{getEntity()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& Entity\+Manager\+::get\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+Entity }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntityManager_a98cc42fe11b848783e0956035fca0e70}{get\+Entity()}}\+: Get an entity from the entity manager by its name. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the entity. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name\+Entity} & Name of the entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\&\+: Reference of the entity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntityManager_a944a4e52d51d2e07b8aab7ef84e6709c}\label{classEntityManager_a944a4e52d51d2e07b8aab7ef84e6709c}} 
+\index{EntityManager@{EntityManager}!getEntityMap@{getEntityMap}}
+\index{getEntityMap@{getEntityMap}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{getEntityMap()}{getEntityMap()}}
+{\footnotesize\ttfamily Entity\+::\+Entity\+Map Entity\+Manager\+::get\+Entity\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEntityManager_a944a4e52d51d2e07b8aab7ef84e6709c}{get\+Entity\+Map()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entity map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity\+::\+Entity\+Map\+: \mbox{\hyperlink{classEntity}{Entity}} map. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Entity/entity\+Manager.\+h\item 
+Entity/entity\+Manager.\+cpp\end{DoxyCompactItemize}

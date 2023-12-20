@@ -4,6 +4,7 @@ project(R-TypeTests)
 add_executable(all_tests
     TestMain.cpp
     Entity/TestEntity.cpp
+    Entity/TestEntityManager.cpp
     Components/all_components/TestTransform.cpp
 )
 
