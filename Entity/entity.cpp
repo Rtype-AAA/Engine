@@ -20,8 +20,6 @@ T& Entity::addComponent(TArgs&&... args) {
     components.emplace_back(std::move(uptr));
     if (comp->init()) {
         componentArray[comp->getBit()] = comp;
-        std::cout << comp << std::endl;
-        std::cout << componentArray[comp->getBit()] << std::endl;
         componentBitset[comp->getBit()] = true;
         return *comp;
     }

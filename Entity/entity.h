@@ -8,6 +8,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <map>
 #include <memory>
 #include <array>
 #include "../Components/Components.h"
@@ -19,6 +20,8 @@
  * The Entity class manages components associated with the entity.
 */
 class Entity : private Components {
+protected:
+    using EntityMap = std::map<std::string, Entity*>;
 private:
     std::string name{}; ///< Name of the entity
     std::vector<std::unique_ptr<Components>> components{}; ///< List of components attached to the entity.
@@ -42,6 +45,8 @@ public:
     /// @param void
     /// @return void
     ~Entity() override = default;
+
+    bool init() override {return true;}
 
     /// @brief genName(): Get the name of the entity
     /// @param void
