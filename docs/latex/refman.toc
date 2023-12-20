@@ -15,23 +15,35 @@
 \contentsline {subsubsection}{\numberline {4.4.2.2}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{9}{subsubsection.4.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.4.2.3}$\sim $Entity()}{9}{subsubsection.4.4.2.3}%
 \contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{9}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}addComponent()}{9}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}addComponent()}{10}{subsubsection.4.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.4.3.2}getComponent()}{10}{subsubsection.4.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.4.3.3}getName()}{10}{subsubsection.4.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.4.3.4}setName()}{11}{subsubsection.4.4.3.4}%
-\contentsline {section}{\numberline {4.5}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{11}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Rendering Class Reference}{11}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Transform Class Reference}{12}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{12}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{12}{subsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.2.1}Transform()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.4.7.2.1}%
-\contentsline {subsubsection}{\numberline {4.7.2.2}Transform()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{13}{subsubsection.4.7.2.2}%
-\contentsline {subsubsection}{\numberline {4.7.2.3}$\sim $Transform()}{13}{subsubsection.4.7.2.3}%
-\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{13}{subsection.4.7.3}%
-\contentsline {subsubsection}{\numberline {4.7.3.1}getBit()}{14}{subsubsection.4.7.3.1}%
-\contentsline {subsubsection}{\numberline {4.7.3.2}getPositionVector()}{14}{subsubsection.4.7.3.2}%
-\contentsline {subsubsection}{\numberline {4.7.3.3}getRotationVector()}{14}{subsubsection.4.7.3.3}%
-\contentsline {subsubsection}{\numberline {4.7.3.4}getScaleVector()}{15}{subsubsection.4.7.3.4}%
-\contentsline {subsubsection}{\numberline {4.7.3.5}setTransform()}{15}{subsubsection.4.7.3.5}%
-\contentsline {section}{\numberline {4.8}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{15}{section.4.8}%
-\contentsline {chapter}{Index}{17}{section*.7}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}init()}{11}{subsubsection.4.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}setName()}{11}{subsubsection.4.4.3.5}%
+\contentsline {section}{\numberline {4.5}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{12}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{12}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{12}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}EntityManager()}{12}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}$\sim $EntityManager()}{13}{subsubsection.4.5.2.2}%
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{13}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}addEntity()}{13}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}getEntities()}{13}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}getEntity()}{14}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.4}getEntityMap()}{14}{subsubsection.4.5.3.4}%
+\contentsline {section}{\numberline {4.6}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{15}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{15}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Rendering Class Reference}{15}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Transform Class Reference}{15}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{16}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{16}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}Transform()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}Transform()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}$\sim $Transform()}{17}{subsubsection.4.9.2.3}%
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{17}{subsection.4.9.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.1}getBit()}{17}{subsubsection.4.9.3.1}%
+\contentsline {subsubsection}{\numberline {4.9.3.2}getPositionVector()}{18}{subsubsection.4.9.3.2}%
+\contentsline {subsubsection}{\numberline {4.9.3.3}getRotationVector()}{18}{subsubsection.4.9.3.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.4}getScaleVector()}{18}{subsubsection.4.9.3.4}%
+\contentsline {subsubsection}{\numberline {4.9.3.5}setTransform()}{19}{subsubsection.4.9.3.5}%
+\contentsline {section}{\numberline {4.10}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{19}{section.4.10}%
+\contentsline {chapter}{Index}{21}{section*.10}%

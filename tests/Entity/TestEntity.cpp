@@ -1,11 +1,25 @@
 #include "gtest/gtest.h"
-#include "../../Entity/entity.h"
+#include "../../Entity/entityManager.h"
 #include "../include/all_components.h"
 
 class EntityTest : public ::testing::Test {
 protected:
     Entity entity;
 };
+
+TEST_F(EntityTest, DefaultConstructor) {
+    EXPECT_EQ("", entity.getName());
+}
+
+TEST_F(EntityTest, ConstructorWithName) {
+    Entity entity("TestEntity");
+
+    EXPECT_EQ("TestEntity", entity.getName());
+}
+
+TEST_F(EntityTest, Init) {
+    EXPECT_TRUE(entity.init());
+}
 
 TEST_F(EntityTest, GetNameAndSetName) {
     EXPECT_EQ("", entity.getName());

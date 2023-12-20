@@ -46,17 +46,20 @@ public:
     /// @return void
     ~Entity() override = default;
 
+    /// @brief init(): Initialize the entity
+    /// @param void
+    /// @return bool: true if the entity is initialized, false otherwise
     bool init() override {return true;}
 
     /// @brief genName(): Get the name of the entity
     /// @param void
     /// @return std::string: name of the entity
-    [[nodiscard]] std::string getName() const;
+    [[nodiscard]] inline std::string getName() const;
 
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
     /// @return void
-    void setName(std::string newName);
+    inline void setName(std::string newName);
 
     /// @brief addComponent(): Add a component to the entity
     /// @tparam T: Type of the component

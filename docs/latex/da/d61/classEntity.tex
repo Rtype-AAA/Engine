@@ -26,6 +26,8 @@ Collaboration diagram for Entity\+:
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEntity_a605d474ccbd30c3d4350016ec173546a}{$\sim$\+Entity}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init()}}\+: Initialize the entity \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntity_a403f69eb888da7c5a690b79c658cdf47}{get\+Name}} () const
 \begin{DoxyCompactList}\small\item\em gen\+Name()\+: Get the name of the entity \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name}} (std\+::string new\+Name)
@@ -34,6 +36,12 @@ void \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b}{add\+Component()}}\+: Add a component to the entity \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEntity_af378c2ea70fa68a8433f19500261393d}{get\+Component}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_af378c2ea70fa68a8433f19500261393d}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEntity_a827e0a3492afe4ae44bdea858803a4dd}\label{classEntity_a827e0a3492afe4ae44bdea858803a4dd}} 
+using {\bfseries Entity\+Map} = std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -155,7 +163,7 @@ T\&\+: reference of the component
 \index{Entity@{Entity}!getName@{getName}}
 \index{getName@{getName}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Entity\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::string Entity\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -169,11 +177,33 @@ gen\+Name()\+: Get the name of the entity
 \begin{DoxyReturn}{Returns}
 std\+::string\+: name of the entity 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_abb29b0a340f457dc197200b836797fa9}\label{classEntity_abb29b0a340f457dc197200b836797fa9}} 
+\index{Entity@{Entity}!init@{init}}
+\index{init@{init}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Entity\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init()}}\+: Initialize the entity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true if the entity is initialized, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classComponents}{Components}}.
+
 \mbox{\Hypertarget{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}\label{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}} 
 \index{Entity@{Entity}!setName@{setName}}
 \index{setName@{setName}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Entity\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

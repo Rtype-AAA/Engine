@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['transform_38',['Transform',['../db/daf/classTransform.html#a144ce8dcafd13ca66acb5a1636cfc297',1,'Transform::Transform()=default'],['../db/daf/classTransform.html#a79df5373c426c25979442db7667eb330',1,'Transform::Transform(const std::map&lt; std::string, std::vector&lt; float &gt;&gt; &amp;mapTransform)']]]
+  ['setname_52',['setName',['../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1',1,'Entity']]],
+  ['settransform_53',['setTransform',['../db/daf/classTransform.html#a7bb9f58811ecce0054a4413bd08d5371',1,'Transform']]]
 ];
