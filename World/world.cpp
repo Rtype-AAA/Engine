@@ -15,5 +15,14 @@ const sf::ContextSettings &settings) {
     }
 }
 
-void World::createEntities(std::vector<Entity> entities, std::map<std::string, std::vector<std::string>>) {
+void World::createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager) {
+    for (const auto& element : mapEntityManager) {
+        const std::string key = element.first;
+        std::unique_ptr<EntityManager> entityManager = std::move(element.second.first);
+
+        std::cout << key << std::endl;
+        std::cout << entityManager.get() << std::endl;
+        std::cout << entityManager.get() << std::endl;
+
+    }
 }

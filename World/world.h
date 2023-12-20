@@ -9,10 +9,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <iostream>
-#include "../Entity/entity.h"
+#include "../Entity/entityManager.h"
 
-class World : private Entity{
+class World : private EntityManager{
 private:
 
 public:
@@ -23,7 +24,7 @@ public:
 
     ~World() = default;
 
-    void createEntities(std::vector<Entity> entities, std::map<std::string, std::vector<std::string>>);
+    void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager);
 };
 
 
