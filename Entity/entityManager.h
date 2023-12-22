@@ -11,20 +11,23 @@
 #include <map>
 #include "entity.h"
 
-class EntityManager: private Entity{
+class EntityManager: protected Entity{
 private:
     std::map<std::string, std::unique_ptr<Entity>> entities{};
     Entity::EntityMap entityMap;
+    int i = 5;
 public:
     EntityManager() = default;
 
     ~EntityManager() = default;
 
+    bool init() override {return true;}
+
     template<typename T, typename... TArgs>
     T& addEntity(TArgs&&... args);
 
     template<typename T>
-    T& getEntity(std::string nameEntity);
+    T& getEntity(const std::string nameEntity);
 };
 
 #include "entityManager.cpp"

@@ -12,19 +12,26 @@
 #include <memory>
 #include <iostream>
 #include "../Entity/entityManager.h"
+#include "../include/all_components.h"
 
-class World : private EntityManager{
+class World: protected EntityManager {
+protected:
+    using EntityManagerMap = std::map<std::string, EntityManager*>;
 private:
-
+    std::map<std::string, std::unique_ptr<EntityManager>> entitiesManager{};
+    EntityManagerMap entityManagerMap;
 public:
     World() = default;
 
-    explicit World(std::string type, sf::VideoMode mode, const std::string &title, sf::Uint32 style=sf::Style::Default,
+    explicit World(std::string type, sf::VideoMode mode, sf::String &title, sf::Uint32 style=sf::Style::Default,
                    const sf::ContextSettings &settings=sf::ContextSettings());
 
-    ~World() = default;
+    ~World() override = default;
 
-    void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager);
+    void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>>& mapEntityManager);
+
+    EntityManager& addEntityManager(std::string NameEntityManager);
+    EntityManager& getEntityManager(std::string NameEntityManager);
 };
 
 
