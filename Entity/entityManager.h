@@ -21,7 +21,6 @@ class EntityManager : private Entity
 private:
     std::map<std::string, std::unique_ptr<Entity>> entities{}; ///< List of entities present in manager.
     Entity::EntityMap entityMap; ///< Map of entities present in manager.
-
 public:
     /// @brief Default EntityManager constructor.
     /// @param void
