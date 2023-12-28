@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(R-Type)
 
+find_package(SFML REQUIRED COMPONENTS system window graphics audio)
+
 set(SRCS
         main.cpp
         World/world.cpp
@@ -25,7 +27,7 @@ target_include_directories(engine
 
 find_package(SFML 2.5.1 COMPONENTS graphics window system REQUIRED)
 
-target_link_libraries(engine PRIVATE sfml-graphics sfml-window sfml-system all_components)
+target_link_libraries(engine PRIVATE sfml-graphics sfml-window sfml-system sfml-audio all_components)
 
 set_target_properties(engine PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"

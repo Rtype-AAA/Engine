@@ -63,5 +63,24 @@ int main() {
 //    std::cout << player.getComponent<Transform>().getRotationVector()[1] << "}" << std::endl;
 //    std::cout << "{" << player.getComponent<Transform>().getScaleVector()[0] << ", ";
 //    std::cout << player.getComponent<Transform>().getScaleVector()[1] << "}" << std::endl;
+
+
+
+//    Rendering rendering("assets/red.png");
+//    if (rendering.getSprite().getTexture() == nullptr) {
+//        std::cout << "Texture is null" << std::endl;
+//    } else {
+//        std::cout << "Texture is not null" << std::endl;
+//    }
+//
+//    rendering.setTexture("assets/blue.png");
+//    rendering.createSprite();
+//
+//    if (rendering.getSprite().getTexture() == nullptr) {
+//        std::cout << "Texture is null" << std::endl;
+//    } else {
+//        std::cout << "Texture is not null" << std::endl;
+//    }
+
     return 0;
 }

@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+
 project(all_components VERSION 1.0)
 
 set(LIB_SRCS
