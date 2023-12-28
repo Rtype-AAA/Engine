@@ -27,3 +27,12 @@ T& EntityManager::getEntity(const std::string nameEntity) {
         return this->getEntity<Entity>(nameEntity);
     }
 }
+
+std::map<std::string, Entity *> EntityManager::getEntities() const {
+    std::map<std::string, Entity *> result;
+
+    for (const auto &entry : entities) {
+        result[entry.first] = entry.second.get();
+    }
+    return result;
+}

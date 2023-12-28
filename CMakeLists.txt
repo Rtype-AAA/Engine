@@ -5,6 +5,7 @@ project(R-Type)
 set(SRCS
         main.cpp
         World/world.cpp
+        GameEngine/gameEngine.cpp
 )
 
 add_library(all_components SHARED
@@ -18,6 +19,7 @@ add_executable(engine ${SRCS})
 target_include_directories(engine
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Entity
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/World
+        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GameEngine
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 

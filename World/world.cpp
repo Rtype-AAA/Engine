@@ -4,17 +4,6 @@
 
 #include "world.h"
 
-World::World(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style,
-const sf::ContextSettings &settings) {
-    if (type == "2D" or type == "2d") {
-        sf::RenderWindow(mode, title, style, settings);
-    } else if (type == "3D" or type == "3d") {
-        sf::Window(mode, title, style, settings);
-    } else {
-        std::cout << "Veuillez choisir un type de graphisme entre 2D et 3D" << std::endl;
-    }
-}
-
 EntityManager& World::addEntityManager(std::string nameEntityManager) {
     EntityManager *comp = new EntityManager();
     std::unique_ptr<EntityManager> uptr {comp};

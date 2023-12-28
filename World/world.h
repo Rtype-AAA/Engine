@@ -20,12 +20,9 @@ protected:
     using EntityManagerMap = std::map<std::string, EntityManager*>;
 private:
     std::map<std::string, std::unique_ptr<EntityManager>> entitiesManager{};
-    EntityManagerMap entityManagerMap;
+    EntityManagerMap entityManagerMap{};
 public:
     World() = default;
-
-    explicit World(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style=sf::Style::Default,
-                   const sf::ContextSettings &settings=sf::ContextSettings());
 
     ~World() override = default;
 
@@ -33,7 +30,6 @@ public:
 
     EntityManager& addEntityManager(std::string NameEntityManager);
     EntityManager& getEntityManager(std::string NameEntityManager);
-
 };
 
 
