@@ -4,7 +4,7 @@
 
 #include "world.h"
 
-World::World(std::string type, sf::VideoMode mode, sf::String &title, sf::Uint32 style,
+World::World(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style,
 const sf::ContextSettings &settings) {
     if (type == "2D" or type == "2d") {
         sf::RenderWindow(mode, title, style, settings);

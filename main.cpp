@@ -7,7 +7,7 @@
 
 int main() {
     Entity player("Louis");
-    World test;
+    World test(sf::VideoMode(1920, 1080), "2d", "SFML Window");
     std::map<std::string, std::vector<float>> mapTransform;
     mapTransform["Position"] = {1.0f, 5.0f};
     mapTransform["Rotation"] = {4.0f, 21.3f};

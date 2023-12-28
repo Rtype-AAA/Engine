@@ -6,6 +6,7 @@
 #define R_TYPE_WORLD_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -23,7 +24,7 @@ private:
 public:
     World() = default;
 
-    explicit World(std::string type, sf::VideoMode mode, sf::String &title, sf::Uint32 style=sf::Style::Default,
+    explicit World(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style=sf::Style::Default,
                    const sf::ContextSettings &settings=sf::ContextSettings());
 
     ~World() override = default;
@@ -32,6 +33,7 @@ public:
 
     EntityManager& addEntityManager(std::string NameEntityManager);
     EntityManager& getEntityManager(std::string NameEntityManager);
+
 };
 
 
