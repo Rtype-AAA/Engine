@@ -26,7 +26,7 @@ public:
     /// @param void
     /// @return void
     ~EntityManager() = default;
-
+    
     /// @brief addEntity(): Create and add a new entity to the entity manager.
     /// @tparam T: Type of the entity.
     /// @tparam TArgs: Type of the arguments.
@@ -40,6 +40,25 @@ public:
     /// @return T&: Reference of the entity.
     template <typename T>
     T &getEntity(std::string nameEntity);
+
+    /// @brief getEntities(): Get the EntityManager's entities.
+    /// @param void
+    /// @return std::map<std::string, Entity *>: Entities.
+    std::map<std::string, Entity *> getEntities() const {
+        std::map<std::string, Entity *> result;
+
+        for (const auto &entry : entities) {
+            result[entry.first] = entry.second.get();
+        }
+        return result;
+    }
+
+    /// @brief getEntityMap(): Get the EntityManager's entity map.
+    /// @param void
+    /// @return Entity::EntityMap: Entity map.
+    Entity::EntityMap getEntityMap() const {
+        return entityMap;
+    }
 
     bool init() override {return true;}
 };
