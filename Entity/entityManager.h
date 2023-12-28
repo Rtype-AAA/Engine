@@ -11,17 +11,11 @@
 #include <map>
 #include "entity.h"
 
-/**
- * @brief EntityManager class: EntityManager is a class that represents an entity manager in the game.
- *
- * The EntityManager class manages entities.
- */
-class EntityManager : private Entity
-{
-private:
-    std::map<std::string, std::unique_ptr<Entity>> entities{}; ///< List of entities present in manager.
-    Entity::EntityMap entityMap; ///< Map of entities present in manager.
 
+class EntityManager: protected Entity{
+private:
+    std::map<std::string, std::unique_ptr<Entity>> entities{};
+    Entity::EntityMap entityMap;
 public:
     /// @brief Default EntityManager constructor.
     /// @param void
@@ -47,24 +41,7 @@ public:
     template <typename T>
     T &getEntity(std::string nameEntity);
 
-    /// @brief getEntities(): Get the EntityManager's entities.
-    /// @param void
-    /// @return std::map<std::string, Entity *>: Entities.
-    std::map<std::string, Entity *> getEntities() const {
-        std::map<std::string, Entity *> result;
-
-        for (const auto &entry : entities) {
-            result[entry.first] = entry.second.get();
-        }
-        return result;
-    }
-
-    /// @brief getEntityMap(): Get the EntityManager's entity map.
-    /// @param void
-    /// @return Entity::EntityMap: Entity map.
-    Entity::EntityMap getEntityMap() const {
-        return entityMap;
-    }
+    bool init() override {return true;}
 };
 
 #include "entityManager.cpp"

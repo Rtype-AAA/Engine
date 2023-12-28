@@ -17,7 +17,13 @@ T& EntityManager::addEntity(TArgs&&... args) {
 }
 
 template<typename T>
-T& EntityManager::getEntity(std::string nameEntity) {
-    auto ptr = entityMap[nameEntity];
-    return *static_cast<T*>(ptr);
+T& EntityManager::getEntity(const std::string nameEntity) {
+    auto it = entityMap.find(nameEntity);
+    if (it != entityMap.end()) {
+        auto ptr = entityMap[nameEntity];
+        return *static_cast<T*>(ptr);
+    } else {
+        this->addEntity<Entity>(nameEntity);
+        return this->getEntity<Entity>(nameEntity);
+    }
 }
