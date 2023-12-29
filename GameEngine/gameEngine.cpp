@@ -20,8 +20,44 @@ void GameEngine::setWindow() {
     return;
 }
 
-void GameEngine::initialize(std::string pathRessources) {
-    return;
+std::vector<std::string> getFilesTexture(std::string pathDirectory) {
+    if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
+        std::cerr << "Dossier non trouvé ou chemin non valide." << std::endl;
+        exit(1);
+    }
+    std::vector<std::string> allFilesName;
+    for (const auto& entry : std::filesystem::directory_iterator(pathDirectory)) {
+        const auto& path = entry.path();
+        allFilesName.push_back(path.filename());
+    }
+    return allFilesName;
+}
+
+void GameEngine::initializeTexture(std::string path) {
+    sf::Texture texture;
+    std::vector<std::string> allFilesName;
+    allFilesName = getFilesTexture(path);
+    path += "/";
+    for (const auto& element : allFilesName) {
+        mapTexture[element] = std::make_unique<sf::Texture>();
+        if (!mapTexture[element]->loadFromFile(path + element)) {
+            std::cerr << "Erreur lors du chargement de la texture : " + path + element << std::endl;
+            exit(1);
+        } else {
+            std::cout << "Chargement de la texture avec succès : " + path + element << std::endl;
+        }
+    }
+}
+
+void GameEngine::initialize(std::map<std::string, std::string> pathRessources) {
+    for (const auto& element : pathRessources) {
+        if (element.first == "Textures" || element.first == "Texture") {
+            initializeTexture(element.second);
+        } else {
+            std::cout << "Le type de ressource n'existe pas, veuillez choisir parmis ceux disponible." << std::endl;
+            exit(0);
+        }
+    }
 }
 
 bool GameEngine::isWindowOpen() {
@@ -43,18 +79,24 @@ void GameEngine::renderGameEngine() {
     }, window);
 }
 
-void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld, std::string pathRessources) {
-    for (const auto &element: mapWorld) {
-        std::cout << element.first << std::endl;
-    }
-    initialize(pathRessources);
-
-    while (isWindowOpen()) {
-        updateGameEngine();
-        renderGameEngine();
-    }
+void GameEngine::eventGameEngine() {
+    std::visit([this](auto& w) {
+        while (w->pollEvent(event)) {
+            switch (event.type) {
+                case sf::Event::Closed:
+                    w->close();
+                    break;
+            }
+        }
+    }, window);
 }
 
-void GameEngine::initializeTexture() {
-    return;
+void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
+                     std::map<std::string, std::string> pathRessources) {
+    initialize(pathRessources);
+//    while (isWindowOpen()) {
+//        eventGameEngine();
+//        updateGameEngine();
+//        renderGameEngine();
+//    }
 }

@@ -26,14 +26,17 @@ EntityManager& World::getEntityManager(std::string nameEntityManager) {
     }
 }
 
-void World::createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>>& mapEntityManager) {
+void World::createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>,
+        std::vector<std::string>>>& mapEntityManager, std::string keyEntityManager) {
     for (const auto& element : mapEntityManager) {
         const std::string key = element.first;
-        const std::string idName = element.second.second.at(0);
 
-        auto& entityManager = getEntityManager(key);
-        for (const auto& entity : element.second.second) {
-            entityManager.addEntity<Entity>(entity);
+        if (key == keyEntityManager) {
+            auto &entityManager = getEntityManager(key);
+            for (const auto &entity: element.second.second) {
+                entityManager.addEntity<Entity>(entity);
+            }
+            break;
         }
     }
 }

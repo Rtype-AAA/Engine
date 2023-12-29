@@ -26,7 +26,8 @@ public:
 
     ~World() override = default;
 
-    void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>>& mapEntityManager);
+    void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>,
+            std::vector<std::string>>>& mapEntityManager, std::string keyEntityManager);
 
     EntityManager& addEntityManager(std::string NameEntityManager);
     EntityManager& getEntityManager(std::string NameEntityManager);
