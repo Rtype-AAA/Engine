@@ -94,9 +94,9 @@ void GameEngine::eventGameEngine() {
 void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
                      std::map<std::string, std::string> pathRessources) {
     initialize(pathRessources);
-//    while (isWindowOpen()) {
-//        eventGameEngine();
-//        updateGameEngine();
-//        renderGameEngine();
-//    }
+    while (isWindowOpen()) {
+        eventGameEngine();
+        updateGameEngine();
+        renderGameEngine();
+    }
 }
