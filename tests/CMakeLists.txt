@@ -16,7 +16,7 @@ target_include_directories(all_tests
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include
 )
 
-target_link_libraries(all_tests PRIVATE all_components gtest gtest_main sfml-system sfml-window sfml-graphics sfml-audio)
+target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main sfml-system sfml-window sfml-graphics sfml-audio)
 
 set_target_properties(all_tests PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../"
