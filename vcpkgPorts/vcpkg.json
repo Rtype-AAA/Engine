@@ -1,0 +1,8 @@
+{
+  "name": "engine",
+  "version-string": "1.0.0",
+  "description": "Une brève description de ma bibliothèque",
+  "dependencies": [
+    "sfml"
+  ]
+}
