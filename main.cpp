@@ -2,7 +2,7 @@
 // Created by thibaultcampagne on 29/11/23.
 //
 
-#include "GameEngine/gameEngine.h"
+#include "src/GameEngine/gameEngine.h"
 
 std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     std::unique_ptr<World> menuWorld = std::make_unique<World>();
@@ -81,7 +81,7 @@ int main() {
     worldMap["Level1"] = worldLevel1(gameEngine);
     worldMap["Level2"] = worldLevel2();
     std::map<std::string, std::string> pathRessources;
-    pathRessources["Texture"] = "Ressources/Textures";
+    pathRessources["Texture"] = "src/Ressources/Textures";
     event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
 //    std::map<std::string, std::vector<float>> mapTransform;

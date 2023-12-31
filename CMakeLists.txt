@@ -5,23 +5,23 @@ project(R-Type)
 find_package(SFML 2.5.1 COMPONENTS graphics window system audio REQUIRED)
 
 set(LIB_SRCS
-        Components/all_components/Transform.cpp
-        Components/all_components/Sprite.cpp
-        Components/all_components/Audio.cpp
-        World/world.cpp
-        GameEngine/gameEngine.cpp
-        Event/event.cpp
+        src/Components/all_components/Transform.cpp
+        src/Components/all_components/Sprite.cpp
+        src/Components/all_components/Audio.cpp
+        src/World/world.cpp
+        src/GameEngine/gameEngine.cpp
+        src/Event/event.cpp
 )
 
 add_library(engine_lib SHARED ${LIB_SRCS})
 
 target_include_directories(engine_lib
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Components
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/World
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GameEngine
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Entity
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Components/all_components
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Event
+        PRIVATE src/Components
+        PRIVATE src/World
+        PRIVATE src/GameEngine
+        PRIVATE src/Entity
+        PRIVATE src/Components/all_components
+        PRIVATE src/Event
 )
 
 target_link_libraries(engine_lib PRIVATE sfml-graphics sfml-window sfml-system sfml-audio)
@@ -33,11 +33,11 @@ set(SRCS
 add_executable(engine ${SRCS})
 
 target_include_directories(engine
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Entity
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/World
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GameEngine
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Components
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
+        PRIVATE src/Entity
+        PRIVATE src/World
+        PRIVATE src/GameEngine
+        PRIVATE src/Components
+        PRIVATE src/include
 )
 
 target_link_libraries(engine PRIVATE engine_lib sfml-graphics sfml-window sfml-system sfml-audio)
@@ -60,4 +60,4 @@ set_target_properties(engine PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
-add_subdirectory(tests)
+add_subdirectory(src/tests)
