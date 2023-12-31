@@ -48,6 +48,26 @@ std::unique_ptr<World> worldLevel2() {
     return level2World;
 }
 
+void event(GameEngine &gameEngine) {
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::A, [&]() {
+        gameEngine.setCurrentWorld(&gameEngine.getWorld("Menu"));
+    });
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Z, [&]() {
+        gameEngine.setCurrentWorld(&gameEngine.getWorld("Level1"));
+    });
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::E, [&]() {
+        gameEngine.setCurrentWorld(&gameEngine.getWorld("Level2"));
+    });
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::S, [&]() {
+        std::cout << gameEngine.getCurrentWorld()->getNameWorld() << std::endl;
+    });
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Q, [&]() {
+        std::visit([](auto& w) {
+            w->close();
+        }, gameEngine.getWindow());
+    });
+}
+
 int main() {
 //    Entity player("Louis");
 //    World test;
@@ -62,6 +82,7 @@ int main() {
     worldMap["Level2"] = worldLevel2();
     std::map<std::string, std::string> pathRessources;
     pathRessources["Texture"] = "Ressources/Textures";
+    event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
 //    std::map<std::string, std::vector<float>> mapTransform;
 //    mapTransform["Position"] = {1.0f, 5.0f};

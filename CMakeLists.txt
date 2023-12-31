@@ -10,6 +10,7 @@ set(LIB_SRCS
         Components/all_components/Audio.cpp
         World/world.cpp
         GameEngine/gameEngine.cpp
+        Event/event.cpp
 )
 
 add_library(engine_lib SHARED ${LIB_SRCS})
@@ -19,8 +20,8 @@ target_include_directories(engine_lib
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/World
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GameEngine
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Entity
-        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Components/all_components
+        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Event
 )
 
 target_link_libraries(engine_lib PRIVATE sfml-graphics sfml-window sfml-system sfml-audio)

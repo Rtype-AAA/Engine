@@ -9,8 +9,9 @@
 #include <iostream>
 #include <filesystem>
 #include "../World/world.h"
+#include "../Event/event.h"
 
-class GameEngine : protected World {
+class GameEngine : protected World, protected EventEngine {
 private:
     std::map<std::string, World*> worldMap{};
     std::map<std::string, std::unique_ptr<World>> worlds{};
@@ -18,7 +19,7 @@ private:
     World* currentWorld;
 
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window;
-    sf::Event event;
+    EventEngine event;
 public:
     GameEngine() = default;
     explicit GameEngine(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style=sf::Style::Default,
@@ -43,7 +44,7 @@ public:
 
     const auto& getWindow() {return window;}
     void setWindow();
-    sf::Event getEvent() const {return event;}
+    EventEngine& getEventEngine() {return event;}
     void setCurrentWorld(World* world);
     World* getCurrentWorld() {return currentWorld;}
     World& addWorld(std::string nameWorld, std::unique_ptr<World> world);

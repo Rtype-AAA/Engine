@@ -141,23 +141,17 @@ void GameEngine::renderGameEngine() {
 
 void GameEngine::eventGameEngine() {
     std::visit([this](auto& w) {
-        while (w->pollEvent(event)) {
-            switch (event.type) {
+        while (w->pollEvent(event.getEvent())) {
+            switch (event.getEvent().type) {
                 case sf::Event::Closed:
                     w->close();
                     break;
                 case sf::Event::KeyPressed:
-                    if (event.key.code == sf::Keyboard::A)
-                        setCurrentWorld(worldMap["Menu"]);
-                    if (event.key.code == sf::Keyboard::Z)
-                        setCurrentWorld(worldMap["Level1"]);
-                    if (event.key.code == sf::Keyboard::E)
-                        setCurrentWorld(worldMap["Level2"]);
-                    if (event.key.code == sf::Keyboard::S)
-                        std::cout << getCurrentWorld()->getNameWorld() << std::endl;
-                    if (event.key.code == sf::Keyboard::Q) {
-                        w->close();
-                        break;
+                    if (!getEventEngine().getKeyPressedMap().empty()) {
+                        auto eventIt = getEventEngine().getKeyPressedMap().find(event.getEvent().key.code);
+                        if (eventIt != getEventEngine().getKeyPressedMap().end()) {
+                            eventIt->second();
+                        }
                     }
             }
         }
