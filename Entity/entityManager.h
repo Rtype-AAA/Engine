@@ -15,7 +15,7 @@
 class EntityManager: protected Entity{
 private:
     std::map<std::string, std::unique_ptr<Entity>> entities{};
-    Entity::EntityMap entityMap;
+    std::map<std::string, Entity*> entityMap;
 public:
     /// @brief Default EntityManager constructor.
     /// @param void
@@ -31,15 +31,13 @@ public:
     /// @tparam T: Type of the entity.
     /// @tparam TArgs: Type of the arguments.
     /// @param args: Arguments of the entity.
-    template <typename T, typename... TArgs>
-    T &addEntity(TArgs &&...args);
+    inline Entity &addEntity(std::string nameEntity, Archetypes newArchetype = Archetypes());
 
     /// @brief getEntity(): Get an entity from the entity manager by its name.
     /// @tparam T: Type of the entity.
     /// @param nameEntity: Name of the entity.
     /// @return T&: Reference of the entity.
-    template <typename T>
-    T &getEntity(std::string nameEntity);
+    inline Entity &getEntity(std::string nameEntity);
 
     /// @brief getEntities(): Get the EntityManager's entities.
     /// @param void
@@ -49,7 +47,7 @@ public:
     /// @brief getEntityMap(): Get the EntityManager's entity map.
     /// @param void
     /// @return Entity::EntityMap: Entity map.
-    Entity::EntityMap getEntityMap() const {return entityMap;}
+    std::map<std::string, Entity*> getEntityMap() const {return entityMap;}
 
     bool init() override {return true;}
 };

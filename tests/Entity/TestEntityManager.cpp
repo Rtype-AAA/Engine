@@ -26,7 +26,7 @@ TEST_F(EntityManagerTest, AddEntity) {
     EXPECT_EQ(0, entityManager.getEntities().size());
     EXPECT_EQ(0, entityManager.getEntityMap().size());
 
-    entityManager.addEntity<Entity>(entity);
+    entityManager.addEntity(entity);
 
     EXPECT_EQ(1, entityManager.getEntities().size());
     EXPECT_EQ(1, entityManager.getEntityMap().size());
@@ -35,7 +35,7 @@ TEST_F(EntityManagerTest, AddEntity) {
     newEntity.setName("Another");
 
     Entity original;
-    original.setName(entityManager.getEntity<Entity>("TestEntity").getName());
+    original.setName(entityManager.getEntity("TestEntity").getName());
 
     EXPECT_NE(original.getName(), newEntity.getName());
     EXPECT_EQ(original.getName(), entity);
@@ -50,22 +50,22 @@ TEST_F(EntityManagerTest, AddEntity) {
 
     std::string entityWithComponent = "WithComponent";
 
-    entityManager.addEntity<Entity>(entityWithComponent);
-    entityManager.getEntity<Entity>("WithComponent").addComponent<Transform>(transformData);
+    entityManager.addEntity(entityWithComponent);
+    entityManager.getEntity("WithComponent").addComponent<Transform>(transformData);
 
     EXPECT_EQ(2, entityManager.getEntities().size());
     EXPECT_EQ(2, entityManager.getEntityMap().size());
 
-    EXPECT_EQ(original.getName(), entityManager.getEntity<Entity>("TestEntity").getName());
-    EXPECT_EQ(entityWithComponent, entityManager.getEntity<Entity>("WithComponent").getName());
+    EXPECT_EQ(original.getName(), entityManager.getEntity("TestEntity").getName());
+    EXPECT_EQ(entityWithComponent, entityManager.getEntity("WithComponent").getName());
 
-    EXPECT_EQ(addedComponent.getBit(), entityManager.getEntity<Entity>("WithComponent").getComponent<Transform>().getBit());
+    EXPECT_EQ(addedComponent.getBit(), entityManager.getEntity("WithComponent").getComponent<Transform>().getBit());
 }
 
 TEST_F(EntityManagerTest, GetEntity) {
     std::string entity = "TestEntity";
 
-    entityManager.addEntity<Entity>(entity);
+    entityManager.addEntity(entity);
 
     EXPECT_EQ(1, entityManager.getEntities().size());
     EXPECT_EQ(1, entityManager.getEntityMap().size());
@@ -73,20 +73,20 @@ TEST_F(EntityManagerTest, GetEntity) {
     Entity original;
     original.setName(entity);
 
-    EXPECT_EQ(original.getName(), entityManager.getEntity<Entity>("TestEntity").getName());
+    EXPECT_EQ(original.getName(), entityManager.getEntity("TestEntity").getName());
 }
 
 TEST_F(EntityManagerTest, GetEntities) {
     std::string entity = "TestEntity";
 
-    entityManager.addEntity<Entity>(entity);
+    entityManager.addEntity(entity);
 
     EXPECT_EQ(1, entityManager.getEntities().size());
     EXPECT_EQ(1, entityManager.getEntityMap().size());
 
     std::string entity2 = "TestEntity2";
 
-    entityManager.addEntity<Entity>(entity2);
+    entityManager.addEntity(entity2);
 
     EXPECT_EQ(2, entityManager.getEntities().size());
     EXPECT_EQ(2, entityManager.getEntityMap().size());
@@ -98,7 +98,7 @@ TEST_F(EntityManagerTest, GetEntities) {
     };
 
     Transform addedComponent(transformData);
-    entityManager.getEntity<Entity>("TestEntity").addComponent<Transform>(transformData);
+    entityManager.getEntity("TestEntity").addComponent<Transform>(transformData);
 
     std::map<std::string, Entity *> entities = entityManager.getEntities();
 
@@ -112,14 +112,14 @@ TEST_F(EntityManagerTest, GetEntities) {
 TEST_F(EntityManagerTest, GetEntityMap) {
     std::string entity = "TestEntity";
 
-    entityManager.addEntity<Entity>(entity);
+    entityManager.addEntity(entity);
 
     EXPECT_EQ(1, entityManager.getEntities().size());
     EXPECT_EQ(1, entityManager.getEntityMap().size());
 
     std::string entity2 = "TestEntity2";
 
-    entityManager.addEntity<Entity>(entity2);
+    entityManager.addEntity(entity2);
 
     EXPECT_EQ(2, entityManager.getEntities().size());
     EXPECT_EQ(2, entityManager.getEntityMap().size());
@@ -131,7 +131,7 @@ TEST_F(EntityManagerTest, GetEntityMap) {
     };
 
     Transform addedComponent(transformData);
-    entityManager.getEntity<Entity>("TestEntity").addComponent<Transform>(transformData);
+    entityManager.getEntity("TestEntity").addComponent<Transform>(transformData);
 
     EXPECT_EQ(2, entityManager.getEntityMap().size());
     EXPECT_EQ(entity, entityManager.getEntityMap()["TestEntity"]->getName());

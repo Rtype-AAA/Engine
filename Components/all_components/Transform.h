@@ -29,6 +29,8 @@ public:
     /// @return void
     Transform() = default;
 
+    bool init() const {return true;}
+
     /// @brief Transform constructor
     /// @param mapTransform: Map containing transformation properties (std::string, std::vector<float>).
     /// @return void

@@ -5,14 +5,14 @@
 #include "world.h"
 
 EntityManager& World::addEntityManager(std::string nameEntityManager) {
-    EntityManager *comp = new EntityManager();
-    std::unique_ptr<EntityManager> uptr {comp};
-    entitiesManager.insert(std::make_pair(nameEntityManager, std::move(uptr)));
-    if (comp->init()) {
-        entityManagerMap.insert(std::make_pair(nameEntityManager, comp));
-        return *comp;
+    std::unique_ptr<EntityManager> newEntityManager = std::make_unique<EntityManager>();
+    if (!newEntityManager->init()) {
+        throw std::runtime_error("Echec de l'initialisation de EntityManager : " + nameEntityManager);
     }
-    return *static_cast<EntityManager*>(nullptr);
+    EntityManager *comp = newEntityManager.get();
+    entitiesManager.insert(std::make_pair(nameEntityManager, std::move(newEntityManager)));
+    entityManagerMap.insert(std::make_pair(nameEntityManager, comp));
+    return *comp;
 }
 
 EntityManager& World::getEntityManager(std::string nameEntityManager) {
@@ -34,9 +34,13 @@ void World::createEntities(std::map<std::string, std::pair<std::unique_ptr<Entit
         if (key == keyEntityManager) {
             auto &entityManager = getEntityManager(key);
             for (const auto &entity: element.second.second) {
-                entityManager.addEntity<Entity>(entity);
+                entityManager.addEntity(entity);
             }
             break;
         }
     }
+}
+
+void World::setNameWorld(std::string newName) {
+    nameWorld = newName;
 }

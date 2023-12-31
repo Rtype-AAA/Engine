@@ -12,9 +12,20 @@ set(SRCS
 
 add_library(all_components SHARED
         Components/all_components/Transform.cpp
-        Components/all_components/Rendering.cpp
+        Components/all_components/Sprite.cpp
         Components/all_components/Audio.cpp
 )
+
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    message(STATUS "Setting build type to 'Debug' as none was specified.")
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build." FORCE)
+
+    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release")
+endif()
+
+
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
 
 add_executable(engine ${SRCS})
 
@@ -22,6 +33,7 @@ target_include_directories(engine
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Entity
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/World
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/GameEngine
+        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Components
         PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 

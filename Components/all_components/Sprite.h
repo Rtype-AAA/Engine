@@ -2,35 +2,38 @@
 // Created by thibaultcampagne on 30/11/23.
 //
 
-#ifndef R_TYPE_RENDERING_H
-#define R_TYPE_RENDERING_H
+#ifndef R_TYPE_SPRITE_H
+#define R_TYPE_SPRITE_H
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
+#include <functional>
 #include "../Components.h"
+#include "../DrawableComponent.h"
 
 /**
- * @brief Rendering class: Rendering is a class that represents the rendering properties of a Component.
+ * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
  *
- * The Rendering class manages the graphical representation of a Component using SFML.
+ * The Sprite class manages the graphical representation of a Component using SFML.
  */
-class Rendering : public Components {
+class Sprite : public Components, public DrawableComponent {
 private:
     sf::Sprite sprite; ///< SFML Sprite for rendering.
     sf::Texture texture; ///< SFML Texture for the sprite.
-
+    std::function<void()> deferredSprite;
+    int bit = 1;
 public:
-    /// @brief Default Rendering constructor.
+    /// @brief Default Sprite constructor.
     /// @param void
     /// @return void
-    Rendering() = default;
+    Sprite() = default;
 
-    /// @brief Rendering constructor with an existing texture path.
+    /// @brief Sprite constructor with an existing texture path.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    explicit Rendering(const std::string& texturePath) {
+    explicit Sprite(const std::string& texturePath) {
         if (texture.loadFromFile(texturePath)) {
             sprite.setTexture(texture);
         } else {
@@ -38,10 +41,16 @@ public:
         }
     }
 
-    /// @brief Rendering destructor.
+    /// @brief Sprite destructor.
     /// @param void
     /// @return void
-    ~Rendering() override = default;
+    ~Sprite() override = default;
+
+    bool init() const {return true;}
+
+    int getBit() const {return bit;}
+
+    void draw(sf::RenderWindow& window) const override;
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
     /// @param texturePath: Path to the texture file for the sprite.
@@ -68,6 +77,8 @@ public:
     /// @return sf::Texture: SFML Texture for the sprite
     [[nodiscard]] sf::Texture getTexture() const;
 
+    bool isTextureLoaded() const {return texture.getSize().x != 0 && texture.getSize().y != 0;}
+
     /// @brief setSprite(): Set the SFML Sprite with an existing one for rendering.
     /// @param sprite: SFML Sprite for rendering
     /// @return void
@@ -76,7 +87,11 @@ public:
     /// @brief setTexture(): Set the texture with a texture path for the sprite.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    void setTexture(const std::string& texturePath);
+    void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture);
+
+    void setDeferredSprite(std::function<void()> setter);
+
+    void applyDeferredSprite();
 
     /// @brief setTexture(): Set the texture with an existing one for the sprite.
     /// @param existingTexture: SFML Texture for the sprite
@@ -84,4 +99,4 @@ public:
     void setTexture(const sf::Texture& existingTexture);
 };
 
-#endif //R_TYPE_RENDERING_H
+#endif //R_TYPE_SPRITE_H

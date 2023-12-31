@@ -4,27 +4,25 @@
 
 #include "entityManager.h"
 
-template<typename T, typename... TArgs>
-T& EntityManager::addEntity(TArgs&&... args) {
-    T* comp = new T(std::forward<TArgs>(args)...);
-    std::unique_ptr<Entity> uptr {comp};
-    entities.insert(std::make_pair(comp->getName(), std::move(uptr)));
-    if (comp->init()) {
-        entityMap.insert(std::make_pair(comp->getName(), comp));
-        return *comp;
+Entity& EntityManager::addEntity(std::string nameEntity, Archetypes newArchetype) {
+    std::unique_ptr<Entity> newEntity = std::make_unique<Entity>(nameEntity, newArchetype);
+    if (!newEntity->init()) {
+        throw std::runtime_error("Echec de l'initialisation de Entity : " + nameEntity);
     }
-    return *static_cast<T*>(nullptr);
+    Entity *comp = newEntity.get();
+    entities.insert(std::make_pair(nameEntity, std::move(newEntity)));
+    entityMap.insert(std::make_pair(nameEntity, comp));
+    return *comp;
 }
 
-template<typename T>
-T& EntityManager::getEntity(const std::string nameEntity) {
+Entity& EntityManager::getEntity(const std::string nameEntity) {
     auto it = entityMap.find(nameEntity);
     if (it != entityMap.end()) {
         auto ptr = entityMap[nameEntity];
-        return *static_cast<T*>(ptr);
+        return *static_cast<Entity*>(ptr);
     } else {
-        this->addEntity<Entity>(nameEntity);
-        return this->getEntity<Entity>(nameEntity);
+        this->addEntity(nameEntity);
+        return this->getEntity(nameEntity);
     }
 }
 

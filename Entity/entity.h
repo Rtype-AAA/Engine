@@ -12,6 +12,7 @@
 #include <memory>
 #include <array>
 #include "../Components/Components.h"
+#include "../Components/DrawableComponent.h"
 #include "../Archetype/Archetypes.h"
 
 /**
@@ -19,14 +20,13 @@
  *
  * The Entity class manages components associated with the entity.
 */
-class Entity : private Components {
-protected:
-    using EntityMap = std::map<std::string, Entity*>;
+class Entity : protected Components {
 private:
     std::string name{}; ///< Name of the entity
+    std::vector<DrawableComponent*> drawableComponents{};
     std::vector<std::unique_ptr<Components>> components{}; ///< List of components attached to the entity.
-    Components::ComponentBitset componentBitset; ///< Bitset to track enabled components.
-    Components::ComponentArray componentArray{}; ///< Array of components.
+    std::bitset<3> componentBitset; ///< Bitset to track enabled components.
+    std::array<Components*, 3> componentArray{}; ///< Array of components.
 public:
     /// @brief Default Entity constructor
     /// @param void
@@ -49,7 +49,7 @@ public:
     /// @brief init(): Initialize the entity
     /// @param void
     /// @return bool: true if the entity is initialized, false otherwise
-    bool init() override {return true;}
+    inline bool init() override;
 
     /// @brief genName(): Get the name of the entity
     /// @param void
@@ -60,6 +60,10 @@ public:
     /// @param newName: new name of the entity
     /// @return void
     inline void setName(std::string newName);
+
+    inline void addDrawable(Components* component);
+
+    inline void draw(sf::RenderWindow& window);
 
     /// @brief addComponent(): Add a component to the entity
     /// @tparam T: Type of the component
@@ -75,6 +79,10 @@ public:
     /// @return T&: reference of the component
     template<typename T>
     T& getComponent();
+
+    std::bitset<3> getComponentBitset() const {return componentBitset;}
+    std::vector<DrawableComponent*> getDrawableComponents() const {return drawableComponents;}
+    std::array<Components*, 3> getComponentArrays() const {return componentArray;}
 };
 
 #include "entity.cpp"

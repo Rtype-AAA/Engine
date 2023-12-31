@@ -11,15 +11,12 @@
 class Components {
 protected:
     using ComponentTypeID = std::size_t;
-    using ComponentBitset = std::bitset<3>;
-    using ComponentArray = std::array<Components*, 3>;
 public:
     Components() = default;
     virtual ~Components() = default;
 
     virtual bool init() {return true;}
-    virtual void draw() {}
-    virtual void update() {}
+    virtual void update() {};
 
 //    static inline ComponentTypeID getUniqueComponentID();
 //

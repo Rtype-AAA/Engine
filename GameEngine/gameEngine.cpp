@@ -20,6 +20,10 @@ void GameEngine::setWindow() {
     return;
 }
 
+void GameEngine::setCurrentWorld(World* world) {
+    currentWorld = world;
+}
+
 std::vector<std::string> getFilesTexture(std::string pathDirectory) {
     if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
         std::cerr << "Dossier non trouvé ou chemin non valide." << std::endl;
@@ -39,8 +43,8 @@ void GameEngine::initializeTexture(std::string path) {
     allFilesName = getFilesTexture(path);
     path += "/";
     for (const auto& element : allFilesName) {
-        mapTexture[element] = std::make_unique<sf::Texture>();
-        if (!mapTexture[element]->loadFromFile(path + element)) {
+        mapTexture[element] = sf::Texture();
+        if (!mapTexture[element].loadFromFile(path + element)) {
             std::cerr << "Erreur lors du chargement de la texture : " + path + element << std::endl;
             exit(1);
         } else {
@@ -49,7 +53,46 @@ void GameEngine::initializeTexture(std::string path) {
     }
 }
 
-void GameEngine::initialize(std::map<std::string, std::string> pathRessources) {
+World& GameEngine::addWorld(std::string nameWorld, std::unique_ptr<World> world) {
+    if (!world->init()) {
+        throw std::runtime_error("Echec de l'initialisation de World : " + nameWorld);
+    }
+    World *comp = world.get();
+    worlds.insert(std::make_pair(nameWorld, std::move(world)));
+    worldMap.insert(std::make_pair(nameWorld, comp));
+    return *comp;
+}
+
+World& GameEngine::getWorld(std::string nameWorld) {
+    auto it = worldMap.find(nameWorld);
+    if (it != worldMap.end()) {
+        auto ptr = worldMap[nameWorld];
+        return *static_cast<World*>(ptr);
+    } else {
+        throw std::runtime_error("Le world que vous voulez récupérer n'existe pas ou n'a pas été trouvé.");
+    }
+}
+
+void GameEngine::initializeWorldMap(std::map<std::string, std::unique_ptr<World>> mapWorld) {
+    for (auto& element : mapWorld) {
+        const std::string key = element.first;
+        addWorld(key, std::move(element.second));
+    }
+}
+
+void GameEngine::initializeSprite() {
+    for (auto const& world : getWorldMap()) {
+        for (auto const& entityManager : world.second->getEntityManagerMap()) {
+            for (auto const& entity : entityManager.second->getEntityMap()) {
+                entity.second->getComponent<Sprite>().applyDeferredSprite();
+            }
+        }
+    }
+}
+
+void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
+                            std::map<std::string, std::string> pathRessources,
+                            std::string firstScene) {
     for (const auto& element : pathRessources) {
         if (element.first == "Textures" || element.first == "Texture") {
             initializeTexture(element.second);
@@ -57,6 +100,18 @@ void GameEngine::initialize(std::map<std::string, std::string> pathRessources) {
             std::cout << "Le type de ressource n'existe pas, veuillez choisir parmis ceux disponible." << std::endl;
             exit(0);
         }
+    }
+    initializeWorldMap(std::move(mapWorld));
+    for (const auto& element : worldMap) {
+        const std::string key = element.first;
+
+        if (key == firstScene) {
+            currentWorld = worldMap[key];
+            break;
+        }
+    }
+    if (!mapTexture.empty()) {
+        initializeSprite();
     }
 }
 
@@ -71,9 +126,14 @@ void GameEngine::updateGameEngine() {
 }
 
 void GameEngine::renderGameEngine() {
-    std::visit([](auto& w) {
+    std::visit([&](auto& w) {
         if constexpr (std::is_same_v<std::decay_t<decltype(*w)>, sf::RenderWindow>) {
             w->clear();
+            for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
+                for (auto const& entity : entityManager.second->getEntityMap()) {
+                    entity.second->draw(*w);
+                }
+            }
             w->display();
         }
     }, window);
@@ -86,14 +146,28 @@ void GameEngine::eventGameEngine() {
                 case sf::Event::Closed:
                     w->close();
                     break;
+                case sf::Event::KeyPressed:
+                    if (event.key.code == sf::Keyboard::A)
+                        setCurrentWorld(worldMap["Menu"]);
+                    if (event.key.code == sf::Keyboard::Z)
+                        setCurrentWorld(worldMap["Level1"]);
+                    if (event.key.code == sf::Keyboard::E)
+                        setCurrentWorld(worldMap["Level2"]);
+                    if (event.key.code == sf::Keyboard::S)
+                        std::cout << getCurrentWorld()->getNameWorld() << std::endl;
+                    if (event.key.code == sf::Keyboard::Q) {
+                        w->close();
+                        break;
+                    }
             }
         }
     }, window);
 }
 
 void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                     std::map<std::string, std::string> pathRessources) {
-    initialize(pathRessources);
+                     std::map<std::string, std::string> pathRessources,
+                     std::string firstScene) {
+    initialize(std::move(mapWorld), pathRessources, firstScene);
     while (isWindowOpen()) {
         eventGameEngine();
         updateGameEngine();

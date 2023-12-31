@@ -4,7 +4,7 @@ project(all_components VERSION 1.0)
 
 set(LIB_SRCS
         Transform.cpp
-        Rendering.cpp
+        Sprite.cpp
         Audio.cpp
 )
 

@@ -16,11 +16,10 @@
 #include "../include/all_components.h"
 
 class World: protected EntityManager {
-protected:
-    using EntityManagerMap = std::map<std::string, EntityManager*>;
 private:
     std::map<std::string, std::unique_ptr<EntityManager>> entitiesManager{};
-    EntityManagerMap entityManagerMap{};
+    std::map<std::string, EntityManager*> entityManagerMap{};
+    std::string nameWorld{};
 public:
     World() = default;
 
@@ -31,6 +30,12 @@ public:
 
     EntityManager& addEntityManager(std::string NameEntityManager);
     EntityManager& getEntityManager(std::string NameEntityManager);
+
+    void setNameWorld(std::string newName);
+    std::string getNameWorld() const {return nameWorld;}
+    std::map<std::string, EntityManager*> getEntityManagerMap() const {return entityManagerMap;}
+
+    bool init() override {return true;}
 };
 
 
