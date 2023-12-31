@@ -1,8 +1,0 @@
-{
-  "name": "ma-bibliotheque",
-  "version-string": "1.0.0",
-  "description": "Une brève description de ma bibliothèque",
-  "dependencies": [
-    "autre-bibliotheque-dependante"  // Remplacez par les dépendances réelles, si nécessaire
-  ]
-}

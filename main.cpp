@@ -73,10 +73,6 @@ int main() {
 //    World test;
     GameEngine gameEngine(sf::VideoMode(1920, 1080), "2d", "SFML Window");
     std::map<std::string, std::unique_ptr<World>> worldMap;
-    std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
-    mapEntityManager["Menu"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Background"});
-    mapEntityManager["Level1"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Background"});
-    mapEntityManager["Level2"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Light"});
     worldMap["Menu"] = worldMenu(gameEngine);
     worldMap["Level1"] = worldLevel1(gameEngine);
     worldMap["Level2"] = worldLevel2();

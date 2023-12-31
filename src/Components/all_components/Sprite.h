@@ -87,7 +87,7 @@ public:
     /// @brief setTexture(): Set the texture with a texture path for the sprite.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture);
+    void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
 
     void setDeferredSprite(std::function<void()> setter);
 

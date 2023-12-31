@@ -168,3 +168,11 @@ void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
         renderGameEngine();
     }
 }
+
+void GameEngine::run() {
+    while (isWindowOpen()) {
+        eventGameEngine();
+        updateGameEngine();
+        renderGameEngine();
+    }
+}

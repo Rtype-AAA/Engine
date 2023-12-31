@@ -29,6 +29,7 @@ public:
 
     void run(std::map<std::string, std::unique_ptr<World>> mapWorld,
              std::map<std::string, std::string> pathRessources, std::string firstScene);
+    void run();
     void renderGameEngine();
     void eventGameEngine();
     bool isWindowOpen();

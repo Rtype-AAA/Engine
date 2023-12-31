@@ -36,9 +36,18 @@ void Sprite::setSprite(const sf::Sprite& newSprite) {
     sprite = newSprite;
 }
 
-void Sprite::setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture) {
+void Sprite::setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture,
+                       std::map<std::string, std::vector<float>>& mapTransform) {
     texture = mapTexture.find(nameTexture)->second;
     sprite.setTexture(texture);
+    auto position = mapTransform.find("Position");
+    if (position != mapTransform.end()) {
+        sprite.setPosition(position->second[0], position->second[1]);
+    }
+    auto scale = mapTransform.find("Scale");
+    if (scale != mapTransform.end()) {
+        sprite.setScale(scale->second[0], scale->second[1]);
+    }
 }
 
 void Sprite::applyDeferredSprite() {
