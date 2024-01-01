@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d8/dc5/classEntity-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Entity Class Reference</div>  </div>
@@ -105,6 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1">setName</a> (std::string newName)</td></tr>
 <tr class="memdesc:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1" title="setName(): Set the name of the entity">setName()</a>: Set the name of the entity  <a href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1">More...</a><br /></td></tr>
 <tr class="separator:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae040ef4d3e81b99e1851995f0c031f"><td class="memItemLeft" align="right" valign="top"><a id="adae040ef4d3e81b99e1851995f0c031f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addDrawable</b> (<a class="el" href="../../db/d46/classComponents.html">Components</a> *component)</td></tr>
+<tr class="separator:adae040ef4d3e81b99e1851995f0c031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1309341dd268af435449b5031ff0a06d"><td class="memItemLeft" align="right" valign="top"><a id="a1309341dd268af435449b5031ff0a06d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="separator:a1309341dd268af435449b5031ff0a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ee9d838c0d24c24b2faf1ea05bbd0b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... TArgs&gt; </td></tr>
 <tr class="memitem:a54ee9d838c0d24c24b2faf1ea05bbd0b"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a54ee9d838c0d24c24b2faf1ea05bbd0b">addComponent</a> (TArgs &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a54ee9d838c0d24c24b2faf1ea05bbd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a54ee9d838c0d24c24b2faf1ea05bbd0b" title="addComponent(): Add a component to the entity">addComponent()</a>: Add a component to the entity  <a href="../../da/d61/classEntity.html#a54ee9d838c0d24c24b2faf1ea05bbd0b">More...</a><br /></td></tr>
@@ -113,12 +120,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af378c2ea70fa68a8433f19500261393d"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#af378c2ea70fa68a8433f19500261393d">getComponent</a> ()</td></tr>
 <tr class="memdesc:af378c2ea70fa68a8433f19500261393d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#af378c2ea70fa68a8433f19500261393d" title="getComponent(): Get a component from the entity">getComponent()</a>: Get a component from the entity  <a href="../../da/d61/classEntity.html#af378c2ea70fa68a8433f19500261393d">More...</a><br /></td></tr>
 <tr class="separator:af378c2ea70fa68a8433f19500261393d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="memItemLeft" align="right" valign="top"><a id="a25ae1bb3b7b2e015382fb64a06ef77d0"></a>
+std::bitset&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentBitset</b> () const</td></tr>
+<tr class="separator:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7955dd3768b0933bcc4b0f328132d46c"><td class="memItemLeft" align="right" valign="top"><a id="a7955dd3768b0933bcc4b0f328132d46c"></a>
+std::vector&lt; <a class="el" href="../../d2/db3/classDrawableComponent.html">DrawableComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDrawableComponents</b> () const</td></tr>
+<tr class="separator:a7955dd3768b0933bcc4b0f328132d46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="memItemLeft" align="right" valign="top"><a id="a2bc407a4ce9db73d8f51dd9d4ec086e3"></a>
+std::array&lt; <a class="el" href="../../db/d46/classComponents.html">Components</a> *, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentArrays</b> () const</td></tr>
+<tr class="separator:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:a827e0a3492afe4ae44bdea858803a4dd"><td class="memItemLeft" align="right" valign="top"><a id="a827e0a3492afe4ae44bdea858803a4dd"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>EntityMap</b> = std::map&lt; std::string, <a class="el" href="../../da/d61/classEntity.html">Entity</a> * &gt;</td></tr>
-<tr class="separator:a827e0a3492afe4ae44bdea858803a4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e3983b1cb651e18fbe4a521064e42d"><td class="memItemLeft" align="right" valign="top"><a id="a25e3983b1cb651e18fbe4a521064e42d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentTypeID</b> = std::size_t</td></tr>
+<tr class="separator:a25e3983b1cb651e18fbe4a521064e42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a98c9d30dac6c9277ce325dde2707a4ec"><td class="memItemLeft" align="right" valign="top"><a id="a98c9d30dac6c9277ce325dde2707a4ec"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="separator:a98c9d30dac6c9277ce325dde2707a4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a0654b5ac4cab4eb5b635fb0c91dd9"><td class="memTemplParams" colspan="2"><a id="aa1a0654b5ac4cab4eb5b635fb0c91dd9"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa1a0654b5ac4cab4eb5b635fb0c91dd9"><td class="memTemplItemLeft" align="right" valign="top">ComponentTypeID&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponentTypeID</b> () noexcept</td></tr>
+<tr class="separator:aa1a0654b5ac4cab4eb5b635fb0c91dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> class: <a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> is a class that represents an entity in the game. </p>
@@ -374,6 +400,8 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../db/d46/classComponents.html">Components</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d6/d39/classWorld.html#a4ae65074f87b1f80fb2e2ce0db373b0d">World</a>, and <a class="el" href="../../dd/d5f/classEntityManager.html#ab4a499dc089c5bf16424c72c66d3a9c5">EntityManager</a>.</p>
+
 </div>
 </div>
 <a id="ad9cc6453a56fcefcd2b77dbde895f8d1"></a>
@@ -412,8 +440,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Entity/<a class="el" href="../../d8/d83/entity_8h_source.html">entity.h</a></li>
-<li>Entity/entity.cpp</li>
+<li>src/Entity/<a class="el" href="../../d8/d83/entity_8h_source.html">entity.h</a></li>
+<li>src/Entity/entity.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -22,6 +22,9 @@ Collaboration diagram for Transform\+:
 \item 
 \mbox{\hyperlink{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}{Transform}} ()=default
 \begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}\label{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}} 
+bool {\bfseries init} () const
+\item 
 \mbox{\hyperlink{classTransform_a79df5373c426c25979442db7667eb330}{Transform}} (const std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTransform_ac02ce42e0a10a0ab365daf50fb5cd3ff}{$\sim$\+Transform}} () override=default
@@ -35,8 +38,22 @@ std\+::vector$<$ float $>$ \mbox{\hyperlink{classTransform_aaede12963a155836b230
 std\+::vector$<$ float $>$ \mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{get\+Scale\+Vector}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{get\+Scale\+Vector()}}\+: Get the scale vector of the component; \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform}} (const std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform()}}\+: Set the transformation properties of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform()}}\+: Set the transformation properties of the component \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classComponents_adb5db757815c1d8b961c069515f8e260}\label{classComponents_adb5db757815c1d8b961c069515f8e260}} 
+virtual bool {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
+virtual void {\bfseries update} ()
+\item 
+\mbox{\Hypertarget{classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}\label{classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}} 
+{\footnotesize template$<$typename T $>$ }\\Component\+Type\+ID {\bfseries get\+Component\+Type\+ID} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComponents_a25e3983b1cb651e18fbe4a521064e42d}\label{classComponents_a25e3983b1cb651e18fbe4a521064e42d}} 
+using {\bfseries Component\+Type\+ID} = std\+::size\+\_\+t
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -196,5 +213,5 @@ void
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Components/all\+\_\+components/Transform.\+h\item 
-Components/all\+\_\+components/Transform.\+cpp\end{DoxyCompactItemize}
+src/\+Components/all\+\_\+components/Transform.\+h\item 
+src/\+Components/all\+\_\+components/Transform.\+cpp\end{DoxyCompactItemize}

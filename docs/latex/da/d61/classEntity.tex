@@ -32,15 +32,39 @@ std\+::string \mbox{\hyperlink{classEntity_a403f69eb888da7c5a690b79c658cdf47}{ge
 \begin{DoxyCompactList}\small\item\em gen\+Name()\+: Get the name of the entity \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name}} (std\+::string new\+Name)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name()}}\+: Set the name of the entity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEntity_adae040ef4d3e81b99e1851995f0c031f}\label{classEntity_adae040ef4d3e81b99e1851995f0c031f}} 
+void {\bfseries add\+Drawable} (\mbox{\hyperlink{classComponents}{Components}} $\ast$component)
+\item 
+\mbox{\Hypertarget{classEntity_a1309341dd268af435449b5031ff0a06d}\label{classEntity_a1309341dd268af435449b5031ff0a06d}} 
+void {\bfseries draw} (sf\+::\+Render\+Window \&window)
+\item 
 {\footnotesize template$<$typename T , typename... TArgs$>$ }\\T \& \mbox{\hyperlink{classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b}{add\+Component}} (TArgs \&\&... args)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b}{add\+Component()}}\+: Add a component to the entity \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEntity_af378c2ea70fa68a8433f19500261393d}{get\+Component}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_af378c2ea70fa68a8433f19500261393d}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_af378c2ea70fa68a8433f19500261393d}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}\label{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}} 
+std\+::bitset$<$ 3 $>$ {\bfseries get\+Component\+Bitset} () const
+\item 
+\mbox{\Hypertarget{classEntity_a7955dd3768b0933bcc4b0f328132d46c}\label{classEntity_a7955dd3768b0933bcc4b0f328132d46c}} 
+std\+::vector$<$ \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} $\ast$ $>$ {\bfseries get\+Drawable\+Components} () const
+\item 
+\mbox{\Hypertarget{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}\label{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}} 
+std\+::array$<$ \mbox{\hyperlink{classComponents}{Components}} $\ast$, 3 $>$ {\bfseries get\+Component\+Arrays} () const
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEntity_a827e0a3492afe4ae44bdea858803a4dd}\label{classEntity_a827e0a3492afe4ae44bdea858803a4dd}} 
-using {\bfseries Entity\+Map} = std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$
+\mbox{\Hypertarget{classComponents_a25e3983b1cb651e18fbe4a521064e42d}\label{classComponents_a25e3983b1cb651e18fbe4a521064e42d}} 
+using {\bfseries Component\+Type\+ID} = std\+::size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
+virtual void {\bfseries update} ()
+\item 
+\mbox{\Hypertarget{classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}\label{classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}} 
+{\footnotesize template$<$typename T $>$ }\\Component\+Type\+ID {\bfseries get\+Component\+Type\+ID} () noexcept
 \end{DoxyCompactItemize}
 
 
@@ -199,6 +223,10 @@ bool\+: true if the entity is initialized, false otherwise
 
 Reimplemented from \mbox{\hyperlink{classComponents}{Components}}.
 
+
+
+Reimplemented in \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{World}}, and \mbox{\hyperlink{classEntityManager_ab4a499dc089c5bf16424c72c66d3a9c5}{Entity\+Manager}}.
+
 \mbox{\Hypertarget{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}\label{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}} 
 \index{Entity@{Entity}!setName@{setName}}
 \index{setName@{setName}!Entity@{Entity}}
@@ -221,5 +249,5 @@ void
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Entity/entity.\+h\item 
-Entity/entity.\+cpp\end{DoxyCompactItemize}
+src/\+Entity/entity.\+h\item 
+src/\+Entity/entity.\+cpp\end{DoxyCompactItemize}

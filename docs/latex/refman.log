@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  20 DEC 2023 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  1 JAN 2024 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,7 +722,256 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box120
 )
-(./refman.aux)
+(./refman.aux
+
+LaTeX Warning: Label `classComponents_a25e3983b1cb651e18fbe4a521064e42d' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_a98c9d30dac6c9277ce325dde2707a4ec' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_a25e3983b1cb651e18fbe4a521064e42d' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEntity_adae040ef4d3e81b99e1851995f0c031f' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a1309341dd268af435449b5031ff0a06d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a7955dd3768b0933bcc4b0f328132d46c' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3' multiply d
+efined.
+
+
+LaTeX Warning: Label `classComponents_a98c9d30dac6c9277ce325dde2707a4ec' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_af378c2ea70fa68a8433f19500261393d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a403f69eb888da7c5a690b79c658cdf47' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1' multiply d
+efined.
+
+
+LaTeX Warning: Label `classComponents_a25e3983b1cb651e18fbe4a521064e42d' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEntity_adae040ef4d3e81b99e1851995f0c031f' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a1309341dd268af435449b5031ff0a06d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a7955dd3768b0933bcc4b0f328132d46c' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3' multiply d
+efined.
+
+
+LaTeX Warning: Label `classComponents_a98c9d30dac6c9277ce325dde2707a4ec' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEventEngine_ab6021ece4dc8205712e42e460167a7a2' multi
+ply defined.
+
+
+LaTeX Warning: Label `classEventEngine_a5250100318fb566404de9e34682e1c0e' multi
+ply defined.
+
+
+LaTeX Warning: Label `classEventEngine_a1de358e7993ca5bffd152a2392faa051' multi
+ply defined.
+
+
+LaTeX Warning: Label `classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9' multi
+ply defined.
+
+
+LaTeX Warning: Label `classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntityManager_ae00cfff54f5855e3ec71661224bec265' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntity_af378c2ea70fa68a8433f19500261393d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntityManager_ad289a6999a5b56f6956334aef060e57c' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntityManager_aa184df0038440ff28cb526c70a268943' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntity_a403f69eb888da7c5a690b79c658cdf47' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1' multiply d
+efined.
+
+
+LaTeX Warning: Label `classComponents_adb5db757815c1d8b961c069515f8e260' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_a98c9d30dac6c9277ce325dde2707a4ec' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_a25e3983b1cb651e18fbe4a521064e42d' multip
+ly defined.
+
+
+LaTeX Warning: Label `classWorld_a34708e0fd137fb21abd9f7fdbe662567' multiply de
+fined.
+
+
+LaTeX Warning: Label `classWorld_a3230be9d7c3dc812a1712972cffd56e4' multiply de
+fined.
+
+
+LaTeX Warning: Label `classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2' multiply de
+fined.
+
+
+LaTeX Warning: Label `classWorld_a8e5de3493a85951d99ff47a8ec5b0823' multiply de
+fined.
+
+
+LaTeX Warning: Label `classWorld_a7a15da4862400e8a81913329326eb426' multiply de
+fined.
+
+
+LaTeX Warning: Label `classWorld_aa532561277a5e7a76f1d442ea8c7c1f8' multiply de
+fined.
+
+
+LaTeX Warning: Label `classComponents_a25e3983b1cb651e18fbe4a521064e42d' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEntity_adae040ef4d3e81b99e1851995f0c031f' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a1309341dd268af435449b5031ff0a06d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a7955dd3768b0933bcc4b0f328132d46c' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3' multiply d
+efined.
+
+
+LaTeX Warning: Label `classComponents_a98c9d30dac6c9277ce325dde2707a4ec' multip
+ly defined.
+
+
+LaTeX Warning: Label `classComponents_aa1a0654b5ac4cab4eb5b635fb0c91dd9' multip
+ly defined.
+
+
+LaTeX Warning: Label `classEntity_a54ee9d838c0d24c24b2faf1ea05bbd0b' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntityManager_ae00cfff54f5855e3ec71661224bec265' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntity_af378c2ea70fa68a8433f19500261393d' multiply d
+efined.
+
+
+LaTeX Warning: Label `classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntityManager_ad289a6999a5b56f6956334aef060e57c' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntityManager_aa184df0038440ff28cb526c70a268943' mul
+tiply defined.
+
+
+LaTeX Warning: Label `classEntity_a403f69eb888da7c5a690b79c658cdf47' multiply d
+efined.
+
+
+LaTeX Warning: Label `classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d' multiply de
+fined.
+
+
+LaTeX Warning: Label `classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1' multiply d
+efined.
+
+)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -743,8 +992,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
 \scratchdimen=\dimen262
@@ -921,7 +1169,7 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 7.
 )
-(./da/d61/classEntity.tex [7]
+(./d2/db3/classDrawableComponent.tex [7]) (./da/d61/classEntity.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -932,29 +1180,47 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
+pdfTeX warning (ext4): destination with the same identifier (name{classComponen
+ts_a25e3983b1cb651e18fbe4a521064e42d}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.57 ...onents_a25e3983b1cb651e18fbe4a521064e42d}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a98c9d30dac6c9277ce325dde2
+707a4ec}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 ...onents_a98c9d30dac6c9277ce325dde2707a4ec}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_aa1a0654b5ac4cab4eb5b635fb
+0c91dd9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66 ...onents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}}
+                                                   [8]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 56.
- [8]
-Underfull \hbox (badness 10000) detected at line 68
+(Font)              scaled to size 7.19995pt on input line 80.
+
+Underfull \hbox (badness 10000) detected at line 92
 [][][]
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 99.
 
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
+Overfull \vbox (23.15033pt too high) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) detected at line 106
-[][][]
- []
 
 [9]
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 130
 [][][]
  []
 
@@ -964,6 +1230,105 @@ Underfull \hbox (badness 10000) detected at line 159
  []
 
 [10]
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+[11]
+Underfull \hbox (badness 10000) detected at line 219
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 245
+[][][]
+ []
+
+) (./dd/d5f/classEntityManager.tex
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 23.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 23.
+pdfTeX warning (ext4): destination with the same identifier (name{classComponen
+ts_a25e3983b1cb651e18fbe4a521064e42d}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.31 ...onents_a25e3983b1cb651e18fbe4a521064e42d}}
+                                                   [12]pdfTeX warning (ext4): d
+estination with the same identifier (name{classEntity_adae040ef4d3e81b99e185199
+5f0c031f}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.41 ...Entity_adae040ef4d3e81b99e1851995f0c031f}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a1309341dd268af435449b5031ff0a
+06d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.44 ...Entity_a1309341dd268af435449b5031ff0a06d}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a25ae1bb3b7b2e015382fb64a06ef7
+7d0}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.51 ...Entity_a25ae1bb3b7b2e015382fb64a06ef77d0}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a7955dd3768b0933bcc4b0f328132d
+46c}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 ...Entity_a7955dd3768b0933bcc4b0f328132d46c}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a2bc407a4ce9db73d8f51dd9d4ec08
+6e3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.57 ...Entity_a2bc407a4ce9db73d8f51dd9d4ec086e3}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a98c9d30dac6c9277ce325dde2
+707a4ec}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60 ...onents_a98c9d30dac6c9277ce325dde2707a4ec}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_aa1a0654b5ac4cab4eb5b635fb
+0c91dd9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 ...onents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+54ee9d838c0d24c24b2faf1ea05bbd0b}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.108 ...ntity_a54ee9d838c0d24c24b2faf1ea05bbd0b}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+[14]pdfTeX warning (ext4): destination with the same identifier (name{classEnti
+ty_af378c2ea70fa68a8433f19500261393d}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.156 ...ntity_af378c2ea70fa68a8433f19500261393d}}
+                                                  
 Underfull \hbox (badness 10000) detected at line 177
 [][][]
  []
@@ -973,121 +1338,485 @@ Underfull \hbox (badness 10000) detected at line 195
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 217
-[][][]
- []
-
-) (./dd/d5f/classEntityManager.tex [11]
-LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 32.
-LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 32.
- [12]
-Underfull \hbox (badness 10000) detected at line 58
+[15]
+Underfull \hbox (badness 10000) detected at line 218
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 76
+Underfull \hbox (badness 10000) detected at line 236
 [][][]
  []
 
-[13]
-Underfull \hbox (badness 10000) detected at line 120
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+403f69eb888da7c5a690b79c658cdf47}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.239 ...ntity_a403f69eb888da7c5a690b79c658cdf47}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+[16]
+Underfull \hbox (badness 10000) detected at line 272
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+d9cc6453a56fcefcd2b77dbde895f8d1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ...ntity_ad9cc6453a56fcefcd2b77dbde895f8d1}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 298
+[][][]
+ []
+
+) (./d5/df4/classEntityManagerTest.tex [17]) (./df/d2b/classEntityTest.tex)
+(./d4/d2e/classEventEngine.tex) (./df/d8d/classGameEngine.tex [18]pdfTeX warnin
+g (ext4): destination with the same identifier (name{classComponents_a25e3983b1
+cb651e18fbe4a521064e42d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.77 ...onents_a25e3983b1cb651e18fbe4a521064e42d}}
+                                                   [19]pdfTeX warning (ext4): d
+estination with the same identifier (name{classEntity_adae040ef4d3e81b99e185199
+5f0c031f}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 ...ntity_adae040ef4d3e81b99e1851995f0c031f}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a1309341dd268af435449b5031ff0a
+06d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.118 ...ntity_a1309341dd268af435449b5031ff0a06d}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a25ae1bb3b7b2e015382fb64a06ef7
+7d0}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 ...ntity_a25ae1bb3b7b2e015382fb64a06ef77d0}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a7955dd3768b0933bcc4b0f328132d
+46c}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 ...ntity_a7955dd3768b0933bcc4b0f328132d46c}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a2bc407a4ce9db73d8f51dd9d4ec08
+6e3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 ...ntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a98c9d30dac6c9277ce325dde2
+707a4ec}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.134 ...nents_a98c9d30dac6c9277ce325dde2707a4ec}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_aa1a0654b5ac4cab4eb5b635fb
+0c91dd9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 ...nents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEventEngine_ab6021ece4dc8205712e42e46
+0167a7a2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.140 ...ngine_ab6021ece4dc8205712e42e460167a7a2}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEventEngine_a5250100318fb566404de9e34
+682e1c0e}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 ...ngine_a5250100318fb566404de9e34682e1c0e}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEventEngine_a1de358e7993ca5bffd152a23
+92faa051}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 ...ngine_a1de358e7993ca5bffd152a2392faa051}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEventEngine_ae2c6fc7e5f83495867372a72
+2bbe08c9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.149 ...ngine_ae2c6fc7e5f83495867372a722bbe08c9}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a54ee9d838c0d24c24b2faf1ea05bb
+d0b}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 ...ntity_a54ee9d838c0d24c24b2faf1ea05bbd0b}}
+                                                   [20]
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_ae00cfff54f5855e3ec71661224bec265}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.181 ...nager_ae00cfff54f5855e3ec71661224bec265}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_af378c2ea70fa68a8433f195002613
+93d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.203 ...ntity_af378c2ea70fa68a8433f19500261393d}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 224
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_a119ed37f3fd74a53f0a191faf24d07b0}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.227 ...nager_a119ed37f3fd74a53f0a191faf24d07b0}}
+                                                   [21]
+Underfull \hbox (badness 10000) detected at line 242
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_ad289a6999a5b56f6956334aef060e57c}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.245 ...nager_ad289a6999a5b56f6956334aef060e57c}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 265
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_aa184df0038440ff28cb526c70a268943}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.268 ...nager_aa184df0038440ff28cb526c70a268943}}
+                                                   [22]
+Underfull \hbox (badness 10000) detected at line 283
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+403f69eb888da7c5a690b79c658cdf47}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.286 ...ntity_a403f69eb888da7c5a690b79c658cdf47}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 301
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 144
+Underfull \hbox (badness 10000) detected at line 319
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+d9cc6453a56fcefcd2b77dbde895f8d1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.326 ...ntity_ad9cc6453a56fcefcd2b77dbde895f8d1}}
+                                                   [23]
+Underfull \hbox (badness 10000) detected at line 341
+[][][]
+ []
+
+) (./d1/d6d/classSprite.tex) (./db/daf/classTransform.texpdfTeX warning (ext4):
+ destination with the same identifier (name{classComponents_adb5db757815c1d8b96
+1c069515f8e260}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 ...onents_adb5db757815c1d8b961c069515f8e260}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a98c9d30dac6c9277ce325dde2
+707a4ec}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45 ...onents_a98c9d30dac6c9277ce325dde2707a4ec}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_aa1a0654b5ac4cab4eb5b635fb
+0c91dd9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.48 ...onents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a25e3983b1cb651e18fbe4a521
+064e42d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 ...onents_a25e3983b1cb651e18fbe4a521064e42d}}
+                                                   [24]
+Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 162
-[][][]
- []
-
-[14]) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex)
-(./d4/dc3/classRendering.tex) (./db/daf/classTransform.tex [15]
-Underfull \hbox (badness 10000) detected at line 63
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 |  \T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::strin
 g, std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 float $\OML/cmm/m/it/8 >$$>$ 
 \T1/pcr/m/n/8 & \T1/pcr/m/sl/8 map[]Transform \T1/pcr/m/n/8 ) [inline],
  []
 
-[16]
-Underfull \hbox (badness 10000) detected at line 81
+
+Underfull \hbox (badness 10000) detected at line 98
+[][][]
+ []
+
+[25]
+Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 99
-[][][]
- []
-
-[17]
-Underfull \hbox (badness 10000) detected at line 120
+Underfull \hbox (badness 10000) detected at line 137
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 138
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+[26]
+Underfull \hbox (badness 10000) detected at line 173
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 156
+Underfull \hbox (badness 10000) detected at line 191
 [][][]
  []
 
-[18]
-Underfull \hbox (badness 10000) detected at line 174
+[27]
+Underfull \hbox (badness 10000) detected at line 209
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 192
+) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.texpdfTeX warning (ext
+4): destination with the same identifier (name{classWorld_a34708e0fd137fb21abd9
+f7fdbe662567}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 ...sWorld_a34708e0fd137fb21abd9f7fdbe662567}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classWorld_a3230be9d7c3dc812a1712972cffd56
+e4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 ...sWorld_a3230be9d7c3dc812a1712972cffd56e4}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8b
+c2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 ...sWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classWorld_a8e5de3493a85951d99ff47a8ec5b08
+23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 ...sWorld_a8e5de3493a85951d99ff47a8ec5b0823}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classWorld_a7a15da4862400e8a81913329326eb4
+26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 ...sWorld_a7a15da4862400e8a81913329326eb426}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classWorld_aa532561277a5e7a76f1d442ea8c7c1
+f8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 ...sWorld_aa532561277a5e7a76f1d442ea8c7c1f8}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a25e3983b1cb651e18fbe4a521
+064e42d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 ...onents_a25e3983b1cb651e18fbe4a521064e42d}}
+                                                   [28]pdfTeX warning (ext4): d
+estination with the same identifier (name{classEntity_adae040ef4d3e81b99e185199
+5f0c031f}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 ...Entity_adae040ef4d3e81b99e1851995f0c031f}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a1309341dd268af435449b5031ff0a
+06d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 ...Entity_a1309341dd268af435449b5031ff0a06d}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a25ae1bb3b7b2e015382fb64a06ef7
+7d0}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.65 ...Entity_a25ae1bb3b7b2e015382fb64a06ef77d0}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a7955dd3768b0933bcc4b0f328132d
+46c}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.68 ...Entity_a7955dd3768b0933bcc4b0f328132d46c}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a2bc407a4ce9db73d8f51dd9d4ec08
+6e3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71 ...Entity_a2bc407a4ce9db73d8f51dd9d4ec086e3}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_a98c9d30dac6c9277ce325dde2
+707a4ec}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74 ...onents_a98c9d30dac6c9277ce325dde2707a4ec}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classComponents_aa1a0654b5ac4cab4eb5b635fb
+0c91dd9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.77 ...onents_aa1a0654b5ac4cab4eb5b635fb0c91dd9}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_a54ee9d838c0d24c24b2faf1ea05bb
+d0b}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 ...Entity_a54ee9d838c0d24c24b2faf1ea05bbd0b}}
+                                                   [29]
+Underfull \hbox (badness 10000) detected at line 106
 [][][]
  []
 
-) (./d6/d2b/classTransformTest.tex) [19] [20
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_ae00cfff54f5855e3ec71661224bec265}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.109 ...nager_ae00cfff54f5855e3ec71661224bec265}}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{classEntity_af378c2ea70fa68a8433f195002613
+93d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 ...ntity_af378c2ea70fa68a8433f19500261393d}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
 
-] (./refman.ind [21
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_a119ed37f3fd74a53f0a191faf24d07b0}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.155 ...nager_a119ed37f3fd74a53f0a191faf24d07b0}}
+                                                   [30]
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
 
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_ad289a6999a5b56f6956334aef060e57c}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.173 ...nager_ad289a6999a5b56f6956334aef060e57c}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 193
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntityMa
+nager_aa184df0038440ff28cb526c70a268943}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.196 ...nager_aa184df0038440ff28cb526c70a268943}}
+                                                   [31]
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+403f69eb888da7c5a690b79c658cdf47}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.214 ...ntity_a403f69eb888da7c5a690b79c658cdf47}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 229
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classWorld_a4
+ae65074f87b1f80fb2e2ce0db373b0d}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.232 ...World_a4ae65074f87b1f80fb2e2ce0db373b0d}}
+                                                  
+Underfull \hbox (badness 10000) detected at line 247
+[][][]
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{classEntity_a
+d9cc6453a56fcefcd2b77dbde895f8d1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.254 ...ntity_ad9cc6453a56fcefcd2b77dbde895f8d1}}
+                                                   [32]
+Underfull \hbox (badness 10000) detected at line 269
+[][][]
+ []
+
+) [33] [34
+
+] (./refman.ind [35
+
+
+] [36
 
 ]) (./refman.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: F13678896AE31C53874C330075619B2A;9373.
+(rerunfilecheck)             Checksum: 64E2941A399A8B4B73C9054BFFB2FCAC;14817.
  ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 480247
- 282172 string characters out of 5896152
- 583703 words of memory out of 5000000
- 34984 multiletter control sequences out of 15000+600000
+ 17807 strings out of 480247
+ 288726 string characters out of 5896152
+ 606861 words of memory out of 5000000
+ 35099 multiletter control sequences out of 15000+600000
  530331 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,15n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
-rr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 140789 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvro8a.pfb>
+Output written on refman.pdf (40 pages, 194621 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 149 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1237 PDF objects out of 1440 (max. 8388607)
+ 1157 compressed objects within 12 object streams
+ 280 named destinations out of 1000 (max. 500000)
+ 609 words of extra memory for PDF output out of 10000 (max. 10000000)
 
