@@ -96,8 +96,10 @@ public:
     /// @return void
     void setSprite(const sf::Sprite& sprite);
 
-    /// @brief setTexture(): Set the texture with a texture path for the sprite.
-    /// @param texturePath: Path to the texture file for the sprite.
+    /// @brief setSprite(): Set the SFML Sprite with a map of string and textures, a texture name and a map of string and vector of floats.
+    /// @param mapTexture: Map of string and textures.
+    /// @param nameTexture: Name of the texture.
+    /// @param mapTransform: Map of string and vector of floats.
     /// @return void
     void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
 

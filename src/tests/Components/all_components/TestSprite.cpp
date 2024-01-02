@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include "../../../include/all_components.h"
 
 class SpriteTest : public ::testing::Test {
@@ -16,6 +17,14 @@ TEST_F(SpriteTest, ConstructorWithTexturePath) {
     Sprite sprite("src/tests/assets/red.png");
 
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
+}
+
+TEST_F(SpriteTest, Init) {
+    ASSERT_TRUE(sprite.init());
+}
+
+TEST_F(SpriteTest, GetBit) {
+    ASSERT_EQ(sprite.getBit(), 1);
 }
 
 TEST_F(SpriteTest, CreateSpriteWithTexturePath) {
@@ -67,6 +76,22 @@ TEST_F(SpriteTest, GetTexture) {
     EXPECT_EQ(sprite.getTexture().getSize(), originalTexture.getSize());
 }
 
+TEST_F(SpriteTest, IsTextureLoaded) {
+    ASSERT_FALSE(sprite.isTextureLoaded());
+
+    sprite.createSprite("src/tests/assets/red.png");
+    ASSERT_TRUE(sprite.isTextureLoaded());
+
+    sprite.createSprite();
+    ASSERT_TRUE(sprite.isTextureLoaded());
+
+    sf::Texture texture;
+    sprite.createSprite(texture);
+    ASSERT_TRUE(sprite.isTextureLoaded());
+
+    sprite.createSprite("src/tests/assets/blue.png");
+    ASSERT_TRUE(sprite.isTextureLoaded());
+}
 
 TEST_F(SpriteTest, SetSpriteWithAnExistingSprite) {
     Sprite sprite("src/tests/assets/red.png");
@@ -82,6 +107,40 @@ TEST_F(SpriteTest, SetSpriteWithAnExistingSprite) {
     sprite.setSprite(newSprite);
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
     ASSERT_EQ(sprite.getSprite().getTexture(), newSprite.getTexture());
+}
+
+TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
+    Sprite spriteComp;
+
+    std::map<std::string, sf::Texture> mapTexture;
+    sf::Texture testTexture;
+
+    ASSERT_TRUE(testTexture.loadFromFile("src/tests/assets/red.png"));
+
+    mapTexture["TestTexture"] = testTexture;
+
+    sf::Sprite testSprite;
+    testSprite.setTexture(testTexture);
+
+    std::map<std::string, std::vector<float>> mapTransform;
+    mapTransform["Position"] = {10.0f, 20.0f};
+    mapTransform["Scale"] = {2.0f, 2.0f};
+
+    spriteComp.setSprite(mapTexture, "TestTexture", mapTransform);
+
+    ASSERT_TRUE(spriteComp.getSprite().getTexture() != nullptr);
+
+    int64_t testTextureSize = testTexture.getSize().x * testTexture.getSize().y;
+    int64_t spriteCompTextureSize = spriteComp.getSprite().getTexture()->getSize().x * spriteComp.getSprite().getTexture()->getSize().y;
+
+    ASSERT_TRUE(testTextureSize > 0);
+    ASSERT_EQ(testTextureSize, spriteCompTextureSize);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 10.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 20.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 2.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 2.0f);
 }
 
 TEST_F(SpriteTest, SetTextureWithTexturePath) {
@@ -112,4 +171,18 @@ TEST_F(SpriteTest, SetTextureWithAnExistingTexture) {
 
     sprite.setTexture(newTexture);
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
+}
+
+TEST_F(SpriteTest, SetAndApplyDefferedSprite) {
+    auto helloWorldFunction = []() { std::cout << "Hello world" << std::endl; };
+
+    sprite.setDeferredSprite(helloWorldFunction);
+
+    testing::internal::CaptureStdout();
+
+    sprite.applyDeferredSprite();
+
+    std::string output = testing::internal::GetCapturedStdout();
+
+    ASSERT_THAT(output, ::testing::HasSubstr("Hello world"));
 }
