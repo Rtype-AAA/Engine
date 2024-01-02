@@ -11,6 +11,7 @@ add_executable(all_tests
         Event/TestEvent.cpp
         Components/all_components/TestSprite.cpp
         Components/all_components/TestTransform.cpp
+        World/TestWorld.cpp
 )
 
 target_include_directories(all_tests
