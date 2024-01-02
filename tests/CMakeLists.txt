@@ -8,6 +8,7 @@ add_executable(all_tests
         TestMain.cpp
         Entity/TestEntity.cpp
         Entity/TestEntityManager.cpp
+        Event/TestEvent.cpp
         Components/all_components/TestSprite.cpp
         Components/all_components/TestTransform.cpp
 )

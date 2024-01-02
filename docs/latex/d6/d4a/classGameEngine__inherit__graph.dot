@@ -13,5 +13,5 @@ digraph "GameEngine"
   Node5 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid"];
   Node5 [label="Components",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d46/classComponents.html",tooltip=" "];
   Node6 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid"];
-  Node6 [label="EventEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2e/classEventEngine.html",tooltip=" "];
+  Node6 [label="EventEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2e/classEventEngine.html",tooltip="EventEngine class: EventEngine is a class that represents the event engine of the game."];
 }
