@@ -2,23 +2,153 @@
 \label{classEventEngine}\index{EventEngine@{EventEngine}}
 
 
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} class\+: \mbox{\hyperlink{classEventEngine}{Event\+Engine}} is a class that represents the event engine of the game.  
+
+
+
+
+{\ttfamily \#include $<$event.\+h$>$}
+
+
+
 Inheritance diagram for Event\+Engine\+:
 % FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}\label{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}} 
-bool {\bfseries init} () const
-\item 
-\mbox{\Hypertarget{classEventEngine_a5250100318fb566404de9e34682e1c0e}\label{classEventEngine_a5250100318fb566404de9e34682e1c0e}} 
-sf\+::\+Event \& {\bfseries get\+Event} ()
-\item 
+\mbox{\hyperlink{classEventEngine_a2875264300f68e1b7282928b18aa8969}{Event\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEventEngine}{Event\+Engine}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classEventEngine_a77cfa5bd6e3656f60d8d203de3ddd85e}{$\sim$\+Event\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine}{Event\+Engine}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init()}}\+: Initialize the \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. \end{DoxyCompactList}\item 
+sf\+::\+Event \& \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event()}}\+: Get the SFML Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key keyboard, std\+::function$<$ void()$>$ function)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed()}}\+: Add a key pressed to the map. \end{DoxyCompactList}\item 
+std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} class\+: \mbox{\hyperlink{classEventEngine}{Event\+Engine}} is a class that represents the event engine of the game. 
+
+The \mbox{\hyperlink{classEventEngine}{Event\+Engine}} class manages the events of the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEventEngine_a2875264300f68e1b7282928b18aa8969}\label{classEventEngine_a2875264300f68e1b7282928b18aa8969}} 
+\index{EventEngine@{EventEngine}!EventEngine@{EventEngine}}
+\index{EventEngine@{EventEngine}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{EventEngine()}{EventEngine()}}
+{\footnotesize\ttfamily Event\+Engine\+::\+Event\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classEventEngine}{Event\+Engine}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_a77cfa5bd6e3656f60d8d203de3ddd85e}\label{classEventEngine_a77cfa5bd6e3656f60d8d203de3ddd85e}} 
+\index{EventEngine@{EventEngine}!````~EventEngine@{$\sim$EventEngine}}
+\index{````~EventEngine@{$\sim$EventEngine}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$EventEngine()}{~EventEngine()}}
+{\footnotesize\ttfamily virtual Event\+Engine\+::$\sim$\+Event\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classEventEngine_a1de358e7993ca5bffd152a2392faa051}\label{classEventEngine_a1de358e7993ca5bffd152a2392faa051}} 
-void {\bfseries add\+Key\+Pressed} (sf\+::\+Keyboard\+::\+Key keyboard, std\+::function$<$ void()$>$ function)
-\item 
+\index{EventEngine@{EventEngine}!addKeyPressed@{addKeyPressed}}
+\index{addKeyPressed@{addKeyPressed}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{addKeyPressed()}{addKeyPressed()}}
+{\footnotesize\ttfamily void Event\+Engine\+::add\+Key\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{keyboard,  }\item[{std\+::function$<$ void()$>$}]{function }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed()}}\+: Add a key pressed to the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyboard} & SFML Keyboard\+::\+Key of the key pressed. \\
+\hline
+{\em function} & Function to execute when the key is pressed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_a5250100318fb566404de9e34682e1c0e}\label{classEventEngine_a5250100318fb566404de9e34682e1c0e}} 
+\index{EventEngine@{EventEngine}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily sf\+::\+Event\& Event\+Engine\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event()}}\+: Get the SFML Event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Event\+: The SFML Event. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}\label{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}} 
-std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& {\bfseries get\+Key\+Pressed\+Map} ()
-\end{DoxyCompactItemize}
+\index{EventEngine@{EventEngine}!getKeyPressedMap@{getKeyPressedMap}}
+\index{getKeyPressedMap@{getKeyPressedMap}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{getKeyPressedMap()}{getKeyPressedMap()}}
+{\footnotesize\ttfamily std\+::map$<$sf\+::\+Keyboard\+::\+Key, std\+::function$<$void()$>$ $>$\& Event\+Engine\+::get\+Key\+Pressed\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$sf\+::\+Keyboard\+::\+Key, std\+::function$<$void()$>$$>$\+: The map of the key pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}\label{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}} 
+\index{EventEngine@{EventEngine}!init@{init}}
+\index{init@{init}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Event\+Engine\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init()}}\+: Initialize the \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the \mbox{\hyperlink{classEventEngine}{Event\+Engine}} is initialized, false otherwise. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
