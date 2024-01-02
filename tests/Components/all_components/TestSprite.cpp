@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../../../include/all_components.h"
+#include "../../../src/include/all_components.h"
 
 class SpriteTest : public ::testing::Test {
 protected:
@@ -14,7 +14,7 @@ TEST_F(SpriteTest, DefaultConstructor) {
 }
 
 TEST_F(SpriteTest, ConstructorWithTexturePath) {
-    Sprite sprite("src/tests/assets/red.png");
+    Sprite sprite("tests/assets/red.png");
 
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
 }
@@ -28,7 +28,7 @@ TEST_F(SpriteTest, GetBit) {
 }
 
 TEST_F(SpriteTest, CreateSpriteWithTexturePath) {
-    sprite.createSprite("src/tests/assets/red.png");
+    sprite.createSprite("tests/assets/red.png");
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
 }
 
@@ -40,7 +40,7 @@ TEST_F(SpriteTest, CreateSpriteWithExistingTexture) {
 }
 
 TEST_F(SpriteTest, CreateSpriteWithTheComponentTexture) {
-    Sprite sprite("src/tests/assets/red.png");
+    Sprite sprite("tests/assets/red.png");
 
     sprite.createSprite();
     ASSERT_NE(sprite.getSprite().getTexture(), nullptr);
@@ -52,7 +52,7 @@ TEST_F(SpriteTest, GetSprite) {
     ASSERT_EQ(sprite.getSprite().getTexture(), nullptr);
 
     sf::Texture texture;
-    texture.loadFromFile("src/tests/assets/red.png");
+    texture.loadFromFile("tests/assets/red.png");
 
     sf::Sprite sfprite;
     sfprite.setTexture(texture);
@@ -66,7 +66,7 @@ TEST_F(SpriteTest, GetSprite) {
 }
 
 TEST_F(SpriteTest, GetTexture) {
-    const std::string texturePath = "src/tests/assets/blue.png";
+    const std::string texturePath = "tests/assets/blue.png";
 
     sprite.createSprite(texturePath);
 
@@ -79,7 +79,7 @@ TEST_F(SpriteTest, GetTexture) {
 TEST_F(SpriteTest, IsTextureLoaded) {
     ASSERT_FALSE(sprite.isTextureLoaded());
 
-    sprite.createSprite("src/tests/assets/red.png");
+    sprite.createSprite("tests/assets/red.png");
     ASSERT_TRUE(sprite.isTextureLoaded());
 
     sprite.createSprite();
@@ -89,15 +89,15 @@ TEST_F(SpriteTest, IsTextureLoaded) {
     sprite.createSprite(texture);
     ASSERT_TRUE(sprite.isTextureLoaded());
 
-    sprite.createSprite("src/tests/assets/blue.png");
+    sprite.createSprite("tests/assets/blue.png");
     ASSERT_TRUE(sprite.isTextureLoaded());
 }
 
 TEST_F(SpriteTest, SetSpriteWithAnExistingSprite) {
-    Sprite sprite("src/tests/assets/red.png");
+    Sprite sprite("tests/assets/red.png");
 
     sf::Texture newTexture;
-    ASSERT_TRUE(newTexture.loadFromFile("src/tests/assets/blue.png"));
+    ASSERT_TRUE(newTexture.loadFromFile("tests/assets/blue.png"));
 
     sf::Sprite newSprite;
     newSprite.setTexture(newTexture);
@@ -115,7 +115,7 @@ TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
     std::map<std::string, sf::Texture> mapTexture;
     sf::Texture testTexture;
 
-    ASSERT_TRUE(testTexture.loadFromFile("src/tests/assets/red.png"));
+    ASSERT_TRUE(testTexture.loadFromFile("tests/assets/red.png"));
 
     mapTexture["TestTexture"] = testTexture;
 
@@ -144,10 +144,10 @@ TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
 }
 
 TEST_F(SpriteTest, SetTextureWithTexturePath) {
-    Sprite sprite("src/tests/assets/red.png");
+    Sprite sprite("tests/assets/red.png");
 
     sf::Texture newTexture;
-    ASSERT_TRUE(newTexture.loadFromFile("src/tests/assets/blue.png"));
+    ASSERT_TRUE(newTexture.loadFromFile("tests/assets/blue.png"));
 
     sf::Sprite newSprite;
     newSprite.setTexture(newTexture);
@@ -159,10 +159,10 @@ TEST_F(SpriteTest, SetTextureWithTexturePath) {
 }
 
 TEST_F(SpriteTest, SetTextureWithAnExistingTexture) {
-    Sprite sprite("src/tests/assets/red.png");
+    Sprite sprite("tests/assets/red.png");
 
     sf::Texture newTexture;
-    ASSERT_TRUE(newTexture.loadFromFile("src/tests/assets/blue.png"));
+    ASSERT_TRUE(newTexture.loadFromFile("tests/assets/blue.png"));
 
     sf::Sprite newSprite;
     newSprite.setTexture(newTexture);

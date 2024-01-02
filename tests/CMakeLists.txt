@@ -20,7 +20,7 @@ target_include_directories(all_tests
 target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main sfml-system sfml-window sfml-graphics sfml-audio)
 
 set_target_properties(all_tests PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "../../../"
+    RUNTIME_OUTPUT_DIRECTORY "../../"
 )
 
 include(GoogleTest)

@@ -12,3 +12,377 @@
 
 
 Inheritance diagram for Sprite\+:
+% FIG 0
+
+
+Collaboration diagram for Sprite\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSprite_a03ea660b2e77213c9ae05830bfdfbc5d}{Sprite}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classSprite}{Sprite}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSprite_a5f6f9643349671e4b09734a5613871ae}{Sprite}} (const std\+::string \&texture\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite}{Sprite}} constructor with an existing texture path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSprite_af446e94bb21cb384b3f665905a6a3d17}{$\sim$\+Sprite}} () override=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite}{Sprite}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSprite_aa2815ac6b6935f92b2220a2780c27712}{init}} () const
+\begin{DoxyCompactList}\small\item\em init()\+: Initialize the \mbox{\hyperlink{classSprite}{Sprite}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}{get\+Bit}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classSprite}{Sprite}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a851136a50fc180e4c55d4bfa7250619b}{draw}} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a851136a50fc180e4c55d4bfa7250619b}{draw()}}\+: Draw the \mbox{\hyperlink{classSprite}{Sprite}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ac190b94b6381890ee38b79643cf682cc}{create\+Sprite}} (const std\+::string \&texture\+Path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a texture path for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a0a5b81a820fd6cd43fcefc156b458c51}{create\+Sprite}} (const sf\+::\+Texture \&existing\+Texture)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing texture for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with the component\textquotesingle{}s texture for rendering. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}{get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}{get\+Sprite()}}\+: Get the SFML \mbox{\hyperlink{classSprite}{Sprite}} for rendering. \end{DoxyCompactList}\item 
+sf\+::\+Texture \mbox{\hyperlink{classSprite_a84c05eaaf9607534efd224f9bc900eb5}{get\+Texture}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a84c05eaaf9607534efd224f9bc900eb5}{get\+Texture()}}\+: Get the SFML Texture for the sprite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture\+Loaded}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture\+Loaded()}}\+: Check if the texture is loaded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite}} (const sf\+::\+Sprite \&sprite)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing one for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}{set\+Sprite}} (std\+::map$<$ std\+::string, sf\+::\+Texture $>$ map\+Texture, std\+::string name\+Texture, std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a map of string and textures, a texture name and a map of string and vector of floats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a26c4837142bdc3522fc7195b9b90d367}{set\+Deferred\+Sprite}} (std\+::function$<$ void()$>$ setter)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a26c4837142bdc3522fc7195b9b90d367}{set\+Deferred\+Sprite()}}\+: Set the deferred sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Deferred\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Deferred\+Sprite()}}\+: Apply the deferred sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture}} (const sf\+::\+Texture \&existing\+Texture)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSprite}{Sprite}} class\+: \mbox{\hyperlink{classSprite}{Sprite}} is a class that represents the rendering properties of a Component. 
+
+The \mbox{\hyperlink{classSprite}{Sprite}} class manages the graphical representation of a Component using SFML. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSprite_a03ea660b2e77213c9ae05830bfdfbc5d}\label{classSprite_a03ea660b2e77213c9ae05830bfdfbc5d}} 
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classSprite}{Sprite}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a5f6f9643349671e4b09734a5613871ae}\label{classSprite_a5f6f9643349671e4b09734a5613871ae}} 
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classSprite}{Sprite}} constructor with an existing texture path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Path} & Path to the texture file for the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_af446e94bb21cb384b3f665905a6a3d17}\label{classSprite_af446e94bb21cb384b3f665905a6a3d17}} 
+\index{Sprite@{Sprite}!````~Sprite@{$\sim$Sprite}}
+\index{````~Sprite@{$\sim$Sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sprite()}{~Sprite()}}
+{\footnotesize\ttfamily Sprite\+::$\sim$\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classSprite}{Sprite}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}\label{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}} 
+\index{Sprite@{Sprite}!applyDeferredSprite@{applyDeferredSprite}}
+\index{applyDeferredSprite@{applyDeferredSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{applyDeferredSprite()}{applyDeferredSprite()}}
+{\footnotesize\ttfamily void Sprite\+::apply\+Deferred\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Deferred\+Sprite()}}\+: Apply the deferred sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}\label{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}} 
+\index{Sprite@{Sprite}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Sprite\+::create\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with the component\textquotesingle{}s texture for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a0a5b81a820fd6cd43fcefc156b458c51}\label{classSprite_a0a5b81a820fd6cd43fcefc156b458c51}} 
+\index{Sprite@{Sprite}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Sprite\+::create\+Sprite (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{existing\+Texture }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing texture for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em existing\+Texture} & SFML Texture for the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_ac190b94b6381890ee38b79643cf682cc}\label{classSprite_ac190b94b6381890ee38b79643cf682cc}} 
+\index{Sprite@{Sprite}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Sprite\+::create\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a20b6375aefc0cd77186ba2ac3a2ded1e}{create\+Sprite()}}\+: Create the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a texture path for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Path} & Path to the texture file for the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a851136a50fc180e4c55d4bfa7250619b}\label{classSprite_a851136a50fc180e4c55d4bfa7250619b}} 
+\index{Sprite@{Sprite}!draw@{draw}}
+\index{draw@{draw}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Sprite\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classSprite_a851136a50fc180e4c55d4bfa7250619b}{draw()}}\+: Draw the \mbox{\hyperlink{classSprite}{Sprite}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & SFML Render\+Window where the \mbox{\hyperlink{classSprite}{Sprite}} will be drawn. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}}.
+
+\mbox{\Hypertarget{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}\label{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}} 
+\index{Sprite@{Sprite}!getBit@{getBit}}
+\index{getBit@{getBit}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{getBit()}{getBit()}}
+{\footnotesize\ttfamily int Sprite\+::get\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classSprite}{Sprite}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: The bit of the \mbox{\hyperlink{classSprite}{Sprite}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}\label{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}} 
+\index{Sprite@{Sprite}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite Sprite\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}{get\+Sprite()}}\+: Get the SFML \mbox{\hyperlink{classSprite}{Sprite}} for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Sprite\+: SFML \mbox{\hyperlink{classSprite}{Sprite}} for rendering 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a84c05eaaf9607534efd224f9bc900eb5}\label{classSprite_a84c05eaaf9607534efd224f9bc900eb5}} 
+\index{Sprite@{Sprite}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily sf\+::\+Texture Sprite\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classSprite_a84c05eaaf9607534efd224f9bc900eb5}{get\+Texture()}}\+: Get the SFML Texture for the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Texture\+: SFML Texture for the sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_aa2815ac6b6935f92b2220a2780c27712}\label{classSprite_aa2815ac6b6935f92b2220a2780c27712}} 
+\index{Sprite@{Sprite}!init@{init}}
+\index{init@{init}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Sprite\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+init()\+: Initialize the \mbox{\hyperlink{classSprite}{Sprite}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the \mbox{\hyperlink{classSprite}{Sprite}} is initialized, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}\label{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}} 
+\index{Sprite@{Sprite}!isTextureLoaded@{isTextureLoaded}}
+\index{isTextureLoaded@{isTextureLoaded}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{isTextureLoaded()}{isTextureLoaded()}}
+{\footnotesize\ttfamily bool Sprite\+::is\+Texture\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture\+Loaded()}}\+: Check if the texture is loaded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the texture is loaded, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a26c4837142bdc3522fc7195b9b90d367}\label{classSprite_a26c4837142bdc3522fc7195b9b90d367}} 
+\index{Sprite@{Sprite}!setDeferredSprite@{setDeferredSprite}}
+\index{setDeferredSprite@{setDeferredSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setDeferredSprite()}{setDeferredSprite()}}
+{\footnotesize\ttfamily void Sprite\+::set\+Deferred\+Sprite (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{setter }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a26c4837142bdc3522fc7195b9b90d367}{set\+Deferred\+Sprite()}}\+: Set the deferred sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setter} & Function that will set the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}\label{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}} 
+\index{Sprite@{Sprite}!setSprite@{setSprite}}
+\index{setSprite@{setSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setSprite()}{setSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Sprite (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{sprite }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing one for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & SFML \mbox{\hyperlink{classSprite}{Sprite}} for rendering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}\label{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}} 
+\index{Sprite@{Sprite}!setSprite@{setSprite}}
+\index{setSprite@{setSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setSprite()}{setSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Sprite (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, sf\+::\+Texture $>$}]{map\+Texture,  }\item[{std\+::string}]{name\+Texture,  }\item[{std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&}]{map\+Transform }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a map of string and textures, a texture name and a map of string and vector of floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+Texture} & Map of string and textures. \\
+\hline
+{\em name\+Texture} & Name of the texture. \\
+\hline
+{\em map\+Transform} & Map of string and vector of floats. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a96dbeb08d3f620145a767387e2e62689}\label{classSprite_a96dbeb08d3f620145a767387e2e62689}} 
+\index{Sprite@{Sprite}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void Sprite\+::set\+Texture (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{existing\+Texture }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em existing\+Texture} & SFML Texture for the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Components/all\+\_\+components/Sprite.\+h\item 
+src/\+Components/all\+\_\+components/Sprite.\+cpp\end{DoxyCompactItemize}
