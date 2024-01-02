@@ -15,7 +15,10 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Transform>();
     menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                gameEngine.getWorld("Menu").getEntityManager("Menu").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg");
+                std::map<std::string, std::vector<float>> mapTransform;
+                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
+                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
+                gameEngine.getWorld("Menu").getEntityManager("Menu").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", mapTransform);
             });
     return menuWorld;
 }
@@ -31,7 +34,10 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
     level1World->getEntityManager("Level1").getEntity("Background").addComponent<Transform>();
     level1World->getEntityManager("Level1").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                gameEngine.getWorld("Level1").getEntityManager("Level1").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
+                std::map<std::string, std::vector<float>> mapTransform;
+                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
+                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
+                gameEngine.getWorld("Level1").getEntityManager("Level1").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg", mapTransform);
             });
     return level1World;
 }
