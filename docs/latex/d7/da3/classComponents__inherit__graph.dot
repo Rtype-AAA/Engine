@@ -9,7 +9,7 @@ digraph "Components"
   Node2 -> Node3 [dir="back",color="darkgreen",fontsize="10",style="solid"];
   Node3 [label="EntityManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d5f/classEntityManager.html",tooltip=" "];
   Node3 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid"];
-  Node4 [label="World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classWorld.html",tooltip=" "];
+  Node4 [label="World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classWorld.html",tooltip="World class: World is a class that represents the world of the game."];
   Node4 -> Node5 [dir="back",color="darkgreen",fontsize="10",style="solid"];
   Node5 [label="GameEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d8d/classGameEngine.html",tooltip=" "];
   Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
