@@ -5,7 +5,7 @@ digraph "GameEngine"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="GameEngine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid"];
-  Node2 [label="World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classWorld.html",tooltip=" "];
+  Node2 [label="World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classWorld.html",tooltip="World class: World is a class that represents the world of the game."];
   Node3 -> Node2 [dir="back",color="darkgreen",fontsize="10",style="solid"];
   Node3 [label="EntityManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d5f/classEntityManager.html",tooltip=" "];
   Node4 -> Node3 [dir="back",color="darkgreen",fontsize="10",style="solid"];

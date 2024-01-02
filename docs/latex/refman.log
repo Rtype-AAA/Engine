@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  2 JAN 2024 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  2 JAN 2024 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,7 +1046,8 @@ Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
-) (./df/d8d/classGameEngine.tex [18]) (./d1/d6d/classSprite.tex [19] [20]
+) (./d1/db4/classEventTest.tex [18]) (./df/d8d/classGameEngine.tex)
+(./d1/d6d/classSprite.tex [19] [20]
 Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
@@ -1056,12 +1057,12 @@ Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
-
+[21]
 Underfull \hbox (badness 10000) detected at line 117
 [][][]
  []
 
-[21]
+
 Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
@@ -1081,12 +1082,12 @@ Underfull \hbox (badness 10000) detected at line 192
 [][][]
  []
 
-
+[23]
 Underfull \hbox (badness 10000) detected at line 210
 [][][]
  []
 
-[23]
+
 Underfull \hbox (badness 10000) detected at line 232
 [][][]
  []
@@ -1096,12 +1097,12 @@ Underfull \hbox (badness 10000) detected at line 250
 [][][]
  []
 
-
+[24]
 Underfull \hbox (badness 10000) detected at line 268
 [][][]
  []
 
-[24]
+
 Underfull \hbox (badness 10000) detected at line 286
 [][][]
  []
@@ -1111,12 +1112,12 @@ Underfull \hbox (badness 10000) detected at line 304
 [][][]
  []
 
-
+[25]
 Underfull \hbox (badness 10000) detected at line 322
 [][][]
  []
 
-[25]
+
 Underfull \hbox (badness 10000) detected at line 340
 [][][]
  []
@@ -1126,12 +1127,12 @@ Underfull \hbox (badness 10000) detected at line 362
 [][][]
  []
 
-
+[26]
 Underfull \hbox (badness 10000) detected at line 380
 [][][]
  []
 
-[26]) (./d0/d88/classSpriteTest.tex) (./db/daf/classTransform.tex [27]
+) (./d0/d88/classSpriteTest.tex) (./db/daf/classTransform.tex [27]
 Underfull \hbox (badness 10000) detected at line 66
 [][][]
  []
@@ -1148,12 +1149,12 @@ Underfull \hbox (badness 10000) detected at line 84
 [][][]
  []
 
-
+[28]
 Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
 
-[28]
+
 Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
@@ -1163,62 +1164,110 @@ Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
 
-
+[29]
 Underfull \hbox (badness 10000) detected at line 159
 [][][]
  []
 
-[29]
+
 Underfull \hbox (badness 10000) detected at line 177
 [][][]
  []
 
-
+[30]
 Underfull \hbox (badness 10000) detected at line 195
 [][][]
  []
 
-) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.tex [30]
-Underfull \hbox (badness 10000) detected at line 53
+) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.tex [31]
+Underfull \hbox (badness 10000) detected at line 65
 [][][]
  []
 
-) [31] [32
 
-] (./refman.ind [33
+Underfull \hbox (badness 10000) detected at line 83
+[][][]
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 104
+[][][]
+ []
 
 
-] [34
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+|  \T1/pcr/m/n/8 std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::string, std
+[]::pair$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::unique[]_[]ptr$\OML/cmm/m/it/8
+ <$ [] $>$\T1/pcr/m/n/8 , std[]::vector$\OML/cmm/m/it/8 <$
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+[33]
+Underfull \hbox (badness 10000) detected at line 142
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 160
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+[34]
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 218
+[][][]
+ []
+
+) [35] [36
+
+] (./refman.ind [37
+
+
+] [38
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: CCB14FDB24EF6DAD573C8C462AE96FC9;16971.
+(rerunfilecheck)             Checksum: B68218B77AFD6510127B3C30F016C1CF;19302.
  ) 
 Here is how much of TeX's memory you used:
- 17851 strings out of 480247
- 290834 string characters out of 5896152
- 602117 words of memory out of 5000000
- 35124 multiletter control sequences out of 15000+600000
- 530331 words of font info for 101 fonts, out of 8000000 for 9000
+ 17920 strings out of 480247
+ 292045 string characters out of 5896152
+ 606125 words of memory out of 5000000
+ 35157 multiletter control sequences out of 15000+600000
+ 532095 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,16n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
-b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
-tic/uhvro8a.pfb>
-Output written on refman.pdf (40 pages, 199606 bytes).
+ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
+ro8a.pfb>
+Output written on refman.pdf (44 pages, 216309 bytes).
 PDF statistics:
- 1297 PDF objects out of 1440 (max. 8388607)
- 1212 compressed objects within 13 object streams
- 296 named destinations out of 1000 (max. 500000)
- 673 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1446 PDF objects out of 1728 (max. 8388607)
+ 1354 compressed objects within 14 object streams
+ 324 named destinations out of 1000 (max. 500000)
+ 761 words of extra memory for PDF output out of 10000 (max. 10000000)
 
