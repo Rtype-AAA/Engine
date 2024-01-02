@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  20 DEC 2023 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  2 JAN 2024 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,7 +921,7 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 7.
 )
-(./da/d61/classEntity.tex [7]
+(./d2/db3/classDrawableComponent.tex [7]) (./da/d61/classEntity.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -932,96 +932,91 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 56.
  [8]
-Underfull \hbox (badness 10000) detected at line 68
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 66.
+
+Underfull \hbox (badness 10000) detected at line 78
 [][][]
  []
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 85.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 85.
 
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 106
+Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
 [9]
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 159
+Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
 
 [10]
-Underfull \hbox (badness 10000) detected at line 177
+Underfull \hbox (badness 10000) detected at line 169
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 195
+Underfull \hbox (badness 10000) detected at line 187
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 217
+Underfull \hbox (badness 10000) detected at line 205
 [][][]
  []
 
-) (./dd/d5f/classEntityManager.tex [11]
+[11]
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+) (./dd/d5f/classEntityManager.tex
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 32.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 23.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 32.
+(Font)              scaled to size 8.09995pt on input line 23.
  [12]
-Underfull \hbox (badness 10000) detected at line 58
+Underfull \hbox (badness 10000) detected at line 47
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 76
+Underfull \hbox (badness 10000) detected at line 65
 [][][]
  []
 
 [13]
-Underfull \hbox (badness 10000) detected at line 120
+Underfull \hbox (badness 10000) detected at line 108
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 144
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 162
+Underfull \hbox (badness 10000) detected at line 167
 [][][]
  []
 
-[14]) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex)
-(./d4/dc3/classRendering.tex) (./db/daf/classTransform.tex [15]
-Underfull \hbox (badness 10000) detected at line 63
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-|  \T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::strin
-g, std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 float $\OML/cmm/m/it/8 >$$>$ 
-\T1/pcr/m/n/8 & \T1/pcr/m/sl/8 map[]Transform \T1/pcr/m/n/8 ) [inline],
- []
-
-[16]
+) (./d5/df4/classEntityManagerTest.tex) (./df/d2b/classEntityTest.tex [15])
+(./d4/d2e/classEventEngine.tex) (./df/d8d/classGameEngine.tex [16])
+(./d1/d6d/classSprite.tex [17] [18]
 Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
@@ -1031,12 +1026,12 @@ Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
-[17]
-Underfull \hbox (badness 10000) detected at line 120
+
+Underfull \hbox (badness 10000) detected at line 117
 [][][]
  []
 
-
+[19]
 Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
@@ -1046,7 +1041,7 @@ Underfull \hbox (badness 10000) detected at line 156
 [][][]
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
@@ -1056,38 +1051,144 @@ Underfull \hbox (badness 10000) detected at line 192
 [][][]
  []
 
-) (./d6/d2b/classTransformTest.tex) [19] [20
 
-] (./refman.ind [21
+Underfull \hbox (badness 10000) detected at line 210
+[][][]
+ []
 
+[21]
+Underfull \hbox (badness 10000) detected at line 232
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 250
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 286
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 304
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 322
+[][][]
+ []
+
+[23]
+Underfull \hbox (badness 10000) detected at line 340
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 362
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 380
+[][][]
+ []
+
+[24]) (./d0/d88/classSpriteTest.tex) (./db/daf/classTransform.tex [25]
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+|  \T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::strin
+g, std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 float $\OML/cmm/m/it/8 >$$>$ 
+\T1/pcr/m/n/8 & \T1/pcr/m/sl/8 map[]Transform \T1/pcr/m/n/8 ) [inline],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+[26]
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 141
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+[27]
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.tex [28]
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+) [29] [30
+
+] (./refman.ind [31
+
+
+] [32
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: F13678896AE31C53874C330075619B2A;9373.
+(rerunfilecheck)             Checksum: CC23593801F615EBBF16A78843290500;15121.
  ) 
 Here is how much of TeX's memory you used:
- 17549 strings out of 480247
- 282172 string characters out of 5896152
- 583703 words of memory out of 5000000
- 34984 multiletter control sequences out of 15000+600000
+ 17815 strings out of 480247
+ 290150 string characters out of 5896152
+ 600824 words of memory out of 5000000
+ 35107 multiletter control sequences out of 15000+600000
  530331 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,15n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,473b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
-rr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (25 pages, 140789 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvro8a.pfb>
+Output written on refman.pdf (36 pages, 192484 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 645 compressed objects within 7 object streams
- 149 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1183 PDF objects out of 1200 (max. 8388607)
+ 1103 compressed objects within 12 object streams
+ 277 named destinations out of 1000 (max. 500000)
+ 601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

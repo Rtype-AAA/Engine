@@ -1,0 +1,65 @@
+\hypertarget{classWorld}{}\doxysection{World Class Reference}
+\label{classWorld}\index{World@{World}}
+
+
+Inheritance diagram for World\+:
+% FIG 0
+
+
+Collaboration diagram for World\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWorld_a34708e0fd137fb21abd9f7fdbe662567}\label{classWorld_a34708e0fd137fb21abd9f7fdbe662567}} 
+void {\bfseries create\+Entities} (std\+::map$<$ std\+::string, std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $>$, std\+::vector$<$ std\+::string $>$$>$$>$ \&map\+Entity\+Manager, std\+::string key\+Entity\+Manager)
+\item 
+\mbox{\Hypertarget{classWorld_a3230be9d7c3dc812a1712972cffd56e4}\label{classWorld_a3230be9d7c3dc812a1712972cffd56e4}} 
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& {\bfseries add\+Entity\+Manager} (std\+::string Name\+Entity\+Manager)
+\item 
+\mbox{\Hypertarget{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}\label{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}} 
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& {\bfseries get\+Entity\+Manager} (std\+::string Name\+Entity\+Manager)
+\item 
+\mbox{\Hypertarget{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}\label{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}} 
+void {\bfseries set\+Name\+World} (std\+::string new\+Name)
+\item 
+\mbox{\Hypertarget{classWorld_a7a15da4862400e8a81913329326eb426}\label{classWorld_a7a15da4862400e8a81913329326eb426}} 
+std\+::string {\bfseries get\+Name\+World} () const
+\item 
+\mbox{\Hypertarget{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}\label{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ {\bfseries get\+Entity\+Manager\+Map} () const
+\item 
+bool \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init()}}\+: Initialize the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}\label{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}} 
+\index{World@{World}!init@{init}}
+\index{init@{init}!World@{World}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool World\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init()}}\+: Initialize the entity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true if the entity is initialized, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classEntityManager_ab4a499dc089c5bf16424c72c66d3a9c5}{Entity\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+World/world.\+h\item 
+src/\+World/world.\+cpp\end{DoxyCompactItemize}

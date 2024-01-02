@@ -89,6 +89,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a144ce8dcafd13ca66acb5a1636cfc297"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/classTransform.html#a144ce8dcafd13ca66acb5a1636cfc297">Transform</a> ()=default</td></tr>
 <tr class="memdesc:a144ce8dcafd13ca66acb5a1636cfc297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component.">Transform</a> constructor.  <a href="../../db/daf/classTransform.html#a144ce8dcafd13ca66acb5a1636cfc297">More...</a><br /></td></tr>
 <tr class="separator:a144ce8dcafd13ca66acb5a1636cfc297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0beb2ae1b3f4331e979aa8c5287f904d"><td class="memItemLeft" align="right" valign="top"><a id="a0beb2ae1b3f4331e979aa8c5287f904d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () const</td></tr>
+<tr class="separator:a0beb2ae1b3f4331e979aa8c5287f904d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79df5373c426c25979442db7667eb330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/daf/classTransform.html#a79df5373c426c25979442db7667eb330">Transform</a> (const std::map&lt; std::string, std::vector&lt; float &gt;&gt; &amp;mapTransform)</td></tr>
 <tr class="memdesc:a79df5373c426c25979442db7667eb330"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component.">Transform</a> constructor.  <a href="../../db/daf/classTransform.html#a79df5373c426c25979442db7667eb330">More...</a><br /></td></tr>
 <tr class="separator:a79df5373c426c25979442db7667eb330"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,9 +117,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb5db757815c1d8b961c069515f8e260 inherit pub_methods_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="adb5db757815c1d8b961c069515f8e260"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="separator:adb5db757815c1d8b961c069515f8e260 inherit pub_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad2b71f4d76b508ce764c286a622f625 inherit pub_methods_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="aad2b71f4d76b508ce764c286a622f625"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
-<tr class="separator:aad2b71f4d76b508ce764c286a622f625 inherit pub_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98c9d30dac6c9277ce325dde2707a4ec inherit pub_methods_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="a98c9d30dac6c9277ce325dde2707a4ec"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
 <tr class="separator:a98c9d30dac6c9277ce325dde2707a4ec inherit pub_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,12 +131,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a25e3983b1cb651e18fbe4a521064e42d inherit pro_types_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="a25e3983b1cb651e18fbe4a521064e42d"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentTypeID</b> = std::size_t</td></tr>
 <tr class="separator:a25e3983b1cb651e18fbe4a521064e42d inherit pro_types_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1457f9714d7d0ca56c55259851dd81af inherit pro_types_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="a1457f9714d7d0ca56c55259851dd81af"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentBitset</b> = std::bitset&lt; 3 &gt;</td></tr>
-<tr class="separator:a1457f9714d7d0ca56c55259851dd81af inherit pro_types_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0558c251b1ee693e589e32f0eca97611 inherit pro_types_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="a0558c251b1ee693e589e32f0eca97611"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentArray</b> = std::array&lt; <a class="el" href="../../db/d46/classComponents.html">Components</a> *, 3 &gt;</td></tr>
-<tr class="separator:a0558c251b1ee693e589e32f0eca97611 inherit pro_types_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component.">Transform</a> class: <a class="el" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component.">Transform</a> is a class that represents the transform of a Component. </p>
@@ -378,8 +372,8 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentArray</b> =
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Components/all_components/<a class="el" href="../../de/dfb/Transform_8h_source.html">Transform.h</a></li>
-<li>Components/all_components/Transform.cpp</li>
+<li>src/Components/all_components/<a class="el" href="../../de/dfb/Transform_8h_source.html">Transform.h</a></li>
+<li>src/Components/all_components/Transform.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

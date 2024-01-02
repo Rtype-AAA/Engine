@@ -22,8 +22,8 @@ class Sprite : public Components, public DrawableComponent {
 private:
     sf::Sprite sprite; ///< SFML Sprite for rendering.
     sf::Texture texture; ///< SFML Texture for the sprite.
-    std::function<void()> deferredSprite;
-    int bit = 1;
+    std::function<void()> deferredSprite; ///< Deferred sprite.
+    int bit = 1; ///< Bit of the Sprite.
 public:
     /// @brief Default Sprite constructor.
     /// @param void
@@ -46,10 +46,19 @@ public:
     /// @return void
     ~Sprite() override = default;
 
+    /// @brief init(): Initialize the Sprite.
+    /// @param void
+    /// @return bool: True if the Sprite is initialized, false otherwise.
     bool init() const {return true;}
 
+    /// @brief getBit(): Get the bit of the Sprite.
+    /// @param void
+    /// @return int: The bit of the Sprite.
     int getBit() const {return bit;}
 
+    /// @brief draw(): Draw the Sprite.
+    /// @param window: SFML RenderWindow where the Sprite will be drawn.
+    /// @return void
     void draw(sf::RenderWindow& window) const override;
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
@@ -77,6 +86,9 @@ public:
     /// @return sf::Texture: SFML Texture for the sprite
     [[nodiscard]] sf::Texture getTexture() const;
 
+    /// @brief isTextureLoaded(): Check if the texture is loaded.
+    /// @param void
+    /// @return bool: True if the texture is loaded, false otherwise.
     bool isTextureLoaded() const {return texture.getSize().x != 0 && texture.getSize().y != 0;}
 
     /// @brief setSprite(): Set the SFML Sprite with an existing one for rendering.
@@ -84,13 +96,21 @@ public:
     /// @return void
     void setSprite(const sf::Sprite& sprite);
 
-    /// @brief setTexture(): Set the texture with a texture path for the sprite.
-    /// @param texturePath: Path to the texture file for the sprite.
+    /// @brief setSprite(): Set the SFML Sprite with a map of string and textures, a texture name and a map of string and vector of floats.
+    /// @param mapTexture: Map of string and textures.
+    /// @param nameTexture: Name of the texture.
+    /// @param mapTransform: Map of string and vector of floats.
     /// @return void
     void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
 
+    /// @brief setDeferredSprite(): Set the deferred sprite.
+    /// @param setter: Function that will set the sprite.
+    /// @return void
     void setDeferredSprite(std::function<void()> setter);
 
+    /// @brief applyDeferredSprite(): Apply the deferred sprite.
+    /// @param void
+    /// @return void
     void applyDeferredSprite();
 
     /// @brief setTexture(): Set the texture with an existing one for the sprite.

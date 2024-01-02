@@ -1,0 +1,80 @@
+\hypertarget{classGameEngine}{}\doxysection{Game\+Engine Class Reference}
+\label{classGameEngine}\index{GameEngine@{GameEngine}}
+
+
+Inheritance diagram for Game\+Engine\+:
+% FIG 0
+
+
+Collaboration diagram for Game\+Engine\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}\label{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}} 
+{\bfseries Game\+Engine} (sf\+::\+Video\+Mode mode, std\+::string type, sf\+::\+String title, sf\+::\+Uint32 style=sf\+::\+Style\+::\+Default, const sf\+::\+Context\+Settings \&settings=sf\+::\+Context\+Settings())
+\item 
+\mbox{\Hypertarget{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}\label{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}} 
+void {\bfseries run} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
+\item 
+\mbox{\Hypertarget{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}\label{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}} 
+void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}\label{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}} 
+void {\bfseries render\+Game\+Engine} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}\label{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}} 
+void {\bfseries event\+Game\+Engine} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}\label{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}} 
+bool {\bfseries is\+Window\+Open} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}\label{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}} 
+void {\bfseries update\+Game\+Engine} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_af7038136db2a69b4559248482e1512a9}\label{classGameEngine_af7038136db2a69b4559248482e1512a9}} 
+void {\bfseries initialize} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
+\item 
+\mbox{\Hypertarget{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}\label{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}} 
+void {\bfseries initialize\+Sprite} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}\label{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}} 
+void {\bfseries initialize\+Texture} (std\+::string path)
+\item 
+\mbox{\Hypertarget{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}\label{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}} 
+void {\bfseries initialize\+World\+Map} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World)
+\item 
+\mbox{\Hypertarget{classGameEngine_acec872604f070cb951cc1fc9de3b402b}\label{classGameEngine_acec872604f070cb951cc1fc9de3b402b}} 
+const auto \& {\bfseries get\+Window} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}\label{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}} 
+void {\bfseries set\+Window} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}\label{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}} 
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& {\bfseries get\+Event\+Engine} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}\label{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}} 
+void {\bfseries set\+Current\+World} (\mbox{\hyperlink{classWorld}{World}} $\ast$world)
+\item 
+\mbox{\Hypertarget{classGameEngine_a6b528cce5285adca82d94077521dd114}\label{classGameEngine_a6b528cce5285adca82d94077521dd114}} 
+\mbox{\hyperlink{classWorld}{World}} $\ast$ {\bfseries get\+Current\+World} ()
+\item 
+\mbox{\Hypertarget{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}\label{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}} 
+\mbox{\hyperlink{classWorld}{World}} \& {\bfseries add\+World} (std\+::string name\+World, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ world)
+\item 
+\mbox{\Hypertarget{classGameEngine_a148d156efc2779fab75d937883cd1a7b}\label{classGameEngine_a148d156efc2779fab75d937883cd1a7b}} 
+\mbox{\hyperlink{classWorld}{World}} \& {\bfseries get\+World} (std\+::string name\+World)
+\item 
+\mbox{\Hypertarget{classGameEngine_a7f4802481582145ad112c3f44b147dfa}\label{classGameEngine_a7f4802481582145ad112c3f44b147dfa}} 
+std\+::map$<$ std\+::string, sf\+::\+Texture $>$ {\bfseries get\+Map\+Texture} () const
+\item 
+\mbox{\Hypertarget{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}\label{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ {\bfseries get\+World\+Map} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Game\+Engine/game\+Engine.\+h\item 
+src/\+Game\+Engine/game\+Engine.\+cpp\end{DoxyCompactItemize}

@@ -60,4 +60,4 @@ set_target_properties(engine PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
-add_subdirectory(src/tests)
+add_subdirectory(tests)
