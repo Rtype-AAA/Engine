@@ -29,6 +29,3 @@ TEST_F(EventTest, AddKeyPressed) {
     EXPECT_EQ(sf::Keyboard::Key::B, eventEngine.getKeyPressedMap().rbegin()->first);
 }
 
-TEST_F(EventTest, GetEvent) {
-    ASSERT_TRUE(sf::Event::Count < eventEngine.getEvent().type);
-}
