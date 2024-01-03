@@ -49,6 +49,19 @@ TEST_F(GameEngineTest, IsWindowOpen)
     ASSERT_TRUE(gameEngine->isWindowOpen());
 }
 
+TEST_F(GameEngineTest, GetFilesTexture) {
+    gameEngine = new GameEngine();
+
+    std::string path = "tests/assets/Textures";
+
+    std::vector<std::string> allFilesName = gameEngine->getFilesTexture(path);
+
+    ASSERT_EQ(allFilesName.size(), 2);
+
+    ASSERT_TRUE(std::find(allFilesName.begin(), allFilesName.end(), "blue.png") != allFilesName.end());
+    ASSERT_TRUE(std::find(allFilesName.begin(), allFilesName.end(), "red.png") != allFilesName.end());
+}
+
 TEST_F(GameEngineTest, Initialize) {
     sf::VideoMode mode(800, 600);
     std::string type = "2D";
@@ -283,6 +296,80 @@ TEST_F(GameEngineTest, GetEventEngine)
 
     ASSERT_EQ(gameEngine->getEventEngine().getKeyPressedMap().size(), 1);
     ASSERT_EQ(gameEngine->getEventEngine().getKeyPressedMap().begin()->first, sf::Keyboard::Key::A);
+}
+
+TEST_F(GameEngineTest, SetAndGetCurrentWorld) {
+    gameEngine = new GameEngine();
+
+    ASSERT_EQ(gameEngine->getCurrentWorld(), nullptr);
+
+    std::string nameWorld = "TestWorld";
+
+    std::unique_ptr<World> worldPtr = std::make_unique<World>();
+    worldPtr->setNameWorld(nameWorld);
+
+    gameEngine->addWorld(nameWorld, std::move(worldPtr));
+
+    ASSERT_EQ(gameEngine->getCurrentWorld(), nullptr);
+
+    gameEngine->setCurrentWorld(gameEngine->getWorldMap().begin()->second);
+
+    ASSERT_EQ(gameEngine->getCurrentWorld(), gameEngine->getWorldMap().begin()->second);
+}
+
+TEST_F(GameEngineTest, AddWorld) {
+    gameEngine = new GameEngine();
+
+    ASSERT_EQ(gameEngine->getWorldMap().size(), 0);
+
+    std::string nameWorld = "TestWorld";
+
+    std::unique_ptr<World> worldPtr = std::make_unique<World>();
+    worldPtr->setNameWorld(nameWorld);
+
+    gameEngine->addWorld(nameWorld, std::move(worldPtr));
+
+    ASSERT_EQ(gameEngine->getWorldMap().size(), 1);
+
+    std::map<std::string, World *> worldMap = gameEngine->getWorldMap();
+
+    ASSERT_EQ(worldMap.begin()->first, nameWorld);
+    ASSERT_EQ(worldMap.begin()->second->getNameWorld(), nameWorld);
+
+    std::string nameWorld2 = "TestWorld2";
+
+    std::unique_ptr<World> worldPtr2 = std::make_unique<World>();
+    worldPtr2->setNameWorld(nameWorld2);
+
+    gameEngine->addWorld(nameWorld2, std::move(worldPtr2));
+
+    ASSERT_EQ(gameEngine->getWorldMap().size(), 2);
+
+    std::map<std::string, World *> worldMap2 = gameEngine->getWorldMap();
+
+    ASSERT_EQ(worldMap2.begin()->first, nameWorld);
+    ASSERT_EQ(worldMap2.begin()->second->getNameWorld(), nameWorld);
+
+    ASSERT_EQ((++worldMap2.begin())->first, nameWorld2);
+    ASSERT_EQ((++worldMap2.begin())->second->getNameWorld(), nameWorld2);
+}
+
+TEST_F(GameEngineTest, getMapTexture)
+{
+    gameEngine = new GameEngine();
+
+    ASSERT_EQ(gameEngine->getMapTexture().size(), 0);
+
+    std::string path = "tests/assets/Textures";
+
+    gameEngine->initializeTexture(path);
+
+    ASSERT_EQ(gameEngine->getMapTexture().size(), 2);
+
+    std::map<std::string, sf::Texture> mapTexture = gameEngine->getMapTexture();
+
+    ASSERT_TRUE(mapTexture.find("blue.png") != mapTexture.end());
+    ASSERT_TRUE(mapTexture.find("red.png") != mapTexture.end());
 }
 
 TEST_F(GameEngineTest, GetWorldMap)

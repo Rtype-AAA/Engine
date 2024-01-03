@@ -96,7 +96,7 @@ public:
     /// @return void
     void initializeSprite();
 
-    /// @brief initializeTexture(): Initialize a texture with its path.
+    /// @brief initializeTexture(): Initialize the textures with their path.
     /// @param path: Path of the texture.
     /// @return void
     void initializeTexture(std::string path);
