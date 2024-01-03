@@ -2,10 +2,9 @@
 // Created by thibaultcampagne on 30/12/23.
 //
 
-#ifndef R_TYPE_DRAWABLECOMPONENT_H
-#define R_TYPE_DRAWABLECOMPONENT_H
+#pragma once
 
-#include <SFML/Graphics.hpp>
+#include "sfml.h"
 
 class DrawableComponent {
 public:
@@ -14,4 +13,3 @@ public:
     virtual void draw(sf::RenderWindow& window) const = 0;
 };
 
-#endif //R_TYPE_DRAWABLECOMPONENT_H

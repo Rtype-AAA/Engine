@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../../src/include/all_components.h"
+#include "Transform.h"
 
 class TransformTest : public ::testing::Test {
 protected:

@@ -2,45 +2,54 @@ cmake_minimum_required(VERSION 3.10)
 
 project(R-Type)
 
-find_package(SFML 2.5.1 COMPONENTS graphics window system audio REQUIRED)
+find_package(SFML 2.5 COMPONENTS graphics window system audio REQUIRED)
 
-set(LIB_SRCS
-        src/Components/all_components/Transform.cpp
-        src/Components/all_components/Sprite.cpp
-        src/Components/all_components/Audio.cpp
-        src/World/world.cpp
-        src/GameEngine/gameEngine.cpp
-        src/Event/event.cpp
+file(GLOB HEADER_FILES
+        "include/*.h"
+        "src/Archetype/include/*.h"
+        "src/Components/include/*.h"
+        "src/Components/all_components/include/*.h"
+        "src/Entity/include/*.h"
+        "src/Event/include/*.h"
+        "src/World/include/*.h"
+        "src/GameEngine/include/*.h"
+)
+file(GLOB LIB_SRCS
+        "src/Components/*.cpp"
+        "src/Components/all_components/*.cpp"
+        "src/Entity/*.cpp"
+        "src/World/*.cpp"
+        "src/GameEngine/*.cpp"
+        "src/Event/*.cpp"
 )
 
-add_library(engine_lib SHARED ${LIB_SRCS})
+message(STATUS "Lib_SRCS : ${LIB_SRCS}")
 
-target_include_directories(engine_lib
-        PRIVATE src/Components
-        PRIVATE src/World
-        PRIVATE src/GameEngine
-        PRIVATE src/Entity
-        PRIVATE src/Components/all_components
-        PRIVATE src/Event
+add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
+target_include_directories(engine_lib PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
 )
+target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
 
-target_link_libraries(engine_lib PRIVATE sfml-graphics sfml-window sfml-system sfml-audio)
-
-set(SRCS
-        main.cpp
+add_executable(engine main.cpp)
+target_include_directories(engine PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
 )
-
-add_executable(engine ${SRCS})
-
-target_include_directories(engine
-        PRIVATE src/Entity
-        PRIVATE src/World
-        PRIVATE src/GameEngine
-        PRIVATE src/Components
-        PRIVATE src/include
-)
-
-target_link_libraries(engine PRIVATE engine_lib sfml-graphics sfml-window sfml-system sfml-audio)
+target_link_libraries(engine PRIVATE engine_lib)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     message(STATUS "Setting build type to 'Debug' as none was specified.")
@@ -49,15 +58,43 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release")
 endif()
 
-
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set_target_properties(engine_lib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
+set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
-set_target_properties(engine_lib PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib"
+install(TARGETS engine_lib
+        EXPORT engineTargets
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION include)
+
+install(DIRECTORY
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+        DESTINATION include)
+
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+        "engineConfigVersion.cmake"
+        VERSION 1.0
+        COMPATIBILITY AnyNewerVersion
 )
 
-set_target_properties(engine PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-)
+install(EXPORT engineTargets
+        FILE engineTargets.cmake
+        NAMESPACE engine::
+        DESTINATION lib/cmake/engine)
 
-add_subdirectory(tests)
+install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/engineConfigVersion.cmake"
+        DESTINATION lib/cmake/engine)
+
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/configPackage/engineConfig.cmake" DESTINATION lib/cmake/engine)

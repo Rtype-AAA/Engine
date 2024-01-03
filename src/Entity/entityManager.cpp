@@ -6,7 +6,7 @@
 
 Entity& EntityManager::addEntity(std::string nameEntity, Archetypes newArchetype) {
     std::unique_ptr<Entity> newEntity = std::make_unique<Entity>(nameEntity, newArchetype);
-    if (!newEntity->init()) {
+    if (!newEntity->initEntity()) {
         throw std::runtime_error("Echec de l'initialisation de Entity : " + nameEntity);
     }
     Entity *comp = newEntity.get();

@@ -3,7 +3,6 @@
 //
 
 #include "entity.h"
-#include <utility>
 
 std::string Entity::getName() const {
     return name;
@@ -13,7 +12,7 @@ void Entity::setName(std::string newName) {
     name = std::move(newName);
 }
 
-bool Entity::init() {
+bool Entity::initEntity() {
     for (int i = 0; i < componentBitset.size(); i++) {
         componentBitset[i] = false;
     }
@@ -27,7 +26,7 @@ void Entity::addDrawable(Components *component) {
     }
 }
 
-void Entity::draw(sf::RenderWindow& window) {
+void Entity::drawEntity(sf::RenderWindow& window) {
     for (const auto& component: drawableComponents) {
         component->draw(window);
     }
@@ -49,6 +48,22 @@ T& Entity::addComponent(TArgs&&... args) {
 
 template<typename T>
 T& Entity::getComponent() {
-    auto ptr = componentArray[Components::getComponentTypeID<T>()];
+    auto ptr = componentArray[getComponentTypeID<T>()];
     return *static_cast<T*>(ptr);
 }
+
+template<typename T>
+std::size_t Entity::getComponentTypeID() noexcept {
+    std::unique_ptr<T> comp = std::make_unique<T>();
+    static const std::size_t typeID = comp->getBit();
+    return typeID;
+}
+
+template std::size_t Entity::getComponentTypeID<Sprite>();
+template std::size_t Entity::getComponentTypeID<Transform>();
+
+template Transform& Entity::addComponent<Transform>();
+template Sprite& Entity::addComponent<Sprite>();
+
+template Transform& Entity::getComponent<Transform>();
+template Sprite& Entity::getComponent<Sprite>();

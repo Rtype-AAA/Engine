@@ -2,14 +2,11 @@
 // Created by thibaultcampagne on 19/12/23.
 //
 
-#ifndef R_TYPE_ENTITYMANAGER_H
-#define R_TYPE_ENTITYMANAGER_H
+#pragma  once
 
-#include <string>
-#include <utility>
-#include <vector>
-#include <map>
+#include "std.h"
 #include "entity.h"
+#include "DrawableComponent.h"
 
 
 class EntityManager: protected Entity{
@@ -31,13 +28,13 @@ public:
     /// @tparam T: Type of the entity.
     /// @tparam TArgs: Type of the arguments.
     /// @param args: Arguments of the entity.
-    inline Entity &addEntity(std::string nameEntity, Archetypes newArchetype = Archetypes());
+    Entity &addEntity(std::string nameEntity, Archetypes newArchetype = Archetypes());
 
     /// @brief getEntity(): Get an entity from the entity manager by its name.
     /// @tparam T: Type of the entity.
     /// @param nameEntity: Name of the entity.
     /// @return T&: Reference of the entity.
-    inline Entity &getEntity(std::string nameEntity);
+    Entity &getEntity(std::string nameEntity);
 
     /// @brief getEntities(): Get the EntityManager's entities.
     /// @param void
@@ -49,9 +46,5 @@ public:
     /// @return Entity::EntityMap: Entity map.
     std::map<std::string, Entity*> getEntityMap() const {return entityMap;}
 
-    bool init() override {return true;}
+    bool initEntityManager() {return true;}
 };
-
-#include "entityManager.cpp"
-
-#endif // R_TYPE_ENTITYMANAGER_H

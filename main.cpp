@@ -2,7 +2,7 @@
 // Created by thibaultcampagne on 29/11/23.
 //
 
-#include "src/GameEngine/gameEngine.h"
+#include "main.h"
 
 std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     std::unique_ptr<World> menuWorld = std::make_unique<World>();

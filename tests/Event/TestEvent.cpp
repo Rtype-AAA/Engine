@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../../src/Event/event.h"
+#include "eventEngine.h"
 
 class EventTest : public ::testing::Test {
 protected:

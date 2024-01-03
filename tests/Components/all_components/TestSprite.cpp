@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../../../src/include/all_components.h"
+#include "Sprite.h"
 
 class SpriteTest : public ::testing::Test {
 protected:

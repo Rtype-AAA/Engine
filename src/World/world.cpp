@@ -6,7 +6,7 @@
 
 EntityManager& World::addEntityManager(std::string nameEntityManager) {
     std::unique_ptr<EntityManager> newEntityManager = std::make_unique<EntityManager>();
-    if (!newEntityManager->init()) {
+    if (!newEntityManager->initEntityManager()) {
         throw std::runtime_error("Echec de l'initialisation de EntityManager : " + nameEntityManager);
     }
     EntityManager *comp = newEntityManager.get();

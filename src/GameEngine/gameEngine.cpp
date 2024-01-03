@@ -54,7 +54,7 @@ void GameEngine::initializeTexture(std::string path) {
 }
 
 World& GameEngine::addWorld(std::string nameWorld, std::unique_ptr<World> world) {
-    if (!world->init()) {
+    if (!world->initWorld()) {
         throw std::runtime_error("Echec de l'initialisation de World : " + nameWorld);
     }
     World *comp = world.get();
@@ -131,7 +131,7 @@ void GameEngine::renderGameEngine() {
             w->clear();
             for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
                 for (auto const& entity : entityManager.second->getEntityMap()) {
-                    entity.second->draw(*w);
+                    entity.second->drawEntity(*w);
                 }
             }
             w->display();

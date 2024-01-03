@@ -2,18 +2,14 @@
 // Created by thibaultcampagne on 29/11/23.
 //
 
-#ifndef ENGINE_ENTITY_H
-#define ENGINE_ENTITY_H
+#pragma once
 
-#include <string>
-#include <utility>
-#include <vector>
-#include <map>
-#include <memory>
-#include <array>
-#include "../Components/Components.h"
-#include "../Components/DrawableComponent.h"
-#include "../Archetype/Archetypes.h"
+#include "std.h"
+#include "Components.h"
+#include "DrawableComponent.h"
+#include "Archetypes.h"
+#include "Sprite.h"
+#include "Transform.h"
 
 /**
  * @brief Entity class: Entity is a class that represents an entity in the game.
@@ -49,7 +45,7 @@ public:
     /// @brief init(): Initialize the entity
     /// @param void
     /// @return bool: true if the entity is initialized, false otherwise
-    inline bool init() override;
+    bool initEntity();
 
     /// @brief genName(): Get the name of the entity
     /// @param void
@@ -63,7 +59,7 @@ public:
 
     inline void addDrawable(Components* component);
 
-    inline void draw(sf::RenderWindow& window);
+    void drawEntity(sf::RenderWindow& window);
 
     /// @brief addComponent(): Add a component to the entity
     /// @tparam T: Type of the component
@@ -80,11 +76,10 @@ public:
     template<typename T>
     T& getComponent();
 
+    template<typename T>
+    std::size_t getComponentTypeID() noexcept;
+
     std::bitset<3> getComponentBitset() const {return componentBitset;}
     std::vector<DrawableComponent*> getDrawableComponents() const {return drawableComponents;}
     std::array<Components*, 3> getComponentArrays() const {return componentArray;}
 };
-
-#include "entity.cpp"
-
-#endif //ENGINE_ENTITY_H

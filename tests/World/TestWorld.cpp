@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../../src/World/world.h"
+#include "world.h"
 
 class TestWorld : public ::testing::Test {
 protected:

@@ -2,16 +2,12 @@
 // Created by thibaultcampagne on 30/11/23.
 //
 
-#ifndef R_TYPE_SPRITE_H
-#define R_TYPE_SPRITE_H
+#pragma once
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <functional>
-#include "../Components.h"
-#include "../DrawableComponent.h"
+#include "sfml.h"
+#include "std.h"
+#include "Components.h"
+#include "DrawableComponent.h"
 
 /**
  * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
@@ -119,4 +115,3 @@ public:
     void setTexture(const sf::Texture& existingTexture);
 };
 
-#endif //R_TYPE_SPRITE_H

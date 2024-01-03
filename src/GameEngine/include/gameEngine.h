@@ -2,14 +2,12 @@
 // Created by thibaultcampagne on 28/12/23.
 //
 
-#ifndef R_TYPE_GAMEENGINE_H
-#define R_TYPE_GAMEENGINE_H
+#pragma once
 
-#include <variant>
-#include <iostream>
-#include <filesystem>
-#include "../World/world.h"
-#include "../Event/event.h"
+#include "std.h"
+#include "world.h"
+#include "eventEngine.h"
+#include "Sprite.h"
 
 class GameEngine : protected World, protected EventEngine {
 private:
@@ -54,5 +52,3 @@ public:
     std::map<std::string, World*> getWorldMap() const {return worldMap;}
 };
 
-
-#endif //R_TYPE_GAMEENGINE_H

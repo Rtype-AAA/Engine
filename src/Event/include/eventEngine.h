@@ -5,10 +5,8 @@
 #ifndef R_TYPE_EVENTENGINE_H
 #define R_TYPE_EVENTENGINE_H
 
-#include <string>
-#include <map>
-#include <SFML/Window.hpp>
-#include <functional>
+#include "std.h"
+#include "sfml.h"
 
 /**
  * @brief EventEngine class: EventEngine is a class that represents the event engine of the game.

@@ -2,18 +2,11 @@
 // Created by thibaultcampagne on 20/12/23.
 //
 
-#ifndef R_TYPE_WORLD_H
-#define R_TYPE_WORLD_H
+#pragma once
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <string>
-#include <vector>
-#include <map>
-#include <memory>
-#include <iostream>
-#include "../Entity/entityManager.h"
-#include "../include/all_components.h"
+#include "std.h"
+#include "sfml.h"
+#include "entityManager.h"
 
 /**
  * @brief World class: World is a class that represents the world of the game.
@@ -71,7 +64,5 @@ public:
     /// @brief init(): Initialize the World.
     /// @param void
     /// @return bool: True if the world is initialized, false otherwise.
-    bool init() override {return true;}
+    bool initWorld() {return true;}
 };
-
-#endif //R_TYPE_WORLD_H

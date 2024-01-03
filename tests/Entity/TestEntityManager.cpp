@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
-#include "../../src/Entity/entityManager.h"
-#include "../../src/include/all_components.h"
+#include "entityManager.h"
+#include "Transform.h"
+#include "Sprite.h"
 
 class EntityManagerTest : public ::testing::Test {
 protected:

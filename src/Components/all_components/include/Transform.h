@@ -2,15 +2,10 @@
 // Created by thibaultcampagne on 30/11/23.
 //
 
-#ifndef R_TYPE_TRANSFORM_H
-#define R_TYPE_TRANSFORM_H
+#pragma once
 
-
-#include <limits>
-#include <vector>
-#include <map>
-#include <algorithm>
-#include "../Components.h"
+#include "std.h"
+#include "Components.h"
 
 /**
  * @brief Transform class: Transform is a class that represents the transform of a Component.
@@ -79,5 +74,3 @@ public:
     void setTransform(const std::map<std::string, std::vector<float>>& mapTransform);
 };
 
-
-#endif //R_TYPE_TRANSFORM_H
