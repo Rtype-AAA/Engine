@@ -14,15 +14,16 @@
  *
  * The GameEngine class manages the game engine.
  */
-class GameEngine : protected World, protected EventEngine {
+class GameEngine : protected World, protected EventEngine
+{
 private:
-    std::map<std::string, World*> worldMap{}; /// < Map of World classes.
+    std::map<std::string, World *> worldMap{};              /// < Map of World classes.
     std::map<std::string, std::unique_ptr<World>> worlds{}; /// < Map of World classes' unique pointers.
-    std::map<std::string, sf::Texture> mapTexture{}; /// < Map of the textures.
-    World* currentWorld; /// < Current world.
+    std::map<std::string, sf::Texture> mapTexture{};        /// < Map of the textures.
+    World *currentWorld;                                    /// < Current world.
 
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
-    EventEngine event; /// < EventEngine class which manages the events.
+    EventEngine event;                                                                   /// < EventEngine class which manages the events.
 public:
     /// @brief Default GameEngine constructor.
     /// @param void
@@ -31,19 +32,18 @@ public:
 
     /// @brief GameEngine constructor with parameters.
     /// @param mode: Video mode.
-    /// @param type: Type of the window.
+    /// @param type: Type of the graphics ("2D" or "3D").
     /// @param title: Title of the window.
     /// @param style: Style of the window (sf::Style::Default by default).
     /// @param settings: Settings of the window.
     /// @return void
-    explicit GameEngine(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style=sf::Style::Default,
-                        const sf::ContextSettings &settings=sf::ContextSettings());
+    explicit GameEngine(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style = sf::Style::Default,
+                        const sf::ContextSettings &settings = sf::ContextSettings());
 
     /// @brief GameEngine destructor.
     /// @param void
     /// @return void
     ~GameEngine() = default;
-
 
     /// @brief run(): Run the game engine (with parameters).
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -78,6 +78,11 @@ public:
     /// @return void
     void updateGameEngine();
 
+    /// @brief getFilesTexture(): Get all the textures files in the given directory.
+    /// @param pathDirectory: Path of the directory.
+    /// @return std::vector<std::string>: Vector of the textures files' names.
+    std::vector<std::string> getFilesTexture(std::string pathDirectory);
+
     /// @brief initialize(): Initialize the game engine.
     /// @param mapWorld: Map of World classes' unique pointers.
     /// @param pathRessources: Map of the path of the ressources (assets).
@@ -104,7 +109,7 @@ public:
     /// @brief getWindow(): Get the window.
     /// @param void
     /// @return std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>>: The GameEngine's window
-    const auto& getWindow() {return window;}
+    const auto &getWindow() { return window; }
 
     /// @brief setWindow(): Set the window.
     /// @param void
@@ -114,37 +119,37 @@ public:
     /// @brief getEventEngine(): Get the event engine.
     /// @param void
     /// @return EventEngine&: GameEngine's EventEngine.
-    EventEngine& getEventEngine() {return event;}
+    EventEngine &getEventEngine() { return event; }
 
     /// @brief setCurrentWorld(): Set GameEngine's current world.
     /// @param world: World to set.
     /// @return void
-    void setCurrentWorld(World* world);
+    void setCurrentWorld(World *world);
 
     /// @brief getCurrentWorld(): Get GameEngine's current world.
     /// @param void
     /// @return World*: GameEngine's current world.
-    World* getCurrentWorld() {return currentWorld;}
+    World *getCurrentWorld() { return currentWorld; }
 
     /// @brief addWorld(): Add a world to the world map.
     /// @param nameWorld: Name of the world.
     /// @param world: World to add.
     /// @return World&: The world.
-    World& addWorld(std::string nameWorld, std::unique_ptr<World> world);
+    World &addWorld(std::string nameWorld, std::unique_ptr<World> world);
 
     /// @brief getWorld(): Get a world from the world map with its name.
     /// @param nameWorld: Name of the world.
     /// @return World&: GameEngine's world.
-    World& getWorld(std::string nameWorld);
+    World &getWorld(std::string nameWorld);
 
     /// @brief getMapTexture(): Get GameEngine's map of the textures.
     /// @param void
     /// @return std::map<std::string, sf::Texture>: GameEngine's map of the textures.
-    std::map<std::string, sf::Texture> getMapTexture() const {return mapTexture;}
+    std::map<std::string, sf::Texture> getMapTexture() const { return mapTexture; }
 
     /// @brief getWorldMap(): Get GameEngine's map of the worlds.
     /// @param void
     /// @return std::map<std::string, World*>: GameEngine's map of the worlds.
-    std::map<std::string, World*> getWorldMap() const {return worldMap;}
+    std::map<std::string, World *> getWorldMap() const { return worldMap; }
 };
 
