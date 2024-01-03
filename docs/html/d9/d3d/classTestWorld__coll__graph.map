@@ -1,8 +1,0 @@
-<map id="TestWorld" name="TestWorld">
-<area shape="rect" id="node1" title=" " alt="" coords="47,317,127,343"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,229,100,255"/>
-<area shape="rect" id="node3" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="124,229,179,255"/>
-<area shape="rect" id="node4" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="98,155,205,180"/>
-<area shape="rect" id="node5" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="123,80,179,105"/>
-<area shape="rect" id="node6" href="$db/d46/classComponents.html" title=" " alt="" coords="103,5,199,31"/>
-</map>

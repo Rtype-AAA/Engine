@@ -2,6 +2,15 @@
 \label{classGameEngine}\index{GameEngine@{GameEngine}}
 
 
+\mbox{\hyperlink{classGameEngine}{Game\+Engine}} class\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}} is a class that represents the game engine.  
+
+
+
+
+{\ttfamily \#include $<$game\+Engine.\+h$>$}
+
+
+
 Inheritance diagram for Game\+Engine\+:
 % FIG 0
 
@@ -11,167 +20,476 @@ Collaboration diagram for Game\+Engine\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}\label{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}} 
-{\bfseries Game\+Engine} (sf\+::\+Video\+Mode mode, std\+::string type, sf\+::\+String title, sf\+::\+Uint32 style=sf\+::\+Style\+::\+Default, const sf\+::\+Context\+Settings \&settings=sf\+::\+Context\+Settings())
-\item 
-\mbox{\Hypertarget{classGameEngine_a8f2e562a297f70468188da3245043d38}\label{classGameEngine_a8f2e562a297f70468188da3245043d38}} 
-void {\bfseries run} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ $>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
-\item 
-\mbox{\Hypertarget{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}\label{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}} 
-void {\bfseries run} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}\label{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}} 
-void {\bfseries render\+Game\+Engine} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}\label{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}} 
-void {\bfseries event\+Game\+Engine} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}\label{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}} 
-bool {\bfseries is\+Window\+Open} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}\label{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}} 
-void {\bfseries update\+Game\+Engine} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a98f3d5c67ec33e551bc3804c28b433be}\label{classGameEngine_a98f3d5c67ec33e551bc3804c28b433be}} 
-void {\bfseries initialize} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ $>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
-\item 
-\mbox{\Hypertarget{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}\label{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}} 
-void {\bfseries initialize\+Sprite} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}\label{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}} 
-void {\bfseries initialize\+Texture} (std\+::string path)
-\item 
-\mbox{\Hypertarget{classGameEngine_a6c24a45756c888517d66344761b87a06}\label{classGameEngine_a6c24a45756c888517d66344761b87a06}} 
-void {\bfseries initialize\+World\+Map} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ $>$ map\+World)
-\item 
-\mbox{\Hypertarget{classGameEngine_a8d4db761cdf9c860f31e7710405ff511}\label{classGameEngine_a8d4db761cdf9c860f31e7710405ff511}} 
-const auto \& {\bfseries get\+Window} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}\label{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}} 
-void {\bfseries set\+Window} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}\label{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}} 
-\mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& {\bfseries get\+Event\+Engine} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}\label{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}} 
-void {\bfseries set\+Current\+World} (\mbox{\hyperlink{classWorld}{World}} $\ast$world)
-\item 
-\mbox{\Hypertarget{classGameEngine_ad57e52d0771071c58cc52eb964b408df}\label{classGameEngine_ad57e52d0771071c58cc52eb964b408df}} 
-\mbox{\hyperlink{classWorld}{World}} $\ast$ {\bfseries get\+Current\+World} ()
-\item 
-\mbox{\Hypertarget{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}\label{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}} 
-\mbox{\hyperlink{classWorld}{World}} \& {\bfseries add\+World} (std\+::string name\+World, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ world)
-\item 
-\mbox{\Hypertarget{classGameEngine_a148d156efc2779fab75d937883cd1a7b}\label{classGameEngine_a148d156efc2779fab75d937883cd1a7b}} 
-\mbox{\hyperlink{classWorld}{World}} \& {\bfseries get\+World} (std\+::string name\+World)
-\item 
-\mbox{\Hypertarget{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}\label{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}} 
-std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ {\bfseries get\+Map\+Texture} () const
-\item 
-\mbox{\Hypertarget{classGameEngine_a67e960f53a048b11cc30796016d66fdc}\label{classGameEngine_a67e960f53a048b11cc30796016d66fdc}} 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ {\bfseries get\+World\+Map} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classGameEngine_affd35ad3f1f76918d0b0201f56b7b125}{Game\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em $<$ \mbox{\hyperlink{classEventEngine}{Event\+Engine}} class which manages the events. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}{Game\+Engine}} (sf\+::\+Video\+Mode mode, std\+::string type, sf\+::\+String title, sf\+::\+Uint32 style=sf\+::\+Style\+::\+Default, const sf\+::\+Context\+Settings \&settings=sf\+::\+Context\+Settings())
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor with parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGameEngine_a461ad53101f4b4711339ecb803254d21}{$\sim$\+Game\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}{run}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (with parameters). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (without parameters). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine()}}\+: Render the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine()}}\+: Manage the events of the game engine. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open()}}\+: Check if the window is open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine()}}\+: Update the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize()}}\+: Initialize the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite()}}\+: Initialize the sprites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture()}}\+: Initialize a texture with its path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map()}}\+: Initialize the world map. \end{DoxyCompactList}\item 
+const auto \& \mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window()}}\+: Get the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window()}}\+: Set the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& \mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine()}}\+: Get the event engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}{set\+Current\+World}} (\mbox{\hyperlink{classWorld}{World}} $\ast$world)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}{set\+Current\+World()}}\+: Set \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorld}{World}} $\ast$ \mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World}} (std\+::string name\+World, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ world)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World()}}\+: Add a world to the world map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World}} (std\+::string name\+World)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World()}}\+: Get a world from the world map with its name. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, sf\+::\+Texture $>$ \mbox{\hyperlink{classGameEngine_a7f4802481582145ad112c3f44b147dfa}{get\+Map\+Texture}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a7f4802481582145ad112c3f44b147dfa}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ \mbox{\hyperlink{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}{get\+World\+Map}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
-\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classWorld}{World}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classWorld_a1fc6067fe31da6405bece93c9dbb61ac}{World}} ()=default
-\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Name of the world. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classWorld_a724bc2c94b64a16081f80f14011ff1b1}{$\sim$\+World}} () override=default
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld}{World}} destructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classWorld_a636a36faea3b12668308cd9e06520d3c}{create\+Entities}} (std\+::map$<$ std\+::string, std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $>$, std\+::vector$<$ std\+::string $>$ $>$ $>$ \&map\+Entity\+Manager, std\+::string key\+Entity\+Manager)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a636a36faea3b12668308cd9e06520d3c}{create\+Entities()}}\+: Create the entities. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{add\+Entity\+Manager}} (std\+::string Name\+Entity\+Manager)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{add\+Entity\+Manager()}}\+: Add an entity manager to the map. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{get\+Entity\+Manager}} (std\+::string Name\+Entity\+Manager)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{get\+Entity\+Manager()}}\+: Get the entity manager. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}{set\+Name\+World}} (std\+::string new\+Name)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}{set\+Name\+World()}}\+: Set the name of the world. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classWorld_a7a15da4862400e8a81913329326eb426}{get\+Name\+World}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a7a15da4862400e8a81913329326eb426}{get\+Name\+World()}}\+: Get the name of the world. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ \mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{get\+Entity\+Manager\+Map}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{get\+Entity\+Manager\+Map()}}\+: Get the map of the entity manager. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classWorld_af2d4cecc96107919448ab20d61708737}{init\+World}} ()
-\begin{DoxyCompactList}\small\item\em init()\+: Initialize the \mbox{\hyperlink{classWorld}{World}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}{Entity\+Manager}} ()=default
-\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}{$\sim$\+Entity\+Manager}} ()=default
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} destructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntity}{Entity}} \& \mbox{\hyperlink{classEntityManager_ae00cfff54f5855e3ec71661224bec265}{add\+Entity}} (std\+::string name\+Entity, \mbox{\hyperlink{classArchetypes}{Archetypes}} new\+Archetype=\mbox{\hyperlink{classArchetypes}{Archetypes}}())
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_ae00cfff54f5855e3ec71661224bec265}{add\+Entity()}}\+: Create and add a new entity to the entity manager. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntity}{Entity}} \& \mbox{\hyperlink{classEntityManager_ad289a6999a5b56f6956334aef060e57c}{get\+Entity}} (std\+::string name\+Entity)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_ad289a6999a5b56f6956334aef060e57c}{get\+Entity()}}\+: Get an entity from the entity manager by its name. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0}{get\+Entities}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0}{get\+Entities()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entities. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classEntityManager_afd61e7fa8fbb44172829b8b7402cd653}{get\+Entity\+Map}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_afd61e7fa8fbb44172829b8b7402cd653}{get\+Entity\+Map()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entity map. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}\label{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}} 
-bool {\bfseries init\+Entity\+Manager} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classEntity}{Entity}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classEntity_aa28e3afd0766aae4d570ee9ee3c4ae3b}{Entity}} ()=default
-\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEntity}{Entity}} constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntity_a5ebade3be32179dc9fbb2ca01871d87c}{Entity}} (std\+::string name\+Entity, \mbox{\hyperlink{classArchetypes}{Archetypes}} new\+Archetype=\mbox{\hyperlink{classArchetypes}{Archetypes}}())
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntity_a605d474ccbd30c3d4350016ec173546a}{$\sim$\+Entity}} () override=default
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} destructor. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classEntity_a25cd6bce71c72bd7be549f478810575e}{init\+Entity}} ()
-\begin{DoxyCompactList}\small\item\em init()\+: Initialize the entity \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classEntity_a403f69eb888da7c5a690b79c658cdf47}{get\+Name}} () const
-\begin{DoxyCompactList}\small\item\em gen\+Name()\+: Get the name of the entity \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name}} (std\+::string new\+Name)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name()}}\+: Set the name of the entity \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEntity_adae040ef4d3e81b99e1851995f0c031f}\label{classEntity_adae040ef4d3e81b99e1851995f0c031f}} 
-void {\bfseries add\+Drawable} (\mbox{\hyperlink{classComponents}{Components}} $\ast$component)
-\item 
-\mbox{\Hypertarget{classEntity_a98892dc9dbabd59d7258db64df34e7d3}\label{classEntity_a98892dc9dbabd59d7258db64df34e7d3}} 
-void {\bfseries draw\+Entity} (sf\+::\+Render\+Window \&window)
-\item 
-{\footnotesize template$<$typename T , typename... TArgs$>$ }\\T \& \mbox{\hyperlink{classEntity_ac5f5d72cc6ed13aef80a2d0e2a8ee831}{add\+Component}} (TArgs \&\&... args)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_ac5f5d72cc6ed13aef80a2d0e2a8ee831}{add\+Component()}}\+: Add a component to the entity \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEntity_a5b45d20d1301e064aaf9ba09a6c15a56}{get\+Component}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a5b45d20d1301e064aaf9ba09a6c15a56}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEntity_aa5e5442667032724d9f8581a81664e0e}\label{classEntity_aa5e5442667032724d9f8581a81664e0e}} 
-{\footnotesize template$<$typename T $>$ }\\std\+::size\+\_\+t {\bfseries get\+Component\+Type\+ID} () noexcept
-\item 
-\mbox{\Hypertarget{classEntity_aa745ac889194c0bf852019f90e708471}\label{classEntity_aa745ac889194c0bf852019f90e708471}} 
-std\+::bitset$<$ 3 $>$ {\bfseries get\+Component\+Bitset} () const
-\item 
-\mbox{\Hypertarget{classEntity_a21374017afb1ecc18918092eb32732e3}\label{classEntity_a21374017afb1ecc18918092eb32732e3}} 
-std\+::vector$<$ \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} $\ast$ $>$ {\bfseries get\+Drawable\+Components} () const
-\item 
-\mbox{\Hypertarget{classEntity_ac0f096857cbeb8ead5ad31cc130edc89}\label{classEntity_ac0f096857cbeb8ead5ad31cc130edc89}} 
-std\+::array$<$ \mbox{\hyperlink{classComponents}{Components}} $\ast$, 3 $>$ {\bfseries get\+Component\+Arrays} () const
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classComponents}{Components}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classComponents_adb5db757815c1d8b961c069515f8e260}\label{classComponents_adb5db757815c1d8b961c069515f8e260}} 
-virtual bool {\bfseries init} ()
-\item 
-\mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
-virtual void {\bfseries update} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classEventEngine}{Event\+Engine}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classEventEngine_a2875264300f68e1b7282928b18aa8969}{Event\+Engine}} ()=default
-\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEventEngine}{Event\+Engine}} constructor. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classEventEngine_a77cfa5bd6e3656f60d8d203de3ddd85e}{$\sim$\+Event\+Engine}} ()=default
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine}{Event\+Engine}} destructor. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init()}}\+: Initialize the \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. \end{DoxyCompactList}\item 
-sf\+::\+Event \& \mbox{\hyperlink{classEventEngine_a6b09a0f11fc25743213288c445ba627c}{get\+Event}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a6b09a0f11fc25743213288c445ba627c}{get\+Event()}}\+: Get the SFML Event. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key keyboard, std\+::function$<$ void()$>$ function)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed()}}\+: Add a key pressed to the map. \end{DoxyCompactList}\item 
-std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_a99fa320a2013c9d3e02a53512016102c}{get\+Key\+Pressed\+Map}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a99fa320a2013c9d3e02a53512016102c}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGameEngine}{Game\+Engine}} class\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}} is a class that represents the game engine. 
+
+The \mbox{\hyperlink{classGameEngine}{Game\+Engine}} class manages the game engine. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameEngine_affd35ad3f1f76918d0b0201f56b7b125}\label{classGameEngine_affd35ad3f1f76918d0b0201f56b7b125}} 
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+$<$ \mbox{\hyperlink{classEventEngine}{Event\+Engine}} class which manages the events. 
+
+Default \mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}\label{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}} 
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}\item[{sf\+::\+Video\+Mode}]{mode,  }\item[{std\+::string}]{type,  }\item[{sf\+::\+String}]{title,  }\item[{sf\+::\+Uint32}]{style = {\ttfamily sf\+:\+:Style\+:\+:Default},  }\item[{const sf\+::\+Context\+Settings \&}]{settings = {\ttfamily sf\+:\+:ContextSettings()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Video mode. \\
+\hline
+{\em type} & Type of the window. \\
+\hline
+{\em title} & Title of the window. \\
+\hline
+{\em style} & Style of the window (sf\+::\+Style\+::\+Default by default). \\
+\hline
+{\em settings} & Settings of the window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a461ad53101f4b4711339ecb803254d21}\label{classGameEngine_a461ad53101f4b4711339ecb803254d21}} 
+\index{GameEngine@{GameEngine}!````~GameEngine@{$\sim$GameEngine}}
+\index{````~GameEngine@{$\sim$GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameEngine()}{~GameEngine()}}
+{\footnotesize\ttfamily Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classGameEngine}{Game\+Engine}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}\label{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}} 
+\index{GameEngine@{GameEngine}!addWorld@{addWorld}}
+\index{addWorld@{addWorld}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addWorld()}{addWorld()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::add\+World (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+World,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$}]{world }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World()}}\+: Add a world to the world map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+World} & Name of the world. \\
+\hline
+{\em world} & \mbox{\hyperlink{classWorld}{World}} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classWorld}{World}}\&\+: The world. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}\label{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}} 
+\index{GameEngine@{GameEngine}!eventGameEngine@{eventGameEngine}}
+\index{eventGameEngine@{eventGameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{eventGameEngine()}{eventGameEngine()}}
+{\footnotesize\ttfamily void Game\+Engine\+::event\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine()}}\+: Manage the events of the game engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a6b528cce5285adca82d94077521dd114}\label{classGameEngine_a6b528cce5285adca82d94077521dd114}} 
+\index{GameEngine@{GameEngine}!getCurrentWorld@{getCurrentWorld}}
+\index{getCurrentWorld@{getCurrentWorld}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getCurrentWorld()}{getCurrentWorld()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}}$\ast$ Game\+Engine\+::get\+Current\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World$\ast$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}\label{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}} 
+\index{GameEngine@{GameEngine}!getEventEngine@{getEventEngine}}
+\index{getEventEngine@{getEventEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getEventEngine()}{getEventEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEventEngine}{Event\+Engine}}\& Game\+Engine\+::get\+Event\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine()}}\+: Get the event engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}}\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a7f4802481582145ad112c3f44b147dfa}\label{classGameEngine_a7f4802481582145ad112c3f44b147dfa}} 
+\index{GameEngine@{GameEngine}!getMapTexture@{getMapTexture}}
+\index{getMapTexture@{getMapTexture}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getMapTexture()}{getMapTexture()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Texture$>$ Game\+Engine\+::get\+Map\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classGameEngine_a7f4802481582145ad112c3f44b147dfa}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, sf\+::\+Texture$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_acec872604f070cb951cc1fc9de3b402b}\label{classGameEngine_acec872604f070cb951cc1fc9de3b402b}} 
+\index{GameEngine@{GameEngine}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily const auto\& Game\+Engine\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window()}}\+: Get the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::variant$<$std\+::unique\+\_\+ptr$<$sf\+::\+Window$>$, std\+::unique\+\_\+ptr$<$sf\+::\+Render\+Window$>$$>$\+: The \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a148d156efc2779fab75d937883cd1a7b}\label{classGameEngine_a148d156efc2779fab75d937883cd1a7b}} 
+\index{GameEngine@{GameEngine}!getWorld@{getWorld}}
+\index{getWorld@{getWorld}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getWorld()}{getWorld()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::get\+World (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+World }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World()}}\+: Get a world from the world map with its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+World} & Name of the world. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classWorld}{World}}\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s world. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}\label{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}} 
+\index{GameEngine@{GameEngine}!getWorldMap@{getWorldMap}}
+\index{getWorldMap@{getWorldMap}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getWorldMap()}{getWorldMap()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classWorld}{World}}$\ast$$>$ Game\+Engine\+::get\+World\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classGameEngine_aa0c01ae793bc3bd014a4efc299303757}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, World$\ast$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_af7038136db2a69b4559248482e1512a9}\label{classGameEngine_af7038136db2a69b4559248482e1512a9}} 
+\index{GameEngine@{GameEngine}!initialize@{initialize}}
+\index{initialize@{initialize}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{path\+Ressources,  }\item[{std\+::string}]{first\+Scene }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize()}}\+: Initialize the game engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+World} & Map of \mbox{\hyperlink{classWorld}{World}} classes\textquotesingle{} unique pointers. \\
+\hline
+{\em path\+Ressources} & Map of the path of the ressources (assets). \\
+\hline
+{\em first\+Scene} & Name of the first scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}\label{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}} 
+\index{GameEngine@{GameEngine}!initializeSprite@{initializeSprite}}
+\index{initializeSprite@{initializeSprite}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeSprite()}{initializeSprite()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite()}}\+: Initialize the sprites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}\label{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}} 
+\index{GameEngine@{GameEngine}!initializeTexture@{initializeTexture}}
+\index{initializeTexture@{initializeTexture}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeTexture()}{initializeTexture()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture()}}\+: Initialize a texture with its path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}\label{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}} 
+\index{GameEngine@{GameEngine}!initializeWorldMap@{initializeWorldMap}}
+\index{initializeWorldMap@{initializeWorldMap}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeWorldMap()}{initializeWorldMap()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+World\+Map (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map()}}\+: Initialize the world map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+World} & Map of \mbox{\hyperlink{classWorld}{World}} classes\textquotesingle{} unique pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}\label{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}} 
+\index{GameEngine@{GameEngine}!isWindowOpen@{isWindowOpen}}
+\index{isWindowOpen@{isWindowOpen}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{isWindowOpen()}{isWindowOpen()}}
+{\footnotesize\ttfamily bool Game\+Engine\+::is\+Window\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open()}}\+: Check if the window is open. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True if the window is open, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}\label{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}} 
+\index{GameEngine@{GameEngine}!renderGameEngine@{renderGameEngine}}
+\index{renderGameEngine@{renderGameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{renderGameEngine()}{renderGameEngine()}}
+{\footnotesize\ttfamily void Game\+Engine\+::render\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine()}}\+: Render the game engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}\label{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}} 
+\index{GameEngine@{GameEngine}!run@{run}}
+\index{run@{run}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (without parameters). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}\label{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}} 
+\index{GameEngine@{GameEngine}!run@{run}}
+\index{run@{run}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{path\+Ressources,  }\item[{std\+::string}]{first\+Scene }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (with parameters). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+World} & Map of \mbox{\hyperlink{classWorld}{World}} classes\textquotesingle{} unique pointers. \\
+\hline
+{\em path\+Ressources} & Map of the path of the ressources (assets). \\
+\hline
+{\em first\+Scene} & Name of the first scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}\label{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}} 
+\index{GameEngine@{GameEngine}!setCurrentWorld@{setCurrentWorld}}
+\index{setCurrentWorld@{setCurrentWorld}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setCurrentWorld()}{setCurrentWorld()}}
+{\footnotesize\ttfamily void Game\+Engine\+::set\+Current\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWorld}{World}} $\ast$}]{world }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}{set\+Current\+World()}}\+: Set \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & \mbox{\hyperlink{classWorld}{World}} to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}\label{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}} 
+\index{GameEngine@{GameEngine}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}}
+{\footnotesize\ttfamily void Game\+Engine\+::set\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window()}}\+: Set the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}\label{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}} 
+\index{GameEngine@{GameEngine}!updateGameEngine@{updateGameEngine}}
+\index{updateGameEngine@{updateGameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{updateGameEngine()}{updateGameEngine()}}
+{\footnotesize\ttfamily void Game\+Engine\+::update\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine()}}\+: Update the game engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
