@@ -1,0 +1,37 @@
+name: Build RPM Package
+on:
+  push:
+    branches:
+      - test_workflows
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, fedora-latest, fedora-38]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+            sudo apt-get update
+            sudo apt-get install -y rpm
+            sudo apt-get install -y libsfml-dev
+          elif [ "${{ matrix.os }}" == "fedora-latest" ] || [ "${{ matrix.os }}" == "fedora-38" ]; then
+            sudo dnf install -y rpm-build
+            sudo dnf install -y sfml
+          fi
+
+      - name: Configure and Build RPM
+        run: |
+          # Configuration de CPack et génération du package RPM
+          cmake -Bbuild
+          cmake --build build
+          cd build
+          cpack
