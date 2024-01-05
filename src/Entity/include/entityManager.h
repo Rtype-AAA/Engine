@@ -39,7 +39,7 @@ public:
     /// @brief getEntities(): Get the EntityManager's entities.
     /// @param void
     /// @return std::map<std::string, Entity *>: Entities.
-    inline std::map<std::string, Entity *> getEntities() const;
+    std::map<std::string, Entity *> getEntities() const;
 
     /// @brief getEntityMap(): Get the EntityManager's entity map.
     /// @param void

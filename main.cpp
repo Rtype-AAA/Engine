@@ -75,8 +75,6 @@ void event(GameEngine &gameEngine) {
 }
 
 int main() {
-//    Entity player("Louis");
-//    World test;
     GameEngine gameEngine(sf::VideoMode(1920, 1080), "2d", "SFML Window");
     std::map<std::string, std::unique_ptr<World>> worldMap;
     worldMap["Menu"] = worldMenu(gameEngine);
@@ -86,6 +84,8 @@ int main() {
     pathRessources["Texture"] = "src/Ressources/Textures";
     event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
+
+
 //    std::map<std::string, std::vector<float>> mapTransform;
 //    mapTransform["Position"] = {1.0f, 5.0f};
 //    mapTransform["Rotation"] = {4.0f, 21.3f};
@@ -153,6 +153,5 @@ int main() {
 //    } else {
 //        std::cout << "Texture is not null" << std::endl;
 //    }
-
     return 0;
 }

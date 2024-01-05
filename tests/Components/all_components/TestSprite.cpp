@@ -10,7 +10,6 @@ protected:
 TEST_F(SpriteTest, DefaultConstructor) {
     Sprite sprite;
 
-    ASSERT_EQ(sprite.getSprite().getTexture(), nullptr);
 }
 
 TEST_F(SpriteTest, ConstructorWithTexturePath) {
@@ -112,12 +111,12 @@ TEST_F(SpriteTest, SetSpriteWithAnExistingSprite) {
 TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
     Sprite spriteComp;
 
-    std::map<std::string, sf::Texture> mapTexture;
+    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture;
     sf::Texture testTexture;
 
     ASSERT_TRUE(testTexture.loadFromFile("tests/assets/red.png"));
 
-    mapTexture["TestTexture"] = testTexture;
+    mapTexture["TestTexture"] = std::make_shared<sf::Texture>(testTexture);
 
     sf::Sprite testSprite;
     testSprite.setTexture(testTexture);

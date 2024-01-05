@@ -13,7 +13,7 @@ class GameEngine : protected World, protected EventEngine {
 private:
     std::map<std::string, World*> worldMap{};
     std::map<std::string, std::unique_ptr<World>> worlds{};
-    std::map<std::string, sf::Texture> mapTexture{};
+    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{};
     World* currentWorld;
 
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window;
@@ -48,7 +48,7 @@ public:
     World* getCurrentWorld() {return currentWorld;}
     World& addWorld(std::string nameWorld, std::unique_ptr<World> world);
     World& getWorld(std::string nameWorld);
-    std::map<std::string, sf::Texture> getMapTexture() const {return mapTexture;}
+    std::map<std::string, std::shared_ptr<sf::Texture>> getMapTexture() const {return mapTexture;}
     std::map<std::string, World*> getWorldMap() const {return worldMap;}
 };
 

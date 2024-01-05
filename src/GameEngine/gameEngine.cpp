@@ -43,13 +43,13 @@ void GameEngine::initializeTexture(std::string path) {
     allFilesName = getFilesTexture(path);
     path += "/";
     for (const auto& element : allFilesName) {
-        mapTexture[element] = sf::Texture();
-        if (!mapTexture[element].loadFromFile(path + element)) {
+        if (!texture.loadFromFile(path + element)) {
             std::cerr << "Erreur lors du chargement de la texture : " + path + element << std::endl;
             exit(1);
         } else {
             std::cout << "Chargement de la texture avec succès : " + path + element << std::endl;
         }
+        mapTexture[element] = std::make_shared<sf::Texture>(texture);
     }
 }
 
@@ -117,7 +117,11 @@ void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWor
 
 bool GameEngine::isWindowOpen() {
     return std::visit([](const auto& w) -> bool {
-        return w->isOpen();
+        if (w) {
+            return w->isOpen();
+        } else {
+            return false;
+        }
     }, window);
 }
 
@@ -162,14 +166,6 @@ void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
                      std::map<std::string, std::string> pathRessources,
                      std::string firstScene) {
     initialize(std::move(mapWorld), pathRessources, firstScene);
-    while (isWindowOpen()) {
-        eventGameEngine();
-        updateGameEngine();
-        renderGameEngine();
-    }
-}
-
-void GameEngine::run() {
     while (isWindowOpen()) {
         eventGameEngine();
         updateGameEngine();

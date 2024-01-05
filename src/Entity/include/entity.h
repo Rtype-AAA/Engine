@@ -50,14 +50,14 @@ public:
     /// @brief genName(): Get the name of the entity
     /// @param void
     /// @return std::string: name of the entity
-    [[nodiscard]] inline std::string getName() const;
+    [[nodiscard]] std::string getName() const;
 
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
     /// @return void
-    inline void setName(std::string newName);
+    void setName(std::string newName);
 
-    inline void addDrawable(Components* component);
+    void addDrawable(Components* component);
 
     void drawEntity(sf::RenderWindow& window);
 
@@ -83,3 +83,14 @@ public:
     std::vector<DrawableComponent*> getDrawableComponents() const {return drawableComponents;}
     std::array<Components*, 3> getComponentArrays() const {return componentArray;}
 };
+
+extern template std::size_t Entity::getComponentTypeID<Sprite>();
+extern template std::size_t Entity::getComponentTypeID<Transform>();
+
+extern template Transform& Entity::addComponent<Transform>();
+extern template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
+extern template Sprite& Entity::addComponent<Sprite>();
+extern template Sprite& Entity::addComponent<Sprite>(std::string&);
+
+extern template Transform& Entity::getComponent<Transform>();
+extern template Sprite& Entity::getComponent<Sprite>();

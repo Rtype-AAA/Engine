@@ -29,7 +29,7 @@ public:
     /// @brief Transform constructor
     /// @param mapTransform: Map containing transformation properties (std::string, std::vector<float>).
     /// @return void
-    explicit Transform(const std::map<std::string, std::vector<float>>& mapTransform) {
+    Transform(std::map<std::string, std::vector<float>>& mapTransform) {
         for(const auto& element : mapTransform) {
             if ((element.first == "Position" or element.first == "position") and element.second.size() == 2) {
                 position = element.second;

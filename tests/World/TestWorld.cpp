@@ -86,5 +86,5 @@ TEST_F(TestWorld, GetEntityManagerMap) {
 }
 
 TEST_F(TestWorld, Init) {
-    EXPECT_TRUE(world.init());
+    EXPECT_TRUE(world.initWorld());
 }

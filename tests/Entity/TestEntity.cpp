@@ -1,11 +1,13 @@
 #include "gtest/gtest.h"
 #include "entityManager.h"
+#include "entity.h"
 #include "Transform.h"
 #include "Sprite.h"
 
 class EntityTest : public ::testing::Test {
 protected:
     Entity entity;
+    Entity entity1;
 };
 
 TEST_F(EntityTest, DefaultConstructor) {
@@ -19,7 +21,7 @@ TEST_F(EntityTest, ConstructorWithName) {
 }
 
 TEST_F(EntityTest, Init) {
-    EXPECT_TRUE(entity.init());
+    EXPECT_TRUE(entity.initEntity());
 }
 
 TEST_F(EntityTest, GetNameAndSetName) {
@@ -30,15 +32,16 @@ TEST_F(EntityTest, GetNameAndSetName) {
 }
 
 TEST_F(EntityTest, AddAndGetComponent) {
-    std::map<std::string, std::vector<float>> transformData = {
-        {"Position", {1.0f, 2.0f}},
-        {"Rotation", {3.0f, 4.0f}},
-        {"Scale", {5.0f, 6.0f}}
-    };
+    std::map<std::string, std::vector<float>> transformData;
+
+    transformData["Position"] = std::vector<float>{1.0f, 2.0f};
+    transformData["Rotation"] = std::vector<float>{3.0f, 4.0f};
+    transformData["Scale"] = std::vector<float>{5.0f, 6.0f};
 
     Transform addedComponent(transformData);
 
-    entity.addComponent<Transform>(transformData);
+    entity.addComponent<Transform>();
+    entity1.addComponent<Transform>(transformData);
 
     EXPECT_EQ(addedComponent.getBit(), entity.getComponent<Transform>().getBit());
 }

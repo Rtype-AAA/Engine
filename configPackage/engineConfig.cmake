@@ -1,4 +1,5 @@
 include(CMakeFindDependencyMacro)
-find_dependency(SFML 2.5.1 COMPONENTS graphics window system audio REQUIRED)
+
+find_package(SFML COMPONENTS graphics window system audio CONFIG REQUIRED)
 
 include("${CMAKE_CURRENT_LIST_DIR}/engineTargets.cmake")

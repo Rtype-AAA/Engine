@@ -29,7 +29,7 @@ public:
     /// @brief Sprite constructor with an existing texture path.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    explicit Sprite(const std::string& texturePath) {
+    Sprite(const std::string& texturePath) {
         if (texture.loadFromFile(texturePath)) {
             sprite.setTexture(texture);
         } else {
@@ -45,7 +45,7 @@ public:
     /// @brief init(): Initialize the Sprite.
     /// @param void
     /// @return bool: True if the Sprite is initialized, false otherwise.
-    bool init() const {return true;}
+    bool initSprite() const {return true;}
 
     /// @brief getBit(): Get the bit of the Sprite.
     /// @param void
@@ -97,7 +97,7 @@ public:
     /// @param nameTexture: Name of the texture.
     /// @param mapTransform: Map of string and vector of floats.
     /// @return void
-    void setSprite(std::map<std::string, sf::Texture> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
+    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
 
     /// @brief setDeferredSprite(): Set the deferred sprite.
     /// @param setter: Function that will set the sprite.
