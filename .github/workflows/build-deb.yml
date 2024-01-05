@@ -74,4 +74,4 @@
           uses: actions/upload-artifact@v2
           with:
             name: deb-package
-            path: ../libquantumvortex-engine-1.0_amd64.deb
+            path: ./libquantumvortex-engine-1.0_amd64.deb
