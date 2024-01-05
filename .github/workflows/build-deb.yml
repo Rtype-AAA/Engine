@@ -40,7 +40,6 @@
             echo "" >> package-build/debian/changelog
             echo " -- Campagne <thibault.campagne@epitech.eu>  Fri, 05 Jan 2024 03:08:00 +0100" >> package-build/debian/changelog
 
-
         - name: Create DEB control file
           run: |
             echo "Source: libquantumvortex-engine" > package-build/debian/control
@@ -57,8 +56,9 @@
         - name: Create DEB rules file
           run: |
             echo '#!/usr/bin/make -f' > package-build/debian/rules
-            echo '%:' >> package-build/debian/rules
-            echo '    dh $@' >> package-build/debian/rules
+            echo "" >> package-build/debian/rules
+            echo "%:" >> package-build/debian/rules
+            echo -e "\tdh \$@" >> package-build/debian/rules
             chmod +x package-build/debian/rules
 
         - name: Build DEB package
