@@ -54,7 +54,7 @@
             echo "" >> package-build/debian/control
             echo "Package: libquantumvortex-engine-1.0" >> package-build/debian/control
             echo "Architecture: any" >> package-build/debian/control
-            echo "Depends: libsfml-dev (>= 2.5.1)", debhelper (>= 13.0) >> package-build/debian/control
+            echo "Depends: libsfml-dev (>= 2.5.1), debhelper" (>= 13.0) >> package-build/debian/control
             echo "Description: " >> package-build/debian/control
             echo "  The QuantumVortex Engine library is a 2D game engine designed to empower game developers in creating 
             captivating 2D video games. It provides a comprehensive set of tools, features, and resources for 2D game development. 
@@ -73,9 +73,6 @@
           run: |
             cd package-build
             debuild -us -uc
-
-        - name: List files
-          run: ls -R
 
         - name: Upload DEB package
           uses: actions/upload-artifact@v2
