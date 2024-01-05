@@ -46,7 +46,7 @@
 
         - name: Create DEB control file
           run: |
-            echo "Source: libquantumvortex-engine" > package-build/debian/control
+            echo "Source: libquantumvortex-engine" >> package-build/debian/control
             echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> package-build/debian/control
             echo "Section: devel" >> package-build/debian/control
             echo "Priority: required" >> package-build/debian/control
