@@ -1,0 +1,22 @@
+name: Build Windows Package
+on:
+  push:
+    branches:
+      - test_workflows
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          choco install nsis
+
+      - name: Build installer with NSIS
+        run: |
+          makensis ./scripts/build-windows-engine.nsi
