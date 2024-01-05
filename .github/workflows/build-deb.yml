@@ -71,10 +71,7 @@
 
         - name: Prepare original source tarball
           run: |
-            tar czvf ../libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
-
-        - name: List files in parent directory
-          run: tree ..
+            tar czvf ./libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
 
         - name: Build DEB package
           run: |
