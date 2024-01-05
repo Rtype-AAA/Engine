@@ -1,0 +1,60 @@
+\hypertarget{gameEngine_8h_source}{}\doxysection{game\+Engine.\+h}
+\label{gameEngine_8h_source}\index{src/GameEngine/include/gameEngine.h@{src/GameEngine/include/gameEngine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ thibaultcampagne\ on\ 28/12/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}std.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}world.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}eventEngine.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Sprite.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameEngine}{GameEngine}}\ :\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classWorld}{World}},\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classEventEngine}{EventEngine}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::map<std::string,\ World*>\ worldMap\{\};}
+\DoxyCodeLine{00015\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<World>>\ worlds\{\};}
+\DoxyCodeLine{00016\ \ \ \ \ std::map<std::string,\ std::shared\_ptr<sf::Texture>>\ mapTexture\{\};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classWorld}{World}}*\ currentWorld;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::variant<std::unique\_ptr<sf::Window>,\ std::unique\_ptr<sf::RenderWindow>>\ window;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classEventEngine}{EventEngine}}\ event;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classGameEngine}{GameEngine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classGameEngine}{GameEngine}}(sf::VideoMode\ mode,\ std::string\ type,\ sf::String\ title,\ sf::Uint32\ style=sf::Style::Default,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::ContextSettings\ \&settings=sf::ContextSettings());}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classGameEngine}{\string~GameEngine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ run(std::map<std::string,\ std::unique\_ptr<World>>\ mapWorld,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ pathRessources,\ std::string\ firstScene);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ renderGameEngine();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ eventGameEngine();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isWindowOpen();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGameEngine();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize(std::map<std::string,\ std::unique\_ptr<World>>\ mapWorld,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<std::string,\ std::string>\ pathRessources,\ std::string\ firstScene);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeSprite();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeTexture(std::string\ path);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeWorldMap(std::map<std::string,\ std::unique\_ptr<World>>\ mapWorld);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ getWindow()\ \{\textcolor{keywordflow}{return}\ window;\}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ setWindow();}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classEventEngine}{EventEngine}}\&\ getEventEngine()\ \{\textcolor{keywordflow}{return}\ event;\}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setCurrentWorld(\mbox{\hyperlink{classWorld}{World}}*\ world);}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classWorld}{World}}*\ getCurrentWorld()\ \{\textcolor{keywordflow}{return}\ currentWorld;\}}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classWorld}{World}}\&\ addWorld(std::string\ nameWorld,\ std::unique\_ptr<World>\ world);}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classWorld}{World}}\&\ getWorld(std::string\ nameWorld);}
+\DoxyCodeLine{00051\ \ \ \ \ std::map<std::string,\ std::shared\_ptr<sf::Texture>>\ getMapTexture()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ mapTexture;\}}
+\DoxyCodeLine{00052\ \ \ \ \ std::map<std::string,\ World*>\ getWorldMap()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ worldMap;\}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+
+\end{DoxyCode}

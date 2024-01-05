@@ -7,7 +7,7 @@
 
 
 
-{\ttfamily \#include $<$event.\+h$>$}
+{\ttfamily \#include $<$event\+Engine.\+h$>$}
 
 
 
@@ -22,12 +22,12 @@ virtual \mbox{\hyperlink{classEventEngine_a77cfa5bd6e3656f60d8d203de3ddd85e}{$\s
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine}{Event\+Engine}} destructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}{init()}}\+: Initialize the \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. \end{DoxyCompactList}\item 
-sf\+::\+Event \& \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event()}}\+: Get the SFML Event. \end{DoxyCompactList}\item 
+sf\+::\+Event \& \mbox{\hyperlink{classEventEngine_a6b09a0f11fc25743213288c445ba627c}{get\+Event}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a6b09a0f11fc25743213288c445ba627c}{get\+Event()}}\+: Get the SFML Event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key keyboard, std\+::function$<$ void()$>$ function)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed()}}\+: Add a key pressed to the map. \end{DoxyCompactList}\item 
-std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_a99fa320a2013c9d3e02a53512016102c}{get\+Key\+Pressed\+Map}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a99fa320a2013c9d3e02a53512016102c}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -95,15 +95,15 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classEventEngine_a5250100318fb566404de9e34682e1c0e}\label{classEventEngine_a5250100318fb566404de9e34682e1c0e}} 
+\mbox{\Hypertarget{classEventEngine_a6b09a0f11fc25743213288c445ba627c}\label{classEventEngine_a6b09a0f11fc25743213288c445ba627c}} 
 \index{EventEngine@{EventEngine}!getEvent@{getEvent}}
 \index{getEvent@{getEvent}!EventEngine@{EventEngine}}
 \doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
-{\footnotesize\ttfamily sf\+::\+Event\& Event\+Engine\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily sf\+::\+Event \& Event\+Engine\+::get\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-\mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event()}}\+: Get the SFML Event. 
+\mbox{\hyperlink{classEventEngine_a6b09a0f11fc25743213288c445ba627c}{get\+Event()}}\+: Get the SFML Event. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -113,15 +113,15 @@ void
 \begin{DoxyReturn}{Returns}
 sf\+::\+Event\+: The SFML Event. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}\label{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}} 
+\mbox{\Hypertarget{classEventEngine_a99fa320a2013c9d3e02a53512016102c}\label{classEventEngine_a99fa320a2013c9d3e02a53512016102c}} 
 \index{EventEngine@{EventEngine}!getKeyPressedMap@{getKeyPressedMap}}
 \index{getKeyPressedMap@{getKeyPressedMap}!EventEngine@{EventEngine}}
 \doxysubsubsection{\texorpdfstring{getKeyPressedMap()}{getKeyPressedMap()}}
-{\footnotesize\ttfamily std\+::map$<$sf\+::\+Keyboard\+::\+Key, std\+::function$<$void()$>$ $>$\& Event\+Engine\+::get\+Key\+Pressed\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& Event\+Engine\+::get\+Key\+Pressed\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-\mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. 
+\mbox{\hyperlink{classEventEngine_a99fa320a2013c9d3e02a53512016102c}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -153,5 +153,5 @@ bool\+: True if the \mbox{\hyperlink{classEventEngine}{Event\+Engine}} is initia
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Event/event.\+h\item 
-src/\+Event/event.\+cpp\end{DoxyCompactItemize}
+src/\+Event/include/event\+Engine.\+h\item 
+src/\+Event/event\+Engine.\+cpp\end{DoxyCompactItemize}

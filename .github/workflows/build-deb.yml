@@ -26,7 +26,7 @@
             mkdir -p package-build/documentation
             mkdir -p package-build/debian/tmp/usr/lib/
             cp -r src/* package-build/src/
-            cp copyright package-build/
+            cp copyright package-build/debian
             cp -r docs/* package-build/documentation/
             cmake -Bbuild
             cmake --build build
@@ -38,7 +38,7 @@
 
         - name: Create DEB changelog file
           run: |
-            echo "libquantumvortex-engine (1.0-0) stable; urgency=low" > package-build/debian/changelog
+            echo "libquantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
             echo "" >> package-build/debian/changelog
             echo "  * Initial release." >> package-build/debian/changelog
             echo "" >> package-build/debian/changelog
@@ -54,8 +54,12 @@
             echo "" >> package-build/debian/control
             echo "Package: libquantumvortex-engine-1.0" >> package-build/debian/control
             echo "Architecture: any" >> package-build/debian/control
-            echo "Depends: libsfml-dev (>= 2.5.1)" >> package-build/debian/control
-            echo "Description: Library of QuantumVortex Engine" >> package-build/debian/control
+            echo "Depends: libsfml-dev (>= 2.5.1)", debhelper (>= 13.0) >> package-build/debian/control
+            echo "Description: " >> package-build/debian/control
+            echo "  The QuantumVortex Engine library is a 2D game engine designed to empower game developers in creating 
+            captivating 2D video games. It provides a comprehensive set of tools, features, and resources for 2D game development. 
+            With QuantumVortex Engine, creators can easily craft 2D games, design visually appealing graphics, manage game physics, and 
+            deliver immersive gaming experiences within a two-dimensional world." >> package-build/debian/control
 
         - name: Create DEB rules file
           run: |
@@ -69,6 +73,9 @@
           run: |
             cd package-build
             debuild -us -uc
+
+        - name: List files
+          run: ls -R
 
         - name: Upload DEB package
           uses: actions/upload-artifact@v2

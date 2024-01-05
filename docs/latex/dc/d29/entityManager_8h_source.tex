@@ -1,0 +1,36 @@
+\hypertarget{entityManager_8h_source}{}\doxysection{entity\+Manager.\+h}
+\label{entityManager_8h_source}\index{src/Entity/include/entityManager.h@{src/Entity/include/entityManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ thibaultcampagne\ on\ 19/12/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ \ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}std.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}entity.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}DrawableComponent.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntityManager}{EntityManager}}:\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classEntity}{Entity}}\{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<Entity>>\ entities\{\};}
+\DoxyCodeLine{00015\ \ \ \ \ std::map<std::string,\ Entity*>\ entityMap;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}{EntityManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}{\string~EntityManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classEntity}{Entity}}\ \&\mbox{\hyperlink{classEntityManager_ae00cfff54f5855e3ec71661224bec265}{addEntity}}(std::string\ nameEntity,\ \mbox{\hyperlink{classArchetypes}{Archetypes}}\ newArchetype\ =\ \mbox{\hyperlink{classArchetypes}{Archetypes}}());}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classEntity}{Entity}}\ \&\mbox{\hyperlink{classEntityManager_ad289a6999a5b56f6956334aef060e57c}{getEntity}}(std::string\ nameEntity);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::map<std::string,\ Entity\ *>\ \mbox{\hyperlink{classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0}{getEntities}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::map<std::string,\ Entity*>\ \mbox{\hyperlink{classEntityManager_afd61e7fa8fbb44172829b8b7402cd653}{getEntityMap}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ entityMap;\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ initEntityManager()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

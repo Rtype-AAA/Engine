@@ -1,0 +1,41 @@
+\hypertarget{world_8h_source}{}\doxysection{world.\+h}
+\label{world_8h_source}\index{src/World/include/world.h@{src/World/include/world.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ thibaultcampagne\ on\ 20/12/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}std.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sfml.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}entityManager.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWorld}{World}}:\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classEntityManager}{EntityManager}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::map<std::string,\ std::unique\_ptr<EntityManager>>\ entitiesManager\{\};\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::map<std::string,\ EntityManager*>\ entityManagerMap\{\};\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ nameWorld\{\};\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classWorld_a1fc6067fe31da6405bece93c9dbb61ac}{World}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classWorld_a724bc2c94b64a16081f80f14011ff1b1}{\string~World}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWorld_a636a36faea3b12668308cd9e06520d3c}{createEntities}}(std::map<std::string,\ std::pair<std::unique\_ptr<EntityManager>,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>>>\&\ mapEntityManager,\ std::string\ keyEntityManager);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classEntityManager}{EntityManager}}\&\ \mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{addEntityManager}}(std::string\ NameEntityManager);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classEntityManager}{EntityManager}}\&\ \mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{getEntityManager}}(std::string\ NameEntityManager);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}{setNameWorld}}(std::string\ newName);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{classWorld_a7a15da4862400e8a81913329326eb426}{getNameWorld}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nameWorld;\}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::map<std::string,\ EntityManager*>\ \mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{getEntityManagerMap}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ entityManagerMap;\}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWorld_af2d4cecc96107919448ab20d61708737}{initWorld}}()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00068\ \};}
+
+\end{DoxyCode}

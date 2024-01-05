@@ -1,0 +1,53 @@
+\hypertarget{Transform_8h_source}{}\doxysection{Transform.\+h}
+\label{Transform_8h_source}\index{src/Components/all\_components/include/Transform.h@{src/Components/all\_components/include/Transform.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ thibaultcampagne\ on\ 30/11/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}std.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Components.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTransform}{Transform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classComponents}{Components}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<float>\ position\ =\ \{0.0f,\ 0.0f\};\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<float>\ rotation\ =\ \{0.0f,\ 0.0f\};\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<float>\ scale\ =\ \{1.0f,\ 1.0f\};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ bit\ =\ 0;\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}{Transform}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ init()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classTransform_a3181874c1cf4ce9eb16f237b969ed4c5}{Transform}}(std::map<std::string,\ std::vector<float>>\&\ mapTransform)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ mapTransform)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((element.first\ ==\ \textcolor{stringliteral}{"{}Position"{}}\ or\ element.first\ ==\ \textcolor{stringliteral}{"{}position"{}})\ and\ element.second.size()\ ==\ 2)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position\ =\ element.second;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((element.first\ ==\ \textcolor{stringliteral}{"{}Rotation"{}}\ or\ element.first\ ==\ \textcolor{stringliteral}{"{}rotation"{}})\ and\ element.second.size()\ ==\ 2)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rotation\ =\ element.second;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((element.first\ ==\ \textcolor{stringliteral}{"{}Scale"{}}\ or\ element.first\ ==\ \textcolor{stringliteral}{"{}scale"{}})\ and\ element.second.size()\ ==\ 2)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale\ =\ element.second;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classTransform_ac02ce42e0a10a0ab365daf50fb5cd3ff}{\string~Transform}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTransform_aaa7a85c4c5c79f48750411d692cbeb8f}{getBit}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ [[nodiscard]]\ std::vector<float>\ \mbox{\hyperlink{classTransform_ac7768787322f4785c38e1e604dbc6ceb}{getPositionVector}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ [[nodiscard]]\ std::vector<float>\ \mbox{\hyperlink{classTransform_aaede12963a155836b23055f4abd5586b}{getRotationVector}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ [[nodiscard]]\ std::vector<float>\ \mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{getScaleVector}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTransform_ab2db2c7556ce946732f60a15e616f6bd}{setTransform}}(\textcolor{keyword}{const}\ std::map<std::string,\ std::vector<float>>\&\ mapTransform);}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+
+\end{DoxyCode}

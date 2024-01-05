@@ -26,7 +26,7 @@ Collaboration diagram for Sprite\+:
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite}{Sprite}} constructor with an existing texture path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSprite_af446e94bb21cb384b3f665905a6a3d17}{$\sim$\+Sprite}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite}{Sprite}} destructor. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSprite_aa2815ac6b6935f92b2220a2780c27712}{init}} () const
+bool \mbox{\hyperlink{classSprite_a19e264fab822aad5a8470dd697856249}{init\+Sprite}} () const
 \begin{DoxyCompactList}\small\item\em init()\+: Initialize the \mbox{\hyperlink{classSprite}{Sprite}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}{get\+Bit}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ac4419d53f3bb4bef1fca1f994f26a903}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classSprite}{Sprite}}. \end{DoxyCompactList}\item 
@@ -46,7 +46,7 @@ bool \mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture\+Loaded()}}\+: Check if the texture is loaded. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite}} (const sf\+::\+Sprite \&sprite)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing one for rendering. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}{set\+Sprite}} (std\+::map$<$ std\+::string, sf\+::\+Texture $>$ map\+Texture, std\+::string name\+Texture, std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
+void \mbox{\hyperlink{classSprite_a26483e9b0cb32f6267e62487797395d9}{set\+Sprite}} (std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ map\+Texture, std\+::string name\+Texture, std\+::map$<$ std\+::string, std\+::vector$<$ float $>$ $>$ \&map\+Transform)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a map of string and textures, a texture name and a map of string and vector of floats. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_a26c4837142bdc3522fc7195b9b90d367}{set\+Deferred\+Sprite}} (std\+::function$<$ void()$>$ setter)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a26c4837142bdc3522fc7195b9b90d367}{set\+Deferred\+Sprite()}}\+: Set the deferred sprite. \end{DoxyCompactList}\item 
@@ -54,7 +54,19 @@ void \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Defe
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Deferred\+Sprite()}}\+: Apply the deferred sprite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture}} (const sf\+::\+Texture \&existing\+Texture)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classComponents}{Components}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComponents_adb5db757815c1d8b961c069515f8e260}\label{classComponents_adb5db757815c1d8b961c069515f8e260}} 
+virtual bool {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
+virtual void {\bfseries update} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{draw}} (sf\+::\+Render\+Window \&window) const =0
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,7 +97,7 @@ void
 \index{Sprite@{Sprite}!Sprite@{Sprite}}
 \index{Sprite@{Sprite}!Sprite@{Sprite}}
 \doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+{\footnotesize\ttfamily Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -268,11 +280,11 @@ sf\+::\+Sprite\+: SFML \mbox{\hyperlink{classSprite}{Sprite}} for rendering
 \begin{DoxyReturn}{Returns}
 sf\+::\+Texture\+: SFML Texture for the sprite 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSprite_aa2815ac6b6935f92b2220a2780c27712}\label{classSprite_aa2815ac6b6935f92b2220a2780c27712}} 
-\index{Sprite@{Sprite}!init@{init}}
-\index{init@{init}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily bool Sprite\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSprite_a19e264fab822aad5a8470dd697856249}\label{classSprite_a19e264fab822aad5a8470dd697856249}} 
+\index{Sprite@{Sprite}!initSprite@{initSprite}}
+\index{initSprite@{initSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{initSprite()}{initSprite()}}
+{\footnotesize\ttfamily bool Sprite\+::init\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -340,11 +352,11 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}\label{classSprite_ad5d71516c6ca1bbb90e6beffda9e7198}} 
+\mbox{\Hypertarget{classSprite_a26483e9b0cb32f6267e62487797395d9}\label{classSprite_a26483e9b0cb32f6267e62487797395d9}} 
 \index{Sprite@{Sprite}!setSprite@{setSprite}}
 \index{setSprite@{setSprite}!Sprite@{Sprite}}
 \doxysubsubsection{\texorpdfstring{setSprite()}{setSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Sprite\+::set\+Sprite (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, sf\+::\+Texture $>$}]{map\+Texture,  }\item[{std\+::string}]{name\+Texture,  }\item[{std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&}]{map\+Transform }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Sprite\+::set\+Sprite (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$}]{map\+Texture,  }\item[{std\+::string}]{name\+Texture,  }\item[{std\+::map$<$ std\+::string, std\+::vector$<$ float $>$ $>$ \&}]{map\+Transform }\end{DoxyParamCaption})}
 
 
 
@@ -384,5 +396,5 @@ void
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Components/all\+\_\+components/Sprite.\+h\item 
+src/\+Components/all\+\_\+components/include/Sprite.\+h\item 
 src/\+Components/all\+\_\+components/Sprite.\+cpp\end{DoxyCompactItemize}
