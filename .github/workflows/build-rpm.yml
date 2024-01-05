@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo dnf update
+          sudo dnf update -y
           sudo dnf install -y SFML-devel rpm-build
 
       - name: Configure and Build RPM
