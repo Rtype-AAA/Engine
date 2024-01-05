@@ -1,53 +1,60 @@
-name: Build DEB Package
+  name: Build DEB Package
 
-on:
-  push:
-    branches:
-      - main
-      - test_workflows
-  pull_request:
+  on:
+    push:
+      branches:
+        - main
+        - test_workflows
+    pull_request:
 
-jobs:
-  build-deb:
-    runs-on: ubuntu-latest
+  jobs:
+    build-deb:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential devscripts debhelper libsfml-dev
+        - name: Install dependencies
+          run: |
+            sudo apt-get update
+            sudo apt-get install -y build-essential devscripts debhelper libsfml-dev
 
-      - name: Prepare files for packaging
-        run: |
-          mkdir -p package-build/src
-          cp -r src/* package-build/src/
+        - name: Prepare files for packaging
+          run: |
+            mkdir -p package-build/src
+            mkdir -p package-build/documentation
+            mkdir -p package-build/debian/tmp/usr/lib/
+            cp -r src/* package-build/src/
+            cp copyright
+            cp -r docs/* package-build/documentation/
+            cmake -Bbuild
+            cmake --build build
+            cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
 
-      - name: Create DEB control file
-        run: |
-          mkdir package-build/debian
+        - name: Create DEB control file
+          run: |
+            mkdir package-build/debian
+  
+            # Créer le fichier control (remplacez les champs comme nécessaire)
+            echo "Source: libquantumvortex-engine" > package-build/debian/control
+            echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> package-build/debian/control
+            echo "Section: devel" >> package-build/debian/control
+            echo "Priority: required" >> package-build/debian/control
+            echo "Standards-Version: 4.6.2.0" >> package-build/debian/control
+            echo "" >> package-build/debian/control
+            echo "Package: libquantumvortex-engine-1.0" >> package-build/debian/control
+            echo "Architecture: any" >> package-build/debian/control
+            echo "Depends: libsfml-dev (>= 2.5.1)" >> package-build/debian/control
+            echo "Description: Library of QuantumVortex Engine" >> package-build/debian/control
 
-          # Créer le fichier control (remplacez les champs comme nécessaire)
-          echo "Source: libquantumvortex-engine" > package-build/debian/control
-          echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> package-build/debian/control
-          echo "Section: devel" >> package-build/debian/control
-          echo "Priority: required" >> package-build/debian/control
-          echo "Standards-Version: 4.6.2.0" >> package-build/debian/control
-          echo "" >> package-build/debian/control
-          echo "Package: libquantumvortex-engine-1.0" >> package-build/debian/control
-          echo "Architecture: any" >> package-build/debian/control
-          echo "Depends: libsfml-dev (>= 2.5.1)" >> package-build/debian/control
-          echo "Description: Library of QuantumVortex Engine" >> package-build/debian/control
+        - name: Build DEB package
+          run: |
+            cd package-build
+            debuild -us -uc
 
-      - name: Build DEB package
-        run: |
-          cd package-build
-          debuild -us -uc
-
-      - name: Upload DEB package
-        uses: actions/upload-artifact@v2
-        with:
-          name: deb-package
-          path: ../libquantumvortex-engine-1.0_amd64.deb
+        - name: Upload DEB package
+          uses: actions/upload-artifact@v2
+          with:
+            name: deb-package
+            path: ../libquantumvortex-engine-1.0_amd64.deb

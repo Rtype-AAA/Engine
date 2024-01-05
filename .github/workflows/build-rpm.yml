@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: fedora-latest
+    container: fedora:latest
 
     steps:
       - name: Checkout code
@@ -21,7 +21,6 @@ jobs:
 
       - name: Configure and Build RPM
         run: |
-          # Configuration de CPack et génération du package RPM
           cmake -Bbuild -DCPACK_VERBOSE=ON .
           cmake --build build
           cd build
