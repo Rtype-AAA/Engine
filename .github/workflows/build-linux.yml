@@ -21,17 +21,15 @@ jobs:
         run: |
           if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
             sudo apt-get update
-            sudo apt-get install -y rpm
-            sudo apt-get install -y libsfml-dev
+            sudo apt-get install -y libsfml-dev rpm
           elif [ "${{ matrix.os }}" == "fedora-latest" ] || [ "${{ matrix.os }}" == "fedora-38" ]; then
-            sudo dnf install -y rpm-build
-            sudo dnf install -y sfml
+            sudo dnf install -y SFML-devel rpm-build
           fi
 
       - name: Configure and Build RPM
         run: |
           # Configuration de CPack et génération du package RPM
-          cmake -Bbuild
+          cmake -Bbuild -DCPACK_VERBOSE=ON .
           cmake --build build
           cd build
           cpack

@@ -16,6 +16,10 @@ jobs:
       - name: Install dependencies
         run: |
           choco install nsis
+          git clone https://github.com/Microsoft/vcpkg.git
+          .\vcpkg\bootstrap-vcpkg.bat
+          .\vcpkg\vcpkg integrate install
+          .\vcpkg\vcpkg install sfml
 
       - name: Build installer with NSIS
         run: |
