@@ -79,11 +79,6 @@
           run: |
             tar czvf ./libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
 
-        - name: Clean before build
-          run: |
-            cd package-build
-            debuild -T clean
-
         - name: Build DEB package
           run: |
             cd package-build
