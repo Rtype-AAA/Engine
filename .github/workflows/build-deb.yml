@@ -46,7 +46,7 @@
 
         - name: Create DEB control file
           run: |
-            echo "Source: libquantumvortex-engine" >> package-build/debian/control
+            echo "Source: libquantumvortex-engine" > package-build/debian/control
             echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> package-build/debian/control
             echo "Section: devel" >> package-build/debian/control
             echo "Priority: required" >> package-build/debian/control
@@ -70,9 +70,19 @@
             echo -e "\tdh \$@" >> package-build/debian/rules
             chmod +x package-build/debian/rules
 
+        - name: Create debian/source/format
+          run: |
+            mkdir -p package-build/debian/source
+            echo "3.0 (quilt)" > package-build/debian/source/format
+
         - name: Prepare original source tarball
           run: |
             tar czvf ./libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
+
+        - name: Clean before build
+          run: |
+            cd package-build
+            debuild -T clean
 
         - name: Build DEB package
           run: |
@@ -83,4 +93,4 @@
           uses: actions/upload-artifact@v2
           with:
             name: deb-package
-            path: ./libquantumvortex-engine-1.0_amd64.deb
+            path: ./libquantumvortex-engine_*.deb
