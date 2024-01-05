@@ -18,8 +18,7 @@
         - name: Install dependencies
           run: |
             sudo apt-get update
-            sudo apt-get install -y build-essential devscripts debhelper libsfml-dev debhelper
-            debhelper --version
+            sudo apt-get install -y build-essential devscripts debhelper libsfml-dev
 
         - name: Prepare files for packaging
           run: |
@@ -32,6 +31,10 @@
             cmake -Bbuild
             cmake --build build
             cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
+
+        - name: Create DEB compat file
+          run: |
+            echo "13" > package-build/debian/compat
 
         - name: Create DEB changelog file
           run: |
