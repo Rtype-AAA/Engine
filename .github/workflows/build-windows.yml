@@ -2,7 +2,6 @@ name: Build Windows Package
 on:
   push:
     branches:
-      - test_workflows
       - main
 
 jobs:
