@@ -69,6 +69,10 @@
             echo -e "\tdh \$@" >> package-build/debian/rules
             chmod +x package-build/debian/rules
 
+        - name: Prepare original source tarball
+          run: |
+            tar czvf ../libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
+
         - name: Build DEB package
           run: |
             cd package-build
