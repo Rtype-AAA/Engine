@@ -1,4 +1,4 @@
-name: Build RPM Package
+name: Build Linux Package
 on:
   push:
     branches:
