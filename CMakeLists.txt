@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(engine VERSION 1.0.0 DESCRIPTION "Moteur de jeu")
 
+option(BUILD_TESTS "Build the test suite" OFF)
+
 find_package(SFML COMPONENTS graphics window system audio CONFIG REQUIRED)
 
 file(GLOB HEADER_FILES
@@ -21,15 +23,6 @@ file(GLOB LIB_SRCS
         "src/World/*.cpp"
         "src/GameEngine/*.cpp"
         "src/Event/*.cpp"
-)
-
-file(GLOB LIB_SRCS_TEST
-        "tests/Components/all_components/TestSprite.cpp"
-        "tests/Components/all_components/TestTransform.cpp"
-        "tests/Entity/TestEntity.cpp"
-        "tests/Entity/TestEntityManager.cpp"
-        "tests/Event/TestEvent.cpp"
-        "tests/World/TestWorld.cpp"
 )
 
 add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
@@ -58,21 +51,32 @@ target_include_directories(engine PRIVATE
 )
 target_link_libraries(engine PRIVATE engine_lib)
 
-add_executable(all_tests ${LIB_SRCS_TEST})
-target_include_directories(all_tests PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
-)
-target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main)
+if(BUILD_TESTS)
+    file(GLOB LIB_SRCS_TEST
+            "tests/Components/all_components/TestSprite.cpp"
+            "tests/Components/all_components/TestTransform.cpp"
+            "tests/Entity/TestEntity.cpp"
+            "tests/Entity/TestEntityManager.cpp"
+            "tests/Event/TestEvent.cpp"
+            "tests/World/TestWorld.cpp"
+    )
+    add_executable(all_tests ${LIB_SRCS_TEST})
+    target_include_directories(all_tests PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+    )
+    target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main)
 
-include(GoogleTest)
-gtest_discover_tests(all_tests)
+    include(GoogleTest)
+    gtest_discover_tests(all_tests)
+    set_target_properties(all_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+endif()
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     message(STATUS "Setting build type to 'Debug' as none was specified.")
@@ -84,7 +88,6 @@ endif()
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set_target_properties(engine_lib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
 set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
-set_target_properties(all_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
 install(TARGETS engine_lib
         EXPORT engineTargets
