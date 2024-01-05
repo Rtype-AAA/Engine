@@ -3,7 +3,6 @@ name: Build RPM Package
 on:
   push:
     branches:
-      - test_workflows
       - main
 
 jobs:
