@@ -48,6 +48,13 @@
             echo "Depends: libsfml-dev (>= 2.5.1)" >> package-build/debian/control
             echo "Description: Library of QuantumVortex Engine" >> package-build/debian/control
 
+        - name: Create DEB rules file
+          run: |
+            echo '#!/usr/bin/make -f' > package-build/debian/rules
+            echo '%:' >> package-build/debian/rules
+            echo '    dh $@' >> package-build/debian/rules
+            chmod +x package-build/debian/rules
+
         - name: Build DEB package
           run: |
             cd package-build
