@@ -34,7 +34,6 @@
 
         - name: Create DEB control file
           run: |
-            mkdir package-build/debian
   
             # Créer le fichier control (remplacez les champs comme nécessaire)
             echo "Source: libquantumvortex-engine" > package-build/debian/control

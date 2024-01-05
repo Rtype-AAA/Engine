@@ -1,4 +1,5 @@
 name: Build RPM Package
+
 on:
   push:
     branches:
@@ -6,7 +7,27 @@ on:
       - main
 
 jobs:
-  build:
+  build-fedora-38:
+    runs-on: ubuntu-latest
+    container: fedora:38
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies and compilers for Fedora 38
+        run: |
+          sudo dnf update -y
+          sudo dnf install -y SFML-devel rpm-build gcc gcc-c++ cmake
+
+      - name: Configure and Build RPM on Fedora 38
+        run: |
+          cmake -Bbuild -DCPACK_VERBOSE=ON .
+          cmake --build build
+          cd build
+          cpack
+
+  build-fedora-latest:
     runs-on: ubuntu-latest
     container: fedora:latest
 
@@ -14,12 +35,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Install dependencies and compilers for Fedora Latest
         run: |
           sudo dnf update -y
-          sudo dnf install -y SFML-devel rpm-build
+          sudo dnf install -y SFML-devel rpm-build gcc gcc-c++ cmake
 
-      - name: Configure and Build RPM
+      - name: Configure and Build RPM on Fedora Latest
         run: |
           cmake -Bbuild -DCPACK_VERBOSE=ON .
           cmake --build build
