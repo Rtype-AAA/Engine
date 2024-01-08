@@ -3,7 +3,8 @@ name: Build RPM Package
 on:
   push:
     branches:
-      - main
+      # - main
+      - test_workflows
 
 jobs:
   build-fedora-38:
@@ -45,3 +46,13 @@ jobs:
           cmake --build build
           cd build
           cpack
+      - name: Find RPM file
+        id: find-rpm
+        run: |
+          echo "::set-output name=rpm_file::$(ls build/*.rpm)"
+
+      - name: Upload RPM package
+        uses: actions/upload-artifact@v3
+        with:
+          name: rpm-package
+          path: ${{ steps.find-rpm.outputs.rpm_file }}
