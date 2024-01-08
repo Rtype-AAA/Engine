@@ -4,8 +4,8 @@
     push:
       branches:
         - main
-        - test_workflows
-    pull_request:
+        # - test_workflows
+    # pull_request:
 
   jobs:
     build-deb:

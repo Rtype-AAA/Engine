@@ -2,7 +2,7 @@ name: Build Windows Package
 on:
   push:
     branches:
-      - main
+      - test_workflows
 
 jobs:
   build:
@@ -19,6 +19,15 @@ jobs:
           .\vcpkg\bootstrap-vcpkg.bat
           .\vcpkg\vcpkg integrate install
           .\vcpkg\vcpkg install sfml
+
+      - name: Build DLL
+        run: |
+          cmake -B build
+          cmake --build build
+
+      - name: Prepare for NSIS
+        run: |
+          copy build\NomDeVotreDLL.dll chemin\attendu\pour\NSIS\
 
       - name: Build installer with NSIS
         run: |
