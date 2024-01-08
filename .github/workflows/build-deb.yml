@@ -13,7 +13,7 @@
 
       steps:
         - name: Checkout code
-          uses: actions/checkout@v2
+          uses: actions/checkout@v3
 
         - name: Install dependencies
           run: |
@@ -50,7 +50,7 @@
             echo "Priority: required" >> package-build/debian/control
             echo "Standards-Version: 4.6.2.0" >> package-build/debian/control
             echo "" >> package-build/debian/control
-            echo "Package: libquantumvortex-engine-1.0" >> package-build/debian/control
+            echo "Package: libquantumvortex-engine" >> package-build/debian/control
             echo "Architecture: any" >> package-build/debian/control
             echo "Depends: libsfml-dev (>= 2.5.1), debhelper (>= 13.0)" >> package-build/debian/control
             echo "Description: The QuantumVortex Engine library is a 2D game engine" >> package-build/debian/control
