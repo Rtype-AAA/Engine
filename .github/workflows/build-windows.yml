@@ -2,7 +2,7 @@ name: Build Windows Package
 on:
   push:
     branches:
-      - test_workflows
+      - Issue#2
 
 jobs:
   build:

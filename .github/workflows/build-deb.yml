@@ -3,8 +3,8 @@
   on:
     push:
       branches:
-        - main
-        # - test_workflows
+        # - main
+        - test_workflows
     # pull_request:
 
   jobs:
@@ -81,6 +81,10 @@
           run: |
             cd package-build
             debuild -us -uc
+
+        - name: Check if DEB package was created
+          run: |
+            ls -l
 
         - name: Upload DEB package
           uses: actions/upload-artifact@v2
