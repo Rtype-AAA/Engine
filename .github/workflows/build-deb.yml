@@ -87,7 +87,7 @@
             ls -l
 
         - name: Upload DEB package
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v3
           with:
             name: deb-package
             path: ./libquantumvortex-engine_*.deb
