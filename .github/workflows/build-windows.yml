@@ -22,8 +22,10 @@ jobs:
 
       - name: Build DLL
         run: |
-          cmake -B build
+          $env:SFML_DIR="${{ github.workspace }}\vcpkg\installed\x64-windows"
+          cmake -B build -S .
           cmake --build build
+
 
       - name: Prepare for NSIS
         run: |
