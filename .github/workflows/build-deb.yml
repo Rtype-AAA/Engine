@@ -23,11 +23,9 @@
         - name: Prepare files for packaging
           run: |
             mkdir -p package-build/src
-            mkdir -p package-build/documentation
             mkdir -p package-build/debian/tmp/usr/lib/
             cp -r src/* package-build/src/
             cp copyright package-build/debian
-            cp -r docs/* package-build/documentation/
             cmake -Bbuild
             cmake --build build
             cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
