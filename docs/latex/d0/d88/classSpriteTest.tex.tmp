@@ -1,0 +1,21 @@
+\hypertarget{classSpriteTest}{}\doxysection{Sprite\+Test Class Reference}
+\label{classSpriteTest}\index{SpriteTest@{SpriteTest}}
+
+
+Inheritance diagram for Sprite\+Test\+:
+% FIG 0
+
+
+Collaboration diagram for Sprite\+Test\+:
+% FIG 1
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSpriteTest_ad6dc3b9eb546682ff663a73440de18a5}\label{classSpriteTest_ad6dc3b9eb546682ff663a73440de18a5}} 
+\mbox{\hyperlink{classSprite}{Sprite}} {\bfseries sprite}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\+Components/all\+\_\+components/Test\+Sprite.\+cpp\end{DoxyCompactItemize}

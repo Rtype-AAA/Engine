@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../../src/GameEngine/gameEngine.h"
+#include "gameEngine.h"
 
 class GameEngineTest : public ::testing::Test
 {
@@ -110,7 +110,7 @@ TEST_F(GameEngineTest, Initialize) {
 
     ASSERT_EQ(entities.size(), 1);
 
-    ASSERT_NE(gameEngine->getMapTexture()["red.png"].getSize().x, 0);
+    ASSERT_NE(gameEngine->getMapTexture()["red.png"]->getSize().x, 0);
 
     ASSERT_NE(gameEngine, nullptr);
     ASSERT_NE(gameEngine->getWorldMap().begin()->second, nullptr);
@@ -182,7 +182,7 @@ TEST_F(GameEngineTest, InitializeSprite)
 
     ASSERT_EQ(entities.size(), 1);
 
-    ASSERT_NE(gameEngine->getMapTexture()["red.png"].getSize().x, 0);
+    ASSERT_NE(gameEngine->getMapTexture()["red.png"]->getSize().x, 0);
 
     ASSERT_NE(gameEngine, nullptr);
     ASSERT_NE(gameEngine->getWorldMap().begin()->second, nullptr);
@@ -220,7 +220,7 @@ TEST_F(GameEngineTest, InitializeTexture)
 
     ASSERT_EQ(gameEngine->getMapTexture().size(), 2);
 
-    std::map<std::string, sf::Texture> mapTexture = gameEngine->getMapTexture();
+    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture = gameEngine->getMapTexture();
 
     ASSERT_TRUE(mapTexture.find("blue.png") != mapTexture.end());
     ASSERT_TRUE(mapTexture.find("red.png") != mapTexture.end());
@@ -366,7 +366,7 @@ TEST_F(GameEngineTest, getMapTexture)
 
     ASSERT_EQ(gameEngine->getMapTexture().size(), 2);
 
-    std::map<std::string, sf::Texture> mapTexture = gameEngine->getMapTexture();
+    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture = gameEngine->getMapTexture();
 
     ASSERT_TRUE(mapTexture.find("blue.png") != mapTexture.end());
     ASSERT_TRUE(mapTexture.find("red.png") != mapTexture.end());
