@@ -24,7 +24,7 @@ void GameEngine::setCurrentWorld(World* world) {
     currentWorld = world;
 }
 
-std::vector<std::string> getFilesTexture(std::string pathDirectory) {
+std::vector<std::string> GameEngine::getFilesTexture(std::string pathDirectory) {
     if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
         std::cerr << "Dossier non trouvé ou chemin non valide." << std::endl;
         exit(1);

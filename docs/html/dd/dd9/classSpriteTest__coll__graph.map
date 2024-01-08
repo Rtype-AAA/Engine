@@ -1,7 +1,0 @@
-<map id="SpriteTest" name="SpriteTest">
-<area shape="rect" id="node1" title=" " alt="" coords="33,168,115,193"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,100,105"/>
-<area shape="rect" id="node3" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="125,80,181,105"/>
-<area shape="rect" id="node4" href="$db/d46/classComponents.html" title=" " alt="" coords="33,5,129,31"/>
-<area shape="rect" id="node5" href="$d2/db3/classDrawableComponent.html" title=" " alt="" coords="153,5,297,31"/>
-</map>
