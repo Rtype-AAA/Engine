@@ -26,6 +26,17 @@ jobs:
           cmake --build build
           cd build
           cpack
+          mv *.rpm "quantumvortex-engine-fedora38.rpm"
+
+      - name: Find RPM file for Fedora 38
+        run: |
+          echo "rpm_file=build/quantumvortex-engine-fedora38.rpm" >> $GITHUB_ENV
+
+      - name: Upload RPM package for Fedora 38
+        uses: actions/upload-artifact@v3
+        with:
+          name: rpm-package-fedora-38
+          path: ${{ env.rpm_file }}
 
   build-fedora-latest:
     runs-on: ubuntu-latest
@@ -46,13 +57,14 @@ jobs:
           cmake --build build
           cd build
           cpack
-      - name: Find RPM file
-        id: find-rpm
-        run: |
-          echo "::set-output name=rpm_file::$(ls build/*.rpm)"
+          mv *.rpm "quantumvortex-engine-fedora-latest.rpm"
 
-      - name: Upload RPM package
+      - name: Find RPM file for Fedora Latest
+        run: |
+          echo "rpm_file=build/quantumvortex-engine-fedora-latest.rpm" >> $GITHUB_ENV
+
+      - name: Upload RPM package for Fedora Latest
         uses: actions/upload-artifact@v3
         with:
-          name: rpm-package
-          path: ${{ steps.find-rpm.outputs.rpm_file }}
+          name: rpm-package-fedora-latest
+          path: ${{ env.rpm_file }}
