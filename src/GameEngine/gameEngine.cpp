@@ -6,9 +6,9 @@
 
 GameEngine::GameEngine(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style,
                        const sf::ContextSettings &settings) {
-    if (type == "2D" or type == "2d") {
+    if (type == "2D" || type == "2d") {
         window = std::make_unique<sf::RenderWindow>(mode, title, style, settings);
-    } else if (type == "3D" or type == "3d") {
+    } else if (type == "3D" || type == "3d") {
         std::cout << "Veuillez choisir la 2D, la 3D n'est pas encore fonctionnel" << std::endl;
     } else {
         std::cout << "Veuillez choisir un type de graphisme entre 2D et 3D" << std::endl;

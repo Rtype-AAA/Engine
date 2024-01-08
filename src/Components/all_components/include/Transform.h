@@ -34,13 +34,13 @@ public:
     /// @return void
     Transform(std::map<std::string, std::vector<float>>& mapTransform) {
         for(const auto& element : mapTransform) {
-            if ((element.first == "Position" or element.first == "position") and element.second.size() == 2) {
+            if ((element.first == "Position" || element.first == "position") && element.second.size() == 2) {
                 position = element.second;
             }
-            if ((element.first == "Rotation" or element.first == "rotation") and element.second.size() == 2) {
+            if ((element.first == "Rotation" || element.first == "rotation") && element.second.size() == 2) {
                 rotation = element.second;
             }
-            if ((element.first == "Scale" or element.first == "scale") and element.second.size() == 2) {
+            if ((element.first == "Scale" || element.first == "scale") && element.second.size() == 2) {
                 scale = element.second;
             }
         }
