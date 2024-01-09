@@ -29,7 +29,6 @@
             cmake -Bbuild
             cmake --build build
             cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
-            ls -l package-build/debian/tmp/usr/lib/
 
         - name: Create DEB compat file
           run: |
@@ -77,6 +76,7 @@
         - name: Prepare original source tarball
           run: |
             tar czvf ./quantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
+            ls | grep quantumvortex-engine_1.0.orig.tar.gz
 
         - name: Build DEB package
           run: |
