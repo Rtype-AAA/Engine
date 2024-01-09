@@ -36,7 +36,7 @@
 
         - name: Create DEB changelog file
           run: |
-            echo "libquantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
+            echo "quantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
             echo "" >> package-build/debian/changelog
             echo "  * Initial release." >> package-build/debian/changelog
             echo "" >> package-build/debian/changelog
@@ -44,13 +44,13 @@
 
         - name: Create DEB control file
           run: |
-            echo "Source: libquantumvortex-engine" > package-build/debian/control
+            echo "Source: quantumvortex-engine" > package-build/debian/control
             echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> package-build/debian/control
             echo "Section: devel" >> package-build/debian/control
             echo "Priority: required" >> package-build/debian/control
             echo "Standards-Version: 4.6.2.0" >> package-build/debian/control
             echo "" >> package-build/debian/control
-            echo "Package: libquantumvortex-engine" >> package-build/debian/control
+            echo "Package: quantumvortex-engine" >> package-build/debian/control
             echo "Architecture: any" >> package-build/debian/control
             echo "Depends: libsfml-dev (>= 2.5.1), debhelper (>= 13.0)" >> package-build/debian/control
             echo "Description: The QuantumVortex Engine library is a 2D game engine" >> package-build/debian/control
@@ -75,7 +75,7 @@
 
         - name: Prepare original source tarball
           run: |
-            tar czvf ./libquantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
+            tar czvf ./quantumvortex-engine_1.0.orig.tar.gz --exclude=package-build *
 
         - name: Build DEB package
           run: |
@@ -90,4 +90,4 @@
           uses: actions/upload-artifact@v3
           with:
             name: deb-package
-            path: ./libquantumvortex-engine_*.deb
+            path: ./quantumvortex-engine_*.deb
