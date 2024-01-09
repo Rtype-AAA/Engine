@@ -1,0 +1,38 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Components",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d46/classComponents.html",tooltip="Components class: Components is a class that represents a component in the game."];
+  Node0 -> Node1 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Entity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d61/classEntity.html",tooltip="Entity class: Entity is a class that represents an entity in the game."];
+  Node1 -> Node2 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="EntityManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d5f/classEntityManager.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="World",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classWorld.html",tooltip="World class: World is a class that represents the world of the game."];
+  Node3 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GameEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d8d/classGameEngine.html",tooltip="GameEngine class: GameEngine is a class that represents the game engine."];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD:docs/html/inherit_graph_96.dot
+  Node5 [label="Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/daf/classTransform.html",tooltip="Transform class: Transform is a class that represents the transform of a Component."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Rect\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dc9/classRect.html",tooltip="Rect class: Rect is a class that represents a rectangle."];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6d/classSprite.html",tooltip="Sprite class: Sprite is a class that represents the rendering properties of a Component."];
+  Node123 [label="DrawableComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/classDrawableComponent.html",tooltip="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..."];
+  Node123 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node135 [label="EventEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2e/classEventEngine.html",tooltip="EventEngine class: EventEngine is a class that represents the event engine of the game."];
+  Node135 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node487 [label="toSFML",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc3/classtoSFML.html",tooltip="toSFML class: toSFML is a class that convert some class into SFML class."];
+  Node487 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+=======
+  Node5 [label="Sprite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6d/classSprite.html",tooltip="Sprite class: Sprite is a class that represents the rendering properties of a Component."];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/daf/classTransform.html",tooltip="Transform class: Transform is a class that represents the transform of a Component."];
+  Node10 [label="DrawableComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/classDrawableComponent.html",tooltip="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..."];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="EventEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2e/classEventEngine.html",tooltip="EventEngine class: EventEngine is a class that represents the event engine of the game."];
+  Node11 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+>>>>>>> ba509e5 ([~] Updated documentation for the Components (Transform, Components and DrawableComponent)):docs/html/inherit_graph_2.dot
+}
