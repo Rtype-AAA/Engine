@@ -1,0 +1,11 @@
+digraph "FLAC/metadata.h: metadata level 2 interface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node3 [label="FLAC/metadata.h: metadata\l object methods",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dfb/group__flac__metadata__object.html",tooltip="This module contains methods for manipulating FLAC metadata objects."];
+  Node2 [label="FLAC/metadata.h: metadata\l level 1 interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d77/group__flac__metadata__level1.html",tooltip="The level 1 interface provides read-write access to FLAC file metadata and operates directly on the F..."];
+  Node1 [label="FLAC/metadata.h: metadata\l level 2 interface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The level 2 interface provides read-write access to FLAC file metadata; all metadata is read into mem..."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+}

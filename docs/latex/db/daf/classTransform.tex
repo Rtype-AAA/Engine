@@ -16,13 +16,12 @@ Inheritance diagram for Transform\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=152pt]{d2/d02/classTransform__inherit__graph}
+\includegraphics[width=202pt]{d2/d02/classTransform__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Transform\+:
-\nopagebreak
+Collaboration diagram for Transform\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,24 +31,33 @@ Collaboration diagram for Transform\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}{Transform}} ()=default
+\mbox{\hyperlink{classTransform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
 \begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}{init}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classTransform_ac43108d291ffe3e1dfe163471c0f0ed7}{Transform}} (std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTransform_ac02ce42e0a10a0ab365daf50fb5cd3ff}{$\sim$\+Transform}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform}{Transform}} destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_a439d029d45b7fff4069d58ed415cb48c}\label{classTransform_a439d029d45b7fff4069d58ed415cb48c}} 
+void {\bfseries update} (sf\+::\+Time delta\+Time) override
+\item 
 int \mbox{\hyperlink{classTransform_aaa7a85c4c5c79f48750411d692cbeb8f}{get\+Bit}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_aaa7a85c4c5c79f48750411d692cbeb8f}{get\+Bit()}}\+: Get the bitmask of the component \end{DoxyCompactList}\item 
-std\+::vector$<$ float $>$ \mbox{\hyperlink{classTransform_ac7768787322f4785c38e1e604dbc6ceb}{get\+Position\+Vector}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_ac7768787322f4785c38e1e604dbc6ceb}{get\+Position\+Vector()}}\+: Get the position vector of the component; \end{DoxyCompactList}\item 
-std\+::vector$<$ float $>$ \mbox{\hyperlink{classTransform_aaede12963a155836b23055f4abd5586b}{get\+Rotation\+Vector}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_aaede12963a155836b23055f4abd5586b}{get\+Rotation\+Vector()}}\+: Get the rotation vector of the component; \end{DoxyCompactList}\item 
-std\+::vector$<$ float $>$ \mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{get\+Scale\+Vector}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{get\+Scale\+Vector()}}\+: Get the scale vector of the component; \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform}} (const std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform()}}\+: Set the transformation properties of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ \mbox{\hyperlink{classTransform_a25610649a81c76093d4d9d57fd7800f7}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get\+Position\+Vector()\+: Get the position vector of the component; \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classTransform_a58b6b97bbe83f323086b9a24511addc0}{get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em get\+Rotation\+Vector()\+: Get the rotation vector of the component; \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ \mbox{\hyperlink{classTransform_af82b5133974e1dec71232528c9f83a38}{get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em get\+Scale\+Vector()\+: Get the scale vector of the component; \end{DoxyCompactList}\item 
+Transform\+Struct \mbox{\hyperlink{classTransform_a8ee13737e5a242ef6ab056c0044c330c}{get\+Transform\+Struct}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a8ee13737e5a242ef6ab056c0044c330c}{get\+Transform\+Struct()}}\+: Get the the transform of the component; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransform_ac222f407d930d87ec64cc8849749b960}{set\+Transform}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position, float new\+Rotation, \mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
+\begin{DoxyCompactList}\small\item\em set\+Transform\+Struct()\+: Set the transform of the component; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransform_a1e85fd221083ee89fed4f11806f02446}{set\+Transform\+Position}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a1e85fd221083ee89fed4f11806f02446}{set\+Transform\+Position()}}\+: Set the transform position of the component; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransform_a2bebea30bce03eb227e8485f53d02abb}{set\+Transform\+Rotation}} (float new\+Rotation)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a2bebea30bce03eb227e8485f53d02abb}{set\+Transform\+Rotation()}}\+: Set the transform rotation of the component; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}{set\+Transform\+Scale}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}{set\+Transform\+Scale()}}\+: Set the transform scale of the component; \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -58,11 +66,11 @@ void \mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Tra
 The \mbox{\hyperlink{classTransform}{Transform}} class manages the position, rotation and scale of a Component. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}\label{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}} 
+\mbox{\Hypertarget{classTransform_aa08ca4266efabc768973cdeea51945ab}\label{classTransform_aa08ca4266efabc768973cdeea51945ab}} 
 \index{Transform@{Transform}!Transform@{Transform}}
 \index{Transform@{Transform}!Transform@{Transform}}
-\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -71,24 +79,6 @@ Default \mbox{\hyperlink{classTransform}{Transform}} constructor.
 
 \begin{DoxyParams}{Parameters}
 {\em void} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classTransform_ac43108d291ffe3e1dfe163471c0f0ed7}\label{classTransform_ac43108d291ffe3e1dfe163471c0f0ed7}} 
-\index{Transform@{Transform}!Transform@{Transform}}
-\index{Transform@{Transform}!Transform@{Transform}}
-\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&}]{map\+Transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{classTransform}{Transform}} constructor. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em map\+Transform} & Map containing transformation properties (std\+::string, std\+::vector$<$float$>$). \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -133,15 +123,15 @@ void
 \begin{DoxyReturn}{Returns}
 int\+: bitmask of the component 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTransform_ac7768787322f4785c38e1e604dbc6ceb}\label{classTransform_ac7768787322f4785c38e1e604dbc6ceb}} 
-\index{Transform@{Transform}!getPositionVector@{getPositionVector}}
-\index{getPositionVector@{getPositionVector}!Transform@{Transform}}
-\doxysubsubsection{\texorpdfstring{getPositionVector()}{getPositionVector()}}
-{\footnotesize\ttfamily std\+::vector$<$ float $>$ Transform\+::get\+Position\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classTransform_a25610649a81c76093d4d9d57fd7800f7}\label{classTransform_a25610649a81c76093d4d9d57fd7800f7}} 
+\index{Transform@{Transform}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector2}{Vector2}}$<$float$>$ Transform\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-\mbox{\hyperlink{classTransform_ac7768787322f4785c38e1e604dbc6ceb}{get\+Position\+Vector()}}\+: Get the position vector of the component; 
+get\+Position\+Vector()\+: Get the position vector of the component; 
 
 
 \begin{DoxyParams}{Parameters}
@@ -151,15 +141,15 @@ int\+: bitmask of the component
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$float$>$\+: position vector of the component 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTransform_aaede12963a155836b23055f4abd5586b}\label{classTransform_aaede12963a155836b23055f4abd5586b}} 
-\index{Transform@{Transform}!getRotationVector@{getRotationVector}}
-\index{getRotationVector@{getRotationVector}!Transform@{Transform}}
-\doxysubsubsection{\texorpdfstring{getRotationVector()}{getRotationVector()}}
-{\footnotesize\ttfamily std\+::vector$<$ float $>$ Transform\+::get\+Rotation\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classTransform_a58b6b97bbe83f323086b9a24511addc0}\label{classTransform_a58b6b97bbe83f323086b9a24511addc0}} 
+\index{Transform@{Transform}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily float Transform\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-\mbox{\hyperlink{classTransform_aaede12963a155836b23055f4abd5586b}{get\+Rotation\+Vector()}}\+: Get the rotation vector of the component; 
+get\+Rotation\+Vector()\+: Get the rotation vector of the component; 
 
 
 \begin{DoxyParams}{Parameters}
@@ -169,15 +159,15 @@ std\+::vector$<$float$>$\+: position vector of the component
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$float$>$\+: rotation vector of the component 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTransform_a093e76bf8c302ae301e1bd2f35918b16}\label{classTransform_a093e76bf8c302ae301e1bd2f35918b16}} 
-\index{Transform@{Transform}!getScaleVector@{getScaleVector}}
-\index{getScaleVector@{getScaleVector}!Transform@{Transform}}
-\doxysubsubsection{\texorpdfstring{getScaleVector()}{getScaleVector()}}
-{\footnotesize\ttfamily std\+::vector$<$ float $>$ Transform\+::get\+Scale\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{classTransform_af82b5133974e1dec71232528c9f83a38}\label{classTransform_af82b5133974e1dec71232528c9f83a38}} 
+\index{Transform@{Transform}!getScale@{getScale}}
+\index{getScale@{getScale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector2}{Vector2}}$<$float$>$ Transform\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-\mbox{\hyperlink{classTransform_a093e76bf8c302ae301e1bd2f35918b16}{get\+Scale\+Vector()}}\+: Get the scale vector of the component; 
+get\+Scale\+Vector()\+: Get the scale vector of the component; 
 
 
 \begin{DoxyParams}{Parameters}
@@ -186,6 +176,24 @@ std\+::vector$<$float$>$\+: rotation vector of the component
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$float$>$\+: scale vector of the component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a8ee13737e5a242ef6ab056c0044c330c}\label{classTransform_a8ee13737e5a242ef6ab056c0044c330c}} 
+\index{Transform@{Transform}!getTransformStruct@{getTransformStruct}}
+\index{getTransformStruct@{getTransformStruct}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getTransformStruct()}{getTransformStruct()}}
+{\footnotesize\ttfamily Transform\+Struct Transform\+::get\+Transform\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classTransform_a8ee13737e5a242ef6ab056c0044c330c}{get\+Transform\+Struct()}}\+: Get the the transform of the component; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Transform\+Struct\+: struct of the \mbox{\hyperlink{classTransform}{Transform}}. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}\label{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}} 
 \index{Transform@{Transform}!init@{init}}
@@ -205,19 +213,77 @@ std\+::vector$<$float$>$\+: scale vector of the component
 \begin{DoxyReturn}{Returns}
 bool\+: true if the component is initialized, false otherwise 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTransform_a7bb9f58811ecce0054a4413bd08d5371}\label{classTransform_a7bb9f58811ecce0054a4413bd08d5371}} 
+\mbox{\Hypertarget{classTransform_ac222f407d930d87ec64cc8849749b960}\label{classTransform_ac222f407d930d87ec64cc8849749b960}} 
 \index{Transform@{Transform}!setTransform@{setTransform}}
 \index{setTransform@{setTransform}!Transform@{Transform}}
 \doxysubsubsection{\texorpdfstring{setTransform()}{setTransform()}}
-{\footnotesize\ttfamily void Transform\+::set\+Transform (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&}]{map\+Transform }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Transform\+::set\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position,  }\item[{float}]{new\+Rotation,  }\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classTransform_a7bb9f58811ecce0054a4413bd08d5371}{set\+Transform()}}\+: Set the transformation properties of the component 
+set\+Transform\+Struct()\+: Set the transform of the component; 
 
 
 \begin{DoxyParams}{Parameters}
-{\em map\+Transform} & Map containing transformation properties (std\+::string, std\+::vector$<$float$>$). \\
+{\em new\+Position} & \+: the new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} position. \\
+\hline
+{\em new\+Rotation} & \+: the new float rotation. \\
+\hline
+{\em new\+Scale} & \+: the new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} scale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a1e85fd221083ee89fed4f11806f02446}\label{classTransform_a1e85fd221083ee89fed4f11806f02446}} 
+\index{Transform@{Transform}!setTransformPosition@{setTransformPosition}}
+\index{setTransformPosition@{setTransformPosition}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setTransformPosition()}{setTransformPosition()}}
+{\footnotesize\ttfamily void Transform\+::set\+Transform\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransform_a1e85fd221083ee89fed4f11806f02446}{set\+Transform\+Position()}}\+: Set the transform position of the component; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & \+: the new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a2bebea30bce03eb227e8485f53d02abb}\label{classTransform_a2bebea30bce03eb227e8485f53d02abb}} 
+\index{Transform@{Transform}!setTransformRotation@{setTransformRotation}}
+\index{setTransformRotation@{setTransformRotation}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setTransformRotation()}{setTransformRotation()}}
+{\footnotesize\ttfamily void Transform\+::set\+Transform\+Rotation (\begin{DoxyParamCaption}\item[{float}]{new\+Rotation }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransform_a2bebea30bce03eb227e8485f53d02abb}{set\+Transform\+Rotation()}}\+: Set the transform rotation of the component; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Rotation} & \+: the new float rotation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}\label{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}} 
+\index{Transform@{Transform}!setTransformScale@{setTransformScale}}
+\index{setTransformScale@{setTransformScale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setTransformScale()}{setTransformScale()}}
+{\footnotesize\ttfamily void Transform\+::set\+Transform\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}{set\+Transform\+Scale()}}\+: Set the transform scale of the component; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Scale} & \+: the new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} scale. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

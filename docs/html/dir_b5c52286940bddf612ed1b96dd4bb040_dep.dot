@@ -1,0 +1,15 @@
+digraph "SFML/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c9d62fd513ce19bab3d7ef8db833e3f1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="SFML" fontname="Helvetica", fontsize="10", URL="dir_c9d62fd513ce19bab3d7ef8db833e3f1.html"]
+  dir_1b418db46549f82cdaf64a4014eaf7c5 [shape=box label="extlibs" fillcolor="white" style="filled" color="red" URL="dir_1b418db46549f82cdaf64a4014eaf7c5.html"];
+  subgraph clusterdir_b5c52286940bddf612ed1b96dd4bb040 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b5c52286940bddf612ed1b96dd4bb040.html"];
+    dir_b5c52286940bddf612ed1b96dd4bb040 [shape=plaintext label="src"];
+  dir_6c52fe4515bb5ec401458ebc57ceca8e [shape=box label="SFML" fillcolor="white" style="filled" color="red" URL="dir_6c52fe4515bb5ec401458ebc57ceca8e.html"];
+  }
+  }
+  dir_6c52fe4515bb5ec401458ebc57ceca8e->dir_1b418db46549f82cdaf64a4014eaf7c5 [headlabel="1", labeldistance=1.5 headhref="dir_000070_000078.html"];
+}
