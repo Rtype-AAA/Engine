@@ -3,8 +3,8 @@
   on:
     push:
       branches:
-        - main
-        # - test_workflows
+        # - main
+        - test_workflows
     # pull_request:
 
   jobs:
