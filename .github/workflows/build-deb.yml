@@ -30,6 +30,7 @@
             cmake --build build
             cd build
             cpack
+            ls -la
             mv *.deb "quantumvortex-engine.deb"
 
         - name: Create DEB compat file
