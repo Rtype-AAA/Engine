@@ -11,8 +11,8 @@
 
 class EntityManager: protected Entity {
 private:
-    std::map<std::string, std::unique_ptr<Entity>> entities{}; /// < Map of the pointers of the present entities in the game.
-    std::map<std::string, Entity*> entityMap; /// < Map of the present entities in the game.
+    std::map<std::string, std::unique_ptr<Entity>> entities{}; ///< Map of the pointers of the present entities in the game.
+    std::map<std::string, Entity*> entityMap; ///< Map of the present entities in the game.
 public:
     /// @brief Default EntityManager constructor.
     /// @param void

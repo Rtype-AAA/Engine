@@ -5,7 +5,7 @@ digraph "Sprite"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="Sprite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Sprite class: Sprite is a class that represents the rendering properties of a Component."];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Components",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d46/classComponents.html",tooltip=" "];
+  Node2 [label="Components",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d46/classComponents.html",tooltip="Components class: Components is a class that represents a component in the game."];
   Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="DrawableComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/classDrawableComponent.html",tooltip=" "];
+  Node3 [label="DrawableComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/classDrawableComponent.html",tooltip="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..."];
 }

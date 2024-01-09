@@ -2,14 +2,75 @@
 \label{classDrawableComponent}\index{DrawableComponent@{DrawableComponent}}
 
 
+\mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} class\+: \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} is a class that represents a drawable component in the game.  
+
+
+
+
+{\ttfamily \#include $<$Drawable\+Component.\+h$>$}
+
+
+
 Inheritance diagram for Drawable\+Component\+:
 % FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{classDrawableComponent_a9bc629abca6fc9065e64b689105a4806}{$\sim$\+Drawable\+Component}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{draw}} (sf\+::\+Render\+Window \&window) const =0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{draw()}}\+: Draw the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} class\+: \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} is a class that represents a drawable component in the game. 
+
+Drawable\+Components are components that can be drawn on the screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDrawableComponent_a9bc629abca6fc9065e64b689105a4806}\label{classDrawableComponent_a9bc629abca6fc9065e64b689105a4806}} 
+\index{DrawableComponent@{DrawableComponent}!````~DrawableComponent@{$\sim$DrawableComponent}}
+\index{````~DrawableComponent@{$\sim$DrawableComponent}!DrawableComponent@{DrawableComponent}}
+\doxysubsubsection{\texorpdfstring{$\sim$DrawableComponent()}{~DrawableComponent()}}
+{\footnotesize\ttfamily virtual Drawable\+Component\+::$\sim$\+Drawable\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}\label{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}} 
-virtual void {\bfseries draw} (sf\+::\+Render\+Window \&window) const =0
-\end{DoxyCompactItemize}
+\index{DrawableComponent@{DrawableComponent}!draw@{draw}}
+\index{draw@{draw}!DrawableComponent@{DrawableComponent}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Drawable\+Component\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{draw()}}\+: Draw the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to draw the component on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classSprite_a851136a50fc180e4c55d4bfa7250619b}{Sprite}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

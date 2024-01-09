@@ -24,6 +24,9 @@ public:
     /// @return void
     Transform() = default;
 
+    /// @brief init(): Initialize the component
+    /// @param void
+    /// @return bool: true if the component is initialized, false otherwise
     bool init() const {return true;}
 
     /// @brief Transform constructor
