@@ -1,0 +1,10 @@
+<map id="sf::RenderStates" name="sf::RenderStates">
+<area shape="rect" id="node1" title="Define the states used for drawing to a RenderTarget." alt="" coords="171,184,293,211"/>
+<area shape="rect" id="node2" href="$df/dd4/structsf_1_1BlendMode.html" title="Blending modes for drawing." alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node3" href="$de/d26/classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing." alt="" coords="137,95,221,121"/>
+<area shape="rect" id="node4" href="$d7/db6/classsf_1_1GlResource.html" title="Base class for classes that require an OpenGL context." alt="" coords="107,5,218,32"/>
+<area shape="rect" id="node5" href="$dd/da2/classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment)" alt="" coords="245,95,328,121"/>
+<area shape="rect" id="node6" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="243,5,363,32"/>
+<area shape="rect" id="node7" href="$d9/dd8/structsf_1_1Shader_1_1CurrentTextureType.html" title="Special type that can be passed to setUniform(), and that represents the texture of the object being ..." alt="" coords="387,5,591,32"/>
+<area shape="rect" id="node8" href="$db/d6c/classsf_1_1Transform.html" title="Define a 3x3 transform matrix." alt="" coords="353,95,453,121"/>
+</map>

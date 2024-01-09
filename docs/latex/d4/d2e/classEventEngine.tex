@@ -31,8 +31,16 @@ sf\+::\+Event \& \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a5250100318fb566404de9e34682e1c0e}{get\+Event()}}\+: Get the SFML Event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key keyboard, std\+::function$<$ void()$>$ function)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a1de358e7993ca5bffd152a2392faa051}{add\+Key\+Pressed()}}\+: Add a key pressed to the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventEngine_a4706b7ee2e76cf08ef9e6c637a1b00ba}{add\+Mouse\+Button\+Pressed}} (sf\+::\+Mouse\+::\+Button mouse, std\+::function$<$ void()$>$ function)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_a4706b7ee2e76cf08ef9e6c637a1b00ba}{add\+Mouse\+Button\+Pressed()}}\+: Add a mouse button pressed to the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEventEngine_ac65d9eb31c1b08aef21854f07dc9291f}{add\+Mouse\+Moved}} (std\+::string name\+Entity, std\+::function$<$ void()$>$ function)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ac65d9eb31c1b08aef21854f07dc9291f}{add\+Mouse\+Moved()}}\+: Add a mouse moved to the map. \end{DoxyCompactList}\item 
 std\+::map$<$ sf\+::\+Keyboard\+::\+Key, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_ae2c6fc7e5f83495867372a722bbe08c9}{get\+Key\+Pressed\+Map()}}\+: Get the map of the key pressed. \end{DoxyCompactList}\item 
+std\+::map$<$ sf\+::\+Mouse\+::\+Button, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_abbd99985a6946079ed9d4591364db40c}{get\+Mouse\+Button\+Pressed\+Map}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEventEngine_abbd99985a6946079ed9d4591364db40c}{get\+Mouse\+Button\+Pressed\+Map()}}\+: Get the map of the mouse button pressed. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::function$<$ void()$>$ $>$ \& \mbox{\hyperlink{classEventEngine_a7039d01e2ffdc0780a2757faf4683cd9}{get\+Mouse\+Moved\+Map}} ()
+\begin{DoxyCompactList}\small\item\em get\+Mouse\+Moved\+Pressed\+Map()\+: Get the map of the key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -100,6 +108,46 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_a4706b7ee2e76cf08ef9e6c637a1b00ba}\label{classEventEngine_a4706b7ee2e76cf08ef9e6c637a1b00ba}} 
+\index{EventEngine@{EventEngine}!addMouseButtonPressed@{addMouseButtonPressed}}
+\index{addMouseButtonPressed@{addMouseButtonPressed}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{addMouseButtonPressed()}{addMouseButtonPressed()}}
+{\footnotesize\ttfamily void Event\+Engine\+::add\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{mouse,  }\item[{std\+::function$<$ void()$>$}]{function }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEventEngine_a4706b7ee2e76cf08ef9e6c637a1b00ba}{add\+Mouse\+Button\+Pressed()}}\+: Add a mouse button pressed to the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse} & SFML Mouse\+::\+Button of the mouse button pressed. \\
+\hline
+{\em function} & Function to execute when the mouse button is pressed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_ac65d9eb31c1b08aef21854f07dc9291f}\label{classEventEngine_ac65d9eb31c1b08aef21854f07dc9291f}} 
+\index{EventEngine@{EventEngine}!addMouseMoved@{addMouseMoved}}
+\index{addMouseMoved@{addMouseMoved}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{addMouseMoved()}{addMouseMoved()}}
+{\footnotesize\ttfamily void Event\+Engine\+::add\+Mouse\+Moved (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+Entity,  }\item[{std\+::function$<$ void()$>$}]{function }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEventEngine_ac65d9eb31c1b08aef21854f07dc9291f}{add\+Mouse\+Moved()}}\+: Add a mouse moved to the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+Entity} & \+: Name of the \mbox{\hyperlink{classEntity}{Entity}} you want. \\
+\hline
+{\em function} & Function to execute when the mouse moved on entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classEventEngine_a5250100318fb566404de9e34682e1c0e}\label{classEventEngine_a5250100318fb566404de9e34682e1c0e}} 
 \index{EventEngine@{EventEngine}!getEvent@{getEvent}}
 \index{getEvent@{getEvent}!EventEngine@{EventEngine}}
@@ -135,6 +183,42 @@ sf\+::\+Event\+: The SFML Event.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::map$<$sf\+::\+Keyboard\+::\+Key, std\+::function$<$void()$>$$>$\+: The map of the key pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_abbd99985a6946079ed9d4591364db40c}\label{classEventEngine_abbd99985a6946079ed9d4591364db40c}} 
+\index{EventEngine@{EventEngine}!getMouseButtonPressedMap@{getMouseButtonPressedMap}}
+\index{getMouseButtonPressedMap@{getMouseButtonPressedMap}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{getMouseButtonPressedMap()}{getMouseButtonPressedMap()}}
+{\footnotesize\ttfamily std\+::map$<$sf\+::\+Mouse\+::\+Button, std\+::function$<$void()$>$ $>$\& Event\+Engine\+::get\+Mouse\+Button\+Pressed\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEventEngine_abbd99985a6946079ed9d4591364db40c}{get\+Mouse\+Button\+Pressed\+Map()}}\+: Get the map of the mouse button pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$sf\+::\+Mouse\+::\+Button, std\+::function$<$void()$>$$>$\+: The map of the mouse button pressed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEventEngine_a7039d01e2ffdc0780a2757faf4683cd9}\label{classEventEngine_a7039d01e2ffdc0780a2757faf4683cd9}} 
+\index{EventEngine@{EventEngine}!getMouseMovedMap@{getMouseMovedMap}}
+\index{getMouseMovedMap@{getMouseMovedMap}!EventEngine@{EventEngine}}
+\doxysubsubsection{\texorpdfstring{getMouseMovedMap()}{getMouseMovedMap()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::function$<$void()$>$ $>$\& Event\+Engine\+::get\+Mouse\+Moved\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Mouse\+Moved\+Pressed\+Map()\+: Get the map of the key pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, std\+::function$<$void()$>$$>$\+: The map of the mouse moved. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}\label{classEventEngine_ab6021ece4dc8205712e42e460167a7a2}} 
 \index{EventEngine@{EventEngine}!init@{init}}

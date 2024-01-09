@@ -1,0 +1,11 @@
+<map id="VkBindSparseInfo" name="VkBindSparseInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="941,115,1068,141"/>
+<area shape="rect" id="node2" href="$d4/d58/structVkSparseImageMemoryBindInfo.html" title=" " alt="" coords="557,56,768,83"/>
+<area shape="rect" id="node3" href="$d7/d01/structVkSparseImageMemoryBind.html" title=" " alt="" coords="276,56,464,83"/>
+<area shape="rect" id="node4" href="$d7/d88/structVkOffset3D.html" title=" " alt="" coords="33,5,124,32"/>
+<area shape="rect" id="node5" href="$d0/d02/structVkExtent3D.html" title=" " alt="" coords="32,56,125,83"/>
+<area shape="rect" id="node6" href="$d7/d32/structVkImageSubresource.html" title=" " alt="" coords="5,107,152,133"/>
+<area shape="rect" id="node7" href="$df/d72/structVkSparseImageOpaqueMemoryBindInfo.html" title=" " alt="" coords="559,107,766,149"/>
+<area shape="rect" id="node8" href="$de/d01/structVkSparseMemoryBind.html" title=" " alt="" coords="294,145,446,172"/>
+<area shape="rect" id="node9" href="$d9/d42/structVkSparseBufferMemoryBindInfo.html" title=" " alt="" coords="558,173,767,200"/>
+</map>

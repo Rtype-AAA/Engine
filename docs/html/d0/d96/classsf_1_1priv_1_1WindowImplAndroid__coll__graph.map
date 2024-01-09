@@ -1,0 +1,5 @@
+<map id="sf::priv::WindowImplAndroid" name="sf::priv::WindowImplAndroid">
+<area shape="rect" id="node1" title="Android implementation of WindowImpl." alt="" coords="5,157,192,184"/>
+<area shape="rect" id="node2" href="$df/df8/classsf_1_1priv_1_1WindowImpl.html" title="Abstract base class for OS&#45;specific window implementation." alt="" coords="27,81,170,108"/>
+<area shape="rect" id="node3" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="39,5,159,32"/>
+</map>

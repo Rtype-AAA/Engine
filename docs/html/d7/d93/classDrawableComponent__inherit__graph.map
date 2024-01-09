@@ -1,4 +1,5 @@
 <map id="DrawableComponent" name="DrawableComponent">
 <area shape="rect" id="node1" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="5,5,149,32"/>
-<area shape="rect" id="node2" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="49,80,105,107"/>
+<area shape="rect" id="node2" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="12,80,68,107"/>
+<area shape="rect" id="node3" href="$df/d53/classText.html" title=" " alt="" coords="93,80,139,107"/>
 </map>

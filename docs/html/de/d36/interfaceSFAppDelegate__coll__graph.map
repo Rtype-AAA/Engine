@@ -1,0 +1,8 @@
+<map id="SFAppDelegate" name="SFAppDelegate">
+<area shape="rect" id="node1" title="Our custom application delegate." alt="" coords="135,247,250,273"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,157,84,184"/>
+<area shape="rect" id="node3" title=" " alt="" coords="109,157,277,184"/>
+<area shape="rect" id="node4" href="$d0/d3a/classsf_1_1priv_1_1WindowImplUIKit.html" title="iOS (UIKit) implementation of WindowImpl" alt="" coords="301,157,473,184"/>
+<area shape="rect" id="node5" href="$df/df8/classsf_1_1priv_1_1WindowImpl.html" title="Abstract base class for OS&#45;specific window implementation." alt="" coords="316,81,459,108"/>
+<area shape="rect" id="node6" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="327,5,447,32"/>
+</map>

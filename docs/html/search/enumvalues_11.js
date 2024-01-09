@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['r_5228',['R',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875af04c2611e3ee0855a044927d5bd0e194',1,'sf::Keyboard::Scan::R()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142add852cadaa6fff2d982bbab3551c31d0',1,'sf::Keyboard::R()'],['../d3/d3f/classsf_1_1Joystick.html#a48db337092c2e263774f94de6d50baa7aeebbcdb0828850f4d69e6a084801fab8',1,'sf::Joystick::R()']]],
+  ['ralt_5229',['RAlt',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a2d6f466aef0f34d0d794d79362002ae3',1,'sf::Keyboard::Scan::RAlt()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a21dcf098233296462bc7c632b93369cc',1,'sf::Keyboard::RAlt()']]],
+  ['rangenotsatisfiable_5230',['RangeNotSatisfiable',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a12533d00093b190e6d4c0076577e2239',1,'sf::Http::Response']]],
+  ['rbracket_5231',['RBracket',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a5b278a8f7b97c3972ec572412d855660',1,'sf::Keyboard::Scan::RBracket()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a578253a70b48e61830aa08292d44680f',1,'sf::Keyboard::RBracket()']]],
+  ['rcontrol_5232',['RControl',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875ab80b18e7c688d4cd1bbb52b40b9699fe',1,'sf::Keyboard::Scan::RControl()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a275d3fd207a9c0b22ce404012c71dc17',1,'sf::Keyboard::RControl()']]],
+  ['redo_5233',['Redo',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875ad7b33839e3d1dc8048ed4e32297113ad',1,'sf::Keyboard::Scan']]],
+  ['refresh_5234',['Refresh',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a21a543fae6b497b61df6e58d315f9e12',1,'sf::Keyboard::Scan']]],
+  ['regular_5235',['Regular',['../d4/da5/classsf_1_1Text.html#aa8add4aef484c6e6b20faff07452bd82a2af9ae5e1cda126570f744448e0caa32',1,'sf::Text']]],
+  ['resetcontent_5236',['ResetContent',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a77327cc2a5e34cc64030b322e61d12a8',1,'sf::Http::Response']]],
+  ['resize_5237',['Resize',['../d2/df3/group__window.html#gga00319cf9896ddf15ebfe0c14ffbc8f60accff967648ebcd5db2007eff7352b50f',1,'sf::Style']]],
+  ['resized_5238',['Resized',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa67fd26d7e520bc6722db3ff47ef24941',1,'sf::Event']]],
+  ['restartmarkerreply_5239',['RestartMarkerReply',['../d3/d2a/classsf_1_1Ftp_1_1Response.html#af81738f06b6f571761696291276acb3ba07e06d3326ba2d078583bef93930d909',1,'sf::Ftp::Response']]],
+  ['return_5240',['Return',['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142ac291de81bdee518d636bc359f2ca77de',1,'sf::Keyboard']]],
+  ['reversesubtract_5241',['ReverseSubtract',['../df/dd4/structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a2d04acf59e91811128e7d0ef076f65f0',1,'sf::BlendMode']]],
+  ['right_5242',['Right',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a03d293668313031e7ff7eb9b7894e5c7',1,'sf::Keyboard::Scan::Right()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a2aeb083dea103a8e36b6850b51ef3632',1,'sf::Keyboard::Right()'],['../d0/d18/classsf_1_1Mouse.html#a4fb128be433f9aafe66bc0c605daaa90af2cff24ab6c26daf079b11189f982fc4',1,'sf::Mouse::Right()']]],
+  ['rshift_5243',['RShift',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a81b7e74173912d98493b62b13a7ed648',1,'sf::Keyboard::Scan::RShift()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a5be69e3b2f25bd5f4eed75d063f42b90',1,'sf::Keyboard::RShift()']]],
+  ['rsystem_5244',['RSystem',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a62f3504c695ca7968e710cfdc1d8c61b',1,'sf::Keyboard::Scan::RSystem()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142ac1b3fd7424feeda242cedbb64f3f5a7f',1,'sf::Keyboard::RSystem()']]]
+];

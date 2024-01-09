@@ -1,0 +1,13 @@
+<map id="SFViewController" name="SFViewController">
+<area shape="rect" id="node1" title="The view controller handles the view&#39;s orientation." alt="" coords="1040,107,1164,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="757,5,878,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="778,56,857,83"/>
+<area shape="rect" id="node4" href="$d1/dc5/protocolWindowImplDelegateProtocol-p.html" title="Interface of the delegate of the window implementation." alt="" coords="712,107,923,133"/>
+<area shape="rect" id="node5" href="$dd/db0/classsf_1_1priv_1_1WindowImplCocoa.html" title="Mac OS X (Cocoa) implementation of WindowImpl." alt="" coords="367,212,547,239"/>
+<area shape="rect" id="node8" href="$d8/d19/interfaceSFOpenGLView.html" title="Specialized NSOpenGLView." alt="" coords="760,157,875,184"/>
+<area shape="rect" id="node6" href="$df/df8/classsf_1_1priv_1_1WindowImpl.html" title="Abstract base class for OS&#45;specific window implementation." alt="" coords="175,212,317,239"/>
+<area shape="rect" id="node7" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="5,212,125,239"/>
+<area shape="rect" id="node9" title=" " alt="" coords="398,96,515,123"/>
+<area shape="rect" id="node10" href="$dc/da7/interfaceSFSilentResponder.html" title="Silent Responder used to prevent sound alert with key event." alt="" coords="389,147,524,173"/>
+<area shape="rect" id="node11" title=" " alt="" coords="194,147,298,173"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="FLAC__Frame" name="FLAC__Frame">
+<area shape="rect" id="node1" title=" " alt="" coords="1588,133,1695,160"/>
+<area shape="rect" id="node2" href="$d1/de8/structFLAC____Subframe.html" title=" " alt="" coords="1337,83,1463,109"/>
+<area shape="rect" id="node3" href="$d1/d67/structFLAC____Subframe__Fixed.html" title=" " alt="" coords="1047,5,1212,32"/>
+<area shape="rect" id="node4" href="$de/d96/structFLAC____EntropyCodingMethod.html" title=" " alt="" coords="647,31,845,57"/>
+<area shape="rect" id="node7" href="$d3/d91/structFLAC____Subframe__LPC.html" title=" " alt="" coords="1050,56,1209,83"/>
+<area shape="rect" id="node5" href="$d3/d56/structFLAC____EntropyCodingMethod__PartitionedRice.html" title=" " alt="" coords="307,23,505,65"/>
+<area shape="rect" id="node6" href="$d7/dbd/structFLAC____EntropyCodingMethod__PartitionedRiceContents.html" title=" " alt="" coords="5,23,204,65"/>
+<area shape="rect" id="node8" href="$df/d3f/structFLAC____Subframe__Verbatim.html" title=" " alt="" coords="1037,107,1222,133"/>
+<area shape="rect" id="node9" href="$d7/de9/structFLAC____Subframe__Constant.html" title=" " alt="" coords="1036,157,1223,184"/>
+<area shape="rect" id="node10" href="$d1/dd3/structFLAC____FrameHeader.html" title=" " alt="" coords="1325,133,1475,160"/>
+<area shape="rect" id="node11" href="$d7/d20/structFLAC____FrameFooter.html" title=" " alt="" coords="1328,184,1472,211"/>
+</map>
