@@ -30,6 +30,13 @@
             cmake --build build
             cd build
             cpack
+            mkdir -p test
+            mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' test/
+            cd test
+            tar xf 'QuantumVortex Engine-1.0.0-Linux.tar.gz'
+            tree
+            mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../
+            cd ..
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
             cd ..
             cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
