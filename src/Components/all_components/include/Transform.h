@@ -29,12 +29,6 @@ public:
     /// @return void
     Transform() : transform{Vector2<float>(0.0f, 0.0f), 0.0f, Vector2<float>(1.0f, 1.0f)} {}
 
-//    Transform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
-//        transform.position = newPosition;
-//        transform.rotation = newRotation;
-//        transform.scale = newScale;
-//    }
-
     /// @brief init(): Initialize the component
     /// @param void
     /// @return bool: true if the component is initialized, false otherwise
