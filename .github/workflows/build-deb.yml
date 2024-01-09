@@ -68,7 +68,7 @@
         - name: Create DEB changelog file
           run: |
             cd package-build
-            dch --create -v 1.0-1 --package quantumvortex-engine -M -c debian/changelog
+            dch --create -v 1.0-1 --package quantumvortex-engine
             cd ..
           # run: |
           #   echo "quantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
