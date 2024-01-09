@@ -12,7 +12,7 @@ Collaboration diagram for Entity\+Manager\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classEntityManager_adb85bb54fad60f5de436bf07b8fa0aeb}{Entity\+Manager}} ()=default
-\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} constructor. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em $<$ Map of the present entities in the game. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEntityManager_a3a7184c55419c9e3a31791e90aa9ad0c}{$\sim$\+Entity\+Manager}} ()=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEntity}{Entity}} \& \mbox{\hyperlink{classEntityManager_ae00cfff54f5855e3ec71661224bec265}{add\+Entity}} (std\+::string name\+Entity, \mbox{\hyperlink{classArchetypes}{Archetypes}} new\+Archetype=\mbox{\hyperlink{classArchetypes}{Archetypes}}())
@@ -23,9 +23,8 @@ std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a119ed37f3fd74a53f0a191faf24d07b0}{get\+Entities()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entities. \end{DoxyCompactList}\item 
 std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classEntityManager_aa184df0038440ff28cb526c70a268943}{get\+Entity\+Map}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_aa184df0038440ff28cb526c70a268943}{get\+Entity\+Map()}}\+: Get the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\textquotesingle{}s entity map. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}\label{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}} 
-bool {\bfseries init\+Entity\+Manager} ()
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}{init\+Entity\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}{init\+Entity\+Manager()}}\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -38,9 +37,9 @@ bool {\bfseries init\+Entity\+Manager} ()
 
 
 
+$<$ Map of the present entities in the game. 
+
 Default \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} constructor. 
-
-
 \begin{DoxyParams}{Parameters}
 {\em void} & \\
 \hline
@@ -149,6 +148,24 @@ T\&\+: Reference of the entity.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Entity\+::\+Entity\+Map\+: \mbox{\hyperlink{classEntity}{Entity}} map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}\label{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}} 
+\index{EntityManager@{EntityManager}!initEntityManager@{initEntityManager}}
+\index{initEntityManager@{initEntityManager}!EntityManager@{EntityManager}}
+\doxysubsubsection{\texorpdfstring{initEntityManager()}{initEntityManager()}}
+{\footnotesize\ttfamily bool Entity\+Manager\+::init\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classEntityManager_a659e9a568099b5abbb15694d7a7514e3}{init\+Entity\+Manager()}}\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true if the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} is initialized, false otherwise. 
 \end{DoxyReturn}
 
 
