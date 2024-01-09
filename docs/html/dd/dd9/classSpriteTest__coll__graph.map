@@ -1,0 +1,7 @@
+<map id="SpriteTest" name="SpriteTest">
+<area shape="rect" id="node1" title=" " alt="" coords="33,171,115,197"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,81,100,108"/>
+<area shape="rect" id="node3" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="125,81,181,108"/>
+<area shape="rect" id="node4" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="33,5,129,32"/>
+<area shape="rect" id="node5" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="153,5,297,32"/>
+</map>
