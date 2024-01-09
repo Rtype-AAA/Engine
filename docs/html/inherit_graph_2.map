@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="29,56,125,83"/>
+<area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="210,5,266,32"/>
+<area shape="rect" id="node6" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="210,107,266,133"/>
+<area shape="rect" id="node7" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="197,56,279,83"/>
+<area shape="rect" id="node3" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="327,5,433,32"/>
+<area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="502,5,557,32"/>
+<area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="625,31,723,57"/>
+<area shape="rect" id="node8" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="5,107,149,133"/>
+<area shape="rect" id="node9" href="$d4/d2e/classEventEngine.html" title="EventEngine class: EventEngine is a class that represents the event engine of the game." alt="" coords="481,56,577,83"/>
+</map>

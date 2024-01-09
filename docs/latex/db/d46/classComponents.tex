@@ -2,17 +2,117 @@
 \label{classComponents}\index{Components@{Components}}
 
 
+\mbox{\hyperlink{classComponents}{Components}} class\+: \mbox{\hyperlink{classComponents}{Components}} is a class that represents a component in the game.  
+
+
+
+
+{\ttfamily \#include $<$Components.\+h$>$}
+
+
+
 Inheritance diagram for Components\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{d7/da3/classComponents__inherit__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classComponents_a8187158de7c3efcac105760e2adf15a9}{Components}} ()=default
+\begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classComponents}{Components}} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classComponents_a755420dfc5cc2f047ba1b19ef5fee802}{$\sim$\+Components}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents}{Components}} destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update()}}\+: Update the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classComponents}{Components}} class\+: \mbox{\hyperlink{classComponents}{Components}} is a class that represents a component in the game. 
+
+\mbox{\hyperlink{classComponents}{Components}} are the building blocks of the game. They are attached to entities and define their behavior. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponents_a8187158de7c3efcac105760e2adf15a9}\label{classComponents_a8187158de7c3efcac105760e2adf15a9}} 
+\index{Components@{Components}!Components@{Components}}
+\index{Components@{Components}!Components@{Components}}
+\doxysubsubsection{\texorpdfstring{Components()}{Components()}}
+{\footnotesize\ttfamily Components\+::\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default \mbox{\hyperlink{classComponents}{Components}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classComponents_a755420dfc5cc2f047ba1b19ef5fee802}\label{classComponents_a755420dfc5cc2f047ba1b19ef5fee802}} 
+\index{Components@{Components}!````~Components@{$\sim$Components}}
+\index{````~Components@{$\sim$Components}!Components@{Components}}
+\doxysubsubsection{\texorpdfstring{$\sim$Components()}{~Components()}}
+{\footnotesize\ttfamily virtual Components\+::$\sim$\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classComponents}{Components}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classComponents_adb5db757815c1d8b961c069515f8e260}\label{classComponents_adb5db757815c1d8b961c069515f8e260}} 
-virtual bool {\bfseries init} ()
-\item 
+\index{Components@{Components}!init@{init}}
+\index{init@{init}!Components@{Components}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool Components\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true if the component is initialized, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
-virtual void {\bfseries update} ()
-\end{DoxyCompactItemize}
+\index{Components@{Components}!update@{update}}
+\index{update@{update}!Components@{Components}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Components\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update()}}\+: Update the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

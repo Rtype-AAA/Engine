@@ -9,10 +9,10 @@
 #include "DrawableComponent.h"
 
 
-class EntityManager: protected Entity{
+class EntityManager: protected Entity {
 private:
-    std::map<std::string, std::unique_ptr<Entity>> entities{};
-    std::map<std::string, Entity*> entityMap;
+    std::map<std::string, std::unique_ptr<Entity>> entities{}; ///< Map of the pointers of the present entities in the game.
+    std::map<std::string, Entity*> entityMap; ///< Map of the present entities in the game.
 public:
     /// @brief Default EntityManager constructor.
     /// @param void
@@ -46,5 +46,8 @@ public:
     /// @return Entity::EntityMap: Entity map.
     std::map<std::string, Entity*> getEntityMap() const {return entityMap;}
 
+    /// @brief initEntityManager(): Initialize the EntityManager.
+    /// @param void
+    /// @return bool: true if the EntityManager is initialized, false otherwise.
     bool initEntityManager() {return true;}
 };

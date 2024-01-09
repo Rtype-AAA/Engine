@@ -57,8 +57,14 @@ public:
     /// @return void
     void setName(std::string newName);
 
+    /// @brief addDrawable(): Add a drawable component to the entity
+    /// @param component: component to add
+    /// @return void
     void addDrawable(Components* component);
 
+    /// @brief drawEntity(): Draw the entities
+    /// @param window: window where the entities are drawn
+    /// @return void
     void drawEntity(sf::RenderWindow& window);
 
     /// @brief addComponent(): Add a component to the entity
@@ -76,11 +82,26 @@ public:
     template<typename T>
     T& getComponent();
 
+    /// @brief getComponentTypeID(): Get the ID of a component
+    /// @tparam T: Type of the component
+    /// @param void
+    /// @return std::size_t: ID of the component
     template<typename T>
     std::size_t getComponentTypeID() noexcept;
 
+    /// @brief getComponentBitset(): Get the bitset of the components
+    /// @param void
+    /// @return std::bitset<3>: bitset of the components
     std::bitset<3> getComponentBitset() const {return componentBitset;}
+
+    /// @brief getDrawableComponents(): Get the drawable components of the entity
+    /// @param void
+    /// @return std::vector<DrawableComponent*>: drawable components of the entity
     std::vector<DrawableComponent*> getDrawableComponents() const {return drawableComponents;}
+
+    /// @brief getComponentArrays(): Get the array of components
+    /// @param void
+    /// @return std::array<Components*, 3>: array of components
     std::array<Components*, 3> getComponentArrays() const {return componentArray;}
 };
 

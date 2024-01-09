@@ -1,0 +1,4 @@
+<map id="Entity" name="Entity">
+<area shape="rect" id="node1" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="25,80,81,107"/>
+<area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,5,101,32"/>
+</map>

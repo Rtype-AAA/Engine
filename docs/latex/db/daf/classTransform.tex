@@ -12,19 +12,30 @@
 
 
 Inheritance diagram for Transform\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{d2/d02/classTransform__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for Transform\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{d6/d15/classTransform__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTransform_a144ce8dcafd13ca66acb5a1636cfc297}{Transform}} ()=default
 \begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}\label{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}} 
-bool {\bfseries init} () const
-\item 
+bool \mbox{\hyperlink{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}{init}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTransform_ac43108d291ffe3e1dfe163471c0f0ed7}{Transform}} (std\+::map$<$ std\+::string, std\+::vector$<$ float $>$$>$ \&map\+Transform)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform}{Transform}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTransform_ac02ce42e0a10a0ab365daf50fb5cd3ff}{$\sim$\+Transform}} () override=default
@@ -175,6 +186,24 @@ std\+::vector$<$float$>$\+: rotation vector of the component
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$float$>$\+: scale vector of the component 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}\label{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}} 
+\index{Transform@{Transform}!init@{init}}
+\index{init@{init}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Transform\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: true if the component is initialized, false otherwise 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTransform_a7bb9f58811ecce0054a4413bd08d5371}\label{classTransform_a7bb9f58811ecce0054a4413bd08d5371}} 
 \index{Transform@{Transform}!setTransform@{setTransform}}

@@ -1,0 +1,9 @@
+<map id="Components" name="Components">
+<area shape="rect" id="node1" title="Components class: Components is a class that represents a component in the game." alt="" coords="91,5,187,32"/>
+<area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="31,80,87,107"/>
+<area shape="rect" id="node6" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="111,80,167,107"/>
+<area shape="rect" id="node7" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="191,80,273,107"/>
+<area shape="rect" id="node3" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
+<area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
+</map>
