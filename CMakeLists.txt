@@ -211,9 +211,12 @@ set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 
 if (WIN32)
     set(CPACK_GENERATOR "ZIP")
+    set(CPACK_NSIS_MODIFY_PATH ON)
 else()
     set(CPACK_GENERATOR "TGZ")
-
+    set(CPACK_RPM_PACKAGE_LICENSE "MIT")
+    set(CPACK_RPM_PACKAGE_GROUP "Amusements/Games")
+    set(CPACK_RPM_COMPRESSION_TYPE "xz")
 endif ()
 
 include(CPack)
