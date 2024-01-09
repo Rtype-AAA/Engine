@@ -27,11 +27,7 @@
             cp -r src/* package-build/src/
             cp copyright package-build/debian
             cmake -Bbuild
-            cmake --build build
-            cd build
-            cpack
-            ls -la
-            mv *.deb "quantumvortex-engine.deb"
+            cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
 
         - name: Create DEB compat file
           run: |
@@ -88,9 +84,10 @@
         - name: Check if DEB package was created
           run: |
             ls -l
+            dpkg -c quantumvortex-engine_*.deb
 
         - name: Upload DEB package
           uses: actions/upload-artifact@v3
           with:
             name: deb-package
-            path: ./quantumvortex-engine*.deb
+            path: ./quantumvortex-engine_*.deb
