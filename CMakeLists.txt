@@ -94,11 +94,11 @@ set_target_properties(engine_lib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CU
 set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
 install(TARGETS engine_lib
-        EXPORT engineTargets
+        EXPORT quantumvortex-engineTargets
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include/engine)
+        INCLUDES DESTINATION include/quantumvortex-engine)
 
 install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -109,26 +109,26 @@ install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
-        DESTINATION include/engine)
+        DESTINATION include/quantumvortex-engine)
 
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
-        "engineConfigVersion.cmake"
+        "quantumvortex-engineConfigVersion.cmake"
         VERSION 1.0
         COMPATIBILITY AnyNewerVersion
 )
 
-install(EXPORT engineTargets
-        FILE engineTargets.cmake
-        NAMESPACE engine::
-        DESTINATION lib/cmake/engine)
+install(EXPORT quantumvortex-engineTargets
+        FILE quantumvortex-engineTargets.cmake
+        NAMESPACE qtv::
+        DESTINATION lib/cmake/quantumvortex-engine)
 
 install(FILES
-        "${CMAKE_CURRENT_BINARY_DIR}/engineConfigVersion.cmake"
-        DESTINATION lib/cmake/engine)
+        "${CMAKE_CURRENT_BINARY_DIR}/quantumvortex-engineConfigVersion.cmake"
+        DESTINATION lib/cmake/quantumvortex-engine)
 
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/configPackage/engineConfig.cmake" DESTINATION lib/cmake/engine)
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/configPackage/quantumvortex-engineConfig.cmake" DESTINATION lib/cmake/quantumvortex-engine)
 
 set(CPACK_PACKAGE_NAME "QuantumVortex Engine")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
@@ -137,10 +137,10 @@ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/copyright")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 
 if (WIN32)
-    set(CPACK_GENERATOR "NSIS;ZIP")
+    set(CPACK_GENERATOR "ZIP")
     set(CPACK_NSIS_MODIFY_PATH ON)
 else()
-    set(CPACK_GENERATOR "RPM;TGZ")
+    set(CPACK_GENERATOR "TGZ")
     set(CPACK_RPM_PACKAGE_LICENSE "MIT")
     set(CPACK_RPM_PACKAGE_GROUP "Amusements/Games")
     set(CPACK_RPM_COMPRESSION_TYPE "xz")
