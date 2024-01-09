@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  9 JAN 2024 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  9 JAN 2024 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1361,12 +1361,12 @@ Underfull \hbox (badness 10000) detected at line 211
 [][][]
  []
 
-) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.tex [48] [49]
+) (./d6/d2b/classTransformTest.tex) (./d6/d39/classWorld.tex [48]
 Underfull \hbox (badness 10000) detected at line 65
 [][][]
  []
 
-
+[49]
 Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
@@ -1424,31 +1424,30 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: C8E16C737C494C53D4E05F685376489D;29687.
  ) 
 Here is how much of TeX's memory you used:
- 18152 strings out of 480247
- 296353 string characters out of 5896152
+ 18140 strings out of 480247
+ 296240 string characters out of 5896152
  619499 words of memory out of 5000000
- 35266 multiletter control sequences out of 15000+600000
- 532394 words of font info for 109 fonts, out of 8000000 for 9000
+ 35259 multiletter control sequences out of 15000+600000
+ 530630 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,16n,117p,492b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-ro8a.pfb>
-Output written on refman.pdf (61 pages, 258651 bytes).
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvro8a.pfb>
+Output written on refman.pdf (61 pages, 250731 bytes).
 PDF statistics:
- 2103 PDF objects out of 2487 (max. 8388607)
- 1978 compressed objects within 20 object streams
+ 2098 PDF objects out of 2487 (max. 8388607)
+ 1975 compressed objects within 20 object streams
  440 named destinations out of 1000 (max. 500000)
  1153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
