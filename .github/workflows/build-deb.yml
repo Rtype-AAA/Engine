@@ -34,16 +34,6 @@
           run: |
             echo "13" > package-build/debian/compat
 
-        - name: Create DEB changelog file
-          run: |
-            dch --create -v 1.0-1 --package quantumvortex-engine -M -c package-build/debian/changelog
-          # run: |
-          #   echo "quantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
-          #   echo "" >> package-build/debian/changelog
-          #   echo "  * Initial release." >> package-build/debian/changelog
-          #   echo "" >> package-build/debian/changelog
-          #   echo " -- Campagne <thibault.campagne@epitech.eu>  Fri, 05 Jan 2024 03:08:00 +0100" >> package-build/debian/changelog
-
         - name: Create DEB control file
           run: |
             echo "Source: quantumvortex-engine" > package-build/debian/control
@@ -74,6 +64,16 @@
           run: |
             mkdir -p package-build/debian/source
             echo "3.0 (quilt)" > package-build/debian/source/format
+
+        - name: Create DEB changelog file
+          run: |
+            dch --create -v 1.0-1 --package quantumvortex-engine -M -c package-build/debian/changelog
+          # run: |
+          #   echo "quantumvortex-engine (1.0-1) buster; urgency=low" > package-build/debian/changelog
+          #   echo "" >> package-build/debian/changelog
+          #   echo "  * Initial release." >> package-build/debian/changelog
+          #   echo "" >> package-build/debian/changelog
+          #   echo " -- Campagne <thibault.campagne@epitech.eu>  Fri, 05 Jan 2024 03:08:00 +0100" >> package-build/debian/changelog
 
         - name: Prepare original source tarball
           run: |
