@@ -28,8 +28,8 @@
             cp copyright package-build/debian
             cmake -Bbuild
             cmake --build build
-            ls -la build
             cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
+            ls -l package-build/debian/tmp/usr/lib/
 
         - name: Create DEB compat file
           run: |
