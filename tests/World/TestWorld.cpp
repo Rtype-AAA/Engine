@@ -17,7 +17,7 @@ TEST_F(TestWorld, CreateEntities) {
     vectorEntity.emplace_back("test");
     mapEntityManager.insert(std::make_pair("test", std::make_pair(std::make_unique<EntityManager>(), vectorEntity)));
 
-    world.createEntities(mapEntityManager, "test");
+    world.createEntities(mapEntityManager);
     EXPECT_EQ(1, world.getEntityManagerMap().size());
     EXPECT_EQ("test", world.getEntityManagerMap().begin()->first);
     EXPECT_EQ(1, world.getEntityManagerMap().begin()->second->getEntityMap().size());

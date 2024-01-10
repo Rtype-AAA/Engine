@@ -84,7 +84,9 @@ void GameEngine::initializeSprite() {
     for (auto const& world : getWorldMap()) {
         for (auto const& entityManager : world.second->getEntityManagerMap()) {
             for (auto const& entity : entityManager.second->getEntityMap()) {
-                entity.second->getComponent<Sprite>().applyDeferredSprite();
+                if (entity.second->getComponentBitset().test(1)) {
+                    entity.second->getComponent<Sprite>().applyDeferredSprite();
+                }
             }
         }
     }
@@ -126,6 +128,11 @@ bool GameEngine::isWindowOpen() {
 }
 
 void GameEngine::updateGameEngine() {
+    for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
+        for (auto const& entity : entityManager.second->getEntityMap()) {
+            entity.second->update(deltaTime);
+        }
+    }
     return;
 }
 
@@ -167,6 +174,7 @@ void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
                      std::string firstScene) {
     initialize(std::move(mapWorld), pathRessources, firstScene);
     while (isWindowOpen()) {
+        deltaTime = clock.restart();
         eventGameEngine();
         updateGameEngine();
         renderGameEngine();

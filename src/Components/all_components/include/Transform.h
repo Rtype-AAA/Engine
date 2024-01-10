@@ -6,6 +6,7 @@
 
 #include "std.h"
 #include "Components.h"
+#include "sfml.h"
 
 /**
  * @brief Transform class: Transform is a class that represents the transform of a Component.
@@ -50,6 +51,8 @@ public:
     /// @param void
     /// @return void
     ~Transform() override = default;
+
+    void update(sf::Time deltaTime) override;
 
     /// @brief getBit(): Get the bitmask of the component
     /// @param void
