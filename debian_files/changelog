@@ -1,0 +1,6 @@
+quantumvortex-engine (1.0.0-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- paul <>  Wed, 10 Jan 2024 20:38:44 +0100

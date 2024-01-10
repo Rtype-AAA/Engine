@@ -1,0 +1,18 @@
+Source: quantumvortex-engine
+Section: devel
+Priority: required
+Maintainer: paul <>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.0
+Homepage: <insert the upstream URL, if relevant>
+
+Package: quantumvortex-engine
+Architecture: any
+Multi-Arch: foreign
+Depends: libsfml-dev (>= 2.5.1), ${misc:Depends}, ${shlibs:Depends}
+Description: QuantumVortex Engine library is a 2D game engine
+ designed to empower game developers in creating captivating 2D video games.
+ It provides a comprehensive set of tools, features, and resources for 2D game
+ development. With QuantumVortex Engine, creators can easily craft 2D games,
+ design visually appealing graphics, manage game physics, and deliver immersive
+ gaming experiences within a two-dimensional world.

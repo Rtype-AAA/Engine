@@ -26,76 +26,54 @@
             cmake --build build
             cd build
             cpack
-            mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
+            mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine-1.0.0.tar.gz
             cd ..
-            tar xf quantumvortex-engine_1.0.orig.tar.gz
-            mv 'QuantumVortex Engine-1.0.0-Linux' quantumvortex-engine.orig
-            cd quantumvortex-engine.orig
+            tar xf quantumvortex-engine_1.0.0.tar.gz
+            mv 'QuantumVortex Engine-1.0.0-Linux' quantumvortex-engine-1.0.0
+            cd quantumvortex-engine-1.0.0
             echo ""
             ls -l
             echo ""
-            mkdir debian
-            mv ../copyright debian/copyright
 
-        - name: Create DEB compat file
+        - name: Generate Debian template
           run: |
-            cd quantumvortex-engine.orig
-            echo "13" > debian/compat
-
-        - name: Create DEB changelog file
-          run: |
+            cd quantumvortex-engine-1.0.0
+            debmake
+            echo ""
             ls
-            cd quantumvortex-engine.orig
-            echo "quantumvortex-engine (1.0-1) UNRELEASED; urgency=medium" > debian/changelog
-            echo "" >> debian/changelog
-            echo "  * Initial release." >> debian/changelog
-            echo "" >> debian/changelog
-            echo " -- Campagne <thibault.campagne@epitech.eu>  Fri, 05 Jan 2024 03:08:00 +0100" >> debian/changelog
-            echo ""
-            cat debian/changelog
             echo ""
 
-        - name: Create DEB control file
+        - name: Modify Debian changelog file
           run: |
-            cd quantumvortex-engine.orig
-            echo "Source: quantumvortex-engine" > debian/control
-            echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> debian/control
-            echo "Section: devel" >> debian/control
-            echo "Priority: required" >> debian/control
-            echo "Standards-Version: 4.6.0.1" >> debian/control
-            echo "Build-Depends: debhelper (>= 13.0)" >> debian/control
-            echo "" >> debian/control
-            echo "Package: quantumvortex-engine" >> debian/control
-            echo "Architecture: any" >> debian/control
-            echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libsfml-dev (>= 2.5.1), debhelper (>= 13.0)" >> debian/control
-            echo "Description: QuantumVortex Engine library is a 2D game engine" >> debian/control
-            echo " designed to empower game developers in creating captivating 2D video games." >> debian/control
-            echo " It provides a comprehensive set of tools, features, and resources for 2D game" >> debian/control
-            echo " development. With QuantumVortex Engine, creators can easily craft 2D games," >> debian/control
-            echo " design visually appealing graphics, manage game physics, and deliver immersive" >> debian/control
-            echo " gaming experiences within a two-dimensional world." >> debian/control
+            cd quantumvortex-engine-1.0.0
+            rm debian/changelog
+            mv ../debian_files/changelog debian/changelog
 
-        - name: Create DEB rules file
+        - name: Modify Debian control file
           run: |
-            cd quantumvortex-engine.orig
-            echo '#!/usr/bin/make -f' > debian/rules
-            echo "%:" >> debian/rules
-            echo -e "\tdh \$@" >> debian/rules
-            chmod +x debian/rules
+            cd quantumvortex-engine-1.0.0
+            rm debian/control
+            mv ../debian_files/control debian/control
 
-        - name: Create debian/source/format
+        - name: Modify Debian rules file
           run: |
-            cd quantumvortex-engine.orig
-            mkdir -p debian/source
-            echo "3.0 (quilt)" > debian/source/format
+            cd quantumvortex-engine-1.0.0
+            rm debian/rules
+            mv ../debian_files/rules debian/rules
+
+        - name: Modify Debian copyright file
+          run: |
+            cd quantumvortex-engine-1.0.0
+            rm debian/copyright
+            mv ../debian_files/copyright debian/copyright
 
         - name: Build DEB package
           run: |
-            cd quantumvortex-engine.orig
+            cd quantumvortex-engine-1.0.0
             echo ""
-            ls -la
+            tree
             echo ""
-            debuild -us -uc
+            debuild
 
         - name: Check if DEB package was created
           run: |
@@ -109,3 +87,52 @@
           with:
             name: deb-package
             path: ./quantumvortex-engine_*.deb
+
+        # - name: Create DEB compat file
+        #   run: |
+        #     cd quantumvortex-engine-1.0.0
+        #     echo "13" > debian/compat
+
+        # - name: Create DEB changelog file
+        #   run: |
+        #     ls
+        #     cd quantumvortex-engine
+        #     echo "quantumvortex-engine (1.0-1) UNRELEASED; urgency=medium" > debian/changelog
+        #     echo "" >> debian/changelog
+        #     echo "  * Initial release." >> debian/changelog
+        #     echo "" >> debian/changelog
+        #     echo " -- Campagne <thibault.campagne@epitech.eu>  Fri, 05 Jan 2024 03:08:00 +0100" >> debian/changelog
+
+        # - name: Create DEB control file
+        #   run: |
+        #     cd quantumvortex-engine.orig
+        #     echo "Source: quantumvortex-engine" > debian/control
+        #     echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> debian/control
+        #     echo "Section: devel" >> debian/control
+        #     echo "Priority: required" >> debian/control
+        #     echo "Standards-Version: 4.6.0.1" >> debian/control
+        #     echo "Build-Depends: debhelper (>= 13.0)" >> debian/control
+        #     echo "" >> debian/control
+        #     echo "Package: quantumvortex-engine" >> debian/control
+        #     echo "Architecture: any" >> debian/control
+        #     echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libsfml-dev (>= 2.5.1), debhelper (>= 13.0)" >> debian/control
+        #     echo "Description: QuantumVortex Engine library is a 2D game engine" >> debian/control
+        #     echo " designed to empower game developers in creating captivating 2D video games." >> debian/control
+        #     echo " It provides a comprehensive set of tools, features, and resources for 2D game" >> debian/control
+        #     echo " development. With QuantumVortex Engine, creators can easily craft 2D games," >> debian/control
+        #     echo " design visually appealing graphics, manage game physics, and deliver immersive" >> debian/control
+        #     echo " gaming experiences within a two-dimensional world." >> debian/control
+
+        # - name: Create DEB rules file
+        #   run: |
+        #     cd quantumvortex-engine.orig
+        #     echo '#!/usr/bin/make -f' > debian/rules
+        #     echo "%:" >> debian/rules
+        #     echo -e "\tdh \$@" >> debian/rules
+        #     chmod +x debian/rules
+
+        # - name: Create debian/source/format
+        #   run: |
+        #     cd quantumvortex-engine.orig
+        #     mkdir -p debian/source
+        #     echo "3.0 (quilt)" > debian/source/format
