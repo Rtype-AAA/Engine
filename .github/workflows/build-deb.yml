@@ -24,7 +24,6 @@
           run: |
             cmake -Bbuild
             cmake --build build
-            mv copyright build/
             cd build
             cpack
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
@@ -36,26 +35,7 @@
             ls -l
             echo ""
             mkdir debian
-
-          # run: |
-          #   mkdir -p package-build/src
-          #   mkdir -p package-build/debian/tmp/usr/lib/
-          #   cp -r src/* package-build/src/
-          #   cp copyright package-build/debian
-          #   cmake -Bbuild
-          #   cmake --build build
-          #   cd build
-          #   cpack
-          #   mkdir -p test
-          #   mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' test/
-          #   cd test
-          #   tar xf 'QuantumVortex Engine-1.0.0-Linux.tar.gz'
-          #   tree
-          #   mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../
-          #   cd ..
-          #   mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
-          #   cd ..
-          #   cp build/libengine_lib.so package-build/debian/tmp/usr/lib/
+            mv ../copyright debian/copyright
 
         - name: Create DEB compat file
           run: |
@@ -112,12 +92,17 @@
         - name: Build DEB package
           run: |
             cd quantumvortex-engine.orig
+            echo ""
+            ls -la
+            echo ""
             debuild -us -uc
 
         - name: Check if DEB package was created
           run: |
             cd quantumvortex-engine.orig
-            ls -laR
+            echo ""
+            ls -la
+            echo ""
             dpkg -c quantumvortex-engine_*.deb
 
         - name: Upload DEB package
