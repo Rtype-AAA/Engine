@@ -111,12 +111,14 @@ install(TARGETS engine_lib
 install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
         DESTINATION include/engine)
 
 
@@ -145,13 +147,10 @@ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/copyright")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 
 if (WIN32)
-    set(CPACK_GENERATOR "NSIS;ZIP")
-    set(CPACK_NSIS_MODIFY_PATH ON)
+    set(CPACK_GENERATOR "ZIP")
 else()
-    set(CPACK_GENERATOR "RPM;TGZ")
-    set(CPACK_RPM_PACKAGE_LICENSE "MIT")
-    set(CPACK_RPM_PACKAGE_GROUP "Amusements/Games")
-    set(CPACK_RPM_COMPRESSION_TYPE "xz")
+    set(CPACK_GENERATOR "TGZ")
+
 endif ()
 
 include(CPack)
