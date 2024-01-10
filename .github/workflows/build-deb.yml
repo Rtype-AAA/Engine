@@ -114,10 +114,10 @@
         #     ls -l
         #     tar xf quantumvortex-engine_1.0.orig.tar.gz
 
-        # - name: Build DEB package
-        #   run: |
-        #     cd package-build
-        #     debuild -us -uc
+        - name: Build DEB package
+          run: |
+            cd quantumvortex-engine.orig
+            debuild -us -uc
 
         - name: Check if DEB package was created
           run: |
