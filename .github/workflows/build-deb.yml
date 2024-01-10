@@ -24,17 +24,17 @@
           run: |
             cmake -Bbuild
             cmake --build build
+            mv copyright build/
             cd build
             cpack
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
             cd ..
             tar xf quantumvortex-engine_1.0.orig.tar.gz
             mv 'QuantumVortex Engine-1.0.0-Linux' quantumvortex-engine.orig
+            cd quantumvortex-engine.orig
             echo ""
             ls -l
             echo ""
-            mv copyright quantumvortex-engine.orig
-            cd quantumvortex-engine.orig
             mkdir debian
 
           # run: |
