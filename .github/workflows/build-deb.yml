@@ -58,13 +58,13 @@
 
         - name: Create DEB compat file
           run: |
-            echo "LS FOR COMPAT"
-            ls
-            echo ""
+            cd quantumvortex-engine.orig
             echo "13" > debian/compat
 
         - name: Create DEB changelog file
           run: |
+            ls
+            cd quantumvortex-engine.orig
             echo "quantumvortex-engine (1.0-1) UNRELEASED; urgency=medium" > debian/changelog
             echo "" >> debian/changelog
             echo "  * Initial release." >> debian/changelog
@@ -76,6 +76,7 @@
 
         - name: Create DEB control file
           run: |
+            cd quantumvortex-engine.orig
             echo "Source: quantumvortex-engine" > debian/control
             echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> debian/control
             echo "Section: devel" >> debian/control
@@ -95,6 +96,7 @@
 
         - name: Create DEB rules file
           run: |
+            cd quantumvortex-engine.orig
             echo '#!/usr/bin/make -f' > debian/rules
             echo "%:" >> debian/rules
             echo -e "\tdh \$@" >> debian/rules
@@ -102,6 +104,7 @@
 
         - name: Create debian/source/format
           run: |
+            cd quantumvortex-engine.orig
             mkdir -p debian/source
             echo "3.0 (quilt)" > debian/source/format
 
@@ -118,6 +121,7 @@
 
         - name: Check if DEB package was created
           run: |
+            cd quantumvortex-engine.orig
             ls -l
             dpkg -c quantumvortex-engine_*.deb
 
@@ -125,4 +129,4 @@
           uses: actions/upload-artifact@v3
           with:
             name: deb-package
-            path: ./quantumvortex-engine_*.deb
+            path: ./quantumvortex-engine.orig/quantumvortex-engine_*.deb
