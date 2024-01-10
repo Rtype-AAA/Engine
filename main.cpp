@@ -31,9 +31,6 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
     mapEntityManager["Player"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Player1"});
     level1World->setNameWorld("Level1");
     level1World->createEntities(mapEntityManager);
-    for (auto const& entityManager : level1World->getEntityManagerMap()) {
-        std::cout << entityManager.first << std::endl;
-    }
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
