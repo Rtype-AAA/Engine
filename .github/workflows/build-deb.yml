@@ -29,6 +29,7 @@
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine_1.0.orig.tar.gz
             cd ..
             tar xf quantumvortex-engine_1.0.orig.tar.gz
+            mv 'QuantumVortex Engine-1.0.0-Linux' quantumvortex-engine.orig
             echo ""
             ls -l
             echo ""
