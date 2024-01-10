@@ -28,6 +28,13 @@ public:
     /// @param void
     /// @return bool: true if the component is initialized, false otherwise
     virtual bool init() {return true;}
+<<<<<<< HEAD
+=======
+
+    /// @brief update(): Update the component
+    /// @param timeDelta: time elapsed since the last update
+    /// @return void
+>>>>>>> 004cd3b ([m] Engine:)
     virtual void update(sf::Time timeDelta) = 0;
 };
 
