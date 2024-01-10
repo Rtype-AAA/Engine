@@ -58,6 +58,9 @@
 
         - name: Create DEB compat file
           run: |
+            echo "LS FOR COMPAT"
+            ls
+            echo ""
             echo "13" > debian/compat
 
         - name: Create DEB changelog file
