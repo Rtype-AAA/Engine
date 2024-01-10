@@ -5,6 +5,7 @@ on:
     branches:
       # - main
       # - test_workflows
+      - Issue#2
 
 jobs:
   build-fedora-38:
