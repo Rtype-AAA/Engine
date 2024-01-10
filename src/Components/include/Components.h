@@ -5,6 +5,7 @@
 #pragma once
 
 #include "std.h"
+#include "sfml.h"
 
 class Components {
 public:
@@ -12,6 +13,6 @@ public:
     virtual ~Components() = default;
 
     virtual bool init() {return true;}
-    virtual void update() {};
+    virtual void update(sf::Time timeDelta) = 0;
 };
 

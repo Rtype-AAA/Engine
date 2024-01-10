@@ -7,19 +7,29 @@
 #include "sfml.h"
 #include "std.h"
 #include "Components.h"
+#include "Rect.h"
 #include "DrawableComponent.h"
+#include "toSFML.h"
 
 /**
  * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
  *
  * The Sprite class manages the graphical representation of a Component using SFML.
  */
-class Sprite : public Components, public DrawableComponent {
+class Sprite : public Components, public DrawableComponent, public toSFML {
 private:
     sf::Sprite sprite; ///< SFML Sprite for rendering.
     sf::Texture texture; ///< SFML Texture for the sprite.
     std::function<void()> deferredSprite; ///< Deferred sprite.
+
+    std::vector<Rect<int>> frames;
+    sf::Time timeSinceLastFrame;
+    sf::Time frameDuration;
+    int currentFrame;
+    bool animation;
+
     int bit = 1; ///< Bit of the Sprite.
+    void doAnimation(sf::Time deltaTime);
 public:
     /// @brief Default Sprite constructor.
     /// @param void
@@ -56,6 +66,8 @@ public:
     /// @param window: SFML RenderWindow where the Sprite will be drawn.
     /// @return void
     void draw(sf::RenderWindow& window) const override;
+
+    void update(sf::Time deltaTime) override;
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
     /// @param texturePath: Path to the texture file for the sprite.
@@ -97,7 +109,8 @@ public:
     /// @param nameTexture: Name of the texture.
     /// @param mapTransform: Map of string and vector of floats.
     /// @return void
-    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
+    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
+                   bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
 
     /// @brief setDeferredSprite(): Set the deferred sprite.
     /// @param setter: Function that will set the sprite.

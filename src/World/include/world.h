@@ -34,7 +34,7 @@ public:
     /// @param keyEntityManager: Key of the entities manager.
     /// @return void
     void createEntities(std::map<std::string, std::pair<std::unique_ptr<EntityManager>,
-            std::vector<std::string>>>& mapEntityManager, std::string keyEntityManager);
+            std::vector<std::string>>>& mapEntityManager);
 
     /// @brief addEntityManager(): Add an entity manager to the map.
     /// @param NameEntityManager: Name of the entity manager.
