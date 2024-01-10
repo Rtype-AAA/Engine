@@ -99,7 +99,6 @@
 
         - name: Check if DEB package was created
           run: |
-            cd quantumvortex-engine.orig
             echo ""
             ls -la
             echo ""
@@ -109,4 +108,4 @@
           uses: actions/upload-artifact@v3
           with:
             name: deb-package
-            path: ./quantumvortex-engine.orig/quantumvortex-engine_*.deb
+            path: ./quantumvortex-engine_*.deb
