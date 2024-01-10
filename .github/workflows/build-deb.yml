@@ -28,7 +28,7 @@
             cpack
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine-1.0.0.tar.gz
             cd ..
-            tar xf quantumvortex-engine_1.0.0.tar.gz
+            tar xf quantumvortex-engine-1.0.0.tar.gz
             mv 'QuantumVortex Engine-1.0.0-Linux' quantumvortex-engine-1.0.0
             cd quantumvortex-engine-1.0.0
             echo ""
