@@ -12,6 +12,14 @@ void Entity::setName(std::string newName) {
     name = std::move(newName);
 }
 
+void Entity::update(sf::Time deltaTime) {
+    for (size_t i = 0; i < componentBitset.size(); i++) {
+        if (componentBitset.test(i)) {
+            componentArray[i]->update(deltaTime);
+        }
+    }
+}
+
 bool Entity::initEntity() {
     for (int i = 0; i < componentBitset.size(); i++) {
         componentBitset[i] = false;

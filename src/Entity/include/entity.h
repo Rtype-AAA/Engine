@@ -52,6 +52,8 @@ public:
     /// @return std::string: name of the entity
     [[nodiscard]] std::string getName() const;
 
+    void update(sf::Time deltaTime) override;
+
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
     /// @return void

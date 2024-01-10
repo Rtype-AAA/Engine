@@ -22,8 +22,11 @@ private:
     std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; ///< Map of the textures.
     World *currentWorld; ///< Current world.
 
-    std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; ///< Window of the game. It can be a sf::Window or a sf::RenderWindow.
-    EventEngine event; ///< EventEngine class which manages the events.
+    std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
+    EventEngine event;                                                                   /// < EventEngine class which manages the events.
+
+    sf::Clock clock;
+    sf::Time deltaTime;
 public:
     /// @brief Default GameEngine constructor.
     /// @param void

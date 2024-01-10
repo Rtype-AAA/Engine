@@ -8,6 +8,10 @@ int Transform::getBit() const {
     return bit;
 }
 
+void Transform::update(sf::Time deltaTime) {
+    return;
+}
+
 std::vector<float> Transform::getPositionVector() const {
     return position;
 }

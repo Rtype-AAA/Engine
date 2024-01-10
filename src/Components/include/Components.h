@@ -5,6 +5,7 @@
 #pragma once
 
 #include "std.h"
+#include "sfml.h"
 
 /**
  * @brief Components class: Components is a class that represents a component in the game.
@@ -27,10 +28,6 @@ public:
     /// @param void
     /// @return bool: true if the component is initialized, false otherwise
     virtual bool init() {return true;}
-
-    /// @brief update(): Update the component
-    /// @param void
-    /// @return void
-    virtual void update() {};
+    virtual void update(sf::Time timeDelta) = 0;
 };
 

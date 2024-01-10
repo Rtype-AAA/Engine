@@ -121,11 +121,7 @@ TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
     sf::Sprite testSprite;
     testSprite.setTexture(testTexture);
 
-    std::map<std::string, std::vector<float>> mapTransform;
-    mapTransform["Position"] = {10.0f, 20.0f};
-    mapTransform["Scale"] = {2.0f, 2.0f};
-
-    spriteComp.setSprite(mapTexture, "TestTexture", mapTransform);
+    spriteComp.setSprite(mapTexture, "TestTexture");
 
     ASSERT_TRUE(spriteComp.getSprite().getTexture() != nullptr);
 

@@ -83,14 +83,11 @@ TEST_F(GameEngineTest, Initialize) {
 
     std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
     mapEntityManager["Image"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"red"});
-    worldPtr->createEntities(mapEntityManager, nameWorld);
+    worldPtr->createEntities(mapEntityManager);
 
-    worldPtr->getEntityManager(nameWorld).getEntity("red").addComponent<Sprite>().setDeferredSprite([&]()
+    worldPtr->getEntityManager("Image").getEntity("red").addComponent<Sprite>().setDeferredSprite([&]()
                                                                                                   {
-            std::map<std::string, std::vector<float>> mapTransform;
-            mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
-            mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
-            gameEngine->getWorld(nameWorld).getEntityManager(nameWorld).getEntity("red").getComponent<Sprite>().setSprite(gameEngine->getMapTexture(), "red.png", mapTransform); });
+            gameEngine->getWorld(nameWorld).getEntityManager("Image").getEntity("red").getComponent<Sprite>().setSprite(gameEngine->getMapTexture(), "red.png"); });
 
     mapWorld[nameWorld] = std::move(worldPtr);
 
@@ -125,7 +122,7 @@ TEST_F(GameEngineTest, Initialize) {
 
     ASSERT_EQ(worldMap2.begin()->first, nameWorld);
 
-    sf::Sprite initializedSprite = worldMap2[nameWorld]->getEntityManager(nameWorld).getEntity("red").getComponent<Sprite>().getSprite();
+    sf::Sprite initializedSprite = worldMap2[nameWorld]->getEntityManager("Image").getEntity("red").getComponent<Sprite>().getSprite();
 
     ASSERT_NE(initializedSprite.getTexture(), nullptr);
 }
@@ -155,14 +152,11 @@ TEST_F(GameEngineTest, InitializeSprite)
 
     std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
     mapEntityManager["Image"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"red"});
-    worldPtr->createEntities(mapEntityManager, nameWorld);
+    worldPtr->createEntities(mapEntityManager);
 
-    worldPtr->getEntityManager(nameWorld).getEntity("red").addComponent<Sprite>().setDeferredSprite([&]()
+    worldPtr->getEntityManager("Image").getEntity("red").addComponent<Sprite>().setDeferredSprite([&]()
                                                                                                   {
-            std::map<std::string, std::vector<float>> mapTransform;
-            mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
-            mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
-            gameEngine->getWorld(nameWorld).getEntityManager(nameWorld).getEntity("red").getComponent<Sprite>().setSprite(gameEngine->getMapTexture(), "red.png", mapTransform); });
+            gameEngine->getWorld(nameWorld).getEntityManager("Image").getEntity("red").getComponent<Sprite>().setSprite(gameEngine->getMapTexture(), "red.png"); });
 
     mapWorld[nameWorld] = std::move(worldPtr);
 
@@ -197,7 +191,7 @@ TEST_F(GameEngineTest, InitializeSprite)
 
     ASSERT_EQ(worldMap2.begin()->first, nameWorld);
 
-    sf::Sprite initializedSprite = worldMap2[nameWorld]->getEntityManager(nameWorld).getEntity("red").getComponent<Sprite>().getSprite();
+    sf::Sprite initializedSprite = worldMap2[nameWorld]->getEntityManager("Image").getEntity("red").getComponent<Sprite>().getSprite();
 
     ASSERT_NE(initializedSprite.getTexture(), nullptr);
 }
