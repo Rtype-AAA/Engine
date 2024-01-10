@@ -33,6 +33,7 @@
             echo ""
             ls -l
             echo ""
+            mv copyright quantumvortex-engine.orig
             cd quantumvortex-engine.orig
             mkdir debian
 
@@ -81,13 +82,13 @@
             echo "Maintainer: Campagne <thibault.campagne@epitech.eu>" >> debian/control
             echo "Section: devel" >> debian/control
             echo "Priority: required" >> debian/control
-            echo "Standards-Version: 4.6.2" >> debian/control
+            echo "Standards-Version: 4.6.0.1" >> debian/control
             echo "Build-Depends: debhelper (>= 13.0)" >> debian/control
             echo "" >> debian/control
             echo "Package: quantumvortex-engine" >> debian/control
             echo "Architecture: any" >> debian/control
-            echo "Depends: libsfml-dev (>= 2.5.1), debhelper (>= 13.0), ${shlibs:Depends}, ${misc:Depends}" >> debian/control
-            echo "Description: The QuantumVortex Engine library is a 2D game engine" >> debian/control
+            echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libsfml-dev (>= 2.5.1), debhelper (>= 13.0)" >> debian/control
+            echo "Description: QuantumVortex Engine library is a 2D game engine" >> debian/control
             echo " designed to empower game developers in creating captivating 2D video games." >> debian/control
             echo " It provides a comprehensive set of tools, features, and resources for 2D game" >> debian/control
             echo " development. With QuantumVortex Engine, creators can easily craft 2D games," >> debian/control
@@ -108,12 +109,6 @@
             mkdir -p debian/source
             echo "3.0 (quilt)" > debian/source/format
 
-        # - name: Prepare original source tarball
-        #   run: |
-        #     echo ""
-        #     ls -l
-        #     tar xf quantumvortex-engine_1.0.orig.tar.gz
-
         - name: Build DEB package
           run: |
             cd quantumvortex-engine.orig
@@ -122,7 +117,7 @@
         - name: Check if DEB package was created
           run: |
             cd quantumvortex-engine.orig
-            ls -l
+            ls -laR
             dpkg -c quantumvortex-engine_*.deb
 
         - name: Upload DEB package
