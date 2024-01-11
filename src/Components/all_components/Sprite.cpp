@@ -91,3 +91,46 @@ void Sprite::setDeferredSprite(std::function<void()> setter) {
 void Sprite::setTexture(const sf::Texture& existingTexture) {
     texture = existingTexture;
 }
+
+
+void Sprite::setTransformSprite() {
+    sprite.setPosition(getTransformStruct().position.getX(), getTransformStruct().position.getY());
+    sprite.setRotation(getTransformStruct().rotation);
+    sprite.setScale(getTransformStruct().scale.getX(), getTransformStruct().scale.getY());
+}
+
+void Sprite::setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
+    sprite.setPosition(newPosition.getX(), newPosition.getY());
+    sprite.setRotation(newRotation);
+    sprite.setScale(newScale.getX(), newScale.getY());
+    setTransform(newPosition, newRotation, newScale);
+}
+
+void Sprite::setPosition() {
+    sprite.setPosition(getTransformStruct().position.getX(), getTransformStruct().position.getY());
+}
+
+void Sprite::setPosition(Vector2<float> newPosition) {
+    sprite.setPosition(newPosition.getX(), newPosition.getY());
+}
+
+void Sprite::setRotation() {
+    sprite.setRotation(getTransformStruct().rotation);
+}
+
+void Sprite::setRotation(float newRotation) {
+    sprite.setRotation(newRotation);
+}
+
+void Sprite::setScale() {
+    sprite.setScale(getTransformStruct().scale.getX(), getTransformStruct().scale.getY());
+}
+
+void Sprite::setScale(Vector2<float> newScale) {
+    sprite.setScale(newScale.getX(), newScale.getY());
+}
+
+Rect<float> Sprite::getBounds() const {
+    sf::FloatRect bounds = sprite.getGlobalBounds();
+    return Rect<float>(bounds.left, bounds.top, bounds.width, bounds.height);
+}

@@ -39,8 +39,9 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
                 gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
-    level1World->getEntityManager("Player").getEntity("Background").addComponent<Transform>();
-    level1World->getEntityManager("Player").getEntity("Background").addComponent<Sprite>()
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().setPosition(Vector2<float>(1000.0f, 500.0f));
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::map<std::string, std::vector<float>> mapTransform;
                 mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
@@ -62,8 +63,10 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 frames.push_back(Rect<int>(429, 0, 33, 36));
                 frames.push_back(Rect<int>(462, 0, 33, 36));
                 frames.push_back(Rect<int>(495, 0, 33, 36));
-                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
+                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
             });
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setRotation(50.0f);
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
     return level1World;
 }
 
@@ -97,6 +100,12 @@ void event(GameEngine &gameEngine) {
             w->close();
         }, gameEngine.getWindow());
     });
+    gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
+        std::cout << "Clique gauche pressé" << std::endl;
+    });
+//    gameEngine.getEventEngine().addMouseMoved(gameEngine.getWorld("Menu").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().getSprite(), [&]() {
+//        std::cout << "Sur le sprite" << std::endl;
+//    });
 }
 
 int main() {

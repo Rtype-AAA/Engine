@@ -164,6 +164,20 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                case sf::Event::MouseButtonPressed:
+                    if (!getEventEngine().getMouseButtonPressedMap().empty()) {
+                        auto eventIt = getEventEngine().getMouseButtonPressedMap().find(event.getEvent().mouseButton.button);
+                        if (eventIt != getEventEngine().getMouseButtonPressedMap().end()) {
+                            eventIt->second();
+                        }
+                    }
+//                case sf::Event::MouseMoved:
+//                    if (!getEventEngine().getMouseMovedMap().empty()) {
+//                        auto eventIt = getEventEngine().getMouseMovedMap().find(event.getEvent().mouseMove);
+//                        if (eventIt != getEventEngine().getMouseMovedMap().end()) {
+//
+//                        }
+//                    }
             }
         }
     }, window);

@@ -18,6 +18,7 @@ file(GLOB HEADER_FILES
         "src/GameEngine/include/*.h"
         "src/Other/include/*.h"
         "src/toSFML/include/*.h"
+        "src/Script/include/*.h"
 )
 file(GLOB LIB_SRCS
         "src/Components/*.cpp"
@@ -28,6 +29,7 @@ file(GLOB LIB_SRCS
         "src/Event/*.cpp"
         "src/Other/*.cpp"
         "src/toSFML/*.cpp"
+        "src/Script/*.cpp"
 )
 
 add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
@@ -42,6 +44,7 @@ target_include_directories(engine_lib PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
 )
 target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
 
@@ -57,6 +60,7 @@ target_include_directories(engine PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
 )
 target_link_libraries(engine PRIVATE engine_lib)
 
@@ -82,6 +86,7 @@ if(BUILD_TESTS)
             ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
             ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
             ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
     )
     target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main)
 
@@ -119,6 +124,7 @@ install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
         DESTINATION include/engine)
 
 

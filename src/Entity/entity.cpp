@@ -71,7 +71,7 @@ template std::size_t Entity::getComponentTypeID<Sprite>();
 template std::size_t Entity::getComponentTypeID<Transform>();
 
 template Transform& Entity::addComponent<Transform>();
-template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
+//template Transform& Entity::addComponent<Transform>(Vector2<float>, float, Vector2<float>);
 template Sprite& Entity::addComponent<Sprite>();
 template Sprite& Entity::addComponent<Sprite>(std::string&);
 
