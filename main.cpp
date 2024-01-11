@@ -45,7 +45,12 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
             .setDeferredSprite([&]() {
                 gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
+<<<<<<< HEAD
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>().setTransformPosition(Vector2<float>(1000.0f, 500.0f));
+=======
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().setPosition(Vector2<float>(1000.0f, 500.0f));
+>>>>>>> ef4437f ([m] Engine:)
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::vector<Rect<int>> frames;
@@ -67,12 +72,17 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 frames.push_back(Rect<int>(495, 0, 33, 36));
                 gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
             });
+<<<<<<< HEAD
     level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sound>()
             .setDeferredSound([&]() {
                 gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser.flac");
 
     });
+=======
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setRotation(50.0f);
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
+>>>>>>> ef4437f ([m] Engine:)
     return level1World;
 }
 
@@ -112,6 +122,7 @@ void event(GameEngine &gameEngine) {
 
         }, gameEngine.getWindow());
     });
+<<<<<<< HEAD
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Space, [&] () {
         if (gameEngine.getCurrentWorld()->getNameWorld() == "Level1") {
             gameEngine.getCurrentWorld()->getEntityManager("Player").getEntity("Player1").getComponent<Sound>().play();
@@ -123,6 +134,14 @@ void event(GameEngine &gameEngine) {
     gameEngine.getEventEngine().addMouseMoved("Player1", [&]() {
         std::cout << "Sur le sprite" << std::endl;
     });
+=======
+    gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
+        std::cout << "Clique gauche pressé" << std::endl;
+    });
+//    gameEngine.getEventEngine().addMouseMoved(gameEngine.getWorld("Menu").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().getSprite(), [&]() {
+//        std::cout << "Sur le sprite" << std::endl;
+//    });
+>>>>>>> ef4437f ([m] Engine:)
 }
 
 int main() {
