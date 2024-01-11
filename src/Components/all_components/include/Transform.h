@@ -28,6 +28,15 @@ public:
     /// @param void
     /// @return void
     Transform() : transform{Vector2<float>(0.0f, 0.0f), 0.0f, Vector2<float>(1.0f, 1.0f)} {}
+<<<<<<< HEAD
+=======
+
+//    Transform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
+//        transform.position = newPosition;
+//        transform.rotation = newRotation;
+//        transform.scale = newScale;
+//    }
+>>>>>>> 8bf355f ([m] Engine:)
 
     /// @brief init(): Initialize the component
     /// @param void
