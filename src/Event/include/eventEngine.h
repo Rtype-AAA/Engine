@@ -2,8 +2,7 @@
 // Created by thibaultcampagne on 31/12/23.
 //
 
-#ifndef R_TYPE_EVENTENGINE_H
-#define R_TYPE_EVENTENGINE_H
+#pragma once
 
 #include "std.h"
 #include "sfml.h"
@@ -16,6 +15,8 @@
 class EventEngine {
 private:
     std::map<sf::Keyboard::Key, std::function<void()>> keyPressedMap{}; ///< Map of the key pressed.
+    std::map<sf::Mouse::Button, std::function<void()>> mouseButtonPressedMap{};
+//    std::map<sf::Mouse::, std::function<void()>> mouseMovedMap{};
     sf::Event event; ///< SFML Event.
 public:
     /// @brief Default EventEngine constructor.
@@ -44,11 +45,17 @@ public:
     /// @return void
     void addKeyPressed(sf::Keyboard::Key keyboard, std::function<void()> function);
 
+    void addMouseButtonPressed(sf::Mouse::Button mouse, std::function<void()> function);
+
+    void addMouseMoved(sf::Sprite sprite, std::function<void()> function);
+
     /// @brief getKeyPressedMap(): Get the map of the key pressed.
     /// @param void
     /// @return std::map<sf::Keyboard::Key, std::function<void()>>: The map of the key pressed.
     std::map<sf::Keyboard::Key, std::function<void()>>& getKeyPressedMap() {return keyPressedMap;}
+
+    std::map<sf::Mouse::Button, std::function<void()>>& getMouseButtonPressedMap() {return mouseButtonPressedMap;}
+
+//    std::map<sf::Sprite, std::function<void()>>& getMouseMovedMap() {return mouseMovedMap;}
 };
 
-
-#endif //R_TYPE_EVENT_H

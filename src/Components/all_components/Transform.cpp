@@ -12,28 +12,20 @@ void Transform::update(sf::Time deltaTime) {
     return;
 }
 
-std::vector<float> Transform::getPositionVector() const {
-    return position;
+void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
+    transform.position = newPosition;
+    transform.rotation = newRotation;
+    transform.scale = newScale;
 }
 
-std::vector<float> Transform::getRotationVector() const {
-    return rotation;
+void Transform::setPosition(Vector2<float> newPosition) {
+    transform.position = newPosition;
 }
 
-std::vector<float> Transform::getScaleVector() const {
-    return scale;
+void Transform::setRotation(float newRotation) {
+    transform.rotation = newRotation;
 }
 
-void Transform::setTransform(const std::map<std::string, std::vector<float>>& mapTransform) {
-    for(const auto& element : mapTransform) {
-        if ((element.first == "Position" || element.first == "position") && element.second.size() == 2) {
-            position = element.second;
-        }
-        if ((element.first == "Rotation" || element.first == "rotation") && element.second.size() == 2) {
-            rotation = element.second;
-        }
-        if ((element.first == "Scale" || element.first == "scale") && element.second.size() == 2) {
-            scale = element.second;
-        }
-    }
+void Transform::setScale(Vector2<float> newScale) {
+    transform.scale = newScale;
 }

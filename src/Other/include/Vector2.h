@@ -7,18 +7,18 @@
 template <typename T>
 class Vector2 {
 private:
-    struct Position {
+    struct Vector2Struct {
         T x;
         T y;
     };
-    Position pos;
+    Vector2Struct vect;
 public:
-    Vector2<T>(T x, T y) : pos{x, y} {};
+    Vector2<T>(T x, T y) : vect{x, y} {}
 
     ~Vector2<T>() = default;
 
-    Position getPosition() const {return pos;}
+    Vector2Struct getVector2Struct() const {return vect;}
 
-    T getX() const {return pos.x;}
-    T getY() const {return pos.y;}
+    T getX() const {return vect.x;}
+    T getY() const {return vect.y;}
 };

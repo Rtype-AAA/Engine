@@ -10,13 +10,15 @@
 #include "Rect.h"
 #include "DrawableComponent.h"
 #include "toSFML.h"
+#include "Transform.h"
+#include "Vector2.h"
 
 /**
  * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
  *
  * The Sprite class manages the graphical representation of a Component using SFML.
  */
-class Sprite : public Components, public DrawableComponent, public toSFML {
+class Sprite : public DrawableComponent, public toSFML, public Transform {
 private:
     sf::Sprite sprite; ///< SFML Sprite for rendering.
     sf::Texture texture; ///< SFML Texture for the sprite.
@@ -112,6 +114,22 @@ public:
     void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
                    bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
 
+    void setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
+
+    void setTransformSprite();
+
+    void setPosition(Vector2<float> newPosition);
+
+    void setPosition();
+
+    void setRotation(float newRotation);
+
+    void setRotation();
+
+    void setScale(Vector2<float> newScale);
+
+    void setScale();
+
     /// @brief setDeferredSprite(): Set the deferred sprite.
     /// @param setter: Function that will set the sprite.
     /// @return void
@@ -126,5 +144,7 @@ public:
     /// @param existingTexture: SFML Texture for the sprite
     /// @return void
     void setTexture(const sf::Texture& existingTexture);
+
+    Rect<float> getBounds() const;
 };
 

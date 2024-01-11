@@ -16,7 +16,7 @@ private:
 
     Data data;
 public:
-    Rect<T>(T left, T top, T width, T height) : data{left, top, width, height} {};
+    Rect<T>(T left, T top, T width, T height) : data{left, top, width, height} {}
 
     ~Rect<T>() = default;
 
