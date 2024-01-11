@@ -10,5 +10,7 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr
-	cp -r $(CURDIR)/include/quantumvortex-engine $(CURDIR)/debian/quantumvortex-engine/usr/
+	mv $(CURDIR)/include/quantumvortex-engine/include/*.h $(CURDIR)/include/quantumvortex-engine/
+	rm -rf $(CURDIR)/include/quantumvortex-engine/include
+	cp -r $(CURDIR)/include/ $(CURDIR)/debian/quantumvortex-engine/usr/
 	cp -r $(CURDIR)/lib $(CURDIR)/debian/quantumvortex-engine/usr/
