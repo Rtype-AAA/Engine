@@ -13,5 +13,5 @@ override_dh_auto_install:
 	mv $(CURDIR)/include/quantumvortex-engine/include/*.h $(CURDIR)/include/quantumvortex-engine/
 	rm -rf $(CURDIR)/include/quantumvortex-engine/include
 	mkdir -p $(CURDIR)/debian/quantumvortex-engine/usr/include
-	cp -r $(CURDIR)/include/ $(CURDIR)/debian/quantumvortex-engine/usr/include
+	cp -r $(CURDIR)/include/ $(CURDIR)/debian/quantumvortex-engine/usr/
 	cp -r $(CURDIR)/lib $(CURDIR)/debian/quantumvortex-engine/usr/
