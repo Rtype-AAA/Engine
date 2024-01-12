@@ -11,11 +11,12 @@
 
 
 
-Inheritance diagram for Transform\+:\nopagebreak
+Inheritance diagram for Transform\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=202pt]{d2/d02/classTransform__inherit__graph}
+\includegraphics[width=294pt]{d2/d02/classTransform__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -36,9 +37,8 @@ bool \mbox{\hyperlink{classTransform_a0beb2ae1b3f4331e979aa8c5287f904d}{init}} (
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTransform_ac02ce42e0a10a0ab365daf50fb5cd3ff}{$\sim$\+Transform}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform}{Transform}} destructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTransform_a439d029d45b7fff4069d58ed415cb48c}\label{classTransform_a439d029d45b7fff4069d58ed415cb48c}} 
-void {\bfseries update} (sf\+::\+Time delta\+Time) override
-\item 
+void \mbox{\hyperlink{classTransform_a439d029d45b7fff4069d58ed415cb48c}{update}} (sf\+::\+Time delta\+Time) override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a439d029d45b7fff4069d58ed415cb48c}{update()}}\+: Update the component \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classTransform_aaa7a85c4c5c79f48750411d692cbeb8f}{get\+Bit}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_aaa7a85c4c5c79f48750411d692cbeb8f}{get\+Bit()}}\+: Get the bitmask of the component \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ \mbox{\hyperlink{classTransform_a25610649a81c76093d4d9d57fd7800f7}{get\+Position}} () const
@@ -57,7 +57,6 @@ void \mbox{\hyperlink{classTransform_a2bebea30bce03eb227e8485f53d02abb}{set\+Tra
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a2bebea30bce03eb227e8485f53d02abb}{set\+Transform\+Rotation()}}\+: Set the transform rotation of the component; \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}{set\+Transform\+Scale}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a8a7fea95b0d7b03655da8864fb06ee99}{set\+Transform\+Scale()}}\+: Set the transform scale of the component; \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -289,6 +288,28 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTransform_a439d029d45b7fff4069d58ed415cb48c}\label{classTransform_a439d029d45b7fff4069d58ed415cb48c}} 
+\index{Transform@{Transform}!update@{update}}
+\index{update@{update}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Transform\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classTransform_a439d029d45b7fff4069d58ed415cb48c}{update()}}\+: Update the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Delta} & time elapsed since the last update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
