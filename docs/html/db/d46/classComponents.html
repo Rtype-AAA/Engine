@@ -63,10 +63,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d5/d16/classComponents-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Components Class Reference</div>  </div>
+<div class="title">Components Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -87,9 +86,10 @@ Inheritance diagram for Components:</div>
 <area shape="rect" href="../../dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
 <area shape="rect" href="../../d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
 <area shape="rect" href="../../df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
-<area shape="rect" href="../../d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="183,155,265,181"/>
-<area shape="rect" href="../../d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="289,155,345,181"/>
-<area shape="rect" href="../../df/d53/classText.html" title=" " alt="" coords="370,155,417,181"/>
+<area shape="rect" href="../../d7/dc9/classRect.html" title=" " alt="" coords="144,155,243,181"/>
+<area shape="rect" href="../../d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="267,155,349,181"/>
+<area shape="rect" href="../../d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="373,155,429,181"/>
+<area shape="rect" href="../../df/d53/classText.html" title=" " alt="" coords="454,155,501,181"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -104,12 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb5db757815c1d8b961c069515f8e260"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">init</a> ()</td></tr>
 <tr class="memdesc:adb5db757815c1d8b961c069515f8e260"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the component  <a href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">More...</a><br /></td></tr>
 <tr class="separator:adb5db757815c1d8b961c069515f8e260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a0275665183f95ea61cf0711a91fcaf5c"><td class="memItemLeft" align="right" valign="top"><a id="a0275665183f95ea61cf0711a91fcaf5c"></a>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD=======&gt;&gt;&gt;&gt;&gt;&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Engine</b>:) virtual void update(sf::Time timeDelta) = 0</td></tr>
-<tr class="separator:a0275665183f95ea61cf0711a91fcaf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac886b9c5719c5d40ee06812c4c992110"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">update</a> (sf::Time timeDelta)=0</td></tr>
+<tr class="memdesc:ac886b9c5719c5d40ee06812c4c992110"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110" title="update(): Update the component">update()</a>: Update the component  <a href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">More...</a><br /></td></tr>
+<tr class="separator:ac886b9c5719c5d40ee06812c4c992110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game.">Components</a> class: <a class="el" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game.">Components</a> is a class that represents a component in the game. </p>
@@ -215,6 +212,43 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool: true if the component is initialized, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ac886b9c5719c5d40ee06812c4c992110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac886b9c5719c5d40ee06812c4c992110">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Components::update </td>
+          <td>(</td>
+          <td class="paramtype">sf::Time&#160;</td>
+          <td class="paramname"><em>timeDelta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110" title="update(): Update the component">update()</a>: Update the component </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeDelta</td><td>time elapsed since the last update </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implemented in <a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369">Entity</a>, <a class="el" href="../../db/daf/classTransform.html#a439d029d45b7fff4069d58ed415cb48c">Transform</a>, <a class="el" href="../../df/d53/classText.html#a372961f4dabb31ecb29ea03d19d3f713">Text</a>, and <a class="el" href="../../d1/d6d/classSprite.html#a679e3e99b9b5eb3090eda5bf39174de0">Sprite</a>.</p>
 
 </div>
 </div>

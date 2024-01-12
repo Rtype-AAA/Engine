@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  14 JAN 2024 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.9)  14 JAN 2024 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,36 +722,7 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box120
 )
-(./refman.aux
-
-LaTeX Warning: Label `classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_ad8836de2cee1a9e5b9281c2e9112deb4' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_a6d7e8565e386cc58c866ac61b1f5342b' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_ad161434ef61fe2c3eb30c2dad8c0744b' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_ad31df9112a24b426d76725c626c6628f' multiply d
-efined.
-
-
-LaTeX Warning: Label `classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc' multiply d
-efined.
-
-)
+(./refman.aux)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -772,7 +743,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
 \scratchdimen=\dimen262
@@ -951,7 +923,7 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 pdfTeX warning: pdflatex (file ./df/df8/classAudioTest__inherit__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<df/df8/classAudioTest__inherit__graph.pdf, id=1328, 151.56625pt x 156.585pt>
+<df/df8/classAudioTest__inherit__graph.pdf, id=1346, 151.56625pt x 156.585pt>
 File: df/df8/classAudioTest__inherit__graph.pdf Graphic file (type pdf)
 <use df/df8/classAudioTest__inherit__graph.pdf>
 Package pdftex.def Info: df/df8/classAudioTest__inherit__graph.pdf  used on inp
@@ -962,7 +934,7 @@ ut line 9.
 pdfTeX warning: pdflatex (file ./d0/d17/classAudioTest__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<d0/d17/classAudioTest__coll__graph.pdf, id=1336, 151.56625pt x 156.585pt>
+<d0/d17/classAudioTest__coll__graph.pdf, id=1354, 151.56625pt x 156.585pt>
 File: d0/d17/classAudioTest__coll__graph.pdf Graphic file (type pdf)
 <use d0/d17/classAudioTest__coll__graph.pdf>
 Package pdftex.def Info: d0/d17/classAudioTest__coll__graph.pdf  used on input 
@@ -971,7 +943,7 @@ line 18.
  [7
 
 ]) (./d2/d37/classColor.tex <./d6/d86/classColor__coll__graph.pdf>
-<d6/d86/classColor__coll__graph.pdf, id=1351, 190.7125pt x 179.67125pt>
+<d6/d86/classColor__coll__graph.pdf, id=1369, 190.7125pt x 179.67125pt>
 File: d6/d86/classColor__coll__graph.pdf Graphic file (type pdf)
 <use d6/d86/classColor__coll__graph.pdf>
 Package pdftex.def Info: d6/d86/classColor__coll__graph.pdf  used on input line
@@ -979,35 +951,44 @@ Package pdftex.def Info: d6/d86/classColor__coll__graph.pdf  used on input line
 (pdftex.def)             Requested size: 190.0pt x 179.00732pt.
  [8])
 (./db/d46/classComponents.tex <./d7/da3/classComponents__inherit__graph.pdf>
-<d7/da3/classComponents__inherit__graph.pdf, id=1394, 390.45876pt x 325.215pt>
+<d7/da3/classComponents__inherit__graph.pdf, id=1412, 453.695pt x 325.215pt>
 File: d7/da3/classComponents__inherit__graph.pdf Graphic file (type pdf)
 <use d7/da3/classComponents__inherit__graph.pdf>
 Package pdftex.def Info: d7/da3/classComponents__inherit__graph.pdf  used on in
-put line 18.
-(pdftex.def)             Requested size: 350.0pt x 291.52959pt.
+put line 19.
+(pdftex.def)             Requested size: 350.0pt x 250.88774pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 25.
+(Font)              scaled to size 8.09995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 25.
+(Font)              scaled to size 8.09995pt on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 29.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 29.
+(Font)              scaled to size 6.29996pt on input line 30.
 
 [9]
-Underfull \hbox (badness 10000) detected at line 59
+Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
 
 [10]
-Underfull \hbox (badness 10000) detected at line 77
+Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 98
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 102.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 102.
+
+Underfull \hbox (badness 10000) detected at line 113
 [][][]
  []
 
@@ -1017,7 +998,7 @@ t__graph.pdf
 pdfTeX warning: pdflatex (file ./d7/d93/classDrawableComponent__inherit__graph.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d7/d93/classDrawableComponent__inherit__graph.pdf, id=1446, 188.705pt x 156.58
+<d7/d93/classDrawableComponent__inherit__graph.pdf, id=1471, 188.705pt x 156.58
 5pt>
 File: d7/d93/classDrawableComponent__inherit__graph.pdf Graphic file (type pdf)
 
@@ -1025,112 +1006,109 @@ File: d7/d93/classDrawableComponent__inherit__graph.pdf Graphic file (type pdf)
 Package pdftex.def Info: d7/d93/classDrawableComponent__inherit__graph.pdf  use
 d on input line 18.
 (pdftex.def)             Requested size: 188.0pt x 155.99922pt.
- [11]
+ [11] [12]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 61.
-[12]
+
 Underfull \hbox (badness 10000) detected at line 72
 [][][]
  []
 
-) (./da/d61/classEntity.tex <./dc/da1/classEntity__inherit__graph.pdf
-
-pdfTeX warning: pdflatex (file ./dc/da1/classEntity__inherit__graph.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
->
-<dc/da1/classEntity__inherit__graph.pdf, id=1485, 160.6pt x 325.215pt>
+) (./da/d61/classEntity.tex <./dc/da1/classEntity__inherit__graph.pdf>
+<dc/da1/classEntity__inherit__graph.pdf, id=1513, 160.6pt x 325.215pt>
 File: dc/da1/classEntity__inherit__graph.pdf Graphic file (type pdf)
 <use dc/da1/classEntity__inherit__graph.pdf>
 Package pdftex.def Info: dc/da1/classEntity__inherit__graph.pdf  used on input 
 line 18.
 (pdftex.def)             Requested size: 160.0pt x 324.00833pt.
- <./d5/dc2/classEntity__coll__graph.pdf
+ [13] <./d5/dc2/classEntity__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d5/dc2/classEntity__coll__graph.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >
-<d5/dc2/classEntity__coll__graph.pdf, id=1493, 152.57pt x 156.585pt>
+<d5/dc2/classEntity__coll__graph.pdf, id=1529, 152.57pt x 156.585pt>
 File: d5/dc2/classEntity__coll__graph.pdf Graphic file (type pdf)
 <use d5/dc2/classEntity__coll__graph.pdf>
 Package pdftex.def Info: d5/dc2/classEntity__coll__graph.pdf  used on input lin
 e 27.
 (pdftex.def)             Requested size: 152.0pt x 156.0064pt.
- [13] [14]
+ [14]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 76.
-
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
-
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 95.
-
-Underfull \hbox (badness 10000) detected at line 108
-[][][]
- []
-
-[15]
-Underfull \hbox (badness 10000) detected at line 126
+(Font)              scaled to size 7.19995pt on input line 75.
+ [15]
+Underfull \hbox (badness 10000) detected at line 87
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 155
+Underfull \hbox (badness 10000) detected at line 107
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 125
 [][][]
  []
 
 [16]
-Underfull \hbox (badness 10000) detected at line 173
+Underfull \hbox (badness 10000) detected at line 154
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 191
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 215
+Underfull \hbox (badness 10000) detected at line 172
 [][][]
  []
 
 [17]
-Underfull \hbox (badness 10000) detected at line 233
+Underfull \hbox (badness 10000) detected at line 190
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 251
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 232
 [][][]
  []
 
 [18]
-Underfull \hbox (badness 10000) detected at line 275
+Underfull \hbox (badness 10000) detected at line 250
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 293
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 311
+Underfull \hbox (badness 10000) detected at line 274
 [][][]
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 329
+Underfull \hbox (badness 10000) detected at line 292
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 347
+Underfull \hbox (badness 10000) detected at line 310
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 328
+[][][]
+ []
+
+[20]
+Underfull \hbox (badness 10000) detected at line 346
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 364
 [][][]
  []
 
@@ -1140,24 +1118,24 @@ Underfull \hbox (badness 10000) detected at line 347
 pdfTeX warning: pdflatex (file ./d1/d32/classEntityManager__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d1/d32/classEntityManager__inherit__graph.pdf, id=1631, 160.6pt x 325.215pt>
+<d1/d32/classEntityManager__inherit__graph.pdf, id=1667, 160.6pt x 325.215pt>
 File: d1/d32/classEntityManager__inherit__graph.pdf Graphic file (type pdf)
 <use d1/d32/classEntityManager__inherit__graph.pdf>
 Package pdftex.def Info: d1/d32/classEntityManager__inherit__graph.pdf  used on
  input line 9.
 (pdftex.def)             Requested size: 160.0pt x 324.00833pt.
- [20] <./df/d6e/classEntityManager__coll__graph.pdf
+ [21] <./df/d6e/classEntityManager__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./df/d6e/classEntityManager__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<df/d6e/classEntityManager__coll__graph.pdf, id=1644, 160.6pt x 212.795pt>
+<df/d6e/classEntityManager__coll__graph.pdf, id=1680, 160.6pt x 212.795pt>
 File: df/d6e/classEntityManager__coll__graph.pdf Graphic file (type pdf)
 <use df/d6e/classEntityManager__coll__graph.pdf>
 Package pdftex.def Info: df/d6e/classEntityManager__coll__graph.pdf  used on in
 put line 18.
 (pdftex.def)             Requested size: 160.0pt x 212.00543pt.
- [21]
+ [22]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 33.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
@@ -1171,7 +1149,7 @@ Underfull \hbox (badness 10000) detected at line 57
 Overfull \vbox (9.16626pt too high) has occurred while \output is active []
 
 
-[22]
+[23]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1181,7 +1159,7 @@ Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
@@ -1202,7 +1180,7 @@ t__graph.pdf
 pdfTeX warning: pdflatex (file ./d8/d70/classEntityManagerTest__inherit__graph.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d8/d70/classEntityManagerTest__inherit__graph.pdf, id=1723, 178.6675pt x 156.5
+<d8/d70/classEntityManagerTest__inherit__graph.pdf, id=1760, 178.6675pt x 156.5
 85pt>
 File: d8/d70/classEntityManagerTest__inherit__graph.pdf Graphic file (type pdf)
 
@@ -1210,12 +1188,12 @@ File: d8/d70/classEntityManagerTest__inherit__graph.pdf Graphic file (type pdf)
 Package pdftex.def Info: d8/d70/classEntityManagerTest__inherit__graph.pdf  use
 d on input line 9.
 (pdftex.def)             Requested size: 178.0pt x 156.00879pt.
- [24] <./d8/d55/classEntityManagerTest__coll__graph.pdf
+ [25] <./d8/d55/classEntityManagerTest__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d8/d55/classEntityManagerTest__coll__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d8/d55/classEntityManagerTest__coll__graph.pdf, id=1740, 250.9375pt x 282.0537
+<d8/d55/classEntityManagerTest__coll__graph.pdf, id=1776, 250.9375pt x 282.0537
 6pt>
 File: d8/d55/classEntityManagerTest__coll__graph.pdf Graphic file (type pdf)
 <use d8/d55/classEntityManagerTest__coll__graph.pdf>
@@ -1227,14 +1205,14 @@ n input line 18.
 pdfTeX warning: pdflatex (file ./dc/d1a/classEntityTest__inherit__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<dc/d1a/classEntityTest__inherit__graph.pdf, id=1749, 151.56625pt x 156.585pt>
+<dc/d1a/classEntityTest__inherit__graph.pdf, id=1785, 151.56625pt x 156.585pt>
 File: dc/d1a/classEntityTest__inherit__graph.pdf Graphic file (type pdf)
 <use dc/d1a/classEntityTest__inherit__graph.pdf>
 Package pdftex.def Info: dc/d1a/classEntityTest__inherit__graph.pdf  used on in
 put line 9.
 (pdftex.def)             Requested size: 151.0pt x 156.00162pt.
- [25] <./d0/d96/classEntityTest__coll__graph.pdf>
-<d0/d96/classEntityTest__coll__graph.pdf, id=1769, 227.85126pt x 235.88126pt>
+ [26] <./d0/d96/classEntityTest__coll__graph.pdf>
+<d0/d96/classEntityTest__coll__graph.pdf, id=1805, 227.85126pt x 235.88126pt>
 File: d0/d96/classEntityTest__coll__graph.pdf Graphic file (type pdf)
 <use d0/d96/classEntityTest__coll__graph.pdf>
 Package pdftex.def Info: d0/d96/classEntityTest__coll__graph.pdf  used on input
@@ -1246,14 +1224,14 @@ Package pdftex.def Info: d0/d96/classEntityTest__coll__graph.pdf  used on input
 pdfTeX warning: pdflatex (file ./d8/dc8/classEventEngine__inherit__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d8/dc8/classEventEngine__inherit__graph.pdf, id=1781, 153.57375pt x 156.585pt>
+<d8/dc8/classEventEngine__inherit__graph.pdf, id=1817, 153.57375pt x 156.585pt>
 
 File: d8/dc8/classEventEngine__inherit__graph.pdf Graphic file (type pdf)
 <use d8/dc8/classEventEngine__inherit__graph.pdf>
 Package pdftex.def Info: d8/dc8/classEventEngine__inherit__graph.pdf  used on i
 nput line 18.
 (pdftex.def)             Requested size: 153.0pt x 156.00879pt.
- [26] [27]
+ [27] [28]
 Underfull \hbox (badness 10000) detected at line 67
 [][][]
  []
@@ -1263,7 +1241,7 @@ Underfull \hbox (badness 10000) detected at line 85
 [][][]
  []
 
-[28]
+[29]
 Underfull \hbox (badness 10000) detected at line 108
 [][][]
  []
@@ -1278,7 +1256,7 @@ Underfull \hbox (badness 10000) detected at line 148
 [][][]
  []
 
-[29]
+[30]
 Underfull \hbox (badness 10000) detected at line 166
 [][][]
  []
@@ -1300,7 +1278,7 @@ Underfull \hbox (badness 10000) detected at line 202
 [][][]
  []
 
-[30]
+[31]
 Underfull \hbox (badness 10000) detected at line 220
 [][][]
  []
@@ -1315,7 +1293,7 @@ Underfull \hbox (badness 10000) detected at line 238
 pdfTeX warning: pdflatex (file ./d8/d95/classEventTest__inherit__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<d8/d95/classEventTest__inherit__graph.pdf, id=1875, 151.56625pt x 156.585pt>
+<d8/d95/classEventTest__inherit__graph.pdf, id=1911, 151.56625pt x 156.585pt>
 File: d8/d95/classEventTest__inherit__graph.pdf Graphic file (type pdf)
 <use d8/d95/classEventTest__inherit__graph.pdf>
 Package pdftex.def Info: d8/d95/classEventTest__inherit__graph.pdf  used on inp
@@ -1326,28 +1304,28 @@ ut line 9.
 pdfTeX warning: pdflatex (file ./db/dcb/classEventTest__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<db/dcb/classEventTest__coll__graph.pdf, id=1883, 244.915pt x 167.62625pt>
+<db/dcb/classEventTest__coll__graph.pdf, id=1919, 244.915pt x 167.62625pt>
 File: db/dcb/classEventTest__coll__graph.pdf Graphic file (type pdf)
 <use db/dcb/classEventTest__coll__graph.pdf>
 Package pdftex.def Info: db/dcb/classEventTest__coll__graph.pdf  used on input 
 line 18.
 (pdftex.def)             Requested size: 244.0pt x 167.00427pt.
- [31]) (./df/d8d/classGameEngine.tex <./d6/d4a/classGameEngine__inherit__graph.
+ [32]) (./df/d8d/classGameEngine.tex <./d6/d4a/classGameEngine__inherit__graph.
 pdf>
-<d6/d4a/classGameEngine__inherit__graph.pdf, id=1902, 231.86626pt x 325.215pt>
+<d6/d4a/classGameEngine__inherit__graph.pdf, id=1939, 231.86626pt x 325.215pt>
 File: d6/d4a/classGameEngine__inherit__graph.pdf Graphic file (type pdf)
 <use d6/d4a/classGameEngine__inherit__graph.pdf>
 Package pdftex.def Info: d6/d4a/classGameEngine__inherit__graph.pdf  used on in
 put line 18.
 (pdftex.def)             Requested size: 231.0pt x 324.00833pt.
- [32] <./d9/d8a/classGameEngine__coll__graph.pdf>
-<d9/d8a/classGameEngine__coll__graph.pdf, id=1918, 231.86626pt x 325.215pt>
+ [33] <./d9/d8a/classGameEngine__coll__graph.pdf>
+<d9/d8a/classGameEngine__coll__graph.pdf, id=1955, 231.86626pt x 325.215pt>
 File: d9/d8a/classGameEngine__coll__graph.pdf Graphic file (type pdf)
 <use d9/d8a/classGameEngine__coll__graph.pdf>
 Package pdftex.def Info: d9/d8a/classGameEngine__coll__graph.pdf  used on input
  line 27.
 (pdftex.def)             Requested size: 231.0pt x 324.00833pt.
- [33] [34] [35]
+ [34] [35] [36]
 Underfull \hbox (badness 10000) detected at line 127
 [][][]
  []
@@ -1357,7 +1335,7 @@ Underfull \hbox (badness 10000) detected at line 153
 [][][]
  []
 
-[36]
+[37]
 Underfull \hbox (badness 10000) detected at line 171
 [][][]
  []
@@ -1367,7 +1345,7 @@ Underfull \hbox (badness 10000) detected at line 194
 [][][]
  []
 
-[37]
+[38]
 Underfull \hbox (badness 10000) detected at line 212
 [][][]
  []
@@ -1382,7 +1360,7 @@ Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
 
-[38]
+[39]
 Underfull \hbox (badness 10000) detected at line 266
 [][][]
  []
@@ -1404,7 +1382,7 @@ Underfull \hbox (badness 10000) detected at line 302
 [][][]
  []
 
-[39]
+[40]
 Underfull \hbox (badness 10000) detected at line 320
 [][][]
  []
@@ -1419,7 +1397,7 @@ Underfull \hbox (badness 10000) detected at line 356
 [][][]
  []
 
-[40]
+[41]
 Underfull \hbox (badness 10000) detected at line 378
 [][][]
  []
@@ -1434,7 +1412,7 @@ Underfull \hbox (badness 10000) detected at line 414
 [][][]
  []
 
-[41]
+[42]
 Underfull \hbox (badness 10000) detected at line 432
 [][][]
  []
@@ -1449,7 +1427,7 @@ Underfull \hbox (badness 10000) detected at line 468
 [][][]
  []
 
-[42]
+[43]
 Underfull \hbox (badness 10000) detected at line 486
 [][][]
  []
@@ -1464,7 +1442,7 @@ Underfull \hbox (badness 10000) detected at line 522
 [][][]
  []
 
-[43]
+[44]
 Underfull \hbox (badness 10000) detected at line 540
 [][][]
  []
@@ -1479,7 +1457,7 @@ Underfull \hbox (badness 10000) detected at line 576
 [][][]
  []
 
-[44]
+[45]
 Underfull \hbox (badness 10000) detected at line 598
 [][][]
  []
@@ -1489,7 +1467,7 @@ Underfull \hbox (badness 10000) detected at line 616
 [][][]
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) detected at line 634
 [][][]
  []
@@ -1505,7 +1483,7 @@ ph.pdf
 pdfTeX warning: pdflatex (file ./d4/d2e/classGameEngineTest__inherit__graph.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d4/d2e/classGameEngineTest__inherit__graph.pdf, id=2196, 172.645pt x 156.585pt
+<d4/d2e/classGameEngineTest__inherit__graph.pdf, id=2232, 172.645pt x 156.585pt
 >
 File: d4/d2e/classGameEngineTest__inherit__graph.pdf Graphic file (type pdf)
 <use d4/d2e/classGameEngineTest__inherit__graph.pdf>
@@ -1517,23 +1495,23 @@ n input line 9.
 pdfTeX warning: pdflatex (file ./dc/da7/classGameEngineTest__coll__graph.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >
-<dc/da7/classGameEngineTest__coll__graph.pdf, id=2204, 268.00125pt x 396.48125p
+<dc/da7/classGameEngineTest__coll__graph.pdf, id=2240, 268.00125pt x 396.48125p
 t>
 File: dc/da7/classGameEngineTest__coll__graph.pdf Graphic file (type pdf)
 <use dc/da7/classGameEngineTest__coll__graph.pdf>
 Package pdftex.def Info: dc/da7/classGameEngineTest__coll__graph.pdf  used on i
 nput line 18.
 (pdftex.def)             Requested size: 267.0pt x 394.99806pt.
- [46]) (./d2/d2f/classMusic.tex <./da/df1/classMusic__inherit__graph.pdf>
-<da/df1/classMusic__inherit__graph.pdf, id=2220, 152.57pt x 156.585pt>
+ [47]) (./d2/d2f/classMusic.tex <./da/df1/classMusic__inherit__graph.pdf>
+<da/df1/classMusic__inherit__graph.pdf, id=2258, 152.57pt x 156.585pt>
 File: da/df1/classMusic__inherit__graph.pdf Graphic file (type pdf)
 <use da/df1/classMusic__inherit__graph.pdf>
 Package pdftex.def Info: da/df1/classMusic__inherit__graph.pdf  used on input l
 ine 9.
 (pdftex.def)             Requested size: 152.0pt x 156.0064pt.
 
-[47] <./d1/dd9/classMusic__coll__graph.pdf>
-<d1/dd9/classMusic__coll__graph.pdf, id=2239, 152.57pt x 156.585pt>
+[48] <./d1/dd9/classMusic__coll__graph.pdf>
+<d1/dd9/classMusic__coll__graph.pdf, id=2276, 152.57pt x 156.585pt>
 File: d1/dd9/classMusic__coll__graph.pdf Graphic file (type pdf)
 <use d1/dd9/classMusic__coll__graph.pdf>
 Package pdftex.def Info: d1/dd9/classMusic__coll__graph.pdf  used on input line
@@ -1556,61 +1534,61 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[48] <./dd/db9/classRect__inherit__graph.pdf>
-<dd/db9/classRect__inherit__graph.pdf, id=2267, 152.57pt x 212.795pt>
+ <./dd/db9/classRect__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./dd/db9/classRect__inherit__graph.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>
+<dd/db9/classRect__inherit__graph.pdf, id=2286, 152.57pt x 212.795pt>
 File: dd/db9/classRect__inherit__graph.pdf Graphic file (type pdf)
 <use dd/db9/classRect__inherit__graph.pdf>
 Package pdftex.def Info: dd/db9/classRect__inherit__graph.pdf  used on input li
 ne 18.
 (pdftex.def)             Requested size: 152.0pt x 212.00868pt.
- <./dc/df5/classRect__coll__graph.pdf
-
-pdfTeX warning: pdflatex (file ./dc/df5/classRect__coll__graph.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->
-<dc/df5/classRect__coll__graph.pdf, id=2275, 152.57pt x 212.795pt>
+ [49] <./dc/df5/classRect__coll__graph.pdf>
+<dc/df5/classRect__coll__graph.pdf, id=2310, 152.57pt x 212.795pt>
 File: dc/df5/classRect__coll__graph.pdf Graphic file (type pdf)
 <use dc/df5/classRect__coll__graph.pdf>
 Package pdftex.def Info: dc/df5/classRect__coll__graph.pdf  used on input line 
 27.
 (pdftex.def)             Requested size: 152.0pt x 212.00868pt.
- [49] [50]
-Underfull \hbox (badness 10000) detected at line 88
+ [50] [51]
+Underfull \hbox (badness 10000) detected at line 87
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 112
-[][][]
- []
-
-[51]
-Underfull \hbox (badness 10000) detected at line 141
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 165
+Underfull \hbox (badness 10000) detected at line 111
 [][][]
  []
 
 [52]
-Underfull \hbox (badness 10000) detected at line 189
+Underfull \hbox (badness 10000) detected at line 140
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 208
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 232
+Underfull \hbox (badness 10000) detected at line 164
 [][][]
  []
 
 [53]
-Underfull \hbox (badness 10000) detected at line 256
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 207
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+[54]
+Underfull \hbox (badness 10000) detected at line 255
 [][][]
  []
 
@@ -1620,7 +1598,7 @@ erit__graph.pdf
 pdfTeX warning: pdflatex (file ./d0/d37/classSound__inherit__graph.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<d0/d37/classSound__inherit__graph.pdf, id=2373, 152.57pt x 156.585pt>
+<d0/d37/classSound__inherit__graph.pdf, id=2407, 152.57pt x 156.585pt>
 File: d0/d37/classSound__inherit__graph.pdf Graphic file (type pdf)
 <use d0/d37/classSound__inherit__graph.pdf>
 Package pdftex.def Info: d0/d37/classSound__inherit__graph.pdf  used on input l
@@ -1631,97 +1609,93 @@ ine 18.
 pdfTeX warning: pdflatex (file ./d1/d3f/classSound__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<d1/d3f/classSound__coll__graph.pdf, id=2381, 152.57pt x 156.585pt>
+<d1/d3f/classSound__coll__graph.pdf, id=2415, 152.57pt x 156.585pt>
 File: d1/d3f/classSound__coll__graph.pdf Graphic file (type pdf)
 <use d1/d3f/classSound__coll__graph.pdf>
 Package pdftex.def Info: d1/d3f/classSound__coll__graph.pdf  used on input line
  27.
 (pdftex.def)             Requested size: 152.0pt x 156.0064pt.
- [54] [55]
-Underfull \hbox (badness 10000) detected at line 99
-[][][]
- []
-
-[56]
-Underfull \hbox (badness 10000) detected at line 117
+ [55] [56]
+Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
 [57]
-Underfull \hbox (badness 10000) detected at line 156
+Underfull \hbox (badness 10000) detected at line 134
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 174
+Underfull \hbox (badness 10000) detected at line 155
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 192
+Underfull \hbox (badness 10000) detected at line 173
 [][][]
  []
 
-[58]
-Underfull \hbox (badness 10000) detected at line 210
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 228
+[58] [59]
+Underfull \hbox (badness 10000) detected at line 191
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 246
+Underfull \hbox (badness 10000) detected at line 209
 [][][]
  []
 
 
-Overfull \vbox (10.07678pt too high) has occurred while \output is active []
-
-
-[59]
-Underfull \hbox (badness 10000) detected at line 264
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 282
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 300
+Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
 
 [60]
-Underfull \hbox (badness 10000) detected at line 318
+Underfull \hbox (badness 10000) detected at line 245
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 336
+Underfull \hbox (badness 10000) detected at line 263
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 354
+Underfull \hbox (badness 10000) detected at line 281
 [][][]
  []
 
-) (./d1/d6d/classSprite.tex [61] <./d2/d4a/classSprite__inherit__graph.pdf
+[61]
+Underfull \hbox (badness 10000) detected at line 299
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 335
+[][][]
+ []
+
+[62]
+Underfull \hbox (badness 10000) detected at line 353
+[][][]
+ []
+
+) (./d1/d6d/classSprite.tex <./d2/d4a/classSprite__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d2/d4a/classSprite__inherit__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<d2/d4a/classSprite__inherit__graph.pdf, id=2522, 343.2825pt x 212.795pt>
+<d2/d4a/classSprite__inherit__graph.pdf, id=2556, 343.2825pt x 212.795pt>
 File: d2/d4a/classSprite__inherit__graph.pdf Graphic file (type pdf)
 <use d2/d4a/classSprite__inherit__graph.pdf>
 Package pdftex.def Info: d2/d4a/classSprite__inherit__graph.pdf  used on input 
@@ -1732,216 +1706,148 @@ line 18.
 pdfTeX warning: pdflatex (file ./de/dae/classSprite__coll__graph.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >
-<de/dae/classSprite__coll__graph.pdf, id=2530, 343.2825pt x 212.795pt>
+<de/dae/classSprite__coll__graph.pdf, id=2564, 343.2825pt x 212.795pt>
 File: de/dae/classSprite__coll__graph.pdf Graphic file (type pdf)
 <use de/dae/classSprite__coll__graph.pdf>
 Package pdftex.def Info: de/dae/classSprite__coll__graph.pdf  used on input lin
 e 27.
 (pdftex.def)             Requested size: 342.0pt x 211.99895pt.
- [62] [63]
-Underfull \hbox (badness 10000) detected at line 132
-[][][]
- []
-
-[64]
-Underfull \hbox (badness 10000) detected at line 150
+ [63] [64] [65]
+Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 168
-[][][]
- []
-
-[65]
-Underfull \hbox (badness 10000) detected at line 189
+Underfull \hbox (badness 10000) detected at line 134
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 207
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 225
+Underfull \hbox (badness 10000) detected at line 152
 [][][]
  []
 
 [66]
-Underfull \hbox (badness 10000) detected at line 243
+Underfull \hbox (badness 10000) detected at line 173
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 261
+Underfull \hbox (badness 10000) detected at line 191
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 283
+Underfull \hbox (badness 10000) detected at line 209
 [][][]
  []
 
-[67] [68]
-Underfull \hbox (badness 10000) detected at line 301
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 319
+[67]
+Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 337
+Underfull \hbox (badness 10000) detected at line 245
+[][][]
+ []
+
+[68]
+Underfull \hbox (badness 10000) detected at line 267
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 285
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 303
 [][][]
  []
 
 [69]
-Underfull \hbox (badness 10000) detected at line 355
+Underfull \hbox (badness 10000) detected at line 321
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 373
+Underfull \hbox (badness 10000) detected at line 339
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 391
+Underfull \hbox (badness 10000) detected at line 357
 [][][]
  []
 
 [70]
-Underfull \hbox (badness 10000) detected at line 409
-[][][]
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{classSprite_a
-39cbbf3dfe0f8c46520c641b5f7f79a6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.412 ...prite_a39cbbf3dfe0f8c46520c641b5f7f79a6}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 427
+Underfull \hbox (badness 10000) detected at line 375
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 445
-[][][]
- []
-
-[71pdfTeX warning (ext4): destination with the same identifier (name{classSprit
-e_ad8836de2cee1a9e5b9281c2e9112deb4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.462 \end{DoxyParams}
-                      
-]
-Underfull \hbox (badness 10000) detected at line 463
+Underfull \hbox (badness 10000) detected at line 393
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 481
+Underfull \hbox (badness 10000) detected at line 411
+[][][]
+ []
+
+[71]
+Underfull \hbox (badness 10000) detected at line 429
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 499
-[][][]
- []
-
-[72pdfTeX warning (ext4): destination with the same identifier (name{classSprit
-e_a70ccd0fbaa87339e491fd07e7d8b27ca}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.516 \end{DoxyParams}
-                      
-]
-Underfull \hbox (badness 10000) detected at line 517
-[][][]
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{classSprite_a
-6d7e8565e386cc58c866ac61b1f5342b}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.520 ...prite_a6d7e8565e386cc58c866ac61b1f5342b}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 535
+Underfull \hbox (badness 10000) detected at line 447
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 553
+Underfull \hbox (badness 10000) detected at line 465
+[][][]
+ []
+
+
+Overfull \vbox (10.17577pt too high) has occurred while \output is active []
+
+
+[72]
+Underfull \hbox (badness 10000) detected at line 483
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 501
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 529
 [][][]
  []
 
 [73]
-Underfull \hbox (badness 10000) detected at line 571
-[][][]
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{classSprite_a
-d161434ef61fe2c3eb30c2dad8c0744b}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.574 ...prite_ad161434ef61fe2c3eb30c2dad8c0744b}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 589
+Underfull \hbox (badness 10000) detected at line 547
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 607
+Underfull \hbox (badness 10000) detected at line 565
 [][][]
  []
 
 [74]
-Underfull \hbox (badness 10000) detected at line 635
+Underfull \hbox (badness 10000) detected at line 587
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 653
-[][][]
- []
-
-
-Overfull \vbox (9.60373pt too high) has occurred while \output is active []
-
-
-[75]
-Underfull \hbox (badness 10000) detected at line 671
-[][][]
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{classSprite_a
-d31df9112a24b426d76725c626c6628f}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.674 ...prite_ad31df9112a24b426d76725c626c6628f}}
-                                                  
-Underfull \hbox (badness 10000) detected at line 689
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 711
-[][][]
- []
-
-[76pdfTeX warning (ext4): destination with the same identifier (name{classSprit
-e_abcddfdf9f682a8fddd6f69d0f5270cbc}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.728 \end{DoxyParams}
-                      
-]
-Underfull \hbox (badness 10000) detected at line 729
+Underfull \hbox (badness 10000) detected at line 605
 [][][]
  []
 
@@ -1950,7 +1856,7 @@ Underfull \hbox (badness 10000) detected at line 729
 pdfTeX warning: pdflatex (file ./d2/d92/classSpriteTest__inherit__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<d2/d92/classSpriteTest__inherit__graph.pdf, id=2855, 151.56625pt x 156.585pt>
+<d2/d92/classSpriteTest__inherit__graph.pdf, id=2830, 151.56625pt x 156.585pt>
 File: d2/d92/classSpriteTest__inherit__graph.pdf Graphic file (type pdf)
 <use d2/d92/classSpriteTest__inherit__graph.pdf>
 Package pdftex.def Info: d2/d92/classSpriteTest__inherit__graph.pdf  used on in
@@ -1961,15 +1867,72 @@ put line 9.
 pdfTeX warning: pdflatex (file ./dd/dd9/classSpriteTest__coll__graph.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >
-<dd/dd9/classSpriteTest__coll__graph.pdf, id=2863, 343.2825pt x 282.05376pt>
+<dd/dd9/classSpriteTest__coll__graph.pdf, id=2838, 343.2825pt x 282.05376pt>
 File: dd/dd9/classSpriteTest__coll__graph.pdf Graphic file (type pdf)
 <use dd/dd9/classSpriteTest__coll__graph.pdf>
 Package pdftex.def Info: dd/dd9/classSpriteTest__coll__graph.pdf  used on input
  line 18.
 (pdftex.def)             Requested size: 342.0pt x 280.99863pt.
- [77]) (./d8/d7e/classTestWorld.tex <./dd/d40/classTestWorld__inherit__graph.pd
+ [75]) (./da/db9/classTestRect.tex <./db/dee/classTestRect__inherit__graph.pdf>
+<db/dee/classTestRect__inherit__graph.pdf, id=2854, 151.56625pt x 156.585pt>
+File: db/dee/classTestRect__inherit__graph.pdf Graphic file (type pdf)
+<use db/dee/classTestRect__inherit__graph.pdf>
+Package pdftex.def Info: db/dee/classTestRect__inherit__graph.pdf  used on inpu
+t line 9.
+(pdftex.def)             Requested size: 151.0pt x 156.00162pt.
+ <./d5/dce/classTestRect__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./d5/dce/classTestRect__coll__graph.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>
+<d5/dce/classTestRect__coll__graph.pdf, id=2862, 244.915pt x 282.05376pt>
+File: d5/dce/classTestRect__coll__graph.pdf Graphic file (type pdf)
+<use d5/dce/classTestRect__coll__graph.pdf>
+Package pdftex.def Info: d5/dce/classTestRect__coll__graph.pdf  used on input l
+ine 18.
+(pdftex.def)             Requested size: 244.0pt x 281.00723pt.
+ [76]) (./d9/d94/classTesttoSFML.tex <./d1/ddd/classTesttoSFML__inherit__graph.
+pdf>
+<d1/ddd/classTesttoSFML__inherit__graph.pdf, id=2882, 151.56625pt x 156.585pt>
+File: d1/ddd/classTesttoSFML__inherit__graph.pdf Graphic file (type pdf)
+<use d1/ddd/classTesttoSFML__inherit__graph.pdf>
+Package pdftex.def Info: d1/ddd/classTesttoSFML__inherit__graph.pdf  used on in
+put line 9.
+(pdftex.def)             Requested size: 151.0pt x 156.00162pt.
+ <./da/d74/classTesttoSFML__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./da/d74/classTesttoSFML__coll__graph.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+>
+<da/d74/classTesttoSFML__coll__graph.pdf, id=2890, 220.825pt x 167.62625pt>
+File: da/d74/classTesttoSFML__coll__graph.pdf Graphic file (type pdf)
+<use da/d74/classTesttoSFML__coll__graph.pdf>
+Package pdftex.def Info: da/d74/classTesttoSFML__coll__graph.pdf  used on input
+ line 18.
+(pdftex.def)             Requested size: 220.0pt x 167.00684pt.
+ [77]) (./da/d16/classTestVector2.tex <./d5/d9d/classTestVector2__inherit__grap
+h.pdf>
+<d5/d9d/classTestVector2__inherit__graph.pdf, id=2910, 151.56625pt x 156.585pt>
+
+File: d5/d9d/classTestVector2__inherit__graph.pdf Graphic file (type pdf)
+<use d5/d9d/classTestVector2__inherit__graph.pdf>
+Package pdftex.def Info: d5/d9d/classTestVector2__inherit__graph.pdf  used on i
+nput line 9.
+(pdftex.def)             Requested size: 151.0pt x 156.00162pt.
+ <./da/d37/classTestVector2__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./da/d37/classTestVector2__coll__graph.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>
+<da/d37/classTestVector2__coll__graph.pdf, id=2918, 256.96pt x 167.62625pt>
+File: da/d37/classTestVector2__coll__graph.pdf Graphic file (type pdf)
+<use da/d37/classTestVector2__coll__graph.pdf>
+Package pdftex.def Info: da/d37/classTestVector2__coll__graph.pdf  used on inpu
+t line 18.
+(pdftex.def)             Requested size: 256.0pt x 167.01195pt.
+ [78]) (./d8/d7e/classTestWorld.tex <./dd/d40/classTestWorld__inherit__graph.pd
 f>
-<dd/d40/classTestWorld__inherit__graph.pdf, id=2880, 151.56625pt x 156.585pt>
+<dd/d40/classTestWorld__inherit__graph.pdf, id=2937, 151.56625pt x 156.585pt>
 File: dd/d40/classTestWorld__inherit__graph.pdf Graphic file (type pdf)
 <use dd/d40/classTestWorld__inherit__graph.pdf>
 Package pdftex.def Info: dd/d40/classTestWorld__inherit__graph.pdf  used on inp
@@ -1980,44 +1943,49 @@ ut line 9.
 pdfTeX warning: pdflatex (file ./d9/d3d/classTestWorld__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<d9/d3d/classTestWorld__coll__graph.pdf, id=2888, 230.8625pt x 339.2675pt>
+<d9/d3d/classTestWorld__coll__graph.pdf, id=2945, 230.8625pt x 339.2675pt>
 File: d9/d3d/classTestWorld__coll__graph.pdf Graphic file (type pdf)
 <use d9/d3d/classTestWorld__coll__graph.pdf>
 Package pdftex.def Info: d9/d3d/classTestWorld__coll__graph.pdf  used on input 
 line 18.
 (pdftex.def)             Requested size: 230.0pt x 338.00351pt.
- [78]) (./df/d53/classText.tex <./d7/d80/classText__inherit__graph.pdf>
-<d7/d80/classText__inherit__graph.pdf, id=2906, 274.02374pt x 212.795pt>
+ [79]) (./df/d53/classText.tex <./d7/d80/classText__inherit__graph.pdf>
+<d7/d80/classText__inherit__graph.pdf, id=2963, 274.02374pt x 212.795pt>
 File: d7/d80/classText__inherit__graph.pdf Graphic file (type pdf)
 <use d7/d80/classText__inherit__graph.pdf>
 Package pdftex.def Info: d7/d80/classText__inherit__graph.pdf  used on input li
 ne 9.
 (pdftex.def)             Requested size: 273.0pt x 212.01518pt.
 
-[79] <./d6/d3f/classText__coll__graph.pdf>
-<d6/d3f/classText__coll__graph.pdf, id=2922, 274.02374pt x 212.795pt>
+[80] <./d6/d3f/classText__coll__graph.pdf>
+<d6/d3f/classText__coll__graph.pdf, id=2979, 274.02374pt x 212.795pt>
 File: d6/d3f/classText__coll__graph.pdf Graphic file (type pdf)
 <use d6/d3f/classText__coll__graph.pdf>
 Package pdftex.def Info: d6/d3f/classText__coll__graph.pdf  used on input line 
 18.
 (pdftex.def)             Requested size: 273.0pt x 212.01518pt.
- [80]
-Underfull \hbox (badness 10000) detected at line 111
+ [81]
+Underfull \hbox (badness 10000) detected at line 109
 [][][]
  []
 
-) (./da/dc3/classtoSFML.tex [81] <./de/d14/classtoSFML__inherit__graph.pdf
+[82]
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+) (./da/dc3/classtoSFML.tex <./de/d14/classtoSFML__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./de/d14/classtoSFML__inherit__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<de/d14/classtoSFML__inherit__graph.pdf, id=2984, 131.49126pt x 156.585pt>
+<de/d14/classtoSFML__inherit__graph.pdf, id=3043, 131.49126pt x 156.585pt>
 File: de/d14/classtoSFML__inherit__graph.pdf Graphic file (type pdf)
 <use de/d14/classtoSFML__inherit__graph.pdf>
 Package pdftex.def Info: de/d14/classtoSFML__inherit__graph.pdf  used on input 
 line 18.
 (pdftex.def)             Requested size: 131.0pt x 156.0064pt.
- [82]
+ [83]
 Underfull \hbox (badness 10000) detected at line 53
 [][][]
  []
@@ -2027,7 +1995,7 @@ Underfull \hbox (badness 10000) detected at line 71
 [][][]
  []
 
-[83]
+[84]
 Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
@@ -2037,107 +2005,116 @@ Underfull \hbox (badness 10000) detected at line 98
 pdfTeX warning: pdflatex (file ./d2/d02/classTransform__inherit__graph.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
 >
-<d2/d02/classTransform__inherit__graph.pdf, id=3026, 256.96pt x 212.795pt>
+<d2/d02/classTransform__inherit__graph.pdf, id=3084, 349.305pt x 212.795pt>
 File: d2/d02/classTransform__inherit__graph.pdf Graphic file (type pdf)
 <use d2/d02/classTransform__inherit__graph.pdf>
 Package pdftex.def Info: d2/d02/classTransform__inherit__graph.pdf  used on inp
-ut line 18.
-(pdftex.def)             Requested size: 256.0pt x 212.01518pt.
+ut line 19.
+(pdftex.def)             Requested size: 348.0pt x 212.01193pt.
  <./d6/d15/classTransform__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d6/d15/classTransform__coll__graph.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >
-<d6/d15/classTransform__coll__graph.pdf, id=3034, 152.57pt x 156.585pt>
+<d6/d15/classTransform__coll__graph.pdf, id=3092, 152.57pt x 156.585pt>
 File: d6/d15/classTransform__coll__graph.pdf Graphic file (type pdf)
 <use d6/d15/classTransform__coll__graph.pdf>
 Package pdftex.def Info: d6/d15/classTransform__coll__graph.pdf  used on input 
-line 27.
+line 28.
 (pdftex.def)             Requested size: 152.0pt x 156.0064pt.
- [84] [85]
-Underfull \hbox (badness 10000) detected at line 84
+ [85] [86]
+Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 102
+Underfull \hbox (badness 10000) detected at line 101
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 123
-[][][]
- []
-
-[86] [87]
-Underfull \hbox (badness 10000) detected at line 141
-[][][]
- []
+Overfull \vbox (4.13531pt too high) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) detected at line 159
+[87]
+Underfull \hbox (badness 10000) detected at line 122
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 177
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 158
 [][][]
  []
 
 [88]
-Underfull \hbox (badness 10000) detected at line 195
+Underfull \hbox (badness 10000) detected at line 176
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 213
+Underfull \hbox (badness 10000) detected at line 194
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 235
+Underfull \hbox (badness 10000) detected at line 212
 [][][]
  []
 
 [89]
-Underfull \hbox (badness 10000) detected at line 253
+Underfull \hbox (badness 10000) detected at line 234
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 271
+Underfull \hbox (badness 10000) detected at line 252
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 289
+Underfull \hbox (badness 10000) detected at line 270
 [][][]
  []
 
-[90]) (./d6/d2b/classTransformTest.tex <./d4/db6/classTransformTest__inherit__g
-raph.pdf
+[90]
+Underfull \hbox (badness 10000) detected at line 288
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 306
+[][][]
+ []
+
+) (./d6/d2b/classTransformTest.tex <./d4/db6/classTransformTest__inherit__graph
+.pdf
 
 pdfTeX warning: pdflatex (file ./d4/db6/classTransformTest__inherit__graph.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >
-<d4/db6/classTransformTest__inherit__graph.pdf, id=3158, 160.6pt x 156.585pt>
+<d4/db6/classTransformTest__inherit__graph.pdf, id=3217, 160.6pt x 156.585pt>
 File: d4/db6/classTransformTest__inherit__graph.pdf Graphic file (type pdf)
 <use d4/db6/classTransformTest__inherit__graph.pdf>
 Package pdftex.def Info: d4/db6/classTransformTest__inherit__graph.pdf  used on
  input line 9.
 (pdftex.def)             Requested size: 160.0pt x 156.004pt.
- <./d9/d7b/classTransformTest__coll__graph.pdf
+ [91] <./d9/d7b/classTransformTest__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d9/d7b/classTransformTest__coll__graph.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >
-<d9/d7b/classTransformTest__coll__graph.pdf, id=3166, 236.885pt x 224.84pt>
+<d9/d7b/classTransformTest__coll__graph.pdf, id=3231, 236.885pt x 224.84pt>
 File: d9/d7b/classTransformTest__coll__graph.pdf Graphic file (type pdf)
 <use d9/d7b/classTransformTest__coll__graph.pdf>
 Package pdftex.def Info: d9/d7b/classTransformTest__coll__graph.pdf  used on in
 put line 18.
 (pdftex.def)             Requested size: 236.0pt x 224.00577pt.
- [91]) (./d8/d0d/classVector2.tex
+) (./d8/d0d/classVector2.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -2154,7 +2131,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[92]
+[92] [93]
 Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
@@ -2164,7 +2141,7 @@ Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
-[93]
+[94]
 Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
@@ -2174,29 +2151,29 @@ Underfull \hbox (badness 10000) detected at line 105
 pdfTeX warning: pdflatex (file ./da/d9b/classWorld__inherit__graph.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<da/d9b/classWorld__inherit__graph.pdf, id=3230, 160.6pt x 325.215pt>
+<da/d9b/classWorld__inherit__graph.pdf, id=3295, 160.6pt x 325.215pt>
 File: da/d9b/classWorld__inherit__graph.pdf Graphic file (type pdf)
 <use da/d9b/classWorld__inherit__graph.pdf>
 Package pdftex.def Info: da/d9b/classWorld__inherit__graph.pdf  used on input l
 ine 18.
 (pdftex.def)             Requested size: 160.0pt x 324.00833pt.
- [94] <./d1/d1c/classWorld__coll__graph.pdf
+ [95] <./d1/d1c/classWorld__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./d1/d1c/classWorld__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<d1/d1c/classWorld__coll__graph.pdf, id=3245, 160.6pt x 269.005pt>
+<d1/d1c/classWorld__coll__graph.pdf, id=3311, 160.6pt x 269.005pt>
 File: d1/d1c/classWorld__coll__graph.pdf Graphic file (type pdf)
 <use d1/d1c/classWorld__coll__graph.pdf>
 Package pdftex.def Info: d1/d1c/classWorld__coll__graph.pdf  used on input line
  27.
 (pdftex.def)             Requested size: 160.0pt x 268.00688pt.
- [95]
+ [96]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
-[96]
+[97]
 Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
@@ -2213,7 +2190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
  <$ [] $>$\T1/pcr/m/n/8 , std[]::vector$\OML/cmm/m/it/8 <$
  []
 
-[97]
+[98]
 Underfull \hbox (badness 10000) detected at line 134
 [][][]
  []
@@ -2228,7 +2205,7 @@ Underfull \hbox (badness 10000) detected at line 170
 [][][]
  []
 
-[98]
+[99]
 Underfull \hbox (badness 10000) detected at line 188
 [][][]
  []
@@ -2243,26 +2220,22 @@ Underfull \hbox (badness 10000) detected at line 224
 [][][]
  []
 
-) [99] [100
+) [100] (./refman.ind [101
 
-] (./refman.ind [101
 
 
 ] [102] [103] [104]) (./refman.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: F144DD9A81F16CF2527E6D0899A12DB4;47165.
+(rerunfilecheck)             Checksum: C677E007BF37117AAF5928D7E147A949;46986.
  ) 
 Here is how much of TeX's memory you used:
- 19299 strings out of 480247
- 332228 string characters out of 5896152
- 655922 words of memory out of 5000000
- 35911 multiletter control sequences out of 15000+600000
+ 19389 strings out of 480247
+ 335610 string characters out of 5896152
+ 654948 words of memory out of 5000000
+ 35973 multiletter control sequences out of 15000+600000
  534158 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,16n,117p,590b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,590b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -2278,10 +2251,10 @@ e/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist
 /urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.p
 fb>
-Output written on refman.pdf (112 pages, 770922 bytes).
+Output written on refman.pdf (112 pages, 828773 bytes).
 PDF statistics:
- 3896 PDF objects out of 4296 (max. 8388607)
- 3538 compressed objects within 36 object streams
- 835 named destinations out of 1000 (max. 500000)
- 2006 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3966 PDF objects out of 4296 (max. 8388607)
+ 3593 compressed objects within 36 object streams
+ 842 named destinations out of 1000 (max. 500000)
+ 2044 words of extra memory for PDF output out of 10000 (max. 10000000)
 

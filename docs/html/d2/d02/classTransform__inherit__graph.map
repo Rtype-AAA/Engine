@@ -1,7 +1,8 @@
 <map id="Transform" name="Transform">
-<area shape="rect" id="node1" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="99,80,181,107"/>
-<area shape="rect" id="node3" href="$d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node4" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="112,155,168,181"/>
-<area shape="rect" id="node5" href="$df/d53/classText.html" title=" " alt="" coords="193,155,239,181"/>
-<area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="92,5,188,32"/>
+<area shape="rect" id="node1" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="175,80,257,107"/>
+<area shape="rect" id="node3" href="$d7/dc9/classRect.html" title=" " alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node4" href="$d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="128,155,211,181"/>
+<area shape="rect" id="node5" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="235,155,291,181"/>
+<area shape="rect" id="node6" href="$df/d53/classText.html" title=" " alt="" coords="315,155,362,181"/>
+<area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="168,5,264,32"/>
 </map>

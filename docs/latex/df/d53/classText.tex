@@ -26,9 +26,8 @@ int {\bfseries get\+Bit} () const
 \item 
 void \mbox{\hyperlink{classText_aaf9266cae8121d10028ddd09c5dc78d6}{draw}} (sf\+::\+Render\+Window \&window) const override
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_aaf9266cae8121d10028ddd09c5dc78d6}{draw()}}\+: Draw the component \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classText_a372961f4dabb31ecb29ea03d19d3f713}\label{classText_a372961f4dabb31ecb29ea03d19d3f713}} 
-void {\bfseries update} (sf\+::\+Time delta\+Time) override
-\item 
+void \mbox{\hyperlink{classText_a372961f4dabb31ecb29ea03d19d3f713}{update}} (sf\+::\+Time delta\+Time) override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_a372961f4dabb31ecb29ea03d19d3f713}{update()}}\+: Update the component \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classText_a29587606afba297865c85224772cccc8}\label{classText_a29587606afba297865c85224772cccc8}} 
 void {\bfseries set\+Text} (std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Font $>$$>$ map\+Font, std\+::string name\+Font, std\+::string new\+String\+Text, int size\+Text, \mbox{\hyperlink{classColor}{Color}} color)
 \item 
@@ -89,7 +88,6 @@ void {\bfseries set\+Deferred\+Text} (std\+::function$<$ void()$>$ setter)
 \mbox{\Hypertarget{classText_a1513cd6df4563a2e1f4e3b433b395646}\label{classText_a1513cd6df4563a2e1f4e3b433b395646}} 
 void {\bfseries apply\+Deferred\+Text} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Member Function Documentation}
@@ -114,6 +112,28 @@ void
 
 
 Implements \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{Drawable\+Component}}.
+
+\mbox{\Hypertarget{classText_a372961f4dabb31ecb29ea03d19d3f713}\label{classText_a372961f4dabb31ecb29ea03d19d3f713}} 
+\index{Text@{Text}!update@{update}}
+\index{update@{update}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Text\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classText_a372961f4dabb31ecb29ea03d19d3f713}{update()}}\+: Update the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Delta} & time elapsed since the last update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.
 
 
 
