@@ -18,10 +18,11 @@
  *
  * The Sprite class manages the graphical representation of a Component using SFML.
  */
-class Sprite : public DrawableComponent, public toSFML, public Transform {
+class Sprite : public DrawableComponent, public toSFML, public Transform
+{
 private:
-    sf::Sprite sprite; ///< SFML Sprite for rendering.
-    sf::Texture texture; ///< SFML Texture for the sprite.
+    sf::Sprite sprite;                    ///< SFML Sprite for rendering.
+    sf::Texture texture;                  ///< SFML Texture for the sprite.
     std::function<void()> deferredSprite; ///< Deferred sprite.
 
     Transform* transform;
@@ -32,7 +33,7 @@ private:
     unsigned int currentFrame; /// < The current frame.
     bool animation; /// < Sprite is animated.
 
-    int bit = 1; ///< Bit of the Sprite.
+    int bit = 1;                          ///< Bit of the Sprite.
     void doAnimation(sf::Time deltaTime); /// < Doing the animation.
 public:
     /// @brief Default Sprite constructor.
@@ -46,7 +47,9 @@ public:
     Sprite(const std::string& texturePath) : transform(nullptr) {
         if (texture.loadFromFile(texturePath)) {
             sprite.setTexture(texture);
-        } else {
+        }
+        else
+        {
             std::cerr << "Error: Texture not found" << std::endl;
         }
     }
@@ -63,29 +66,29 @@ public:
     /// @brief init(): Initialize the Sprite.
     /// @param void
     /// @return bool: True if the Sprite is initialized, false otherwise.
-    bool initSprite() const {return true;}
+    bool initSprite() const { return true; }
 
     /// @brief getBit(): Get the bit of the Sprite.
     /// @param void
     /// @return int: The bit of the Sprite.
-    int getBit() const {return bit;}
+    int getBit() const { return bit; }
 
     /// @brief draw(): Draw the Sprite.
     /// @param window: SFML RenderWindow where the Sprite will be drawn.
     /// @return void
-    void draw(sf::RenderWindow& window) const override;
+    void draw(sf::RenderWindow &window) const override;
 
     void update(sf::Time deltaTime) override;
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    void createSprite(const std::string& texturePath);
+    void createSprite(const std::string &texturePath);
 
     /// @brief createSprite(): Create the SFML Sprite with an existing texture for rendering.
     /// @param existingTexture: SFML Texture for the sprite
     /// @return void
-    void createSprite(const sf::Texture& existingTexture);
+    void createSprite(const sf::Texture &existingTexture);
 
     /// @brief createSprite(): Create the SFML Sprite with the component's texture for rendering.
     /// @param void
@@ -105,18 +108,26 @@ public:
     /// @brief isTextureLoaded(): Check if the texture is loaded.
     /// @param void
     /// @return bool: True if the texture is loaded, false otherwise.
-    bool isTextureLoaded() const {return texture.getSize().x != 0 && texture.getSize().y != 0;}
+    bool isTextureLoaded() const { return texture.getSize().x != 0 && texture.getSize().y != 0; }
 
     /// @brief setSprite(): Set the SFML Sprite with an existing one for rendering.
     /// @param sprite: SFML Sprite for rendering
     /// @return void
-    void setSprite(const sf::Sprite& sprite);
+    void setSprite(const sf::Sprite &sprite);
 
-    /// @brief setSprite(): Set the SFML Sprite with a map of string and textures, a texture name and a map of string and vector of floats.
-    /// @param mapTexture: Map of string and textures.
-    /// @param nameTexture: Name of the texture.
-    /// @param mapTransform: Map of string and vector of floats.
-    /// @return void
+    /**
+     * @brief Sets the sprite of the component.
+     *
+     * This function sets the sprite of the component using the provided texture map and texture name.
+     * Optionally, it can enable animation by providing a vector of frames and the duration of each frame.
+     *
+     * @param mapTexture A map of texture names and their corresponding shared pointers to sf::Texture objects.
+     * @param nameTexture The name of the texture to set as the sprite.
+     * @param animate Flag indicating whether to enable animation or not. Default is false.
+     * @param newFrames A vector of frames to use for animation. Default is an empty vector.
+     * @param durationOfFrame The duration of each frame in milliseconds. Default is 100 milliseconds.
+     * @return void
+     */
     void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
                    bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
 
@@ -211,8 +222,10 @@ public:
     /// @brief setTexture(): Set the texture with an existing one for the sprite.
     /// @param existingTexture: SFML Texture for the sprite
     /// @return void
-    void setTexture(const sf::Texture& existingTexture);
+    void setTexture(const sf::Texture &existingTexture);
 
+    /// @brief getBounds(): Get the bounds of the sprite.
+    /// @param void
+    /// @return Rect: The bounds of the sprite.
     Rect<float> getBounds() const;
 };
-
