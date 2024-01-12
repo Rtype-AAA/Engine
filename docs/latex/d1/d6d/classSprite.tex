@@ -60,9 +60,23 @@ bool \mbox{\hyperlink{classSprite_a01f064350ee77d4a2fb0b55de2a0e961}{is\+Texture
 void \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite}} (const sf\+::\+Sprite \&sprite)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with an existing one for rendering. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_abbbe73277d0c6db958b823fecfb9f07b}{set\+Sprite}} (std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$$>$ map\+Texture, std\+::string name\+Texture, bool animate=false, std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}}$<$ int $>$$>$ new\+Frames=std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}}$<$ int $>$$>$(), int duration\+Of\+Frame=100)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a map of string and textures, a texture name and a map of string and vector of floats. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets the sprite of the component. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}{set\+Transform\+Sprite}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position, float new\+Rotation, \mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite()}}\+: Set the sprite transform with new value and set the value on the \mbox{\hyperlink{classTransform}{Transform}} component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite()}}\+: Set the transform of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}{set\+Position}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}{set\+Position()}}\+: Set the position of the sprite with new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}{set\+Position}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}{set\+Position()}}\+: Set the position of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a6d7e8565e386cc58c866ac61b1f5342b}{set\+Rotation}} (float new\+Rotation)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}{set\+Rotation()}}\+: Set the rotation of the sprite with new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}{set\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}{set\+Rotation()}}\+: Set the rotation of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_ad161434ef61fe2c3eb30c2dad8c0744b}{set\+Scale}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}{set\+Scale()}}\+: Set the the scale of the sprite with new value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}{set\+Transform\+Sprite}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position, float new\+Rotation, \mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}{set\+Scale()}}\+: Set the scale of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite()}}\+: Set the transform of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}{set\+Position}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Position)
@@ -83,9 +97,9 @@ void \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Defe
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_ac08dfb2abeeecd9e1975cbde05176bc6}{apply\+Deferred\+Sprite()}}\+: Apply the deferred sprite. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture}} (const sf\+::\+Texture \&existing\+Texture)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_a96dbeb08d3f620145a767387e2e62689}{set\+Texture()}}\+: Set the texture with an existing one for the sprite. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}\label{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}} 
-\mbox{\hyperlink{classRect}{Rect}}$<$ float $>$ {\bfseries get\+Bounds} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classRect}{Rect}}$<$ float $>$ \mbox{\hyperlink{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}{get\+Bounds}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}{get\+Bounds()}}\+: Get the bounds of the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -263,6 +277,24 @@ Implements \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830
 \begin{DoxyReturn}{Returns}
 int\+: The bit of the \mbox{\hyperlink{classSprite}{Sprite}}. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}\label{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}} 
+\index{Sprite@{Sprite}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRect}{Rect}}$<$ float $>$ Sprite\+::get\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classSprite_aa633e9a4cccaea5239a2ced129fd3fb8}{get\+Bounds()}}\+: Get the bounds of the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRect}{Rect}}\+: The bounds of the sprite. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}\label{classSprite_a1dd413efc9791001bfb8e36ad3b8bf38}} 
 \index{Sprite@{Sprite}!getSprite@{getSprite}}
 \index{getSprite@{getSprite}!Sprite@{Sprite}}
@@ -356,7 +388,25 @@ void
 \mbox{\Hypertarget{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}\label{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}} 
 \index{Sprite@{Sprite}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}{set\+Position()}}\+: Set the position of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}\label{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}} 
+\index{Sprite@{Sprite}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -374,7 +424,25 @@ void
 \mbox{\Hypertarget{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}\label{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}} 
 \index{Sprite@{Sprite}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a39cbbf3dfe0f8c46520c641b5f7f79a6}{set\+Position()}}\+: Set the position of the sprite with new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & The new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}\label{classSprite_ad8836de2cee1a9e5b9281c2e9112deb4}} 
+\index{Sprite@{Sprite}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position }\end{DoxyParamCaption})}
 
 
@@ -392,7 +460,25 @@ void
 \mbox{\Hypertarget{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}\label{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}} 
 \index{Sprite@{Sprite}!setRotation@{setRotation}}
 \index{setRotation@{setRotation}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}{set\+Rotation()}}\+: Set the rotation of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}\label{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}} 
+\index{Sprite@{Sprite}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -410,7 +496,25 @@ void
 \mbox{\Hypertarget{classSprite_a6d7e8565e386cc58c866ac61b1f5342b}\label{classSprite_a6d7e8565e386cc58c866ac61b1f5342b}} 
 \index{Sprite@{Sprite}!setRotation@{setRotation}}
 \index{setRotation@{setRotation}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{new\+Rotation }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a70ccd0fbaa87339e491fd07e7d8b27ca}{set\+Rotation()}}\+: Set the rotation of the sprite with new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Rotation} & The new float rotation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_a6d7e8565e386cc58c866ac61b1f5342b}\label{classSprite_a6d7e8565e386cc58c866ac61b1f5342b}} 
+\index{Sprite@{Sprite}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{new\+Rotation }\end{DoxyParamCaption})}
 
 
@@ -428,7 +532,7 @@ void
 \mbox{\Hypertarget{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}\label{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}} 
 \index{Sprite@{Sprite}!setScale@{setScale}}
 \index{setScale@{setScale}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -446,7 +550,25 @@ void
 \mbox{\Hypertarget{classSprite_ad161434ef61fe2c3eb30c2dad8c0744b}\label{classSprite_ad161434ef61fe2c3eb30c2dad8c0744b}} 
 \index{Sprite@{Sprite}!setScale@{setScale}}
 \index{setScale@{setScale}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}{set\+Scale()}}\+: Set the the scale of the sprite with new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Scale} & The new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} scale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_ad161434ef61fe2c3eb30c2dad8c0744b}\label{classSprite_ad161434ef61fe2c3eb30c2dad8c0744b}} 
+\index{Sprite@{Sprite}!setScale@{setScale}}
+\index{setScale@{setScale}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
 
 
@@ -487,15 +609,21 @@ void
 
 
 
-\mbox{\hyperlink{classSprite_aaebba5ecb16fcd95ccdf6d674a581339}{set\+Sprite()}}\+: Set the SFML \mbox{\hyperlink{classSprite}{Sprite}} with a map of string and textures, a texture name and a map of string and vector of floats. 
+Sets the sprite of the component. 
+
+This function sets the sprite of the component using the provided texture map and texture name. Optionally, it can enable animation by providing a vector of frames and the duration of each frame.
 
 
 \begin{DoxyParams}{Parameters}
-{\em map\+Texture} & Map of string and textures. \\
+{\em map\+Texture} & A map of texture names and their corresponding shared pointers to sf\+::\+Texture objects. \\
 \hline
-{\em name\+Texture} & Name of the texture. \\
+{\em name\+Texture} & The name of the texture to set as the sprite. \\
 \hline
-{\em map\+Transform} & Map of string and vector of floats. \\
+{\em animate} & Flag indicating whether to enable animation or not. Default is false. \\
+\hline
+{\em new\+Frames} & A vector of frames to use for animation. Default is an empty vector. \\
+\hline
+{\em duration\+Of\+Frame} & The duration of each frame in milliseconds. Default is 100 milliseconds. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -522,7 +650,25 @@ void
 \mbox{\Hypertarget{classSprite_ad31df9112a24b426d76725c626c6628f}\label{classSprite_ad31df9112a24b426d76725c626c6628f}} 
 \index{Sprite@{Sprite}!setTransformSprite@{setTransformSprite}}
 \index{setTransformSprite@{setTransformSprite}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Transform\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_ad31df9112a24b426d76725c626c6628f}{set\+Transform\+Sprite()}}\+: Set the transform of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_ad31df9112a24b426d76725c626c6628f}\label{classSprite_ad31df9112a24b426d76725c626c6628f}} 
+\index{Sprite@{Sprite}!setTransformSprite@{setTransformSprite}}
+\index{setTransformSprite@{setTransformSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Transform\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -540,7 +686,7 @@ void
 \mbox{\Hypertarget{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}\label{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}} 
 \index{Sprite@{Sprite}!setTransformSprite@{setTransformSprite}}
 \index{setTransformSprite@{setTransformSprite}!Sprite@{Sprite}}
-\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily void Sprite\+::set\+Transform\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position,  }\item[{float}]{new\+Rotation,  }\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
 
 
@@ -554,6 +700,24 @@ void
 {\em new\+Rotation} & The new float rotation. \\
 \hline
 {\em new\+Scale} & The new \mbox{\hyperlink{classVector2}{Vector2$<$float$>$}} scale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}\label{classSprite_abcddfdf9f682a8fddd6f69d0f5270cbc}} 
+\index{Sprite@{Sprite}!setTransformSprite@{setTransformSprite}}
+\index{setTransformSprite@{setTransformSprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{setTransformSprite()}{setTransformSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Sprite\+::set\+Transform\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Position,  }\item[{float}]{new\+Rotation,  }\item[{\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$}]{new\+Scale }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSprite_a4ccb7a23f58b6f8569d93e2578e46a7a}{set\+Scale()}}\+: Set the scale of the sprite based on the \mbox{\hyperlink{classTransform}{Transform}} component value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

@@ -54,13 +54,13 @@ void \mbox{\hyperlink{classEntity_a98892dc9dbabd59d7258db64df34e7d3}{draw\+Entit
 {\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classEntity_a5b45d20d1301e064aaf9ba09a6c15a56}{get\+Component}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a5b45d20d1301e064aaf9ba09a6c15a56}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{classEntity_aa5e5442667032724d9f8581a81664e0e}{get\+Component\+Type\+ID}} () noexcept
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_aa5e5442667032724d9f8581a81664e0e}{get\+Component\+Type\+ID()}}\+: Get the ID of a component \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_aa5e5442667032724d9f8581a81664e0e}{get\+Component\+Type\+ID()}}\+: Get a component ID from the entity \end{DoxyCompactList}\item 
 std\+::bitset$<$ 3 $>$ \mbox{\hyperlink{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}{get\+Component\+Bitset}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}{get\+Component\+Bitset()}}\+: Get the bitset of the components \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} $\ast$ $>$ \mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get the drawable components of the entity \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get all the drawable components from the entity \end{DoxyCompactList}\item 
 std\+::array$<$ \mbox{\hyperlink{classComponents}{Components}} $\ast$, 3 $>$ \mbox{\hyperlink{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}{get\+Component\+Arrays}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}{get\+Component\+Arrays()}}\+: Get the array of components \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}{get\+Component\+Arrays()}}\+: Get all the components from the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -223,7 +223,7 @@ T\&\+: reference of the component
 
 
 
-\mbox{\hyperlink{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}{get\+Component\+Arrays()}}\+: Get the array of components 
+\mbox{\hyperlink{classEntity_a2bc407a4ce9db73d8f51dd9d4ec086e3}{get\+Component\+Arrays()}}\+: Get all the components from the entity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -231,7 +231,7 @@ T\&\+: reference of the component
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::array$<$\+Components$\ast$, 3$>$\+: array of components 
+std\+::array$<$\+Components$\ast$, 3$>$\+: component\+Array of entity 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}\label{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}} 
 \index{Entity@{Entity}!getComponentBitset@{getComponentBitset}}
@@ -241,7 +241,7 @@ std\+::array$<$\+Components$\ast$, 3$>$\+: array of components
 
 
 
-\mbox{\hyperlink{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}{get\+Component\+Bitset()}}\+: Get the bitset of the components 
+\mbox{\hyperlink{classEntity_a25ae1bb3b7b2e015382fb64a06ef77d0}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -249,7 +249,7 @@ std\+::array$<$\+Components$\ast$, 3$>$\+: array of components
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::bitset$<$3$>$\+: bitset of the components 
+std\+::bitset$<$3$>$\+: component\+Bitset of entity 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEntity_aa5e5442667032724d9f8581a81664e0e}\label{classEntity_aa5e5442667032724d9f8581a81664e0e}} 
 \index{Entity@{Entity}!getComponentTypeID@{getComponentTypeID}}
@@ -260,7 +260,7 @@ template std\+::size\+\_\+t Entity\+::get\+Component\+Type\+ID$<$ \mbox{\hyperli
 
 
 
-\mbox{\hyperlink{classEntity_aa5e5442667032724d9f8581a81664e0e}{get\+Component\+Type\+ID()}}\+: Get the ID of a component 
+\mbox{\hyperlink{classEntity_aa5e5442667032724d9f8581a81664e0e}{get\+Component\+Type\+ID()}}\+: Get a component ID from the entity 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -273,7 +273,7 @@ template std\+::size\+\_\+t Entity\+::get\+Component\+Type\+ID$<$ \mbox{\hyperli
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::size\+\_\+t\+: ID of the component 
+std\+::size\+\_\+t\+: id of the component 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEntity_a7955dd3768b0933bcc4b0f328132d46c}\label{classEntity_a7955dd3768b0933bcc4b0f328132d46c}} 
 \index{Entity@{Entity}!getDrawableComponents@{getDrawableComponents}}
@@ -283,7 +283,7 @@ std\+::size\+\_\+t\+: ID of the component
 
 
 
-\mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get the drawable components of the entity 
+\mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get all the drawable components from the entity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -291,7 +291,7 @@ std\+::size\+\_\+t\+: ID of the component
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$\+Drawable\+Component$\ast$$>$\+: drawable components of the entity 
+std\+::vector$<$\+Drawable\+Component$\ast$$>$\+: drawable\+Components of entity 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classEntity_a403f69eb888da7c5a690b79c658cdf47}\label{classEntity_a403f69eb888da7c5a690b79c658cdf47}} 
 \index{Entity@{Entity}!getName@{getName}}
