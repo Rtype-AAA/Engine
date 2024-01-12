@@ -131,46 +131,10 @@ public:
     void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
                    bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
 
-
     /// @brief setTransformSprite(): Set the sprite transform with new value and set the value on the Transform component.
     /// @param newPosition: The new Vector2<float> position.
     /// @param newRotation: The new float rotation.
     /// @param newScale: The new Vector2<float> scale.
-    /// @return void
-    void setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
-
-    /// @brief setTransformSprite(): Set the transform of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setTransformSprite();
-
-    /// @brief setPosition(): Set the position of the sprite with new value.
-    /// @param newPosition: The new Vector2<float> position.
-    /// @return void
-    void setPosition(Vector2<float> newPosition);
-
-    /// @brief setPosition(): Set the position of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setPosition();
-
-    /// @brief setRotation(): Set the rotation of the sprite with new value.
-    /// @param newRotation: The new float rotation.
-    /// @return void
-    void setRotation(float newRotation);
-
-    /// @brief setRotation(): Set the rotation of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setRotation();
-
-    /// @brief setScale(): Set the the scale of the sprite with new value.
-    /// @param newScale: The new Vector2<float> scale.
-    /// @return void
-    void setScale(Vector2<float> newScale);
-
-    /// @brief setScale(): Set the scale of the sprite based on the Transform component value.
-    /// @param void
     /// @return void
     void setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
 
