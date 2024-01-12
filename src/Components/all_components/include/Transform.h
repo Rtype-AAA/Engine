@@ -67,14 +67,31 @@ public:
     /// @return std::vector<float>: scale vector of the component
     Vector2<float> getScale() const {return transform.scale;}
 
+    /// @brief getTransformStruct(): Get the the transform of the component;
+    /// @param void
+    /// @return TransformStruct: struct of the Transform.
     TransformStruct getTransformStruct() const {return transform;}
 
+    /// @brief setTransformStruct(): Set the transform of the component;
+    /// @param newPosition : the new Vector2<float> position.
+    /// @param newRotation : the new float rotation.
+    /// @param newScale : the new Vector2<float> scale.
+    /// @return void
     void setTransform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
 
-    void setPosition(Vector2<float> newPosition);
+    /// @brief setTransformPosition(): Set the transform position of the component;
+    /// @param newPosition : the new Vector2<float> position.
+    /// @return void
+    void setTransformPosition(Vector2<float> newPosition);
 
-    void setRotation(float newRotation);
+    /// @brief setTransformRotation(): Set the transform rotation of the component;
+    /// @param newRotation : the new float rotation.
+    /// @return void
+    void setTransformRotation(float newRotation);
 
-    void setScale(Vector2<float> newScale);
+    /// @brief setTransformScale(): Set the transform scale of the component;
+    /// @param newScale : the new Vector2<float> scale.
+    /// @return void
+    void setTransformScale(Vector2<float> newScale);
 };
 

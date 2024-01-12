@@ -18,14 +18,14 @@ void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vect
     transform.scale = newScale;
 }
 
-void Transform::setPosition(Vector2<float> newPosition) {
+void Transform::setTransformPosition(Vector2<float> newPosition) {
     transform.position = newPosition;
 }
 
-void Transform::setRotation(float newRotation) {
+void Transform::setTransformRotation(float newRotation) {
     transform.rotation = newRotation;
 }
 
-void Transform::setScale(Vector2<float> newScale) {
+void Transform::setTransformScale(Vector2<float> newScale) {
     transform.scale = newScale;
 }
