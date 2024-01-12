@@ -9,7 +9,7 @@ Homepage: <insert the upstream URL, if relevant>
 Package: quantumvortex-engine
 Architecture: any
 Multi-Arch: foreign
-Depends: libsfml-dev (>= 2.5.1), ${misc:Depends}, ${shlibs:Depends}
+Depends: libsfml-dev (>= 2.6.1), ${misc:Depends}, ${shlibs:Depends}
 Description: 2D Game Engine
  QuantumVortex Engine library is a 2D game engine designed to empower game
  developers in creating captivating 2D video games.

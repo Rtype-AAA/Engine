@@ -29,7 +29,7 @@
             cd SFML
             git checkout 2.6.1
             cmake -Bbuild
-            cmake --build build
+            sudo cmake --build build --target install
             echo "SFML 2.6.1 installed successfully"
 
         - name: Prepare files for packaging
