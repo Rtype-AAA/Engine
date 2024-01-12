@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_TESTS "Build the test suite" OFF)
 
+set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
 find_package(SFML 2.6.1 COMPONENTS system window graphics audio REQUIRED)
 
 
