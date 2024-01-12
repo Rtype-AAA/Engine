@@ -128,6 +128,7 @@ if(BUILD_TESTS)
             "tests/Event/*.cpp"
             "tests/GameEngine/*.cpp"
             "tests/Other/*.cpp"
+            "tests/toSFML/*.cpp"
             "tests/World/*.cpp"
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
