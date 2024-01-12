@@ -16,7 +16,7 @@
  */
 class Transform : public Components {
 private:
-    struct TransformStruct {
+    struct TransformStruct { ///< Structure that stores the Position, the rotation and the scale of the Component
         Vector2<float> position; ///< Position vector of the component (x, y).
         float rotation; ///< Rotation vector of the component (x, y).
         Vector2<float> scale; ///< Scale vector of the component (x, y).
