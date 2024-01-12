@@ -74,6 +74,7 @@ if(BUILD_TESTS)
             "tests/GameEngine/TestGameEngine.cpp"
             "tests/Other/TestRect.cpp"
             "tests/Other/TestVector2.cpp"
+            "tests/toSFML/TesttoSFML.cpp"
             "tests/World/TestWorld.cpp"
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
