@@ -12,6 +12,14 @@ void Entity::setName(std::string newName) {
     name = std::move(newName);
 }
 
+void Entity::update(sf::Time deltaTime) {
+    for (size_t i = 0; i < componentBitset.size(); i++) {
+        if (componentBitset.test(i)) {
+            componentArray[i]->update(deltaTime);
+        }
+    }
+}
+
 bool Entity::initEntity() {
     for (int i = 0; i < componentBitset.size(); i++) {
         componentBitset[i] = false;
@@ -63,7 +71,7 @@ template std::size_t Entity::getComponentTypeID<Sprite>();
 template std::size_t Entity::getComponentTypeID<Transform>();
 
 template Transform& Entity::addComponent<Transform>();
-template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
+//template Transform& Entity::addComponent<Transform>(Vector2<float>, float, Vector2<float>);
 template Sprite& Entity::addComponent<Sprite>();
 template Sprite& Entity::addComponent<Sprite>(std::string&);
 

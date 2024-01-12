@@ -17,4 +17,8 @@
 #include "eventEngine.h"
 #include "gameEngine.h"
 #include "world.h"
+#include "Rect.h"
+#include "Vector2.h"
+#include "toSFML.h"
+#include "Script.h"
 

@@ -36,6 +36,8 @@ cmake-build*
 cmd_cmake
 
 *build
+buildTests
 engine
 all_tests
 vgcore.*
+SFML

@@ -10,6 +10,7 @@
 #include "Archetypes.h"
 #include "Sprite.h"
 #include "Transform.h"
+#include "Vector2.h"
 
 /**
  * @brief Entity class: Entity is a class that represents an entity in the game.
@@ -51,6 +52,8 @@ public:
     /// @param void
     /// @return std::string: name of the entity
     [[nodiscard]] std::string getName() const;
+
+    void update(sf::Time deltaTime) override;
 
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
@@ -109,7 +112,8 @@ extern template std::size_t Entity::getComponentTypeID<Sprite>();
 extern template std::size_t Entity::getComponentTypeID<Transform>();
 
 extern template Transform& Entity::addComponent<Transform>();
-extern template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
+//extern template Transform& Entity::addComponent<Transform>(Vector2<float>, float, Vector2<float>);
+
 extern template Sprite& Entity::addComponent<Sprite>();
 extern template Sprite& Entity::addComponent<Sprite>(std::string&);
 

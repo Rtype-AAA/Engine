@@ -7,19 +7,31 @@
 #include "sfml.h"
 #include "std.h"
 #include "Components.h"
+#include "Rect.h"
 #include "DrawableComponent.h"
+#include "toSFML.h"
+#include "Transform.h"
+#include "Vector2.h"
 
 /**
  * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
  *
  * The Sprite class manages the graphical representation of a Component using SFML.
  */
-class Sprite : public Components, public DrawableComponent {
+class Sprite : public DrawableComponent, public toSFML, public Transform {
 private:
     sf::Sprite sprite; ///< SFML Sprite for rendering.
     sf::Texture texture; ///< SFML Texture for the sprite.
     std::function<void()> deferredSprite; ///< Deferred sprite.
+
+    std::vector<Rect<int>> frames; /// < Vector of all frames for animation.
+    sf::Time timeSinceLastFrame; /// < The time since the last frames was draw.
+    sf::Time frameDuration; /// < The duration of draw a frame.
+    int currentFrame; /// < The current frame.
+    bool animation; /// < Sprite is animated.
+
     int bit = 1; ///< Bit of the Sprite.
+    void doAnimation(sf::Time deltaTime); /// < Doing the animation.
 public:
     /// @brief Default Sprite constructor.
     /// @param void
@@ -56,6 +68,8 @@ public:
     /// @param window: SFML RenderWindow where the Sprite will be drawn.
     /// @return void
     void draw(sf::RenderWindow& window) const override;
+
+    void update(sf::Time deltaTime) override;
 
     /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
     /// @param texturePath: Path to the texture file for the sprite.
@@ -97,7 +111,50 @@ public:
     /// @param nameTexture: Name of the texture.
     /// @param mapTransform: Map of string and vector of floats.
     /// @return void
-    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture, std::map<std::string, std::vector<float>>& mapTransform);
+    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
+                   bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
+
+    /// @brief setTransformSprite(): Set the sprite transform with new value and set the value on the Transform component.
+    /// @param newPosition: The new Vector2<float> position.
+    /// @param newRotation: The new float rotation.
+    /// @param newScale: The new Vector2<float> scale.
+    /// @return void
+    void setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
+
+    /// @brief setTransformSprite(): Set the transform of the sprite based on the Transform component value.
+    /// @param void
+    /// @return void
+    void setTransformSprite();
+
+    /// @brief setPosition(): Set the position of the sprite with new value.
+    /// @param newPosition: The new Vector2<float> position.
+    /// @return void
+    void setPosition(Vector2<float> newPosition);
+
+    /// @brief setPosition(): Set the position of the sprite based on the Transform component value.
+    /// @param void
+    /// @return void
+    void setPosition();
+
+    /// @brief setRotation(): Set the rotation of the sprite with new value.
+    /// @param newRotation: The new float rotation.
+    /// @return void
+    void setRotation(float newRotation);
+
+    /// @brief setRotation(): Set the rotation of the sprite based on the Transform component value.
+    /// @param void
+    /// @return void
+    void setRotation();
+
+    /// @brief setScale(): Set the the scale of the sprite with new value.
+    /// @param newScale: The new Vector2<float> scale.
+    /// @return void
+    void setScale(Vector2<float> newScale);
+
+    /// @brief setScale(): Set the scale of the sprite based on the Transform component value.
+    /// @param void
+    /// @return void
+    void setScale();
 
     /// @brief setDeferredSprite(): Set the deferred sprite.
     /// @param setter: Function that will set the sprite.
@@ -113,5 +170,7 @@ public:
     /// @param existingTexture: SFML Texture for the sprite
     /// @return void
     void setTexture(const sf::Texture& existingTexture);
+
+    Rect<float> getBounds() const;
 };
 

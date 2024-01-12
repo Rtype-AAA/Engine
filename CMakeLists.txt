@@ -4,7 +4,8 @@ project(engine VERSION 1.0.0 DESCRIPTION "Moteur de jeu")
 
 option(BUILD_TESTS "Build the test suite" OFF)
 
-find_package(SFML COMPONENTS graphics window system audio CONFIG REQUIRED)
+set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build")
+find_package(SFML 2.6.1 COMPONENTS graphics window system audio CONFIG REQUIRED)
 
 file(GLOB HEADER_FILES
         "include/*.h"
@@ -15,6 +16,9 @@ file(GLOB HEADER_FILES
         "src/Event/include/*.h"
         "src/World/include/*.h"
         "src/GameEngine/include/*.h"
+        "src/Other/include/*.h"
+        "src/toSFML/include/*.h"
+        "src/Script/include/*.h"
 )
 file(GLOB LIB_SRCS
         "src/Components/*.cpp"
@@ -23,6 +27,9 @@ file(GLOB LIB_SRCS
         "src/World/*.cpp"
         "src/GameEngine/*.cpp"
         "src/Event/*.cpp"
+        "src/Other/*.cpp"
+        "src/toSFML/*.cpp"
+        "src/Script/*.cpp"
 )
 
 add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
@@ -35,6 +42,9 @@ target_include_directories(engine_lib PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
 )
 target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
 
@@ -48,6 +58,9 @@ target_include_directories(engine PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
 )
 target_link_libraries(engine PRIVATE engine_lib)
 
@@ -71,6 +84,9 @@ if(BUILD_TESTS)
             ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
             ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
             ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
     )
     target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main)
 
@@ -100,12 +116,15 @@ install(TARGETS engine_lib
 install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
         DESTINATION include/engine)
 
 
@@ -134,13 +153,10 @@ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/copyright")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 
 if (WIN32)
-    set(CPACK_GENERATOR "NSIS;ZIP")
-    set(CPACK_NSIS_MODIFY_PATH ON)
+    set(CPACK_GENERATOR "ZIP")
 else()
-    set(CPACK_GENERATOR "RPM;TGZ")
-    set(CPACK_RPM_PACKAGE_LICENSE "MIT")
-    set(CPACK_RPM_PACKAGE_GROUP "Amusements/Games")
-    set(CPACK_RPM_COMPRESSION_TYPE "xz")
+    set(CPACK_GENERATOR "TGZ")
+
 endif ()
 
 include(CPack)

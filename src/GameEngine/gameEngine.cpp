@@ -84,7 +84,9 @@ void GameEngine::initializeSprite() {
     for (auto const& world : getWorldMap()) {
         for (auto const& entityManager : world.second->getEntityManagerMap()) {
             for (auto const& entity : entityManager.second->getEntityMap()) {
-                entity.second->getComponent<Sprite>().applyDeferredSprite();
+                if (entity.second->getComponentBitset().test(1)) {
+                    entity.second->getComponent<Sprite>().applyDeferredSprite();
+                }
             }
         }
     }
@@ -126,6 +128,11 @@ bool GameEngine::isWindowOpen() {
 }
 
 void GameEngine::updateGameEngine() {
+    for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
+        for (auto const& entity : entityManager.second->getEntityMap()) {
+            entity.second->update(deltaTime);
+        }
+    }
     return;
 }
 
@@ -157,6 +164,31 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                case sf::Event::MouseButtonPressed:
+                    if (!getEventEngine().getMouseButtonPressedMap().empty()) {
+                        auto eventIt = getEventEngine().getMouseButtonPressedMap().find(event.getEvent().mouseButton.button);
+                        if (eventIt != getEventEngine().getMouseButtonPressedMap().end()) {
+                            eventIt->second();
+                        }
+                    }
+                case sf::Event::MouseMoved:
+                    if (!getEventEngine().getMouseMovedMap().empty()) {
+                        for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
+                            for (auto const& entity : entityManager.second->getEntityMap()) {
+                                for (auto const &mouseMoved: event.getMouseMovedMap()) {
+                                    if (entity.first == mouseMoved.first) {
+                                    Rect<float> bounds = entity.second->getComponent<Sprite>().getBounds();
+                                    float mouseX = static_cast<float>(event.getEvent().mouseMove.x);
+                                    float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
+                                    if (bounds.contains(mouseX, mouseY)) {
+                                        mouseMoved.second();
+                                        break;
+                                    }
+                                    }
+                                }
+                            }
+                        }
+                    }
             }
         }
     }, window);
@@ -167,6 +199,7 @@ void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
                      std::string firstScene) {
     initialize(std::move(mapWorld), pathRessources, firstScene);
     while (isWindowOpen()) {
+        deltaTime = clock.restart();
         eventGameEngine();
         updateGameEngine();
         renderGameEngine();

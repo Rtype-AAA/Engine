@@ -11,14 +11,14 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     mapEntityManager["Text"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Title"});
     mapEntityManager["Button"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Play", "Option", "Quit"});
     menuWorld->setNameWorld("Menu");
-    menuWorld->createEntities(mapEntityManager, "Menu");
-    menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Transform>();
-    menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Sprite>()
+    menuWorld->createEntities(mapEntityManager);
+    menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
+    menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::map<std::string, std::vector<float>> mapTransform;
                 mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
                 mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
-                gameEngine.getWorld("Menu").getEntityManager("Menu").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", mapTransform);
+                gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", false);
             });
     return menuWorld;
 }
@@ -30,15 +30,42 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
     mapEntityManager["Text"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Paragraph"});
     mapEntityManager["Player"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Player1"});
     level1World->setNameWorld("Level1");
-    level1World->createEntities(mapEntityManager, "Level1");
-    level1World->getEntityManager("Level1").getEntity("Background").addComponent<Transform>();
-    level1World->getEntityManager("Level1").getEntity("Background").addComponent<Sprite>()
+    level1World->createEntities(mapEntityManager);
+    level1World->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
+    level1World->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::map<std::string, std::vector<float>> mapTransform;
                 mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
                 mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
-                gameEngine.getWorld("Level1").getEntityManager("Level1").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg", mapTransform);
+                gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
+            .setDeferredSprite([&]() {
+                std::map<std::string, std::vector<float>> mapTransform;
+                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
+                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
+                std::vector<Rect<int>> frames;
+                frames.push_back(Rect<int>(0, 0, 33, 36));
+                frames.push_back(Rect<int>(33, 0, 33, 36));
+                frames.push_back(Rect<int>(66, 0, 33, 36));
+                frames.push_back(Rect<int>(99, 0, 33, 36));
+                frames.push_back(Rect<int>(132, 0, 33, 36));
+                frames.push_back(Rect<int>(165, 0, 33, 36));
+                frames.push_back(Rect<int>(198, 0, 33, 36));
+                frames.push_back(Rect<int>(231, 0, 33, 36));
+                frames.push_back(Rect<int>(264, 0, 33, 36));
+                frames.push_back(Rect<int>(297, 0, 33, 36));
+                frames.push_back(Rect<int>(330, 0, 33, 36));
+                frames.push_back(Rect<int>(363, 0, 33, 36));
+                frames.push_back(Rect<int>(396, 0, 33, 36));
+                frames.push_back(Rect<int>(429, 0, 33, 36));
+                frames.push_back(Rect<int>(462, 0, 33, 36));
+                frames.push_back(Rect<int>(495, 0, 33, 36));
+                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
+            });
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setRotation(50.0f);
+    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
     return level1World;
 }
 
@@ -50,7 +77,7 @@ std::unique_ptr<World> worldLevel2() {
     mapEntityManager["Player"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Player1"});
     mapEntityManager["Enemy"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Robot", "Alien"});
     level2World->setNameWorld("Level2");
-    level2World->createEntities(mapEntityManager, "Level2");
+    level2World->createEntities(mapEntityManager);
     return level2World;
 }
 
@@ -71,6 +98,12 @@ void event(GameEngine &gameEngine) {
         std::visit([](auto& w) {
             w->close();
         }, gameEngine.getWindow());
+    });
+    gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
+        std::cout << "Clique gauche pressé" << std::endl;
+    });
+    gameEngine.getEventEngine().addMouseMoved("Player1", [&]() {
+        std::cout << "Sur le sprite" << std::endl;
     });
 }
 
