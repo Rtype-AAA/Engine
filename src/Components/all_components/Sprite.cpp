@@ -112,6 +112,7 @@ void Sprite::setPosition() {
 
 void Sprite::setPosition(Vector2<float> newPosition) {
     sprite.setPosition(newPosition.getX(), newPosition.getY());
+    setTransformPosition(newPosition);
 }
 
 void Sprite::setRotation() {
@@ -120,6 +121,7 @@ void Sprite::setRotation() {
 
 void Sprite::setRotation(float newRotation) {
     sprite.setRotation(newRotation);
+    setTransformRotation(newRotation);
 }
 
 void Sprite::setScale() {
@@ -128,6 +130,7 @@ void Sprite::setScale() {
 
 void Sprite::setScale(Vector2<float> newScale) {
     sprite.setScale(newScale.getX(), newScale.getY());
+    setTransformScale(newScale);
 }
 
 Rect<float> Sprite::getBounds() const {

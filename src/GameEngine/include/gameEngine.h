@@ -8,6 +8,7 @@
 #include "world.h"
 #include "eventEngine.h"
 #include "Sprite.h"
+#include "Rect.h"
 
 /**
  * @brief GameEngine class: GameEngine is a class that represents the game engine.
@@ -25,8 +26,8 @@ private:
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
     EventEngine event;                                                                   /// < EventEngine class which manages the events.
 
-    sf::Clock clock;
-    sf::Time deltaTime;
+    sf::Clock clock; /// < Clock of the game.
+    sf::Time deltaTime; /// < Time of the game. Using with the Clock.
 public:
     /// @brief Default GameEngine constructor.
     /// @param void

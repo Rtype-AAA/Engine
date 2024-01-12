@@ -4,26 +4,75 @@
 
 #pragma once
 
+#include "Transform.h"
+
+/**
+ * @brief Rect class: Rect is a class that represents a rectangle.
+ *
+ * This create a rectangle and using for what you want.
+ */
 template<typename T>
-class Rect {
+class Rect : public Transform {
 private:
-    struct Data {
+    struct RectStruct {
         T left;
         T top;
         T width;
         T height;
-    };
+    }; /// < RectStruct is the struct of Rect.
 
-    Data data;
+    RectStruct rect; /// < Rect is the variable you can use for change the data in RectStruct.
 public:
-    Rect<T>(T left, T top, T width, T height) : data{left, top, width, height} {}
+    /// @brief Rect constructor with parameters.
+    /// @tparam T: Type of the rect.
+    /// @param left: Position x.
+    /// @param top: Position y.
+    /// @param width: Width of your rectangle.
+    /// @param height: Height of your rectangle.
+    /// @return void
+    Rect<T>(T left, T top, T width, T height) : rect{left, top, width, height} {}
 
+    /// @brief Rect destructor.
+    /// @tparam T: Type of the rect.
+    /// @param void
+    /// @return void
     ~Rect<T>() = default;
 
-    Data getRect() const {return data;}
+    /// @brief getRect(): Get the using RectStruct.
+    /// @param void
+    /// @return Rect
+    RectStruct getRect() const {return rect;}
 
-    T getLeft() const {return data.left;}
-    T getTop() const {return data.top;}
-    T getWidth() const {return data.width;}
-    T getHeight() const {return data.height;}
+    /// @brief getLeft(): Get the using RectStruct left.
+    /// @tparam T: Type of the rect.
+    /// @param void
+    /// @return T : T is the type you want (float, int,...).
+    T getLeft() const {return rect.left;}
+
+    /// @brief getTop(): Get the using RectStruct top.
+    /// @tparam T: Type of the rect.
+    /// @param void
+    /// @return T : T is the type you want (float, int,...).
+    T getTop() const {return rect.top;}
+
+    /// @brief getWidth(): Get the using RectStruct width.
+    /// @tparam T: Type of the rect.
+    /// @param void
+    /// @return T : T is the type you want (float, int,...).
+    T getWidth() const {return rect.width;}
+
+    /// @brief getHeight(): Get the using RectStruct height.
+    /// @tparam T: Type of the rect.
+    /// @param void
+    /// @return T : T is the type you want (float, int,...).
+    T getHeight() const {return rect.height;}
+
+    /// @brief contains(): Check if a point is in the rectangle.
+    /// @tparam T: Type of the rect.
+    /// @param x : Position x of the point.
+    /// @param y : Position y of the point.
+    /// @return T : T is the type you want (float, int,...).
+    bool contains(T x, T y) const;
 };
+
+extern template bool Rect<float>::contains(float x, float y) const;
