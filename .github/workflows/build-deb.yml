@@ -18,8 +18,11 @@
         - name: Install dependencies
           run: |
             sudo apt-get update
-            sudo apt-get install -y build-essential devscripts debhelper debmake libsfml-dev libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev
+            sudo apt-get install -y build-essential devscripts debhelper debmake
 
+        - name: Install SFML 2.6.1 dependencies
+          run: |
+            sudo apt-get install -y libsfml-dev libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev
         - name: Install SFML 2.6.1
           run: |
             git clone https://github.com/SFML/SFML.git SFML
