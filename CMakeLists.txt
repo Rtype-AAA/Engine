@@ -7,8 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_TESTS "Build the test suite" OFF)
 
-set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build")
-find_package(SFML 2.6.1 COMPONENTS graphics window system audio CONFIG REQUIRED)
+find_package(SFML 2.6.1 COMPONENTS system window graphics REQUIRED)
+
+set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/lib/cmake/SFML")
 
 file(GLOB HEADER_FILES
         "include/*.h"

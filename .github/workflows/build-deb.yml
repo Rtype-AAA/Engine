@@ -28,8 +28,8 @@
             git clone https://github.com/SFML/SFML.git SFML
             cd SFML
             git checkout 2.6.1
-            cmake -Bbuild
-            sudo cmake --build build --target install
+            cmake -Bbuild -DBUILD_SHARED_LIBS=OFF
+            sudo cmake --build build --config Release --target install
             echo "SFML 2.6.1 installed successfully"
 
         - name: Prepare files for packaging
