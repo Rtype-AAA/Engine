@@ -12,6 +12,6 @@ void EventEngine::addMouseButtonPressed(sf::Mouse::Button mouse, std::function<v
     mouseButtonPressedMap.insert(std::make_pair(mouse, function));
 }
 
-//void EventEngine::addMouseMoved(sf::Mouse:: sprite, std::function<void()> function) {
-//    mouseMovedMap.insert(std::make_pair(sprite, function));
-//}
+void EventEngine::addMouseMoved(std::string nameEntity, std::function<void()> function) {
+    mouseMovedMap.insert(std::make_pair(nameEntity, function));
+}

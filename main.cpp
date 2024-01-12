@@ -40,7 +40,6 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
-    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().setPosition(Vector2<float>(1000.0f, 500.0f));
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::map<std::string, std::vector<float>> mapTransform;
@@ -103,9 +102,9 @@ void event(GameEngine &gameEngine) {
     gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
         std::cout << "Clique gauche pressé" << std::endl;
     });
-//    gameEngine.getEventEngine().addMouseMoved(gameEngine.getWorld("Menu").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().getSprite(), [&]() {
-//        std::cout << "Sur le sprite" << std::endl;
-//    });
+    gameEngine.getEventEngine().addMouseMoved("Player1", [&]() {
+        std::cout << "Sur le sprite" << std::endl;
+    });
 }
 
 int main() {
