@@ -19,6 +19,7 @@ void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vect
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void Transform::setTransformPosition(Vector2<float> newPosition) {
     transform.position = newPosition;
 }
@@ -30,14 +31,21 @@ void Transform::setTransformRotation(float newRotation) {
 void Transform::setTransformScale(Vector2<float> newScale) {
 =======
 void Transform::setPosition(Vector2<float> newPosition) {
+=======
+void Transform::setTransformPosition(Vector2<float> newPosition) {
+>>>>>>> b57d10d ([m] Engine:)
     transform.position = newPosition;
 }
 
-void Transform::setRotation(float newRotation) {
+void Transform::setTransformRotation(float newRotation) {
     transform.rotation = newRotation;
 }
 
+<<<<<<< HEAD
 void Transform::setScale(Vector2<float> newScale) {
 >>>>>>> 8bf355f ([m] Engine:)
+=======
+void Transform::setTransformScale(Vector2<float> newScale) {
+>>>>>>> b57d10d ([m] Engine:)
     transform.scale = newScale;
 }
