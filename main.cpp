@@ -40,10 +40,6 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
-<<<<<<< HEAD
-=======
-    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().setPosition(Vector2<float>(1000.0f, 500.0f));
->>>>>>> 8bf355f ([m] Engine:)
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
             .setDeferredSprite([&]() {
                 std::map<std::string, std::vector<float>> mapTransform;
