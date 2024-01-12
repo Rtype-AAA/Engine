@@ -10,6 +10,7 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     mapEntityManager["Image"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Background"});
     mapEntityManager["Text"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Title"});
     mapEntityManager["Button"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Play", "Option", "Quit"});
+    mapEntityManager["Music"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Music"});
     menuWorld->setNameWorld("Menu");
     menuWorld->createEntities(mapEntityManager);
     menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
@@ -19,6 +20,11 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
                 mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
                 mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
                 gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", false);
+            });
+    menuWorld->getEntityManager("Music").getEntity("Music").addComponent<Music>()
+            .setDeferredMusic([&]() {
+                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().setMusic(gameEngine.getMapMusic(), "Music.wav");
+                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().playMusic();
             });
     return menuWorld;
 }
@@ -34,17 +40,11 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                std::map<std::string, std::vector<float>> mapTransform;
-                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
-                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
                 gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
             });
-    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>();
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>().setTransformPosition(Vector2<float>(1000.0f, 500.0f));
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                std::map<std::string, std::vector<float>> mapTransform;
-                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
-                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
                 std::vector<Rect<int>> frames;
                 frames.push_back(Rect<int>(0, 0, 33, 36));
                 frames.push_back(Rect<int>(33, 0, 33, 36));
@@ -64,12 +64,12 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 frames.push_back(Rect<int>(495, 0, 33, 36));
                 gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
             });
-    level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setRotation(50.0f);
     level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
+    std::cout << level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().getPosition().getX() << ", " << level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().getPosition().getY() << std::endl;
     return level1World;
 }
 
-std::unique_ptr<World> worldLevel2() {
+std::unique_ptr<World> worldLevel2(GameEngine& gameEngine) {
     std::unique_ptr<World> level2World = std::make_unique<World>();
     std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
     mapEntityManager["Image"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Background"});
@@ -84,8 +84,13 @@ std::unique_ptr<World> worldLevel2() {
 void event(GameEngine &gameEngine) {
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::A, [&]() {
         gameEngine.setCurrentWorld(&gameEngine.getWorld("Menu"));
+        gameEngine.getCurrentWorld()->getEntityManager("Music").getEntity("Music").getComponent<Music>().playMusic();
     });
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Z, [&]() {
+        if (gameEngine.getCurrentWorld()->getNameWorld() == "Menu") {
+            gameEngine.getCurrentWorld()->getEntityManager("Music").getEntity(
+                    "Music").getComponent<Music>().stopMusic();
+        }
         gameEngine.setCurrentWorld(&gameEngine.getWorld("Level1"));
     });
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::E, [&]() {
@@ -97,6 +102,7 @@ void event(GameEngine &gameEngine) {
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Q, [&]() {
         std::visit([](auto& w) {
             w->close();
+
         }, gameEngine.getWindow());
     });
     gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
@@ -112,79 +118,12 @@ int main() {
     std::map<std::string, std::unique_ptr<World>> worldMap;
     worldMap["Menu"] = worldMenu(gameEngine);
     worldMap["Level1"] = worldLevel1(gameEngine);
-    worldMap["Level2"] = worldLevel2();
+    worldMap["Level2"] = worldLevel2(gameEngine);
     std::map<std::string, std::string> pathRessources;
     pathRessources["Texture"] = "src/Ressources/Textures";
+    pathRessources["Sounds"] = "src/Ressources/Sounds";
+    pathRessources["Musics"] = "src/Ressources/Music";
     event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
-
-
-//    std::map<std::string, std::vector<float>> mapTransform;
-//    mapTransform["Position"] = {1.0f, 5.0f};
-//    mapTransform["Rotation"] = {4.0f, 21.3f};
-//    mapTransform["Scale"] = {0.0f, 0.0f};
-//
-//    std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
-//    mapEntityManager["players"] = std::make_pair(std::make_unique<EntityManager>(), std::vector<std::string>{"Thibault", "Pierre", "Louis"});
-//
-//    test.createEntities(mapEntityManager);
-//
-//    mapEntityManager["players"].first->getEntity("Thibault").addComponent<Transform>(mapTransform);
-//    mapEntityManager["players"].first->getEntity("Louis").addComponent<Transform>();
-//
-//    std::cout << mapEntityManager["players"].first->getEntity("Thibault").getComponent<Transform>().getPositionVector()[0] << ", ";
-//    std::cout << mapEntityManager["players"].first->getEntity("Thibault").getComponent<Transform>().getPositionVector()[1] << std::endl;
-//
-//    std::cout << mapEntityManager["players"].first->getEntity("Louis").getComponent<Transform>().getPositionVector()[0] << ", ";
-//    std::cout << mapEntityManager["players"].first->getEntity("Louis").getComponent<Transform>().getPositionVector()[1] << std::endl;
-//    players->getEntity("Thibault").addComponent<Transform>(mapTransform);
-//    std::cout << &players->getEntity("Thibault").getComponent<Transform>() << std::endl;
-//    std::cout << "Player: " << &player << std::endl;
-//    std::cout << "main " << &player.addComponent<Transform>() << std::endl;
-//    std::cout << "Name: " << player.getName() << std::endl;
-//    player.setName("Louis");
-//    std::cout << "Name: " << player.getName() << std::endl;
-//    std::cout << &player.getComponent<Transform>() << std::endl;
-//    for (const auto& element : mapTransform) {
-//        std::cout << element.second[1] << std::endl;
-//    }
-//    std::cout << "{" << players->getEntity("Thibault").getComponent<Transform>().getPositionVector()[0] << ", ";
-//    std::cout << players->getEntity("Thibault").getComponent<Transform>().getPositionVector()[1] << "}" << std::endl;
-//    std::cout << "{" << players->getEntity("Thibault").getComponent<Transform>().getRotationVector()[0] << ", ";
-//    std::cout << players->getEntity("Thibault").getComponent<Transform>().getRotationVector()[1] << "}" << std::endl;
-//    std::cout << "{" << players->getEntity("Thibault").getComponent<Transform>().getScaleVector()[0] << ", ";
-//    std::cout << players->getEntity("Thibault").getComponent<Transform>().getScaleVector()[1] << "}" << std::endl;
-//    std::cout << std::endl;
-//    std::cout << "{" << player.getComponent<Transform>().getPositionVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getPositionVector()[1] << "}" << std::endl;
-//    std::cout << "{" << player.getComponent<Transform>().getRotationVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getRotationVector()[1] << "}" << std::endl;
-//    std::cout << "{" << player.getComponent<Transform>().getScaleVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getScaleVector()[1] << "}" << std::endl;
-//    player.getComponent<Transform>().setTransform(mapTransform);
-//    std::cout << "{" << player.getComponent<Transform>().getPositionVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getPositionVector()[1] << "}" << std::endl;
-//    std::cout << "{" << player.getComponent<Transform>().getRotationVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getRotationVector()[1] << "}" << std::endl;
-//    std::cout << "{" << player.getComponent<Transform>().getScaleVector()[0] << ", ";
-//    std::cout << player.getComponent<Transform>().getScaleVector()[1] << "}" << std::endl;
-
-
-
-//    Sprite rendering("assets/red.png");
-//    if (rendering.getSprite().getTexture() == nullptr) {
-//        std::cout << "Texture is null" << std::endl;
-//    } else {
-//        std::cout << "Texture is not null" << std::endl;
-//    }
-//
-//    rendering.setTexture("assets/blue.png");
-//    rendering.createSprite();
-//
-//    if (rendering.getSprite().getTexture() == nullptr) {
-//        std::cout << "Texture is null" << std::endl;
-//    } else {
-//        std::cout << "Texture is not null" << std::endl;
-//    }
     return 0;
 }

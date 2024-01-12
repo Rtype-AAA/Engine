@@ -66,13 +66,11 @@ target_link_libraries(engine PRIVATE engine_lib)
 
 if(BUILD_TESTS)
     file(GLOB LIB_SRCS_TEST
-            "tests/Components/all_components/TestSprite.cpp"
-            "tests/Components/all_components/TestTransform.cpp"
-            "tests/Entity/TestEntity.cpp"
-            "tests/Entity/TestEntityManager.cpp"
-            "tests/Event/TestEvent.cpp"
-            "tests/GameEngine/TestGameEngine.cpp"
-            "tests/World/TestWorld.cpp"
+            "tests/Components/all_components/*.cpp"
+            "tests/Entity/*.cpp"
+            "tests/Event/*.cpp"
+            "tests/GameEngine/*.cpp"
+            "tests/World/*.cpp"
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
     target_include_directories(all_tests PRIVATE

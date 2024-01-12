@@ -54,27 +54,21 @@ void Sprite::setSprite(const sf::Sprite& newSprite) {
 
 void Sprite::setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
                        bool animate, std::vector<Rect<int>> newFrames, int durationOfFrame) {
-    auto it = mapTexture.find(nameTexture);
-    if (it != mapTexture.end()) {
-        sprite.setTexture(*(it->second));
-        if (animate) {
+    if (!mapTexture.empty()) {
+        auto it = mapTexture.find(nameTexture);
+        if (it != mapTexture.end()) {
+            sprite.setTexture(*(it->second));
             animation = animate;
-            if (newFrames.size() > 0) {
-                frames = newFrames;
-                currentFrame = 0;
-                timeSinceLastFrame = sf::Time::Zero;
-                frameDuration = sf::milliseconds(durationOfFrame);
-                sprite.setTextureRect(toSFMLRect(frames[0]));
+            if (animate) {
+                if (newFrames.size() > 0) {
+                    frames = newFrames;
+                    currentFrame = 0;
+                    timeSinceLastFrame = sf::Time::Zero;
+                    frameDuration = sf::milliseconds(durationOfFrame);
+                    sprite.setTextureRect(toSFMLRect(frames[0]));
+                }
             }
         }
-//        auto position = mapTransform.find("Position");
-//        if (position != mapTransform.end()) {
-//            sprite.setPosition(position->second[0], position->second[1]);
-//        }
-//        auto scale = mapTransform.find("Scale");
-//        if (scale != mapTransform.end()) {
-//            sprite.setScale(scale->second[0], scale->second[1]);
-//        }
     }
 }
 
@@ -94,46 +88,68 @@ void Sprite::setTexture(const sf::Texture& existingTexture) {
 
 
 void Sprite::setTransformSprite() {
-    sprite.setPosition(getTransformStruct().position.getX(), getTransformStruct().position.getY());
-    sprite.setRotation(getTransformStruct().rotation);
-    sprite.setScale(getTransformStruct().scale.getX(), getTransformStruct().scale.getY());
+    if (transform) {
+        sprite.setPosition(transform->getTransformStruct().position.getX(),
+                           transform->getTransformStruct().position.getY());
+        sprite.setRotation(transform->getTransformStruct().rotation);
+        sprite.setScale(transform->getTransformStruct().scale.getX(), transform->getTransformStruct().scale.getY());
+    }
 }
 
 void Sprite::setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
-    sprite.setPosition(newPosition.getX(), newPosition.getY());
-    sprite.setRotation(newRotation);
-    sprite.setScale(newScale.getX(), newScale.getY());
-    setTransform(newPosition, newRotation, newScale);
+    if (transform) {
+        sprite.setPosition(newPosition.getX(), newPosition.getY());
+        sprite.setRotation(newRotation);
+        sprite.setScale(newScale.getX(), newScale.getY());
+        transform->setTransform(newPosition, newRotation, newScale);
+    }
 }
 
 void Sprite::setPosition() {
-    sprite.setPosition(getTransformStruct().position.getX(), getTransformStruct().position.getY());
+    if (transform) {
+        sprite.setPosition(transform->getTransformStruct().position.getX(),
+                           transform->getTransformStruct().position.getY());
+    }
 }
 
 void Sprite::setPosition(Vector2<float> newPosition) {
-    sprite.setPosition(newPosition.getX(), newPosition.getY());
-    setTransformPosition(newPosition);
+    if (transform) {
+        sprite.setPosition(newPosition.getX(), newPosition.getY());
+        transform->setTransformPosition(newPosition);
+    }
 }
 
 void Sprite::setRotation() {
-    sprite.setRotation(getTransformStruct().rotation);
+    if (transform) {
+        sprite.setRotation(transform->getTransformStruct().rotation);
+    }
 }
 
 void Sprite::setRotation(float newRotation) {
-    sprite.setRotation(newRotation);
-    setTransformRotation(newRotation);
+    if (transform) {
+        sprite.setRotation(newRotation);
+        transform->setTransformRotation(newRotation);
+    }
 }
 
 void Sprite::setScale() {
-    sprite.setScale(getTransformStruct().scale.getX(), getTransformStruct().scale.getY());
+    if (transform) {
+        sprite.setScale(transform->getTransformStruct().scale.getX(), transform->getTransformStruct().scale.getY());
+    }
 }
 
 void Sprite::setScale(Vector2<float> newScale) {
-    sprite.setScale(newScale.getX(), newScale.getY());
-    setTransformScale(newScale);
+    if (transform) {
+        sprite.setScale(newScale.getX(), newScale.getY());
+        transform->setTransformScale(newScale);
+    }
 }
 
 Rect<float> Sprite::getBounds() const {
     sf::FloatRect bounds = sprite.getGlobalBounds();
     return Rect<float>(bounds.left, bounds.top, bounds.width, bounds.height);
+}
+
+void Sprite::setTransform(Transform& newTransform) {
+    transform = &newTransform;
 }

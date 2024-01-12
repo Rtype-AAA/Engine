@@ -24,10 +24,12 @@ private:
     sf::Texture texture; ///< SFML Texture for the sprite.
     std::function<void()> deferredSprite; ///< Deferred sprite.
 
+    Transform* transform;
+
     std::vector<Rect<int>> frames; /// < Vector of all frames for animation.
     sf::Time timeSinceLastFrame; /// < The time since the last frames was draw.
     sf::Time frameDuration; /// < The duration of draw a frame.
-    int currentFrame; /// < The current frame.
+    unsigned int currentFrame; /// < The current frame.
     bool animation; /// < Sprite is animated.
 
     int bit = 1; ///< Bit of the Sprite.
@@ -36,12 +38,12 @@ public:
     /// @brief Default Sprite constructor.
     /// @param void
     /// @return void
-    Sprite() = default;
+    Sprite() : transform(nullptr) {}
 
     /// @brief Sprite constructor with an existing texture path.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
-    Sprite(const std::string& texturePath) {
+    Sprite(const std::string& texturePath) : transform(nullptr) {
         if (texture.loadFromFile(texturePath)) {
             sprite.setTexture(texture);
         } else {
@@ -53,6 +55,10 @@ public:
     /// @param void
     /// @return void
     ~Sprite() override = default;
+
+    Transform* getTransform() const {return transform;}
+
+    void setTransform(Transform& newTransform);
 
     /// @brief init(): Initialize the Sprite.
     /// @param void
