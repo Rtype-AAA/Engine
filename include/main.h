@@ -22,8 +22,5 @@
 #include "Vector2.h"
 #include "toSFML.h"
 #include "Script.h"
-<<<<<<< HEAD
 #include "Color.h"
-=======
->>>>>>> ef4437f ([m] Engine:)
 

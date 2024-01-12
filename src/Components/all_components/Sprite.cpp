@@ -156,11 +156,8 @@ void Sprite::setScale(Vector2<float> newScale) {
 Rect<float> Sprite::getBounds() const {
     sf::FloatRect bounds = sprite.getGlobalBounds();
     return Rect<float>(bounds.left, bounds.top, bounds.width, bounds.height);
-<<<<<<< HEAD
 }
 
 void Sprite::setTransform(Transform& newTransform) {
     transform = &newTransform;
-=======
->>>>>>> ef4437f ([m] Engine:)
 }
