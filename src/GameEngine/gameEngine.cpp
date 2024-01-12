@@ -24,35 +24,6 @@ void GameEngine::setCurrentWorld(World* world) {
     currentWorld = world;
 }
 
-std::vector<std::string> GameEngine::getFilesTexture(std::string pathDirectory) {
-    if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
-        std::cerr << "Dossier non trouvé ou chemin non valide." << std::endl;
-        exit(1);
-    }
-    std::vector<std::string> allFilesName;
-    for (const auto& entry : std::filesystem::directory_iterator(pathDirectory)) {
-        const auto& path = entry.path();
-        allFilesName.push_back(path.filename());
-    }
-    return allFilesName;
-}
-
-void GameEngine::initializeTexture(std::string path) {
-    sf::Texture texture;
-    std::vector<std::string> allFilesName;
-    allFilesName = getFilesTexture(path);
-    path += "/";
-    for (const auto& element : allFilesName) {
-        if (!texture.loadFromFile(path + element)) {
-            std::cerr << "Erreur lors du chargement de la texture : " + path + element << std::endl;
-            exit(1);
-        } else {
-            std::cout << "Chargement de la texture avec succès : " + path + element << std::endl;
-        }
-        mapTexture[element] = std::make_shared<sf::Texture>(texture);
-    }
-}
-
 World& GameEngine::addWorld(std::string nameWorld, std::unique_ptr<World> world) {
     if (!world->initWorld()) {
         throw std::runtime_error("Echec de l'initialisation de World : " + nameWorld);
@@ -80,7 +51,7 @@ void GameEngine::initializeWorldMap(std::map<std::string, std::unique_ptr<World>
     }
 }
 
-void GameEngine::initializeSprite() {
+void GameEngine::initializeSpriteFunction() {
     for (auto const& world : getWorldMap()) {
         for (auto const& entityManager : world.second->getEntityManagerMap()) {
             for (auto const& entity : entityManager.second->getEntityMap()) {
@@ -92,17 +63,110 @@ void GameEngine::initializeSprite() {
     }
 }
 
-void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                            std::map<std::string, std::string> pathRessources,
-                            std::string firstScene) {
+void GameEngine::initializeSoundFunction() {
+    for (auto const& world : getWorldMap()) {
+        for (auto const& entityManager : world.second->getEntityManagerMap()) {
+            for (auto const& entity : entityManager.second->getEntityMap()) {
+                if (entity.second->getComponentBitset().test(2)) {
+                    entity.second->getComponent<Sound>().applyDeferredSound();
+                }
+            }
+        }
+    }
+}
+
+void GameEngine::initializeMusicFunction() {
+    for (auto const& world : getWorldMap()) {
+        for (auto const& entityManager : world.second->getEntityManagerMap()) {
+            for (auto const& entity : entityManager.second->getEntityMap()) {
+                if (entity.second->getComponentBitset().test(3)) {
+                    entity.second->getComponent<Music>().applyDeferredMusic();
+                }
+            }
+        }
+    }
+}
+
+std::vector<std::string> GameEngine::getFilesRessources(std::string pathDirectory) {
+    if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
+        std::cerr << "Folder not found or invalid path." << std::endl;
+        exit(1);
+    }
+    std::vector<std::string> allFilesName;
+    for (const auto& entry : std::filesystem::directory_iterator(pathDirectory)) {
+        const auto& path = entry.path();
+        allFilesName.push_back(path.filename());
+    }
+    return allFilesName;
+}
+
+void GameEngine::initializeTexture(std::string path) {
+    sf::Texture texture;
+    std::vector<std::string> allFilesName;
+    allFilesName = getFilesRessources(path);
+    path += "/";
+    for (const auto& element : allFilesName) {
+        if (!texture.loadFromFile(path + element)) {
+            std::cerr << "Error loading texture: " + path + element << std::endl;
+            exit(1);
+        } else {
+            std::cout << "Texture loaded successfully: " + path + element << std::endl;
+        }
+        mapTexture[element] = std::make_shared<sf::Texture>(texture);
+    }
+}
+
+void GameEngine::initializeSound(std::string path) {
+    sf::SoundBuffer soundBuffer;
+    std::vector<std::string> allFilesName;
+    allFilesName = getFilesRessources(path);
+    path += "/";
+    for (const auto& element : allFilesName) {
+        if (!soundBuffer.loadFromFile(path + element)) {
+            std::cerr << "Error loading sound: " + path + element << std::endl;
+            exit(1);
+        } else {
+            std::cout << "Sound loaded successfully: " + path + element << std::endl;
+        }
+        mapSound[element] = std::make_shared<sf::SoundBuffer>(soundBuffer);
+    }
+}
+
+void GameEngine::initializeMusic(std::string path) {
+    std::vector<std::string> allFilesName;
+    allFilesName = getFilesRessources(path);
+    path += "/";
+    for (const auto& element : allFilesName) {
+        std::shared_ptr<sf::Music> music = std::make_shared<sf::Music>();
+        if (!music->openFromFile(path + element)) {
+            std::cerr << "Error loading music: " + path + element << std::endl;
+            exit(1);
+        } else {
+            std::cout << "Music loaded successfully: " + path + element << std::endl;
+        }
+        mapMusic[element] = music;
+    }
+}
+
+void GameEngine::initializeAllFiles(std::map <std::string, std::string> pathRessources) {
     for (const auto& element : pathRessources) {
         if (element.first == "Textures" || element.first == "Texture") {
             initializeTexture(element.second);
+        } else if (element.first == "Sound" || element.first == "Sounds") {
+            initializeSound(element.second);
+        } else if (element.first == "Music" || element.first == "Musics") {
+            initializeMusic(element.second);
         } else {
-            std::cout << "Le type de ressource n'existe pas, veuillez choisir parmis ceux disponible." << std::endl;
+            std::cout << "The resource type does not exist, please choose from the available options." << std::endl;
             exit(0);
         }
     }
+}
+
+void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
+                            std::map<std::string, std::string> pathRessources,
+                            std::string firstScene) {
+    initializeAllFiles(pathRessources);
     initializeWorldMap(std::move(mapWorld));
     for (const auto& element : worldMap) {
         const std::string key = element.first;
@@ -113,7 +177,13 @@ void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWor
         }
     }
     if (!mapTexture.empty()) {
-        initializeSprite();
+        initializeSpriteFunction();
+    }
+    if (!mapSound.empty()) {
+        initializeSoundFunction();
+    }
+    if (!mapMusic.empty()) {
+        initializeMusicFunction();
     }
 }
 
@@ -164,6 +234,7 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                    break;
                 case sf::Event::MouseButtonPressed:
                     if (!getEventEngine().getMouseButtonPressedMap().empty()) {
                         auto eventIt = getEventEngine().getMouseButtonPressedMap().find(event.getEvent().mouseButton.button);
@@ -171,24 +242,28 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                    break;
                 case sf::Event::MouseMoved:
                     if (!getEventEngine().getMouseMovedMap().empty()) {
                         for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
                             for (auto const& entity : entityManager.second->getEntityMap()) {
                                 for (auto const &mouseMoved: event.getMouseMovedMap()) {
                                     if (entity.first == mouseMoved.first) {
-                                    Rect<float> bounds = entity.second->getComponent<Sprite>().getBounds();
-                                    float mouseX = static_cast<float>(event.getEvent().mouseMove.x);
-                                    float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
-                                    if (bounds.contains(mouseX, mouseY)) {
-                                        mouseMoved.second();
+                                        if (entity.second->getComponentBitset().test(1)) {
+                                            Rect<float> bounds = entity.second->getComponent<Sprite>().getBounds();
+                                            float mouseX = static_cast<float>(event.getEvent().mouseMove.x);
+                                            float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
+                                            if (bounds.contains(mouseX, mouseY)) {
+                                                mouseMoved.second();
+                                            }
+                                        }
                                         break;
-                                    }
                                     }
                                 }
                             }
                         }
                     }
+                    break;
             }
         }
     }, window);
