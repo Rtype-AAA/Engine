@@ -71,6 +71,8 @@ if(BUILD_TESTS)
             "tests/Event/*.cpp"
             "tests/GameEngine/*.cpp"
             "tests/World/*.cpp"
+            "tests/Other/*.cpp"
+            "tests/toSFML/*.cpp"
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
     target_include_directories(all_tests PRIVATE

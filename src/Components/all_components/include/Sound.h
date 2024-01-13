@@ -35,6 +35,8 @@ public:
     /// @return void
     ~Sound() override = default;
 
+    void update(sf::Time timeDelta) override;
+
     /// @brief loadSoundBuffer(): Load the sound buffer from a file. Automatically set the component sound. /!\ Only supports .wav, .ogg and FLAC files.
     /// @param filePath: Path to the audio file.
     /// @return bool: True if the sound buffer has been loaded, false otherwise.

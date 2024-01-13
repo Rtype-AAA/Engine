@@ -1,0 +1,263 @@
+\hypertarget{classRect}{}\doxysection{Rect$<$ T $>$ Class Template Reference}
+\label{classRect}\index{Rect$<$ T $>$@{Rect$<$ T $>$}}
+
+
+\mbox{\hyperlink{classRect}{Rect}} class\+: \mbox{\hyperlink{classRect}{Rect}} is a class that represents a rectangle.  
+
+
+
+
+{\ttfamily \#include $<$Rect.\+h$>$}
+
+
+
+Inheritance diagram for Rect$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{dd/db9/classRect__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rect$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{dc/df5/classRect__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRect_a81a8f4ad1408f24a6c1c836faf0580bb}{Rect}} (T left, T top, T width, T height)
+\begin{DoxyCompactList}\small\item\em $<$ \mbox{\hyperlink{classRect}{Rect}} is the variable you can use for change the data in Rect\+Struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRect_a80e1c16bae23f85f45179515c55434d2}{$\sim$\+Rect}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect}{Rect}} destructor. \end{DoxyCompactList}\item 
+Rect\+Struct \mbox{\hyperlink{classRect_addbfb3daff50ac114c516de1ea5371ef}{get\+Rect}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_addbfb3daff50ac114c516de1ea5371ef}{get\+Rect()}}\+: Get the using Rect\+Struct. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classRect_a8f84f2bca265ef8c32c6968136a9ae65}{get\+Left}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_a8f84f2bca265ef8c32c6968136a9ae65}{get\+Left()}}\+: Get the using Rect\+Struct left. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classRect_ade6ef3aa9ee71030c758462ea866c8f8}{get\+Top}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_ade6ef3aa9ee71030c758462ea866c8f8}{get\+Top()}}\+: Get the using Rect\+Struct top. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classRect_ad0bf6a383f3fc47abe5d6d3a02aeb4f1}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_ad0bf6a383f3fc47abe5d6d3a02aeb4f1}{get\+Width()}}\+: Get the using Rect\+Struct width. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classRect_a8024ea616571c7b94333ccd7f550ebf1}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_a8024ea616571c7b94333ccd7f550ebf1}{get\+Height()}}\+: Get the using Rect\+Struct height. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRect_ad3746ae6334e50ba4321705fdc2b5d63}{contains}} (T x, T y) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classRect_ad3746ae6334e50ba4321705fdc2b5d63}{contains()}}\+: Check if a point is in the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Rect$<$ T $>$}
+
+\mbox{\hyperlink{classRect}{Rect}} class\+: \mbox{\hyperlink{classRect}{Rect}} is a class that represents a rectangle. 
+
+This create a rectangle and using for what you want. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRect_a81a8f4ad1408f24a6c1c836faf0580bb}\label{classRect_a81a8f4ad1408f24a6c1c836faf0580bb}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!Rect@{Rect}}
+\index{Rect@{Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rect()}{Rect()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::\mbox{\hyperlink{classRect}{Rect}} (\begin{DoxyParamCaption}\item[{T}]{left,  }\item[{T}]{top,  }\item[{T}]{width,  }\item[{T}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$<$ \mbox{\hyperlink{classRect}{Rect}} is the variable you can use for change the data in Rect\+Struct. 
+
+\mbox{\hyperlink{classRect}{Rect}} constructor with parameters. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Position x. \\
+\hline
+{\em top} & Position y. \\
+\hline
+{\em width} & Width of your rectangle. \\
+\hline
+{\em height} & Height of your rectangle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_a80e1c16bae23f85f45179515c55434d2}\label{classRect_a80e1c16bae23f85f45179515c55434d2}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!````~Rect@{$\sim$Rect}}
+\index{````~Rect@{$\sim$Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rect()}{~Rect()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classRect}{Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classRect}{Rect}} destructor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRect_ad3746ae6334e50ba4321705fdc2b5d63}\label{classRect_ad3746ae6334e50ba4321705fdc2b5d63}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classRect_ad3746ae6334e50ba4321705fdc2b5d63}{contains()}}\+: Check if a point is in the rectangle. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: Position x of the point. \\
+\hline
+{\em y} & \+: Position y of the point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: T is the type you want (float, int,...). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_a8024ea616571c7b94333ccd7f550ebf1}\label{classRect_a8024ea616571c7b94333ccd7f550ebf1}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classRect_a8024ea616571c7b94333ccd7f550ebf1}{get\+Height()}}\+: Get the using Rect\+Struct height. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: T is the type you want (float, int,...). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_a8f84f2bca265ef8c32c6968136a9ae65}\label{classRect_a8f84f2bca265ef8c32c6968136a9ae65}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classRect_a8f84f2bca265ef8c32c6968136a9ae65}{get\+Left()}}\+: Get the using Rect\+Struct left. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: T is the type you want (float, int,...). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_addbfb3daff50ac114c516de1ea5371ef}\label{classRect_addbfb3daff50ac114c516de1ea5371ef}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!getRect@{getRect}}
+\index{getRect@{getRect}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getRect()}{getRect()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Rect\+Struct \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classRect_addbfb3daff50ac114c516de1ea5371ef}{get\+Rect()}}\+: Get the using Rect\+Struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRect}{Rect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_ade6ef3aa9ee71030c758462ea866c8f8}\label{classRect_ade6ef3aa9ee71030c758462ea866c8f8}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!getTop@{getTop}}
+\index{getTop@{getTop}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getTop()}{getTop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::get\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classRect_ade6ef3aa9ee71030c758462ea866c8f8}{get\+Top()}}\+: Get the using Rect\+Struct top. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: T is the type you want (float, int,...). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_ad0bf6a383f3fc47abe5d6d3a02aeb4f1}\label{classRect_ad0bf6a383f3fc47abe5d6d3a02aeb4f1}} 
+\index{Rect$<$ T $>$@{Rect$<$ T $>$}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Rect$<$ T $>$@{Rect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classRect}{Rect}}$<$ T $>$\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classRect_ad0bf6a383f3fc47abe5d6d3a02aeb4f1}{get\+Width()}}\+: Get the using Rect\+Struct width. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the rect. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: T is the type you want (float, int,...). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Other/include/Rect.\+h\item 
+src/\+Other/Rect.\+cpp\end{DoxyCompactItemize}

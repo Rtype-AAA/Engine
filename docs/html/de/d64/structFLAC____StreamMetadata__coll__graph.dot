@@ -1,0 +1,32 @@
+digraph "FLAC__StreamMetadata"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="FLAC__StreamMetadata",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" padding" ,fontname="Helvetica"];
+  Node2 [label="FLAC__StreamMetadata\l_Padding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d62/structFLAC____StreamMetadata__Padding.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" picture" ,fontname="Helvetica"];
+  Node3 [label="FLAC__StreamMetadata\l_Picture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d06/structFLAC____StreamMetadata__Picture.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" application" ,fontname="Helvetica"];
+  Node4 [label="FLAC__StreamMetadata\l_Application",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d03/structFLAC____StreamMetadata__Application.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unknown" ,fontname="Helvetica"];
+  Node5 [label="FLAC__StreamMetadata\l_Unknown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dc1/structFLAC____StreamMetadata__Unknown.html",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stream_info" ,fontname="Helvetica"];
+  Node6 [label="FLAC__StreamMetadata\l_StreamInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dce/structFLAC____StreamMetadata__StreamInfo.html",tooltip=" "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vorbis_comment" ,fontname="Helvetica"];
+  Node7 [label="FLAC__StreamMetadata\l_VorbisComment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d86/structFLAC____StreamMetadata__VorbisComment.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comments\nvendor_string" ,fontname="Helvetica"];
+  Node8 [label="FLAC__StreamMetadata\l_VorbisComment_Entry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d2b/structFLAC____StreamMetadata__VorbisComment__Entry.html",tooltip=" "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cue_sheet" ,fontname="Helvetica"];
+  Node9 [label="FLAC__StreamMetadata\l_CueSheet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/db0/structFLAC____StreamMetadata__CueSheet.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tracks" ,fontname="Helvetica"];
+  Node10 [label="FLAC__StreamMetadata\l_CueSheet_Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d9a/structFLAC____StreamMetadata__CueSheet__Track.html",tooltip=" "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" indices" ,fontname="Helvetica"];
+  Node11 [label="FLAC__StreamMetadata\l_CueSheet_Index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db5/structFLAC____StreamMetadata__CueSheet__Index.html",tooltip=" "];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" seek_table" ,fontname="Helvetica"];
+  Node12 [label="FLAC__StreamMetadata\l_SeekTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6d/structFLAC____StreamMetadata__SeekTable.html",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" points" ,fontname="Helvetica"];
+  Node13 [label="FLAC__StreamMetadata\l_SeekPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d8d/structFLAC____StreamMetadata__SeekPoint.html",tooltip=" "];
+}

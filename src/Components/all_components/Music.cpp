@@ -13,6 +13,10 @@ void Music::setMusic(std::map<std::string, std::shared_ptr<sf::Music>> mapMusic,
     }
 }
 
+void Music::update(sf::Time timeDelta) {
+    return;
+}
+
 void Music::play() {
     music->play();
 }

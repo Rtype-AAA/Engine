@@ -1,0 +1,120 @@
+\hypertarget{classsf_1_1Vector2}{}\doxysection{sf\+::Vector2$<$ T $>$ Class Template Reference}
+\label{classsf_1_1Vector2}\index{sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}}
+
+
+Utility template class for manipulating 2-\/dimensional vectors.  
+
+
+
+
+{\ttfamily \#include $<$Vector2.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1Vector2_a58c32383b5291380db4b43a289f75988}{Vector2}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Vector2_aed26a72164e59e8a4a0aeee2049568f1}{Vector2}} (T X, T Y)
+\begin{DoxyCompactList}\small\item\em Construct the vector from its coordinates. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classsf_1_1Vector2_a3da455e0ae3f8ff6d2fe36d10b332d10}{Vector2}} (const \mbox{\hyperlink{classsf_1_1Vector2}{Vector2}}$<$ U $>$ \&vector)
+\begin{DoxyCompactList}\small\item\em Construct the vector from another type of vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsf_1_1Vector2_a3da455e0ae3f8ff6d2fe36d10b332d10}\label{classsf_1_1Vector2_a3da455e0ae3f8ff6d2fe36d10b332d10}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries Vector2} (const \mbox{\hyperlink{classsf_1_1Vector2}{Vector2}}$<$ U $>$ \&vector)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsf_1_1Vector2_a1e6ad77fa155f3753bfb92699bd28141}\label{classsf_1_1Vector2_a1e6ad77fa155f3753bfb92699bd28141}} 
+T \mbox{\hyperlink{classsf_1_1Vector2_a1e6ad77fa155f3753bfb92699bd28141}{x}}
+\begin{DoxyCompactList}\small\item\em X coordinate of the vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsf_1_1Vector2_a420f2481b015f4eb929c75f2af564299}\label{classsf_1_1Vector2_a420f2481b015f4eb929c75f2af564299}} 
+T \mbox{\hyperlink{classsf_1_1Vector2_a420f2481b015f4eb929c75f2af564299}{y}}
+\begin{DoxyCompactList}\small\item\em Y coordinate of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class sf\+::\+Vector2$<$ T $>$}
+
+Utility template class for manipulating 2-\/dimensional vectors. 
+
+\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2}} is a simple class that defines a mathematical vector with two coordinates (x and y). It can be used to represent anything that has two dimensions\+: a size, a point, a velocity, etc.
+
+The template parameter T is the type of the coordinates. It can be any type that supports arithmetic operations (+, -\/, /, $\ast$) and comparisons (==, !=), for example int or float.
+
+You generally don\textquotesingle{}t have to care about the templated form (sf\+::\+Vector2$<$\+T$>$), the most common specializations have special typedefs\+: \begin{DoxyItemize}
+\item sf\+::\+Vector2$<$float$>$ is sf\+::\+Vector2f \item sf\+::\+Vector2$<$int$>$ is sf\+::\+Vector2i \item sf\+::\+Vector2$<$unsigned int$>$ is sf\+::\+Vector2u\end{DoxyItemize}
+The \mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2}} class has a small and simple interface, its x and y members can be accessed directly (there are no accessors like set\+X(), get\+X()) and it contains no mathematical function like dot product, cross product, length, etc.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classVector2}{sf::Vector2f}} v1(16.5f, 24.f);}
+\DoxyCodeLine{v1.x = 18.2f;}
+\DoxyCodeLine{\textcolor{keywordtype}{float} \mbox{\hyperlink{classsf_1_1Vector2_a420f2481b015f4eb929c75f2af564299}{y}} = v1.y;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classVector2}{sf::Vector2f}} v2 = v1 * 5.f;}
+\DoxyCodeLine{\mbox{\hyperlink{classVector2}{sf::Vector2f}} v3;}
+\DoxyCodeLine{v3 = v1 + v2;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} different = (v2 != v3);}
+
+\end{DoxyCode}
+
+
+Note\+: for 3-\/dimensional vectors, see \mbox{\hyperlink{classsf_1_1Vector3}{sf\+::\+Vector3}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsf_1_1Vector2_a58c32383b5291380db4b43a289f75988}\label{classsf_1_1Vector2_a58c32383b5291380db4b43a289f75988}} 
+\index{sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classsf_1_1Vector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates a \mbox{\hyperlink{classVector2}{Vector2(0, 0)}}. \mbox{\Hypertarget{classsf_1_1Vector2_aed26a72164e59e8a4a0aeee2049568f1}\label{classsf_1_1Vector2_aed26a72164e59e8a4a0aeee2049568f1}} 
+\index{sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classsf_1_1Vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{T}]{X,  }\item[{T}]{Y }\end{DoxyParamCaption})}
+
+
+
+Construct the vector from its coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & X coordinate \\
+\hline
+{\em Y} & Y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsf_1_1Vector2_a3da455e0ae3f8ff6d2fe36d10b332d10}\label{classsf_1_1Vector2_a3da455e0ae3f8ff6d2fe36d10b332d10}} 
+\index{sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!sf::Vector2$<$ T $>$@{sf::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{classsf_1_1Vector2}{sf\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classsf_1_1Vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Vector2}{Vector2}}$<$ U $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct the vector from another type of vector. 
+
+This constructor doesn\textquotesingle{}t replace the copy constructor, it\textquotesingle{}s called only when U != T. A call to this constructor will fail to compile if U is not convertible to T.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Vector to convert \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+SFML/include/\+SFML/\+System/Vector2.\+hpp\item 
+SFML/include/\+SFML/\+System/Vector2.\+inl\end{DoxyCompactItemize}

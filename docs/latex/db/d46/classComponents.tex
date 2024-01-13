@@ -16,7 +16,7 @@ Inheritance diagram for Components\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=281pt]{d7/da3/classComponents__inherit__graph}
+\includegraphics[width=350pt]{d7/da3/classComponents__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -28,8 +28,8 @@ virtual \mbox{\hyperlink{classComponents_a755420dfc5cc2f047ba1b19ef5fee802}{$\si
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents}{Components}} destructor. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the component \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update()}}\+: Update the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{update}} (sf\+::\+Time time\+Delta)=0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{update()}}\+: Update the component \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -95,24 +95,28 @@ void
 \begin{DoxyReturn}{Returns}
 bool\+: true if the component is initialized, false otherwise 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}\label{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}} 
+\mbox{\Hypertarget{classComponents_ac886b9c5719c5d40ee06812c4c992110}\label{classComponents_ac886b9c5719c5d40ee06812c4c992110}} 
 \index{Components@{Components}!update@{update}}
 \index{update@{update}!Components@{Components}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily virtual void Components\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Components\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-\mbox{\hyperlink{classComponents_a98c9d30dac6c9277ce325dde2707a4ec}{update()}}\+: Update the component 
+\mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{update()}}\+: Update the component 
 
 
 \begin{DoxyParams}{Parameters}
-{\em void} & \\
+{\em time\+Delta} & time elapsed since the last update \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{Entity}}, \mbox{\hyperlink{classTransform_a439d029d45b7fff4069d58ed415cb48c}{Transform}}, and \mbox{\hyperlink{classSprite_a679e3e99b9b5eb3090eda5bf39174de0}{Sprite}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

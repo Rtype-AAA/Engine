@@ -23,4 +23,3 @@
 #include "toSFML.h"
 #include "Script.h"
 #include "Color.h"
-

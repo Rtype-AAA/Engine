@@ -1,0 +1,13 @@
+digraph "FLAC__Subframe_Fixed"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="FLAC__Subframe_Fixed",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entropy_coding_method" ];
+  Node2 [label="FLAC__EntropyCodingMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d96/structFLAC____EntropyCodingMethod.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" partitioned_rice" ];
+  Node3 [label="FLAC__EntropyCodingMethod\l_PartitionedRice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d56/structFLAC____EntropyCodingMethod__PartitionedRice.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" contents" ];
+  Node4 [label="FLAC__EntropyCodingMethod\l_PartitionedRiceContents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dbd/structFLAC____EntropyCodingMethod__PartitionedRiceContents.html",tooltip=" "];
+}

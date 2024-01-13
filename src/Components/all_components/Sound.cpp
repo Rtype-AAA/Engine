@@ -8,6 +8,10 @@ Sound::Sound(const sf::SoundBuffer& buffer) : soundBuffer(buffer) {
     sound.setBuffer(soundBuffer);
 }
 
+void Sound::update(sf::Time timeDelta) {
+    return;
+}
+
 bool Sound::loadSoundBuffer(const std::string& filePath) {
     if (soundBuffer.loadFromFile(filePath)) {
         sound.setBuffer(soundBuffer);

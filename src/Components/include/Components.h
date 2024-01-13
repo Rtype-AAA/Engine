@@ -30,8 +30,8 @@ public:
     virtual bool init() {return true;}
 
     /// @brief update(): Update the component
-    /// @param timeDelta: Time using for update
+    /// @param timeDelta: time elapsed since the last update
     /// @return void
-    virtual void update(sf::Time timeDelta) {};
+    virtual void update(sf::Time timeDelta) = 0;
 };
 

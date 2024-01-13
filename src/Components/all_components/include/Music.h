@@ -19,6 +19,8 @@ public:
 
     ~Music() = default;
 
+    void update(sf::Time timeDelta) override;
+
     void setMusic(std::map<std::string, std::shared_ptr<sf::Music>> mapMusic, std::string nameMusic);
 
     void setDeferredMusic(std::function<void()> setter);

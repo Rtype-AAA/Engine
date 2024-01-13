@@ -1,284 +1,385 @@
 \begin{theindex}
 
   \item {$\sim$Components}
-    \subitem {Components}, \hyperpage{10}
+    \subitem {Components}, \hyperpage{9}
   \item {$\sim$DrawableComponent}
-    \subitem {DrawableComponent}, \hyperpage{12}
+    \subitem {DrawableComponent}, \hyperpage{11}
   \item {$\sim$Entity}
-    \subitem {Entity}, \hyperpage{16}
+    \subitem {Entity}, \hyperpage{14}
   \item {$\sim$EntityManager}
-    \subitem {EntityManager}, \hyperpage{22}
+    \subitem {EntityManager}, \hyperpage{21}
   \item {$\sim$EventEngine}
-    \subitem {EventEngine}, \hyperpage{28}
+    \subitem {EventEngine}, \hyperpage{27}
   \item {$\sim$GameEngine}
-    \subitem {GameEngine}, \hyperpage{34}
+    \subitem {GameEngine}, \hyperpage{35}
+  \item {$\sim$Rect}
+    \subitem {Rect$<$ T $>$}, \hyperpage{47}
   \item {$\sim$Sprite}
-    \subitem {Sprite}, \hyperpage{46}
+    \subitem {Sprite}, \hyperpage{53}
   \item {$\sim$Transform}
-    \subitem {Transform}, \hyperpage{57}
+    \subitem {Transform}, \hyperpage{71}
+  \item {$\sim$Vector2}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{79}
   \item {$\sim$World}
-    \subitem {World}, \hyperpage{63}
+    \subitem {World}, \hyperpage{83}
+  \item {$\sim$toSFML}
+    \subitem {toSFML}, \hyperpage{69}
 
   \indexspace
 
   \item {addComponent}
-    \subitem {Entity}, \hyperpage{16}
+    \subitem {Entity}, \hyperpage{14}
   \item {addDrawable}
-    \subitem {Entity}, \hyperpage{17}
+    \subitem {Entity}, \hyperpage{15}
   \item {addEntity}
-    \subitem {EntityManager}, \hyperpage{23}
+    \subitem {EntityManager}, \hyperpage{22}
   \item {addEntityManager}
-    \subitem {World}, \hyperpage{63}
+    \subitem {World}, \hyperpage{83}
   \item {addKeyPressed}
+    \subitem {EventEngine}, \hyperpage{27}
+  \item {addMouseButtonPressed}
+    \subitem {EventEngine}, \hyperpage{28}
+  \item {addMouseMoved}
     \subitem {EventEngine}, \hyperpage{28}
   \item {addWorld}
-    \subitem {GameEngine}, \hyperpage{35}
+    \subitem {GameEngine}, \hyperpage{36}
   \item {applyDeferredSprite}
-    \subitem {Sprite}, \hyperpage{46}
+    \subitem {Sprite}, \hyperpage{53}
   \item {Archetypes}, \hyperpage{7}
   \item {Audio}, \hyperpage{7}
 
   \indexspace
 
   \item {Components}, \hyperpage{7}
-    \subitem {$\sim$Components}, \hyperpage{10}
+    \subitem {$\sim$Components}, \hyperpage{9}
     \subitem {Components}, \hyperpage{8}
-    \subitem {init}, \hyperpage{10}
-    \subitem {update}, \hyperpage{10}
+    \subitem {init}, \hyperpage{9}
+    \subitem {update}, \hyperpage{9}
+  \item {contains}
+    \subitem {Rect$<$ T $>$}, \hyperpage{47}
   \item {createEntities}
-    \subitem {World}, \hyperpage{63}
+    \subitem {World}, \hyperpage{83}
   \item {createSprite}
-    \subitem {Sprite}, \hyperpage{47}
+    \subitem {Sprite}, \hyperpage{54}
 
   \indexspace
 
   \item {draw}
-    \subitem {DrawableComponent}, \hyperpage{13}
-    \subitem {Sprite}, \hyperpage{48}
-  \item {DrawableComponent}, \hyperpage{12}
-    \subitem {$\sim$DrawableComponent}, \hyperpage{12}
-    \subitem {draw}, \hyperpage{13}
+    \subitem {DrawableComponent}, \hyperpage{11}
+    \subitem {Sprite}, \hyperpage{55}
+  \item {DrawableComponent}, \hyperpage{10}
+    \subitem {$\sim$DrawableComponent}, \hyperpage{11}
+    \subitem {draw}, \hyperpage{11}
   \item {drawEntity}
-    \subitem {Entity}, \hyperpage{17}
+    \subitem {Entity}, \hyperpage{15}
 
   \indexspace
 
-  \item {Entity}, \hyperpage{13}
-    \subitem {$\sim$Entity}, \hyperpage{16}
-    \subitem {addComponent}, \hyperpage{16}
-    \subitem {addDrawable}, \hyperpage{17}
-    \subitem {drawEntity}, \hyperpage{17}
-    \subitem {Entity}, \hyperpage{15, 16}
-    \subitem {getComponent}, \hyperpage{17}
-    \subitem {getComponentArrays}, \hyperpage{18}
-    \subitem {getComponentBitset}, \hyperpage{18}
-    \subitem {getComponentTypeID}, \hyperpage{19}
-    \subitem {getDrawableComponents}, \hyperpage{19}
-    \subitem {getName}, \hyperpage{19}
-    \subitem {initEntity}, \hyperpage{20}
-    \subitem {setName}, \hyperpage{20}
-  \item {EntityManager}, \hyperpage{21}
-    \subitem {$\sim$EntityManager}, \hyperpage{22}
-    \subitem {addEntity}, \hyperpage{23}
-    \subitem {EntityManager}, \hyperpage{22}
-    \subitem {getEntities}, \hyperpage{23}
-    \subitem {getEntity}, \hyperpage{23}
-    \subitem {getEntityMap}, \hyperpage{24}
-    \subitem {initEntityManager}, \hyperpage{24}
-  \item {EntityManagerTest}, \hyperpage{25}
-  \item {EntityTest}, \hyperpage{26}
-  \item {EventEngine}, \hyperpage{27}
-    \subitem {$\sim$EventEngine}, \hyperpage{28}
-    \subitem {addKeyPressed}, \hyperpage{28}
+  \item {Entity}, \hyperpage{12}
+    \subitem {$\sim$Entity}, \hyperpage{14}
+    \subitem {addComponent}, \hyperpage{14}
+    \subitem {addDrawable}, \hyperpage{15}
+    \subitem {drawEntity}, \hyperpage{15}
+    \subitem {Entity}, \hyperpage{13, 14}
+    \subitem {getComponent}, \hyperpage{16}
+    \subitem {getComponentArrays}, \hyperpage{16}
+    \subitem {getComponentBitset}, \hyperpage{16}
+    \subitem {getComponentTypeID}, \hyperpage{17}
+    \subitem {getDrawableComponents}, \hyperpage{17}
+    \subitem {getName}, \hyperpage{18}
+    \subitem {initEntity}, \hyperpage{18}
+    \subitem {setName}, \hyperpage{18}
+    \subitem {update}, \hyperpage{19}
+  \item {EntityManager}, \hyperpage{20}
+    \subitem {$\sim$EntityManager}, \hyperpage{21}
+    \subitem {addEntity}, \hyperpage{22}
+    \subitem {EntityManager}, \hyperpage{21}
+    \subitem {getEntities}, \hyperpage{22}
+    \subitem {getEntity}, \hyperpage{22}
+    \subitem {getEntityMap}, \hyperpage{23}
+    \subitem {initEntityManager}, \hyperpage{23}
+  \item {EntityManagerTest}, \hyperpage{24}
+  \item {EntityTest}, \hyperpage{25}
+  \item {EventEngine}, \hyperpage{26}
+    \subitem {$\sim$EventEngine}, \hyperpage{27}
+    \subitem {addKeyPressed}, \hyperpage{27}
+    \subitem {addMouseButtonPressed}, \hyperpage{28}
+    \subitem {addMouseMoved}, \hyperpage{28}
     \subitem {EventEngine}, \hyperpage{27}
     \subitem {getEvent}, \hyperpage{28}
     \subitem {getKeyPressedMap}, \hyperpage{29}
-    \subitem {init}, \hyperpage{29}
+    \subitem {getMouseButtonPressedMap}, \hyperpage{29}
+    \subitem {getMouseMovedMap}, \hyperpage{29}
+    \subitem {init}, \hyperpage{30}
   \item {eventGameEngine}
-    \subitem {GameEngine}, \hyperpage{35}
+    \subitem {GameEngine}, \hyperpage{36}
   \item {EventTest}, \hyperpage{30}
 
   \indexspace
 
-  \item {GameEngine}, \hyperpage{30}
-    \subitem {$\sim$GameEngine}, \hyperpage{34}
-    \subitem {addWorld}, \hyperpage{35}
-    \subitem {eventGameEngine}, \hyperpage{35}
-    \subitem {GameEngine}, \hyperpage{33, 34}
-    \subitem {getCurrentWorld}, \hyperpage{35}
-    \subitem {getEventEngine}, \hyperpage{36}
-    \subitem {getFilesTexture}, \hyperpage{36}
-    \subitem {getMapTexture}, \hyperpage{36}
-    \subitem {getWindow}, \hyperpage{37}
-    \subitem {getWorld}, \hyperpage{37}
-    \subitem {getWorldMap}, \hyperpage{37}
-    \subitem {initialize}, \hyperpage{38}
-    \subitem {initializeSprite}, \hyperpage{38}
-    \subitem {initializeTexture}, \hyperpage{38}
-    \subitem {initializeWorldMap}, \hyperpage{39}
-    \subitem {isWindowOpen}, \hyperpage{39}
-    \subitem {renderGameEngine}, \hyperpage{39}
-    \subitem {run}, \hyperpage{40}
-    \subitem {setCurrentWorld}, \hyperpage{41}
-    \subitem {setWindow}, \hyperpage{41}
-    \subitem {updateGameEngine}, \hyperpage{41}
-  \item {GameEngineTest}, \hyperpage{42}
+  \item {GameEngine}, \hyperpage{31}
+    \subitem {$\sim$GameEngine}, \hyperpage{35}
+    \subitem {addWorld}, \hyperpage{36}
+    \subitem {eventGameEngine}, \hyperpage{36}
+    \subitem {GameEngine}, \hyperpage{34, 35}
+    \subitem {getCurrentWorld}, \hyperpage{36}
+    \subitem {getEventEngine}, \hyperpage{37}
+    \subitem {getFilesTexture}, \hyperpage{37}
+    \subitem {getMapTexture}, \hyperpage{37}
+    \subitem {getWindow}, \hyperpage{38}
+    \subitem {getWorld}, \hyperpage{38}
+    \subitem {getWorldMap}, \hyperpage{38}
+    \subitem {initialize}, \hyperpage{39}
+    \subitem {initializeSprite}, \hyperpage{39}
+    \subitem {initializeTexture}, \hyperpage{39}
+    \subitem {initializeWorldMap}, \hyperpage{40}
+    \subitem {isWindowOpen}, \hyperpage{40}
+    \subitem {renderGameEngine}, \hyperpage{40}
+    \subitem {run}, \hyperpage{41}
+    \subitem {setCurrentWorld}, \hyperpage{42}
+    \subitem {setWindow}, \hyperpage{42}
+    \subitem {updateGameEngine}, \hyperpage{42}
+  \item {GameEngineTest}, \hyperpage{43}
   \item {getBit}
-    \subitem {Sprite}, \hyperpage{48}
-    \subitem {Transform}, \hyperpage{57}
+    \subitem {Sprite}, \hyperpage{55}
+    \subitem {Transform}, \hyperpage{72}
+  \item {getBounds}
+    \subitem {Sprite}, \hyperpage{56}
   \item {getComponent}
-    \subitem {Entity}, \hyperpage{17}
+    \subitem {Entity}, \hyperpage{16}
   \item {getComponentArrays}
-    \subitem {Entity}, \hyperpage{18}
+    \subitem {Entity}, \hyperpage{16}
   \item {getComponentBitset}
-    \subitem {Entity}, \hyperpage{18}
+    \subitem {Entity}, \hyperpage{16}
   \item {getComponentTypeID}
-    \subitem {Entity}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{17}
   \item {getCurrentWorld}
-    \subitem {GameEngine}, \hyperpage{35}
+    \subitem {GameEngine}, \hyperpage{36}
   \item {getDrawableComponents}
-    \subitem {Entity}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{17}
   \item {getEntities}
-    \subitem {EntityManager}, \hyperpage{23}
+    \subitem {EntityManager}, \hyperpage{22}
   \item {getEntity}
-    \subitem {EntityManager}, \hyperpage{23}
+    \subitem {EntityManager}, \hyperpage{22}
   \item {getEntityManager}
-    \subitem {World}, \hyperpage{64}
+    \subitem {World}, \hyperpage{84}
   \item {getEntityManagerMap}
-    \subitem {World}, \hyperpage{64}
+    \subitem {World}, \hyperpage{84}
   \item {getEntityMap}
-    \subitem {EntityManager}, \hyperpage{24}
+    \subitem {EntityManager}, \hyperpage{23}
   \item {getEvent}
     \subitem {EventEngine}, \hyperpage{28}
   \item {getEventEngine}
-    \subitem {GameEngine}, \hyperpage{36}
+    \subitem {GameEngine}, \hyperpage{37}
   \item {getFilesTexture}
-    \subitem {GameEngine}, \hyperpage{36}
+    \subitem {GameEngine}, \hyperpage{37}
+  \item {getHeight}
+    \subitem {Rect$<$ T $>$}, \hyperpage{48}
   \item {getKeyPressedMap}
     \subitem {EventEngine}, \hyperpage{29}
+  \item {getLeft}
+    \subitem {Rect$<$ T $>$}, \hyperpage{48}
   \item {getMapTexture}
-    \subitem {GameEngine}, \hyperpage{36}
+    \subitem {GameEngine}, \hyperpage{37}
+  \item {getMouseButtonPressedMap}
+    \subitem {EventEngine}, \hyperpage{29}
+  \item {getMouseMovedMap}
+    \subitem {EventEngine}, \hyperpage{29}
   \item {getName}
-    \subitem {Entity}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{18}
   \item {getNameWorld}
-    \subitem {World}, \hyperpage{64}
-  \item {getPositionVector}
-    \subitem {Transform}, \hyperpage{57}
-  \item {getRotationVector}
-    \subitem {Transform}, \hyperpage{58}
-  \item {getScaleVector}
-    \subitem {Transform}, \hyperpage{58}
+    \subitem {World}, \hyperpage{84}
+  \item {getPosition}
+    \subitem {Transform}, \hyperpage{72}
+  \item {getRect}
+    \subitem {Rect$<$ T $>$}, \hyperpage{49}
+  \item {getRotation}
+    \subitem {Transform}, \hyperpage{73}
+  \item {getScale}
+    \subitem {Transform}, \hyperpage{73}
   \item {getSprite}
-    \subitem {Sprite}, \hyperpage{48}
+    \subitem {Sprite}, \hyperpage{56}
   \item {getTexture}
-    \subitem {Sprite}, \hyperpage{50}
+    \subitem {Sprite}, \hyperpage{56}
+  \item {getTop}
+    \subitem {Rect$<$ T $>$}, \hyperpage{49}
+  \item {getTransformStruct}
+    \subitem {Transform}, \hyperpage{73}
+  \item {getVector2Struct}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{79}
+  \item {getWidth}
+    \subitem {Rect$<$ T $>$}, \hyperpage{49}
   \item {getWindow}
-    \subitem {GameEngine}, \hyperpage{37}
+    \subitem {GameEngine}, \hyperpage{38}
   \item {getWorld}
-    \subitem {GameEngine}, \hyperpage{37}
+    \subitem {GameEngine}, \hyperpage{38}
   \item {getWorldMap}
-    \subitem {GameEngine}, \hyperpage{37}
+    \subitem {GameEngine}, \hyperpage{38}
+  \item {getX}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{80}
+  \item {getY}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{80}
 
   \indexspace
 
   \item {init}
-    \subitem {Components}, \hyperpage{10}
-    \subitem {EventEngine}, \hyperpage{29}
-    \subitem {Transform}, \hyperpage{58}
+    \subitem {Components}, \hyperpage{9}
+    \subitem {EventEngine}, \hyperpage{30}
+    \subitem {Transform}, \hyperpage{74}
   \item {initEntity}
-    \subitem {Entity}, \hyperpage{20}
+    \subitem {Entity}, \hyperpage{18}
   \item {initEntityManager}
-    \subitem {EntityManager}, \hyperpage{24}
+    \subitem {EntityManager}, \hyperpage{23}
   \item {initialize}
-    \subitem {GameEngine}, \hyperpage{38}
+    \subitem {GameEngine}, \hyperpage{39}
   \item {initializeSprite}
-    \subitem {GameEngine}, \hyperpage{38}
+    \subitem {GameEngine}, \hyperpage{39}
   \item {initializeTexture}
-    \subitem {GameEngine}, \hyperpage{38}
+    \subitem {GameEngine}, \hyperpage{39}
   \item {initializeWorldMap}
-    \subitem {GameEngine}, \hyperpage{39}
+    \subitem {GameEngine}, \hyperpage{40}
   \item {initSprite}
-    \subitem {Sprite}, \hyperpage{50}
+    \subitem {Sprite}, \hyperpage{57}
   \item {initWorld}
-    \subitem {World}, \hyperpage{65}
+    \subitem {World}, \hyperpage{85}
   \item {isTextureLoaded}
-    \subitem {Sprite}, \hyperpage{50}
+    \subitem {Sprite}, \hyperpage{57}
   \item {isWindowOpen}
-    \subitem {GameEngine}, \hyperpage{39}
-
-  \indexspace
-
-  \item {renderGameEngine}
-    \subitem {GameEngine}, \hyperpage{39}
-  \item {run}
     \subitem {GameEngine}, \hyperpage{40}
 
   \indexspace
 
-  \item {setCurrentWorld}
+  \item {Rect}
+    \subitem {Rect$<$ T $>$}, \hyperpage{46}
+  \item {Rect$<$ T $>$}, \hyperpage{45}
+    \subitem {$\sim$Rect}, \hyperpage{47}
+    \subitem {contains}, \hyperpage{47}
+    \subitem {getHeight}, \hyperpage{48}
+    \subitem {getLeft}, \hyperpage{48}
+    \subitem {getRect}, \hyperpage{49}
+    \subitem {getTop}, \hyperpage{49}
+    \subitem {getWidth}, \hyperpage{49}
+    \subitem {Rect}, \hyperpage{46}
+  \item {renderGameEngine}
+    \subitem {GameEngine}, \hyperpage{40}
+  \item {run}
     \subitem {GameEngine}, \hyperpage{41}
-  \item {setDeferredSprite}
-    \subitem {Sprite}, \hyperpage{51}
-  \item {setName}
-    \subitem {Entity}, \hyperpage{20}
-  \item {setNameWorld}
-    \subitem {World}, \hyperpage{65}
-  \item {setSprite}
-    \subitem {Sprite}, \hyperpage{51}
-  \item {setTexture}
-    \subitem {Sprite}, \hyperpage{52}
-  \item {setTransform}
-    \subitem {Transform}, \hyperpage{59}
-  \item {setWindow}
-    \subitem {GameEngine}, \hyperpage{41}
-  \item {Sprite}, \hyperpage{44}
-    \subitem {$\sim$Sprite}, \hyperpage{46}
-    \subitem {applyDeferredSprite}, \hyperpage{46}
-    \subitem {createSprite}, \hyperpage{47}
-    \subitem {draw}, \hyperpage{48}
-    \subitem {getBit}, \hyperpage{48}
-    \subitem {getSprite}, \hyperpage{48}
-    \subitem {getTexture}, \hyperpage{50}
-    \subitem {initSprite}, \hyperpage{50}
-    \subitem {isTextureLoaded}, \hyperpage{50}
-    \subitem {setDeferredSprite}, \hyperpage{51}
-    \subitem {setSprite}, \hyperpage{51}
-    \subitem {setTexture}, \hyperpage{52}
-    \subitem {Sprite}, \hyperpage{45, 46}
-  \item {SpriteTest}, \hyperpage{53}
 
   \indexspace
 
-  \item {TestWorld}, \hyperpage{54}
-  \item {Transform}, \hyperpage{55}
-    \subitem {$\sim$Transform}, \hyperpage{57}
-    \subitem {getBit}, \hyperpage{57}
-    \subitem {getPositionVector}, \hyperpage{57}
-    \subitem {getRotationVector}, \hyperpage{58}
-    \subitem {getScaleVector}, \hyperpage{58}
-    \subitem {init}, \hyperpage{58}
-    \subitem {setTransform}, \hyperpage{59}
-    \subitem {Transform}, \hyperpage{56}
-  \item {TransformTest}, \hyperpage{59}
+  \item {Script}, \hyperpage{50}
+  \item {setCurrentWorld}
+    \subitem {GameEngine}, \hyperpage{42}
+  \item {setDeferredSprite}
+    \subitem {Sprite}, \hyperpage{57}
+  \item {setName}
+    \subitem {Entity}, \hyperpage{18}
+  \item {setNameWorld}
+    \subitem {World}, \hyperpage{85}
+  \item {setPosition}
+    \subitem {Sprite}, \hyperpage{58}
+  \item {setRotation}
+    \subitem {Sprite}, \hyperpage{58, 59}
+  \item {setScale}
+    \subitem {Sprite}, \hyperpage{59}
+  \item {setSprite}
+    \subitem {Sprite}, \hyperpage{60}
+  \item {setTexture}
+    \subitem {Sprite}, \hyperpage{60}
+  \item {setTransform}
+    \subitem {Transform}, \hyperpage{74}
+  \item {setTransformPosition}
+    \subitem {Transform}, \hyperpage{74}
+  \item {setTransformRotation}
+    \subitem {Transform}, \hyperpage{75}
+  \item {setTransformScale}
+    \subitem {Transform}, \hyperpage{75}
+  \item {setTransformSprite}
+    \subitem {Sprite}, \hyperpage{61}
+  \item {setWindow}
+    \subitem {GameEngine}, \hyperpage{42}
+  \item {Sprite}, \hyperpage{50}
+    \subitem {$\sim$Sprite}, \hyperpage{53}
+    \subitem {applyDeferredSprite}, \hyperpage{53}
+    \subitem {createSprite}, \hyperpage{54}
+    \subitem {draw}, \hyperpage{55}
+    \subitem {getBit}, \hyperpage{55}
+    \subitem {getBounds}, \hyperpage{56}
+    \subitem {getSprite}, \hyperpage{56}
+    \subitem {getTexture}, \hyperpage{56}
+    \subitem {initSprite}, \hyperpage{57}
+    \subitem {isTextureLoaded}, \hyperpage{57}
+    \subitem {setDeferredSprite}, \hyperpage{57}
+    \subitem {setPosition}, \hyperpage{58}
+    \subitem {setRotation}, \hyperpage{58, 59}
+    \subitem {setScale}, \hyperpage{59}
+    \subitem {setSprite}, \hyperpage{60}
+    \subitem {setTexture}, \hyperpage{60}
+    \subitem {setTransformSprite}, \hyperpage{61}
+    \subitem {Sprite}, \hyperpage{52, 53}
+    \subitem {update}, \hyperpage{62}
+  \item {SpriteTest}, \hyperpage{62}
+
+  \indexspace
+
+  \item {TestRect}, \hyperpage{63}
+  \item {TesttoSFML}, \hyperpage{64}
+  \item {TestVector2}, \hyperpage{65}
+  \item {TestWorld}, \hyperpage{66}
+  \item {toSFML}, \hyperpage{67}
+    \subitem {$\sim$toSFML}, \hyperpage{69}
+    \subitem {toSFML}, \hyperpage{68}
+    \subitem {toSFMLRect}, \hyperpage{69}
+  \item {toSFMLRect}
+    \subitem {toSFML}, \hyperpage{69}
+  \item {Transform}, \hyperpage{70}
+    \subitem {$\sim$Transform}, \hyperpage{71}
+    \subitem {getBit}, \hyperpage{72}
+    \subitem {getPosition}, \hyperpage{72}
+    \subitem {getRotation}, \hyperpage{73}
+    \subitem {getScale}, \hyperpage{73}
+    \subitem {getTransformStruct}, \hyperpage{73}
+    \subitem {init}, \hyperpage{74}
+    \subitem {setTransform}, \hyperpage{74}
+    \subitem {setTransformPosition}, \hyperpage{74}
+    \subitem {setTransformRotation}, \hyperpage{75}
+    \subitem {setTransformScale}, \hyperpage{75}
+    \subitem {Transform}, \hyperpage{71}
+    \subitem {update}, \hyperpage{75}
+  \item {TransformTest}, \hyperpage{77}
 
   \indexspace
 
   \item {update}
-    \subitem {Components}, \hyperpage{10}
+    \subitem {Components}, \hyperpage{9}
+    \subitem {Entity}, \hyperpage{19}
+    \subitem {Sprite}, \hyperpage{62}
+    \subitem {Transform}, \hyperpage{75}
   \item {updateGameEngine}
-    \subitem {GameEngine}, \hyperpage{41}
+    \subitem {GameEngine}, \hyperpage{42}
 
   \indexspace
 
-  \item {World}, \hyperpage{60}
-    \subitem {$\sim$World}, \hyperpage{63}
-    \subitem {addEntityManager}, \hyperpage{63}
-    \subitem {createEntities}, \hyperpage{63}
-    \subitem {getEntityManager}, \hyperpage{64}
-    \subitem {getEntityManagerMap}, \hyperpage{64}
-    \subitem {getNameWorld}, \hyperpage{64}
-    \subitem {initWorld}, \hyperpage{65}
-    \subitem {setNameWorld}, \hyperpage{65}
-    \subitem {World}, \hyperpage{62}
+  \item {Vector2}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{78}
+  \item {Vector2$<$ T $>$}, \hyperpage{78}
+    \subitem {$\sim$Vector2}, \hyperpage{79}
+    \subitem {getVector2Struct}, \hyperpage{79}
+    \subitem {getX}, \hyperpage{80}
+    \subitem {getY}, \hyperpage{80}
+    \subitem {Vector2}, \hyperpage{78}
+
+  \indexspace
+
+  \item {World}, \hyperpage{80}
+    \subitem {$\sim$World}, \hyperpage{83}
+    \subitem {addEntityManager}, \hyperpage{83}
+    \subitem {createEntities}, \hyperpage{83}
+    \subitem {getEntityManager}, \hyperpage{84}
+    \subitem {getEntityManagerMap}, \hyperpage{84}
+    \subitem {getNameWorld}, \hyperpage{84}
+    \subitem {initWorld}, \hyperpage{85}
+    \subitem {setNameWorld}, \hyperpage{85}
+    \subitem {World}, \hyperpage{82}
 
 \end{theindex}

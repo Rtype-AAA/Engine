@@ -288,9 +288,9 @@ void GameEngine::eventGameEngine() {
                                             float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
                                             if (bounds.contains(mouseX, mouseY)) {
                                                 mouseMoved.second();
+                                                break;
                                             }
                                         }
-                                        break;
                                     }
                                 }
                             }
