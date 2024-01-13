@@ -29,6 +29,8 @@ public:
     /// @return void
     ~World() override = default;
 
+    bool init() override;
+
     /// @brief createEntities(): Create the entities.
     /// @param mapEntityManager: Map of the entities manager's unique pointers.
     /// @param keyEntityManager: Key of the entities manager.
@@ -39,12 +41,12 @@ public:
     /// @brief addEntityManager(): Add an entity manager to the map.
     /// @param NameEntityManager: Name of the entity manager.
     /// @return EntityManager&: The entity manager.
-    EntityManager& addEntityManager(std::string NameEntityManager);
+    EntityManager& addEntityManager(const std::string& NameEntityManager);
 
     /// @brief getEntityManager(): Get the entity manager.
     /// @param NameEntityManager: Name of the entity manager.
     /// @return EntityManager&: The entity manager.
-    EntityManager& getEntityManager(std::string NameEntityManager);
+    EntityManager& getEntityManager(const std::string& NameEntityManager);
 
     /// @brief setNameWorld(): Set the name of the world.
     /// @param newName: New name of the world.
@@ -54,15 +56,16 @@ public:
     /// @brief getNameWorld(): Get the name of the world.
     /// @param void
     /// @return std::string: The name of the world.
-    std::string getNameWorld() const {return nameWorld;}
+    [[nodiscard]] std::string getNameWorld() const;
 
     /// @brief getEntityManagerMap(): Get the map of the entity manager.
     /// @param void
     /// @return std::map<std::string, EntityManager*>: The map of the entity manager.
-    std::map<std::string, EntityManager*> getEntityManagerMap() const {return entityManagerMap;}
+    [[nodiscard]] std::map<std::string, EntityManager*> getEntityManagerMap() const;
 
-    /// @brief init(): Initialize the World.
-    /// @param void
-    /// @return bool: True if the world is initialized, false otherwise.
-    bool initWorld() {return true;}
+    /**
+     * @brief getEntitiesManager(): Get the entities
+     * @return std::map<std::string, EntityManager*>: Get the entities.
+     */
+    [[nodiscard]] std::map<std::string, EntityManager*> getEntitiesManager() const;
 };

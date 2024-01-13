@@ -4,12 +4,19 @@
 
 #include "entity.h"
 
-std::string Entity::getName() const {
-    return name;
+Entity::Entity(std::string nameEntity, Archetypes newArchetype) {
+    name = std::move(nameEntity);
 }
 
-void Entity::setName(std::string newName) {
-    name = std::move(newName);
+bool Entity::init() {
+    for (int i = 0; i < componentBitset.size(); i++) {
+        componentBitset[i] = false;
+    }
+    return true;
+}
+
+std::string Entity::getName() const {
+    return name;
 }
 
 void Entity::update(sf::Time deltaTime) {
@@ -20,15 +27,12 @@ void Entity::update(sf::Time deltaTime) {
     }
 }
 
-bool Entity::initEntity() {
-    for (int i = 0; i < componentBitset.size(); i++) {
-        componentBitset[i] = false;
-    }
-    return true;
+void Entity::setName(std::string newName) {
+    name = std::move(newName);
 }
 
 void Entity::addDrawable(Components *component) {
-    DrawableComponent *newDrawableComponent = dynamic_cast<DrawableComponent*>(component);
+    auto *newDrawableComponent = dynamic_cast<DrawableComponent*>(component);
     if (newDrawableComponent) {
         drawableComponents.emplace_back(newDrawableComponent);
     }
@@ -43,17 +47,13 @@ void Entity::drawEntity(sf::RenderWindow& window) {
 template<typename T, typename... TArgs>
 T& Entity::addComponent(TArgs&&... args) {
     std::unique_ptr<T> newComponent = std::make_unique<T>(std::forward<TArgs>(args)...);
-    if (!newComponent->init()) {
-        throw std::runtime_error("Echec de l'initialisation de Component");
+    if constexpr(std::is_same_v<T, Sprite> || std::is_same_v<T, Text>) {
+        if (this->getComponentBitset().test(0)) {
+            newComponent->setTransform(this->getComponent<Transform>());
+        }
     }
-    if constexpr (std::is_same_v<T, Sprite>) {
-        if (this->getComponentBitset().test(0)) {
-            newComponent->setTransform(this->getComponent<Transform>());
-        }
-    } else if constexpr (std::is_same_v<T,Text>) {
-        if (this->getComponentBitset().test(0)) {
-            newComponent->setTransform(this->getComponent<Transform>());
-        }
+    if (!newComponent->init()) {
+        throw std::runtime_error("Failure to initialize Component");
     }
     T* comp = newComponent.get();
     addDrawable(comp);
@@ -76,23 +76,38 @@ std::size_t Entity::getComponentTypeID() noexcept {
     return typeID;
 }
 
-template std::size_t Entity::getComponentTypeID<Transform>();
+std::bitset<6> Entity::getComponentBitset() const {
+    return componentBitset;
+}
+
+std::vector<DrawableComponent*> Entity::getDrawableComponents() const {
+    return drawableComponents;
+}
+
+std::array<Components*, 6> Entity::getComponentArrays() const {
+    return componentArray;
+}
+
+int Entity::getBit() {
+    return 0;
+}
+
 template Transform& Entity::addComponent<Transform>();
 template Transform& Entity::getComponent<Transform>();
+template std::size_t Entity::getComponentTypeID<Transform>();
 
 template Sprite& Entity::addComponent<Sprite>();
-template std::size_t Entity::getComponentTypeID<Sprite>();
-template Sprite& Entity::addComponent<Sprite>(std::string&);
 template Sprite& Entity::getComponent<Sprite>();
+template std::size_t Entity::getComponentTypeID<Sprite>();
 
 template Music& Entity::addComponent<Music>();
-template std::size_t Entity::getComponentTypeID<Music>();
 template Music& Entity::getComponent<Music>();
+template std::size_t Entity::getComponentTypeID<Music>();
 
 template Sound& Entity::addComponent<Sound>();
-template std::size_t Entity::getComponentTypeID<Sound>();
 template Sound& Entity::getComponent<Sound>();
+template std::size_t Entity::getComponentTypeID<Sound>();
 
 template Text& Entity::addComponent<Text>();
-template std::size_t Entity::getComponentTypeID<Text>();
 template Text& Entity::getComponent<Text>();
+template std::size_t Entity::getComponentTypeID<Text>();

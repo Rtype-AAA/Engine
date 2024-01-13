@@ -8,6 +8,7 @@
 #include "Components.h"
 #include "sfml.h"
 #include "Vector2.h"
+#include "Rect.h"
 
 /**
  * @brief Transform class: Transform is a class that represents the transform of a Component.
@@ -21,7 +22,8 @@ private:
         float rotation; ///< Rotation vector of the component (x, y).
         Vector2<float> scale; ///< Scale vector of the component (x, y).
     };
-    TransformStruct  transform;
+    TransformStruct  transform; /// < Variable using the struct TransformStruct
+    std::function<void()> deferredTransform; /// < Deferred function of Transform
     int bit = 0; ///< Bitmask to track transformation properties.
 public:
     /// @brief Default Transform constructor
@@ -32,60 +34,74 @@ public:
     /// @brief init(): Initialize the component
     /// @param void
     /// @return bool: true if the component is initialized, false otherwise
-    bool init() const {return true;}
+    bool init() override;
 
     /// @brief Transform destructor
     /// @param void
     /// @return void
     ~Transform() override = default;
 
+    /**
+     * @brief update(sf::Time): Update the component Music
+     * @param timeDelta: sf::Time of the game.
+     */
     void update(sf::Time deltaTime) override;
 
     /// @brief getBit(): Get the bitmask of the component
     /// @param void
     /// @return int: bitmask of the component
-    [[nodiscard]] int getBit() const;
+    int getBit() override;
 
     /// @brief getPositionVector(): Get the position vector of the component;
     /// @param void
     /// @return std::vector<float>: position vector of the component
-    Vector2<float> getPosition() const {return transform.position;}
+    [[nodiscard]] Vector2<float> getPosition() const;
 
     /// @brief getRotationVector(): Get the rotation vector of the component;
     /// @param void
     /// @return std::vector<float>: rotation vector of the component
-    float getRotation() const {return transform.rotation;}
+    [[nodiscard]] float getRotation() const;
 
     /// @brief getScaleVector(): Get the scale vector of the component;
     /// @param void
     /// @return std::vector<float>: scale vector of the component
-    Vector2<float> getScale() const {return transform.scale;}
+    [[nodiscard]] Vector2<float> getScale() const;
 
-    /// @brief getTransformStruct(): Get the the transform of the component;
+    /// @brief getTransform(): Get the the transform of the component;
     /// @param void
     /// @return TransformStruct: struct of the Transform.
-    TransformStruct getTransformStruct() const {return transform;}
+    [[nodiscard]] TransformStruct getTransform() const;
 
-    /// @brief setTransformStruct(): Set the transform of the component;
+    /// @brief setTransform(): Set the transform of the component;
     /// @param newPosition : the new Vector2<float> position.
     /// @param newRotation : the new float rotation.
     /// @param newScale : the new Vector2<float> scale.
     /// @return void
     void setTransform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
 
-    /// @brief setTransformPosition(): Set the transform position of the component;
+    /// @brief setPosition(): Set the transform position of the component;
     /// @param newPosition : the new Vector2<float> position.
     /// @return void
-    void setTransformPosition(Vector2<float> newPosition);
+    void setPosition(Vector2<float> newPosition);
 
-    /// @brief setTransformRotation(): Set the transform rotation of the component;
+    /// @brief setRotation(): Set the transform rotation of the component;
     /// @param newRotation : the new float rotation.
     /// @return void
-    void setTransformRotation(float newRotation);
+    void setRotation(float newRotation);
 
-    /// @brief setTransformScale(): Set the transform scale of the component;
+    /// @brief setScale(): Set the transform scale of the component;
     /// @param newScale : the new Vector2<float> scale.
     /// @return void
-    void setTransformScale(Vector2<float> newScale);
+    void setScale(Vector2<float> newScale);
+
+    /// @brief setDeferredSprite(): Set the deferred sprite.
+    /// @param setter: Function that will set the sprite.
+    /// @return void
+    void setDeferredTransform(const std::function<void()>& setter);
+
+    /// @brief applyDeferredSprite(): Apply the deferred sprite.
+    /// @param void
+    /// @return void
+    void applyDeferredTransform();
 };
 

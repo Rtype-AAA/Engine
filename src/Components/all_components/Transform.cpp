@@ -4,12 +4,32 @@
 
 #include "Transform.h"
 
-int Transform::getBit() const {
-    return bit;
+bool Transform::init() {
+    return true;
 }
 
 void Transform::update(sf::Time deltaTime) {
-    return;
+    applyDeferredTransform();
+}
+
+int Transform::getBit() {
+    return bit;
+}
+
+Vector2<float> Transform::getPosition() const {
+    return transform.position;
+}
+
+float Transform::getRotation() const {
+    return transform.rotation;
+}
+
+Vector2<float> Transform::getScale() const {
+    return transform.scale;
+}
+
+Transform::TransformStruct Transform::getTransform() const {
+    return transform;
 }
 
 void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
@@ -18,14 +38,24 @@ void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vect
     transform.scale = newScale;
 }
 
-void Transform::setTransformPosition(Vector2<float> newPosition) {
+void Transform::setPosition(Vector2<float> newPosition) {
     transform.position = newPosition;
 }
 
-void Transform::setTransformRotation(float newRotation) {
+void Transform::setRotation(float newRotation) {
     transform.rotation = newRotation;
 }
 
-void Transform::setTransformScale(Vector2<float> newScale) {
+void Transform::setScale(Vector2<float> newScale) {
     transform.scale = newScale;
+}
+
+void Transform::setDeferredTransform(const std::function<void()>& setter) {
+    deferredTransform = setter;
+}
+
+void Transform::applyDeferredTransform() {
+    if (deferredTransform) {
+        deferredTransform();
+    }
 }

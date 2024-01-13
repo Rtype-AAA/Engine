@@ -27,7 +27,12 @@ public:
     /// @brief init(): Initialize the component
     /// @param void
     /// @return bool: true if the component is initialized, false otherwise
-    virtual bool init() {return true;}
+    virtual bool init() = 0;
+
+    /// @brief getBit(): Get the bitmask of the component
+    /// @param void
+    /// @return int: bitmask of the component
+    virtual int getBit() = 0;
 
     /// @brief update(): Update the component
     /// @param timeDelta: time elapsed since the last update

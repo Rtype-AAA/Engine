@@ -4,10 +4,6 @@
 
 #include "Sprite.h"
 
-void Sprite::draw(sf::RenderWindow& window) const {
-    window.draw(sprite);
-}
-
 void Sprite::doAnimation(sf::Time deltaTime) {
     timeSinceLastFrame += deltaTime;
 
@@ -18,49 +14,51 @@ void Sprite::doAnimation(sf::Time deltaTime) {
     }
 }
 
+Transform* Sprite::getTransform() {
+    return transform;
+}
+
+bool Sprite::init() {
+    if (!transform) {
+        return false;
+    }
+    return true;
+}
+
+int Sprite::getBit() {
+    return bit;
+}
+
+void Sprite::draw(sf::RenderWindow& window) const {
+    window.draw(sprite);
+}
+
 void Sprite::update(sf::Time deltaTime) {
     if (animation) {
         doAnimation(deltaTime);
     }
+    sprite.setPosition(transform->getPosition().getX(), transform->getPosition().getY());
+    sprite.setRotation(transform->getRotation());
+    sprite.setScale(transform->getScale().getX(), transform->getScale().getY());
 }
 
 sf::Sprite Sprite::getSprite() const {
     return sprite;
 }
 
-sf::Texture Sprite::getTexture() const {
-    return texture;
-}
-
-void Sprite::createSprite(const std::string& texturePath) {
-    if (texture.loadFromFile(texturePath)) {
-        sprite.setTexture(texture);
-    } else {
-        std::cerr << "Error: Texture not found" << std::endl;
-    }
-}
-
-void Sprite::createSprite(const sf::Texture& existingTexture) {
-    sprite.setTexture(existingTexture);
-}
-
-void Sprite::createSprite() {
-    sprite.setTexture(texture);
-}
-
 void Sprite::setSprite(const sf::Sprite& newSprite) {
     sprite = newSprite;
 }
 
-void Sprite::setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
-                       bool animate, std::vector<Rect<int>> newFrames, int durationOfFrame) {
+void Sprite::setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, const std::string& nameTexture,
+                       bool animate, const std::vector<Rect<int>>& newFrames, int durationOfFrame) {
     if (!mapTexture.empty()) {
         auto it = mapTexture.find(nameTexture);
         if (it != mapTexture.end()) {
             sprite.setTexture(*(it->second));
             animation = animate;
             if (animate) {
-                if (newFrames.size() > 0) {
+                if (!newFrames.empty()) {
                     frames = newFrames;
                     currentFrame = 0;
                     timeSinceLastFrame = sf::Time::Zero;
@@ -79,75 +77,7 @@ void Sprite::applyDeferredSprite() {
 }
 
 void Sprite::setDeferredSprite(std::function<void()> setter) {
-    deferredSprite = setter;
-}
-
-void Sprite::setTexture(const sf::Texture& existingTexture) {
-    texture = existingTexture;
-}
-
-
-void Sprite::setTransformSprite() {
-    if (transform) {
-        sprite.setPosition(transform->getTransformStruct().position.getX(),
-                           transform->getTransformStruct().position.getY());
-        sprite.setRotation(transform->getTransformStruct().rotation);
-        sprite.setScale(transform->getTransformStruct().scale.getX(), transform->getTransformStruct().scale.getY());
-    }
-}
-
-void Sprite::setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
-    if (transform) {
-        sprite.setPosition(newPosition.getX(), newPosition.getY());
-        sprite.setRotation(newRotation);
-        sprite.setScale(newScale.getX(), newScale.getY());
-        transform->setTransform(newPosition, newRotation, newScale);
-    }
-}
-
-void Sprite::setPosition() {
-    if (transform) {
-        sprite.setPosition(transform->getTransformStruct().position.getX(),
-                           transform->getTransformStruct().position.getY());
-    }
-}
-
-void Sprite::setPosition(Vector2<float> newPosition) {
-    if (transform) {
-        sprite.setPosition(newPosition.getX(), newPosition.getY());
-        transform->setTransformPosition(newPosition);
-    }
-}
-
-void Sprite::setRotation() {
-    if (transform) {
-        sprite.setRotation(transform->getTransformStruct().rotation);
-    }
-}
-
-void Sprite::setRotation(float newRotation) {
-    if (transform) {
-        sprite.setRotation(newRotation);
-        transform->setTransformRotation(newRotation);
-    }
-}
-
-void Sprite::setScale() {
-    if (transform) {
-        sprite.setScale(transform->getTransformStruct().scale.getX(), transform->getTransformStruct().scale.getY());
-    }
-}
-
-void Sprite::setScale(Vector2<float> newScale) {
-    if (transform) {
-        sprite.setScale(newScale.getX(), newScale.getY());
-        transform->setTransformScale(newScale);
-    }
-}
-
-Rect<float> Sprite::getBounds() const {
-    sf::FloatRect bounds = sprite.getGlobalBounds();
-    return Rect<float>(bounds.left, bounds.top, bounds.width, bounds.height);
+    deferredSprite = std::move(setter);
 }
 
 void Sprite::setTransform(Transform& newTransform) {
