@@ -69,16 +69,13 @@ public:
     /// @return std::map<std::string, std::function<void()>>: The map of the mouse moved.
     std::map<std::string, std::function<void()>>& getMouseMovedMap();
 
-    /**
-     * @brief getKeyStatesMap(): Get the map of the key states.
-     * @return std::map<sf::Keyboard::Key, bool>&: The map of the key states.
-     */
+    /// @brief getKeyStatesMap(): Get the map of the key states.
+    /// @param void
+    /// @return std::map<sf::Keyboard::Key, bool>&: The map of the key states.
     std::map<sf::Keyboard::Key, bool>& getKeyStatesMap();
 
-    /**
-     * @brief setKeyStatesMap(sf::Keyboard::Key): Initialize the map of the key states for the parameter value to false
-     * @param key: The touch of the keyboard with using SFML.
-     */
+    /// @brief setKeyStatesMap(sf::Keyboard::Key): Initialize the map of the key states for the parameter value to false
+    /// @param key: The touch of the keyboard with using SFML.
+    /// @return void
     void setKeyStatesMap(sf::Keyboard::Key key);
 };
-

@@ -10,10 +10,6 @@ TEST_F(EventTest, DefaultConstructor) {
     EXPECT_EQ(0, eventEngine.getKeyPressedMap().size());
 }
 
-TEST_F(EventTest, Init) {
-    EXPECT_TRUE(eventEngine.init());
-}
-
 TEST_F(EventTest, AddKeyPressed) {
     EXPECT_EQ(0, eventEngine.getKeyPressedMap().size());
 
@@ -102,4 +98,19 @@ TEST_F(EventTest, GetMouseMovedMap) {
     EXPECT_EQ(2, eventEngine.getMouseMovedMap().size());
     EXPECT_EQ("test", eventEngine.getMouseMovedMap().begin()->first);
     EXPECT_EQ("test2", eventEngine.getMouseMovedMap().rbegin()->first);
+}
+
+TEST_F(EventTest, GetKeyStatesMap) {
+    EXPECT_EQ(0, eventEngine.getKeyStatesMap().size());
+
+    eventEngine.setKeyStatesMap(sf::Keyboard::Key::A);
+
+    EXPECT_EQ(1, eventEngine.getKeyStatesMap().size());
+    EXPECT_EQ(sf::Keyboard::Key::A, eventEngine.getKeyStatesMap().begin()->first);
+
+    eventEngine.setKeyStatesMap(sf::Keyboard::Key::B);
+
+    EXPECT_EQ(2, eventEngine.getKeyStatesMap().size());
+    EXPECT_EQ(sf::Keyboard::Key::A, eventEngine.getKeyStatesMap().begin()->first);
+    EXPECT_EQ(sf::Keyboard::Key::B, eventEngine.getKeyStatesMap().rbegin()->first);
 }
