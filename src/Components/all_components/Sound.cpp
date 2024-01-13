@@ -28,6 +28,15 @@ const sf::SoundBuffer& Sound::getSoundBuffer() const {
     return soundBuffer;
 }
 
+void Sound::setSound(std::map <std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, std::string nameSound) {
+    if (!mapSound.empty()) {
+        auto it = mapSound.find(nameSound);
+        if (it != mapSound.end()) {
+            sound.setBuffer(*it->second);
+        }
+    }
+}
+
 bool Sound::setSound(const sf::Sound& sound) {
     this->sound = sound;
     this->soundBuffer = *sound.getBuffer();

@@ -14,7 +14,7 @@
  */
 class Sound : public Components {
 private:
-    sf::SoundBuffer soundBuffer; ///< SFML SoundBuffer for audio.
+    sf::SoundBuffer soundBuffer;
     sf::Sound sound; ///< SFML Sound for playing audio.
     std::function<void()> deferredSound;
 
@@ -54,6 +54,8 @@ public:
     /// @param sound: SFML Sound for audio.
     /// @return bool: True if the sound has been set, false otherwise.
     bool setSound(const sf::Sound& sound);
+
+    void setSound(std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, std::string nameSound);
 
     void setDeferredSound(std::function<void()> setter);
 

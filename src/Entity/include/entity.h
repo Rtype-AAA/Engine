@@ -13,6 +13,7 @@
 #include "Vector2.h"
 #include "Music.h"
 #include "Sound.h"
+#include "Text.h"
 
 /**
  * @brief Entity class: Entity is a class that represents an entity in the game.
@@ -126,4 +127,8 @@ extern template std::size_t Entity::getComponentTypeID<Music>();
 extern template Sound& Entity::getComponent<Sound>();
 extern template Sound& Entity::addComponent<Sound>();
 extern template std::size_t Entity::getComponentTypeID<Sound>();
+
+extern template Text& Entity::addComponent<Text>();
+extern template std::size_t Entity::getComponentTypeID<Text>();
+extern template Text& Entity::getComponent<Text>();
 

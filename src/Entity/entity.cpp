@@ -50,6 +50,10 @@ T& Entity::addComponent(TArgs&&... args) {
         if (this->getComponentBitset().test(0)) {
             newComponent->setTransform(this->getComponent<Transform>());
         }
+    } else if constexpr (std::is_same_v<T,Text>) {
+        if (this->getComponentBitset().test(0)) {
+            newComponent->setTransform(this->getComponent<Transform>());
+        }
     }
     T* comp = newComponent.get();
     addDrawable(comp);
@@ -88,3 +92,7 @@ template Music& Entity::getComponent<Music>();
 template Sound& Entity::addComponent<Sound>();
 template std::size_t Entity::getComponentTypeID<Sound>();
 template Sound& Entity::getComponent<Sound>();
+
+template Text& Entity::addComponent<Text>();
+template std::size_t Entity::getComponentTypeID<Text>();
+template Text& Entity::getComponent<Text>();

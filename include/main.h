@@ -22,4 +22,5 @@
 #include "Vector2.h"
 #include "toSFML.h"
 #include "Script.h"
+#include "Color.h"
 

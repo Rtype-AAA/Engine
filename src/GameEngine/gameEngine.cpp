@@ -87,6 +87,18 @@ void GameEngine::initializeMusicFunction() {
     }
 }
 
+void GameEngine::initializeTextFunction() {
+    for (auto const& world : getWorldMap()) {
+        for (auto const& entityManager : world.second->getEntityManagerMap()) {
+            for (auto const& entity : entityManager.second->getEntityMap()) {
+                if (entity.second->getComponentBitset().test(4)) {
+                    entity.second->getComponent<Text>().applyDeferredText();
+                }
+            }
+        }
+    }
+}
+
 std::vector<std::string> GameEngine::getFilesRessources(std::string pathDirectory) {
     if (!std::filesystem::exists(pathDirectory) || !std::filesystem::is_directory(pathDirectory)) {
         std::cerr << "Folder not found or invalid path." << std::endl;
@@ -148,6 +160,22 @@ void GameEngine::initializeMusic(std::string path) {
     }
 }
 
+void GameEngine::initializeFont(std::string path) {
+    sf::Font font;
+    std::vector<std::string> allFilesName;
+    allFilesName = getFilesRessources(path);
+    path += "/";
+    for (const auto& element : allFilesName) {
+        if (!font.loadFromFile(path + element)) {
+            std::cerr << "Error loading font: " + path + element << std::endl;
+            exit(1);
+        } else {
+            std::cout << "Font loaded successfully: " + path + element << std::endl;
+        }
+        mapFont[element] = std::make_shared<sf::Font>(font);
+    }
+}
+
 void GameEngine::initializeAllFiles(std::map <std::string, std::string> pathRessources) {
     for (const auto& element : pathRessources) {
         if (element.first == "Textures" || element.first == "Texture") {
@@ -156,9 +184,11 @@ void GameEngine::initializeAllFiles(std::map <std::string, std::string> pathRess
             initializeSound(element.second);
         } else if (element.first == "Music" || element.first == "Musics") {
             initializeMusic(element.second);
+        } else if (element.first == "Font" || element.first == "Fonts") {
+            initializeFont(element.second);
         } else {
-            std::cout << "The resource type does not exist, please choose from the available options." << std::endl;
-            exit(0);
+                std::cout << "The resource type does not exist, please choose from the available options." << std::endl;
+                exit(0);
         }
     }
 }
@@ -184,6 +214,9 @@ void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWor
     }
     if (!mapMusic.empty()) {
         initializeMusicFunction();
+    }
+    if (!mapFont.empty()) {
+        initializeTextFunction();
     }
 }
 

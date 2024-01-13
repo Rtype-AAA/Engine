@@ -27,11 +27,11 @@ public:
 
     std::shared_ptr<sf::Music> getMusic() const {return music;}
 
-    void playMusic();
+    void play();
 
-    void playMusic(int seconds);
+    void play(int seconds);
 
-    void stopMusic();
+    void stop();
 
     int getBit() const {return bit;}
 };
