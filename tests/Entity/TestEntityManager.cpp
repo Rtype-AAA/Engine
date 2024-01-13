@@ -21,6 +21,10 @@ TEST_F(EntityManagerTest, DefaultConstructor) {
     EXPECT_EQ(0, manager.getEntityMap().size());
 }
 
+TEST_F(EntityManagerTest, Init) {
+    EXPECT_TRUE(entityManager.init());
+}
+
 TEST_F(EntityManagerTest, AddEntity) {
     std::string entity = "TestEntity";
 
@@ -134,8 +138,4 @@ TEST_F(EntityManagerTest, GetEntityMap) {
     EXPECT_EQ(entity2, entityManager.getEntityMap()["TestEntity2"]->getName());
 
     EXPECT_EQ(addedComponent.getBit(), entityManager.getEntityMap()["TestEntity"]->getComponent<Transform>().getBit());
-}
-
-TEST_F(EntityManagerTest, InitEntityManager) {
-    EXPECT_TRUE(entityManager.initEntityManager());
 }
