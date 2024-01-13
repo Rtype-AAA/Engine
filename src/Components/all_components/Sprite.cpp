@@ -34,6 +34,9 @@ void Sprite::draw(sf::RenderWindow& window) const {
 }
 
 void Sprite::update(sf::Time deltaTime) {
+    if (!init()) {
+        return;
+    }
     if (animation) {
         doAnimation(deltaTime);
     }
