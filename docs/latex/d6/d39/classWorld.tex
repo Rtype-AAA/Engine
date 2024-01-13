@@ -34,20 +34,22 @@ Collaboration diagram for World\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Default \mbox{\hyperlink{classWorld}{World}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classWorld_a724bc2c94b64a16081f80f14011ff1b1}{$\sim$\+World}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld}{World}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init}} () override
+\begin{DoxyCompactList}\small\item\em init\+Entity\+Manager()\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWorld_a1bdfe46de39d4eaf4d8bbc0bb5f038c6}{create\+Entities}} (std\+::map$<$ std\+::string, std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $>$, std\+::vector$<$ std\+::string $>$$>$$>$ \&map\+Entity\+Manager)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a1bdfe46de39d4eaf4d8bbc0bb5f038c6}{create\+Entities()}}\+: Create the entities. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{add\+Entity\+Manager}} (std\+::string Name\+Entity\+Manager)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{add\+Entity\+Manager()}}\+: Add an entity manager to the map. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{get\+Entity\+Manager}} (std\+::string Name\+Entity\+Manager)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{get\+Entity\+Manager()}}\+: Get the entity manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}{add\+Entity\+Manager}} (const std\+::string \&Name\+Entity\+Manager)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}{add\+Entity\+Manager()}}\+: Add an entity manager to the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_ab49550eaddd47a45df9eee9cc0e43c61}{get\+Entity\+Manager}} (const std\+::string \&Name\+Entity\+Manager)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_ab49550eaddd47a45df9eee9cc0e43c61}{get\+Entity\+Manager()}}\+: Get the entity manager. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}{set\+Name\+World}} (std\+::string new\+Name)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}{set\+Name\+World()}}\+: Set the name of the world. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classWorld_a7a15da4862400e8a81913329326eb426}{get\+Name\+World}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a7a15da4862400e8a81913329326eb426}{get\+Name\+World()}}\+: Get the name of the world. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ \mbox{\hyperlink{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}{get\+Entity\+Manager\+Map}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}{get\+Entity\+Manager\+Map()}}\+: Get the map of the entity manager. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classWorld_af2d4cecc96107919448ab20d61708737}{init\+World}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the \mbox{\hyperlink{classWorld}{World}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ \mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{get\+Entity\+Manager\+Map}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{get\+Entity\+Manager\+Map()}}\+: Get the map of the entity manager. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ \mbox{\hyperlink{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}{get\+Entities\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}{get\+Entities\+Manager()}}\+: Get the entities \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -96,15 +98,15 @@ void
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classWorld_a3230be9d7c3dc812a1712972cffd56e4}\label{classWorld_a3230be9d7c3dc812a1712972cffd56e4}} 
+\mbox{\Hypertarget{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}\label{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}} 
 \index{World@{World}!addEntityManager@{addEntityManager}}
 \index{addEntityManager@{addEntityManager}!World@{World}}
 \doxysubsubsection{\texorpdfstring{addEntityManager()}{addEntityManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& World\+::add\+Entity\+Manager (\begin{DoxyParamCaption}\item[{std\+::string}]{Name\+Entity\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& World\+::add\+Entity\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Name\+Entity\+Manager }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classWorld_a3230be9d7c3dc812a1712972cffd56e4}{add\+Entity\+Manager()}}\+: Add an entity manager to the map. 
+\mbox{\hyperlink{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}{add\+Entity\+Manager()}}\+: Add an entity manager to the map. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -134,15 +136,28 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}\label{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}} 
+\mbox{\Hypertarget{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}\label{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}} 
+\index{World@{World}!getEntitiesManager@{getEntitiesManager}}
+\index{getEntitiesManager@{getEntitiesManager}!World@{World}}
+\doxysubsubsection{\texorpdfstring{getEntitiesManager()}{getEntitiesManager()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ World\+::get\+Entities\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}{get\+Entities\+Manager()}}\+: Get the entities 
+
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, Entity\+Manager$\ast$$>$\+: Get the entities. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWorld_ab49550eaddd47a45df9eee9cc0e43c61}\label{classWorld_ab49550eaddd47a45df9eee9cc0e43c61}} 
 \index{World@{World}!getEntityManager@{getEntityManager}}
 \index{getEntityManager@{getEntityManager}!World@{World}}
 \doxysubsubsection{\texorpdfstring{getEntityManager()}{getEntityManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& World\+::get\+Entity\+Manager (\begin{DoxyParamCaption}\item[{std\+::string}]{Name\+Entity\+Manager }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& World\+::get\+Entity\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Name\+Entity\+Manager }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classWorld_a2ef16ca7df8592bb4a3d7f09d10f8bc2}{get\+Entity\+Manager()}}\+: Get the entity manager. 
+\mbox{\hyperlink{classWorld_ab49550eaddd47a45df9eee9cc0e43c61}{get\+Entity\+Manager()}}\+: Get the entity manager. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -152,15 +167,15 @@ void
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}\&\+: The entity manager. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}\label{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}} 
+\mbox{\Hypertarget{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}\label{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}} 
 \index{World@{World}!getEntityManagerMap@{getEntityManagerMap}}
 \index{getEntityManagerMap@{getEntityManagerMap}!World@{World}}
 \doxysubsubsection{\texorpdfstring{getEntityManagerMap()}{getEntityManagerMap()}}
-{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}$\ast$$>$ World\+::get\+Entity\+Manager\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $\ast$ $>$ World\+::get\+Entity\+Manager\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classWorld_aa532561277a5e7a76f1d442ea8c7c1f8}{get\+Entity\+Manager\+Map()}}\+: Get the map of the entity manager. 
+\mbox{\hyperlink{classWorld_a98ec63d40a4e6e92c2ad3884624cf11e}{get\+Entity\+Manager\+Map()}}\+: Get the map of the entity manager. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -174,7 +189,7 @@ std\+::map$<$std\+::string, Entity\+Manager$\ast$$>$\+: The map of the entity ma
 \index{World@{World}!getNameWorld@{getNameWorld}}
 \index{getNameWorld@{getNameWorld}!World@{World}}
 \doxysubsubsection{\texorpdfstring{getNameWorld()}{getNameWorld()}}
-{\footnotesize\ttfamily std\+::string World\+::get\+Name\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::string World\+::get\+Name\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -188,15 +203,15 @@ std\+::map$<$std\+::string, Entity\+Manager$\ast$$>$\+: The map of the entity ma
 \begin{DoxyReturn}{Returns}
 std\+::string\+: The name of the world. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classWorld_af2d4cecc96107919448ab20d61708737}\label{classWorld_af2d4cecc96107919448ab20d61708737}} 
-\index{World@{World}!initWorld@{initWorld}}
-\index{initWorld@{initWorld}!World@{World}}
-\doxysubsubsection{\texorpdfstring{initWorld()}{initWorld()}}
-{\footnotesize\ttfamily bool World\+::init\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}\label{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}} 
+\index{World@{World}!init@{init}}
+\index{init@{init}!World@{World}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool World\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the \mbox{\hyperlink{classWorld}{World}}. 
+init\+Entity\+Manager()\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -204,8 +219,12 @@ std\+::string\+: The name of the world.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool\+: True if the world is initialized, false otherwise. 
+bool\+: true if the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} is initialized, false otherwise. 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classEntityManager_ab4a499dc089c5bf16424c72c66d3a9c5}{Entity\+Manager}}.
+
 \mbox{\Hypertarget{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}\label{classWorld_a8e5de3493a85951d99ff47a8ec5b0823}} 
 \index{World@{World}!setNameWorld@{setNameWorld}}
 \index{setNameWorld@{setNameWorld}!World@{World}}

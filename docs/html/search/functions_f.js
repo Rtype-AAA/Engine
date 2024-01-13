@@ -1,16 +1,4 @@
 var searchData=
 [
-  ['packet_4133',['Packet',['../d6/dc5/classsf_1_1Packet.html#a786e5d4ced83992ceefa1799963ea858',1,'sf::Packet']]],
-  ['parentdirectory_4134',['parentDirectory',['../de/d8a/classsf_1_1Ftp.html#a0995c5d04959adf0b03cfee3ca5b03f1',1,'sf::Ftp']]],
-  ['pause_4135',['pause',['../d0/d7b/classsf_1_1Sound.html#a65b0f66e9123caed2809da366ac4d377',1,'sf::Sound::pause()'],['../d0/dbb/classsf_1_1SoundSource.html#a21553d4e8fcf136231dd8c7ad4630aba',1,'sf::SoundSource::pause()'],['../de/d47/classsf_1_1SoundStream.html#a932ff181e661503cad288b4bb6fe45ca',1,'sf::SoundStream::pause()'],['../df/d49/classSound.html#a65b0f66e9123caed2809da366ac4d377',1,'Sound::pause()']]],
-  ['performclose_3a_4136',['performClose:',['../d0/d2f/interfaceSFWindow.html#aaf5ec61b825323b98c57fdbf5deab7ac',1,'SFWindow']]],
-  ['play_4137',['play',['../d0/d7b/classsf_1_1Sound.html#aad595b0dc5459e110b53a4e6b2adb0e4',1,'sf::Sound::play()'],['../d0/dbb/classsf_1_1SoundSource.html#a6e1bbb1f247ed8743faf3b1ed6f2bc21',1,'sf::SoundSource::play()'],['../de/d47/classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144',1,'sf::SoundStream::play()'],['../df/d49/classSound.html#aad595b0dc5459e110b53a4e6b2adb0e4',1,'Sound::play()']]],
-  ['pollevent_4138',['pollEvent',['../d2/d1d/classsf_1_1WindowBase.html#a6a143de089c8716bd42c38c781268f7f',1,'sf::WindowBase']]],
-  ['popevent_4139',['popEvent',['../df/df8/classsf_1_1priv_1_1WindowImpl.html#ac03b5e66fbf0b64d00f28dfb06f25a94',1,'sf::priv::WindowImpl']]],
-  ['popglstates_4140',['popGLStates',['../d1/d0b/classsf_1_1RenderTarget.html#ad5a98401113df931ddcd54c080f7aa8e',1,'sf::RenderTarget']]],
-  ['position_4141',['position',['../d1/dc5/protocolWindowImplDelegateProtocol-p.html#a35887f115df7b03eac8aee9027bd44c2',1,'WindowImplDelegateProtocol-p']]],
-  ['processevent_4142',['processEvent',['../d0/d52/interfaceSFApplication.html#a6a40a111d573b90b8d541ecf47ad6b5d',1,'SFApplication::processEvent()'],['../d1/dc5/protocolWindowImplDelegateProtocol-p.html#a41eda28671dce9d263ca4506c7b4b0af',1,'WindowImplDelegateProtocol-p::processEvent()']]],
-  ['processevents_4143',['processEvents',['../d5/d5f/classsf_1_1priv_1_1WindowImplAndroid.html#a5720dcff276ef1fe39f2c5b37321d709',1,'sf::priv::WindowImplAndroid::processEvents()'],['../d2/da5/classsf_1_1priv_1_1WindowImplDRM.html#ac25f3e4515c1ede28583970f6fc00c26',1,'sf::priv::WindowImplDRM::processEvents()'],['../d0/d3a/classsf_1_1priv_1_1WindowImplUIKit.html#a38b4f82d78000b4e07ad7791317b71c8',1,'sf::priv::WindowImplUIKit::processEvents()'],['../dd/db0/classsf_1_1priv_1_1WindowImplCocoa.html#ac07eb451ab1e68f4c8f963f3461cc8c8',1,'sf::priv::WindowImplCocoa::processEvents()'],['../d2/da4/classsf_1_1priv_1_1ClipboardImpl.html#a0c554a95ea4d63570ad1b9556cee1c38',1,'sf::priv::ClipboardImpl::processEvents()'],['../db/d43/classsf_1_1priv_1_1WindowImplX11.html#ae1e24fd1646de0d299e8ada2d77b3bf3',1,'sf::priv::WindowImplX11::processEvents()'],['../d1/d05/classsf_1_1priv_1_1WindowImplWin32.html#aa418e3446e2e9a9994f84f5d52b8b53d',1,'sf::priv::WindowImplWin32::processEvents()'],['../df/df8/classsf_1_1priv_1_1WindowImpl.html#a3e91b707ca4b995fabd71b7bd031530a',1,'sf::priv::WindowImpl::processEvents()=0']]],
-  ['pushevent_4144',['pushEvent',['../df/df8/classsf_1_1priv_1_1WindowImpl.html#a9b540a7c8b1b782d771e8fdf8f451837',1,'sf::priv::WindowImpl']]],
-  ['pushglstates_4145',['pushGLStates',['../d1/d0b/classsf_1_1RenderTarget.html#a8d1998464ccc54e789aaf990242b47f7',1,'sf::RenderTarget']]]
+  ['world_342',['World',['../d6/d39/classWorld.html#a1fc6067fe31da6405bece93c9dbb61ac',1,'World']]]
 ];

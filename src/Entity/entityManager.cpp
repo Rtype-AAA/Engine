@@ -4,9 +4,13 @@
 
 #include "entityManager.h"
 
-Entity& EntityManager::addEntity(std::string nameEntity, Archetypes newArchetype) {
+bool EntityManager::init() {
+    return true;
+}
+
+Entity& EntityManager::addEntity(const std::string& nameEntity, Archetypes newArchetype) {
     std::unique_ptr<Entity> newEntity = std::make_unique<Entity>(nameEntity, newArchetype);
-    if (!newEntity->initEntity()) {
+    if (!newEntity->init()) {
         throw std::runtime_error("Echec de l'initialisation de Entity : " + nameEntity);
     }
     Entity *comp = newEntity.get();
@@ -15,22 +19,26 @@ Entity& EntityManager::addEntity(std::string nameEntity, Archetypes newArchetype
     return *comp;
 }
 
-Entity& EntityManager::getEntity(const std::string nameEntity) {
+Entity& EntityManager::getEntity(const std::string& nameEntity) {
     auto it = entityMap.find(nameEntity);
     if (it != entityMap.end()) {
         auto ptr = entityMap[nameEntity];
         return *static_cast<Entity*>(ptr);
     } else {
-        this->addEntity(nameEntity);
-        return this->getEntity(nameEntity);
+        auto& newEntity = this->addEntity(nameEntity);
+        return newEntity;
     }
 }
 
 std::map<std::string, Entity *> EntityManager::getEntities() const {
     std::map<std::string, Entity *> result;
 
-    for (const auto &entry : entities) {
-        result[entry.first] = entry.second.get();
+    for (const auto &entity : entities) {
+        result[entity.first] = entity.second.get();
     }
     return result;
+}
+
+std::map<std::string, Entity*> EntityManager::getEntityMap() const {
+    return entityMap;
 }

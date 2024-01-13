@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pause_91',['pause',['../df/d49/classSound.html#a65b0f66e9123caed2809da366ac4d377',1,'Sound']]],
-  ['play_92',['play',['../df/d49/classSound.html#aad595b0dc5459e110b53a4e6b2adb0e4',1,'Sound']]]
+  ['color_104',['Color',['../d2/d37/classColor.html#a1e97bd40693b4f88a54308ab8a420134',1,'Color']]]
 ];

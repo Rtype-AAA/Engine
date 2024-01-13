@@ -12,7 +12,7 @@
  * This create a rectangle and using for what you want.
  */
 template<typename T>
-class Rect : public Transform {
+class Rect {
 private:
     struct RectStruct {
         T left;
@@ -41,38 +41,48 @@ public:
     /// @brief getRect(): Get the using RectStruct.
     /// @param void
     /// @return Rect
-    RectStruct getRect() const {return rect;}
+    [[nodiscard]] RectStruct getRect() const;
 
     /// @brief getLeft(): Get the using RectStruct left.
     /// @tparam T: Type of the rect.
     /// @param void
     /// @return T : T is the type you want (float, int,...).
-    T getLeft() const {return rect.left;}
+    [[nodiscard]] T getLeft() const;
 
     /// @brief getTop(): Get the using RectStruct top.
     /// @tparam T: Type of the rect.
     /// @param void
     /// @return T : T is the type you want (float, int,...).
-    T getTop() const {return rect.top;}
+    [[nodiscard]] T getTop() const;
 
     /// @brief getWidth(): Get the using RectStruct width.
     /// @tparam T: Type of the rect.
     /// @param void
     /// @return T : T is the type you want (float, int,...).
-    T getWidth() const {return rect.width;}
+    [[nodiscard]] T getWidth() const;
 
     /// @brief getHeight(): Get the using RectStruct height.
     /// @tparam T: Type of the rect.
     /// @param void
     /// @return T : T is the type you want (float, int,...).
-    T getHeight() const {return rect.height;}
+    [[nodiscard]] T getHeight() const;
 
     /// @brief contains(): Check if a point is in the rectangle.
     /// @tparam T: Type of the rect.
     /// @param x : Position x of the point.
     /// @param y : Position y of the point.
     /// @return T : T is the type you want (float, int,...).
-    bool contains(T x, T y) const;
+    [[nodiscard]] bool contains(T x, T y) const;
 };
 
+extern template float Rect<float>::getLeft() const;
+extern template float Rect<float>::getTop() const;
+extern template float Rect<float>::getWidth() const;
+extern template float Rect<float>::getHeight() const;
 extern template bool Rect<float>::contains(float x, float y) const;
+
+extern template int Rect<int>::getLeft() const;
+extern template int Rect<int>::getTop() const;
+extern template int Rect<int>::getWidth() const;
+extern template int Rect<int>::getHeight() const;
+extern template bool Rect<int>::contains(int x, int y) const;

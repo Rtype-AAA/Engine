@@ -22,32 +22,32 @@ public:
     /// @brief EntityManager destructor
     /// @param void
     /// @return void
-    ~EntityManager() = default;
+    ~EntityManager() override = default;
+
+    /// @brief initEntityManager(): Initialize the EntityManager.
+    /// @param void
+    /// @return bool: true if the EntityManager is initialized, false otherwise.
+    bool init() override;
 
     /// @brief addEntity(): Create and add a new entity to the entity manager.
     /// @tparam T: Type of the entity.
     /// @tparam TArgs: Type of the arguments.
     /// @param args: Arguments of the entity.
-    Entity &addEntity(std::string nameEntity, Archetypes newArchetype = Archetypes());
+    Entity &addEntity(const std::string& nameEntity, Archetypes newArchetype = Archetypes());
 
     /// @brief getEntity(): Get an entity from the entity manager by its name.
     /// @tparam T: Type of the entity.
     /// @param nameEntity: Name of the entity.
     /// @return T&: Reference of the entity.
-    Entity &getEntity(std::string nameEntity);
+    Entity &getEntity(const std::string& nameEntity);
 
     /// @brief getEntities(): Get the EntityManager's entities.
     /// @param void
     /// @return std::map<std::string, Entity *>: Entities.
-    std::map<std::string, Entity *> getEntities() const;
+    [[nodiscard]] std::map<std::string, Entity *> getEntities() const;
 
     /// @brief getEntityMap(): Get the EntityManager's entity map.
     /// @param void
     /// @return Entity::EntityMap: Entity map.
-    std::map<std::string, Entity*> getEntityMap() const {return entityMap;}
-
-    /// @brief initEntityManager(): Initialize the EntityManager.
-    /// @param void
-    /// @return bool: true if the EntityManager is initialized, false otherwise.
-    bool initEntityManager() {return true;}
+    [[nodiscard]] std::map<std::string, Entity*> getEntityMap() const;
 };

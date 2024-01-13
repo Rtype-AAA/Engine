@@ -12,35 +12,50 @@
 #include "toSFML.h"
 #include "Transform.h"
 #include "Vector2.h"
+#include "ITransform.h"
 
 /**
  * @brief Sprite class: Sprite is a class that represents the rendering properties of a Component.
  *
  * The Sprite class manages the graphical representation of a Component using SFML.
  */
+<<<<<<< HEAD
 class Sprite : public DrawableComponent, public toSFML, public Transform
 {
-private:
-    sf::Sprite sprite;                    ///< SFML Sprite for rendering.
-    sf::Texture texture;                  ///< SFML Texture for the sprite.
-    std::function<void()> deferredSprite; ///< Deferred sprite.
+=======
 
-    Transform* transform;
+class Sprite : public DrawableComponent, public toSFML, public Transform, public ITransform {
+>>>>>>> a81756f4 ([m] Engine:)
+private:
+    sf::Sprite sprite;                    /// < SFML Sprite for rendering.
+    std::function<void()> deferredSprite; /// < Deferred function for sprite.
+
+    Transform* transform; /// < Reference of component Transform.
 
     std::vector<Rect<int>> frames; /// < Vector of all frames for animation.
+<<<<<<< HEAD
     sf::Time timeSinceLastFrame; /// < The time since the last frames was draw.
     sf::Time frameDuration; /// < The duration of draw a frame.
     unsigned int currentFrame; /// < The current frame.
     bool animation; /// < Sprite is animated.
+=======
+    sf::Time timeSinceLastFrame;   /// < The time since the last frames was draw.
+    sf::Time frameDuration;        /// < The duration of draw a frame.
+    unsigned long currentFrame{};              /// < The current frame.
+    bool animation{};                /// < Sprite is animated.
+>>>>>>> a81756f4 ([m] Engine:)
 
     int bit = 1;                          ///< Bit of the Sprite.
     void doAnimation(sf::Time deltaTime); /// < Doing the animation.
 public:
-    /// @brief Default Sprite constructor.
-    /// @param void
-    /// @return void
+    /**
+     * @brief Default Sprite constructor.
+     *
+     * Set the default value to "Default" and initialize the transform reference to null.
+     */
     Sprite() : transform(nullptr) {}
 
+<<<<<<< HEAD
     /// @brief Sprite constructor with an existing texture path.
     /// @param texturePath: Path to the texture file for the sprite.
     /// @return void
@@ -57,62 +72,55 @@ public:
     /// @brief Sprite destructor.
     /// @param void
     /// @return void
+=======
+    /**
+     * @brief Default override Sprite destructor.
+     *
+     * Set the default value to "Default".
+     */
+>>>>>>> a81756f4 ([m] Engine:)
     ~Sprite() override = default;
 
-    Transform* getTransform() const {return transform;}
+    /**
+     * @brief getTransform(): Get the reference to the component Transform.
+     * @return Transform*: Reference of Transform
+     */
+    Transform* getTransform() override;
 
-    void setTransform(Transform& newTransform);
+    /**
+     * @brief init(): Initialize the component.
+     * @return bool: true if the component is initialized, false otherwise
+     */
+    bool init() override;
 
-    /// @brief init(): Initialize the Sprite.
-    /// @param void
-    /// @return bool: True if the Sprite is initialized, false otherwise.
-    bool initSprite() const { return true; }
+    /**
+     * @brief getBit(): Get the bit of the Music.
+     * @return int: The bit of the Music.
+     */
+    int getBit() override;
 
-    /// @brief getBit(): Get the bit of the Sprite.
-    /// @param void
-    /// @return int: The bit of the Sprite.
-    int getBit() const { return bit; }
-
-    /// @brief draw(): Draw the Sprite.
-    /// @param window: SFML RenderWindow where the Sprite will be drawn.
-    /// @return void
+    /**
+     * @brief draw(): Draw the Sprite.
+     * @param window: SFML RenderWindow where the Sprite will be drawn.
+     */
     void draw(sf::RenderWindow &window) const override;
 
+    /**
+     * @brief update(sf::Time): Update the component Music
+     * @param timeDelta: sf::Time of the game.
+     */
     void update(sf::Time deltaTime) override;
 
-    /// @brief createSprite(): Create the SFML Sprite with a texture path for rendering.
-    /// @param texturePath: Path to the texture file for the sprite.
-    /// @return void
-    void createSprite(const std::string &texturePath);
+    /**
+     * @brief getSprite(): Get the SFML Sprite for rendering.
+     * @return sf::Sprite: SFML Sprite for rendering
+     */
+    sf::Sprite getSprite() const;
 
-    /// @brief createSprite(): Create the SFML Sprite with an existing texture for rendering.
-    /// @param existingTexture: SFML Texture for the sprite
-    /// @return void
-    void createSprite(const sf::Texture &existingTexture);
-
-    /// @brief createSprite(): Create the SFML Sprite with the component's texture for rendering.
-    /// @param void
-    /// @return void
-    void createSprite();
-
-    /// @brief getSprite(): Get the SFML Sprite for rendering.
-    /// @param void
-    /// @return sf::Sprite: SFML Sprite for rendering
-    [[nodiscard]] sf::Sprite getSprite() const;
-
-    /// @brief getTexture(): Get the SFML Texture for the sprite.
-    /// @param void
-    /// @return sf::Texture: SFML Texture for the sprite
-    [[nodiscard]] sf::Texture getTexture() const;
-
-    /// @brief isTextureLoaded(): Check if the texture is loaded.
-    /// @param void
-    /// @return bool: True if the texture is loaded, false otherwise.
-    bool isTextureLoaded() const { return texture.getSize().x != 0 && texture.getSize().y != 0; }
-
-    /// @brief setSprite(): Set the SFML Sprite with an existing one for rendering.
-    /// @param sprite: SFML Sprite for rendering
-    /// @return void
+    /**
+     * @brief setSprite(sf::Sprite&): Set the SFML Sprite with an existing one for rendering.
+     * @param sprite: SFML Sprite for rendering
+     */
     void setSprite(const sf::Sprite &sprite);
 
     /**
@@ -128,68 +136,23 @@ public:
      * @param durationOfFrame The duration of each frame in milliseconds. Default is 100 milliseconds.
      * @return void
      */
-    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, std::string nameTexture,
-                   bool animate = false, std::vector<Rect<int>> newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
+    void setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture, const std::string& nameTexture,
+                   bool animate = false, const std::vector<Rect<int>>& newFrames = std::vector<Rect<int>>(), int durationOfFrame = 100);
 
-    /// @brief setTransformSprite(): Set the sprite transform with new value and set the value on the Transform component.
-    /// @param newPosition: The new Vector2<float> position.
-    /// @param newRotation: The new float rotation.
-    /// @param newScale: The new Vector2<float> scale.
-    /// @return void
-    void setTransformSprite(Vector2<float> newPosition, float newRotation, Vector2<float> newScale);
-
-    /// @brief setTransformSprite(): Set the transform of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setTransformSprite();
-
-    /// @brief setPosition(): Set the position of the sprite with new value.
-    /// @param newPosition: The new Vector2<float> position.
-    /// @return void
-    void setPosition(Vector2<float> newPosition);
-
-    /// @brief setPosition(): Set the position of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setPosition();
-
-    /// @brief setRotation(): Set the rotation of the sprite with new value.
-    /// @param newRotation: The new float rotation.
-    /// @return void
-    void setRotation(float newRotation);
-
-    /// @brief setRotation(): Set the rotation of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setRotation();
-
-    /// @brief setScale(): Set the the scale of the sprite with new value.
-    /// @param newScale: The new Vector2<float> scale.
-    /// @return void
-    void setScale(Vector2<float> newScale);
-
-    /// @brief setScale(): Set the scale of the sprite based on the Transform component value.
-    /// @param void
-    /// @return void
-    void setScale();
-
-    /// @brief setDeferredSprite(): Set the deferred sprite.
-    /// @param setter: Function that will set the sprite.
-    /// @return void
+    /**
+     * @brief setDeferredSprite(std::function<void()>): Set the deferred sprite.
+     * @param setter: Function that will set the sprite.
+     */
     void setDeferredSprite(std::function<void()> setter);
 
-    /// @brief applyDeferredSprite(): Apply the deferred sprite.
-    /// @param void
-    /// @return void
+    /**
+     * @brief applyDeferredSprite(): Apply the deferred sprite.
+     */
     void applyDeferredSprite();
 
-    /// @brief setTexture(): Set the texture with an existing one for the sprite.
-    /// @param existingTexture: SFML Texture for the sprite
-    /// @return void
-    void setTexture(const sf::Texture &existingTexture);
-
-    /// @brief getBounds(): Get the bounds of the sprite.
-    /// @param void
-    /// @return Rect: The bounds of the sprite.
-    Rect<float> getBounds() const;
+    /**
+     * @brief setTransform(Transform&): Set the reference of the Transform component.
+     * @param newTransform: Reference of Transform.
+     */
+    void setTransform(Transform& newTransform);
 };

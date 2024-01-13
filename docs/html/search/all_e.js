@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['world_134',['World',['../d6/d39/classWorld.html',1,'World'],['../d6/d39/classWorld.html#a1fc6067fe31da6405bece93c9dbb61ac',1,'World::World()']]]
+  ['vector2_154',['Vector2',['../d8/d0d/classVector2.html',1,'Vector2&lt; T &gt;'],['../d8/d0d/classVector2.html#ae2f1223cb0d664aa73afb789086a4174',1,'Vector2::Vector2()'],['../d8/d0d/classVector2.html#ae59e0a10f842521cb7e256ef976ead77',1,'Vector2::Vector2(T x, T y)']]],
+  ['vector2_3c_20float_20_3e_155',['Vector2&lt; float &gt;',['../d8/d0d/classVector2.html',1,'']]]
 ];

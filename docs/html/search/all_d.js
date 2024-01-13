@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector2_132',['Vector2',['../d8/d0d/classVector2.html',1,'Vector2&lt; T &gt;'],['../d8/d0d/classVector2.html#ae59e0a10f842521cb7e256ef976ead77',1,'Vector2::Vector2()']]],
-  ['vector2_3c_20float_20_3e_133',['Vector2&lt; float &gt;',['../d8/d0d/classVector2.html',1,'']]]
+  ['update_152',['update',['../df/d53/classText.html#a372961f4dabb31ecb29ea03d19d3f713',1,'Text::update()'],['../db/daf/classTransform.html#a439d029d45b7fff4069d58ed415cb48c',1,'Transform::update()'],['../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110',1,'Components::update()'],['../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369',1,'Entity::update()']]],
+  ['updategameengine_153',['updateGameEngine',['../df/d8d/classGameEngine.html#a8768266e70ca73b6f2877903eb5fff1c',1,'GameEngine']]]
 ];

@@ -29,6 +29,11 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
                 gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title").getComponent<Text>().setText(
                         gameEngine.getMapFont(), "font1.ttf", "Nebula Strike", 150, Color::Green);
             });
+    menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Sound>()
+            .setDeferredSound([&]() {
+                gameEngine.getWorld("Menu").getEntityManager("Menu").getEntity("Background").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser.flac");
+
+            });
     return menuWorld;
 }
 
@@ -114,6 +119,7 @@ void event(GameEngine &gameEngine) {
         gameEngine.getWindow().close();
     });
 
+<<<<<<< HEAD
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::R, [&]() {
         if (gameEngine.getCurrentWorld()->getNameWorld() == "Menu") {
             Entity& title = gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title");
@@ -136,6 +142,9 @@ void event(GameEngine &gameEngine) {
             gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").setActive(false);
         }
     });
+=======
+
+>>>>>>> a81756f4 ([m] Engine:)
 
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Z, [&]() {
         auto &transform = gameEngine.getWorld("Level1").getEntityManager("Player").getEntity(

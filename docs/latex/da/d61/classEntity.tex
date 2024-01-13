@@ -36,12 +36,14 @@ Collaboration diagram for Entity\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEntity_a605d474ccbd30c3d4350016ec173546a}{$\sim$\+Entity}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} destructor. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classEntity_a25cd6bce71c72bd7be549f478810575e}{init\+Entity}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the entity \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEntity_a1ecd770fc7cff19699e4154e3c0600ce}{get\+Bit}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a1ecd770fc7cff19699e4154e3c0600ce}{get\+Bit()}}\+: Get the bit of the Sprite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init()}}\+: Initialize the entity \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntity_a403f69eb888da7c5a690b79c658cdf47}{get\+Name}} () const
 \begin{DoxyCompactList}\small\item\em gen\+Name()\+: Get the name of the entity \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{update}} (sf\+::\+Time delta\+Time) override
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{update()}}\+: Update the component \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{update(sf\+::\+Time)}}\+: Update the component \mbox{\hyperlink{classMusic}{Music}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name}} (std\+::string new\+Name)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}{set\+Name()}}\+: Set the name of the entity \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntity_adae040ef4d3e81b99e1851995f0c031f}{add\+Drawable}} (\mbox{\hyperlink{classComponents}{Components}} $\ast$component)
@@ -54,12 +56,8 @@ void \mbox{\hyperlink{classEntity_a98892dc9dbabd59d7258db64df34e7d3}{draw\+Entit
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a94390872de3e19be86ee51484f7cfb05}{get\+Component()}}\+: Get a component from the entity \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{classEntity_a9b7661ec128415b34158a80fe5188754}{get\+Component\+Type\+ID}} () noexcept
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a9b7661ec128415b34158a80fe5188754}{get\+Component\+Type\+ID()}}\+: Get a component ID from the entity \end{DoxyCompactList}\item 
-std\+::bitset$<$ 6 $>$ \mbox{\hyperlink{classEntity_aba0c01a6f7733119e28118a76df5694e}{get\+Component\+Bitset}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_aba0c01a6f7733119e28118a76df5694e}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}} $\ast$ $>$ \mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get all the drawable components from the entity \end{DoxyCompactList}\item 
-std\+::array$<$ \mbox{\hyperlink{classComponents}{Components}} $\ast$, 6 $>$ \mbox{\hyperlink{classEntity_acda519f4ac51e07962dfb5cfd68e29b2}{get\+Component\+Arrays}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_acda519f4ac51e07962dfb5cfd68e29b2}{get\+Component\+Arrays()}}\+: Get all the components from the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::bitset$<$ 6 $>$ \mbox{\hyperlink{classEntity_a60fbf308e1c011b5272abbedcf3357d1}{get\+Component\+Bitset}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity_a60fbf308e1c011b5272abbedcf3357d1}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -91,7 +89,7 @@ void
 \index{Entity@{Entity}!Entity@{Entity}}
 \index{Entity@{Entity}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+Entity,  }\item[{\mbox{\hyperlink{classArchetypes}{Archetypes}}}]{new\+Archetype = {\ttfamily \mbox{\hyperlink{classArchetypes}{Archetypes}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+Entity,  }\item[{\mbox{\hyperlink{classArchetypes}{Archetypes}}}]{new\+Archetype = {\ttfamily \mbox{\hyperlink{classArchetypes}{Archetypes}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -190,6 +188,28 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a1ecd770fc7cff19699e4154e3c0600ce}\label{classEntity_a1ecd770fc7cff19699e4154e3c0600ce}} 
+\index{Entity@{Entity}!getBit@{getBit}}
+\index{getBit@{getBit}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getBit()}{getBit()}}
+{\footnotesize\ttfamily int Entity\+::get\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classEntity_a1ecd770fc7cff19699e4154e3c0600ce}{get\+Bit()}}\+: Get the bit of the Sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: The bit of the Sprite. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_a1b10aca0b906d3b0bb93a1cdb38bb0ad}{Components}}.
+
 \mbox{\Hypertarget{classEntity_a94390872de3e19be86ee51484f7cfb05}\label{classEntity_a94390872de3e19be86ee51484f7cfb05}} 
 \index{Entity@{Entity}!getComponent@{getComponent}}
 \index{getComponent@{getComponent}!Entity@{Entity}}
@@ -214,33 +234,15 @@ template \mbox{\hyperlink{classText}{Text}} \& Entity\+::get\+Component$<$ \mbox
 \begin{DoxyReturn}{Returns}
 T\&\+: reference of the component 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classEntity_acda519f4ac51e07962dfb5cfd68e29b2}\label{classEntity_acda519f4ac51e07962dfb5cfd68e29b2}} 
-\index{Entity@{Entity}!getComponentArrays@{getComponentArrays}}
-\index{getComponentArrays@{getComponentArrays}!Entity@{Entity}}
-\doxysubsubsection{\texorpdfstring{getComponentArrays()}{getComponentArrays()}}
-{\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{classComponents}{Components}}$\ast$, 6$>$ Entity\+::get\+Component\+Arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{classEntity_acda519f4ac51e07962dfb5cfd68e29b2}{get\+Component\+Arrays()}}\+: Get all the components from the entity 
-
-
-\begin{DoxyParams}{Parameters}
-{\em void} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::array$<$\+Components$\ast$, 6$>$\+: array of components 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classEntity_aba0c01a6f7733119e28118a76df5694e}\label{classEntity_aba0c01a6f7733119e28118a76df5694e}} 
+\mbox{\Hypertarget{classEntity_a60fbf308e1c011b5272abbedcf3357d1}\label{classEntity_a60fbf308e1c011b5272abbedcf3357d1}} 
 \index{Entity@{Entity}!getComponentBitset@{getComponentBitset}}
 \index{getComponentBitset@{getComponentBitset}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{getComponentBitset()}{getComponentBitset()}}
-{\footnotesize\ttfamily std\+::bitset$<$6$>$ Entity\+::get\+Component\+Bitset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::bitset$<$ 6 $>$ Entity\+::get\+Component\+Bitset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classEntity_aba0c01a6f7733119e28118a76df5694e}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity 
+\mbox{\hyperlink{classEntity_a60fbf308e1c011b5272abbedcf3357d1}{get\+Component\+Bitset()}}\+: Get all components bitset from the entity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -274,24 +276,6 @@ template std\+::size\+\_\+t Entity\+::get\+Component\+Type\+ID$<$ \mbox{\hyperli
 \begin{DoxyReturn}{Returns}
 std\+::size\+\_\+t\+: id of the component 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classEntity_a7955dd3768b0933bcc4b0f328132d46c}\label{classEntity_a7955dd3768b0933bcc4b0f328132d46c}} 
-\index{Entity@{Entity}!getDrawableComponents@{getDrawableComponents}}
-\index{getDrawableComponents@{getDrawableComponents}!Entity@{Entity}}
-\doxysubsubsection{\texorpdfstring{getDrawableComponents()}{getDrawableComponents()}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classDrawableComponent}{Drawable\+Component}}$\ast$$>$ Entity\+::get\+Drawable\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-\mbox{\hyperlink{classEntity_a7955dd3768b0933bcc4b0f328132d46c}{get\+Drawable\+Components()}}\+: Get all the drawable components from the entity 
-
-
-\begin{DoxyParams}{Parameters}
-{\em void} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::vector$<$\+Drawable\+Component$\ast$$>$\+: drawable\+Components of entity 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classEntity_a403f69eb888da7c5a690b79c658cdf47}\label{classEntity_a403f69eb888da7c5a690b79c658cdf47}} 
 \index{Entity@{Entity}!getName@{getName}}
 \index{getName@{getName}!Entity@{Entity}}
@@ -310,15 +294,15 @@ gen\+Name()\+: Get the name of the entity
 \begin{DoxyReturn}{Returns}
 std\+::string\+: name of the entity 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classEntity_a25cd6bce71c72bd7be549f478810575e}\label{classEntity_a25cd6bce71c72bd7be549f478810575e}} 
-\index{Entity@{Entity}!initEntity@{initEntity}}
-\index{initEntity@{initEntity}!Entity@{Entity}}
-\doxysubsubsection{\texorpdfstring{initEntity()}{initEntity()}}
-{\footnotesize\ttfamily bool Entity\+::init\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classEntity_abb29b0a340f457dc197200b836797fa9}\label{classEntity_abb29b0a340f457dc197200b836797fa9}} 
+\index{Entity@{Entity}!init@{init}}
+\index{init@{init}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Entity\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{classComponents_adb5db757815c1d8b961c069515f8e260}{init()}}\+: Initialize the entity 
+\mbox{\hyperlink{classEntity_abb29b0a340f457dc197200b836797fa9}{init()}}\+: Initialize the entity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -328,6 +312,14 @@ std\+::string\+: name of the entity
 \begin{DoxyReturn}{Returns}
 bool\+: true if the entity is initialized, false otherwise 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{Components}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{World}}, and \mbox{\hyperlink{classEntityManager_ab4a499dc089c5bf16424c72c66d3a9c5}{Entity\+Manager}}.
+
 \mbox{\Hypertarget{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}\label{classEntity_ad9cc6453a56fcefcd2b77dbde895f8d1}} 
 \index{Entity@{Entity}!setName@{setName}}
 \index{setName@{setName}!Entity@{Entity}}
@@ -350,20 +342,17 @@ void
 \index{Entity@{Entity}!update@{update}}
 \index{update@{update}!Entity@{Entity}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Entity\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Entity\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{update()}}\+: Update the component 
+\mbox{\hyperlink{classEntity_acb61198aa85811ee9650f7edb76df369}{update(sf\+::\+Time)}}\+: Update the component \mbox{\hyperlink{classMusic}{Music}} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em time\+Delta} & time elapsed since the last update \\
+{\em time\+Delta} & sf\+::\+Time of the game. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.

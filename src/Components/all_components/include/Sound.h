@@ -8,98 +8,122 @@
 #include "sfml.h"
 
 /**
- * @brief Sound class: Sound is a class that represents the audio properties of a Component.
+ * @brief Sound class: Sound is a class that represents the sound properties of a Component.
  *
- * The Sound class manages the audio representation of a Component using SFML.
+ * The Sound class manages the sound representation of a Component using SFML.
  */
 class Sound : public Components {
 private:
-    sf::SoundBuffer soundBuffer;
-    sf::Sound sound; ///< SFML Sound for playing audio.
-    std::function<void()> deferredSound;
+    sf::Sound sound; /// < SFML Sound for playing sound.
+    std::function<void()> deferredSound; /// < Deferred function for Sound.
 
-    int bit = 2;
+    int bit = 2; /// < Bit of the Sound.
 public:
-    /// @brief Default Sound constructor.
-    /// @param void
-    /// @return void
+    /**
+     * @brief Default Sound constructor.
+     *
+     * Set the default value to "Default".
+     */
     Sound() = default;
 
-    /// @brief Sound constructor with an existing sound buffer. Automatically set the sound.
-    /// @param buffer: SFML SoundBuffer for audio.
-    /// @return void
-    explicit Sound(const sf::SoundBuffer& buffer);
-
-    /// @brief Sound destructor.
-    /// @param void
-    /// @return void
+    /**
+     * @brief Default override Sound destructor.
+     *
+     * Set the default value to "Default".
+     */
     ~Sound() override = default;
 
-    /// @brief loadSoundBuffer(): Load the sound buffer from a file. Automatically set the component sound. /!\ Only supports .wav, .ogg and FLAC files.
-    /// @param filePath: Path to the audio file.
-    /// @return bool: True if the sound buffer has been loaded, false otherwise.
-    bool loadSoundBuffer(const std::string& filePath);
+    /**
+     * @brief getBit(): Get the bit of the Sound.
+     * @return int: The bit of the Sound.
+     */
+    int getBit() override;
 
-    /// @brief setSoundBuffer(): Set the sound buffer with an existing one. Automatically set the component sound.
-    /// @param buffer: SFML SoundBuffer for audio.
-    /// @return bool: True if the sound buffer has been set, false otherwise.
-    bool setSoundBuffer(const sf::SoundBuffer& buffer);
+    /**
+     * @brief update(sf::Time): Update the component Sound
+     * @param timeDelta: sf::Time of the game.
+     */
+    void update(sf::Time timeDelta) override;
 
-    /// @brief getSoundBuffer(): Get the current sound buffer.
-    /// @param void
-    /// @return sf::SoundBuffer: SFML SoundBuffer for audio.
-    const sf::SoundBuffer& getSoundBuffer() const;
+    /**
+     * @brief init(): Initialize the component.
+     * @return bool: true if the component is initialized, false otherwise
+     */
+    bool init() override;
 
-    /// @brief setSound(): Set the sound with an existing one. Automatically set the component sound buffer.
-    /// @param sound: SFML Sound for audio.
-    /// @return bool: True if the sound has been set, false otherwise.
-    bool setSound(const sf::Sound& sound);
+    /**
+     * @brief setSound(const sf::Sound&): Set the sound with an existing one. Automatically set the component sound buffer.
+     * @param sound: SFML Sound for sound.
+     */
+    void setSound(const sf::Sound& sound);
 
-    void setSound(std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, std::string nameSound);
+    /**
+     * @brief setSound(std::map<std::string, std::shared_ptr<sf::SoundBuffer>>, const std::string&):
+     * Initialize the sf::Sound of the class.
+     * @param mapSound: Map of all the sound loaded.
+     * @param nameSound: Name of the sound loaded.
+     */
+    void setSound(std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, const std::string& nameSound);
 
+    /**
+     * @brief setDeferredSound(std::function<void()>): Set the deferred function for Sound.
+     * @param setter: Function that will use Sound.
+     */
     void setDeferredSound(std::function<void()> setter);
 
+    /**
+     * @brief applyDeferredSound(): Apply the deferred function for Sound
+     */
     void applyDeferredSound();
 
-    /// @brief getSound(): Get the current sound.
-    /// @param void
-    /// @return sf::Sound: SFML Sound for audio.
-    const sf::Sound& getSound() const;
+    /**
+     * @brief getSound(): Get the sound.
+     * @return const sf::Sound&: The shared ptr of the sound.
+     */
+    [[nodiscard]] const sf::Sound& getSound() const;
 
-    /// @brief play(): Play the audio.
-    /// @param void
-    /// @return void
+    /**
+     * @brief play(): Play the sound.
+     */
     void play();
 
-    /// @brief pause(): Pause the audio.
-    /// @param void
-    /// @return void
+    /**
+     * @brief pause(): Pause the sound.
+     */
     void pause();
 
-    /// @brief stop(): Stop the audio.
-    /// @param void
-    /// @return void
+    /**
+     * @brief stop(): Stop the sound.
+     */
     void stop();
 
-    /// @brief setLoop(): Set whether the audio should loop or not.
-    /// @param loop: True to enable looping, false to disable.
-    /// @return void
+    /**
+     * @brief setLoop(bool): Set the loop of the sound.
+     * @param loop: True or False.
+     */
     void setLoop(bool loop);
 
-    /// @brief setVolume(): Set the volume of the audio.
-    /// @param volume: Volume level (0 to 100).
-    /// @return void
+    /**
+     * @brief getLoop(): Get if the loop is set to True or False.
+     * @return bool: True or False.
+     */
+    [[nodiscard]] bool getLoop() const;
+
+    /**
+     * @brief setVolume(float): Set the volume of the sound.
+     * @param volume: Float number that represents the volume between 0 and 100 of the sound.
+     */
     void setVolume(float volume);
 
-    /// @brief getVolume(): Get the current volume level.
-    /// @param void
-    /// @return float: Volume level (0 to 100).
-    float getVolume() const;
+    /**
+     * @brief getVolume(): Get the volume of the sound.
+     * @return float: Float number that represents the volume between 0 and 100 of the sound.
+     */
+    [[nodiscard]] float getVolume() const;
 
-    /// @brief isPlaying(): Check if the audio is currently playing.
-    /// @param void
-    /// @return bool: True if the audio is playing, false otherwise.
-    bool isPlaying() const;
-
-    int getBit() const {return bit;}
+    /**
+     * @brief isPlaying(): Check if the sound is currently playing.
+     * @return bool: True if the sound is playing, false otherwise.
+     */
+    [[nodiscard]] bool isPlaying() const;
 };

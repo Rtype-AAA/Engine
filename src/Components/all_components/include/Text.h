@@ -11,70 +11,185 @@
 #include "std.h"
 #include "Color.h"
 #include "DrawableComponent.h"
+#include "ITransform.h"
 
-class Text : public Transform, public DrawableComponent {
+/**
+ * @brief Text class: Text is a class that represents the text in the world.
+ *
+ * The text class manages the text from an Entity using SFML.
+ */
+
+class Text : public Transform, public DrawableComponent, public ITransform {
 private:
-    sf::Text text;
-    sf::Font currentFont;
-    std::string stringText;
-    int size;
-    Color currentColorFill;
-    Color currentColorOutline;
-    std::function<void()> deferredText;
+    sf::Text text; /// < SFML text.
+    sf::Font currentFont; /// < Current SFML Font.
+    std::string stringText; /// < String of the Text.
+    int size{}; /// < Size of the Text.
+    Color currentColorFill; /// < Current Fill Color of the Text.
+    Color currentColorOutline; /// < Current Outline Color of the Text.
+    std::function<void()> deferredText; /// < Deferred function for Text.
 
-    Transform* transform;
+    Transform* transform; /// < Reference of the component Transform.
 
-    int bit = 4;
+    int bit = 4; /// < Bit of the Text.
 public:
+    /**
+     * @brief Default Text constructor.
+     *
+     * Set the default value to "Default" and initialize the transform reference to null.
+     */
     Text() : transform{nullptr} {}
 
-    ~Text() = default;
+    /**
+     * @brief Default override Text destructor.
+     *
+     * Set the default value to "Default".
+     */
+    ~Text() override = default;
 
-    int getBit() const {return bit;}
+    /**
+     * @brief getBit(): Get the bit of the Text.
+     * @return int: The bit of the Text.
+     */
+    int getBit() const;
 
+    /**
+     * @brief draw(): Draw the Text.
+     * @param window: SFML RenderWindow where the Text will be drawn.
+     */
     void draw(sf::RenderWindow& window) const override;
 
+    /**
+     * @brief update(sf::Time): Update the component Text
+     * @param timeDelta: sf::Time of the game.
+     */
     void update(sf::Time deltaTime) override;
 
-    void setText(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, std::string nameFont, std::string newStringText,
-                 int sizeText, Color color);
+    /**
+     * @brief init(): Initialize the component.
+     * @return bool: true if the component is initialized, false otherwise
+     */
+    bool init() override;
 
-    void setText(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, std::string nameFont, std::string newStringText,
-                 int sizeText, Color newColorFill, Color newColorOutline);
+    /**
+     * @brief Sets the text of the component.
+     *
+     * This function sets the Text of the component using the provided font map, the font name,
+     * a string for set the Text, the size for the size of character and fill color for color the text.
+     *
+     * @param mapFont: Map of all the font loaded.
+     * @param nameFont: Name of the font loaded.
+     * @param newStringText: String text for draw.
+     * @param sizeText: Size of the text.
+     * @param fillColor: Color for the text.
+     */
+    void setText(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, const std::string& nameFont, const std::string& newStringText,
+                 int sizeText, Color fillColor);
 
-    void setFont(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, std::string nameFont);
+    /**
+     * @brief Sets the text of the component.
+     *
+     * This function sets the Text of the component using the provided font map, the font name,
+     * a string for set the Text, the size for the size of character, fill color for color the text and outline
+     * color for the border of the text.
+     *
+     * @param mapFont: Map of all the font loaded.
+     * @param nameFont: Name of the font loaded.
+     * @param newStringText: String text for draw.
+     * @param sizeText: Size of the text.
+     * @param fillColor: Color for the text.
+     * @param outlineColor: Color for the border of the text.
+     */
+    void setText(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, const std::string& nameFont, const std::string& newStringText,
+                 int sizeText, Color fillColor, Color outlineColor);
 
-    void setString(std::string nameText);
+    /**
+     * @brief setFont(std::map<std::string, std::shared_ptr<sf::Font>>, const std::string&): Set the font of Text.
+     * @param mapFont: Map of all the font loaded.
+     * @param nameFont: Name of the font loaded.
+     */
+    void setFont(std::map<std::string, std::shared_ptr<sf::Font>> mapFont, const std::string& nameFont);
 
+    /**
+     * @brief setString(const std::string&): Set the string of Text.
+     * @param newStringText: String text for draw.
+     */
+    void setString(const std::string& newStringText);
+
+    /**
+     * @brief setSize(int): Set the size of Text.
+     * @param sizeText: Size of the text.
+     */
     void setSize(int sizeText);
 
-    void setOutlineColor(Color color);
+    /**
+     * @brief setOutlineColor(Color): Set the outline color of Text.
+     * @param outlineColor: Color for the border of the text.
+     */
+    void setOutlineColor(Color outlineColor);
 
-    void setFillColor(Color color);
+    /**
+     * @brief setFillColor(Color): Set the fill color of Text.
+     * @param fillColor: Color for the text.
+     */
+    void setFillColor(Color fillColor);
 
-    void setPosition(Vector2<float> position);
+    /**
+     * @brief getText(): Get the Text.
+     * @return sf::Text: Text for draw.
+     */
+    sf::Text getText() const;
 
-    void setRotation(float rotation);
+    /**
+     * @brief getFont(): Get the Font.
+     * @return sf::Font: Font of the Text.
+     */
+    sf::Font getFont() const;
 
-    void setScale(Vector2<float> scale);
+    /**
+     * @brief getStringText(): Get the string.
+     * @return std::string: String of the text.
+     */
+    std::string getStringText() const;
 
-    sf::Text getText() const {return text;}
+    /**
+     * @brief getSize(): Get the size.
+     * @return int: int number that represents size of the text.
+     */
+    int getSize() const;
 
-    sf::Font getFont() const {return currentFont;}
+    /**
+     * @brief getColorFill(): Get the fill color.
+     * @return Color: Fill color of the text.
+     */
+    Color getColorFill() const;
 
-    std::string getStringText() const {return stringText;}
+    /**
+     * @brief getColorOutline(): Get the outline color.
+     * @return Color: Outline color of the text.
+     */
+    Color getColorOutline() const;
 
-    int getSize() const {return size;}
+    /**
+     * @brief getTransform(): Get the reference to the component Transform.
+     * @return Transform*: Reference of Transform
+     */
+    Transform* getTransform() override;
 
-    Color getColorFill() const {return currentColorFill;}
-
-    Color getColorOutline() const {return currentColorOutline;}
-
-    Transform* getTransform() const {return transform;}
-
+    /**
+     * @brief setTransform(Transform&): Set the reference of the Transform component.
+     * @param newTransform: Reference of Transform.
+     */
     void setTransform(Transform& newTransform);
 
+    /**
+     * @brief setDeferredText(std::function<void()>): Set the deferred text.
+     * @param setter: Function that will set the text.
+     */
     void setDeferredText(std::function<void()> setter);
 
+    /**
+     * @brief applyDeferredText(): Apply the deferred text.
+     */
     void applyDeferredText();
 };

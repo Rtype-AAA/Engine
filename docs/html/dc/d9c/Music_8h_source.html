@@ -79,35 +79,70 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Components.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;std.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d2/d2f/classMusic.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d2f/classMusic.html">Music</a> : <span class="keyword">public</span> <a class="code" href="../../db/d46/classComponents.html">Components</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::shared_ptr&lt;sf::Music&gt; music;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::function&lt;void()&gt; deferredMusic;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> bit = 3;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d2/d2f/classMusic.html">Music</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ~<a class="code" href="../../d2/d2f/classMusic.html">Music</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d2/d2f/classMusic.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d2f/classMusic.html">Music</a> : <span class="keyword">public</span> <a class="code" href="../../db/d46/classComponents.html">Components</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::shared_ptr&lt;sf::Music&gt; music; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::function&lt;void()&gt; deferredMusic; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> setMusic(std::map&lt;std::string, std::shared_ptr&lt;sf::Music&gt;&gt; mapMusic, std::string nameMusic);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> setDeferredMusic(std::function&lt;<span class="keywordtype">void</span>()&gt; setter);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> applyDeferredMusic();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::shared_ptr&lt;sf::Music&gt; getMusic()<span class="keyword"> const </span>{<span class="keywordflow">return</span> music;}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> play();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> play(<span class="keywordtype">int</span> seconds);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> getBit()<span class="keyword"> const </span>{<span class="keywordflow">return</span> bit;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> bit = 3; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d2/d2f/classMusic.html#a47a53d7107b2fcbe41d0a3f892776b4f">   29</a></span>&#160;    <a class="code" href="../../d2/d2f/classMusic.html#a47a53d7107b2fcbe41d0a3f892776b4f">Music</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d2/d2f/classMusic.html#a1ebbc269eb88acd7c472c5c8405d0692">   36</a></span>&#160;    <a class="code" href="../../d2/d2f/classMusic.html#a1ebbc269eb88acd7c472c5c8405d0692">~Music</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> setMusic(std::map&lt;std::string, std::shared_ptr&lt;sf::Music&gt;&gt; mapMusic, std::string nameMusic);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;=======</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad">getBit</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">update</a>(sf::Time timeDelta) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;&gt;&gt;&gt;&gt;&gt;&gt;&gt; a81756f4 ([m] Engine:)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setMusic(std::map&lt;std::string, std::shared_ptr&lt;sf::Music&gt;&gt; mapMusic, <span class="keyword">const</span> std::string&amp; nameMusic);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d2/d2f/classMusic.html#aec23921e6f639b25e9e0b901297e890c">   72</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#aec23921e6f639b25e9e0b901297e890c">setDeferredMusic</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; setter);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a0c932a0ed93182f2a53786c4a7f43f31">applyDeferredMusic</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    [[nodiscard]] std::shared_ptr&lt;sf::Music&gt; <a class="code" href="../../d2/d2f/classMusic.html#a9c468a88aa49c2030265ad6d7c1c609e">getMusic</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a54b941f6f7634d7f99b473c78fe6e4da">play</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a10e5537400b6f018a8c86085751a90cb">pause</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a008211b514c1c89c15399d3384d3fcea">stop</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a234ca5b816dfbb2a9ed6f91d9d51b5bc">setLoop</a>(<span class="keywordtype">bool</span> loop);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="../../d2/d2f/classMusic.html#a017e3ec0801c0130225abdde7282ad72">getLoop</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2f/classMusic.html#a677a406c2e250361425cdc2239b24129">setVolume</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    [[nodiscard]] <span class="keywordtype">float</span> <a class="code" href="../../d2/d2f/classMusic.html#a3712255b94968e4832eba16cf6bf91f0">getVolume</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    [[nodiscard]] sf::SoundSource::Status <a class="code" href="../../d2/d2f/classMusic.html#a5e0ba493b36293f3a00e1cefdd86ef40">getStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
 <div class="ttc" id="aclassComponents_html"><div class="ttname"><a href="../../db/d46/classComponents.html">Components</a></div><div class="ttdoc">Components class: Components is a class that represents a component in the game.</div><div class="ttdef"><b>Definition:</b> Components.h:15</div></div>
-<div class="ttc" id="aclassMusic_html"><div class="ttname"><a href="../../d2/d2f/classMusic.html">Music</a></div><div class="ttdef"><b>Definition:</b> Music.h:11</div></div>
+<div class="ttc" id="aclassComponents_html_a1b10aca0b906d3b0bb93a1cdb38bb0ad"><div class="ttname"><a href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad">Components::getBit</a></div><div class="ttdeci">virtual int getBit()=0</div><div class="ttdoc">getBit(): Get the bitmask of the component</div></div>
+<div class="ttc" id="aclassComponents_html_a7c2c74ad3adfbeb8efc7b3a7a979d353"><div class="ttname"><a href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353">Components::init</a></div><div class="ttdeci">virtual bool init()=0</div><div class="ttdoc">init(): Initialize the component</div></div>
+<div class="ttc" id="aclassComponents_html_ac886b9c5719c5d40ee06812c4c992110"><div class="ttname"><a href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">Components::update</a></div><div class="ttdeci">virtual void update(sf::Time timeDelta)=0</div><div class="ttdoc">update(): Update the component</div></div>
+<div class="ttc" id="aclassMusic_html"><div class="ttname"><a href="../../d2/d2f/classMusic.html">Music</a></div><div class="ttdoc">Music class: Music is a class that represents the music in the world.</div><div class="ttdef"><b>Definition:</b> Music.h:17</div></div>
+<div class="ttc" id="aclassMusic_html_a008211b514c1c89c15399d3384d3fcea"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a008211b514c1c89c15399d3384d3fcea">Music::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">stop(): Stop the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:60</div></div>
+<div class="ttc" id="aclassMusic_html_a017e3ec0801c0130225abdde7282ad72"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a017e3ec0801c0130225abdde7282ad72">Music::getLoop</a></div><div class="ttdeci">bool getLoop() const</div><div class="ttdoc">getLoop(): Get if the loop is set to True or False.</div><div class="ttdef"><b>Definition:</b> Music.cpp:68</div></div>
+<div class="ttc" id="aclassMusic_html_a0c932a0ed93182f2a53786c4a7f43f31"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a0c932a0ed93182f2a53786c4a7f43f31">Music::applyDeferredMusic</a></div><div class="ttdeci">void applyDeferredMusic()</div><div class="ttdoc">applyDeferredMusic(): Apply the deferred function for Music</div><div class="ttdef"><b>Definition:</b> Music.cpp:42</div></div>
+<div class="ttc" id="aclassMusic_html_a10e5537400b6f018a8c86085751a90cb"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a10e5537400b6f018a8c86085751a90cb">Music::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">pause(): Pause the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:56</div></div>
+<div class="ttc" id="aclassMusic_html_a1ebbc269eb88acd7c472c5c8405d0692"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a1ebbc269eb88acd7c472c5c8405d0692">Music::~Music</a></div><div class="ttdeci">~Music() override=default</div><div class="ttdoc">Default override Music destructor.</div></div>
+<div class="ttc" id="aclassMusic_html_a234ca5b816dfbb2a9ed6f91d9d51b5bc"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a234ca5b816dfbb2a9ed6f91d9d51b5bc">Music::setLoop</a></div><div class="ttdeci">void setLoop(bool loop)</div><div class="ttdoc">setLoop(bool): Set the loop of the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:64</div></div>
+<div class="ttc" id="aclassMusic_html_a3712255b94968e4832eba16cf6bf91f0"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a3712255b94968e4832eba16cf6bf91f0">Music::getVolume</a></div><div class="ttdeci">float getVolume() const</div><div class="ttdoc">getVolume(): Get the volume of the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:76</div></div>
+<div class="ttc" id="aclassMusic_html_a47a53d7107b2fcbe41d0a3f892776b4f"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a47a53d7107b2fcbe41d0a3f892776b4f">Music::Music</a></div><div class="ttdeci">Music()=default</div><div class="ttdoc">&lt; Bit of the Music</div></div>
+<div class="ttc" id="aclassMusic_html_a54b941f6f7634d7f99b473c78fe6e4da"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a54b941f6f7634d7f99b473c78fe6e4da">Music::play</a></div><div class="ttdeci">void play()</div><div class="ttdoc">play(): Play the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:52</div></div>
+<div class="ttc" id="aclassMusic_html_a5e0ba493b36293f3a00e1cefdd86ef40"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a5e0ba493b36293f3a00e1cefdd86ef40">Music::getStatus</a></div><div class="ttdeci">sf::SoundSource::Status getStatus() const</div><div class="ttdoc">getStatus(): Get the status of the music. Playing, pause or stop.</div><div class="ttdef"><b>Definition:</b> Music.cpp:80</div></div>
+<div class="ttc" id="aclassMusic_html_a677a406c2e250361425cdc2239b24129"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a677a406c2e250361425cdc2239b24129">Music::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div><div class="ttdoc">setVolume(float): Set the volume of the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:72</div></div>
+<div class="ttc" id="aclassMusic_html_a9c468a88aa49c2030265ad6d7c1c609e"><div class="ttname"><a href="../../d2/d2f/classMusic.html#a9c468a88aa49c2030265ad6d7c1c609e">Music::getMusic</a></div><div class="ttdeci">std::shared_ptr&lt; sf::Music &gt; getMusic() const</div><div class="ttdoc">getMusic(): Get the music.</div><div class="ttdef"><b>Definition:</b> Music.cpp:48</div></div>
+<div class="ttc" id="aclassMusic_html_aec23921e6f639b25e9e0b901297e890c"><div class="ttname"><a href="../../d2/d2f/classMusic.html#aec23921e6f639b25e9e0b901297e890c">Music::setDeferredMusic</a></div><div class="ttdeci">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD void setMusic(std::map&lt; std::string, std::shared_ptr&lt; sf::Music &gt;&gt; mapMusic, std::string nameMusic);=======int getBit() override;void update(sf::Time timeDelta) override;bool init() override;&gt;&gt;&gt;&gt;&gt;&gt; a81756f4([m] Engine:) void setMusic(std void setDeferredMusic(std::function&lt; void()&gt; setter)</div><div class="ttdoc">setMusic(std::map&lt;std::string, std::shared_ptr&lt;sf::Music&gt;&gt;, const std::string&amp;): Initialize the sf::M...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

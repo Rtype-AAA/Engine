@@ -1,4 +1,4 @@
 <map id="Sound" name="Sound">
-<area shape="rect" id="node1" title="Sound class: Sound is a class that represents the audio properties of a Component." alt="" coords="24,80,83,107"/>
+<area shape="rect" id="node1" title="Sound class: Sound is a class that represents the sound properties of a Component." alt="" coords="24,80,83,107"/>
 <area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,5,101,32"/>
 </map>

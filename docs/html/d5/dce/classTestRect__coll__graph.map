@@ -1,7 +1,5 @@
 <map id="TestRect" name="TestRect">
-<area shape="rect" id="node1" title=" " alt="" coords="37,247,111,273"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,157,100,184"/>
-<area shape="rect" id="node3" href="$d7/dc9/classRect.html" title=" " alt="" coords="125,157,223,184"/>
-<area shape="rect" id="node4" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="133,81,215,108"/>
-<area shape="rect" id="node5" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="126,5,222,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="75,95,150,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$d7/dc9/classRect.html" title=" " alt="" coords="125,5,223,32"/>
 </map>

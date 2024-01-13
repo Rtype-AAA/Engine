@@ -1,0 +1,73 @@
+\hypertarget{classITransform}{}\doxysection{ITransform Class Reference}
+\label{classITransform}\index{ITransform@{ITransform}}
+
+
+\mbox{\hyperlink{classITransform}{ITransform}} class\+: \mbox{\hyperlink{classITransform}{ITransform}} is a class that represents an interface of the Component \mbox{\hyperlink{classTransform}{Transform}}.  
+
+
+
+
+{\ttfamily \#include $<$ITransform.\+h$>$}
+
+
+
+Inheritance diagram for ITransform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{d2/d2f/classITransform__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classITransform_af7ca5a4d365930617b2faed27e3f5270}{$\sim$\+ITransform}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Virtual \mbox{\hyperlink{classITransform}{ITransform}} destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTransform}{Transform}} $\ast$ \mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{get\+Transform}} ()=0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{get\+Transform()}}\+: Get the reference of the component \mbox{\hyperlink{classTransform}{Transform}} of the same \mbox{\hyperlink{classEntity}{Entity}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classITransform}{ITransform}} class\+: \mbox{\hyperlink{classITransform}{ITransform}} is a class that represents an interface of the Component \mbox{\hyperlink{classTransform}{Transform}}. 
+
+The \mbox{\hyperlink{classITransform}{ITransform}} interface give to components which need to have a reference to \mbox{\hyperlink{classTransform}{Transform}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classITransform_af7ca5a4d365930617b2faed27e3f5270}\label{classITransform_af7ca5a4d365930617b2faed27e3f5270}} 
+\index{ITransform@{ITransform}!````~ITransform@{$\sim$ITransform}}
+\index{````~ITransform@{$\sim$ITransform}!ITransform@{ITransform}}
+\doxysubsubsection{\texorpdfstring{$\sim$ITransform()}{~ITransform()}}
+{\footnotesize\ttfamily virtual ITransform\+::$\sim$\+ITransform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default Virtual \mbox{\hyperlink{classITransform}{ITransform}} destructor. 
+
+Set the default value to \char`\"{}\+Default\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}\label{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}} 
+\index{ITransform@{ITransform}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!ITransform@{ITransform}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classTransform}{Transform}}$\ast$ ITransform\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{get\+Transform()}}\+: Get the reference of the component \mbox{\hyperlink{classTransform}{Transform}} of the same \mbox{\hyperlink{classEntity}{Entity}} 
+
+Virtual function which get the reference of the \mbox{\hyperlink{classTransform}{Transform}} component from the same \mbox{\hyperlink{classEntity}{Entity}} when a component need to use \mbox{\hyperlink{classTransform}{Transform}}. If \mbox{\hyperlink{classTransform}{Transform}} don\textquotesingle{}t exist \mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{get\+Transform()}} return nullptr.
+
+\begin{DoxyReturn}{Returns}
+Transform$\ast$\+: The reference of \mbox{\hyperlink{classTransform}{Transform}} or nullptr. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classText_a810d119c957a8b46a11463d388b32f4f}{Text}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Components/all\+\_\+components/include/ITransform.\+h\end{DoxyCompactItemize}

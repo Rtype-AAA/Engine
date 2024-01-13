@@ -37,25 +37,32 @@ public:
     /// @param nameEntity: name of the entity
     /// @param newArchetype: archetype of the entity (optional, default = new archetype)
     /// @return void
-    explicit Entity(std::string nameEntity, Archetypes newArchetype = Archetypes()) {
-        name = std::move(nameEntity);
-    }
+    explicit Entity(std::string nameEntity, Archetypes newArchetype = Archetypes());
 
     /// @brief Entity destructor
     /// @param void
     /// @return void
     ~Entity() override = default;
 
+    /// @brief getBit(): Get the bit of the Sprite.
+    /// @param void
+    /// @return int: The bit of the Sprite.
+    int getBit() override;
+
     /// @brief init(): Initialize the entity
     /// @param void
     /// @return bool: true if the entity is initialized, false otherwise
-    bool initEntity();
+    bool init() override;
 
     /// @brief genName(): Get the name of the entity
     /// @param void
     /// @return std::string: name of the entity
     [[nodiscard]] std::string getName() const;
 
+    /**
+     * @brief update(sf::Time): Update the component Music
+     * @param timeDelta: sf::Time of the game.
+     */
     void update(sf::Time deltaTime) override;
 
     /// @brief setName(): Set the name of the entity
@@ -98,37 +105,36 @@ public:
     /// @brief getComponentBitset(): Get all components bitset from the entity
     /// @param void
     /// @return std::bitset<6>: bitset of the components
-    std::bitset<6> getComponentBitset() const {return componentBitset;}
+    [[nodiscard]] std::bitset<6> getComponentBitset() const;
 
     /// @brief getDrawableComponents(): Get all the drawable components from the entity
     /// @param void
-    /// @return std::vector<DrawableComponent*>: drawableComponents of entity
-    std::vector<DrawableComponent*> getDrawableComponents() const {return drawableComponents;}
+    /// @return std::vector<DrawableComponent*>: drawable components of the entity
+    [[nodiscard]] std::vector<DrawableComponent*> getDrawableComponents() const;
 
     /// @brief getComponentArrays(): Get all the components from the entity
     /// @param void
     /// @return std::array<Components*, 6>: array of components
-    std::array<Components*, 6> getComponentArrays() const {return componentArray;}
+    [[nodiscard]] std::array<Components*, 6> getComponentArrays() const;
 };
 
-extern template std::size_t Entity::getComponentTypeID<Transform>();
 extern template Transform& Entity::addComponent<Transform>();
 extern template Transform& Entity::getComponent<Transform>();
+extern template std::size_t Entity::getComponentTypeID<Transform>();
 
 extern template Sprite& Entity::addComponent<Sprite>();
-extern template Sprite& Entity::addComponent<Sprite>(std::string&);
-extern template std::size_t Entity::getComponentTypeID<Sprite>();
 extern template Sprite& Entity::getComponent<Sprite>();
+extern template std::size_t Entity::getComponentTypeID<Sprite>();
 
 extern template Music& Entity::addComponent<Music>();
 extern template Music& Entity::getComponent<Music>();
 extern template std::size_t Entity::getComponentTypeID<Music>();
 
-extern template Sound& Entity::getComponent<Sound>();
 extern template Sound& Entity::addComponent<Sound>();
+extern template Sound& Entity::getComponent<Sound>();
 extern template std::size_t Entity::getComponentTypeID<Sound>();
 
 extern template Text& Entity::addComponent<Text>();
-extern template std::size_t Entity::getComponentTypeID<Text>();
 extern template Text& Entity::getComponent<Text>();
+extern template std::size_t Entity::getComponentTypeID<Text>();
 

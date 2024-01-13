@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['rect_93',['Rect',['../d7/dc9/classRect.html',1,'Rect&lt; T &gt;'],['../d7/dc9/classRect.html#a81a8f4ad1408f24a6c1c836faf0580bb',1,'Rect::Rect()']]],
-  ['rect_3c_20float_20_3e_94',['Rect&lt; float &gt;',['../d7/dc9/classRect.html',1,'']]],
-  ['rendergameengine_95',['renderGameEngine',['../df/d8d/classGameEngine.html#a8c7777c1d0448af49e6af95defa51c0a',1,'GameEngine']]],
-  ['run_96',['run',['../df/d8d/classGameEngine.html#a90c373749cdee50bc071ce8a88db7f1a',1,'GameEngine::run(std::map&lt; std::string, std::unique_ptr&lt; World &gt;&gt; mapWorld, std::map&lt; std::string, std::string &gt; pathRessources, std::string firstScene)'],['../df/d8d/classGameEngine.html#ab01970da2c68fefbf48b98c59d5627ae',1,'GameEngine::run()']]]
+  ['pause_105',['pause',['../d2/d2f/classMusic.html#a10e5537400b6f018a8c86085751a90cb',1,'Music::pause()'],['../df/d49/classSound.html#a65b0f66e9123caed2809da366ac4d377',1,'Sound::pause()']]],
+  ['play_106',['play',['../d2/d2f/classMusic.html#a54b941f6f7634d7f99b473c78fe6e4da',1,'Music::play()'],['../df/d49/classSound.html#aad595b0dc5459e110b53a4e6b2adb0e4',1,'Sound::play()']]]
 ];

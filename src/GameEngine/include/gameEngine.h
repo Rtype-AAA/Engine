@@ -25,10 +25,10 @@ private:
     std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; ///< Map of the textures.
     std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound{}; /// < Map of the sounds.
     std::map<std::string, std::shared_ptr<sf::Music>> mapMusic{}; /// < Map of the musics.
-    std::map<std::string, std::shared_ptr<sf::Font>> mapFont{};
-    World *currentWorld; ///< Current world.
+    std::map<std::string, std::shared_ptr<sf::Font>> mapFont{}; /// < Map of the fonts.
+    World *currentWorld{}; ///< Current world.
 
-    std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
+    std::unique_ptr<sf::RenderWindow> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
     EventEngine event;                                                                   /// < EventEngine class which manages the events.
 
     sf::Clock clock; /// < Clock of the game.
@@ -46,13 +46,13 @@ public:
     /// @param style: Style of the window (sf::Style::Default by default).
     /// @param settings: Settings of the window.
     /// @return void
-    explicit GameEngine(sf::VideoMode mode, std::string type, sf::String title, sf::Uint32 style = sf::Style::Default,
+    GameEngine(sf::VideoMode mode, const sf::String& title, sf::Uint32 style = sf::Style::Default,
                         const sf::ContextSettings &settings = sf::ContextSettings());
 
     /// @brief GameEngine destructor.
     /// @param void
     /// @return void
-    ~GameEngine() = default;
+    ~GameEngine() override = default;
 
     /// @brief run(): Run the game engine (with parameters).
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -60,12 +60,7 @@ public:
     /// @param firstScene: Name of the first scene.
     /// @return void
     void run(std::map<std::string, std::unique_ptr<World>> mapWorld,
-             std::map<std::string, std::string> pathRessources, std::string firstScene);
-
-    /// @brief run(): Run the game engine (without parameters).
-    /// @param void
-    /// @return void
-    void run();
+             const std::map<std::string, std::string>& pathRessources, const std::string& firstScene);
 
     /// @brief renderGameEngine(): Render the game engine.
     /// @param void
@@ -77,20 +72,20 @@ public:
     /// @return void
     void eventGameEngine();
 
-    /// @brief isWindowOpen(): Check if the window is open.
-    /// @param void
-    /// @return bool: True if the window is open, false otherwise.
-    bool isWindowOpen();
-
     /// @brief updateGameEngine(): Update the game engine.
     /// @param void
     /// @return void
     void updateGameEngine();
 
+    /// @brief isWindowOpen(): Check if the window is open.
+    /// @param void
+    /// @return bool: True if the window is open, false otherwise.
+    bool isWindowOpen();
+
     /// @brief getFilesRessources(): Get all the ressources type files in the given directory.
     /// @param pathDirectory: Path of the directory.
     /// @return std::vector<std::string>: Vector of the ressources type files' names.
-    std::vector<std::string> getFilesRessources(std::string pathDirectory);
+    static std::vector<std::string> getFilesRessources(const std::string& pathDirectory);
 
     /// @brief initialize(): Initialize the game engine.
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -98,29 +93,32 @@ public:
     /// @param firstScene: Name of the first scene.
     /// @return void
     void initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                    std::map<std::string, std::string> pathRessources, std::string firstScene);
+                    const std::map<std::string, std::string>& pathRessources, const std::string& firstScene);
 
     /// @brief initializeSpriteFunction(): Initialize the sprites function.
     /// @param void
     /// @return void
-    void initializeSpriteFunction();
+    void initializeSpriteFunction() const;
 
     /// @brief initializeSoundFunction(): Initialize the sound function.
     /// @param void
     /// @return void
-    void initializeSoundFunction();
+    void initializeSoundFunction() const;
 
     /// @brief initializeMusicFunction(): Initialize the music function.
     /// @param void
     /// @return void
-    void initializeMusicFunction();
+    void initializeMusicFunction() const;
 
-    void initializeTextFunction();
+    /// @brief initializeFontFunction(): Initialize the font function.
+    /// @param void
+    /// @return void
+    void initializeTextFunction() const;
 
     /// @brief initializeAllFiles(): Initialize all the ressources files the engine need.
     /// @param void
     /// @return void
-    void initializeAllFiles(std::map<std::string, std::string> pathRessources);
+    void initializeAllFiles(const std::map<std::string, std::string>& pathRessources);
 
     /// @brief initializeTexture(): Initialize the textures with their path.
     /// @param path: Path of the texture.
@@ -137,6 +135,9 @@ public:
     /// @return void
     void initializeMusic(std::string path);
 
+    /// @brief initializeMusic(): Initialize the font with their path.
+    /// @param path: Path of the texture.
+    /// @return void
     void initializeFont(std::string path);
 
     /// @brief initializeWorldMap(): Initialize the world map.
@@ -147,17 +148,12 @@ public:
     /// @brief getWindow(): Get the window.
     /// @param void
     /// @return std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>>: The GameEngine's window
-    const auto &getWindow() { return window; }
-
-    /// @brief setWindow(): Set the window.
-    /// @param void
-    /// @return void
-    void setWindow();
+    sf::RenderWindow &getWindow();
 
     /// @brief getEventEngine(): Get the event engine.
     /// @param void
     /// @return EventEngine&: GameEngine's EventEngine.
-    EventEngine &getEventEngine() { return event; }
+    EventEngine &getEventEngine();
 
     /// @brief setCurrentWorld(): Set GameEngine's current world.
     /// @param world: World to set.
@@ -167,35 +163,56 @@ public:
     /// @brief getCurrentWorld(): Get GameEngine's current world.
     /// @param void
     /// @return World*: GameEngine's current world.
-    World *getCurrentWorld() { return currentWorld; }
+    [[nodiscard]] World* getCurrentWorld() const;
 
     /// @brief addWorld(): Add a world to the world map.
     /// @param nameWorld: Name of the world.
     /// @param world: World to add.
     /// @return World&: The world.
-    World &addWorld(std::string nameWorld, std::unique_ptr<World> world);
+    World &addWorld(const std::string& nameWorld, std::unique_ptr<World> world);
 
     /// @brief getWorld(): Get a world from the world map with its name.
     /// @param nameWorld: Name of the world.
     /// @return World&: GameEngine's world.
-    World &getWorld(std::string nameWorld);
+    World &getWorld(const std::string& nameWorld);
 
     /// @brief getMapTexture(): Get GameEngine's map of the textures.
     /// @param void
     /// @return std::map<std::string, std::shared_ptr<sf::Texture>>: GameEngine's map of the textures.
-    std::map<std::string, std::shared_ptr<sf::Texture>> getMapTexture() const { return mapTexture; }
+    [[nodiscard]] std::map<std::string, std::shared_ptr<sf::Texture>> getMapTexture() const;
 
     /// @brief getWorldMap(): Get GameEngine's map of the worlds.
     /// @param void
     /// @return std::map<std::string, World*>: GameEngine's map of the worlds.
-    std::map<std::string, World *> getWorldMap() const { return worldMap; }
+    [[nodiscard]] std::map<std::string, World *> getWorldMap() const;
 
     /// @brief getMapMusic(): Get GameEngine's map of the music.
     /// @param void
     /// @return std::map<std::string, std::shared_ptr<sf::Music>>: GameEngine's map of the musics.
-    std::map<std::string, std::shared_ptr<sf::Music>> getMapMusic() const {return mapMusic;}
+    [[nodiscard]] std::map<std::string, std::shared_ptr<sf::Music>> getMapMusic() const;
 
-    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> getMapSound() const {return mapSound;}
+    /// @brief getMapSound(): Get GameEngine's map of the sound.
+    /// @param void
+    /// @return std::map<std::string, std::shared_ptr<sf::SoundBuffer>>: GameEngine's map of the musics.
+    [[nodiscard]] std::map<std::string, std::shared_ptr<sf::SoundBuffer>> getMapSound() const;
 
-    std::map<std::string, std::shared_ptr<sf::Font>> getMapFont() const {return mapFont;}
+    /// @brief getMapFont(): Get GameEngine's map of the font.
+    /// @param void
+    /// @return std::map<std::string, std::shared_ptr<sf::Font>>: GameEngine's map of the musics.
+    [[nodiscard]] std::map<std::string, std::shared_ptr<sf::Font>> getMapFont() const;
+
+    /// @brief getClock(): Get GameEngine's clock.
+    /// @param void
+    /// @return sf::Clock: GameEngine's clock.
+    [[nodiscard]] sf::Clock getClock() const;
+
+    /// @brief getDeltaTime(): Get GameEngine's deltaTime.
+    /// @param void
+    /// @return sf::Time: GameEngine's deltaTimes.
+    [[nodiscard]] sf::Time getDeltaTime() const;
+
+    /// @brief setDeltaTime(): Set GameEngine's deltaTime.
+    /// @param newTimeDelta: New deltaTime for GameEngine's deltaTime.
+    /// @return void
+    void setDeltaTime(sf::Time newTimeDelta);
 };

@@ -4,6 +4,42 @@
 
 #include "Color.h"
 
+sf::Uint8 Color::getRed() const {
+    return red;
+}
+
+sf::Uint8 Color::getGreen() const {
+    return green;
+}
+
+sf::Uint8 Color::getBlue() const {
+    return blue;
+}
+
+sf::Uint8 Color::getAlpha() const {
+    return alpha;
+}
+
+void Color::setRed(int newRed) {
+    red = newRed;
+}
+
+void Color::setGreen(int newGreen) {
+    green = newGreen;
+}
+
+void Color::setBlue(int newBlue) {
+    blue = newBlue;
+}
+
+void Color::setAlpha(int newAlpha) {
+    alpha = newAlpha;
+}
+
+Color::operator sf::Color() const {
+    return {red, green, blue, alpha};
+}
+
 Color Color::fromSFMLColor(const sf::Color &sfColor) {
     Color color;
     color.red = sfColor.r;

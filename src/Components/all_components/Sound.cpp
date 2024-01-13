@@ -4,31 +4,22 @@
 
 #include "Sound.h"
 
-Sound::Sound(const sf::SoundBuffer& buffer) : soundBuffer(buffer) {
-    sound.setBuffer(soundBuffer);
+int Sound::getBit() {
+    return bit;
 }
 
-bool Sound::loadSoundBuffer(const std::string& filePath) {
-    if (soundBuffer.loadFromFile(filePath)) {
-        sound.setBuffer(soundBuffer);
-        return true;
-    } else {
-        std::cerr << "Error: Sound file not found" << std::endl;
-        return false;
-    }
+void Sound::update(sf::Time timeDelta) {
 }
 
-bool Sound::setSoundBuffer(const sf::SoundBuffer& buffer) {
-    soundBuffer = buffer;
-    sound.setBuffer(soundBuffer);
+bool Sound::init() {
     return true;
 }
 
-const sf::SoundBuffer& Sound::getSoundBuffer() const {
-    return soundBuffer;
+void Sound::setSound(const sf::Sound& newSound) {
+    sound = newSound;
 }
 
-void Sound::setSound(std::map <std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, std::string nameSound) {
+void Sound::setSound(std::map <std::string, std::shared_ptr<sf::SoundBuffer>> mapSound, const std::string& nameSound) {
     if (!mapSound.empty()) {
         auto it = mapSound.find(nameSound);
         if (it != mapSound.end()) {
@@ -37,10 +28,14 @@ void Sound::setSound(std::map <std::string, std::shared_ptr<sf::SoundBuffer>> ma
     }
 }
 
-bool Sound::setSound(const sf::Sound& sound) {
-    this->sound = sound;
-    this->soundBuffer = *sound.getBuffer();
-    return true;
+void Sound::setDeferredSound(std::function<void()> setter) {
+    deferredSound = std::move(setter);
+}
+
+void Sound::applyDeferredSound() {
+    if (deferredSound) {
+        deferredSound();
+    }
 }
 
 const sf::Sound& Sound::getSound() const {
@@ -63,6 +58,10 @@ void Sound::setLoop(bool loop) {
     sound.setLoop(loop);
 }
 
+bool Sound::getLoop() const {
+    return sound.getLoop();
+}
+
 void Sound::setVolume(float volume) {
     sound.setVolume(volume);
 }
@@ -73,14 +72,4 @@ float Sound::getVolume() const {
 
 bool Sound::isPlaying() const {
     return sound.getStatus() == sf::Sound::Playing;
-}
-
-void Sound::setDeferredSound(std::function<void()> setter) {
-    deferredSound = setter;
-}
-
-void Sound::applyDeferredSound() {
-    if (deferredSound) {
-        deferredSound();
-    }
 }
