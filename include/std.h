@@ -2,8 +2,7 @@
 // Created by thibaultcampagne on 02/01/24.
 //
 
-#ifndef B_CPP_500_LIL_5_2_RTYPE_LOUIS_ANDERRUTHY_STD_H
-#define B_CPP_500_LIL_5_2_RTYPE_LOUIS_ANDERRUTHY_STD_H
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -19,4 +18,3 @@
 #include <variant>
 #include <filesystem>
 
-#endif //B_CPP_500_LIL_5_2_RTYPE_LOUIS_ANDERRUTHY_STD_H

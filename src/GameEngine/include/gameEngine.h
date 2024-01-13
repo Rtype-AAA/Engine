@@ -25,6 +25,7 @@ private:
     std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; ///< Map of the textures.
     std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound{}; /// < Map of the sounds.
     std::map<std::string, std::shared_ptr<sf::Music>> mapMusic{}; /// < Map of the musics.
+    std::map<std::string, std::shared_ptr<sf::Font>> mapFont{};
     World *currentWorld; ///< Current world.
 
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
@@ -114,6 +115,8 @@ public:
     /// @return void
     void initializeMusicFunction();
 
+    void initializeTextFunction();
+
     /// @brief initializeAllFiles(): Initialize all the ressources files the engine need.
     /// @param void
     /// @return void
@@ -133,6 +136,8 @@ public:
     /// @param path: Path of the texture.
     /// @return void
     void initializeMusic(std::string path);
+
+    void initializeFont(std::string path);
 
     /// @brief initializeWorldMap(): Initialize the world map.
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -189,4 +194,8 @@ public:
     /// @param void
     /// @return std::map<std::string, std::shared_ptr<sf::Music>>: GameEngine's map of the musics.
     std::map<std::string, std::shared_ptr<sf::Music>> getMapMusic() const {return mapMusic;}
+
+    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> getMapSound() const {return mapSound;}
+
+    std::map<std::string, std::shared_ptr<sf::Font>> getMapFont() const {return mapFont;}
 };

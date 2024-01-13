@@ -16,15 +16,18 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
     menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                std::map<std::string, std::vector<float>> mapTransform;
-                mapTransform["Position"] = std::vector<float>{0.0f, 0.0f};
-                mapTransform["Scale"] = std::vector<float>{1.0f, 1.0f};
                 gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", false);
             });
     menuWorld->getEntityManager("Music").getEntity("Music").addComponent<Music>()
             .setDeferredMusic([&]() {
                 gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().setMusic(gameEngine.getMapMusic(), "Music.wav");
-                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().playMusic();
+                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().play();
+            });
+    menuWorld->getEntityManager("Text").getEntity("Title").addComponent<Transform>();
+    menuWorld->getEntityManager("Text").getEntity("Title").addComponent<Text>()
+            .setDeferredText([&]() {
+                gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title").getComponent<Text>().setText(
+                        gameEngine.getMapFont(), "font1.ttf", "Nebula Strike", 150, Color::Green);
             });
     return menuWorld;
 }
@@ -65,7 +68,11 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
             });
     level1World->getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setPosition();
-    std::cout << level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().getPosition().getX() << ", " << level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>().getPosition().getY() << std::endl;
+    level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sound>()
+            .setDeferredSound([&]() {
+                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser.flac");
+
+    });
     return level1World;
 }
 
@@ -84,12 +91,12 @@ std::unique_ptr<World> worldLevel2(GameEngine& gameEngine) {
 void event(GameEngine &gameEngine) {
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::A, [&]() {
         gameEngine.setCurrentWorld(&gameEngine.getWorld("Menu"));
-        gameEngine.getCurrentWorld()->getEntityManager("Music").getEntity("Music").getComponent<Music>().playMusic();
+        gameEngine.getCurrentWorld()->getEntityManager("Music").getEntity("Music").getComponent<Music>().play();
     });
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Z, [&]() {
         if (gameEngine.getCurrentWorld()->getNameWorld() == "Menu") {
             gameEngine.getCurrentWorld()->getEntityManager("Music").getEntity(
-                    "Music").getComponent<Music>().stopMusic();
+                    "Music").getComponent<Music>().stop();
         }
         gameEngine.setCurrentWorld(&gameEngine.getWorld("Level1"));
     });
@@ -104,6 +111,11 @@ void event(GameEngine &gameEngine) {
             w->close();
 
         }, gameEngine.getWindow());
+    });
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Space, [&] () {
+        if (gameEngine.getCurrentWorld()->getNameWorld() == "Level1") {
+            gameEngine.getCurrentWorld()->getEntityManager("Player").getEntity("Player1").getComponent<Sound>().play();
+        }
     });
     gameEngine.getEventEngine().addMouseButtonPressed(sf::Mouse::Left, [&]() {
         std::cout << "Clique gauche pressé" << std::endl;
@@ -123,6 +135,7 @@ int main() {
     pathRessources["Texture"] = "src/Ressources/Textures";
     pathRessources["Sounds"] = "src/Ressources/Sounds";
     pathRessources["Musics"] = "src/Ressources/Music";
+    pathRessources["Font"] = "src/Ressources/Font";
     event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
     return 0;
