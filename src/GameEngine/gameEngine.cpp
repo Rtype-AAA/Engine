@@ -27,7 +27,9 @@ void GameEngine::renderGameEngine() {
     window->clear();
     for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
         for (auto const& entity : entityManager.second->getEntityMap()) {
-            entity.second->drawEntity(*window);
+            if (entity.second->getActive()) {
+                entity.second->drawEntity(*window);
+            }
         }
     }
     window->display();
@@ -100,7 +102,10 @@ void GameEngine::eventGameEngine() {
 void GameEngine::updateGameEngine() {
     for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
         for (auto const& entity : entityManager.second->getEntityMap()) {
-            entity.second->update(deltaTime);
+            entity.second->applyDeferredEntity();
+            if (entity.second->getActive()) {
+                entity.second->update(deltaTime);
+            }
         }
     }
 }

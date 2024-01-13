@@ -27,17 +27,21 @@ private:
     std::vector<std::unique_ptr<Components>> components{}; ///< List of components attached to the entity.
     std::bitset<6> componentBitset; ///< Bitset to track enabled components.
     std::array<Components*, 6> componentArray{}; ///< Array of components.
+
+    std::function<void()> deferredEntity{};
+
+    bool active{};
 public:
     /// @brief Default Entity constructor
     /// @param void
     /// @return void
-    Entity() = default;
+    Entity() : active(true) {}
 
     /// @brief Entity constructor
     /// @param nameEntity: name of the entity
     /// @param newArchetype: archetype of the entity (optional, default = new archetype)
     /// @return void
-    explicit Entity(std::string nameEntity, Archetypes newArchetype = Archetypes());
+    explicit Entity(const std::string& nameEntity, Archetypes newArchetype = Archetypes());
 
     /// @brief Entity destructor
     /// @param void
@@ -75,6 +79,11 @@ public:
     /// @return void
     void addDrawable(Components* component);
 
+    /// @brief removeDrawable(): Remove a drawable component to the entity
+    /// @param component: component to remove
+    /// @return void
+    void removeDrawable(Components* component);
+
     /// @brief drawEntity(): Draw the entities
     /// @param window: window where the entities are drawn
     /// @return void
@@ -87,6 +96,12 @@ public:
     /// @return T&: reference of the component
     template<typename T, typename... TArgs>
     T& addComponent(TArgs&&... args);
+
+    /// @brief removeComponent(): Remove a component to the entity
+    /// @tparam T: Type of the component
+    /// @return T&: reference of the component
+    template<typename T>
+    bool removeComponent();
 
     /// @brief getComponent(): Get a component from the entity
     /// @tparam T: Type of the component
@@ -116,25 +131,55 @@ public:
     /// @param void
     /// @return std::array<Components*, 6>: array of components
     [[nodiscard]] std::array<Components*, 6> getComponentArrays() const;
+
+    /**
+     * @brief setActive(bool): Set the value active for using entity or not
+     * @param isActive: True or false;
+     */
+    void setActive(bool isActive);
+
+    /**
+     * @brief getActive(): Get the value active for knowing if entity is using or not.
+     * @return bool: True if the engine use this entity, false otherwise.
+     */
+    [[nodiscard]] bool getActive() const;
+
+    /**
+    * @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
+    * @param setter: Function that will set the entity.
+    */
+    void setDeferredEntity(std::function<void()> setter);
+
+    /**
+    * @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
+    * @param setter: Function that will set the entity.
+    */
+    void applyDeferredEntity();
+
 };
 
 extern template Transform& Entity::addComponent<Transform>();
+extern template bool Entity::removeComponent<Transform>();
 extern template Transform& Entity::getComponent<Transform>();
 extern template std::size_t Entity::getComponentTypeID<Transform>();
 
 extern template Sprite& Entity::addComponent<Sprite>();
+extern template bool Entity::removeComponent<Sprite>();
 extern template Sprite& Entity::getComponent<Sprite>();
 extern template std::size_t Entity::getComponentTypeID<Sprite>();
 
 extern template Music& Entity::addComponent<Music>();
+extern template bool Entity::removeComponent<Music>();
 extern template Music& Entity::getComponent<Music>();
 extern template std::size_t Entity::getComponentTypeID<Music>();
 
 extern template Sound& Entity::addComponent<Sound>();
+extern template bool Entity::removeComponent<Sound>();
 extern template Sound& Entity::getComponent<Sound>();
 extern template std::size_t Entity::getComponentTypeID<Sound>();
 
 extern template Text& Entity::addComponent<Text>();
+extern template bool Entity::removeComponent<Text>();
 extern template Text& Entity::getComponent<Text>();
 extern template std::size_t Entity::getComponentTypeID<Text>();
 
