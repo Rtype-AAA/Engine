@@ -8,6 +8,9 @@
 #include "world.h"
 #include "eventEngine.h"
 #include "Sprite.h"
+#include "Rect.h"
+#include "Sound.h"
+#include "Music.h"
 
 /**
  * @brief GameEngine class: GameEngine is a class that represents the game engine.
@@ -20,10 +23,16 @@ private:
     std::map<std::string, World *> worldMap{}; ///< Map of World classes.
     std::map<std::string, std::unique_ptr<World>> worlds{}; ///< Map of World classes' unique pointers.
     std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; ///< Map of the textures.
+    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound{}; /// < Map of the sounds.
+    std::map<std::string, std::shared_ptr<sf::Music>> mapMusic{}; /// < Map of the musics.
+    std::map<std::string, std::shared_ptr<sf::Font>> mapFont{};
     World *currentWorld; ///< Current world.
 
-    std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; ///< Window of the game. It can be a sf::Window or a sf::RenderWindow.
-    EventEngine event; ///< EventEngine class which manages the events.
+    std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
+    EventEngine event;                                                                   /// < EventEngine class which manages the events.
+
+    sf::Clock clock; /// < Clock of the game.
+    sf::Time deltaTime; /// < Time of the game. Using with the Clock.
 public:
     /// @brief Default GameEngine constructor.
     /// @param void
@@ -78,10 +87,10 @@ public:
     /// @return void
     void updateGameEngine();
 
-    /// @brief getFilesTexture(): Get all the textures files in the given directory.
+    /// @brief getFilesRessources(): Get all the ressources type files in the given directory.
     /// @param pathDirectory: Path of the directory.
-    /// @return std::vector<std::string>: Vector of the textures files' names.
-    std::vector<std::string> getFilesTexture(std::string pathDirectory);
+    /// @return std::vector<std::string>: Vector of the ressources type files' names.
+    std::vector<std::string> getFilesRessources(std::string pathDirectory);
 
     /// @brief initialize(): Initialize the game engine.
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -91,15 +100,44 @@ public:
     void initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
                     std::map<std::string, std::string> pathRessources, std::string firstScene);
 
-    /// @brief initializeSprite(): Initialize the sprites.
+    /// @brief initializeSpriteFunction(): Initialize the sprites function.
     /// @param void
     /// @return void
-    void initializeSprite();
+    void initializeSpriteFunction();
+
+    /// @brief initializeSoundFunction(): Initialize the sound function.
+    /// @param void
+    /// @return void
+    void initializeSoundFunction();
+
+    /// @brief initializeMusicFunction(): Initialize the music function.
+    /// @param void
+    /// @return void
+    void initializeMusicFunction();
+
+    void initializeTextFunction();
+
+    /// @brief initializeAllFiles(): Initialize all the ressources files the engine need.
+    /// @param void
+    /// @return void
+    void initializeAllFiles(std::map<std::string, std::string> pathRessources);
 
     /// @brief initializeTexture(): Initialize the textures with their path.
     /// @param path: Path of the texture.
     /// @return void
     void initializeTexture(std::string path);
+
+    /// @brief initializeSound(): Initialize the sound with their path.
+    /// @param path: Path of the texture.
+    /// @return void
+    void initializeSound(std::string path);
+
+    /// @brief initializeMusic(): Initialize the music with their path.
+    /// @param path: Path of the texture.
+    /// @return void
+    void initializeMusic(std::string path);
+
+    void initializeFont(std::string path);
 
     /// @brief initializeWorldMap(): Initialize the world map.
     /// @param mapWorld: Map of World classes' unique pointers.
@@ -151,4 +189,13 @@ public:
     /// @param void
     /// @return std::map<std::string, World*>: GameEngine's map of the worlds.
     std::map<std::string, World *> getWorldMap() const { return worldMap; }
+
+    /// @brief getMapMusic(): Get GameEngine's map of the music.
+    /// @param void
+    /// @return std::map<std::string, std::shared_ptr<sf::Music>>: GameEngine's map of the musics.
+    std::map<std::string, std::shared_ptr<sf::Music>> getMapMusic() const {return mapMusic;}
+
+    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> getMapSound() const {return mapSound;}
+
+    std::map<std::string, std::shared_ptr<sf::Font>> getMapFont() const {return mapFont;}
 };

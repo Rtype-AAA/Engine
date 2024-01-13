@@ -8,28 +8,24 @@ int Transform::getBit() const {
     return bit;
 }
 
-std::vector<float> Transform::getPositionVector() const {
-    return position;
+void Transform::update(sf::Time deltaTime) {
+    return;
 }
 
-std::vector<float> Transform::getRotationVector() const {
-    return rotation;
+void Transform::setTransform(Vector2<float> newPosition, float newRotation, Vector2<float> newScale) {
+    transform.position = newPosition;
+    transform.rotation = newRotation;
+    transform.scale = newScale;
 }
 
-std::vector<float> Transform::getScaleVector() const {
-    return scale;
+void Transform::setTransformPosition(Vector2<float> newPosition) {
+    transform.position = newPosition;
 }
 
-void Transform::setTransform(const std::map<std::string, std::vector<float>>& mapTransform) {
-    for(const auto& element : mapTransform) {
-        if ((element.first == "Position" or element.first == "position") and element.second.size() == 2) {
-            position = element.second;
-        }
-        if ((element.first == "Rotation" or element.first == "rotation") and element.second.size() == 2) {
-            rotation = element.second;
-        }
-        if ((element.first == "Scale" or element.first == "scale") and element.second.size() == 2) {
-            scale = element.second;
-        }
-    }
+void Transform::setTransformRotation(float newRotation) {
+    transform.rotation = newRotation;
+}
+
+void Transform::setTransformScale(Vector2<float> newScale) {
+    transform.scale = newScale;
 }

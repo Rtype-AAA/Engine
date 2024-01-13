@@ -10,6 +10,10 @@
 #include "Archetypes.h"
 #include "Sprite.h"
 #include "Transform.h"
+#include "Vector2.h"
+#include "Music.h"
+#include "Sound.h"
+#include "Text.h"
 
 /**
  * @brief Entity class: Entity is a class that represents an entity in the game.
@@ -21,8 +25,8 @@ private:
     std::string name{}; ///< Name of the entity
     std::vector<DrawableComponent*> drawableComponents{};
     std::vector<std::unique_ptr<Components>> components{}; ///< List of components attached to the entity.
-    std::bitset<3> componentBitset; ///< Bitset to track enabled components.
-    std::array<Components*, 3> componentArray{}; ///< Array of components.
+    std::bitset<6> componentBitset; ///< Bitset to track enabled components.
+    std::array<Components*, 6> componentArray{}; ///< Array of components.
 public:
     /// @brief Default Entity constructor
     /// @param void
@@ -51,6 +55,8 @@ public:
     /// @param void
     /// @return std::string: name of the entity
     [[nodiscard]] std::string getName() const;
+
+    void update(sf::Time deltaTime) override;
 
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
@@ -91,8 +97,8 @@ public:
 
     /// @brief getComponentBitset(): Get the bitset of the components
     /// @param void
-    /// @return std::bitset<3>: bitset of the components
-    std::bitset<3> getComponentBitset() const {return componentBitset;}
+    /// @return std::bitset<6>: bitset of the components
+    std::bitset<6> getComponentBitset() const {return componentBitset;}
 
     /// @brief getDrawableComponents(): Get the drawable components of the entity
     /// @param void
@@ -101,17 +107,28 @@ public:
 
     /// @brief getComponentArrays(): Get the array of components
     /// @param void
-    /// @return std::array<Components*, 3>: array of components
-    std::array<Components*, 3> getComponentArrays() const {return componentArray;}
+    /// @return std::array<Components*, 6>: array of components
+    std::array<Components*, 6> getComponentArrays() const {return componentArray;}
 };
 
-extern template std::size_t Entity::getComponentTypeID<Sprite>();
 extern template std::size_t Entity::getComponentTypeID<Transform>();
-
 extern template Transform& Entity::addComponent<Transform>();
-extern template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
+extern template Transform& Entity::getComponent<Transform>();
+
 extern template Sprite& Entity::addComponent<Sprite>();
 extern template Sprite& Entity::addComponent<Sprite>(std::string&);
-
-extern template Transform& Entity::getComponent<Transform>();
+extern template std::size_t Entity::getComponentTypeID<Sprite>();
 extern template Sprite& Entity::getComponent<Sprite>();
+
+extern template Music& Entity::addComponent<Music>();
+extern template Music& Entity::getComponent<Music>();
+extern template std::size_t Entity::getComponentTypeID<Music>();
+
+extern template Sound& Entity::getComponent<Sound>();
+extern template Sound& Entity::addComponent<Sound>();
+extern template std::size_t Entity::getComponentTypeID<Sound>();
+
+extern template Text& Entity::addComponent<Text>();
+extern template std::size_t Entity::getComponentTypeID<Text>();
+extern template Text& Entity::getComponent<Text>();
+

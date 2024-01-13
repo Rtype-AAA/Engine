@@ -1,0 +1,18 @@
+digraph "SFML" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c9d62fd513ce19bab3d7ef8db833e3f1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c9d62fd513ce19bab3d7ef8db833e3f1.html"];
+    dir_c9d62fd513ce19bab3d7ef8db833e3f1 [shape=plaintext label="SFML"];
+  dir_6220edb804c346d7105c9140922aa498 [shape=box label="build" fillcolor="white" style="filled" color="red" URL="dir_6220edb804c346d7105c9140922aa498.html"];
+  dir_90bf364362eb09bbcf50e82d4b6151b4 [shape=box label="doc" fillcolor="white" style="filled" URL="dir_90bf364362eb09bbcf50e82d4b6151b4.html"];
+  dir_53075cd786926148482aeaed47a495a3 [shape=box label="examples" fillcolor="white" style="filled" color="red" URL="dir_53075cd786926148482aeaed47a495a3.html"];
+  dir_1b418db46549f82cdaf64a4014eaf7c5 [shape=box label="extlibs" fillcolor="white" style="filled" color="red" URL="dir_1b418db46549f82cdaf64a4014eaf7c5.html"];
+  dir_66c4f0b3361ff6a900e01a4b3c9d5eb7 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_66c4f0b3361ff6a900e01a4b3c9d5eb7.html"];
+  dir_b5c52286940bddf612ed1b96dd4bb040 [shape=box label="src" fillcolor="white" style="filled" color="red" URL="dir_b5c52286940bddf612ed1b96dd4bb040.html"];
+  dir_7ba8297b3c6ea18f549b9ec91f8f32e4 [shape=box label="test" fillcolor="white" style="filled" color="red" URL="dir_7ba8297b3c6ea18f549b9ec91f8f32e4.html"];
+  dir_a5bfc6d5b39874a4018fac46e77467f7 [shape=box label="tools" fillcolor="white" style="filled" color="red" URL="dir_a5bfc6d5b39874a4018fac46e77467f7.html"];
+  }
+  dir_b5c52286940bddf612ed1b96dd4bb040->dir_1b418db46549f82cdaf64a4014eaf7c5 [headlabel="1", labeldistance=1.5 headhref="dir_000069_000078.html"];
+}

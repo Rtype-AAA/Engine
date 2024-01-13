@@ -19,11 +19,17 @@ TEST_F(SpriteTest, ConstructorWithTexturePath) {
 }
 
 TEST_F(SpriteTest, Init) {
-    ASSERT_TRUE(sprite.init());
+    ASSERT_TRUE(sprite.initSprite());
 }
 
 TEST_F(SpriteTest, GetBit) {
     ASSERT_EQ(sprite.getBit(), 1);
+}
+
+TEST_F(SpriteTest, Update) {
+    sf::Time deltaTime;
+
+    ASSERT_NO_THROW(sprite.update(deltaTime));
 }
 
 TEST_F(SpriteTest, CreateSpriteWithTexturePath) {
@@ -108,7 +114,7 @@ TEST_F(SpriteTest, SetSpriteWithAnExistingSprite) {
     ASSERT_EQ(sprite.getSprite().getTexture(), newSprite.getTexture());
 }
 
-TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
+TEST_F(SpriteTest, SetSprite) {
     Sprite spriteComp;
 
     std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture;
@@ -121,11 +127,7 @@ TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
     sf::Sprite testSprite;
     testSprite.setTexture(testTexture);
 
-    std::map<std::string, std::vector<float>> mapTransform;
-    mapTransform["Position"] = {10.0f, 20.0f};
-    mapTransform["Scale"] = {2.0f, 2.0f};
-
-    spriteComp.setSprite(mapTexture, "TestTexture", mapTransform);
+    spriteComp.setSprite(mapTexture, "TestTexture");
 
     ASSERT_TRUE(spriteComp.getSprite().getTexture() != nullptr);
 
@@ -135,11 +137,97 @@ TEST_F(SpriteTest, SetSpriteWithMapTextureTextureNameAndMapTransform) {
     ASSERT_TRUE(testTextureSize > 0);
     ASSERT_EQ(testTextureSize, spriteCompTextureSize);
 
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 0.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 1.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 1.0f);
+}
+
+TEST_F(SpriteTest, SetTransformSpriteWithPositionRotationAndScale) {
+    Sprite spriteComp;
+
+    spriteComp.setTransformSprite(Vector2<float>(10.0f, 20.0f), 30.0f, Vector2<float>(2.0f, 2.0f));
+
     ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 10.0f);
     ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 20.0f);
 
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 30.0f);
+
     ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 2.0f);
     ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 2.0f);
+}
+
+TEST_F(SpriteTest, SetPositionWithPosition) {
+    Sprite spriteComp;
+
+    spriteComp.setPosition(Vector2<float>(10.0f, 20.0f));
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 10.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 20.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 1.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 1.0f);
+
+    spriteComp.setPosition(Vector2<float>(30.0f, 40.0f));
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 30.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 40.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 1.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 1.0f);
+}
+
+TEST_F(SpriteTest, SetRotationWithRotation) {
+    Sprite spriteComp;
+
+    spriteComp.setRotation(30.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 0.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 30.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 1.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 1.0f);
+
+    spriteComp.setRotation(40.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 0.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 40.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 1.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 1.0f);
+}
+
+TEST_F(SpriteTest, SetScaleWithScale) {
+    Sprite spriteComp;
+
+    spriteComp.setScale(Vector2<float>(2.0f, 2.0f));
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 0.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 2.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 2.0f);
+
+    spriteComp.setScale(Vector2<float>(3.0f, 3.0f));
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().x, 0.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getPosition().y, 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getRotation(), 0.0f);
+
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().x, 3.0f);
+    ASSERT_FLOAT_EQ(spriteComp.getSprite().getScale().y, 3.0f);
 }
 
 TEST_F(SpriteTest, SetTextureWithTexturePath) {
@@ -184,4 +272,17 @@ TEST_F(SpriteTest, SetAndApplyDefferedSprite) {
     std::string output = testing::internal::GetCapturedStdout();
 
     ASSERT_THAT(output, ::testing::HasSubstr("Hello world"));
+}
+
+TEST_F(SpriteTest, GetBounds) {
+    Sprite sprite("tests/assets/red.png");
+
+    Rect<float> rect = sprite.getBounds();
+
+    sf::Sprite sfSprite = sprite.getSprite();
+
+    ASSERT_EQ(rect.getLeft(), sfSprite.getGlobalBounds().left);
+    ASSERT_EQ(rect.getTop(), sfSprite.getGlobalBounds().top);
+    ASSERT_EQ(rect.getWidth(), sfSprite.getGlobalBounds().width);
+    ASSERT_EQ(rect.getHeight(), sfSprite.getGlobalBounds().height);
 }

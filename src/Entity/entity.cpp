@@ -12,6 +12,14 @@ void Entity::setName(std::string newName) {
     name = std::move(newName);
 }
 
+void Entity::update(sf::Time deltaTime) {
+    for (size_t i = 0; i < componentBitset.size(); i++) {
+        if (componentBitset.test(i)) {
+            componentArray[i]->update(deltaTime);
+        }
+    }
+}
+
 bool Entity::initEntity() {
     for (int i = 0; i < componentBitset.size(); i++) {
         componentBitset[i] = false;
@@ -38,6 +46,15 @@ T& Entity::addComponent(TArgs&&... args) {
     if (!newComponent->init()) {
         throw std::runtime_error("Echec de l'initialisation de Component");
     }
+    if constexpr (std::is_same_v<T, Sprite>) {
+        if (this->getComponentBitset().test(0)) {
+            newComponent->setTransform(this->getComponent<Transform>());
+        }
+    } else if constexpr (std::is_same_v<T,Text>) {
+        if (this->getComponentBitset().test(0)) {
+            newComponent->setTransform(this->getComponent<Transform>());
+        }
+    }
     T* comp = newComponent.get();
     addDrawable(comp);
     components.emplace_back(std::move(newComponent));
@@ -59,13 +76,23 @@ std::size_t Entity::getComponentTypeID() noexcept {
     return typeID;
 }
 
-template std::size_t Entity::getComponentTypeID<Sprite>();
 template std::size_t Entity::getComponentTypeID<Transform>();
-
 template Transform& Entity::addComponent<Transform>();
-template Transform& Entity::addComponent<Transform>(std::map<std::string, std::vector<float>>&);
-template Sprite& Entity::addComponent<Sprite>();
-template Sprite& Entity::addComponent<Sprite>(std::string&);
-
 template Transform& Entity::getComponent<Transform>();
+
+template Sprite& Entity::addComponent<Sprite>();
+template std::size_t Entity::getComponentTypeID<Sprite>();
+template Sprite& Entity::addComponent<Sprite>(std::string&);
 template Sprite& Entity::getComponent<Sprite>();
+
+template Music& Entity::addComponent<Music>();
+template std::size_t Entity::getComponentTypeID<Music>();
+template Music& Entity::getComponent<Music>();
+
+template Sound& Entity::addComponent<Sound>();
+template std::size_t Entity::getComponentTypeID<Sound>();
+template Sound& Entity::getComponent<Sound>();
+
+template Text& Entity::addComponent<Text>();
+template std::size_t Entity::getComponentTypeID<Text>();
+template Text& Entity::getComponent<Text>();
