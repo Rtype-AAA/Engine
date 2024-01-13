@@ -4,8 +4,18 @@
 
 #include "entity.h"
 
-Entity::Entity(std::string nameEntity, Archetypes newArchetype) {
-    name = std::move(nameEntity);
+void Entity::setDeferredEntity(std::function<void()> setter) {
+    deferredEntity = std::move(setter);
+}
+
+void Entity::applyDeferredEntity() {
+    if (deferredEntity) {
+        deferredEntity();
+    }
+}
+
+Entity::Entity(const std::string& nameEntity, Archetypes newArchetype) : active(true) {
+    name = nameEntity;
 }
 
 bool Entity::init() {
@@ -38,8 +48,20 @@ void Entity::addDrawable(Components *component) {
     }
 }
 
+void Entity::removeDrawable(Components *component) {
+    auto *newDrawableComponent = dynamic_cast<DrawableComponent*>(component);
+    if (newDrawableComponent) {
+        for (auto it = drawableComponents.begin(); it != drawableComponents.end(); it++) {
+            if (*it == newDrawableComponent) {
+                drawableComponents.erase(it);
+                break;
+            }
+        }
+    }
+}
+
 void Entity::drawEntity(sf::RenderWindow& window) {
-    for (const auto& component: drawableComponents) {
+    for (const auto &component: drawableComponents) {
         component->draw(window);
     }
 }
@@ -64,15 +86,40 @@ T& Entity::addComponent(TArgs&&... args) {
 }
 
 template<typename T>
+bool Entity::removeComponent() {
+    int bit = getComponentTypeID<T>();
+
+    if (this->getComponentBitset().test(bit)) {
+        for (auto it = components.begin(); it != components.end(); it++) {
+            if ((*it)->getBit() == bit) {
+                removeDrawable((*it).get());
+                componentBitset[bit] = false;
+                componentArray[bit] = nullptr;
+                components.erase(it);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+template<typename T>
 T& Entity::getComponent() {
     auto ptr = componentArray[getComponentTypeID<T>()];
-    return *static_cast<T*>(ptr);
+    if (ptr == nullptr) {
+        throw std::runtime_error("The component don't exist, probably removed or not added");
+    }
+
+    T* castedPtr = dynamic_cast<T*>(ptr);
+    if (castedPtr == nullptr) {
+        throw std::runtime_error("Component type mismatch");
+    }
+    return *castedPtr;
 }
 
 template<typename T>
 std::size_t Entity::getComponentTypeID() noexcept {
-    std::unique_ptr<T> comp = std::make_unique<T>();
-    static const std::size_t typeID = comp->getBit();
+    static const std::size_t typeID = std::make_unique<T>()->getBit();
     return typeID;
 }
 
@@ -92,22 +139,39 @@ int Entity::getBit() {
     return 0;
 }
 
+void Entity::setActive(bool isActive) {
+    if (isActive) {
+        active = true;
+    } else {
+        active = false;
+    }
+}
+
+bool Entity::getActive() const {
+    return active;
+}
+
 template Transform& Entity::addComponent<Transform>();
+template bool Entity::removeComponent<Transform>();
 template Transform& Entity::getComponent<Transform>();
 template std::size_t Entity::getComponentTypeID<Transform>();
 
 template Sprite& Entity::addComponent<Sprite>();
+template bool Entity::removeComponent<Sprite>();
 template Sprite& Entity::getComponent<Sprite>();
 template std::size_t Entity::getComponentTypeID<Sprite>();
 
 template Music& Entity::addComponent<Music>();
+template bool Entity::removeComponent<Music>();
 template Music& Entity::getComponent<Music>();
 template std::size_t Entity::getComponentTypeID<Music>();
 
 template Sound& Entity::addComponent<Sound>();
+template bool Entity::removeComponent<Sound>();
 template Sound& Entity::getComponent<Sound>();
 template std::size_t Entity::getComponentTypeID<Sound>();
 
 template Text& Entity::addComponent<Text>();
+template bool Entity::removeComponent<Text>();
 template Text& Entity::getComponent<Text>();
 template std::size_t Entity::getComponentTypeID<Text>();

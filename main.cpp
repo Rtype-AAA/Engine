@@ -29,11 +29,6 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
                 gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title").getComponent<Text>().setText(
                         gameEngine.getMapFont(), "font1.ttf", "Nebula Strike", 150, Color::Green);
             });
-    menuWorld->getEntityManager("Menu").getEntity("Background").addComponent<Sound>()
-            .setDeferredSound([&]() {
-                gameEngine.getWorld("Menu").getEntityManager("Menu").getEntity("Background").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser.flac");
-
-            });
     return menuWorld;
 }
 
@@ -119,7 +114,28 @@ void event(GameEngine &gameEngine) {
         gameEngine.getWindow().close();
     });
 
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::R, [&]() {
+        if (gameEngine.getCurrentWorld()->getNameWorld() == "Menu") {
+            Entity& title = gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title");
+            if (title.getComponentBitset().test(title.getComponentTypeID<Text>())) {
+                title.removeComponent<Text>();
+            }
+            gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").setActive(true);
+        }
+    });
 
+    gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::T, [&]() {
+        if (gameEngine.getCurrentWorld()->getNameWorld() == "Menu") {
+            Entity& title = gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title");
+            if (!title.getComponentBitset().test(title.getComponentTypeID<Text>())) {
+                gameEngine.getWorld("Menu").getEntityManager("Text").getEntity("Title").addComponent<Text>();
+                gameEngine.getWorld("Menu").getEntityManager("Text").getEntity(
+                                    "Title").getComponent<Text>().setText(
+                                    gameEngine.getMapFont(), "font1.ttf", "Nebula Strike", 150, Color::Green);
+            }
+            gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").setActive(false);
+        }
+    });
 
     gameEngine.getEventEngine().addKeyPressed(sf::Keyboard::Z, [&]() {
         auto &transform = gameEngine.getWorld("Level1").getEntityManager("Player").getEntity(

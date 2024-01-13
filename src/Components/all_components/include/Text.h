@@ -51,7 +51,7 @@ public:
      * @brief getBit(): Get the bit of the Text.
      * @return int: The bit of the Text.
      */
-    int getBit() const;
+    int getBit() override;
 
     /**
      * @brief draw(): Draw the Text.

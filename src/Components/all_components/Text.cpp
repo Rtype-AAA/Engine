@@ -4,7 +4,7 @@
 
 #include "Text.h"
 
-int Text::getBit() const {
+int Text::getBit() {
     return bit;
 }
 

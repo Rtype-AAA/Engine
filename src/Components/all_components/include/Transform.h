@@ -94,12 +94,12 @@ public:
     /// @return void
     void setScale(Vector2<float> newScale);
 
-    /// @brief setDeferredSprite(): Set the deferred sprite.
-    /// @param setter: Function that will set the sprite.
+    /// @brief setDeferredTransform(): Set the deferred transform.
+    /// @param setter: Function that will set the transform.
     /// @return void
     void setDeferredTransform(const std::function<void()>& setter);
 
-    /// @brief applyDeferredSprite(): Apply the deferred sprite.
+    /// @brief applyDeferredTransform(): Apply the deferred transform.
     /// @param void
     /// @return void
     void applyDeferredTransform();
