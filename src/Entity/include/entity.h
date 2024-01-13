@@ -28,9 +28,9 @@ private:
     std::bitset<6> componentBitset; ///< Bitset to track enabled components.
     std::array<Components*, 6> componentArray{}; ///< Array of components.
 
-    std::function<void()> deferredEntity{};
+    std::function<void()> deferredEntity{}; ///< Function that will be applied to the entity when ApplyDeferredEntity() is called.
 
-    bool active{};
+    bool active{}; ///< True if the engine use this entity, false otherwise.
 public:
     /// @brief Default Entity constructor
     /// @param void
@@ -63,16 +63,15 @@ public:
     /// @return std::string: name of the entity
     [[nodiscard]] std::string getName() const;
 
-    /**
-     * @brief update(sf::Time): Update the component Music
-     * @param timeDelta: sf::Time of the game.
-     */
-    void update(sf::Time deltaTime) override;
-
     /// @brief setName(): Set the name of the entity
     /// @param newName: new name of the entity
     /// @return void
     void setName(std::string newName);
+
+    /// @brief update(sf::Time): Update the component Music
+    /// @param timeDelta: sf::Time of the game.
+    /// @return void
+    void update(sf::Time deltaTime) override;
 
     /// @brief addDrawable(): Add a drawable component to the entity
     /// @param component: component to add
@@ -132,28 +131,24 @@ public:
     /// @return std::array<Components*, 6>: array of components
     [[nodiscard]] std::array<Components*, 6> getComponentArrays() const;
 
-    /**
-     * @brief setActive(bool): Set the value active for using entity or not
-     * @param isActive: True or false;
-     */
+    /// @brief setActive(bool): Set the value active for using entity or not
+    /// @param isActive: True or false;
+    /// @return void
     void setActive(bool isActive);
 
-    /**
-     * @brief getActive(): Get the value active for knowing if entity is using or not.
-     * @return bool: True if the engine use this entity, false otherwise.
-     */
+    /// @brief getActive(): Get the value active for knowing if entity is using or not.
+    /// @param void
+    /// @return bool: True if the engine use this entity, false otherwise.
     [[nodiscard]] bool getActive() const;
 
-    /**
-    * @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
-    * @param setter: Function that will set the entity.
-    */
+    /// @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
+    /// @param setter: Function that will set the entity.
+    /// @return void
     void setDeferredEntity(std::function<void()> setter);
 
-    /**
-    * @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
-    * @param setter: Function that will set the entity.
-    */
+    /// @brief setDeferredEntity(std::function<void()>): Set the deferred entity.
+    /// @param setter: Function that will set the entity.
+    /// @return void
     void applyDeferredEntity();
 
 };
