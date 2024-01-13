@@ -77,6 +77,10 @@ $(function() {
 Inheritance diagram for EventEngine:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/dc8/classEventEngine__inherit__graph.png" border="0" usemap="#aEventEngine_inherit__map" alt="Inheritance graph"/></div>
+<map name="aEventEngine_inherit__map" id="aEventEngine_inherit__map">
+<area shape="rect" title="EventEngine class: EventEngine is a class that represents the event engine of the game." alt="" coords="6,5,102,32"/>
+<area shape="rect" href="../../df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="5,80,103,107"/>
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -96,9 +100,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1de358e7993ca5bffd152a2392faa051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#a1de358e7993ca5bffd152a2392faa051">addKeyPressed</a> (sf::Keyboard::Key keyboard, std::function&lt; void()&gt; function)</td></tr>
 <tr class="memdesc:a1de358e7993ca5bffd152a2392faa051"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d2e/classEventEngine.html#a1de358e7993ca5bffd152a2392faa051" title="addKeyPressed(): Add a key pressed to the map.">addKeyPressed()</a>: Add a key pressed to the map.  <a href="../../d4/d2e/classEventEngine.html#a1de358e7993ca5bffd152a2392faa051">More...</a><br /></td></tr>
 <tr class="separator:a1de358e7993ca5bffd152a2392faa051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4706b7ee2e76cf08ef9e6c637a1b00ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#a4706b7ee2e76cf08ef9e6c637a1b00ba">addMouseButtonPressed</a> (sf::Mouse::Button mouse, std::function&lt; void()&gt; function)</td></tr>
+<tr class="memdesc:a4706b7ee2e76cf08ef9e6c637a1b00ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d2e/classEventEngine.html#a4706b7ee2e76cf08ef9e6c637a1b00ba" title="addMouseButtonPressed(): Add a mouse button pressed to the map.">addMouseButtonPressed()</a>: Add a mouse button pressed to the map.  <a href="../../d4/d2e/classEventEngine.html#a4706b7ee2e76cf08ef9e6c637a1b00ba">More...</a><br /></td></tr>
+<tr class="separator:a4706b7ee2e76cf08ef9e6c637a1b00ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65d9eb31c1b08aef21854f07dc9291f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#ac65d9eb31c1b08aef21854f07dc9291f">addMouseMoved</a> (std::string nameEntity, std::function&lt; void()&gt; function)</td></tr>
+<tr class="memdesc:ac65d9eb31c1b08aef21854f07dc9291f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d2e/classEventEngine.html#ac65d9eb31c1b08aef21854f07dc9291f" title="addMouseMoved(): Add a mouse moved to the map.">addMouseMoved()</a>: Add a mouse moved to the map.  <a href="../../d4/d2e/classEventEngine.html#ac65d9eb31c1b08aef21854f07dc9291f">More...</a><br /></td></tr>
+<tr class="separator:ac65d9eb31c1b08aef21854f07dc9291f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c6fc7e5f83495867372a722bbe08c9"><td class="memItemLeft" align="right" valign="top">std::map&lt; sf::Keyboard::Key, std::function&lt; void()&gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#ae2c6fc7e5f83495867372a722bbe08c9">getKeyPressedMap</a> ()</td></tr>
 <tr class="memdesc:ae2c6fc7e5f83495867372a722bbe08c9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d2e/classEventEngine.html#ae2c6fc7e5f83495867372a722bbe08c9" title="getKeyPressedMap(): Get the map of the key pressed.">getKeyPressedMap()</a>: Get the map of the key pressed.  <a href="../../d4/d2e/classEventEngine.html#ae2c6fc7e5f83495867372a722bbe08c9">More...</a><br /></td></tr>
 <tr class="separator:ae2c6fc7e5f83495867372a722bbe08c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd99985a6946079ed9d4591364db40c"><td class="memItemLeft" align="right" valign="top">std::map&lt; sf::Mouse::Button, std::function&lt; void()&gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#abbd99985a6946079ed9d4591364db40c">getMouseButtonPressedMap</a> ()</td></tr>
+<tr class="memdesc:abbd99985a6946079ed9d4591364db40c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d2e/classEventEngine.html#abbd99985a6946079ed9d4591364db40c" title="getMouseButtonPressedMap(): Get the map of the mouse button pressed.">getMouseButtonPressedMap()</a>: Get the map of the mouse button pressed.  <a href="../../d4/d2e/classEventEngine.html#abbd99985a6946079ed9d4591364db40c">More...</a><br /></td></tr>
+<tr class="separator:abbd99985a6946079ed9d4591364db40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7039d01e2ffdc0780a2757faf4683cd9"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::function&lt; void()&gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2e/classEventEngine.html#a7039d01e2ffdc0780a2757faf4683cd9">getMouseMovedMap</a> ()</td></tr>
+<tr class="memdesc:a7039d01e2ffdc0780a2757faf4683cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">getMouseMovedPressedMap(): Get the map of the key pressed.  <a href="../../d4/d2e/classEventEngine.html#a7039d01e2ffdc0780a2757faf4683cd9">More...</a><br /></td></tr>
+<tr class="separator:a7039d01e2ffdc0780a2757faf4683cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d4/d2e/classEventEngine.html" title="EventEngine class: EventEngine is a class that represents the event engine of the game.">EventEngine</a> class: <a class="el" href="../../d4/d2e/classEventEngine.html" title="EventEngine class: EventEngine is a class that represents the event engine of the game.">EventEngine</a> is a class that represents the event engine of the game. </p>
@@ -211,6 +227,82 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4706b7ee2e76cf08ef9e6c637a1b00ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4706b7ee2e76cf08ef9e6c637a1b00ba">&#9670;&nbsp;</a></span>addMouseButtonPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EventEngine::addMouseButtonPressed </td>
+          <td>(</td>
+          <td class="paramtype">sf::Mouse::Button&#160;</td>
+          <td class="paramname"><em>mouse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/d2e/classEventEngine.html#a4706b7ee2e76cf08ef9e6c637a1b00ba" title="addMouseButtonPressed(): Add a mouse button pressed to the map.">addMouseButtonPressed()</a>: Add a mouse button pressed to the map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouse</td><td>SFML Mouse::Button of the mouse button pressed. </td></tr>
+    <tr><td class="paramname">function</td><td>Function to execute when the mouse button is pressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ac65d9eb31c1b08aef21854f07dc9291f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65d9eb31c1b08aef21854f07dc9291f">&#9670;&nbsp;</a></span>addMouseMoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EventEngine::addMouseMoved </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nameEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/d2e/classEventEngine.html#ac65d9eb31c1b08aef21854f07dc9291f" title="addMouseMoved(): Add a mouse moved to the map.">addMouseMoved()</a>: Add a mouse moved to the map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nameEntity</td><td>: Name of the <a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> you want. </td></tr>
+    <tr><td class="paramname">function</td><td>Function to execute when the mouse moved on entity. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="a5250100318fb566404de9e34682e1c0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5250100318fb566404de9e34682e1c0e">&#9670;&nbsp;</a></span>getEvent()</h2>
 
@@ -276,6 +368,74 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::map&lt;sf::Keyboard::Key, std::function&lt;void()&gt;&gt;: The map of the key pressed. </dd></dl>
+
+</div>
+</div>
+<a id="abbd99985a6946079ed9d4591364db40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd99985a6946079ed9d4591364db40c">&#9670;&nbsp;</a></span>getMouseButtonPressedMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;sf::Mouse::Button, std::function&lt;void()&gt; &gt;&amp; EventEngine::getMouseButtonPressedMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/d2e/classEventEngine.html#abbd99985a6946079ed9d4591364db40c" title="getMouseButtonPressedMap(): Get the map of the mouse button pressed.">getMouseButtonPressedMap()</a>: Get the map of the mouse button pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::map&lt;sf::Mouse::Button, std::function&lt;void()&gt;&gt;: The map of the mouse button pressed. </dd></dl>
+
+</div>
+</div>
+<a id="a7039d01e2ffdc0780a2757faf4683cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7039d01e2ffdc0780a2757faf4683cd9">&#9670;&nbsp;</a></span>getMouseMovedMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::function&lt;void()&gt; &gt;&amp; EventEngine::getMouseMovedMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>getMouseMovedPressedMap(): Get the map of the key pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::map&lt;std::string, std::function&lt;void()&gt;&gt;: The map of the mouse moved. </dd></dl>
 
 </div>
 </div>

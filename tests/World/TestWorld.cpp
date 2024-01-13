@@ -85,6 +85,6 @@ TEST_F(TestWorld, GetEntityManagerMap) {
     EXPECT_EQ(name2, (++map2.begin())->first);
 }
 
-TEST_F(TestWorld, Init) {
+TEST_F(TestWorld, InitWorld) {
     EXPECT_TRUE(world.initWorld());
 }

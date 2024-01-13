@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['init_46',['init',['../d4/d2e/classEventEngine.html#ab6021ece4dc8205712e42e460167a7a2',1,'EventEngine']]],
-  ['initentity_47',['initEntity',['../da/d61/classEntity.html#a25cd6bce71c72bd7be549f478810575e',1,'Entity']]],
-  ['initialize_48',['initialize',['../df/d8d/classGameEngine.html#af7038136db2a69b4559248482e1512a9',1,'GameEngine']]],
-  ['initializesprite_49',['initializeSprite',['../df/d8d/classGameEngine.html#aa6b038f3d98e29aef8b41251547410e3',1,'GameEngine']]],
-  ['initializetexture_50',['initializeTexture',['../df/d8d/classGameEngine.html#a9b2840ee507b69ff57bfa88d25a41091',1,'GameEngine']]],
-  ['initializeworldmap_51',['initializeWorldMap',['../df/d8d/classGameEngine.html#a53fbb770fc5a0fe4dc4a14785a2fc345',1,'GameEngine']]],
-  ['initsprite_52',['initSprite',['../d1/d6d/classSprite.html#a19e264fab822aad5a8470dd697856249',1,'Sprite']]],
-  ['initworld_53',['initWorld',['../d6/d39/classWorld.html#af2d4cecc96107919448ab20d61708737',1,'World']]],
-  ['istextureloaded_54',['isTextureLoaded',['../d1/d6d/classSprite.html#a01f064350ee77d4a2fb0b55de2a0e961',1,'Sprite']]],
-  ['iswindowopen_55',['isWindowOpen',['../df/d8d/classGameEngine.html#a05f319897694a1ab0d732acc4beb6f93',1,'GameEngine']]]
+  ['init_67',['init',['../db/daf/classTransform.html#a0beb2ae1b3f4331e979aa8c5287f904d',1,'Transform::init()'],['../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260',1,'Components::init()'],['../d4/d2e/classEventEngine.html#ab6021ece4dc8205712e42e460167a7a2',1,'EventEngine::init()']]],
+  ['initentity_68',['initEntity',['../da/d61/classEntity.html#a25cd6bce71c72bd7be549f478810575e',1,'Entity']]],
+  ['initentitymanager_69',['initEntityManager',['../dd/d5f/classEntityManager.html#a659e9a568099b5abbb15694d7a7514e3',1,'EntityManager']]],
+  ['initialize_70',['initialize',['../df/d8d/classGameEngine.html#af7038136db2a69b4559248482e1512a9',1,'GameEngine']]],
+  ['initializesprite_71',['initializeSprite',['../df/d8d/classGameEngine.html#aa6b038f3d98e29aef8b41251547410e3',1,'GameEngine']]],
+  ['initializetexture_72',['initializeTexture',['../df/d8d/classGameEngine.html#a9b2840ee507b69ff57bfa88d25a41091',1,'GameEngine']]],
+  ['initializeworldmap_73',['initializeWorldMap',['../df/d8d/classGameEngine.html#a53fbb770fc5a0fe4dc4a14785a2fc345',1,'GameEngine']]],
+  ['initsprite_74',['initSprite',['../d1/d6d/classSprite.html#a19e264fab822aad5a8470dd697856249',1,'Sprite']]],
+  ['initworld_75',['initWorld',['../d6/d39/classWorld.html#af2d4cecc96107919448ab20d61708737',1,'World']]],
+  ['istextureloaded_76',['isTextureLoaded',['../d1/d6d/classSprite.html#a01f064350ee77d4a2fb0b55de2a0e961',1,'Sprite']]],
+  ['iswindowopen_77',['isWindowOpen',['../df/d8d/classGameEngine.html#a05f319897694a1ab0d732acc4beb6f93',1,'GameEngine']]]
 ];

@@ -60,8 +60,14 @@ public:
     /// @return void
     void setName(std::string newName);
 
+    /// @brief addDrawable(): Add a drawable component to the entity
+    /// @param component: component to add
+    /// @return void
     void addDrawable(Components* component);
 
+    /// @brief drawEntity(): Draw the entities
+    /// @param window: window where the entities are drawn
+    /// @return void
     void drawEntity(sf::RenderWindow& window);
 
     /// @brief addComponent(): Add a component to the entity

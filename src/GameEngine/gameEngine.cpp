@@ -164,6 +164,7 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                    break;
                 case sf::Event::MouseButtonPressed:
                     if (!getEventEngine().getMouseButtonPressedMap().empty()) {
                         auto eventIt = getEventEngine().getMouseButtonPressedMap().find(event.getEvent().mouseButton.button);
@@ -171,24 +172,28 @@ void GameEngine::eventGameEngine() {
                             eventIt->second();
                         }
                     }
+                    break;
                 case sf::Event::MouseMoved:
                     if (!getEventEngine().getMouseMovedMap().empty()) {
                         for (auto const& entityManager : getCurrentWorld()->getEntityManagerMap()) {
                             for (auto const& entity : entityManager.second->getEntityMap()) {
                                 for (auto const &mouseMoved: event.getMouseMovedMap()) {
                                     if (entity.first == mouseMoved.first) {
-                                    Rect<float> bounds = entity.second->getComponent<Sprite>().getBounds();
-                                    float mouseX = static_cast<float>(event.getEvent().mouseMove.x);
-                                    float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
-                                    if (bounds.contains(mouseX, mouseY)) {
-                                        mouseMoved.second();
-                                        break;
-                                    }
+                                        if (entity.second->getComponentBitset().test(1)) {
+                                            Rect<float> bounds = entity.second->getComponent<Sprite>().getBounds();
+                                            float mouseX = static_cast<float>(event.getEvent().mouseMove.x);
+                                            float mouseY = static_cast<float>(event.getEvent().mouseMove.y);
+                                            if (bounds.contains(mouseX, mouseY)) {
+                                                mouseMoved.second();
+                                                break;
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                    break;
             }
         }
     }, window);

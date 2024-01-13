@@ -77,11 +77,22 @@ $(function() {
 Inheritance diagram for Entity:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/da1/classEntity__inherit__graph.png" border="0" usemap="#aEntity_inherit__map" alt="Inheritance graph"/></div>
+<map name="aEntity_inherit__map" id="aEntity_inherit__map">
+<area shape="rect" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="31,80,87,107"/>
+<area shape="rect" href="../../dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
+<area shape="rect" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="11,5,107,32"/>
+<area shape="rect" href="../../d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
+<area shape="rect" href="../../df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Entity:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/dc2/classEntity__coll__graph.png" border="0" usemap="#aEntity_coll__map" alt="Collaboration graph"/></div>
+<map name="aEntity_coll__map" id="aEntity_coll__map">
+<area shape="rect" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="25,80,81,107"/>
+<area shape="rect" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,5,101,32"/>
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -96,19 +107,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a605d474ccbd30c3d4350016ec173546a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> destructor.  <a href="../../da/d61/classEntity.html#a605d474ccbd30c3d4350016ec173546a">More...</a><br /></td></tr>
 <tr class="separator:a605d474ccbd30c3d4350016ec173546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25cd6bce71c72bd7be549f478810575e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a25cd6bce71c72bd7be549f478810575e">initEntity</a> ()</td></tr>
-<tr class="memdesc:a25cd6bce71c72bd7be549f478810575e"><td class="mdescLeft">&#160;</td><td class="mdescRight">init(): Initialize the entity  <a href="../../da/d61/classEntity.html#a25cd6bce71c72bd7be549f478810575e">More...</a><br /></td></tr>
+<tr class="memdesc:a25cd6bce71c72bd7be549f478810575e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the entity  <a href="../../da/d61/classEntity.html#a25cd6bce71c72bd7be549f478810575e">More...</a><br /></td></tr>
 <tr class="separator:a25cd6bce71c72bd7be549f478810575e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403f69eb888da7c5a690b79c658cdf47"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a403f69eb888da7c5a690b79c658cdf47">getName</a> () const</td></tr>
 <tr class="memdesc:a403f69eb888da7c5a690b79c658cdf47"><td class="mdescLeft">&#160;</td><td class="mdescRight">genName(): Get the name of the entity  <a href="../../da/d61/classEntity.html#a403f69eb888da7c5a690b79c658cdf47">More...</a><br /></td></tr>
 <tr class="separator:a403f69eb888da7c5a690b79c658cdf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb61198aa85811ee9650f7edb76df369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369">update</a> (sf::Time deltaTime) override</td></tr>
+<tr class="memdesc:acb61198aa85811ee9650f7edb76df369"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369" title="update(): Update the component">update()</a>: Update the component  <a href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369">More...</a><br /></td></tr>
+<tr class="separator:acb61198aa85811ee9650f7edb76df369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1">setName</a> (std::string newName)</td></tr>
 <tr class="memdesc:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1" title="setName(): Set the name of the entity">setName()</a>: Set the name of the entity  <a href="../../da/d61/classEntity.html#ad9cc6453a56fcefcd2b77dbde895f8d1">More...</a><br /></td></tr>
 <tr class="separator:ad9cc6453a56fcefcd2b77dbde895f8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae040ef4d3e81b99e1851995f0c031f"><td class="memItemLeft" align="right" valign="top"><a id="adae040ef4d3e81b99e1851995f0c031f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addDrawable</b> (<a class="el" href="../../db/d46/classComponents.html">Components</a> *component)</td></tr>
+<tr class="memitem:adae040ef4d3e81b99e1851995f0c031f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#adae040ef4d3e81b99e1851995f0c031f">addDrawable</a> (<a class="el" href="../../db/d46/classComponents.html">Components</a> *component)</td></tr>
+<tr class="memdesc:adae040ef4d3e81b99e1851995f0c031f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#adae040ef4d3e81b99e1851995f0c031f" title="addDrawable(): Add a drawable component to the entity">addDrawable()</a>: Add a drawable component to the entity  <a href="../../da/d61/classEntity.html#adae040ef4d3e81b99e1851995f0c031f">More...</a><br /></td></tr>
 <tr class="separator:adae040ef4d3e81b99e1851995f0c031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98892dc9dbabd59d7258db64df34e7d3"><td class="memItemLeft" align="right" valign="top"><a id="a98892dc9dbabd59d7258db64df34e7d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawEntity</b> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memitem:a98892dc9dbabd59d7258db64df34e7d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a98892dc9dbabd59d7258db64df34e7d3">drawEntity</a> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memdesc:a98892dc9dbabd59d7258db64df34e7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a98892dc9dbabd59d7258db64df34e7d3" title="drawEntity(): Draw the entities">drawEntity()</a>: Draw the entities  <a href="../../da/d61/classEntity.html#a98892dc9dbabd59d7258db64df34e7d3">More...</a><br /></td></tr>
 <tr class="separator:a98892dc9dbabd59d7258db64df34e7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f5d72cc6ed13aef80a2d0e2a8ee831"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... TArgs&gt; </td></tr>
 <tr class="memitem:ac5f5d72cc6ed13aef80a2d0e2a8ee831"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#ac5f5d72cc6ed13aef80a2d0e2a8ee831">addComponent</a> (TArgs &amp;&amp;... args)</td></tr>
@@ -118,29 +132,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawEntity</b> (sf::R
 <tr class="memitem:a5b45d20d1301e064aaf9ba09a6c15a56"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a5b45d20d1301e064aaf9ba09a6c15a56">getComponent</a> ()</td></tr>
 <tr class="memdesc:a5b45d20d1301e064aaf9ba09a6c15a56"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a5b45d20d1301e064aaf9ba09a6c15a56" title="getComponent(): Get a component from the entity">getComponent()</a>: Get a component from the entity  <a href="../../da/d61/classEntity.html#a5b45d20d1301e064aaf9ba09a6c15a56">More...</a><br /></td></tr>
 <tr class="separator:a5b45d20d1301e064aaf9ba09a6c15a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e5442667032724d9f8581a81664e0e"><td class="memTemplParams" colspan="2"><a id="aa5e5442667032724d9f8581a81664e0e"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa5e5442667032724d9f8581a81664e0e"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComponentTypeID</b> () noexcept</td></tr>
+<tr class="memitem:aa5e5442667032724d9f8581a81664e0e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa5e5442667032724d9f8581a81664e0e"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#aa5e5442667032724d9f8581a81664e0e">getComponentTypeID</a> () noexcept</td></tr>
+<tr class="memdesc:aa5e5442667032724d9f8581a81664e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#aa5e5442667032724d9f8581a81664e0e" title="getComponentTypeID(): Get a component ID from the entity">getComponentTypeID()</a>: Get a component ID from the entity  <a href="../../da/d61/classEntity.html#aa5e5442667032724d9f8581a81664e0e">More...</a><br /></td></tr>
 <tr class="separator:aa5e5442667032724d9f8581a81664e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="memItemLeft" align="right" valign="top"><a id="a25ae1bb3b7b2e015382fb64a06ef77d0"></a>
-std::bitset&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentBitset</b> () const</td></tr>
+<tr class="memitem:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="memItemLeft" align="right" valign="top">std::bitset&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a25ae1bb3b7b2e015382fb64a06ef77d0">getComponentBitset</a> () const</td></tr>
+<tr class="memdesc:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a25ae1bb3b7b2e015382fb64a06ef77d0" title="getComponentBitset(): Get all components bitset from the entity">getComponentBitset()</a>: Get all components bitset from the entity  <a href="../../da/d61/classEntity.html#a25ae1bb3b7b2e015382fb64a06ef77d0">More...</a><br /></td></tr>
 <tr class="separator:a25ae1bb3b7b2e015382fb64a06ef77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7955dd3768b0933bcc4b0f328132d46c"><td class="memItemLeft" align="right" valign="top"><a id="a7955dd3768b0933bcc4b0f328132d46c"></a>
-std::vector&lt; <a class="el" href="../../d2/db3/classDrawableComponent.html">DrawableComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDrawableComponents</b> () const</td></tr>
+<tr class="memitem:a7955dd3768b0933bcc4b0f328132d46c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d2/db3/classDrawableComponent.html">DrawableComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a7955dd3768b0933bcc4b0f328132d46c">getDrawableComponents</a> () const</td></tr>
+<tr class="memdesc:a7955dd3768b0933bcc4b0f328132d46c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a7955dd3768b0933bcc4b0f328132d46c" title="getDrawableComponents(): Get all the drawable components from the entity">getDrawableComponents()</a>: Get all the drawable components from the entity  <a href="../../da/d61/classEntity.html#a7955dd3768b0933bcc4b0f328132d46c">More...</a><br /></td></tr>
 <tr class="separator:a7955dd3768b0933bcc4b0f328132d46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="memItemLeft" align="right" valign="top"><a id="a2bc407a4ce9db73d8f51dd9d4ec086e3"></a>
-std::array&lt; <a class="el" href="../../db/d46/classComponents.html">Components</a> *, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentArrays</b> () const</td></tr>
+<tr class="memitem:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="../../db/d46/classComponents.html">Components</a> *, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d61/classEntity.html#a2bc407a4ce9db73d8f51dd9d4ec086e3">getComponentArrays</a> () const</td></tr>
+<tr class="memdesc:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d61/classEntity.html#a2bc407a4ce9db73d8f51dd9d4ec086e3" title="getComponentArrays(): Get all the components from the entity">getComponentArrays()</a>: Get all the components from the entity  <a href="../../da/d61/classEntity.html#a2bc407a4ce9db73d8f51dd9d4ec086e3">More...</a><br /></td></tr>
 <tr class="separator:a2bc407a4ce9db73d8f51dd9d4ec086e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classComponents"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classComponents')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../db/d46/classComponents.html">Components</a></td></tr>
-<tr class="memitem:adb5db757815c1d8b961c069515f8e260 inherit pro_methods_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="adb5db757815c1d8b961c069515f8e260"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="memitem:a8187158de7c3efcac105760e2adf15a9 inherit pro_methods_classComponents"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#a8187158de7c3efcac105760e2adf15a9">Components</a> ()=default</td></tr>
+<tr class="memdesc:a8187158de7c3efcac105760e2adf15a9 inherit pro_methods_classComponents"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game.">Components</a> constructor.  <a href="../../db/d46/classComponents.html#a8187158de7c3efcac105760e2adf15a9">More...</a><br /></td></tr>
+<tr class="separator:a8187158de7c3efcac105760e2adf15a9 inherit pro_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755420dfc5cc2f047ba1b19ef5fee802 inherit pro_methods_classComponents"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#a755420dfc5cc2f047ba1b19ef5fee802">~Components</a> ()=default</td></tr>
+<tr class="memdesc:a755420dfc5cc2f047ba1b19ef5fee802 inherit pro_methods_classComponents"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game.">Components</a> destructor.  <a href="../../db/d46/classComponents.html#a755420dfc5cc2f047ba1b19ef5fee802">More...</a><br /></td></tr>
+<tr class="separator:a755420dfc5cc2f047ba1b19ef5fee802 inherit pro_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5db757815c1d8b961c069515f8e260 inherit pro_methods_classComponents"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">init</a> ()</td></tr>
+<tr class="memdesc:adb5db757815c1d8b961c069515f8e260 inherit pro_methods_classComponents"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the component  <a href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">More...</a><br /></td></tr>
 <tr class="separator:adb5db757815c1d8b961c069515f8e260 inherit pro_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98c9d30dac6c9277ce325dde2707a4ec inherit pro_methods_classComponents"><td class="memItemLeft" align="right" valign="top"><a id="a98c9d30dac6c9277ce325dde2707a4ec"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="separator:a98c9d30dac6c9277ce325dde2707a4ec inherit pro_methods_classComponents"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> class: <a class="el" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game.">Entity</a> is a class that represents an entity in the game. </p>
@@ -297,6 +314,60 @@ template&lt;typename T , typename... TArgs&gt; </div>
 
 </div>
 </div>
+<a id="adae040ef4d3e81b99e1851995f0c031f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae040ef4d3e81b99e1851995f0c031f">&#9670;&nbsp;</a></span>addDrawable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::addDrawable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d46/classComponents.html">Components</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#adae040ef4d3e81b99e1851995f0c031f" title="addDrawable(): Add a drawable component to the entity">addDrawable()</a>: Add a drawable component to the entity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>component to add </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a98892dc9dbabd59d7258db64df34e7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98892dc9dbabd59d7258db64df34e7d3">&#9670;&nbsp;</a></span>drawEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::drawEntity </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#a98892dc9dbabd59d7258db64df34e7d3" title="drawEntity(): Draw the entities">drawEntity()</a>: Draw the entities </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>window where the entities are drawn </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="a5b45d20d1301e064aaf9ba09a6c15a56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b45d20d1301e064aaf9ba09a6c15a56">&#9670;&nbsp;</a></span>getComponent()</h2>
 
@@ -328,6 +399,150 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>T&amp;: reference of the component </dd></dl>
+
+</div>
+</div>
+<a id="a2bc407a4ce9db73d8f51dd9d4ec086e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc407a4ce9db73d8f51dd9d4ec086e3">&#9670;&nbsp;</a></span>getComponentArrays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="../../db/d46/classComponents.html">Components</a>*, 3&gt; Entity::getComponentArrays </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#a2bc407a4ce9db73d8f51dd9d4ec086e3" title="getComponentArrays(): Get all the components from the entity">getComponentArrays()</a>: Get all the components from the entity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::array&lt;Components*, 3&gt;: componentArray of entity </dd></dl>
+
+</div>
+</div>
+<a id="a25ae1bb3b7b2e015382fb64a06ef77d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ae1bb3b7b2e015382fb64a06ef77d0">&#9670;&nbsp;</a></span>getComponentBitset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::bitset&lt;3&gt; Entity::getComponentBitset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#a25ae1bb3b7b2e015382fb64a06ef77d0" title="getComponentBitset(): Get all components bitset from the entity">getComponentBitset()</a>: Get all components bitset from the entity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::bitset&lt;3&gt;: componentBitset of entity </dd></dl>
+
+</div>
+</div>
+<a id="aa5e5442667032724d9f8581a81664e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e5442667032724d9f8581a81664e0e">&#9670;&nbsp;</a></span>getComponentTypeID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template std::size_t Entity::getComponentTypeID&lt; <a class="el" href="../../db/daf/classTransform.html">Transform</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#aa5e5442667032724d9f8581a81664e0e" title="getComponentTypeID(): Get a component ID from the entity">getComponentTypeID()</a>: Get a component ID from the entity </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t: id of the component </dd></dl>
+
+</div>
+</div>
+<a id="a7955dd3768b0933bcc4b0f328132d46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7955dd3768b0933bcc4b0f328132d46c">&#9670;&nbsp;</a></span>getDrawableComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d2/db3/classDrawableComponent.html">DrawableComponent</a>*&gt; Entity::getDrawableComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#a7955dd3768b0933bcc4b0f328132d46c" title="getDrawableComponents(): Get all the drawable components from the entity">getDrawableComponents()</a>: Get all the drawable components from the entity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DrawableComponent*&gt;: drawableComponents of entity </dd></dl>
 
 </div>
 </div>
@@ -372,7 +587,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>init(): Initialize the entity </p>
+<p><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the entity </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td></td></tr>
@@ -407,6 +622,43 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="acb61198aa85811ee9650f7edb76df369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb61198aa85811ee9650f7edb76df369">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::update </td>
+          <td>(</td>
+          <td class="paramtype">sf::Time&#160;</td>
+          <td class="paramname"><em>timeDelta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369" title="update(): Update the component">update()</a>: Update the component </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeDelta</td><td>time elapsed since the last update </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Implements <a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">Components</a>.</p>
 
 </div>
 </div>

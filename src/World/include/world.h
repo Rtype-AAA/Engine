@@ -15,9 +15,9 @@
  */
 class World: protected EntityManager {
 private:
-    std::map<std::string, std::unique_ptr<EntityManager>> entitiesManager{}; /// < Map of the entities manager's unique pointers.
-    std::map<std::string, EntityManager*> entityManagerMap{}; /// < Map of the entities manager.
-    std::string nameWorld{}; /// < Name of the world.
+    std::map<std::string, std::unique_ptr<EntityManager>> entitiesManager{}; ///< Map of the entities manager's unique pointers.
+    std::map<std::string, EntityManager*> entityManagerMap{}; ///< Map of the entities manager.
+    std::string nameWorld{}; ///< Name of the world.
 public:
     /// @brief Default World constructor.
     /// @param void

@@ -1,0 +1,7 @@
+<map id="EntityManager" name="EntityManager">
+<area shape="rect" id="node1" title=" " alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
+<area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="31,80,87,107"/>
+<area shape="rect" id="node3" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="11,5,107,32"/>
+<area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
+</map>

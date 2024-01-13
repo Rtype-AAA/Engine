@@ -18,10 +18,10 @@
 class GameEngine : protected World, protected EventEngine
 {
 private:
-    std::map<std::string, World *> worldMap{};              /// < Map of World classes.
-    std::map<std::string, std::unique_ptr<World>> worlds{}; /// < Map of World classes' unique pointers.
-    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; /// < Map of the textures.
-    World *currentWorld;                                    /// < Current world.
+    std::map<std::string, World *> worldMap{}; ///< Map of World classes.
+    std::map<std::string, std::unique_ptr<World>> worlds{}; ///< Map of World classes' unique pointers.
+    std::map<std::string, std::shared_ptr<sf::Texture>> mapTexture{}; ///< Map of the textures.
+    World *currentWorld; ///< Current world.
 
     std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>> window; /// < Window of the game. It can be a sf::Window or a sf::RenderWindow.
     EventEngine event;                                                                   /// < EventEngine class which manages the events.
@@ -156,4 +156,3 @@ public:
     /// @return std::map<std::string, World*>: GameEngine's map of the worlds.
     std::map<std::string, World *> getWorldMap() const { return worldMap; }
 };
-
