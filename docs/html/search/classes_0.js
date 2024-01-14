@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['archetypes_189',['Archetypes',['../d0/d7b/classArchetypes.html',1,'']]]
+  ['archetypes_191',['Archetypes',['../d0/d7b/classArchetypes.html',1,'']]]
 ];
