@@ -40,7 +40,7 @@ if(SFML_VERSION EQUAL 2.6.1)
     endif()
 
 else()
-find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
+    find_package(SFML 2.5.1 COMPONENTS system window graphics audio network QUIET)
 
     if(NOT SFML_FOUND)
         message(STATUS "SFML couldn't be found. Attempting to install SFML...")
