@@ -149,20 +149,32 @@ set(RESSOURCES_INCLUDE_DIRS
         ${CMAKE_CURRENT_SOURCE_DIR}/includeRessources
 )
 
-add_library(engine_lib_static STATIC ${LIB_SRCS} ${HEADER_FILES})
-target_include_directories(engine_lib_static PRIVATE ${COMMON_INCLUDE_DIRS})
-target_link_libraries(engine_lib_static PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+if (WIN32)
+    add_library(engine_lib_static STATIC ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib_static PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib_static PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
 
-add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
-target_include_directories(engine_lib PRIVATE ${COMMON_INCLUDE_DIRS})
-target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+    add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
 
-add_executable(engine main.cpp ${HEADER_RESSOURCES})
-target_include_directories(engine PRIVATE ${COMMON_INCLUDE_DIRS} ${COPIED_DIRECTORIES} ${RESSOURCES_INCLUDE_DIRS})
-target_link_libraries(engine PRIVATE engine_lib)
+    add_executable(engine main.cpp ${HEADER_RESSOURCES})
+    target_include_directories(engine PRIVATE ${COMMON_INCLUDE_DIRS} ${COPIED_DIRECTORIES} ${RESSOURCES_INCLUDE_DIRS})
+    target_link_libraries(engine PRIVATE engine_lib)
 
-add_dependencies(engine_lib engine_lib_static)
-add_dependencies(engine engine_lib)
+    add_dependencies(engine_lib engine_lib_static)
+    add_dependencies(engine engine_lib)
+else ()
+    add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+
+    add_executable(engine main.cpp ${HEADER_RESSOURCES})
+    target_include_directories(engine PRIVATE ${COMMON_INCLUDE_DIRS} ${COPIED_DIRECTORIES} ${RESSOURCES_INCLUDE_DIRS})
+    target_link_libraries(engine PRIVATE engine_lib)
+
+    add_dependencies(engine engine_lib)
+endif ()
 
 if(BUILD_TESTS)
     file(GLOB LIB_SRCS_TEST
@@ -185,9 +197,14 @@ if(BUILD_TESTS)
     set_target_properties(all_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 endif()
 
-set_target_properties(engine_lib_static PROPERTIES OUTPUT_NAME engine_lib PREFIX "")
-set_target_properties(engine_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
-set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker")
+if(WIN32)
+    set_target_properties(engine_lib_static PROPERTIES OUTPUT_NAME engine_lib PREFIX "")
+    set_target_properties(engine_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
+    set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker")
+else()
+    set_target_properties(engine_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
+    set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker")
+endif()
 
 install(TARGETS engine_lib
         EXPORT engineTargets
