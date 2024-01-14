@@ -1,24 +1,29 @@
 #include "Collision.h"
 
 
-bool Collision::initCollision() {
-    // Initialization logic for Collision (if needed)
-    return true; // Return true if initialized successfully
+
+bool Collision::checkSpriteCollision(Sprite& sprite1, Sprite& sprite2, float push) {
+    sf::Sprite& sp1 = sprite1.getSprite();
+    sf::Sprite& sp2 = sprite2.getSprite();
+    if (AABB(sp1, sp2)) {
+
+        return true;
+    return false;
 }
 
-
-bool Collision::checkCollision(const std::vector<Sprite>& sprites) {
-    // Iterate through all pairs of sprites and check for collisions
+void Collision::checkCollisions(std::vector<std::reference_wrapper<Sprite>>& sprites, float push) {
     for (size_t i = 0; i < sprites.size(); ++i) {
         for (size_t j = i + 1; j < sprites.size(); ++j) {
-            sf::FloatRect rect1 = sprites[i].getSprite().getGlobalBounds();
-            sf::FloatRect rect2 = sprites[j].getSprite().getGlobalBounds();
+            Sprite& sprite1 = sprites[i];
+            Sprite& sprite2 = sprites[j];
 
-            if (rect1.intersects(rect2)) {
-                return true;
+            if (checkSpriteCollision(sprite1, sprite2, push)) {
+
             }
         }
     }
+}
 
-    return false;
+bool Collision::AABB(const sf::Sprite& sprite1, const sf::Sprite& sprite2) {
+    return sprite1.getGlobalBounds().intersects(sprite2.getGlobalBounds());
 }

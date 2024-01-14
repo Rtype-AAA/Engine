@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "sfml.h"
+#include "Components.h"
 #include "Sprite.h"
 
 /**
@@ -9,6 +11,7 @@
 class Collision : public Components, public Sprite {
 private:
     int bit = 3; ///< Bit of the Collision.
+    bool AABB(const sf::Sprite& sprite1, const sf::Sprite& sprite2);
 public:
     /// @brief Default Collision constructor.
     /// @param void
@@ -20,14 +23,10 @@ public:
     /// @return void
     ~Collision() override = default;
 
-    /// @brief init(): Initialize the Collision.
-    /// @param void
-    /// @return bool: True if the Collision is initialized, false otherwise.
-    bool initCollision() const {return true;}
+    // Vérifie la collision entre deux sprites spécifiques
 
-/// @brief checkCollision(): Check if two sprites are colliding.
-    /// @param sprite1: First sprite.
-    /// @param sprite2: Second sprite.
-    /// @return bool: True if sprites are colliding, false otherwise.
-    static bool checkCollision(const Sprite& sprite1, const Sprite& sprite2);
+    bool checkSpriteCollision(Sprite& sprite1, Sprite& sprite2, float push);
+
+    // Vérifie les collisions entre toutes les sprites d'une liste
+    void checkCollisions(std::vector<std::reference_wrapper<Sprite>>& sprites, float push);
 };
