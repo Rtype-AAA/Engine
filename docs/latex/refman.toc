@@ -8,294 +8,294 @@
 \contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
 \contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Archetypes Class Reference}{7}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Audio\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{7}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Color Class Reference}{8}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{9}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{9}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Color()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Color()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}$\sim $Color()}{10}{subsubsection.4.3.2.3}%
-\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{10}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}fromSFMLColor()}{11}{subsubsection.4.3.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}getAlpha()}{11}{subsubsection.4.3.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3.3}getBlue()}{11}{subsubsection.4.3.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.4}getGreen()}{12}{subsubsection.4.3.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.3.5}getRed()}{12}{subsubsection.4.3.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.3.6}operator sf::Color()}{12}{subsubsection.4.3.3.6}%
-\contentsline {subsubsection}{\numberline {4.3.3.7}setAlpha()}{13}{subsubsection.4.3.3.7}%
-\contentsline {subsubsection}{\numberline {4.3.3.8}setBlue()}{13}{subsubsection.4.3.3.8}%
-\contentsline {subsubsection}{\numberline {4.3.3.9}setGreen()}{13}{subsubsection.4.3.3.9}%
-\contentsline {subsubsection}{\numberline {4.3.3.10}setRed()}{14}{subsubsection.4.3.3.10}%
-\contentsline {section}{\numberline {4.4}Components Class Reference}{14}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{15}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{15}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Components()}{15}{subsubsection.4.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}$\sim $Components()}{15}{subsubsection.4.4.2.2}%
-\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{16}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}getBit()}{16}{subsubsection.4.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}init()}{16}{subsubsection.4.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}update()}{17}{subsubsection.4.4.3.3}%
-\contentsline {section}{\numberline {4.5}Drawable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component Class Reference}{17}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{18}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{18}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}$\sim $DrawableComponent()}{18}{subsubsection.4.5.2.1}%
-\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{18}{subsection.4.5.3}%
-\contentsline {subsubsection}{\numberline {4.5.3.1}draw()}{18}{subsubsection.4.5.3.1}%
-\contentsline {section}{\numberline {4.6}Entity Class Reference}{19}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{21}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Constructor \& Destructor Documentation}{21}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{21}{subsubsection.4.6.2.1}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{subsubsection.4.6.2.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.3}$\sim $Entity()}{22}{subsubsection.4.6.2.3}%
-\contentsline {subsection}{\numberline {4.6.3}Member Function Documentation}{22}{subsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.1}addComponent()}{22}{subsubsection.4.6.3.1}%
-\contentsline {subsubsection}{\numberline {4.6.3.2}addDrawable()}{22}{subsubsection.4.6.3.2}%
-\contentsline {subsubsection}{\numberline {4.6.3.3}applyDeferredEntity()}{23}{subsubsection.4.6.3.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.4}drawEntity()}{23}{subsubsection.4.6.3.4}%
-\contentsline {subsubsection}{\numberline {4.6.3.5}getActive()}{23}{subsubsection.4.6.3.5}%
-\contentsline {subsubsection}{\numberline {4.6.3.6}getBit()}{24}{subsubsection.4.6.3.6}%
-\contentsline {subsubsection}{\numberline {4.6.3.7}getComponent()}{24}{subsubsection.4.6.3.7}%
-\contentsline {subsubsection}{\numberline {4.6.3.8}getComponentArrays()}{25}{subsubsection.4.6.3.8}%
-\contentsline {subsubsection}{\numberline {4.6.3.9}getComponentBitset()}{25}{subsubsection.4.6.3.9}%
-\contentsline {subsubsection}{\numberline {4.6.3.10}getComponentTypeID()}{25}{subsubsection.4.6.3.10}%
-\contentsline {subsubsection}{\numberline {4.6.3.11}getDrawableComponents()}{26}{subsubsection.4.6.3.11}%
-\contentsline {subsubsection}{\numberline {4.6.3.12}getName()}{26}{subsubsection.4.6.3.12}%
-\contentsline {subsubsection}{\numberline {4.6.3.13}init()}{26}{subsubsection.4.6.3.13}%
-\contentsline {subsubsection}{\numberline {4.6.3.14}removeComponent()}{27}{subsubsection.4.6.3.14}%
-\contentsline {subsubsection}{\numberline {4.6.3.15}removeDrawable()}{27}{subsubsection.4.6.3.15}%
-\contentsline {subsubsection}{\numberline {4.6.3.16}setActive()}{27}{subsubsection.4.6.3.16}%
-\contentsline {subsubsection}{\numberline {4.6.3.17}setDeferredEntity()}{28}{subsubsection.4.6.3.17}%
-\contentsline {subsubsection}{\numberline {4.6.3.18}setName()}{28}{subsubsection.4.6.3.18}%
-\contentsline {subsubsection}{\numberline {4.6.3.19}update()}{28}{subsubsection.4.6.3.19}%
-\contentsline {section}{\numberline {4.7}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{30}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Constructor \& Destructor Documentation}{31}{subsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.1.1}EntityManager()}{31}{subsubsection.4.7.1.1}%
-\contentsline {subsubsection}{\numberline {4.7.1.2}$\sim $EntityManager()}{32}{subsubsection.4.7.1.2}%
-\contentsline {subsection}{\numberline {4.7.2}Member Function Documentation}{32}{subsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.2.1}addEntity()}{32}{subsubsection.4.7.2.1}%
-\contentsline {subsubsection}{\numberline {4.7.2.2}getEntities()}{33}{subsubsection.4.7.2.2}%
-\contentsline {subsubsection}{\numberline {4.7.2.3}getEntity()}{33}{subsubsection.4.7.2.3}%
-\contentsline {subsubsection}{\numberline {4.7.2.4}getEntityMap()}{33}{subsubsection.4.7.2.4}%
-\contentsline {subsubsection}{\numberline {4.7.2.5}init()}{34}{subsubsection.4.7.2.5}%
-\contentsline {section}{\numberline {4.8}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{34}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{36}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{37}{section.4.10}%
-\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{37}{subsection.4.10.1}%
-\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{38}{subsection.4.10.2}%
-\contentsline {subsubsection}{\numberline {4.10.2.1}EventEngine()}{38}{subsubsection.4.10.2.1}%
-\contentsline {subsubsection}{\numberline {4.10.2.2}$\sim $EventEngine()}{38}{subsubsection.4.10.2.2}%
-\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{38}{subsection.4.10.3}%
-\contentsline {subsubsection}{\numberline {4.10.3.1}addKeyPressed()}{38}{subsubsection.4.10.3.1}%
-\contentsline {subsubsection}{\numberline {4.10.3.2}addMouseButtonPressed()}{39}{subsubsection.4.10.3.2}%
-\contentsline {subsubsection}{\numberline {4.10.3.3}addMouseMoved()}{39}{subsubsection.4.10.3.3}%
-\contentsline {subsubsection}{\numberline {4.10.3.4}getEvent()}{40}{subsubsection.4.10.3.4}%
-\contentsline {subsubsection}{\numberline {4.10.3.5}getKeyPressedMap()}{40}{subsubsection.4.10.3.5}%
-\contentsline {subsubsection}{\numberline {4.10.3.6}getKeyStatesMap()}{40}{subsubsection.4.10.3.6}%
-\contentsline {subsubsection}{\numberline {4.10.3.7}getMouseButtonPressedMap()}{41}{subsubsection.4.10.3.7}%
-\contentsline {subsubsection}{\numberline {4.10.3.8}getMouseMovedMap()}{41}{subsubsection.4.10.3.8}%
-\contentsline {subsubsection}{\numberline {4.10.3.9}setKeyStatesMap()}{41}{subsubsection.4.10.3.9}%
-\contentsline {section}{\numberline {4.11}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{42}{section.4.11}%
-\contentsline {section}{\numberline {4.12}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{43}{section.4.12}%
-\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{46}{subsection.4.12.1}%
-\contentsline {subsection}{\numberline {4.12.2}Constructor \& Destructor Documentation}{46}{subsection.4.12.2}%
-\contentsline {subsubsection}{\numberline {4.12.2.1}GameEngine()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{46}{subsubsection.4.12.2.1}%
-\contentsline {subsubsection}{\numberline {4.12.2.2}GameEngine()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{46}{subsubsection.4.12.2.2}%
-\contentsline {subsubsection}{\numberline {4.12.2.3}$\sim $GameEngine()}{47}{subsubsection.4.12.2.3}%
-\contentsline {subsection}{\numberline {4.12.3}Member Function Documentation}{47}{subsection.4.12.3}%
-\contentsline {subsubsection}{\numberline {4.12.3.1}addWorld()}{47}{subsubsection.4.12.3.1}%
-\contentsline {subsubsection}{\numberline {4.12.3.2}eventGameEngine()}{48}{subsubsection.4.12.3.2}%
-\contentsline {subsubsection}{\numberline {4.12.3.3}getClock()}{48}{subsubsection.4.12.3.3}%
-\contentsline {subsubsection}{\numberline {4.12.3.4}getCurrentWorld()}{48}{subsubsection.4.12.3.4}%
-\contentsline {subsubsection}{\numberline {4.12.3.5}getDeltaTime()}{49}{subsubsection.4.12.3.5}%
-\contentsline {subsubsection}{\numberline {4.12.3.6}getEventEngine()}{49}{subsubsection.4.12.3.6}%
-\contentsline {subsubsection}{\numberline {4.12.3.7}getFilesRessources()}{49}{subsubsection.4.12.3.7}%
-\contentsline {subsubsection}{\numberline {4.12.3.8}getMapFont()}{50}{subsubsection.4.12.3.8}%
-\contentsline {subsubsection}{\numberline {4.12.3.9}getMapMusic()}{50}{subsubsection.4.12.3.9}%
-\contentsline {subsubsection}{\numberline {4.12.3.10}getMapSound()}{50}{subsubsection.4.12.3.10}%
-\contentsline {subsubsection}{\numberline {4.12.3.11}getMapTexture()}{51}{subsubsection.4.12.3.11}%
-\contentsline {subsubsection}{\numberline {4.12.3.12}getWindow()}{51}{subsubsection.4.12.3.12}%
-\contentsline {subsubsection}{\numberline {4.12.3.13}getWorld()}{51}{subsubsection.4.12.3.13}%
-\contentsline {subsubsection}{\numberline {4.12.3.14}getWorldMap()}{52}{subsubsection.4.12.3.14}%
-\contentsline {subsubsection}{\numberline {4.12.3.15}initialize()}{52}{subsubsection.4.12.3.15}%
-\contentsline {subsubsection}{\numberline {4.12.3.16}initializeAllFiles()}{52}{subsubsection.4.12.3.16}%
-\contentsline {subsubsection}{\numberline {4.12.3.17}initializeFont()}{53}{subsubsection.4.12.3.17}%
-\contentsline {subsubsection}{\numberline {4.12.3.18}initializeMusic()}{53}{subsubsection.4.12.3.18}%
-\contentsline {subsubsection}{\numberline {4.12.3.19}initializeMusicFunction()}{53}{subsubsection.4.12.3.19}%
-\contentsline {subsubsection}{\numberline {4.12.3.20}initializeSound()}{54}{subsubsection.4.12.3.20}%
-\contentsline {subsubsection}{\numberline {4.12.3.21}initializeSoundFunction()}{54}{subsubsection.4.12.3.21}%
-\contentsline {subsubsection}{\numberline {4.12.3.22}initializeSpriteFunction()}{54}{subsubsection.4.12.3.22}%
-\contentsline {subsubsection}{\numberline {4.12.3.23}initializeTextFunction()}{55}{subsubsection.4.12.3.23}%
-\contentsline {subsubsection}{\numberline {4.12.3.24}initializeTexture()}{55}{subsubsection.4.12.3.24}%
-\contentsline {subsubsection}{\numberline {4.12.3.25}initializeWorldMap()}{55}{subsubsection.4.12.3.25}%
-\contentsline {subsubsection}{\numberline {4.12.3.26}isWindowOpen()}{56}{subsubsection.4.12.3.26}%
-\contentsline {subsubsection}{\numberline {4.12.3.27}renderGameEngine()}{56}{subsubsection.4.12.3.27}%
-\contentsline {subsubsection}{\numberline {4.12.3.28}run()}{56}{subsubsection.4.12.3.28}%
-\contentsline {subsubsection}{\numberline {4.12.3.29}setCurrentWorld()}{58}{subsubsection.4.12.3.29}%
-\contentsline {subsubsection}{\numberline {4.12.3.30}setDeltaTime()}{58}{subsubsection.4.12.3.30}%
-\contentsline {subsubsection}{\numberline {4.12.3.31}updateGameEngine()}{59}{subsubsection.4.12.3.31}%
-\contentsline {section}{\numberline {4.13}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{59}{section.4.13}%
-\contentsline {section}{\numberline {4.14}ITransform Class Reference}{61}{section.4.14}%
-\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{61}{subsection.4.14.1}%
-\contentsline {subsection}{\numberline {4.14.2}Constructor \& Destructor Documentation}{61}{subsection.4.14.2}%
-\contentsline {subsubsection}{\numberline {4.14.2.1}$\sim $ITransform()}{61}{subsubsection.4.14.2.1}%
-\contentsline {subsection}{\numberline {4.14.3}Member Function Documentation}{62}{subsection.4.14.3}%
-\contentsline {subsubsection}{\numberline {4.14.3.1}getTransform()}{62}{subsubsection.4.14.3.1}%
-\contentsline {section}{\numberline {4.15}Music Class Reference}{62}{section.4.15}%
-\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{64}{subsection.4.15.1}%
-\contentsline {subsection}{\numberline {4.15.2}Constructor \& Destructor Documentation}{64}{subsection.4.15.2}%
-\contentsline {subsubsection}{\numberline {4.15.2.1}Music()}{64}{subsubsection.4.15.2.1}%
-\contentsline {subsubsection}{\numberline {4.15.2.2}$\sim $Music()}{64}{subsubsection.4.15.2.2}%
-\contentsline {subsection}{\numberline {4.15.3}Member Function Documentation}{64}{subsection.4.15.3}%
-\contentsline {subsubsection}{\numberline {4.15.3.1}applyDeferredMusic()}{64}{subsubsection.4.15.3.1}%
-\contentsline {subsubsection}{\numberline {4.15.3.2}getBit()}{65}{subsubsection.4.15.3.2}%
-\contentsline {subsubsection}{\numberline {4.15.3.3}getLoop()}{65}{subsubsection.4.15.3.3}%
-\contentsline {subsubsection}{\numberline {4.15.3.4}getMusic()}{65}{subsubsection.4.15.3.4}%
-\contentsline {subsubsection}{\numberline {4.15.3.5}getStatus()}{66}{subsubsection.4.15.3.5}%
-\contentsline {subsubsection}{\numberline {4.15.3.6}getVolume()}{66}{subsubsection.4.15.3.6}%
-\contentsline {subsubsection}{\numberline {4.15.3.7}init()}{66}{subsubsection.4.15.3.7}%
-\contentsline {subsubsection}{\numberline {4.15.3.8}pause()}{66}{subsubsection.4.15.3.8}%
-\contentsline {subsubsection}{\numberline {4.15.3.9}play()}{67}{subsubsection.4.15.3.9}%
-\contentsline {subsubsection}{\numberline {4.15.3.10}setDeferredMusic()}{67}{subsubsection.4.15.3.10}%
-\contentsline {subsubsection}{\numberline {4.15.3.11}setLoop()}{67}{subsubsection.4.15.3.11}%
-\contentsline {subsubsection}{\numberline {4.15.3.12}setMusic()}{68}{subsubsection.4.15.3.12}%
-\contentsline {subsubsection}{\numberline {4.15.3.13}setVolume()}{68}{subsubsection.4.15.3.13}%
-\contentsline {subsubsection}{\numberline {4.15.3.14}stop()}{69}{subsubsection.4.15.3.14}%
-\contentsline {subsubsection}{\numberline {4.15.3.15}update()}{69}{subsubsection.4.15.3.15}%
-\contentsline {section}{\numberline {4.16}Rect$<$ T $>$ Class Template Reference}{69}{section.4.16}%
-\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{70}{subsection.4.16.1}%
-\contentsline {subsection}{\numberline {4.16.2}Constructor \& Destructor Documentation}{70}{subsection.4.16.2}%
-\contentsline {subsubsection}{\numberline {4.16.2.1}Rect()}{70}{subsubsection.4.16.2.1}%
-\contentsline {subsubsection}{\numberline {4.16.2.2}$\sim $Rect()}{71}{subsubsection.4.16.2.2}%
-\contentsline {subsection}{\numberline {4.16.3}Member Function Documentation}{71}{subsection.4.16.3}%
-\contentsline {subsubsection}{\numberline {4.16.3.1}contains()}{71}{subsubsection.4.16.3.1}%
-\contentsline {subsubsection}{\numberline {4.16.3.2}getHeight()}{72}{subsubsection.4.16.3.2}%
-\contentsline {subsubsection}{\numberline {4.16.3.3}getLeft()}{72}{subsubsection.4.16.3.3}%
-\contentsline {subsubsection}{\numberline {4.16.3.4}getRect()}{73}{subsubsection.4.16.3.4}%
-\contentsline {subsubsection}{\numberline {4.16.3.5}getTop()}{73}{subsubsection.4.16.3.5}%
-\contentsline {subsubsection}{\numberline {4.16.3.6}getWidth()}{73}{subsubsection.4.16.3.6}%
-\contentsline {section}{\numberline {4.17}Script Class Reference}{74}{section.4.17}%
-\contentsline {section}{\numberline {4.18}Sound Class Reference}{74}{section.4.18}%
-\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{76}{subsection.4.18.1}%
-\contentsline {subsection}{\numberline {4.18.2}Constructor \& Destructor Documentation}{76}{subsection.4.18.2}%
-\contentsline {subsubsection}{\numberline {4.18.2.1}Sound()}{76}{subsubsection.4.18.2.1}%
-\contentsline {subsubsection}{\numberline {4.18.2.2}$\sim $Sound()}{76}{subsubsection.4.18.2.2}%
-\contentsline {subsection}{\numberline {4.18.3}Member Function Documentation}{77}{subsection.4.18.3}%
-\contentsline {subsubsection}{\numberline {4.18.3.1}applyDeferredSound()}{77}{subsubsection.4.18.3.1}%
-\contentsline {subsubsection}{\numberline {4.18.3.2}getBit()}{77}{subsubsection.4.18.3.2}%
-\contentsline {subsubsection}{\numberline {4.18.3.3}getLoop()}{77}{subsubsection.4.18.3.3}%
-\contentsline {subsubsection}{\numberline {4.18.3.4}getSound()}{78}{subsubsection.4.18.3.4}%
-\contentsline {subsubsection}{\numberline {4.18.3.5}getVolume()}{78}{subsubsection.4.18.3.5}%
-\contentsline {subsubsection}{\numberline {4.18.3.6}init()}{78}{subsubsection.4.18.3.6}%
-\contentsline {subsubsection}{\numberline {4.18.3.7}isPlaying()}{79}{subsubsection.4.18.3.7}%
-\contentsline {subsubsection}{\numberline {4.18.3.8}pause()}{79}{subsubsection.4.18.3.8}%
-\contentsline {subsubsection}{\numberline {4.18.3.9}play()}{79}{subsubsection.4.18.3.9}%
-\contentsline {subsubsection}{\numberline {4.18.3.10}setDeferredSound()}{80}{subsubsection.4.18.3.10}%
-\contentsline {subsubsection}{\numberline {4.18.3.11}setLoop()}{80}{subsubsection.4.18.3.11}%
-\contentsline {subsubsection}{\numberline {4.18.3.12}setSound()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{80}{subsubsection.4.18.3.12}%
-\contentsline {subsubsection}{\numberline {4.18.3.13}setSound()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{82}{subsubsection.4.18.3.13}%
-\contentsline {subsubsection}{\numberline {4.18.3.14}setVolume()}{82}{subsubsection.4.18.3.14}%
-\contentsline {subsubsection}{\numberline {4.18.3.15}stop()}{83}{subsubsection.4.18.3.15}%
-\contentsline {subsubsection}{\numberline {4.18.3.16}update()}{83}{subsubsection.4.18.3.16}%
+\contentsline {section}{\numberline {4.2}Color Class Reference}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{9}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Color()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Color()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{9}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}$\sim $Color()}{9}{subsubsection.4.2.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{10}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}fromSFMLColor()}{10}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}getAlpha()}{10}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}getBlue()}{11}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}getGreen()}{11}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.5}getRed()}{11}{subsubsection.4.2.3.5}%
+\contentsline {subsubsection}{\numberline {4.2.3.6}operator sf::Color()}{12}{subsubsection.4.2.3.6}%
+\contentsline {subsubsection}{\numberline {4.2.3.7}setAlpha()}{12}{subsubsection.4.2.3.7}%
+\contentsline {subsubsection}{\numberline {4.2.3.8}setBlue()}{12}{subsubsection.4.2.3.8}%
+\contentsline {subsubsection}{\numberline {4.2.3.9}setGreen()}{13}{subsubsection.4.2.3.9}%
+\contentsline {subsubsection}{\numberline {4.2.3.10}setRed()}{13}{subsubsection.4.2.3.10}%
+\contentsline {section}{\numberline {4.3}Components Class Reference}{13}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{14}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{14}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Components()}{15}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $Components()}{15}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{15}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}getBit()}{15}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}init()}{16}{subsubsection.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}update()}{16}{subsubsection.4.3.3.3}%
+\contentsline {section}{\numberline {4.4}Drawable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Component Class Reference}{16}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{17}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}$\sim $DrawableComponent()}{17}{subsubsection.4.4.2.1}%
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{18}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}draw()}{18}{subsubsection.4.4.3.1}%
+\contentsline {section}{\numberline {4.5}Entity Class Reference}{18}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{20}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{21}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{21}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}$\sim $Entity()}{21}{subsubsection.4.5.2.3}%
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{22}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}addComponent()}{22}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}addDrawable()}{22}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}applyDeferredEntity()}{23}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.4}drawEntity()}{23}{subsubsection.4.5.3.4}%
+\contentsline {subsubsection}{\numberline {4.5.3.5}getActive()}{23}{subsubsection.4.5.3.5}%
+\contentsline {subsubsection}{\numberline {4.5.3.6}getBit()}{24}{subsubsection.4.5.3.6}%
+\contentsline {subsubsection}{\numberline {4.5.3.7}getComponent()}{24}{subsubsection.4.5.3.7}%
+\contentsline {subsubsection}{\numberline {4.5.3.8}getComponentArrays()}{24}{subsubsection.4.5.3.8}%
+\contentsline {subsubsection}{\numberline {4.5.3.9}getComponentBitset()}{25}{subsubsection.4.5.3.9}%
+\contentsline {subsubsection}{\numberline {4.5.3.10}getComponentTypeID()}{25}{subsubsection.4.5.3.10}%
+\contentsline {subsubsection}{\numberline {4.5.3.11}getDrawableComponents()}{25}{subsubsection.4.5.3.11}%
+\contentsline {subsubsection}{\numberline {4.5.3.12}getName()}{26}{subsubsection.4.5.3.12}%
+\contentsline {subsubsection}{\numberline {4.5.3.13}init()}{26}{subsubsection.4.5.3.13}%
+\contentsline {subsubsection}{\numberline {4.5.3.14}removeComponent()}{27}{subsubsection.4.5.3.14}%
+\contentsline {subsubsection}{\numberline {4.5.3.15}removeDrawable()}{27}{subsubsection.4.5.3.15}%
+\contentsline {subsubsection}{\numberline {4.5.3.16}setActive()}{27}{subsubsection.4.5.3.16}%
+\contentsline {subsubsection}{\numberline {4.5.3.17}setDeferredEntity()}{28}{subsubsection.4.5.3.17}%
+\contentsline {subsubsection}{\numberline {4.5.3.18}setName()}{28}{subsubsection.4.5.3.18}%
+\contentsline {subsubsection}{\numberline {4.5.3.19}update()}{28}{subsubsection.4.5.3.19}%
+\contentsline {section}{\numberline {4.6}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{29}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Constructor \& Destructor Documentation}{30}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}EntityManager()}{30}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}$\sim $EntityManager()}{31}{subsubsection.4.6.1.2}%
+\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{31}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}addEntity()}{31}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}getEntities()}{32}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}getEntity()}{32}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}getEntityMap()}{32}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}init()}{33}{subsubsection.4.6.2.5}%
+\contentsline {section}{\numberline {4.7}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{33}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{35}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{36}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{36}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{37}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}EventEngine()}{37}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}$\sim $EventEngine()}{37}{subsubsection.4.9.2.2}%
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{37}{subsection.4.9.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.1}addKeyPressed()}{37}{subsubsection.4.9.3.1}%
+\contentsline {subsubsection}{\numberline {4.9.3.2}addMouseButtonPressed()}{38}{subsubsection.4.9.3.2}%
+\contentsline {subsubsection}{\numberline {4.9.3.3}addMouseMoved()}{38}{subsubsection.4.9.3.3}%
+\contentsline {subsubsection}{\numberline {4.9.3.4}getEvent()}{39}{subsubsection.4.9.3.4}%
+\contentsline {subsubsection}{\numberline {4.9.3.5}getKeyPressedMap()}{39}{subsubsection.4.9.3.5}%
+\contentsline {subsubsection}{\numberline {4.9.3.6}getKeyStatesMap()}{39}{subsubsection.4.9.3.6}%
+\contentsline {subsubsection}{\numberline {4.9.3.7}getMouseButtonPressedMap()}{40}{subsubsection.4.9.3.7}%
+\contentsline {subsubsection}{\numberline {4.9.3.8}getMouseMovedMap()}{40}{subsubsection.4.9.3.8}%
+\contentsline {subsubsection}{\numberline {4.9.3.9}setKeyStatesMap()}{40}{subsubsection.4.9.3.9}%
+\contentsline {section}{\numberline {4.10}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{41}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine Class Reference}{42}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{45}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{45}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}GameEngine()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{45}{subsubsection.4.11.2.1}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}GameEngine()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{45}{subsubsection.4.11.2.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.3}$\sim $GameEngine()}{46}{subsubsection.4.11.2.3}%
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{46}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}addWorld()}{46}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}eventGameEngine()}{47}{subsubsection.4.11.3.2}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}getClock()}{47}{subsubsection.4.11.3.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}getCurrentWorld()}{47}{subsubsection.4.11.3.4}%
+\contentsline {subsubsection}{\numberline {4.11.3.5}getDeltaTime()}{48}{subsubsection.4.11.3.5}%
+\contentsline {subsubsection}{\numberline {4.11.3.6}getEventEngine()}{48}{subsubsection.4.11.3.6}%
+\contentsline {subsubsection}{\numberline {4.11.3.7}getFilesRessources()}{48}{subsubsection.4.11.3.7}%
+\contentsline {subsubsection}{\numberline {4.11.3.8}getMapFont()}{49}{subsubsection.4.11.3.8}%
+\contentsline {subsubsection}{\numberline {4.11.3.9}getMapMusic()}{49}{subsubsection.4.11.3.9}%
+\contentsline {subsubsection}{\numberline {4.11.3.10}getMapSound()}{49}{subsubsection.4.11.3.10}%
+\contentsline {subsubsection}{\numberline {4.11.3.11}getMapTexture()}{50}{subsubsection.4.11.3.11}%
+\contentsline {subsubsection}{\numberline {4.11.3.12}getWindow()}{50}{subsubsection.4.11.3.12}%
+\contentsline {subsubsection}{\numberline {4.11.3.13}getWorld()}{50}{subsubsection.4.11.3.13}%
+\contentsline {subsubsection}{\numberline {4.11.3.14}getWorldMap()}{51}{subsubsection.4.11.3.14}%
+\contentsline {subsubsection}{\numberline {4.11.3.15}initialize()}{51}{subsubsection.4.11.3.15}%
+\contentsline {subsubsection}{\numberline {4.11.3.16}initializeAllFiles()}{51}{subsubsection.4.11.3.16}%
+\contentsline {subsubsection}{\numberline {4.11.3.17}initializeFont()}{52}{subsubsection.4.11.3.17}%
+\contentsline {subsubsection}{\numberline {4.11.3.18}initializeMusic()}{52}{subsubsection.4.11.3.18}%
+\contentsline {subsubsection}{\numberline {4.11.3.19}initializeMusicFunction()}{52}{subsubsection.4.11.3.19}%
+\contentsline {subsubsection}{\numberline {4.11.3.20}initializeSound()}{53}{subsubsection.4.11.3.20}%
+\contentsline {subsubsection}{\numberline {4.11.3.21}initializeSoundFunction()}{53}{subsubsection.4.11.3.21}%
+\contentsline {subsubsection}{\numberline {4.11.3.22}initializeSpriteFunction()}{53}{subsubsection.4.11.3.22}%
+\contentsline {subsubsection}{\numberline {4.11.3.23}initializeTextFunction()}{54}{subsubsection.4.11.3.23}%
+\contentsline {subsubsection}{\numberline {4.11.3.24}initializeTexture()}{54}{subsubsection.4.11.3.24}%
+\contentsline {subsubsection}{\numberline {4.11.3.25}initializeWorldMap()}{54}{subsubsection.4.11.3.25}%
+\contentsline {subsubsection}{\numberline {4.11.3.26}isWindowOpen()}{55}{subsubsection.4.11.3.26}%
+\contentsline {subsubsection}{\numberline {4.11.3.27}renderGameEngine()}{55}{subsubsection.4.11.3.27}%
+\contentsline {subsubsection}{\numberline {4.11.3.28}run()}{55}{subsubsection.4.11.3.28}%
+\contentsline {subsubsection}{\numberline {4.11.3.29}setCurrentWorld()}{57}{subsubsection.4.11.3.29}%
+\contentsline {subsubsection}{\numberline {4.11.3.30}setDeltaTime()}{57}{subsubsection.4.11.3.30}%
+\contentsline {subsubsection}{\numberline {4.11.3.31}updateGameEngine()}{58}{subsubsection.4.11.3.31}%
+\contentsline {section}{\numberline {4.12}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Engine\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{58}{section.4.12}%
+\contentsline {section}{\numberline {4.13}ITransform Class Reference}{60}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{60}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Constructor \& Destructor Documentation}{60}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}$\sim $ITransform()}{60}{subsubsection.4.13.2.1}%
+\contentsline {subsection}{\numberline {4.13.3}Member Function Documentation}{61}{subsection.4.13.3}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}getTransform()}{61}{subsubsection.4.13.3.1}%
+\contentsline {section}{\numberline {4.14}Music Class Reference}{61}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{63}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Constructor \& Destructor Documentation}{63}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}Music()}{63}{subsubsection.4.14.2.1}%
+\contentsline {subsubsection}{\numberline {4.14.2.2}$\sim $Music()}{63}{subsubsection.4.14.2.2}%
+\contentsline {subsection}{\numberline {4.14.3}Member Function Documentation}{63}{subsection.4.14.3}%
+\contentsline {subsubsection}{\numberline {4.14.3.1}applyDeferredMusic()}{64}{subsubsection.4.14.3.1}%
+\contentsline {subsubsection}{\numberline {4.14.3.2}getBit()}{64}{subsubsection.4.14.3.2}%
+\contentsline {subsubsection}{\numberline {4.14.3.3}getLoop()}{64}{subsubsection.4.14.3.3}%
+\contentsline {subsubsection}{\numberline {4.14.3.4}getMusic()}{65}{subsubsection.4.14.3.4}%
+\contentsline {subsubsection}{\numberline {4.14.3.5}getStatus()}{65}{subsubsection.4.14.3.5}%
+\contentsline {subsubsection}{\numberline {4.14.3.6}getVolume()}{65}{subsubsection.4.14.3.6}%
+\contentsline {subsubsection}{\numberline {4.14.3.7}init()}{66}{subsubsection.4.14.3.7}%
+\contentsline {subsubsection}{\numberline {4.14.3.8}pause()}{66}{subsubsection.4.14.3.8}%
+\contentsline {subsubsection}{\numberline {4.14.3.9}play()}{66}{subsubsection.4.14.3.9}%
+\contentsline {subsubsection}{\numberline {4.14.3.10}setDeferredMusic()}{67}{subsubsection.4.14.3.10}%
+\contentsline {subsubsection}{\numberline {4.14.3.11}setLoop()}{67}{subsubsection.4.14.3.11}%
+\contentsline {subsubsection}{\numberline {4.14.3.12}setMusic()}{67}{subsubsection.4.14.3.12}%
+\contentsline {subsubsection}{\numberline {4.14.3.13}setVolume()}{68}{subsubsection.4.14.3.13}%
+\contentsline {subsubsection}{\numberline {4.14.3.14}stop()}{68}{subsubsection.4.14.3.14}%
+\contentsline {subsubsection}{\numberline {4.14.3.15}update()}{68}{subsubsection.4.14.3.15}%
+\contentsline {section}{\numberline {4.15}Rect$<$ T $>$ Class Template Reference}{69}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{69}{subsection.4.15.1}%
+\contentsline {subsection}{\numberline {4.15.2}Constructor \& Destructor Documentation}{70}{subsection.4.15.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.1}Rect()}{70}{subsubsection.4.15.2.1}%
+\contentsline {subsubsection}{\numberline {4.15.2.2}$\sim $Rect()}{70}{subsubsection.4.15.2.2}%
+\contentsline {subsection}{\numberline {4.15.3}Member Function Documentation}{71}{subsection.4.15.3}%
+\contentsline {subsubsection}{\numberline {4.15.3.1}contains()}{71}{subsubsection.4.15.3.1}%
+\contentsline {subsubsection}{\numberline {4.15.3.2}getHeight()}{71}{subsubsection.4.15.3.2}%
+\contentsline {subsubsection}{\numberline {4.15.3.3}getLeft()}{72}{subsubsection.4.15.3.3}%
+\contentsline {subsubsection}{\numberline {4.15.3.4}getRect()}{72}{subsubsection.4.15.3.4}%
+\contentsline {subsubsection}{\numberline {4.15.3.5}getTop()}{72}{subsubsection.4.15.3.5}%
+\contentsline {subsubsection}{\numberline {4.15.3.6}getWidth()}{73}{subsubsection.4.15.3.6}%
+\contentsline {section}{\numberline {4.16}Script Class Reference}{73}{section.4.16}%
+\contentsline {section}{\numberline {4.17}Sound Class Reference}{74}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{75}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Constructor \& Destructor Documentation}{75}{subsection.4.17.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.1}Sound()}{75}{subsubsection.4.17.2.1}%
+\contentsline {subsubsection}{\numberline {4.17.2.2}$\sim $Sound()}{76}{subsubsection.4.17.2.2}%
+\contentsline {subsection}{\numberline {4.17.3}Member Function Documentation}{76}{subsection.4.17.3}%
+\contentsline {subsubsection}{\numberline {4.17.3.1}applyDeferredSound()}{76}{subsubsection.4.17.3.1}%
+\contentsline {subsubsection}{\numberline {4.17.3.2}getBit()}{76}{subsubsection.4.17.3.2}%
+\contentsline {subsubsection}{\numberline {4.17.3.3}getLoop()}{77}{subsubsection.4.17.3.3}%
+\contentsline {subsubsection}{\numberline {4.17.3.4}getSound()}{77}{subsubsection.4.17.3.4}%
+\contentsline {subsubsection}{\numberline {4.17.3.5}getVolume()}{77}{subsubsection.4.17.3.5}%
+\contentsline {subsubsection}{\numberline {4.17.3.6}init()}{78}{subsubsection.4.17.3.6}%
+\contentsline {subsubsection}{\numberline {4.17.3.7}isPlaying()}{78}{subsubsection.4.17.3.7}%
+\contentsline {subsubsection}{\numberline {4.17.3.8}pause()}{78}{subsubsection.4.17.3.8}%
+\contentsline {subsubsection}{\numberline {4.17.3.9}play()}{79}{subsubsection.4.17.3.9}%
+\contentsline {subsubsection}{\numberline {4.17.3.10}setDeferredSound()}{79}{subsubsection.4.17.3.10}%
+\contentsline {subsubsection}{\numberline {4.17.3.11}setLoop()}{79}{subsubsection.4.17.3.11}%
+\contentsline {subsubsection}{\numberline {4.17.3.12}setSound()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{80}{subsubsection.4.17.3.12}%
+\contentsline {subsubsection}{\numberline {4.17.3.13}setSound()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{80}{subsubsection.4.17.3.13}%
+\contentsline {subsubsection}{\numberline {4.17.3.14}setVolume()}{81}{subsubsection.4.17.3.14}%
+\contentsline {subsubsection}{\numberline {4.17.3.15}stop()}{81}{subsubsection.4.17.3.15}%
+\contentsline {subsubsection}{\numberline {4.17.3.16}update()}{81}{subsubsection.4.17.3.16}%
+\contentsline {section}{\numberline {4.18}Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{82}{section.4.18}%
 \contentsline {section}{\numberline {4.19}Sprite Class Reference}{83}{section.4.19}%
-\contentsline {subsection}{\numberline {4.19.1}Detailed Description}{85}{subsection.4.19.1}%
-\contentsline {subsection}{\numberline {4.19.2}Constructor \& Destructor Documentation}{85}{subsection.4.19.2}%
-\contentsline {subsubsection}{\numberline {4.19.2.1}Sprite()}{85}{subsubsection.4.19.2.1}%
+\contentsline {subsection}{\numberline {4.19.1}Detailed Description}{84}{subsection.4.19.1}%
+\contentsline {subsection}{\numberline {4.19.2}Constructor \& Destructor Documentation}{84}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}Sprite()}{84}{subsubsection.4.19.2.1}%
 \contentsline {subsubsection}{\numberline {4.19.2.2}$\sim $Sprite()}{85}{subsubsection.4.19.2.2}%
-\contentsline {subsection}{\numberline {4.19.3}Member Function Documentation}{86}{subsection.4.19.3}%
-\contentsline {subsubsection}{\numberline {4.19.3.1}applyDeferredSprite()}{86}{subsubsection.4.19.3.1}%
-\contentsline {subsubsection}{\numberline {4.19.3.2}draw()}{86}{subsubsection.4.19.3.2}%
-\contentsline {subsubsection}{\numberline {4.19.3.3}getBit()}{87}{subsubsection.4.19.3.3}%
-\contentsline {subsubsection}{\numberline {4.19.3.4}getSprite()}{87}{subsubsection.4.19.3.4}%
+\contentsline {subsection}{\numberline {4.19.3}Member Function Documentation}{85}{subsection.4.19.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.1}applyDeferredSprite()}{85}{subsubsection.4.19.3.1}%
+\contentsline {subsubsection}{\numberline {4.19.3.2}draw()}{85}{subsubsection.4.19.3.2}%
+\contentsline {subsubsection}{\numberline {4.19.3.3}getBit()}{86}{subsubsection.4.19.3.3}%
+\contentsline {subsubsection}{\numberline {4.19.3.4}getSprite()}{86}{subsubsection.4.19.3.4}%
 \contentsline {subsubsection}{\numberline {4.19.3.5}getTransform()}{87}{subsubsection.4.19.3.5}%
-\contentsline {subsubsection}{\numberline {4.19.3.6}init()}{88}{subsubsection.4.19.3.6}%
-\contentsline {subsubsection}{\numberline {4.19.3.7}setDeferredSprite()}{88}{subsubsection.4.19.3.7}%
+\contentsline {subsubsection}{\numberline {4.19.3.6}init()}{87}{subsubsection.4.19.3.6}%
+\contentsline {subsubsection}{\numberline {4.19.3.7}setDeferredSprite()}{87}{subsubsection.4.19.3.7}%
 \contentsline {subsubsection}{\numberline {4.19.3.8}setSprite()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{88}{subsubsection.4.19.3.8}%
-\contentsline {subsubsection}{\numberline {4.19.3.9}setSprite()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{89}{subsubsection.4.19.3.9}%
+\contentsline {subsubsection}{\numberline {4.19.3.9}setSprite()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{88}{subsubsection.4.19.3.9}%
 \contentsline {subsubsection}{\numberline {4.19.3.10}setTransform()}{89}{subsubsection.4.19.3.10}%
-\contentsline {subsubsection}{\numberline {4.19.3.11}update()}{90}{subsubsection.4.19.3.11}%
+\contentsline {subsubsection}{\numberline {4.19.3.11}update()}{89}{subsubsection.4.19.3.11}%
 \contentsline {section}{\numberline {4.20}Sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{90}{section.4.20}%
 \contentsline {section}{\numberline {4.21}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rect Class Reference}{91}{section.4.21}%
 \contentsline {section}{\numberline {4.22}Testto\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML Class Reference}{92}{section.4.22}%
 \contentsline {section}{\numberline {4.23}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vector2 Class Reference}{93}{section.4.23}%
 \contentsline {section}{\numberline {4.24}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World Class Reference}{94}{section.4.24}%
 \contentsline {section}{\numberline {4.25}Text Class Reference}{95}{section.4.25}%
-\contentsline {subsection}{\numberline {4.25.1}Detailed Description}{97}{subsection.4.25.1}%
+\contentsline {subsection}{\numberline {4.25.1}Detailed Description}{96}{subsection.4.25.1}%
 \contentsline {subsection}{\numberline {4.25.2}Constructor \& Destructor Documentation}{97}{subsection.4.25.2}%
-\contentsline {subsubsection}{\numberline {4.25.2.1}Text()}{98}{subsubsection.4.25.2.1}%
-\contentsline {subsubsection}{\numberline {4.25.2.2}$\sim $Text()}{98}{subsubsection.4.25.2.2}%
-\contentsline {subsection}{\numberline {4.25.3}Member Function Documentation}{98}{subsection.4.25.3}%
-\contentsline {subsubsection}{\numberline {4.25.3.1}applyDeferredText()}{98}{subsubsection.4.25.3.1}%
-\contentsline {subsubsection}{\numberline {4.25.3.2}draw()}{99}{subsubsection.4.25.3.2}%
-\contentsline {subsubsection}{\numberline {4.25.3.3}getBit()}{99}{subsubsection.4.25.3.3}%
+\contentsline {subsubsection}{\numberline {4.25.2.1}Text()}{97}{subsubsection.4.25.2.1}%
+\contentsline {subsubsection}{\numberline {4.25.2.2}$\sim $Text()}{97}{subsubsection.4.25.2.2}%
+\contentsline {subsection}{\numberline {4.25.3}Member Function Documentation}{97}{subsection.4.25.3}%
+\contentsline {subsubsection}{\numberline {4.25.3.1}applyDeferredText()}{97}{subsubsection.4.25.3.1}%
+\contentsline {subsubsection}{\numberline {4.25.3.2}draw()}{98}{subsubsection.4.25.3.2}%
+\contentsline {subsubsection}{\numberline {4.25.3.3}getBit()}{98}{subsubsection.4.25.3.3}%
 \contentsline {subsubsection}{\numberline {4.25.3.4}getColorFill()}{99}{subsubsection.4.25.3.4}%
-\contentsline {subsubsection}{\numberline {4.25.3.5}getColorOutline()}{100}{subsubsection.4.25.3.5}%
-\contentsline {subsubsection}{\numberline {4.25.3.6}getFont()}{100}{subsubsection.4.25.3.6}%
+\contentsline {subsubsection}{\numberline {4.25.3.5}getColorOutline()}{99}{subsubsection.4.25.3.5}%
+\contentsline {subsubsection}{\numberline {4.25.3.6}getFont()}{99}{subsubsection.4.25.3.6}%
 \contentsline {subsubsection}{\numberline {4.25.3.7}getSize()}{100}{subsubsection.4.25.3.7}%
-\contentsline {subsubsection}{\numberline {4.25.3.8}getStringText()}{101}{subsubsection.4.25.3.8}%
-\contentsline {subsubsection}{\numberline {4.25.3.9}getText()}{101}{subsubsection.4.25.3.9}%
+\contentsline {subsubsection}{\numberline {4.25.3.8}getStringText()}{100}{subsubsection.4.25.3.8}%
+\contentsline {subsubsection}{\numberline {4.25.3.9}getText()}{100}{subsubsection.4.25.3.9}%
 \contentsline {subsubsection}{\numberline {4.25.3.10}getTransform()}{101}{subsubsection.4.25.3.10}%
-\contentsline {subsubsection}{\numberline {4.25.3.11}init()}{102}{subsubsection.4.25.3.11}%
-\contentsline {subsubsection}{\numberline {4.25.3.12}setDeferredText()}{102}{subsubsection.4.25.3.12}%
-\contentsline {subsubsection}{\numberline {4.25.3.13}setFillColor()}{103}{subsubsection.4.25.3.13}%
-\contentsline {subsubsection}{\numberline {4.25.3.14}setFont()}{103}{subsubsection.4.25.3.14}%
-\contentsline {subsubsection}{\numberline {4.25.3.15}setOutlineColor()}{103}{subsubsection.4.25.3.15}%
-\contentsline {subsubsection}{\numberline {4.25.3.16}setSize()}{104}{subsubsection.4.25.3.16}%
-\contentsline {subsubsection}{\numberline {4.25.3.17}setString()}{104}{subsubsection.4.25.3.17}%
-\contentsline {subsubsection}{\numberline {4.25.3.18}setText()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{104}{subsubsection.4.25.3.18}%
-\contentsline {subsubsection}{\numberline {4.25.3.19}setText()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{106}{subsubsection.4.25.3.19}%
-\contentsline {subsubsection}{\numberline {4.25.3.20}setTransform()}{106}{subsubsection.4.25.3.20}%
-\contentsline {subsubsection}{\numberline {4.25.3.21}update()}{107}{subsubsection.4.25.3.21}%
-\contentsline {section}{\numberline {4.26}to\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML Class Reference}{107}{section.4.26}%
-\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{108}{subsection.4.26.1}%
-\contentsline {subsection}{\numberline {4.26.2}Constructor \& Destructor Documentation}{108}{subsection.4.26.2}%
-\contentsline {subsubsection}{\numberline {4.26.2.1}toSFML()}{108}{subsubsection.4.26.2.1}%
-\contentsline {subsubsection}{\numberline {4.26.2.2}$\sim $toSFML()}{108}{subsubsection.4.26.2.2}%
-\contentsline {subsection}{\numberline {4.26.3}Member Function Documentation}{109}{subsection.4.26.3}%
-\contentsline {subsubsection}{\numberline {4.26.3.1}toSFMLRect()}{109}{subsubsection.4.26.3.1}%
-\contentsline {section}{\numberline {4.27}Transform Class Reference}{109}{section.4.27}%
-\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{111}{subsection.4.27.1}%
-\contentsline {subsection}{\numberline {4.27.2}Constructor \& Destructor Documentation}{111}{subsection.4.27.2}%
-\contentsline {subsubsection}{\numberline {4.27.2.1}Transform()}{111}{subsubsection.4.27.2.1}%
-\contentsline {subsubsection}{\numberline {4.27.2.2}$\sim $Transform()}{111}{subsubsection.4.27.2.2}%
-\contentsline {subsection}{\numberline {4.27.3}Member Function Documentation}{112}{subsection.4.27.3}%
-\contentsline {subsubsection}{\numberline {4.27.3.1}applyDeferredTransform()}{112}{subsubsection.4.27.3.1}%
-\contentsline {subsubsection}{\numberline {4.27.3.2}getBit()}{112}{subsubsection.4.27.3.2}%
-\contentsline {subsubsection}{\numberline {4.27.3.3}getPosition()}{113}{subsubsection.4.27.3.3}%
-\contentsline {subsubsection}{\numberline {4.27.3.4}getRotation()}{113}{subsubsection.4.27.3.4}%
-\contentsline {subsubsection}{\numberline {4.27.3.5}getScale()}{113}{subsubsection.4.27.3.5}%
-\contentsline {subsubsection}{\numberline {4.27.3.6}getTransform()}{114}{subsubsection.4.27.3.6}%
-\contentsline {subsubsection}{\numberline {4.27.3.7}init()}{114}{subsubsection.4.27.3.7}%
-\contentsline {subsubsection}{\numberline {4.27.3.8}setDeferredTransform()}{114}{subsubsection.4.27.3.8}%
-\contentsline {subsubsection}{\numberline {4.27.3.9}setPosition()}{115}{subsubsection.4.27.3.9}%
-\contentsline {subsubsection}{\numberline {4.27.3.10}setRotation()}{115}{subsubsection.4.27.3.10}%
-\contentsline {subsubsection}{\numberline {4.27.3.11}setScale()}{115}{subsubsection.4.27.3.11}%
-\contentsline {subsubsection}{\numberline {4.27.3.12}setTransform()}{116}{subsubsection.4.27.3.12}%
-\contentsline {subsubsection}{\numberline {4.27.3.13}update()}{116}{subsubsection.4.27.3.13}%
-\contentsline {section}{\numberline {4.28}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{117}{section.4.28}%
-\contentsline {section}{\numberline {4.29}Vector2$<$ T $>$ Class Template Reference}{118}{section.4.29}%
-\contentsline {subsection}{\numberline {4.29.1}Detailed Description}{118}{subsection.4.29.1}%
-\contentsline {subsection}{\numberline {4.29.2}Constructor \& Destructor Documentation}{118}{subsection.4.29.2}%
-\contentsline {subsubsection}{\numberline {4.29.2.1}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{118}{subsubsection.4.29.2.1}%
-\contentsline {subsubsection}{\numberline {4.29.2.2}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{119}{subsubsection.4.29.2.2}%
-\contentsline {subsubsection}{\numberline {4.29.2.3}$\sim $Vector2()}{119}{subsubsection.4.29.2.3}%
-\contentsline {subsection}{\numberline {4.29.3}Member Function Documentation}{120}{subsection.4.29.3}%
-\contentsline {subsubsection}{\numberline {4.29.3.1}getVector2Struct()}{120}{subsubsection.4.29.3.1}%
-\contentsline {subsubsection}{\numberline {4.29.3.2}getX()}{120}{subsubsection.4.29.3.2}%
-\contentsline {subsubsection}{\numberline {4.29.3.3}getY()}{121}{subsubsection.4.29.3.3}%
-\contentsline {subsubsection}{\numberline {4.29.3.4}setX()}{121}{subsubsection.4.29.3.4}%
-\contentsline {subsubsection}{\numberline {4.29.3.5}setY()}{121}{subsubsection.4.29.3.5}%
-\contentsline {section}{\numberline {4.30}World Class Reference}{122}{section.4.30}%
-\contentsline {subsection}{\numberline {4.30.1}Detailed Description}{124}{subsection.4.30.1}%
-\contentsline {subsection}{\numberline {4.30.2}Constructor \& Destructor Documentation}{124}{subsection.4.30.2}%
-\contentsline {subsubsection}{\numberline {4.30.2.1}World()}{124}{subsubsection.4.30.2.1}%
-\contentsline {subsubsection}{\numberline {4.30.2.2}$\sim $World()}{124}{subsubsection.4.30.2.2}%
-\contentsline {subsection}{\numberline {4.30.3}Member Function Documentation}{124}{subsection.4.30.3}%
-\contentsline {subsubsection}{\numberline {4.30.3.1}addEntityManager()}{125}{subsubsection.4.30.3.1}%
-\contentsline {subsubsection}{\numberline {4.30.3.2}createEntities()}{125}{subsubsection.4.30.3.2}%
-\contentsline {subsubsection}{\numberline {4.30.3.3}getEntitiesManager()}{125}{subsubsection.4.30.3.3}%
-\contentsline {subsubsection}{\numberline {4.30.3.4}getEntityManager()}{126}{subsubsection.4.30.3.4}%
-\contentsline {subsubsection}{\numberline {4.30.3.5}getEntityManagerMap()}{126}{subsubsection.4.30.3.5}%
-\contentsline {subsubsection}{\numberline {4.30.3.6}getNameWorld()}{126}{subsubsection.4.30.3.6}%
-\contentsline {subsubsection}{\numberline {4.30.3.7}init()}{127}{subsubsection.4.30.3.7}%
-\contentsline {subsubsection}{\numberline {4.30.3.8}setNameWorld()}{127}{subsubsection.4.30.3.8}%
-\contentsline {chapter}{Index}{129}{section*.89}%
+\contentsline {subsubsection}{\numberline {4.25.3.11}init()}{101}{subsubsection.4.25.3.11}%
+\contentsline {subsubsection}{\numberline {4.25.3.12}setDeferredText()}{101}{subsubsection.4.25.3.12}%
+\contentsline {subsubsection}{\numberline {4.25.3.13}setFillColor()}{102}{subsubsection.4.25.3.13}%
+\contentsline {subsubsection}{\numberline {4.25.3.14}setFont()}{102}{subsubsection.4.25.3.14}%
+\contentsline {subsubsection}{\numberline {4.25.3.15}setOutlineColor()}{102}{subsubsection.4.25.3.15}%
+\contentsline {subsubsection}{\numberline {4.25.3.16}setSize()}{103}{subsubsection.4.25.3.16}%
+\contentsline {subsubsection}{\numberline {4.25.3.17}setString()}{103}{subsubsection.4.25.3.17}%
+\contentsline {subsubsection}{\numberline {4.25.3.18}setText()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{103}{subsubsection.4.25.3.18}%
+\contentsline {subsubsection}{\numberline {4.25.3.19}setText()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{104}{subsubsection.4.25.3.19}%
+\contentsline {subsubsection}{\numberline {4.25.3.20}setTransform()}{105}{subsubsection.4.25.3.20}%
+\contentsline {subsubsection}{\numberline {4.25.3.21}update()}{105}{subsubsection.4.25.3.21}%
+\contentsline {section}{\numberline {4.26}to\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML Class Reference}{105}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{106}{subsection.4.26.1}%
+\contentsline {subsection}{\numberline {4.26.2}Constructor \& Destructor Documentation}{106}{subsection.4.26.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.1}toSFML()}{106}{subsubsection.4.26.2.1}%
+\contentsline {subsubsection}{\numberline {4.26.2.2}$\sim $toSFML()}{107}{subsubsection.4.26.2.2}%
+\contentsline {subsection}{\numberline {4.26.3}Member Function Documentation}{107}{subsection.4.26.3}%
+\contentsline {subsubsection}{\numberline {4.26.3.1}toSFMLRect()}{107}{subsubsection.4.26.3.1}%
+\contentsline {section}{\numberline {4.27}Transform Class Reference}{108}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{109}{subsection.4.27.1}%
+\contentsline {subsection}{\numberline {4.27.2}Constructor \& Destructor Documentation}{109}{subsection.4.27.2}%
+\contentsline {subsubsection}{\numberline {4.27.2.1}Transform()}{109}{subsubsection.4.27.2.1}%
+\contentsline {subsubsection}{\numberline {4.27.2.2}$\sim $Transform()}{110}{subsubsection.4.27.2.2}%
+\contentsline {subsection}{\numberline {4.27.3}Member Function Documentation}{110}{subsection.4.27.3}%
+\contentsline {subsubsection}{\numberline {4.27.3.1}applyDeferredTransform()}{110}{subsubsection.4.27.3.1}%
+\contentsline {subsubsection}{\numberline {4.27.3.2}getBit()}{110}{subsubsection.4.27.3.2}%
+\contentsline {subsubsection}{\numberline {4.27.3.3}getPosition()}{111}{subsubsection.4.27.3.3}%
+\contentsline {subsubsection}{\numberline {4.27.3.4}getRotation()}{111}{subsubsection.4.27.3.4}%
+\contentsline {subsubsection}{\numberline {4.27.3.5}getScale()}{111}{subsubsection.4.27.3.5}%
+\contentsline {subsubsection}{\numberline {4.27.3.6}getTransform()}{112}{subsubsection.4.27.3.6}%
+\contentsline {subsubsection}{\numberline {4.27.3.7}init()}{112}{subsubsection.4.27.3.7}%
+\contentsline {subsubsection}{\numberline {4.27.3.8}setDeferredTransform()}{112}{subsubsection.4.27.3.8}%
+\contentsline {subsubsection}{\numberline {4.27.3.9}setPosition()}{113}{subsubsection.4.27.3.9}%
+\contentsline {subsubsection}{\numberline {4.27.3.10}setRotation()}{113}{subsubsection.4.27.3.10}%
+\contentsline {subsubsection}{\numberline {4.27.3.11}setScale()}{113}{subsubsection.4.27.3.11}%
+\contentsline {subsubsection}{\numberline {4.27.3.12}setTransform()}{115}{subsubsection.4.27.3.12}%
+\contentsline {subsubsection}{\numberline {4.27.3.13}update()}{115}{subsubsection.4.27.3.13}%
+\contentsline {section}{\numberline {4.28}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{116}{section.4.28}%
+\contentsline {section}{\numberline {4.29}Vector2$<$ T $>$ Class Template Reference}{117}{section.4.29}%
+\contentsline {subsection}{\numberline {4.29.1}Detailed Description}{117}{subsection.4.29.1}%
+\contentsline {subsection}{\numberline {4.29.2}Constructor \& Destructor Documentation}{117}{subsection.4.29.2}%
+\contentsline {subsubsection}{\numberline {4.29.2.1}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{117}{subsubsection.4.29.2.1}%
+\contentsline {subsubsection}{\numberline {4.29.2.2}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{118}{subsubsection.4.29.2.2}%
+\contentsline {subsubsection}{\numberline {4.29.2.3}$\sim $Vector2()}{118}{subsubsection.4.29.2.3}%
+\contentsline {subsection}{\numberline {4.29.3}Member Function Documentation}{119}{subsection.4.29.3}%
+\contentsline {subsubsection}{\numberline {4.29.3.1}getVector2Struct()}{119}{subsubsection.4.29.3.1}%
+\contentsline {subsubsection}{\numberline {4.29.3.2}getX()}{119}{subsubsection.4.29.3.2}%
+\contentsline {subsubsection}{\numberline {4.29.3.3}getY()}{120}{subsubsection.4.29.3.3}%
+\contentsline {subsubsection}{\numberline {4.29.3.4}setX()}{120}{subsubsection.4.29.3.4}%
+\contentsline {subsubsection}{\numberline {4.29.3.5}setY()}{120}{subsubsection.4.29.3.5}%
+\contentsline {section}{\numberline {4.30}World Class Reference}{121}{section.4.30}%
+\contentsline {subsection}{\numberline {4.30.1}Detailed Description}{123}{subsection.4.30.1}%
+\contentsline {subsection}{\numberline {4.30.2}Constructor \& Destructor Documentation}{123}{subsection.4.30.2}%
+\contentsline {subsubsection}{\numberline {4.30.2.1}World()}{123}{subsubsection.4.30.2.1}%
+\contentsline {subsubsection}{\numberline {4.30.2.2}$\sim $World()}{123}{subsubsection.4.30.2.2}%
+\contentsline {subsection}{\numberline {4.30.3}Member Function Documentation}{123}{subsection.4.30.3}%
+\contentsline {subsubsection}{\numberline {4.30.3.1}addEntityManager()}{124}{subsubsection.4.30.3.1}%
+\contentsline {subsubsection}{\numberline {4.30.3.2}createEntities()}{124}{subsubsection.4.30.3.2}%
+\contentsline {subsubsection}{\numberline {4.30.3.3}getEntitiesManager()}{124}{subsubsection.4.30.3.3}%
+\contentsline {subsubsection}{\numberline {4.30.3.4}getEntityManager()}{125}{subsubsection.4.30.3.4}%
+\contentsline {subsubsection}{\numberline {4.30.3.5}getEntityManagerMap()}{125}{subsubsection.4.30.3.5}%
+\contentsline {subsubsection}{\numberline {4.30.3.6}getNameWorld()}{125}{subsubsection.4.30.3.6}%
+\contentsline {subsubsection}{\numberline {4.30.3.7}init()}{126}{subsubsection.4.30.3.7}%
+\contentsline {subsubsection}{\numberline {4.30.3.8}setNameWorld()}{126}{subsubsection.4.30.3.8}%
+\contentsline {chapter}{Index}{127}{section*.89}%

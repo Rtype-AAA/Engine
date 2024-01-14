@@ -21,36 +21,29 @@ private:
 
     int bit = 3; /// < Bit of the Music
 public:
-    /**
-     * @brief Default Music constructor.
-     *
-     * Set the default value to "Default".
-     */
+    /// @brief Default Music constructor.
+    /// @param void
+    /// @return void
     Music() = default;
 
-    /**
-     * @brief Default override Music destructor.
-     *
-     * Set the default value to "Default".
-     */
+    /// @brief Default override Music destructor.
+    /// @param void
+    /// @return void
     ~Music() override = default;
 
-    /**
-     * @brief getBit(): Get the bit of the Music.
-     * @return int: The bit of the Music.
-     */
+    /// @brief getBit(): Get the bit of the Music.
+    /// @param void
+    /// @return int: The bit of the Music.
     int getBit() override;
 
-    /**
-     * @brief update(sf::Time): Update the component Music
-     * @param timeDelta: sf::Time of the game.
-     */
+    /// @brief update(sf::Time): Update the component Music
+    /// @param timeDelta: sf::Time of the game.
+    /// @return void
     void update(sf::Time timeDelta) override;
 
-    /**
-     * @brief init(): Initialize the component.
-     * @return bool: true if the component is initialized, false otherwise
-     */
+    /// @brief init(): Initialize the component.
+    /// @param void
+    /// @return bool: true if the component is initialized, false otherwise
     bool init() override;
 
     /// @brief setMusic(std::map<std::string, std::shared_ptr<sf::Music>>, const std::string&):
@@ -97,7 +90,7 @@ public:
 
     /// @brief getLoop(): Get if the loop is set to True or False.
     /// @param void
-    /// @return bool: True or False.
+    /// @return bool: True or False. If no music set, return false.
     [[nodiscard]] bool getLoop() const;
 
     /// @brief setVolume(float): Set the volume of the music.
@@ -107,11 +100,11 @@ public:
 
     /// @brief getVolume(): Get the volume of the music.
     /// @param void
-    /// @return float: Float number that represents the volume between 0 and 100 of the music.
+    /// @return float: Float number that represents the volume between 0 and 100 of the music. If no music set, return -100.
     [[nodiscard]] float getVolume() const;
 
     /// @brief getStatus(): Get the status of the music. Playing, pause or stop.
     /// @param void
-    /// @return sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing).
+    /// @return sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing). If no music set, return Stopped.
     [[nodiscard]] sf::SoundSource::Status getStatus() const;
 };

@@ -82,9 +82,15 @@ The music class manages the music from an \mbox{\hyperlink{classEntity}{Entity}}
 
 $<$ Bit of the \mbox{\hyperlink{classMusic}{Music}} 
 
-Default \mbox{\hyperlink{classMusic}{Music}} constructor.
-
-Set the default value to \char`\"{}\+Default\char`\"{}. \mbox{\Hypertarget{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}\label{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}} 
+Default \mbox{\hyperlink{classMusic}{Music}} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}\label{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}} 
 \index{Music@{Music}!````~Music@{$\sim$Music}}
 \index{````~Music@{$\sim$Music}!Music@{Music}}
 \doxysubsubsection{\texorpdfstring{$\sim$Music()}{~Music()}}
@@ -94,7 +100,15 @@ Set the default value to \char`\"{}\+Default\char`\"{}. \mbox{\Hypertarget{class
 
 Default override \mbox{\hyperlink{classMusic}{Music}} destructor. 
 
-Set the default value to \char`\"{}\+Default\char`\"{}. 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}\label{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}} 
@@ -125,6 +139,11 @@ void
 
 \mbox{\hyperlink{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classMusic}{Music}}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int\+: The bit of the \mbox{\hyperlink{classMusic}{Music}}. 
 \end{DoxyReturn}
@@ -148,7 +167,7 @@ Implements \mbox{\hyperlink{classComponents_a1b10aca0b906d3b0bb93a1cdb38bb0ad}{C
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool\+: True or False. 
+bool\+: True or False. If no music set, return false. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}\label{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}} 
 \index{Music@{Music}!getMusic@{getMusic}}
@@ -184,7 +203,7 @@ std\+::shared\+\_\+ptr$<$sf\+::\+Music$>$\+: The shared ptr of the music.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-sf\+::\+Sound\+Source\+::\+Status\+: Enumerator of sf\+::\+Sound\+Source\+::\+Status which is (Stopped, Paused, Playing). 
+sf\+::\+Sound\+Source\+::\+Status\+: Enumerator of sf\+::\+Sound\+Source\+::\+Status which is (Stopped, Paused, Playing). If no music set, return Stopped. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classMusic_a3712255b94968e4832eba16cf6bf91f0}\label{classMusic_a3712255b94968e4832eba16cf6bf91f0}} 
 \index{Music@{Music}!getVolume@{getVolume}}
@@ -202,7 +221,7 @@ sf\+::\+Sound\+Source\+::\+Status\+: Enumerator of sf\+::\+Sound\+Source\+::\+St
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-float\+: Float number that represents the volume between 0 and 100 of the music. 
+float\+: Float number that represents the volume between 0 and 100 of the music. If no music set, return -\/100. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classMusic_a0556e74ac473b986b6364711a36faec2}\label{classMusic_a0556e74ac473b986b6364711a36faec2}} 
 \index{Music@{Music}!init@{init}}
@@ -214,6 +233,11 @@ float\+: Float number that represents the volume between 0 and 100 of the music.
 
 \mbox{\hyperlink{classMusic_a0556e74ac473b986b6364711a36faec2}{init()}}\+: Initialize the component. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool\+: true if the component is initialized, false otherwise 
 \end{DoxyReturn}
@@ -364,6 +388,9 @@ void
 {\em time\+Delta} & sf\+::\+Time of the game. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.

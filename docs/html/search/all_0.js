@@ -14,6 +14,5 @@ var searchData=
   ['applydeferredsprite_11',['applyDeferredSprite',['../d1/d6d/classSprite.html#ac08dfb2abeeecd9e1975cbde05176bc6',1,'Sprite']]],
   ['applydeferredtext_12',['applyDeferredText',['../df/d53/classText.html#a1513cd6df4563a2e1f4e3b433b395646',1,'Text']]],
   ['applydeferredtransform_13',['applyDeferredTransform',['../db/daf/classTransform.html#a681aa33a3eaedc5333a81e33ab696c6c',1,'Transform']]],
-  ['archetypes_14',['Archetypes',['../d0/d7b/classArchetypes.html',1,'']]],
-  ['audiotest_15',['AudioTest',['../db/d5c/classAudioTest.html',1,'']]]
+  ['archetypes_14',['Archetypes',['../d0/d7b/classArchetypes.html',1,'']]]
 ];
