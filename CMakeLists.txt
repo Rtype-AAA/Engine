@@ -7,30 +7,40 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_TESTS "Build the test suite" OFF)
 
-set(SFML_SYSTEM_LIB_PATH "/usr/local/lib/libsfml-system.so.2.6.1")
-if(NOT EXISTS "${SFML_SYSTEM_LIB_PATH}")
-    message(STATUS "SFML system library not found. Attempting to install SFML...")
+if(WIN32)
+    set(SFML_VERSION 2.6.1)
+else()
+    set(SFML_VERSION 2.5.1)
+endif()
 
-    execute_process(
-        COMMAND bash -c "echo 'Installing SFML...\n' && cd ${CMAKE_CURRENT_SOURCE_DIR}/SFML && cmake -Bbuild && sudo cmake --build build --config Release --target install"
-        RESULT_VARIABLE SFML_INSTALL_RESULT
-    )
+if(SFML_VERSION EQUAL 2.6.1)
+    set(SFML_SYSTEM_LIB_PATH "/usr/local/lib/libsfml-system.so.2.6.1")
+    if(NOT EXISTS "${SFML_SYSTEM_LIB_PATH}")
+        message(STATUS "SFML system library not found. Attempting to install SFML...")
 
-    if(SFML_INSTALL_RESULT EQUAL 0 AND EXISTS "${SFML_SYSTEM_LIB_PATH}")
-        message(STATUS "SFML successfully installed.")
-    else()
-        message(FATAL_ERROR "Failed to install SFML.")
+        execute_process(
+            COMMAND bash -c "echo 'Installing SFML...\n' && cd ${CMAKE_CURRENT_SOURCE_DIR}/SFML && cmake -Bbuild && sudo cmake --build build --config Release --target install"
+            RESULT_VARIABLE SFML_INSTALL_RESULT
+        )
+
+        if(SFML_INSTALL_RESULT EQUAL 0 AND EXISTS "${SFML_SYSTEM_LIB_PATH}")
+            message(STATUS "SFML successfully installed.")
+            find_package(SFML 2.6.1 COMPONENTS system window graphics audio QUIET)
+
+            if(NOT SFML_FOUND)
+                message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
+            else()
+                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
+            endif()
+        else()
+            message(FATAL_ERROR "Failed to install SFML.")
+        endif()
     endif()
+
+else()
+    find_package(SFML ${SFML_VERSION} COMPONENTS system window graphics audio REQUIRED)
 endif()
 
-
-find_package(SFML 2.6.1 COMPONENTS system window graphics audio QUIET)
-
-if(NOT SFML_FOUND)
-    message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
-endif()
-
-set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
 
 file(GLOB HEADER_FILES
         "include/*.h"

@@ -23,16 +23,6 @@
         - name: Install SFML 2.6.1 dependencies
           run: |
             sudo apt-get install -y libsfml-dev libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev libxcursor-dev
-        - name: Install SFML 2.6.1
-          run: |
-            git clone https://github.com/SFML/SFML.git SFML
-            cd SFML
-            git checkout 2.6.1
-            cmake -Bbuild -DBUILD_SHARED_LIBS=ON
-            sudo cmake --build build --config Release --target install
-            echo "SFML 2.6.1 installed successfully"
-            echo ""
-            ls -l /usr/local/lib
 
         - name: Prepare files for packaging
           run: |
