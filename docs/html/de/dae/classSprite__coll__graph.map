@@ -1,7 +1,8 @@
 <map id="Sprite" name="Sprite">
-<area shape="rect" id="node1" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="180,155,236,181"/>
+<area shape="rect" id="node1" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="229,155,285,181"/>
 <area shape="rect" id="node2" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="5,80,149,107"/>
 <area shape="rect" id="node3" href="$da/dc3/classtoSFML.html" title="toSFML class: toSFML is a class that convert some class into SFML class." alt="" coords="174,80,242,107"/>
 <area shape="rect" id="node4" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="266,80,347,107"/>
 <area shape="rect" id="node5" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="259,5,355,32"/>
+<area shape="rect" id="node6" href="$dc/d6c/classITransform.html" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="372,80,457,107"/>
 </map>

@@ -1,14 +1,16 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,81,101,108"/>
+<area shape="rect" id="node1" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,183,101,209"/>
 <area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="193,5,249,32"/>
-<area shape="rect" id="node6" href="$d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world." alt="" coords="193,56,250,83"/>
-<area shape="rect" id="node7" href="$df/d49/classSound.html" title="Sound class: Sound is a class that represents the sound properties of a Component." alt="" coords="192,107,251,133"/>
+<area shape="rect" id="node6" href="$d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world." alt="" coords="193,208,250,235"/>
+<area shape="rect" id="node7" href="$df/d49/classSound.html" title="Sound class: Sound is a class that represents the sound properties of a Component." alt="" coords="192,259,251,285"/>
 <area shape="rect" id="node8" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="181,157,262,184"/>
 <area shape="rect" id="node3" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="341,5,448,32"/>
 <area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="517,5,571,32"/>
 <area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="640,31,737,57"/>
-<area shape="rect" id="node9" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="371,208,418,235"/>
-<area shape="rect" id="node10" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="149,208,293,235"/>
-<area shape="rect" id="node11" href="$d4/d2e/classEventEngine.html" title="EventEngine class: EventEngine is a class that represents the event engine of the game." alt="" coords="496,56,592,83"/>
-<area shape="rect" id="node12" href="$dc/d6c/classITransform.html" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="179,259,264,285"/>
+<area shape="rect" id="node9" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="367,107,423,133"/>
+<area shape="rect" id="node10" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="371,157,418,184"/>
+<area shape="rect" id="node11" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="149,309,293,336"/>
+<area shape="rect" id="node12" href="$d4/d2e/classEventEngine.html" title="EventEngine class: EventEngine is a class that represents the event engine of the game." alt="" coords="496,56,592,83"/>
+<area shape="rect" id="node13" href="$dc/d6c/classITransform.html" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="179,107,264,133"/>
+<area shape="rect" id="node14" href="$da/dc3/classtoSFML.html" title="toSFML class: toSFML is a class that convert some class into SFML class." alt="" coords="187,56,255,83"/>
 </map>

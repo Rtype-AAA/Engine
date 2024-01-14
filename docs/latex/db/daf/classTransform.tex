@@ -16,7 +16,7 @@ Inheritance diagram for Transform\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=152pt]{d2/d02/classTransform__inherit__graph}
+\includegraphics[width=176pt]{d2/d02/classTransform__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -58,9 +58,9 @@ void \mbox{\hyperlink{classTransform_a350bf91f2782b4878725ebaf99608bd3}{set\+Rot
 void \mbox{\hyperlink{classTransform_ae13489fb843274a60bf6e910bc677271}{set\+Scale}} (\mbox{\hyperlink{classVector2}{Vector2}}$<$ float $>$ new\+Scale)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_ae13489fb843274a60bf6e910bc677271}{set\+Scale()}}\+: Set the transform scale of the component; \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTransform_a8ec6afb14aef9cf3cd5901a9aff2630f}{set\+Deferred\+Transform}} (const std\+::function$<$ void()$>$ \&setter)
-\begin{DoxyCompactList}\small\item\em set\+Deferred\+Sprite()\+: Set the deferred sprite. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a8ec6afb14aef9cf3cd5901a9aff2630f}{set\+Deferred\+Transform()}}\+: Set the deferred transform. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTransform_a681aa33a3eaedc5333a81e33ab696c6c}{apply\+Deferred\+Transform}} ()
-\begin{DoxyCompactList}\small\item\em apply\+Deferred\+Sprite()\+: Apply the deferred sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_a681aa33a3eaedc5333a81e33ab696c6c}{apply\+Deferred\+Transform()}}\+: Apply the deferred transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -116,7 +116,7 @@ void
 
 
 
-apply\+Deferred\+Sprite()\+: Apply the deferred sprite. 
+\mbox{\hyperlink{classTransform_a681aa33a3eaedc5333a81e33ab696c6c}{apply\+Deferred\+Transform()}}\+: Apply the deferred transform. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -250,11 +250,11 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 
 
 
-set\+Deferred\+Sprite()\+: Set the deferred sprite. 
+\mbox{\hyperlink{classTransform_a8ec6afb14aef9cf3cd5901a9aff2630f}{set\+Deferred\+Transform()}}\+: Set the deferred transform. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em setter} & Function that will set the sprite. \\
+{\em setter} & Function that will set the transform. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -351,6 +351,9 @@ void
 {\em time\+Delta} & sf\+::\+Time of the game. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.

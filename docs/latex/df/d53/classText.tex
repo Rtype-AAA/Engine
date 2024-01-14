@@ -11,8 +11,7 @@
 
 
 
-Inheritance diagram for Text\+:
-\nopagebreak
+Inheritance diagram for Text\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Text\+:
 \end{figure}
 
 
-Collaboration diagram for Text\+:
-\nopagebreak
+Collaboration diagram for Text\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,8 +34,8 @@ Collaboration diagram for Text\+:
 \begin{DoxyCompactList}\small\item\em $<$ Bit of the \mbox{\hyperlink{classText}{Text}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classText_a342401fbc97a2b4c902c076e86ba43bd}{$\sim$\+Text}} () override=default
 \begin{DoxyCompactList}\small\item\em Default override \mbox{\hyperlink{classText}{Text}} destructor. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classText_ab22667185514d54a6a0c13a4ba843092}{get\+Bit}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTransform_accd67430a797f9443cd4fe3ce7ef2487}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classText}{Text}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classText_ab90c80b2bdb36400e48a735d5b7ce565}{get\+Bit}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_ab90c80b2bdb36400e48a735d5b7ce565}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classText}{Text}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classText_aaf9266cae8121d10028ddd09c5dc78d6}{draw}} (sf\+::\+Render\+Window \&window) const override
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_aaf9266cae8121d10028ddd09c5dc78d6}{draw()}}\+: Draw the \mbox{\hyperlink{classText}{Text}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classText_a372961f4dabb31ecb29ea03d19d3f713}{update}} (sf\+::\+Time delta\+Time) override
@@ -76,7 +74,6 @@ void \mbox{\hyperlink{classText_a91da1b6d9b912a24a48baafb49be7b18}{set\+Transfor
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_a91da1b6d9b912a24a48baafb49be7b18}{set\+Transform(\+Transform\&)}}\+: Set the reference of the \mbox{\hyperlink{classTransform}{Transform}} component. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classText_a7e18894352204a9f842e58163b74ac01}{set\+Deferred\+Text}} (std\+::function$<$ void()$>$ setter)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_a7e18894352204a9f842e58163b74ac01}{set\+Deferred\+Text(std\+::function$<$void()$>$)}}\+: Set the deferred text. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classText_a1513cd6df4563a2e1f4e3b433b395646}\label{classText_a1513cd6df4563a2e1f4e3b433b395646}} 
 void \mbox{\hyperlink{classText_a1513cd6df4563a2e1f4e3b433b395646}{apply\+Deferred\+Text}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classText_a1513cd6df4563a2e1f4e3b433b395646}{apply\+Deferred\+Text()}}\+: Apply the deferred text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -97,9 +94,15 @@ The text class manages the text from an \mbox{\hyperlink{classEntity}{Entity}} u
 
 $<$ Bit of the \mbox{\hyperlink{classText}{Text}}. 
 
-Default \mbox{\hyperlink{classText}{Text}} constructor.
-
-Set the default value to \char`\"{}\+Default\char`\"{} and initialize the transform reference to null. \mbox{\Hypertarget{classText_a342401fbc97a2b4c902c076e86ba43bd}\label{classText_a342401fbc97a2b4c902c076e86ba43bd}} 
+Default \mbox{\hyperlink{classText}{Text}} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classText_a342401fbc97a2b4c902c076e86ba43bd}\label{classText_a342401fbc97a2b4c902c076e86ba43bd}} 
 \index{Text@{Text}!````~Text@{$\sim$Text}}
 \index{````~Text@{$\sim$Text}!Text@{Text}}
 \doxysubsubsection{\texorpdfstring{$\sim$Text()}{~Text()}}
@@ -109,9 +112,35 @@ Set the default value to \char`\"{}\+Default\char`\"{} and initialize the transf
 
 Default override \mbox{\hyperlink{classText}{Text}} destructor. 
 
-Set the default value to \char`\"{}\+Default\char`\"{}. 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classText_a1513cd6df4563a2e1f4e3b433b395646}\label{classText_a1513cd6df4563a2e1f4e3b433b395646}} 
+\index{Text@{Text}!applyDeferredText@{applyDeferredText}}
+\index{applyDeferredText@{applyDeferredText}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{applyDeferredText()}{applyDeferredText()}}
+{\footnotesize\ttfamily void Text\+::apply\+Deferred\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classText_a1513cd6df4563a2e1f4e3b433b395646}{apply\+Deferred\+Text()}}\+: Apply the deferred text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_aaf9266cae8121d10028ddd09c5dc78d6}\label{classText_aaf9266cae8121d10028ddd09c5dc78d6}} 
 \index{Text@{Text}!draw@{draw}}
 \index{draw@{draw}!Text@{Text}}
@@ -127,23 +156,35 @@ Set the default value to \char`\"{}\+Default\char`\"{}.
 {\em window} & SFML Render\+Window where the \mbox{\hyperlink{classText}{Text}} will be drawn. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classDrawableComponent_a9ddc6c3a05dad1228dff97356830ef7f}{Drawable\+Component}}.
 
-\mbox{\Hypertarget{classText_ab22667185514d54a6a0c13a4ba843092}\label{classText_ab22667185514d54a6a0c13a4ba843092}} 
+\mbox{\Hypertarget{classText_ab90c80b2bdb36400e48a735d5b7ce565}\label{classText_ab90c80b2bdb36400e48a735d5b7ce565}} 
 \index{Text@{Text}!getBit@{getBit}}
 \index{getBit@{getBit}!Text@{Text}}
 \doxysubsubsection{\texorpdfstring{getBit()}{getBit()}}
-{\footnotesize\ttfamily int Text\+::get\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily int Text\+::get\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{classTransform_accd67430a797f9443cd4fe3ce7ef2487}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classText}{Text}}. 
+\mbox{\hyperlink{classText_ab90c80b2bdb36400e48a735d5b7ce565}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classText}{Text}}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int\+: The bit of the \mbox{\hyperlink{classText}{Text}}. 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_a1b10aca0b906d3b0bb93a1cdb38bb0ad}{Components}}.
+
 \mbox{\Hypertarget{classText_af7fca88934ce723e377e83a1be7f391b}\label{classText_af7fca88934ce723e377e83a1be7f391b}} 
 \index{Text@{Text}!getColorFill@{getColorFill}}
 \index{getColorFill@{getColorFill}!Text@{Text}}
@@ -154,6 +195,11 @@ int\+: The bit of the \mbox{\hyperlink{classText}{Text}}.
 
 \mbox{\hyperlink{classText_af7fca88934ce723e377e83a1be7f391b}{get\+Color\+Fill()}}\+: Get the fill color. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classColor}{Color}}\+: Fill color of the text. 
 \end{DoxyReturn}
@@ -167,6 +213,11 @@ int\+: The bit of the \mbox{\hyperlink{classText}{Text}}.
 
 \mbox{\hyperlink{classText_a5c1af33e192cb2a8ecb141f4907647f0}{get\+Color\+Outline()}}\+: Get the outline color. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classColor}{Color}}\+: Outline color of the text. 
 \end{DoxyReturn}
@@ -180,6 +231,11 @@ int\+: The bit of the \mbox{\hyperlink{classText}{Text}}.
 
 \mbox{\hyperlink{classText_a049696a373b5dbdb342bf213af2c1bf3}{get\+Font()}}\+: Get the Font. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 sf\+::\+Font\+: Font of the \mbox{\hyperlink{classText}{Text}}. 
 \end{DoxyReturn}
@@ -193,6 +249,11 @@ sf\+::\+Font\+: Font of the \mbox{\hyperlink{classText}{Text}}.
 
 \mbox{\hyperlink{classText_a97d8b361f34c0d40fb9ff43c3474eb8e}{get\+Size()}}\+: Get the size. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int\+: int number that represents size of the text. 
 \end{DoxyReturn}
@@ -206,6 +267,11 @@ int\+: int number that represents size of the text.
 
 \mbox{\hyperlink{classText_acacec75e3065cd0ffe774cc263f034ec}{get\+String\+Text()}}\+: Get the string. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::string\+: String of the text. 
 \end{DoxyReturn}
@@ -219,6 +285,11 @@ std\+::string\+: String of the text.
 
 \mbox{\hyperlink{classText_a8806fa574f8c2b3d0c78a9e1c64dfd99}{get\+Text()}}\+: Get the \mbox{\hyperlink{classText}{Text}}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 sf\+::\+Text\+: \mbox{\hyperlink{classText}{Text}} for draw. 
 \end{DoxyReturn}
@@ -232,6 +303,11 @@ sf\+::\+Text\+: \mbox{\hyperlink{classText}{Text}} for draw.
 
 \mbox{\hyperlink{classText_a810d119c957a8b46a11463d388b32f4f}{get\+Transform()}}\+: Get the reference to the component \mbox{\hyperlink{classTransform}{Transform}}. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Transform$\ast$\+: Reference of \mbox{\hyperlink{classTransform}{Transform}} 
 \end{DoxyReturn}
@@ -249,6 +325,11 @@ Implements \mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{I
 
 \mbox{\hyperlink{classText_a405d236481ab61567e77350b58d327db}{init()}}\+: Initialize the component. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool\+: true if the component is initialized, false otherwise 
 \end{DoxyReturn}
@@ -271,6 +352,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em setter} & Function that will set the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_ab60a2a424d1ac3e5751d8acfe1f9eb46}\label{classText_ab60a2a424d1ac3e5751d8acfe1f9eb46}} 
 \index{Text@{Text}!setFillColor@{setFillColor}}
 \index{setFillColor@{setFillColor}!Text@{Text}}
@@ -286,6 +370,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em fill\+Color} & \mbox{\hyperlink{classColor}{Color}} for the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a0133362262b644cddb52ed11256974b9}\label{classText_a0133362262b644cddb52ed11256974b9}} 
 \index{Text@{Text}!setFont@{setFont}}
 \index{setFont@{setFont}!Text@{Text}}
@@ -303,6 +390,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em name\+Font} & Name of the font loaded. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a4f53bc1e48ad9b9942e365371cf5aad1}\label{classText_a4f53bc1e48ad9b9942e365371cf5aad1}} 
 \index{Text@{Text}!setOutlineColor@{setOutlineColor}}
 \index{setOutlineColor@{setOutlineColor}!Text@{Text}}
@@ -318,6 +408,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em outline\+Color} & \mbox{\hyperlink{classColor}{Color}} for the border of the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a528a2ae574121bc4437575421b6bc429}\label{classText_a528a2ae574121bc4437575421b6bc429}} 
 \index{Text@{Text}!setSize@{setSize}}
 \index{setSize@{setSize}!Text@{Text}}
@@ -333,6 +426,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em size\+Text} & Size of the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_aa766c7439f79db3bc06db5502ce67813}\label{classText_aa766c7439f79db3bc06db5502ce67813}} 
 \index{Text@{Text}!setString@{setString}}
 \index{setString@{setString}!Text@{Text}}
@@ -348,6 +444,9 @@ Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{C
 {\em new\+String\+Text} & String text for draw. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a58c6550ee176223fd7d63a4e20dad2c8}\label{classText_a58c6550ee176223fd7d63a4e20dad2c8}} 
 \index{Text@{Text}!setText@{setText}}
 \index{setText@{setText}!Text@{Text}}
@@ -373,6 +472,9 @@ This function sets the \mbox{\hyperlink{classText}{Text}} of the component using
 {\em fill\+Color} & \mbox{\hyperlink{classColor}{Color}} for the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a098b0cc8819045813503f35f5b4ba47b}\label{classText_a098b0cc8819045813503f35f5b4ba47b}} 
 \index{Text@{Text}!setText@{setText}}
 \index{setText@{setText}!Text@{Text}}
@@ -400,6 +502,9 @@ This function sets the \mbox{\hyperlink{classText}{Text}} of the component using
 {\em outline\+Color} & \mbox{\hyperlink{classColor}{Color}} for the border of the text. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a91da1b6d9b912a24a48baafb49be7b18}\label{classText_a91da1b6d9b912a24a48baafb49be7b18}} 
 \index{Text@{Text}!setTransform@{setTransform}}
 \index{setTransform@{setTransform}!Text@{Text}}
@@ -415,6 +520,9 @@ This function sets the \mbox{\hyperlink{classText}{Text}} of the component using
 {\em new\+Transform} & Reference of \mbox{\hyperlink{classTransform}{Transform}}. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classText_a372961f4dabb31ecb29ea03d19d3f713}\label{classText_a372961f4dabb31ecb29ea03d19d3f713}} 
 \index{Text@{Text}!update@{update}}
 \index{update@{update}!Text@{Text}}
@@ -430,6 +538,9 @@ This function sets the \mbox{\hyperlink{classText}{Text}} of the component using
 {\em time\+Delta} & sf\+::\+Time of the game. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.

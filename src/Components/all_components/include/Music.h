@@ -53,73 +53,65 @@ public:
      */
     bool init() override;
 
-    /**
-     * @brief setMusic(std::map<std::string, std::shared_ptr<sf::Music>>, const std::string&):
-     * Initialize the sf::Music of the class.
-     * @param mapMusic: Map of all the music loaded.
-     * @param nameMusic: Name of the music loaded.
-     */
+    /// @brief setMusic(std::map<std::string, std::shared_ptr<sf::Music>>, const std::string&):
+    /// Initialize the sf::Music of the class.
+    /// @param mapMusic: Map of all the music loaded.
+    /// @param nameMusic: Name of the music loaded.
+    /// @return void
     void setMusic(std::map<std::string, std::shared_ptr<sf::Music>> mapMusic, const std::string& nameMusic);
 
-    /**
-     * @brief setDeferredMusic(std::function<void()>): Set the deferred function for Music.
-     * @param setter: Function that will use Music.
-     */
+    /// @brief setDeferredMusic(std::function<void()>): Set the deferred function for Music.
+    /// @param setter: Function that will use Music.
+    /// @return void
     void setDeferredMusic(std::function<void()> setter);
 
-    /**
-     * @brief applyDeferredMusic(): Apply the deferred function for Music
-     */
+    /// @brief applyDeferredMusic(): Apply the deferred function for Music
+    /// @param void
+    /// @return void
     void applyDeferredMusic();
 
-    /**
-     * @brief getMusic(): Get the music.
-     * @return std::shared_ptr<sf::Music>: The shared ptr of the music.
-     */
+    /// @brief getMusic(): Get the music.
+    /// @param void
+    /// @return std::shared_ptr<sf::Music>: The shared ptr of the music.
     [[nodiscard]] std::shared_ptr<sf::Music> getMusic() const;
 
-    /**
-     * @brief play(): Play the music.
-     */
+    /// @brief play(): Play the music.
+    /// @param void
+    /// @return void
     void play();
 
-    /**
-     * @brief pause(): Pause the music.
-     */
+    /// @brief pause(): Pause the music.
+    /// @param void
+    /// @return void
     void pause();
 
-    /**
-     * @brief stop(): Stop the music.
-     */
+    /// @brief stop(): Stop the music.
+    /// @param void
+    /// @return void
     void stop();
 
-    /**
-     * @brief setLoop(bool): Set the loop of the music.
-     * @param loop: True or False.
-     */
+    /// @brief setLoop(bool): Set the loop of the music.
+    /// @param loop: True or False.
+    /// @return void
     void setLoop(bool loop);
 
-    /**
-     * @brief getLoop(): Get if the loop is set to True or False.
-     * @return bool: True or False.
-     */
+    /// @brief getLoop(): Get if the loop is set to True or False.
+    /// @param void
+    /// @return bool: True or False.
     [[nodiscard]] bool getLoop() const;
 
-    /**
-     * @brief setVolume(float): Set the volume of the music.
-     * @param volume: Float number that represents the volume between 0 and 100 of the music.
-     */
+    /// @brief setVolume(float): Set the volume of the music.
+    /// @param volume: Float number that represents the volume between 0 and 100 of the music.
+    /// @return void
     void setVolume(float volume);
 
-    /**
-     * @brief getVolume(): Get the volume of the music.
-     * @return float: Float number that represents the volume between 0 and 100 of the music.
-     */
+    /// @brief getVolume(): Get the volume of the music.
+    /// @param void
+    /// @return float: Float number that represents the volume between 0 and 100 of the music.
     [[nodiscard]] float getVolume() const;
 
-    /**
-     * @brief getStatus(): Get the status of the music. Playing, pause or stop.
-     * @return sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing).
-     */
+    /// @brief getStatus(): Get the status of the music. Playing, pause or stop.
+    /// @param void
+    /// @return sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing).
     [[nodiscard]] sf::SoundSource::Status getStatus() const;
 };

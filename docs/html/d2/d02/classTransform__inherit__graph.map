@@ -1,5 +1,6 @@
 <map id="Transform" name="Transform">
-<area shape="rect" id="node1" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="13,80,94,107"/>
-<area shape="rect" id="node3" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="30,155,77,181"/>
-<area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node1" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="30,80,111,107"/>
+<area shape="rect" id="node3" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="5,155,61,181"/>
+<area shape="rect" id="node4" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="86,155,133,181"/>
+<area shape="rect" id="node2" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="23,5,119,32"/>
 </map>

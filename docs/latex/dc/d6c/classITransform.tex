@@ -16,7 +16,7 @@ Inheritance diagram for ITransform\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=144pt]{d2/d2f/classITransform__inherit__graph}
+\includegraphics[width=176pt]{d2/d2f/classITransform__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -44,7 +44,15 @@ The \mbox{\hyperlink{classITransform}{ITransform}} interface give to components 
 
 Default Virtual \mbox{\hyperlink{classITransform}{ITransform}} destructor. 
 
-Set the default value to \char`\"{}\+Default\char`\"{}. 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}\label{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}} 
@@ -59,12 +67,17 @@ Set the default value to \char`\"{}\+Default\char`\"{}.
 
 Virtual function which get the reference of the \mbox{\hyperlink{classTransform}{Transform}} component from the same \mbox{\hyperlink{classEntity}{Entity}} when a component need to use \mbox{\hyperlink{classTransform}{Transform}}. If \mbox{\hyperlink{classTransform}{Transform}} don\textquotesingle{}t exist \mbox{\hyperlink{classITransform_a77d1e6d70f08ef542f14d4b1b06c5696}{get\+Transform()}} return nullptr.
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Transform$\ast$\+: The reference of \mbox{\hyperlink{classTransform}{Transform}} or nullptr. 
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classText_a810d119c957a8b46a11463d388b32f4f}{Text}}.
+Implemented in \mbox{\hyperlink{classText_a810d119c957a8b46a11463d388b32f4f}{Text}}, and \mbox{\hyperlink{classSprite_a40a05a2e9cc2653832e3e5c9844d9c46}{Sprite}}.
 
 
 

@@ -35,7 +35,7 @@ Collaboration diagram for World\+:\nopagebreak
 \mbox{\hyperlink{classWorld_a724bc2c94b64a16081f80f14011ff1b1}{$\sim$\+World}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld}{World}} destructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init}} () override
-\begin{DoxyCompactList}\small\item\em init\+Entity\+Manager()\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init()}}\+: Initialize the world. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classWorld_a1bdfe46de39d4eaf4d8bbc0bb5f038c6}{create\+Entities}} (std\+::map$<$ std\+::string, std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} $>$, std\+::vector$<$ std\+::string $>$$>$$>$ \&map\+Entity\+Manager)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWorld_a1bdfe46de39d4eaf4d8bbc0bb5f038c6}{create\+Entities()}}\+: Create the entities. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} \& \mbox{\hyperlink{classWorld_aef0c6d9376d11adb1bd3483e9db269ee}{add\+Entity\+Manager}} (const std\+::string \&Name\+Entity\+Manager)
@@ -146,6 +146,11 @@ void
 
 \mbox{\hyperlink{classWorld_abbc1c9ebb03fff791e823e298ca6ed63}{get\+Entities\+Manager()}}\+: Get the entities 
 
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::map$<$std\+::string, Entity\+Manager$\ast$$>$\+: Get the entities. 
 \end{DoxyReturn}
@@ -211,7 +216,7 @@ std\+::string\+: The name of the world.
 
 
 
-init\+Entity\+Manager()\+: Initialize the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}}. 
+\mbox{\hyperlink{classWorld_a4ae65074f87b1f80fb2e2ce0db373b0d}{init()}}\+: Initialize the world. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -219,7 +224,7 @@ init\+Entity\+Manager()\+: Initialize the \mbox{\hyperlink{classEntityManager}{E
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool\+: true if the \mbox{\hyperlink{classEntityManager}{Entity\+Manager}} is initialized, false otherwise. 
+bool\+: True if the world is initialized, false otherwise. 
 \end{DoxyReturn}
 
 

@@ -14,20 +14,18 @@
 
 class ITransform {
 public:
-    /**
-     * @brief Default Virtual ITransform destructor.
-     *
-     * Set the default value to "Default".
-     */
+    /// @brief Default Virtual ITransform destructor.
+    /// @param void
+    /// @return void
     virtual ~ITransform() = default;
 
-    /**
-     * @brief getTransform(): Get the reference of the component Transform of the same Entity
-     *
-     * Virtual function which get the reference of the Transform component from the same Entity when
-     * a component need to use Transform. If Transform don't exist getTransform() return nullptr.
-     *
-     * @return Transform*: The reference of Transform or nullptr.
-     */
+
+    /// @brief getTransform(): Get the reference of the component Transform of the same Entity
+    ///
+    /// Virtual function which get the reference of the Transform component from the same Entity when
+    /// a component need to use Transform. If Transform don't exist getTransform() return nullptr.
+    ///
+    /// @param void
+    /// @return Transform*: The reference of Transform or nullptr.
     [[nodiscard]] virtual Transform * getTransform() = 0;
 };

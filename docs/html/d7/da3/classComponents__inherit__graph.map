@@ -7,5 +7,6 @@
 <area shape="rect" id="node3" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
 <area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
 <area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
-<area shape="rect" id="node9" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="294,155,341,181"/>
+<area shape="rect" id="node9" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="251,155,307,181"/>
+<area shape="rect" id="node10" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="331,155,378,181"/>
 </map>
