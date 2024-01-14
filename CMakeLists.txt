@@ -51,19 +51,7 @@ else()
                 GIT_TAG 2.5.1)
         FetchContent_MakeAvailable(SFML)
 
-        if(SFML_POPULATED)
-            message(STATUS "SFML successfully installed.")
-            find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
-
-            if(NOT SFML_FOUND)
-                message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
-            else()
-                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib/cmake/SFML")
-            endif()
-
-        else()
-            message(FATAL_ERROR "Failed to install SFML.")
-        endif()
+        find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
     endif()
 endif()
 
