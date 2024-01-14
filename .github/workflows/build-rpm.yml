@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies and compilers for Fedora 38
         run: |
           sudo dnf update -y
-          sudo dnf install -y rpm-build gcc gcc-c++ cmake
+          sudo dnf install -y rpm-build gcc gcc-c++ cmake mesa-libGL-devel
 
       - name: Configure and Build RPM on Fedora 38
         run: |
@@ -50,11 +50,11 @@ jobs:
       - name: Install dependencies and compilers for Fedora Latest
         run: |
           sudo dnf update -y
-          sudo dnf install -y rpm-build gcc gcc-c++ cmake
+          sudo dnf install -y rpm-build gcc gcc-c++ cmake mesa-libGL-devel
 
       - name: Configure and Build RPM on Fedora Latest
         run: |
-          cmake -Bbuild -DCPACK_VERBOSE=ON -DCMAKE_PREFIX_PATH="/usr/local"
+          cmake -Bbuild -DCPACK_VERBOSE=ON
           cmake --build build
           cd build
           cpack

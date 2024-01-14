@@ -22,7 +22,7 @@
 
         - name: Install SFML dependencies
           run: |
-            sudo apt-get install -y libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev libxcursor-dev
+            sudo apt-get install -y libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev libxcursor-dev libgl1-mesa-dev 
 
         - name: Prepare files for packaging
           run: |
