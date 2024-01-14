@@ -19,7 +19,7 @@ Entity::Entity(const std::string& nameEntity, Archetypes newArchetype) : active(
 }
 
 bool Entity::init() {
-    for (int i = 0; i < componentBitset.size(); i++) {
+    for (unsigned int i = 0; i < componentBitset.size(); i++) {
         componentBitset[i] = false;
     }
     return true;
@@ -87,7 +87,7 @@ T& Entity::addComponent(TArgs&&... args) {
 
 template<typename T>
 bool Entity::removeComponent() {
-    int bit = getComponentTypeID<T>();
+    int bit = static_cast<int>(getComponentTypeID<T>());
 
     if (this->getComponentBitset().test(bit)) {
         for (auto it = components.begin(); it != components.end(); it++) {

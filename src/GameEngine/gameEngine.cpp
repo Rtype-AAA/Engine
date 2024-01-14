@@ -12,7 +12,7 @@ GameEngine::GameEngine(sf::VideoMode mode, const sf::String& title, sf::Uint32 s
 }
 
 void GameEngine::run(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                     const std::map<std::string, std::string>& pathRessources,
+                     const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources,
                      const std::string& firstScene) {
     initialize(std::move(mapWorld), pathRessources, firstScene);
     while (isWindowOpen()) {
@@ -122,13 +122,13 @@ std::vector<std::string> GameEngine::getFilesRessources(const std::string& pathD
     std::vector<std::string> allFilesName;
     for (const auto& entry : std::filesystem::directory_iterator(pathDirectory)) {
         const auto& path = entry.path();
-        allFilesName.push_back(path.filename());
+        allFilesName.push_back(path.filename().string());
     }
     return allFilesName;
 }
 
 void GameEngine::initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                            const std::map<std::string, std::string>& pathRessources,
+                            const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources,
                             const std::string& firstScene) {
     initializeAllFiles(pathRessources);
     initializeWorldMap(std::move(mapWorld));
@@ -202,7 +202,7 @@ void GameEngine::initializeTextFunction() const {
     }
 }
 
-void GameEngine::initializeAllFiles(const std::map <std::string, std::string>& pathRessources) {
+void GameEngine::initializeAllFiles(const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources) {
     for (const auto& element : pathRessources) {
         if (element.first == "Textures" || element.first == "Texture") {
             initializeTexture(element.second);
@@ -219,67 +219,57 @@ void GameEngine::initializeAllFiles(const std::map <std::string, std::string>& p
     }
 }
 
-void GameEngine::initializeTexture(std::string path) {
+void GameEngine::initializeTexture(const std::vector<std::pair<std::string, std::string>>& files) {
     sf::Texture texture;
-    std::vector<std::string> allFilesName;
-    allFilesName = getFilesRessources(path);
-    path += "/";
-    for (const auto& element : allFilesName) {
-        if (!texture.loadFromFile(path + element)) {
-            std::cerr << "Error loading texture: " << path << element << std::endl;
+    for (const auto& file : files) {
+        if (!texture.loadFromFile(file.second)) {
+            std::cerr << "Error loading texture: " << file.second << std::endl;
             exit(1);
         } else {
-            std::cout << "Texture loaded successfully: " << path << element << std::endl;
+            std::cout << "Texture loaded successfully: " << file.second << std::endl;
         }
-        mapTexture[element] = std::make_shared<sf::Texture>(texture);
+        mapTexture[file.first] = std::make_shared<sf::Texture>(texture);
     }
 }
 
-void GameEngine::initializeSound(std::string path) {
+void GameEngine::initializeSound(const std::vector<std::pair<std::string, std::string>>& files) {
     sf::SoundBuffer soundBuffer;
-    std::vector<std::string> allFilesName;
-    allFilesName = getFilesRessources(path);
-    path += "/";
-    for (const auto& element : allFilesName) {
-        if (!soundBuffer.loadFromFile(path + element)) {
-            std::cerr << "Error loading sound: " << path << element << std::endl;
+    for (const auto& file : files) {
+        if (!soundBuffer.loadFromFile(file.second)) {
+            std::cerr << "Error loading texture: " << file.second << std::endl;
             exit(1);
-        } else {
-            std::cout << "Sound loaded successfully: " << path << element << std::endl;
         }
-        mapSound[element] = std::make_shared<sf::SoundBuffer>(soundBuffer);
+        else {
+            std::cout << "Texture loaded successfully: " << file.second << std::endl;
+        }
+        mapSound[file.first] = std::make_shared<sf::SoundBuffer>(soundBuffer);
     }
 }
 
-void GameEngine::initializeMusic(std::string path) {
-    std::vector<std::string> allFilesName;
-    allFilesName = getFilesRessources(path);
-    path += "/";
-    for (const auto& element : allFilesName) {
+void GameEngine::initializeMusic(const std::vector<std::pair<std::string, std::string>>& files) {
+    for (const auto& file : files) {
         std::shared_ptr<sf::Music> music = std::make_shared<sf::Music>();
-        if (!music->openFromFile(path + element)) {
-            std::cerr << "Error loading music: " << path << element << std::endl;
+        if (!music->openFromFile(file.second)) {
+            std::cerr << "Error loading music: " << file.second << std::endl;
             exit(1);
         } else {
-            std::cout << "Music loaded successfully: " << path << element << std::endl;
+            std::cout << "Music loaded successfully: " << file.second << std::endl;
         }
-        mapMusic[element] = music;
+        mapMusic[file.first] = music;
     }
 }
 
-void GameEngine::initializeFont(std::string path) {
+void GameEngine::initializeFont(const std::vector<std::pair<std::string, std::string>>& files) {
     sf::Font font;
-    std::vector<std::string> allFilesName;
-    allFilesName = getFilesRessources(path);
-    path += "/";
-    for (const auto& element : allFilesName) {
-        if (!font.loadFromFile(path + element)) {
-            std::cerr << "Error loading font: " << path << element << std::endl;
+    for (const auto& file : files) {
+        if (!font.loadFromFile(file.second)) {
+            std::cerr << "Error loading texture: " << file.second << std::endl;
             exit(1);
-        } else {
-            std::cout << "Font loaded successfully: " << path << element << std::endl;
         }
-        mapFont[element] = std::make_shared<sf::Font>(font);
+        else {
+            std::cout << "Texture loaded successfully: " << file.second << std::endl;
+        }
+        mapFont[file.first] = std::make_shared<sf::Font>(font);
     }
 }
 
