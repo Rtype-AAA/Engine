@@ -4,8 +4,8 @@ on:
   push:
     branches:
       # - main
-      # - test_workflows
-      - Issue#2
+      - test_workflows
+      # - Issue#2
 
 jobs:
   build-fedora-38:
@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies and compilers for Fedora 38
         run: |
           sudo dnf update -y
-          sudo dnf install -y SFML-devel rpm-build gcc gcc-c++ cmake
+          sudo dnf install -y rpm-build gcc gcc-c++ cmake
 
       - name: Configure and Build RPM on Fedora 38
         run: |
@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies and compilers for Fedora Latest
         run: |
           sudo dnf update -y
-          sudo dnf install -y SFML-devel rpm-build gcc gcc-c++ cmake
+          sudo dnf install -y rpm-build gcc gcc-c++ cmake
 
       - name: Configure and Build RPM on Fedora Latest
         run: |
