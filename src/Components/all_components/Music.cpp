@@ -24,14 +24,6 @@ void Music::setMusic(std::map<std::string, std::shared_ptr<sf::Music>> mapMusic,
     }
 }
 
-void Music::play() {
-    music->play();
-}
-
-void Music::stop() {
-    music->stop();
-}
-
 void Music::setDeferredMusic(std::function<void()> setter) {
     deferredMusic = std::move(setter);
 }
