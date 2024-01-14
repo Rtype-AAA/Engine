@@ -108,6 +108,10 @@ TEST_F(SoundTest, GetSound) {
 }
 
 TEST_F(SoundTest, Play) {
+    sound.play();
+
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
+
     sf::Sound sfSound;
     sf::SoundBuffer buffer;
 
@@ -124,6 +128,10 @@ TEST_F(SoundTest, Play) {
 }
 
 TEST_F(SoundTest, Pause) {
+    sound.pause();
+
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
+
     sf::Sound sfSound;
     sf::SoundBuffer buffer;
 
