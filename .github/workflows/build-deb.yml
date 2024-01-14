@@ -29,7 +29,7 @@
             cmake -Bbuild -DCPACK_VERBOSE=ON
             cmake --build build
             cd build
-            cpack
+            sudo cpack
             mv 'QuantumVortex Engine-1.0.0-Linux.tar.gz' ../quantumvortex-engine-1.0.0.tar.gz
             cd ..
             tar xf quantumvortex-engine-1.0.0.tar.gz
