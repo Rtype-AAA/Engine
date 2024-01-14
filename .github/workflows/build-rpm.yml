@@ -23,7 +23,7 @@ jobs:
 
       - name: Configure and Build RPM on Fedora 38
         run: |
-          cmake -Bbuild -DCPACK_VERBOSE=ON .
+          cmake -Bbuild -DCPACK_VERBOSE=ON -DCMAKE_PREFIX_PATH="/usr/local"
           cmake --build build
           cd build
           cpack
@@ -54,7 +54,7 @@ jobs:
 
       - name: Configure and Build RPM on Fedora Latest
         run: |
-          cmake -Bbuild -DCPACK_VERBOSE=ON .
+          cmake -Bbuild -DCPACK_VERBOSE=ON -DCMAKE_PREFIX_PATH="/usr/local"
           cmake --build build
           cd build
           cpack

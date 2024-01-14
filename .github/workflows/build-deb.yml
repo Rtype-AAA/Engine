@@ -20,13 +20,13 @@
             sudo apt-get update
             sudo apt-get install -y build-essential devscripts debhelper debmake
 
-        - name: Install SFML 2.6.1 dependencies
+        - name: Install SFML dependencies
           run: |
-            sudo apt-get install -y libsfml-dev libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev libxcursor-dev
+            sudo apt-get install -y libopenal-dev libvorbis-dev libogg-dev libflac-dev libudev-dev libxrandr-dev libxcursor-dev
 
         - name: Prepare files for packaging
           run: |
-            cmake -Bbuild
+            cmake -Bbuild -DCPACK_VERBOSE=ON -DCMAKE_PREFIX_PATH="/usr/local"
             cmake --build build
             cd build
             cpack
