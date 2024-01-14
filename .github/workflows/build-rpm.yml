@@ -3,8 +3,8 @@ name: Build RPM Package
 on:
   push:
     branches:
-      # - main
-      - test_workflows
+      - main
+      # - test_workflows
 
 jobs:
   build-fedora-38:
