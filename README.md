@@ -65,3 +65,9 @@ Use the following command for create the package (.tgz or .zip) after compile:
 cd build
 cpack
 ```
+
+## Documentation
+
+### PDF
+
+Here you can see the documentation in PDF format: [R-Type_Engine](docs/R-Type_Engine.pdf)
