@@ -39,33 +39,64 @@ std::shared_ptr<sf::Music> Music::getMusic() const {
 }
 
 void Music::play() {
-    music->play();
+    if (music != nullptr) {
+        music->play();
+    } else {
+        std::cerr << "Please set the music before playing it." << std::endl;
+    }
 }
 
 void Music::pause() {
-    music->pause();
+    if (music != nullptr) {
+        music->pause();
+    } else {
+        std::cerr << "Please set the music before pausing it." << std::endl;
+    }
 }
 
 void Music::stop() {
-    music->stop();
+    if (music != nullptr) {
+        music->stop();
+    } else {
+        std::cerr << "Please set the music before stopping it." << std::endl;
+    }
 }
 
 void Music::setLoop(bool loop) {
-    music->setLoop(loop);
-}
+    if (music != nullptr) {
+        music->setLoop(loop);
+    } else {
+        std::cerr << "Please set the music before setting its loop." << std::endl;
+    }}
 
 bool Music::getLoop() const {
-    return music->getLoop();
+    if (music != nullptr) {
+        return music->getLoop();
+    } else {
+        return false;
+    }
 }
 
 void Music::setVolume(float volume) {
-    music->setVolume(volume);
+    if (music != nullptr) {
+        music->setVolume(volume);
+    } else {
+        std::cerr << "Please set the music before setting its volume." << std::endl;
+    }
 }
 
 float Music::getVolume() const {
-    return music->getVolume();
+    if (music != nullptr) {
+        return music->getVolume();
+    } else {
+        return -100;
+    }
 }
 
 sf::SoundSource::Status Music::getStatus() const {
-    return music->getStatus();
+    if (music != nullptr) {
+        return music->getStatus();
+    } else {
+        return sf::SoundSource::Status::Stopped;
+    }
 }

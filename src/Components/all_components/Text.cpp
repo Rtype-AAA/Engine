@@ -13,12 +13,19 @@ void Text::draw(sf::RenderWindow &window) const {
 }
 
 void Text::update(sf::Time deltaTime) {
+    if (transform == nullptr) {
+        std::cerr << "Please set the Text's Transform Component before updating it." << std::endl;
+        return;
+    }
     text.setPosition(transform->getPosition().getX(), transform->getPosition().getY());
     text.setRotation(transform->getRotation());
     text.setScale(transform->getScale().getX(), transform->getScale().getY());
 }
 
 bool Text::init() {
+    if (!transform) {
+        return false;
+    }
     return true;
 }
 

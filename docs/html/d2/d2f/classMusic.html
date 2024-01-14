@@ -181,8 +181,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>&lt; Bit of the <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a> </p>
-<p>Default <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a> constructor.</p>
-<p>Set the default value to "Default". </p>
+<p>Default <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a> constructor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -210,7 +215,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default override <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a> destructor. </p>
-<p>Set the default value to "Default". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -265,6 +276,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="../../d2/d2f/classMusic.html#aa5267b6b6184e78ce2e9a3b08cc248c9" title="getBit(): Get the bit of the Music.">getBit()</a>: Get the bit of the <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>int: The bit of the <a class="el" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world.">Music</a>. </dd></dl>
 
 <p>Implements <a class="el" href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad">Components</a>.</p>
@@ -293,7 +310,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool: True or False. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool: True or False. If no music set, return false. </dd></dl>
 
 </div>
 </div>
@@ -345,7 +362,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>sf::SoundSource::Status: Enumerator of sf::SoundSource::Status which is (Stopped, Paused, Playing). If no music set, return Stopped. </dd></dl>
 
 </div>
 </div>
@@ -371,7 +388,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>float: Float number that represents the volume between 0 and 100 of the music. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>float: Float number that represents the volume between 0 and 100 of the music. If no music set, return -100. </dd></dl>
 
 </div>
 </div>
@@ -399,6 +416,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="../../d2/d2f/classMusic.html#a0556e74ac473b986b6364711a36faec2" title="init(): Initialize the component.">init()</a>: Initialize the component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>bool: true if the component is initialized, false otherwise </dd></dl>
 
 <p>Implements <a class="el" href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353">Components</a>.</p>
@@ -633,6 +656,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Implements <a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">Components</a>.</p>
 

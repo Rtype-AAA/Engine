@@ -319,6 +319,10 @@ TEST_F(GameEngineTest, InitializeTextFunction) {
 
     Color color;
 
+    Transform transform;
+
+    worldPtr->getEntityManager("Text").getEntity("test1").addComponent<Transform>();
+
     mapWorld[nameWorld] = std::move(worldPtr);
 
     gameEngine->initializeWorldMap(std::move(mapWorld));

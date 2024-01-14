@@ -1,268 +1,254 @@
-// #include <gtest/gtest.h>
-// #include "Audio.h"
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include "Sound.h"
 
-// class AudioTest : public ::testing::Test {
-// protected:
-//     Audio audio;
+class SoundTest : public ::testing::Test
+{
+protected:
+    Sound sound;
 
-//     void SetUp() override {
-//     }
+    void SetUp() override
+    {
+    }
 
-//     void TearDown() override {
-//     }
-// };
+    void TearDown() override
+    {
+    }
+};
 
-// TEST_F(AudioTest, DefaultConstructor) {
-// Audio audio;
+TEST_F(SoundTest, Constructor) {
+    ASSERT_EQ(sound.getBit(), 2);
+    ASSERT_EQ(sound.init(), true);
 
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
-// }
+    ASSERT_EQ(sound.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(sound.getSound().getVolume(), 100);
+    ASSERT_EQ(sound.getSound().getPitch(), 1);
+}
 
-// TEST_F(AudioTest, ConstructorWithSoundBuffer) {
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/powerup.ogg"));
+TEST_F(SoundTest, GetBit) {
+    ASSERT_EQ(sound.getBit(), 2);
+}
 
-// Audio newAudio(buffer);
+TEST_F(SoundTest, Update) {
+    EXPECT_NO_THROW(sound.update(sf::Time::Zero));
+}
 
-// sf::Time time = newAudio.getSoundBuffer().getDuration();
+TEST_F(SoundTest, Init) {
+    ASSERT_EQ(sound.init(), true);
+}
 
-// EXPECT_TRUE(newAudio.getSoundBuffer().getDuration() > sf::Time::Zero);
-// EXPECT_NE(newAudio.getSound().getBuffer(), nullptr);
-// }
+TEST_F(SoundTest, SetSoundWithSfSound) {
+    ASSERT_EQ(sound.getSound().getBuffer(), nullptr);
 
-// TEST_F(AudioTest, LoadSoundBuffer) {
-// EXPECT_FALSE(audio.loadSoundBuffer("tests/assets/sounds/does_not_exist.ogg"));
-// EXPECT_TRUE(audio.loadSoundBuffer("tests/assets/sounds/powerup.ogg"));
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
 
-// EXPECT_TRUE(audio.getSoundBuffer().getDuration() > sf::Time::Zero);
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    sound.setSound(sfSound);
 
-// EXPECT_NE(&audio.getSoundBuffer(), &buffer);
+    ASSERT_NE(sound.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(sound.getSound().getBuffer(), &buffer);
+}
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
-// }
+TEST_F(SoundTest, SetSound) {
+    ASSERT_EQ(sound.getSound().getBuffer(), nullptr);
 
-// TEST_F(AudioTest, SetSoundBuffer) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound;
+    std::shared_ptr<sf::SoundBuffer> soundBuffer = std::make_shared<sf::SoundBuffer>();
+    mapSound["test"] = soundBuffer;
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/powerup.ogg"));
+    sound.setSound(mapSound, "test");
+    ASSERT_EQ(sound.getSound().getBuffer(), soundBuffer.get());
+}
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
+TEST_F(SoundTest, SetAndApplyDeferredSound) {
+    auto helloWorldFunction = []() { std::cout << "Hello world" << std::endl; };
 
-// sf::SoundBuffer otherBuffer;
-// EXPECT_TRUE(otherBuffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    sound.setDeferredSound(helloWorldFunction);
 
-// EXPECT_NE(audio.getSoundBuffer().getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(&audio.getSoundBuffer(), &otherBuffer);
+    testing::internal::CaptureStdout();
 
-// EXPECT_TRUE(audio.setSoundBuffer(otherBuffer));
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(audio.getSoundBuffer().getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
-// }
+    sound.applyDeferredSound();
 
-// TEST_F(AudioTest, GetSoundBuffer) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    std::string output = testing::internal::GetCapturedStdout();
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/powerup.ogg"));
+    ASSERT_THAT(output, ::testing::HasSubstr("Hello world"));
+}
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
+TEST_F(SoundTest, GetSound) {
+    ASSERT_EQ(sound.getSound().getBuffer(), nullptr);
 
-// sf::SoundBuffer audioBuffer = audio.getSoundBuffer();
+    std::map<std::string, std::shared_ptr<sf::SoundBuffer>> mapSound;
+    std::shared_ptr<sf::SoundBuffer> soundBuffer = std::make_shared<sf::SoundBuffer>();
 
-// EXPECT_EQ(audioBuffer.getDuration(), buffer.getDuration());
-// EXPECT_NE(&audioBuffer, &buffer);
+    mapSound["test"] = soundBuffer;
 
-// sf::SoundBuffer otherBuffer;
-// EXPECT_TRUE(otherBuffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    sound.setSound(mapSound, "test");
+    ASSERT_EQ(sound.getSound().getBuffer(), soundBuffer.get());
 
-// EXPECT_NE(audioBuffer.getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(&audioBuffer, &otherBuffer);
+    ASSERT_EQ(sound.getSound().getVolume(), 100);
+    ASSERT_EQ(sound.getSound().getPitch(), 1);
 
-// EXPECT_TRUE(audio.setSoundBuffer(otherBuffer));
-// audioBuffer = audio.getSoundBuffer();
+    Sound newSound;
 
-// EXPECT_EQ(audioBuffer.getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(audioBuffer.getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
-// }
+    ASSERT_EQ(newSound.getSound().getBuffer(), nullptr);
 
-// TEST_F(AudioTest, SetSound) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/powerup.ogg"));
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
 
-// sf::Sound sound;
-// sound.setBuffer(buffer);
+    newSound.setSound(sfSound);
 
-// EXPECT_TRUE(audio.setSound(sound));
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
+    ASSERT_NE(newSound.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(newSound.getSound().getBuffer(), &buffer);
+}
 
-// sf::Sound otherSound;
-// sf::SoundBuffer otherBuffer;
-// EXPECT_TRUE(otherBuffer.loadFromFile("tests/assets/sounds/music.ogg"));
-// otherSound.setBuffer(otherBuffer);
+TEST_F(SoundTest, Play) {
+    sound.play();
 
-// EXPECT_NE(audio.getSoundBuffer().getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(&audio.getSoundBuffer(), &otherBuffer);
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
 
-// EXPECT_TRUE(audio.setSound(otherSound));
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(audio.getSoundBuffer().getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
-// }
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
 
-// TEST_F(AudioTest, GetSound) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/powerup.ogg"));
+    sound.setSound(sfSound);
 
-// sf::Sound sound;
-// sound.setBuffer(buffer);
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
 
-// EXPECT_TRUE(audio.setSound(sound));
+    sound.play();
 
-// sf::Sound audioSound = audio.getSound();
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Playing);
+}
 
-// EXPECT_EQ(audioSound.getBuffer()->getDuration(), buffer.getDuration());
-// EXPECT_NE(&audioSound, &sound);
+TEST_F(SoundTest, Pause) {
+    sound.pause();
 
-// sf::Sound otherSound;
-// sf::SoundBuffer otherBuffer;
-// EXPECT_TRUE(otherBuffer.loadFromFile("tests/assets/sounds/music.ogg"));
-// otherSound.setBuffer(otherBuffer);
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
 
-// EXPECT_NE(audioSound.getBuffer()->getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(&audioSound, &otherSound);
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
 
-// EXPECT_TRUE(audio.setSound(otherSound));
-// audioSound = audio.getSound();
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
 
-// EXPECT_EQ(audioSound.getBuffer()->getDuration(), otherBuffer.getDuration());
-// EXPECT_NE(audioSound.getBuffer()->getDuration(), buffer.getDuration());
-// EXPECT_NE(audio.getSound().getBuffer(), nullptr);
-// }
+    sound.setSound(sfSound);
 
-// TEST_F(AudioTest, Play) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    sound.play();
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Playing);
 
-// audio.play();
-// EXPECT_TRUE(audio.isPlaying());
-// }
+    sound.pause();
 
-// TEST_F(AudioTest, Pause) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Paused);
+}
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/music.ogg"));
+TEST_F(SoundTest, Stop) {
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
 
-// audio.play();
-// EXPECT_TRUE(audio.isPlaying());
+    sound.setSound(sfSound);
 
-// audio.pause();
-// EXPECT_FALSE(audio.isPlaying());
-// }
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
 
-// TEST_F(AudioTest, Stop) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    sound.play();
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Playing);
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
+    sound.stop();
 
-// audio.play();
-// EXPECT_TRUE(audio.isPlaying());
+    ASSERT_EQ(sound.getSound().getStatus(), sf::SoundSource::Status::Stopped);
+}
 
-// audio.stop();
-// EXPECT_FALSE(audio.isPlaying());
-// }
+TEST_F(SoundTest, SetLoop) {
+    ASSERT_EQ(sound.getSound().getLoop(), false);
 
-// TEST_F(AudioTest, SetLoop) {
-// EXPECT_FALSE(audio.getSound().getLoop());
+    sound.setLoop(true);
 
-// audio.setLoop(true);
-// EXPECT_TRUE(audio.getSound().getLoop());
+    ASSERT_EQ(sound.getSound().getLoop(), true);
 
-// audio.setLoop(false);
-// EXPECT_FALSE(audio.getSound().getLoop());
-// }
+    sound.setLoop(false);
 
-// TEST_F(AudioTest, SetVolume) {
-// EXPECT_EQ(audio.getSound().getVolume(), 100.f);
+    ASSERT_EQ(sound.getSound().getLoop(), false);
+}
 
-// audio.setVolume(50.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 50.f);
+TEST_F(SoundTest, GetLoop) {
+    ASSERT_EQ(sound.getLoop(), sound.getSound().getLoop());
+    ASSERT_EQ(sound.getLoop(), false);
 
-// audio.setVolume(0.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 0.f);
+    sound.setLoop(true);
 
-// audio.setVolume(100.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 100.f);
-// }
+    ASSERT_EQ(sound.getLoop(), sound.getSound().getLoop());
+    ASSERT_EQ(sound.getLoop(), true);
 
-// TEST_F(AudioTest, GetVolume) {
-// EXPECT_EQ(audio.getSound().getVolume(), 100.f);
+    sound.setLoop(false);
 
-// audio.setVolume(50.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 50.f);
+    ASSERT_EQ(sound.getLoop(), sound.getSound().getLoop());
+    ASSERT_EQ(sound.getLoop(), false);
+}
 
-// audio.setVolume(0.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 0.f);
+TEST_F(SoundTest, SetVolume) {
+    ASSERT_EQ(sound.getSound().getVolume(), 100);
 
-// audio.setVolume(100.f);
-// EXPECT_EQ(audio.getSound().getVolume(), 100.f);
-// }
+    sound.setVolume(50);
 
-// TEST_F(AudioTest, IsPlaying) {
-// EXPECT_EQ(audio.getSoundBuffer().getDuration(), sf::Time::Zero);
-// EXPECT_EQ(audio.getSound().getBuffer(), nullptr);
+    ASSERT_EQ(sound.getSound().getVolume(), 50);
 
-// sf::SoundBuffer buffer;
-// EXPECT_TRUE(buffer.loadFromFile("tests/assets/sounds/music.ogg"));
+    sound.setVolume(100);
 
-// EXPECT_TRUE(audio.setSoundBuffer(buffer));
+    ASSERT_EQ(sound.getSound().getVolume(), 100);
+}
 
-// EXPECT_FALSE(audio.isPlaying());
+TEST_F(SoundTest, GetVolume) {
+    ASSERT_EQ(sound.getVolume(), sound.getSound().getVolume());
+    ASSERT_EQ(sound.getVolume(), 100);
 
-// audio.play();
-// EXPECT_TRUE(audio.isPlaying());
+    sound.setVolume(50);
 
-// audio.setLoop(true);
+    ASSERT_EQ(sound.getVolume(), sound.getSound().getVolume());
+    ASSERT_EQ(sound.getVolume(), 50);
 
-// audio.pause();
-// EXPECT_FALSE(audio.isPlaying());
+    sound.setVolume(100);
 
-// audio.play();
-// EXPECT_TRUE(audio.isPlaying());
+    ASSERT_EQ(sound.getVolume(), sound.getSound().getVolume());
+    ASSERT_EQ(sound.getVolume(), 100);
+}
 
-// audio.stop();
-// EXPECT_FALSE(audio.isPlaying());
-// }
+TEST_F(SoundTest, IsPlaying) {
+    sf::Sound sfSound;
+    sf::SoundBuffer buffer;
+
+    buffer.loadFromFile("tests/assets/Sounds/test1.ogg");
+    sfSound.setBuffer(buffer);
+
+    sound.setSound(sfSound);
+
+    ASSERT_EQ(sound.isPlaying(), false);
+
+    sound.play();
+
+    ASSERT_EQ(sound.isPlaying(), true);
+
+    sound.pause();
+
+    ASSERT_EQ(sound.isPlaying(), false);
+
+    sound.play();
+
+    ASSERT_EQ(sound.isPlaying(), true);
+
+    sound.stop();
+
+    ASSERT_EQ(sound.isPlaying(), false);
+}
