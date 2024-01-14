@@ -11,6 +11,10 @@ TEST_F(TestWorld, DefaultConstructor) {
     EXPECT_EQ("", world.getNameWorld());
 }
 
+TEST_F(TestWorld, Init) {
+    EXPECT_TRUE(world.init());
+}
+
 TEST_F(TestWorld, CreateEntities) {
     std::map<std::string, std::pair<std::unique_ptr<EntityManager>, std::vector<std::string>>> mapEntityManager;
     std::vector<std::string> vectorEntity;
@@ -85,6 +89,27 @@ TEST_F(TestWorld, GetEntityManagerMap) {
     EXPECT_EQ(name2, (++map2.begin())->first);
 }
 
-TEST_F(TestWorld, InitWorld) {
-    EXPECT_TRUE(world.initWorld());
+TEST_F(TestWorld, GetEntitiesManager) {
+    std::string name = "test";
+    world.addEntityManager(name);
+
+    EXPECT_EQ(1, world.getEntityManagerMap().size());
+    EXPECT_EQ(name, world.getEntityManagerMap().begin()->first);
+
+    std::map<std::string, EntityManager*> map = world.getEntityManagerMap();
+
+    EXPECT_EQ(1, map.size());
+    EXPECT_EQ(name, map.begin()->first);
+
+    std::string name2 = "test2";
+    world.addEntityManager(name2);
+
+    EXPECT_EQ(2, world.getEntityManagerMap().size());
+    EXPECT_EQ(name, world.getEntityManagerMap().begin()->first);
+
+    std::map<std::string, EntityManager*> map2 = world.getEntityManagerMap();
+
+    EXPECT_EQ(2, map2.size());
+    EXPECT_EQ(name, map2.begin()->first);
+    EXPECT_EQ(name2, (++map2.begin())->first);
 }

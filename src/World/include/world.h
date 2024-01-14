@@ -29,6 +29,9 @@ public:
     /// @return void
     ~World() override = default;
 
+    /// @brief init(): Initialize the world.
+    /// @param void
+    /// @return bool: True if the world is initialized, false otherwise.
     bool init() override;
 
     /// @brief createEntities(): Create the entities.
@@ -63,9 +66,8 @@ public:
     /// @return std::map<std::string, EntityManager*>: The map of the entity manager.
     [[nodiscard]] std::map<std::string, EntityManager*> getEntityManagerMap() const;
 
-    /**
-     * @brief getEntitiesManager(): Get the entities
-     * @return std::map<std::string, EntityManager*>: Get the entities.
-     */
+    /// @brief getEntitiesManager(): Get the entities
+    /// @param void
+    /// @return std::map<std::string, EntityManager*>: Get the entities.
     [[nodiscard]] std::map<std::string, EntityManager*> getEntitiesManager() const;
 };
