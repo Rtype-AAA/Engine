@@ -36,8 +36,8 @@ Collaboration diagram for Game\+Engine\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor with parameters. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classGameEngine_ac4e49abc59ae4615a92a9a9da92f0423}{$\sim$\+Game\+Engine}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} destructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources, const std\+::string \&first\+Scene)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run()}}\+: Run the game engine (with parameters). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a34d2287987bcdd2da2fdf411d50afa39}{run}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&path\+Ressources, const std\+::string \&first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a34d2287987bcdd2da2fdf411d50afa39}{run()}}\+: Run the game engine (with parameters). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine()}}\+: Render the game engine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine}} ()
@@ -46,8 +46,8 @@ void \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine()}}\+: Update the game engine. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open()}}\+: Check if the window is open. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources, const std\+::string \&first\+Scene)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize()}}\+: Initialize the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a3c05881499e40695e956c4d7f0a42ba5}{initialize}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&path\+Ressources, const std\+::string \&first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a3c05881499e40695e956c4d7f0a42ba5}{initialize()}}\+: Initialize the game engine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}{initialize\+Sprite\+Function}} () const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}{initialize\+Sprite\+Function()}}\+: Initialize the sprites function. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_ab24556da97c10cf38088f60b22802b4f}{initialize\+Sound\+Function}} () const
@@ -56,16 +56,16 @@ void \mbox{\hyperlink{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}{initial
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}{initialize\+Music\+Function()}}\+: Initialize the music function. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a5d848be1673757d1e7bb6e4ff29f7214}{initialize\+Text\+Function}} () const
 \begin{DoxyCompactList}\small\item\em initialize\+Font\+Function()\+: Initialize the font function. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture}} (std\+::string path)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture()}}\+: Initialize the textures with their path. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound}} (std\+::string path)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound()}}\+: Initialize the sound with their path. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music}} (std\+::string path)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music()}}\+: Initialize the music with their path. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font}} (std\+::string path)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font()}}\+: Initialize the font with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_af6db9fb92f6fd2069beb34ca02f60355}{initialize\+All\+Files}} (const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&path\+Ressources)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_af6db9fb92f6fd2069beb34ca02f60355}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_ad636a2616664f4ced926c0dace75be2a}{initialize\+Texture}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&files)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ad636a2616664f4ced926c0dace75be2a}{initialize\+Texture()}}\+: Initialize the textures with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a26c28bafe998075018855724da91db7f}{initialize\+Sound}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&files)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a26c28bafe998075018855724da91db7f}{initialize\+Sound()}}\+: Initialize the sound with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a3cc4f3f98b80e21bc064ce1471bb4c37}{initialize\+Music}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&files)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a3cc4f3f98b80e21bc064ce1471bb4c37}{initialize\+Music()}}\+: Initialize the music with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_adff7dbb31adb069c5f1041262d94dad4}{initialize\+Font}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&files)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_adff7dbb31adb069c5f1041262d94dad4}{initialize\+Font()}}\+: Initialize the font with their path. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map()}}\+: Initialize the world map. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \& \mbox{\hyperlink{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}{get\+Window}} ()
@@ -429,15 +429,15 @@ sf\+::\+Render\+Window\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\tex
 \begin{DoxyReturn}{Returns}
 std\+::map$<$std\+::string, World$\ast$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a277e9158a59480f03cb476508461f9a1}\label{classGameEngine_a277e9158a59480f03cb476508461f9a1}} 
+\mbox{\Hypertarget{classGameEngine_a3c05881499e40695e956c4d7f0a42ba5}\label{classGameEngine_a3c05881499e40695e956c4d7f0a42ba5}} 
 \index{GameEngine@{GameEngine}!initialize@{initialize}}
 \index{initialize@{initialize}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize()}}\+: Initialize the game engine. 
+\mbox{\hyperlink{classGameEngine_a3c05881499e40695e956c4d7f0a42ba5}{initialize()}}\+: Initialize the game engine. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -451,15 +451,15 @@ std\+::map$<$std\+::string, World$\ast$$>$\+: \mbox{\hyperlink{classGameEngine}{
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a889f1abd73036277be74dac4d8364976}\label{classGameEngine_a889f1abd73036277be74dac4d8364976}} 
+\mbox{\Hypertarget{classGameEngine_af6db9fb92f6fd2069beb34ca02f60355}\label{classGameEngine_af6db9fb92f6fd2069beb34ca02f60355}} 
 \index{GameEngine@{GameEngine}!initializeAllFiles@{initializeAllFiles}}
 \index{initializeAllFiles@{initializeAllFiles}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initializeAllFiles()}{initializeAllFiles()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+All\+Files (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+All\+Files (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&}]{path\+Ressources }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. 
+\mbox{\hyperlink{classGameEngine_af6db9fb92f6fd2069beb34ca02f60355}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -469,15 +469,15 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}\label{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}} 
+\mbox{\Hypertarget{classGameEngine_adff7dbb31adb069c5f1041262d94dad4}\label{classGameEngine_adff7dbb31adb069c5f1041262d94dad4}} 
 \index{GameEngine@{GameEngine}!initializeFont@{initializeFont}}
 \index{initializeFont@{initializeFont}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initializeFont()}{initializeFont()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Font (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{files }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font()}}\+: Initialize the font with their path. 
+\mbox{\hyperlink{classGameEngine_adff7dbb31adb069c5f1041262d94dad4}{initialize\+Font()}}\+: Initialize the font with their path. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -487,15 +487,15 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}\label{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}} 
+\mbox{\Hypertarget{classGameEngine_a3cc4f3f98b80e21bc064ce1471bb4c37}\label{classGameEngine_a3cc4f3f98b80e21bc064ce1471bb4c37}} 
 \index{GameEngine@{GameEngine}!initializeMusic@{initializeMusic}}
 \index{initializeMusic@{initializeMusic}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initializeMusic()}{initializeMusic()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Music (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Music (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{files }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music()}}\+: Initialize the music with their path. 
+\mbox{\hyperlink{classGameEngine_a3cc4f3f98b80e21bc064ce1471bb4c37}{initialize\+Music()}}\+: Initialize the music with their path. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -523,15 +523,15 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_ae0f5aef6480f580a80066555a4a22673}\label{classGameEngine_ae0f5aef6480f580a80066555a4a22673}} 
+\mbox{\Hypertarget{classGameEngine_a26c28bafe998075018855724da91db7f}\label{classGameEngine_a26c28bafe998075018855724da91db7f}} 
 \index{GameEngine@{GameEngine}!initializeSound@{initializeSound}}
 \index{initializeSound@{initializeSound}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initializeSound()}{initializeSound()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sound (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sound (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{files }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound()}}\+: Initialize the sound with their path. 
+\mbox{\hyperlink{classGameEngine_a26c28bafe998075018855724da91db7f}{initialize\+Sound()}}\+: Initialize the sound with their path. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -595,15 +595,15 @@ initialize\+Font\+Function()\+: Initialize the font function.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}\label{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}} 
+\mbox{\Hypertarget{classGameEngine_ad636a2616664f4ced926c0dace75be2a}\label{classGameEngine_ad636a2616664f4ced926c0dace75be2a}} 
 \index{GameEngine@{GameEngine}!initializeTexture@{initializeTexture}}
 \index{initializeTexture@{initializeTexture}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initializeTexture()}{initializeTexture()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Texture (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{files }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture()}}\+: Initialize the textures with their path. 
+\mbox{\hyperlink{classGameEngine_ad636a2616664f4ced926c0dace75be2a}{initialize\+Texture()}}\+: Initialize the textures with their path. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -667,15 +667,15 @@ bool\+: True if the window is open, false otherwise.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}\label{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}} 
+\mbox{\Hypertarget{classGameEngine_a34d2287987bcdd2da2fdf411d50afa39}\label{classGameEngine_a34d2287987bcdd2da2fdf411d50afa39}} 
 \index{GameEngine@{GameEngine}!run@{run}}
 \index{run@{run}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$$>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run()}}\+: Run the game engine (with parameters). 
+\mbox{\hyperlink{classGameEngine_a34d2287987bcdd2da2fdf411d50afa39}{run()}}\+: Run the game engine (with parameters). 
 
 
 \begin{DoxyParams}{Parameters}

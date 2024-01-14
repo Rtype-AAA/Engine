@@ -3,6 +3,10 @@
 //
 
 #include "main.h"
+#include "sounds.h"
+#include "musics.h"
+#include "font.h"
+#include "textures.h"
 
 std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     std::unique_ptr<World> menuWorld = std::make_unique<World>();
@@ -16,11 +20,11 @@ std::unique_ptr<World> worldMenu(GameEngine &gameEngine) {
     menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
     menuWorld->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background.jpg", false);
+                gameEngine.getWorld("Menu").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background", false);
             });
     menuWorld->getEntityManager("Music").getEntity("Music").addComponent<Music>()
             .setDeferredMusic([&]() {
-                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().setMusic(gameEngine.getMapMusic(), "Music.wav");
+                gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().setMusic(gameEngine.getMapMusic(), "Music");
                 gameEngine.getWorld("Menu").getEntityManager("Music").getEntity("Music").getComponent<Music>().play();
             });
     menuWorld->getEntityManager("Text").getEntity("Title").addComponent<Transform>();
@@ -43,7 +47,7 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Transform>();
     level1World->getEntityManager("Image").getEntity("Background").addComponent<Sprite>()
             .setDeferredSprite([&]() {
-                gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2.jpg");
+                gameEngine.getWorld("Level1").getEntityManager("Image").getEntity("Background").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "background2");
             });
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Transform>().setPosition(Vector2<float>(400.0f, 500.0f));
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sprite>()
@@ -65,11 +69,11 @@ std::unique_ptr<World> worldLevel1(GameEngine &gameEngine) {
                 frames.emplace_back(429, 0, 33, 36);
                 frames.emplace_back(462, 0, 33, 36);
                 frames.emplace_back(495, 0, 33, 36);
-                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "r-typesheet5.gif", true, frames, 100);
+                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sprite>().setSprite(gameEngine.getMapTexture(), "ship", true, frames, 100);
             });
     level1World->getEntityManager("Player").getEntity("Player1").addComponent<Sound>()
             .setDeferredSound([&]() {
-                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser.flac");
+                gameEngine.getWorld("Level1").getEntityManager("Player").getEntity("Player1").getComponent<Sound>().setSound(gameEngine.getMapSound(), "Laser");
 
     });
     level1World->getEntityManager("Player").getEntity("Player1").getComponent<Transform>()
@@ -204,11 +208,13 @@ int main() {
     worldMap["Menu"] = worldMenu(gameEngine);
     worldMap["Level1"] = worldLevel1(gameEngine);
     worldMap["Level2"] = worldLevel2(gameEngine);
-    std::map<std::string, std::string> pathRessources;
-    pathRessources["Texture"] = "src/Ressources/Textures";
-    pathRessources["Sounds"] = "src/Ressources/Sounds";
-    pathRessources["Musics"] = "src/Ressources/Music";
-    pathRessources["Font"] = "src/Ressources/Font";
+    std::map<std::string, std::vector<std::pair<std::string, std::string>>> pathRessources;
+    pathRessources["Texture"].push_back(std::make_pair("background", background));
+    pathRessources["Texture"].push_back(std::make_pair("background2", background2));
+    pathRessources["Texture"].push_back(std::make_pair("ship", rtypesheet5));
+    pathRessources["Sounds"].push_back(std::make_pair("Laser", Laser));
+    pathRessources["Musics"].push_back(std::make_pair("Music", my_music1));
+    pathRessources["Font"].push_back(std::make_pair("font1", font1));
     event(gameEngine);
     gameEngine.run(std::move(worldMap), pathRessources, "Menu");
     return 0;

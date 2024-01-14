@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
 
 project(engine VERSION 1.0.0 DESCRIPTION "Moteur de jeu")
 
@@ -9,37 +9,12 @@ option(BUILD_TESTS "Build the test suite" OFF)
 
 if(WIN32)
     set(SFML_VERSION 2.6.1)
+
+    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+    list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/installed/x86-windows/share/sfml")
 else()
     set(SFML_VERSION 2.5.1)
-endif()
-
-if(SFML_VERSION EQUAL 2.6.1)
-    set(SFML_SYSTEM_LIB_PATH "/usr/local/lib/libsfml-system.so.2.6.1")
-
-    if(NOT EXISTS "${SFML_SYSTEM_LIB_PATH}")
-        message(STATUS "SFML system library not found. Attempting to install SFML...")
-
-        execute_process(
-            COMMAND bash -c "echo 'Installing SFML...\n' && cd ${CMAKE_CURRENT_SOURCE_DIR}/SFML && cmake -Bbuild && sudo cmake --build build --config Release --target install"
-            RESULT_VARIABLE SFML_INSTALL_RESULT
-        )
-
-        if(SFML_INSTALL_RESULT EQUAL 0 AND EXISTS "${SFML_SYSTEM_LIB_PATH}")
-            message(STATUS "SFML successfully installed.")
-            find_package(SFML 2.6.1 COMPONENTS system window graphics audio network REQUIRED)
-
-            if(NOT SFML_FOUND)
-                message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
-            else()
-                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
-            endif()
-
-        else()
-            message(FATAL_ERROR "Failed to install SFML.")
-        endif()
-    endif()
-
-else()
     find_package(SFML 2.5.1 COMPONENTS system window graphics audio network QUIET)
 
     if(NOT SFML_FOUND)
@@ -54,6 +29,8 @@ else()
     endif()
 endif()
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources)
+
 file(GLOB HEADER_FILES
         "include/*.h"
         "src/Archetype/include/*.h"
@@ -67,6 +44,11 @@ file(GLOB HEADER_FILES
         "src/toSFML/include/*.h"
         "src/Script/include/*.h"
 )
+
+file(GLOB HEADER_RESSOURCES
+        "includeRessources/*.h"
+)
+
 file(GLOB LIB_SRCS
         "src/Components/*.cpp"
         "src/Components/all_components/*.cpp"
@@ -79,24 +61,48 @@ file(GLOB LIB_SRCS
         "src/Script/*.cpp"
 )
 
-add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
-target_include_directories(engine_lib PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
-)
-target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+if (WIN32)
+    file(COPY
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Textures
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Font
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Music
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Sounds
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Release
+    )
 
-add_executable(engine main.cpp)
-target_include_directories(engine PRIVATE
+    file(COPY
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Textures
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Font
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Music
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Sounds
+        DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker"
+    )
+else()
+    file(COPY
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Textures
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Font
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Music
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Sounds
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
+    )
+
+    file(COPY
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Textures
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Font
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Music
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Sounds
+        DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker"
+    )
+endif()
+
+set(COPIED_DIRECTORIES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Textures
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Font
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Music
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources/Sounds
+)
+
+set(COMMON_INCLUDE_DIRS
         ${CMAKE_CURRENT_SOURCE_DIR}/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
@@ -109,7 +115,37 @@ target_include_directories(engine PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
 )
-target_link_libraries(engine PRIVATE engine_lib)
+
+set(RESSOURCES_INCLUDE_DIRS
+        ${CMAKE_CURRENT_SOURCE_DIR}/includeRessources
+)
+
+if (WIN32)
+    add_library(engine_lib_static STATIC ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib_static PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib_static PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+
+    add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+
+    add_executable(engine main.cpp ${HEADER_RESSOURCES})
+    target_include_directories(engine PRIVATE ${COMMON_INCLUDE_DIRS} ${COPIED_DIRECTORIES} ${RESSOURCES_INCLUDE_DIRS})
+    target_link_libraries(engine PRIVATE engine_lib)
+
+    add_dependencies(engine_lib engine_lib_static)
+    add_dependencies(engine engine_lib)
+else ()
+    add_library(engine_lib SHARED ${LIB_SRCS} ${HEADER_FILES})
+    target_include_directories(engine_lib PRIVATE ${COMMON_INCLUDE_DIRS})
+    target_link_libraries(engine_lib PUBLIC sfml-graphics sfml-window sfml-system sfml-audio)
+
+    add_executable(engine main.cpp ${HEADER_RESSOURCES})
+    target_include_directories(engine PRIVATE ${COMMON_INCLUDE_DIRS} ${COPIED_DIRECTORIES} ${RESSOURCES_INCLUDE_DIRS})
+    target_link_libraries(engine PRIVATE engine_lib)
+
+    add_dependencies(engine engine_lib)
+endif ()
 
 if(BUILD_TESTS)
     file(GLOB LIB_SRCS_TEST
@@ -123,17 +159,7 @@ if(BUILD_TESTS)
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
     target_include_directories(all_tests PRIVATE
-            ${CMAKE_CURRENT_SOURCE_DIR}/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
+
     )
     target_link_libraries(all_tests PRIVATE engine_lib gtest gtest_main)
 
@@ -142,16 +168,14 @@ if(BUILD_TESTS)
     set_target_properties(all_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 endif()
 
-if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-    message(STATUS "Setting build type to 'Debug' as none was specified.")
-    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build." FORCE)
-
-    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release")
+if(WIN32)
+    set_target_properties(engine_lib_static PROPERTIES OUTPUT_NAME engine_lib PREFIX "")
+    set_target_properties(engine_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
+    set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker")
+else()
+    set_target_properties(engine_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
+    set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Nebula Striker")
 endif()
-
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
-set_target_properties(engine_lib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Lib")
-set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
 install(TARGETS engine_lib
         EXPORT quantumvortex-engineTargets
@@ -161,19 +185,8 @@ install(TARGETS engine_lib
         INCLUDES DESTINATION include/quantumvortex-engine)
 
 install(DIRECTORY
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Archetype/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Components/all_components/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Entity/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Event/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/World/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/GameEngine/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
+        ${COMMON_INCLUDE_DIRS}
         DESTINATION include/quantumvortex-engine)
-
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(

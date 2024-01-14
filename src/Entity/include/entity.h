@@ -153,6 +153,7 @@ public:
 
 };
 
+#ifndef _WIN32
 extern template Transform& Entity::addComponent<Transform>();
 extern template bool Entity::removeComponent<Transform>();
 extern template Transform& Entity::getComponent<Transform>();
@@ -177,4 +178,5 @@ extern template Text& Entity::addComponent<Text>();
 extern template bool Entity::removeComponent<Text>();
 extern template Text& Entity::getComponent<Text>();
 extern template std::size_t Entity::getComponentTypeID<Text>();
+#endif // !1
 

@@ -60,7 +60,7 @@ public:
     /// @param firstScene: Name of the first scene.
     /// @return void
     void run(std::map<std::string, std::unique_ptr<World>> mapWorld,
-             const std::map<std::string, std::string>& pathRessources, const std::string& firstScene);
+             const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources, const std::string& firstScene);
 
     /// @brief renderGameEngine(): Render the game engine.
     /// @param void
@@ -93,7 +93,7 @@ public:
     /// @param firstScene: Name of the first scene.
     /// @return void
     void initialize(std::map<std::string, std::unique_ptr<World>> mapWorld,
-                    const std::map<std::string, std::string>& pathRessources, const std::string& firstScene);
+                    const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources, const std::string& firstScene);
 
     /// @brief initializeSpriteFunction(): Initialize the sprites function.
     /// @param void
@@ -118,27 +118,27 @@ public:
     /// @brief initializeAllFiles(): Initialize all the ressources files the engine need.
     /// @param pathRessources: Map of the path of the ressources (assets).
     /// @return void
-    void initializeAllFiles(const std::map<std::string, std::string>& pathRessources);
+    void initializeAllFiles(const std::map<std::string, std::vector<std::pair<std::string, std::string>>>& pathRessources);
 
     /// @brief initializeTexture(): Initialize the textures with their path.
     /// @param path: Path of the texture.
     /// @return void
-    void initializeTexture(std::string path);
+    void initializeTexture(const std::vector<std::pair<std::string, std::string>>& files);
 
     /// @brief initializeSound(): Initialize the sound with their path.
     /// @param path: Path of the sound file.
     /// @return void
-    void initializeSound(std::string path);
+    void initializeSound(const std::vector<std::pair<std::string, std::string>>& files);
 
     /// @brief initializeMusic(): Initialize the music with their path.
     /// @param path: Path of the music file.
     /// @return void
-    void initializeMusic(std::string path);
+    void initializeMusic(const std::vector<std::pair<std::string, std::string>>& files);
 
     /// @brief initializeFont(): Initialize the font with their path.
     /// @param path: Path of the font file.
     /// @return void
-    void initializeFont(std::string path);
+    void initializeFont(const std::vector<std::pair<std::string, std::string>>& files);
 
     /// @brief initializeWorldMap(): Initialize the world map.
     /// @param mapWorld: Map of World classes' unique pointers.
