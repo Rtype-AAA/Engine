@@ -45,21 +45,20 @@ find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED
     if(NOT SFML_FOUND)
         message(STATUS "SFML couldn't be found. Attempting to install SFML...")
 
-        if(UNIX AND NOT APPLE)
-            execute_process(
-                COMMAND bash -c "if type apt &>/dev/null; then sudo apt install libsfml-dev; elif type dnf &>/dev/null; then sudo dnf install SFML-devel; else echo 'Unsupported package manager'; fi"
-                RESULT_VARIABLE SFML_INSTALL_RESULT
-            )
-        else()
-            message(FATAL_ERROR "Unsupported operating system.")
-        endif()
+        include(FetchContent)
+        FetchContent_Declare(SFML
+                GIT_REPOSITORY https://github.com/SFML/SFML.git
+                GIT_TAG 2.5.1)
+        FetchContent_MakeAvailable(SFML)
 
-        if(SFML_INSTALL_RESULT EQUAL 0)
+        if(SFML_POPULATED)
             message(STATUS "SFML successfully installed.")
             find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
 
             if(NOT SFML_FOUND)
                 message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
+            else()
+                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib/cmake/SFML")
             endif()
 
         else()
