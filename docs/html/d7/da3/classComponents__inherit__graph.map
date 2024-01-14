@@ -1,11 +1,12 @@
 <map id="Components" name="Components">
-<area shape="rect" id="node1" title="Components class: Components is a class that represents a component in the game." alt="" coords="132,5,228,32"/>
-<area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="105,80,161,107"/>
-<area shape="rect" id="node6" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="202,80,283,107"/>
+<area shape="rect" id="node1" title="Components class: Components is a class that represents a component in the game." alt="" coords="133,5,229,32"/>
+<area shape="rect" id="node2" href="$da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="31,80,87,107"/>
+<area shape="rect" id="node6" href="$d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world." alt="" coords="111,80,169,107"/>
+<area shape="rect" id="node7" href="$df/d49/classSound.html" title="Sound class: Sound is a class that represents the sound properties of a Component." alt="" coords="193,80,252,107"/>
+<area shape="rect" id="node8" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="277,80,358,107"/>
 <area shape="rect" id="node3" href="$dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
 <area shape="rect" id="node4" href="$d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
 <area shape="rect" id="node5" href="$df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
-<area shape="rect" id="node7" href="$d7/dc9/classRect.html" title=" " alt="" coords="136,155,235,181"/>
-<area shape="rect" id="node8" href="$d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="259,155,341,181"/>
-<area shape="rect" id="node9" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="365,155,421,181"/>
+<area shape="rect" id="node9" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="251,155,307,181"/>
+<area shape="rect" id="node10" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="331,155,378,181"/>
 </map>

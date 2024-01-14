@@ -12,16 +12,22 @@ Vector class\+: Vector is a class that represents a vector in 2 dimensions.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVector2_ae59e0a10f842521cb7e256ef976ead77}{Vector2}} (T x, T y)
+\mbox{\hyperlink{classVector2_ae2f1223cb0d664aa73afb789086a4174}{Vector2}} ()
 \begin{DoxyCompactList}\small\item\em $<$ Variable for using the value of the Vector2\+Struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector2_ae59e0a10f842521cb7e256ef976ead77}{Vector2}} (T x, T y)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2}{Vector2}} constructor with parameters. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector2_a2c7bee8f64d4528e3b4d143077fef9b7}{$\sim$\+Vector2}} ()=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2}{Vector2}} destructor. \end{DoxyCompactList}\item 
-Vector2\+Struct \mbox{\hyperlink{classVector2_a83c14485b9b973c9ed8911b38a877e96}{get\+Vector2\+Struct}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_a83c14485b9b973c9ed8911b38a877e96}{get\+Vector2\+Struct()}}\+: Get the using Vector2\+Struct. \end{DoxyCompactList}\item 
-T \mbox{\hyperlink{classVector2_a3ff70ed3477ec31762a5f9d2641c314a}{getX}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_a3ff70ed3477ec31762a5f9d2641c314a}{get\+X()}}\+: Get x of Vector2\+Struct. \end{DoxyCompactList}\item 
-T \mbox{\hyperlink{classVector2_aaa6d5102b6dbc30ee3c7f0efe5a97406}{getY}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_aaa6d5102b6dbc30ee3c7f0efe5a97406}{get\+Y()}}\+: Get y of Vector2\+Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+Vector2\+Struct \mbox{\hyperlink{classVector2_a19aa6202115a2d082c721abcee624070}{get\+Vector2\+Struct}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_a19aa6202115a2d082c721abcee624070}{get\+Vector2\+Struct()}}\+: Get the using Vector2\+Struct. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classVector2_a40e2297e41074aaaa3c04f79d73faa66}{getX}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_a40e2297e41074aaaa3c04f79d73faa66}{get\+X()}}\+: Get x of Vector2\+Struct. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classVector2_a860714a9c85987ecaaf7f1eb4978f96f}{getY}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_a860714a9c85987ecaaf7f1eb4978f96f}{get\+Y()}}\+: Get y of Vector2\+Struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVector2_ad6a2901bd0aa1d0b49c6403296f35d5b}{setX}} (T newX)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_ad6a2901bd0aa1d0b49c6403296f35d5b}{set\+X()}}\+: Set x of Vector2\+Struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVector2_aeaa0db2a8605bf4a8c893821386b52e8}{setY}} (T newY)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVector2_aeaa0db2a8605bf4a8c893821386b52e8}{set\+Y()}}\+: Set y of Vector2\+Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -33,18 +39,44 @@ Vector class\+: Vector is a class that represents a vector in 2 dimensions.
 This create a vector with 2 value. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classVector2_ae59e0a10f842521cb7e256ef976ead77}\label{classVector2_ae59e0a10f842521cb7e256ef976ead77}} 
+\mbox{\Hypertarget{classVector2_ae2f1223cb0d664aa73afb789086a4174}\label{classVector2_ae2f1223cb0d664aa73afb789086a4174}} 
 \index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!Vector2@{Vector2}}
 \index{Vector2@{Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classVector2}{Vector2}} (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classVector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 $<$ Variable for using the value of the Vector2\+Struct. 
 
 \mbox{\hyperlink{classVector2}{Vector2}} constructor with parameters. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the vector. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position x. \\
+\hline
+{\em y} & Position y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVector2_ae59e0a10f842521cb7e256ef976ead77}\label{classVector2_ae59e0a10f842521cb7e256ef976ead77}} 
+\index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::\mbox{\hyperlink{classVector2}{Vector2}} (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classVector2}{Vector2}} constructor with parameters. 
+
+
 \begin{DoxyTemplParams}{Template Parameters}
 {\em T} & Type of the vector. \\
 \hline
@@ -86,16 +118,16 @@ void
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classVector2_a83c14485b9b973c9ed8911b38a877e96}\label{classVector2_a83c14485b9b973c9ed8911b38a877e96}} 
+\mbox{\Hypertarget{classVector2_a19aa6202115a2d082c721abcee624070}\label{classVector2_a19aa6202115a2d082c721abcee624070}} 
 \index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getVector2Struct@{getVector2Struct}}
 \index{getVector2Struct@{getVector2Struct}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getVector2Struct()}{getVector2Struct()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-Vector2\+Struct \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::get\+Vector2\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+template \mbox{\hyperlink{classVector2}{Vector2}}$<$ int $>$\+::Vector2\+Struct \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::get\+Vector2\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classVector2_a83c14485b9b973c9ed8911b38a877e96}{get\+Vector2\+Struct()}}\+: Get the using Vector2\+Struct. 
+\mbox{\hyperlink{classVector2_a19aa6202115a2d082c721abcee624070}{get\+Vector2\+Struct()}}\+: Get the using Vector2\+Struct. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -105,40 +137,89 @@ Vector2\+Struct \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::get\+Vector
 \begin{DoxyReturn}{Returns}
 Vector2\+Struct 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVector2_a3ff70ed3477ec31762a5f9d2641c314a}\label{classVector2_a3ff70ed3477ec31762a5f9d2641c314a}} 
+\mbox{\Hypertarget{classVector2_a40e2297e41074aaaa3c04f79d73faa66}\label{classVector2_a40e2297e41074aaaa3c04f79d73faa66}} 
 \index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getX@{getX}}
 \index{getX@{getX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getX()}{getX()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-T \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+template int \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classVector2_a3ff70ed3477ec31762a5f9d2641c314a}{get\+X()}}\+: Get x of Vector2\+Struct. 
+\mbox{\hyperlink{classVector2_a40e2297e41074aaaa3c04f79d73faa66}{get\+X()}}\+: Get x of Vector2\+Struct. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
 {\em } & \\
 \hline
 \end{DoxyTemplParams}
-\mbox{\Hypertarget{classVector2_aaa6d5102b6dbc30ee3c7f0efe5a97406}\label{classVector2_aaa6d5102b6dbc30ee3c7f0efe5a97406}} 
+\mbox{\Hypertarget{classVector2_a860714a9c85987ecaaf7f1eb4978f96f}\label{classVector2_a860714a9c85987ecaaf7f1eb4978f96f}} 
 \index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getY@{getY}}
 \index{getY@{getY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getY()}{getY()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-T \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+template int \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classVector2_aaa6d5102b6dbc30ee3c7f0efe5a97406}{get\+Y()}}\+: Get y of Vector2\+Struct. 
+\mbox{\hyperlink{classVector2_a860714a9c85987ecaaf7f1eb4978f96f}{get\+Y()}}\+: Get y of Vector2\+Struct. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
 {\em } & \\
 \hline
 \end{DoxyTemplParams}
+\mbox{\Hypertarget{classVector2_ad6a2901bd0aa1d0b49c6403296f35d5b}\label{classVector2_ad6a2901bd0aa1d0b49c6403296f35d5b}} 
+\index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setX@{setX}}
+\index{setX@{setX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template void \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::setX (\begin{DoxyParamCaption}\item[{T}]{newX }\end{DoxyParamCaption})}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+\mbox{\hyperlink{classVector2_ad6a2901bd0aa1d0b49c6403296f35d5b}{set\+X()}}\+: Set x of Vector2\+Struct. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the \mbox{\hyperlink{classVector2}{Vector2}} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em newX} & The new value of x. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVector2_aeaa0db2a8605bf4a8c893821386b52e8}\label{classVector2_aeaa0db2a8605bf4a8c893821386b52e8}} 
+\index{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setY@{setY}}
+\index{setY@{setY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template void \mbox{\hyperlink{classVector2}{Vector2}}$<$ T $>$\+::setY (\begin{DoxyParamCaption}\item[{T}]{newY }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classVector2_aeaa0db2a8605bf4a8c893821386b52e8}{set\+Y()}}\+: Set y of Vector2\+Struct. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the \mbox{\hyperlink{classVector2}{Vector2}} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em newY} & The new value of y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Other/include/Vector2.\+h\end{DoxyCompactItemize}
+src/\+Other/include/Vector2.\+h\item 
+src/\+Other/Vector2.\+cpp\end{DoxyCompactItemize}

@@ -78,15 +78,16 @@ Inheritance diagram for Components:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/da3/classComponents__inherit__graph.png" border="0" usemap="#aComponents_inherit__map" alt="Inheritance graph"/></div>
 <map name="aComponents_inherit__map" id="aComponents_inherit__map">
-<area shape="rect" title="Components class: Components is a class that represents a component in the game." alt="" coords="132,5,228,32"/>
-<area shape="rect" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="105,80,161,107"/>
-<area shape="rect" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="202,80,283,107"/>
+<area shape="rect" title="Components class: Components is a class that represents a component in the game." alt="" coords="133,5,229,32"/>
+<area shape="rect" href="../../da/d61/classEntity.html" title="Entity class: Entity is a class that represents an entity in the game." alt="" coords="31,80,87,107"/>
+<area shape="rect" href="../../d2/d2f/classMusic.html" title="Music class: Music is a class that represents the music in the world." alt="" coords="111,80,169,107"/>
+<area shape="rect" href="../../df/d49/classSound.html" title="Sound class: Sound is a class that represents the sound properties of a Component." alt="" coords="193,80,252,107"/>
+<area shape="rect" href="../../db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="277,80,358,107"/>
 <area shape="rect" href="../../dd/d5f/classEntityManager.html" title=" " alt="" coords="5,155,112,181"/>
 <area shape="rect" href="../../d6/d39/classWorld.html" title="World class: World is a class that represents the world of the game." alt="" coords="31,229,86,256"/>
 <area shape="rect" href="../../df/d8d/classGameEngine.html" title="GameEngine class: GameEngine is a class that represents the game engine." alt="" coords="10,304,107,331"/>
-<area shape="rect" href="../../d7/dc9/classRect.html" title=" " alt="" coords="136,155,235,181"/>
-<area shape="rect" href="../../d7/dc9/classRect.html" title="Rect class: Rect is a class that represents a rectangle." alt="" coords="259,155,341,181"/>
-<area shape="rect" href="../../d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="365,155,421,181"/>
+<area shape="rect" href="../../d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="251,155,307,181"/>
+<area shape="rect" href="../../df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="331,155,378,181"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -98,9 +99,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a755420dfc5cc2f047ba1b19ef5fee802"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#a755420dfc5cc2f047ba1b19ef5fee802">~Components</a> ()=default</td></tr>
 <tr class="memdesc:a755420dfc5cc2f047ba1b19ef5fee802"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game.">Components</a> destructor.  <a href="../../db/d46/classComponents.html#a755420dfc5cc2f047ba1b19ef5fee802">More...</a><br /></td></tr>
 <tr class="separator:a755420dfc5cc2f047ba1b19ef5fee802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5db757815c1d8b961c069515f8e260"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">init</a> ()</td></tr>
-<tr class="memdesc:adb5db757815c1d8b961c069515f8e260"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the component  <a href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260">More...</a><br /></td></tr>
-<tr class="separator:adb5db757815c1d8b961c069515f8e260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2c74ad3adfbeb8efc7b3a7a979d353"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353">init</a> ()=0</td></tr>
+<tr class="memdesc:a7c2c74ad3adfbeb8efc7b3a7a979d353"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353" title="init(): Initialize the component">init()</a>: Initialize the component  <a href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353">More...</a><br /></td></tr>
+<tr class="separator:a7c2c74ad3adfbeb8efc7b3a7a979d353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b10aca0b906d3b0bb93a1cdb38bb0ad"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad">getBit</a> ()=0</td></tr>
+<tr class="memdesc:a1b10aca0b906d3b0bb93a1cdb38bb0ad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad" title="getBit(): Get the bitmask of the component">getBit()</a>: Get the bitmask of the component  <a href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad">More...</a><br /></td></tr>
+<tr class="separator:a1b10aca0b906d3b0bb93a1cdb38bb0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac886b9c5719c5d40ee06812c4c992110"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">update</a> (sf::Time timeDelta)=0</td></tr>
 <tr class="memdesc:ac886b9c5719c5d40ee06812c4c992110"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110" title="update(): Update the component">update()</a>: Update the component  <a href="../../db/d46/classComponents.html#ac886b9c5719c5d40ee06812c4c992110">More...</a><br /></td></tr>
 <tr class="separator:ac886b9c5719c5d40ee06812c4c992110"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,8 +182,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adb5db757815c1d8b961c069515f8e260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb5db757815c1d8b961c069515f8e260">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a1b10aca0b906d3b0bb93a1cdb38bb0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b10aca0b906d3b0bb93a1cdb38bb0ad">&#9670;&nbsp;</a></span>getBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Components::getBit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../db/d46/classComponents.html#a1b10aca0b906d3b0bb93a1cdb38bb0ad" title="getBit(): Get the bitmask of the component">getBit()</a>: Get the bitmask of the component </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int: bitmask of the component </dd></dl>
+
+<p>Implemented in <a class="el" href="../../da/d61/classEntity.html#a1ecd770fc7cff19699e4154e3c0600ce">Entity</a>, <a class="el" href="../../db/daf/classTransform.html#accd67430a797f9443cd4fe3ce7ef2487">Transform</a>, <a class="el" href="../../df/d53/classText.html#ab90c80b2bdb36400e48a735d5b7ce565">Text</a>, <a class="el" href="../../d1/d6d/classSprite.html#ae059986c967e709808f51f95ba94bfcc">Sprite</a>, <a class="el" href="../../df/d49/classSound.html#a6500bb3e2ef7ca9666e2e0d49636bf34">Sound</a>, and <a class="el" href="../../d2/d2f/classMusic.html#aa5267b6b6184e78ce2e9a3b08cc248c9">Music</a>.</p>
+
+</div>
+</div>
+<a id="a7c2c74ad3adfbeb8efc7b3a7a979d353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2c74ad3adfbeb8efc7b3a7a979d353">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,12 +236,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../db/d46/classComponents.html#adb5db757815c1d8b961c069515f8e260" title="init(): Initialize the component">init()</a>: Initialize the component </p>
+<p><a class="el" href="../../db/d46/classComponents.html#a7c2c74ad3adfbeb8efc7b3a7a979d353" title="init(): Initialize the component">init()</a>: Initialize the component </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">void</td><td></td></tr>
@@ -209,6 +249,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool: true if the component is initialized, false otherwise </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d6/d39/classWorld.html#a4ae65074f87b1f80fb2e2ce0db373b0d">World</a>, <a class="el" href="../../dd/d5f/classEntityManager.html#ab4a499dc089c5bf16424c72c66d3a9c5">EntityManager</a>, <a class="el" href="../../da/d61/classEntity.html#abb29b0a340f457dc197200b836797fa9">Entity</a>, <a class="el" href="../../db/daf/classTransform.html#aeb32baba14e361891175f99a6ba071ca">Transform</a>, <a class="el" href="../../df/d53/classText.html#a405d236481ab61567e77350b58d327db">Text</a>, <a class="el" href="../../d1/d6d/classSprite.html#a615fba2bdb622d387496954dd5a8cc54">Sprite</a>, <a class="el" href="../../df/d49/classSound.html#a65de71f0da305704585622e040e6ce66">Sound</a>, and <a class="el" href="../../d2/d2f/classMusic.html#a0556e74ac473b986b6364711a36faec2">Music</a>.</p>
 
 </div>
 </div>
@@ -245,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369">Entity</a>, <a class="el" href="../../db/daf/classTransform.html#a439d029d45b7fff4069d58ed415cb48c">Transform</a>, and <a class="el" href="../../d1/d6d/classSprite.html#a679e3e99b9b5eb3090eda5bf39174de0">Sprite</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d49/classSound.html#a59ce450fa2717da9d2decc01c9efac34">Sound</a>, <a class="el" href="../../d2/d2f/classMusic.html#a75383071ac346ab7abb0ccdc5b0ab87d">Music</a>, <a class="el" href="../../da/d61/classEntity.html#acb61198aa85811ee9650f7edb76df369">Entity</a>, <a class="el" href="../../db/daf/classTransform.html#a439d029d45b7fff4069d58ed415cb48c">Transform</a>, <a class="el" href="../../df/d53/classText.html#a372961f4dabb31ecb29ea03d19d3f713">Text</a>, and <a class="el" href="../../d1/d6d/classSprite.html#a679e3e99b9b5eb3090eda5bf39174de0">Sprite</a>.</p>
 
 </div>
 </div>

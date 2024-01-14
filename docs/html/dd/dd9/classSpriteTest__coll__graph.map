@@ -1,9 +1,10 @@
 <map id="SpriteTest" name="SpriteTest">
-<area shape="rect" id="node1" title=" " alt="" coords="89,247,170,273"/>
-<area shape="rect" id="node2" title=" " alt="" coords="61,157,155,184"/>
-<area shape="rect" id="node3" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="180,157,236,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="122,247,203,273"/>
+<area shape="rect" id="node2" title=" " alt="" coords="94,157,189,184"/>
+<area shape="rect" id="node3" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="213,157,269,184"/>
 <area shape="rect" id="node4" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="5,81,149,108"/>
 <area shape="rect" id="node5" href="$da/dc3/classtoSFML.html" title="toSFML class: toSFML is a class that convert some class into SFML class." alt="" coords="174,81,242,108"/>
 <area shape="rect" id="node6" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="266,81,347,108"/>
 <area shape="rect" id="node7" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="259,5,355,32"/>
+<area shape="rect" id="node8" href="$dc/d6c/classITransform.html" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="372,81,457,108"/>
 </map>

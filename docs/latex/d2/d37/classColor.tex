@@ -1,0 +1,337 @@
+\hypertarget{classColor}{}\doxysection{Color Class Reference}
+\label{classColor}\index{Color@{Color}}
+
+
+\mbox{\hyperlink{classColor}{Color}} class\+: \mbox{\hyperlink{classColor}{Color}} is a class that use for the color in game.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+h$>$}
+
+
+
+Collaboration diagram for Color\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d6/d86/classColor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}} ()
+\begin{DoxyCompactList}\small\item\em $<$ Represent the Alpha of a color between 0 and 255. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor_af3382178ea9dca18dd61670917a341ab}{Color}} (const sf\+::\+Color \&sfml\+Color)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor}{Color}} constructor with sf\+::\+Color\& as parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor_a2a84d3b91f2999a11b6728a4b8f85ae4}{$\sim$\+Color}} ()=default
+\begin{DoxyCompactList}\small\item\em Default override \mbox{\hyperlink{classColor}{Color}} destructor. \end{DoxyCompactList}\item 
+sf\+::\+Uint8 \mbox{\hyperlink{classColor_a2ceaf07a39bff292943e3d4aa48aeb01}{get\+Red}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a2ceaf07a39bff292943e3d4aa48aeb01}{get\+Red()}}\+: Get the sf\+::\+Uint8 red. \end{DoxyCompactList}\item 
+sf\+::\+Uint8 \mbox{\hyperlink{classColor_a15ffeff25262e71a53832a3c06e7e4ee}{get\+Green}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a15ffeff25262e71a53832a3c06e7e4ee}{get\+Green()}}\+: Get the sf\+::\+Uint8 green. \end{DoxyCompactList}\item 
+sf\+::\+Uint8 \mbox{\hyperlink{classColor_adf1b4751164f3059decd317f9e85caed}{get\+Blue}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_adf1b4751164f3059decd317f9e85caed}{get\+Blue()}}\+: Get the sf\+::\+Uint8 blue. \end{DoxyCompactList}\item 
+sf\+::\+Uint8 \mbox{\hyperlink{classColor_a85c35bf1568956a8aefc0dfa92b83438}{get\+Alpha}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a85c35bf1568956a8aefc0dfa92b83438}{get\+Alpha()}}\+: Get the sf\+::\+Uint8 alpha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classColor_ad1cd1c55343b5ce6482ce771884343be}{set\+Red}} (int new\+Red)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_ad1cd1c55343b5ce6482ce771884343be}{set\+Red(int)}}\+: Set the sf\+::\+Uint8 red with an int and convert into sf\+::\+Unit8 in the function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classColor_a41f5eb9cce62daf26139833ad031e870}{set\+Green}} (int new\+Green)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a41f5eb9cce62daf26139833ad031e870}{set\+Green(int)}}\+: Set the sf\+::\+Uint8 green with an int and convert into sf\+::\+Unit8 in the function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classColor_a5e6250d4b0a11335d7788fc6d75b84f7}{set\+Blue}} (int new\+Blue)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a5e6250d4b0a11335d7788fc6d75b84f7}{set\+Blue(int)}}\+: Set the sf\+::\+Uint8 blue with an int and convert into sf\+::\+Unit8 in the function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classColor_a23943d3577af074cb27c5a75927b28f2}{set\+Alpha}} (int new\+Alpha)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a23943d3577af074cb27c5a75927b28f2}{set\+Alpha(int)}}\+: Set the sf\+::\+Uint8 alpha with an int and convert into sf\+::\+Unit8 in the function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor_a1e97bd40693b4f88a54308ab8a420134}{operator sf\+::\+Color}} () const
+\begin{DoxyCompactList}\small\item\em operator sf\+::\+Color() const\+: Convert \mbox{\hyperlink{classColor}{Color}} classes into sf\+::\+Color \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classColor}{Color}} \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{from\+SFMLColor}} (const sf\+::\+Color \&sf\+Color)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{from\+SFMLColor(const sf\+::\+Color\&)}}\+: Convert SFML color into \mbox{\hyperlink{classColor}{Color}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classColor_abfda8f6d25cb1b8ddbf029624bf879dd}\label{classColor_abfda8f6d25cb1b8ddbf029624bf879dd}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Black} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Black)
+\item 
+\mbox{\Hypertarget{classColor_a64abba1de9a93b7b2cf3ddbde14f640b}\label{classColor_a64abba1de9a93b7b2cf3ddbde14f640b}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries White} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+White)
+\item 
+\mbox{\Hypertarget{classColor_ade25ce437fd74a7b08fee1583b329c8e}\label{classColor_ade25ce437fd74a7b08fee1583b329c8e}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Red} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Red)
+\item 
+\mbox{\Hypertarget{classColor_a99d190056130b083fe716a721f0e2b74}\label{classColor_a99d190056130b083fe716a721f0e2b74}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Green} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Green)
+\item 
+\mbox{\Hypertarget{classColor_a662b7359238c900518fa4a5595c3b2d5}\label{classColor_a662b7359238c900518fa4a5595c3b2d5}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Blue} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Blue)
+\item 
+\mbox{\Hypertarget{classColor_afc6c72f651b3fb77452a86a4fcab7582}\label{classColor_afc6c72f651b3fb77452a86a4fcab7582}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Yellow} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Yellow)
+\item 
+\mbox{\Hypertarget{classColor_a7f0f5e5f4e3d9fb0d335109d15971f29}\label{classColor_a7f0f5e5f4e3d9fb0d335109d15971f29}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Magenta} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Magenta)
+\item 
+\mbox{\Hypertarget{classColor_aba8a75025a243f2186eef9bc5f8b0536}\label{classColor_aba8a75025a243f2186eef9bc5f8b0536}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Cyan} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Cyan)
+\item 
+\mbox{\Hypertarget{classColor_ab0826c48816176cd42b5226becebf69d}\label{classColor_ab0826c48816176cd42b5226becebf69d}} 
+static const \mbox{\hyperlink{classColor}{Color}} {\bfseries Transparent} = \mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{Color\+::from\+SFMLColor}}(sf\+::\+Color\+::\+Transparent)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classColor}{Color}} class\+: \mbox{\hyperlink{classColor}{Color}} is a class that use for the color in game. 
+
+The \mbox{\hyperlink{classColor}{Color}} class manages the color. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}\label{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}} 
+\index{Color@{Color}!Color@{Color}}
+\index{Color@{Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Color\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$<$ Represent the Alpha of a color between 0 and 255. 
+
+Default \mbox{\hyperlink{classColor}{Color}} constructor.
+
+Set the default value to \char`\"{}\+Default\char`\"{} and initialize red, green, blue and alpha to 255 for initialize the color white.
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_af3382178ea9dca18dd61670917a341ab}\label{classColor_af3382178ea9dca18dd61670917a341ab}} 
+\index{Color@{Color}!Color@{Color}}
+\index{Color@{Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Color\+::\+Color (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{sfml\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classColor}{Color}} constructor with sf\+::\+Color\& as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sfml\+Color} & Represent a color preset or no from SFML. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a2a84d3b91f2999a11b6728a4b8f85ae4}\label{classColor_a2a84d3b91f2999a11b6728a4b8f85ae4}} 
+\index{Color@{Color}!````~Color@{$\sim$Color}}
+\index{````~Color@{$\sim$Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{$\sim$Color()}{~Color()}}
+{\footnotesize\ttfamily Color\+::$\sim$\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default override \mbox{\hyperlink{classColor}{Color}} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classColor_a7dd26157bf69959be4a9eb93795d6e4d}\label{classColor_a7dd26157bf69959be4a9eb93795d6e4d}} 
+\index{Color@{Color}!fromSFMLColor@{fromSFMLColor}}
+\index{fromSFMLColor@{fromSFMLColor}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{fromSFMLColor()}{fromSFMLColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColor}{Color}} Color\+::from\+SFMLColor (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{sf\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{classColor_a7dd26157bf69959be4a9eb93795d6e4d}{from\+SFMLColor(const sf\+::\+Color\&)}}\+: Convert SFML color into \mbox{\hyperlink{classColor}{Color}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sf\+Color} & The color from SFML \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classColor}{Color}}\+: \mbox{\hyperlink{classColor}{Color}} class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a85c35bf1568956a8aefc0dfa92b83438}\label{classColor_a85c35bf1568956a8aefc0dfa92b83438}} 
+\index{Color@{Color}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily sf\+::\+Uint8 Color\+::get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classColor_a85c35bf1568956a8aefc0dfa92b83438}{get\+Alpha()}}\+: Get the sf\+::\+Uint8 alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Uint8\+: The value of alpha. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_adf1b4751164f3059decd317f9e85caed}\label{classColor_adf1b4751164f3059decd317f9e85caed}} 
+\index{Color@{Color}!getBlue@{getBlue}}
+\index{getBlue@{getBlue}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getBlue()}{getBlue()}}
+{\footnotesize\ttfamily sf\+::\+Uint8 Color\+::get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classColor_adf1b4751164f3059decd317f9e85caed}{get\+Blue()}}\+: Get the sf\+::\+Uint8 blue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Uint8\+: The value of blue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a15ffeff25262e71a53832a3c06e7e4ee}\label{classColor_a15ffeff25262e71a53832a3c06e7e4ee}} 
+\index{Color@{Color}!getGreen@{getGreen}}
+\index{getGreen@{getGreen}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getGreen()}{getGreen()}}
+{\footnotesize\ttfamily sf\+::\+Uint8 Color\+::get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classColor_a15ffeff25262e71a53832a3c06e7e4ee}{get\+Green()}}\+: Get the sf\+::\+Uint8 green. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Uint8\+: The value of green. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a2ceaf07a39bff292943e3d4aa48aeb01}\label{classColor_a2ceaf07a39bff292943e3d4aa48aeb01}} 
+\index{Color@{Color}!getRed@{getRed}}
+\index{getRed@{getRed}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getRed()}{getRed()}}
+{\footnotesize\ttfamily sf\+::\+Uint8 Color\+::get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classColor_a2ceaf07a39bff292943e3d4aa48aeb01}{get\+Red()}}\+: Get the sf\+::\+Uint8 red. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Uint8\+: The value of red. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a1e97bd40693b4f88a54308ab8a420134}\label{classColor_a1e97bd40693b4f88a54308ab8a420134}} 
+\index{Color@{Color}!operator sf::Color@{operator sf::Color}}
+\index{operator sf::Color@{operator sf::Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator sf::Color()}{operator sf::Color()}}
+{\footnotesize\ttfamily Color\+::operator sf\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+operator sf\+::\+Color() const\+: Convert \mbox{\hyperlink{classColor}{Color}} classes into sf\+::\+Color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Color\+: Get the \mbox{\hyperlink{classColor}{Color}} in sf\+::\+Color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a23943d3577af074cb27c5a75927b28f2}\label{classColor_a23943d3577af074cb27c5a75927b28f2}} 
+\index{Color@{Color}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void Color\+::set\+Alpha (\begin{DoxyParamCaption}\item[{int}]{new\+Alpha }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classColor_a23943d3577af074cb27c5a75927b28f2}{set\+Alpha(int)}}\+: Set the sf\+::\+Uint8 alpha with an int and convert into sf\+::\+Unit8 in the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Alpha} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a5e6250d4b0a11335d7788fc6d75b84f7}\label{classColor_a5e6250d4b0a11335d7788fc6d75b84f7}} 
+\index{Color@{Color}!setBlue@{setBlue}}
+\index{setBlue@{setBlue}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{setBlue()}{setBlue()}}
+{\footnotesize\ttfamily void Color\+::set\+Blue (\begin{DoxyParamCaption}\item[{int}]{new\+Blue }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classColor_a5e6250d4b0a11335d7788fc6d75b84f7}{set\+Blue(int)}}\+: Set the sf\+::\+Uint8 blue with an int and convert into sf\+::\+Unit8 in the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Blue} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a41f5eb9cce62daf26139833ad031e870}\label{classColor_a41f5eb9cce62daf26139833ad031e870}} 
+\index{Color@{Color}!setGreen@{setGreen}}
+\index{setGreen@{setGreen}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{setGreen()}{setGreen()}}
+{\footnotesize\ttfamily void Color\+::set\+Green (\begin{DoxyParamCaption}\item[{int}]{new\+Green }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classColor_a41f5eb9cce62daf26139833ad031e870}{set\+Green(int)}}\+: Set the sf\+::\+Uint8 green with an int and convert into sf\+::\+Unit8 in the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Green} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_ad1cd1c55343b5ce6482ce771884343be}\label{classColor_ad1cd1c55343b5ce6482ce771884343be}} 
+\index{Color@{Color}!setRed@{setRed}}
+\index{setRed@{setRed}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{setRed()}{setRed()}}
+{\footnotesize\ttfamily void Color\+::set\+Red (\begin{DoxyParamCaption}\item[{int}]{new\+Red }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classColor_ad1cd1c55343b5ce6482ce771884343be}{set\+Red(int)}}\+: Set the sf\+::\+Uint8 red with an int and convert into sf\+::\+Unit8 in the function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Red} & Number between 0 and 255. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Other/include/Color.\+h\item 
+src/\+Other/Color.\+cpp\end{DoxyCompactItemize}

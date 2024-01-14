@@ -1,0 +1,376 @@
+\hypertarget{classMusic}{}\doxysection{Music Class Reference}
+\label{classMusic}\index{Music@{Music}}
+
+
+\mbox{\hyperlink{classMusic}{Music}} class\+: \mbox{\hyperlink{classMusic}{Music}} is a class that represents the music in the world.  
+
+
+
+
+{\ttfamily \#include $<$Music.\+h$>$}
+
+
+
+Inheritance diagram for Music\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{da/df1/classMusic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Music\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{d1/dd9/classMusic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMusic_a47a53d7107b2fcbe41d0a3f892776b4f}{Music}} ()=default
+\begin{DoxyCompactList}\small\item\em $<$ Bit of the \mbox{\hyperlink{classMusic}{Music}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}{$\sim$\+Music}} () override=default
+\begin{DoxyCompactList}\small\item\em Default override \mbox{\hyperlink{classMusic}{Music}} destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}{get\+Bit}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classMusic}{Music}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a75383071ac346ab7abb0ccdc5b0ab87d}{update}} (sf\+::\+Time time\+Delta) override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a75383071ac346ab7abb0ccdc5b0ab87d}{update(sf\+::\+Time)}}\+: Update the component \mbox{\hyperlink{classMusic}{Music}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMusic_a0556e74ac473b986b6364711a36faec2}{init}} () override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a0556e74ac473b986b6364711a36faec2}{init()}}\+: Initialize the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_ae92272be39438c455656eaf8acfd6dfa}{set\+Music}} (std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$$>$ map\+Music, const std\+::string \&name\+Music)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_ae92272be39438c455656eaf8acfd6dfa}{set\+Music(std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Music$>$$>$, const std\+::string\&)}}\+: Initialize the sf\+::\+Music of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_ac4c81709ea6c48a45efbd6f1140458b4}{set\+Deferred\+Music}} (std\+::function$<$ void()$>$ setter)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_ac4c81709ea6c48a45efbd6f1140458b4}{set\+Deferred\+Music(std\+::function$<$void()$>$)}}\+: Set the deferred function for \mbox{\hyperlink{classMusic}{Music}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}{apply\+Deferred\+Music}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}{apply\+Deferred\+Music()}}\+: Apply the deferred function for \mbox{\hyperlink{classMusic}{Music}} \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$ \mbox{\hyperlink{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}{get\+Music}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}{get\+Music()}}\+: Get the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a54b941f6f7634d7f99b473c78fe6e4da}{play}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a54b941f6f7634d7f99b473c78fe6e4da}{play()}}\+: Play the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a10e5537400b6f018a8c86085751a90cb}{pause}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a10e5537400b6f018a8c86085751a90cb}{pause()}}\+: Pause the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a008211b514c1c89c15399d3384d3fcea}{stop}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a008211b514c1c89c15399d3384d3fcea}{stop()}}\+: Stop the music. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a234ca5b816dfbb2a9ed6f91d9d51b5bc}{set\+Loop}} (bool loop)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a234ca5b816dfbb2a9ed6f91d9d51b5bc}{set\+Loop(bool)}}\+: Set the loop of the music. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMusic_a017e3ec0801c0130225abdde7282ad72}{get\+Loop}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a017e3ec0801c0130225abdde7282ad72}{get\+Loop()}}\+: Get if the loop is set to True or False. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a677a406c2e250361425cdc2239b24129}{set\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a677a406c2e250361425cdc2239b24129}{set\+Volume(float)}}\+: Set the volume of the music. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classMusic_a3712255b94968e4832eba16cf6bf91f0}{get\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a3712255b94968e4832eba16cf6bf91f0}{get\+Volume()}}\+: Get the volume of the music. \end{DoxyCompactList}\item 
+sf\+::\+Sound\+Source\+::\+Status \mbox{\hyperlink{classMusic_a5e0ba493b36293f3a00e1cefdd86ef40}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMusic_a5e0ba493b36293f3a00e1cefdd86ef40}{get\+Status()}}\+: Get the status of the music. Playing, pause or stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classMusic}{Music}} class\+: \mbox{\hyperlink{classMusic}{Music}} is a class that represents the music in the world. 
+
+The music class manages the music from an \mbox{\hyperlink{classEntity}{Entity}} using SFML. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMusic_a47a53d7107b2fcbe41d0a3f892776b4f}\label{classMusic_a47a53d7107b2fcbe41d0a3f892776b4f}} 
+\index{Music@{Music}!Music@{Music}}
+\index{Music@{Music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{Music()}{Music()}}
+{\footnotesize\ttfamily Music\+::\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+$<$ Bit of the \mbox{\hyperlink{classMusic}{Music}} 
+
+Default \mbox{\hyperlink{classMusic}{Music}} constructor.
+
+Set the default value to \char`\"{}\+Default\char`\"{}. \mbox{\Hypertarget{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}\label{classMusic_a1ebbc269eb88acd7c472c5c8405d0692}} 
+\index{Music@{Music}!````~Music@{$\sim$Music}}
+\index{````~Music@{$\sim$Music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{$\sim$Music()}{~Music()}}
+{\footnotesize\ttfamily Music\+::$\sim$\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Default override \mbox{\hyperlink{classMusic}{Music}} destructor. 
+
+Set the default value to \char`\"{}\+Default\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}\label{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}} 
+\index{Music@{Music}!applyDeferredMusic@{applyDeferredMusic}}
+\index{applyDeferredMusic@{applyDeferredMusic}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{applyDeferredMusic()}{applyDeferredMusic()}}
+{\footnotesize\ttfamily void Music\+::apply\+Deferred\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a0c932a0ed93182f2a53786c4a7f43f31}{apply\+Deferred\+Music()}}\+: Apply the deferred function for \mbox{\hyperlink{classMusic}{Music}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}\label{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}} 
+\index{Music@{Music}!getBit@{getBit}}
+\index{getBit@{getBit}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{getBit()}{getBit()}}
+{\footnotesize\ttfamily int Music\+::get\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classMusic_aa5267b6b6184e78ce2e9a3b08cc248c9}{get\+Bit()}}\+: Get the bit of the \mbox{\hyperlink{classMusic}{Music}}. 
+
+\begin{DoxyReturn}{Returns}
+int\+: The bit of the \mbox{\hyperlink{classMusic}{Music}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_a1b10aca0b906d3b0bb93a1cdb38bb0ad}{Components}}.
+
+\mbox{\Hypertarget{classMusic_a017e3ec0801c0130225abdde7282ad72}\label{classMusic_a017e3ec0801c0130225abdde7282ad72}} 
+\index{Music@{Music}!getLoop@{getLoop}}
+\index{getLoop@{getLoop}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{getLoop()}{getLoop()}}
+{\footnotesize\ttfamily bool Music\+::get\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classMusic_a017e3ec0801c0130225abdde7282ad72}{get\+Loop()}}\+: Get if the loop is set to True or False. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: True or False. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}\label{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}} 
+\index{Music@{Music}!getMusic@{getMusic}}
+\index{getMusic@{getMusic}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{getMusic()}{getMusic()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$ Music\+::get\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classMusic_a9c468a88aa49c2030265ad6d7c1c609e}{get\+Music()}}\+: Get the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$sf\+::\+Music$>$\+: The shared ptr of the music. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a5e0ba493b36293f3a00e1cefdd86ef40}\label{classMusic_a5e0ba493b36293f3a00e1cefdd86ef40}} 
+\index{Music@{Music}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily sf\+::\+Sound\+Source\+::\+Status Music\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classMusic_a5e0ba493b36293f3a00e1cefdd86ef40}{get\+Status()}}\+: Get the status of the music. Playing, pause or stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Sound\+Source\+::\+Status\+: Enumerator of sf\+::\+Sound\+Source\+::\+Status which is (Stopped, Paused, Playing). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a3712255b94968e4832eba16cf6bf91f0}\label{classMusic_a3712255b94968e4832eba16cf6bf91f0}} 
+\index{Music@{Music}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily float Music\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classMusic_a3712255b94968e4832eba16cf6bf91f0}{get\+Volume()}}\+: Get the volume of the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float\+: Float number that represents the volume between 0 and 100 of the music. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a0556e74ac473b986b6364711a36faec2}\label{classMusic_a0556e74ac473b986b6364711a36faec2}} 
+\index{Music@{Music}!init@{init}}
+\index{init@{init}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Music\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classMusic_a0556e74ac473b986b6364711a36faec2}{init()}}\+: Initialize the component. 
+
+\begin{DoxyReturn}{Returns}
+bool\+: true if the component is initialized, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classComponents_a7c2c74ad3adfbeb8efc7b3a7a979d353}{Components}}.
+
+\mbox{\Hypertarget{classMusic_a10e5537400b6f018a8c86085751a90cb}\label{classMusic_a10e5537400b6f018a8c86085751a90cb}} 
+\index{Music@{Music}!pause@{pause}}
+\index{pause@{pause}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Music\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a10e5537400b6f018a8c86085751a90cb}{pause()}}\+: Pause the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a54b941f6f7634d7f99b473c78fe6e4da}\label{classMusic_a54b941f6f7634d7f99b473c78fe6e4da}} 
+\index{Music@{Music}!play@{play}}
+\index{play@{play}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Music\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a54b941f6f7634d7f99b473c78fe6e4da}{play()}}\+: Play the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_ac4c81709ea6c48a45efbd6f1140458b4}\label{classMusic_ac4c81709ea6c48a45efbd6f1140458b4}} 
+\index{Music@{Music}!setDeferredMusic@{setDeferredMusic}}
+\index{setDeferredMusic@{setDeferredMusic}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{setDeferredMusic()}{setDeferredMusic()}}
+{\footnotesize\ttfamily void Music\+::set\+Deferred\+Music (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{setter }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_ac4c81709ea6c48a45efbd6f1140458b4}{set\+Deferred\+Music(std\+::function$<$void()$>$)}}\+: Set the deferred function for \mbox{\hyperlink{classMusic}{Music}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setter} & Function that will use \mbox{\hyperlink{classMusic}{Music}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a234ca5b816dfbb2a9ed6f91d9d51b5bc}\label{classMusic_a234ca5b816dfbb2a9ed6f91d9d51b5bc}} 
+\index{Music@{Music}!setLoop@{setLoop}}
+\index{setLoop@{setLoop}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{setLoop()}{setLoop()}}
+{\footnotesize\ttfamily void Music\+::set\+Loop (\begin{DoxyParamCaption}\item[{bool}]{loop }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a234ca5b816dfbb2a9ed6f91d9d51b5bc}{set\+Loop(bool)}}\+: Set the loop of the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & True or False. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_ae92272be39438c455656eaf8acfd6dfa}\label{classMusic_ae92272be39438c455656eaf8acfd6dfa}} 
+\index{Music@{Music}!setMusic@{setMusic}}
+\index{setMusic@{setMusic}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{setMusic()}{setMusic()}}
+{\footnotesize\ttfamily void Music\+::set\+Music (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$$>$}]{map\+Music,  }\item[{const std\+::string \&}]{name\+Music }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_ae92272be39438c455656eaf8acfd6dfa}{set\+Music(std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Music$>$$>$, const std\+::string\&)}}\+: Initialize the sf\+::\+Music of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+Music} & Map of all the music loaded. \\
+\hline
+{\em name\+Music} & Name of the music loaded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a677a406c2e250361425cdc2239b24129}\label{classMusic_a677a406c2e250361425cdc2239b24129}} 
+\index{Music@{Music}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Music\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a677a406c2e250361425cdc2239b24129}{set\+Volume(float)}}\+: Set the volume of the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Float number that represents the volume between 0 and 100 of the music. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a008211b514c1c89c15399d3384d3fcea}\label{classMusic_a008211b514c1c89c15399d3384d3fcea}} 
+\index{Music@{Music}!stop@{stop}}
+\index{stop@{stop}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Music\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMusic_a008211b514c1c89c15399d3384d3fcea}{stop()}}\+: Stop the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMusic_a75383071ac346ab7abb0ccdc5b0ab87d}\label{classMusic_a75383071ac346ab7abb0ccdc5b0ab87d}} 
+\index{Music@{Music}!update@{update}}
+\index{update@{update}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Music\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{time\+Delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classMusic_a75383071ac346ab7abb0ccdc5b0ab87d}{update(sf\+::\+Time)}}\+: Update the component \mbox{\hyperlink{classMusic}{Music}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Delta} & sf\+::\+Time of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classComponents_ac886b9c5719c5d40ee06812c4c992110}{Components}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Components/all\+\_\+components/include/Music.\+h\item 
+src/\+Components/all\+\_\+components/Music.\+cpp\end{DoxyCompactItemize}

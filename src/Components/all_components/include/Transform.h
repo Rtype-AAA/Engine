@@ -41,10 +41,9 @@ public:
     /// @return void
     ~Transform() override = default;
 
-    /**
-     * @brief update(sf::Time): Update the component Music
-     * @param timeDelta: sf::Time of the game.
-     */
+    /// @brief update(sf::Time): Update the component Music
+    /// @param timeDelta: sf::Time of the game.
+    /// @return void
     void update(sf::Time deltaTime) override;
 
     /// @brief getBit(): Get the bitmask of the component

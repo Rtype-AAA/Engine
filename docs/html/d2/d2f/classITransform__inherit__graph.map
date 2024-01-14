@@ -1,0 +1,5 @@
+<map id="ITransform" name="ITransform">
+<area shape="rect" id="node1" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="28,5,113,32"/>
+<area shape="rect" id="node2" href="$d1/d6d/classSprite.html" title="Sprite class: Sprite is a class that represents the rendering properties of a Component." alt="" coords="5,80,61,107"/>
+<area shape="rect" id="node3" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="86,80,133,107"/>
+</map>

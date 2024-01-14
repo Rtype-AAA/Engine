@@ -32,50 +32,75 @@ Collaboration diagram for Game\+Engine\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classGameEngine_affd35ad3f1f76918d0b0201f56b7b125}{Game\+Engine}} ()=default
 \begin{DoxyCompactList}\small\item\em $<$ Time of the game. Using with the Clock. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}{Game\+Engine}} (sf\+::\+Video\+Mode mode, std\+::string type, sf\+::\+String title, sf\+::\+Uint32 style=sf\+::\+Style\+::\+Default, const sf\+::\+Context\+Settings \&settings=sf\+::\+Context\+Settings())
+\mbox{\hyperlink{classGameEngine_ac0e83afca4f289a44988215438b103fd}{Game\+Engine}} (sf\+::\+Video\+Mode mode, const sf\+::\+String \&title, sf\+::\+Uint32 style=sf\+::\+Style\+::\+Default, const sf\+::\+Context\+Settings \&settings=sf\+::\+Context\+Settings())
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor with parameters. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classGameEngine_a461ad53101f4b4711339ecb803254d21}{$\sim$\+Game\+Engine}} ()=default
+\mbox{\hyperlink{classGameEngine_ac4e49abc59ae4615a92a9a9da92f0423}{$\sim$\+Game\+Engine}} () override=default
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine}{Game\+Engine}} destructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}{run}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (with parameters). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (without parameters). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources, const std\+::string \&first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run()}}\+: Run the game engine (with parameters). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8c7777c1d0448af49e6af95defa51c0a}{render\+Game\+Engine()}}\+: Render the game engine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a29fe136b52bf31b382cd7cff8fc9db3c}{event\+Game\+Engine()}}\+: Manage the events of the game engine. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open()}}\+: Check if the window is open. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a8768266e70ca73b6f2877903eb5fff1c}{update\+Game\+Engine()}}\+: Update the game engine. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGameEngine_afc7d0047cd858c9d4573b7728663c72e}{get\+Files\+Texture}} (std\+::string path\+Directory)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_afc7d0047cd858c9d4573b7728663c72e}{get\+Files\+Texture()}}\+: Get all the textures files in the given directory. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, std\+::map$<$ std\+::string, std\+::string $>$ path\+Ressources, std\+::string first\+Scene)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize()}}\+: Initialize the game engine. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite()}}\+: Initialize the sprites. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a05f319897694a1ab0d732acc4beb6f93}{is\+Window\+Open()}}\+: Check if the window is open. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World, const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources, const std\+::string \&first\+Scene)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize()}}\+: Initialize the game engine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}{initialize\+Sprite\+Function}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}{initialize\+Sprite\+Function()}}\+: Initialize the sprites function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_ab24556da97c10cf38088f60b22802b4f}{initialize\+Sound\+Function}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab24556da97c10cf38088f60b22802b4f}{initialize\+Sound\+Function()}}\+: Initialize the sound function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}{initialize\+Music\+Function}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}{initialize\+Music\+Function()}}\+: Initialize the music function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a5d848be1673757d1e7bb6e4ff29f7214}{initialize\+Text\+Function}} () const
+\begin{DoxyCompactList}\small\item\em initialize\+Font\+Function()\+: Initialize the font function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&path\+Ressources)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture}} (std\+::string path)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a9b2840ee507b69ff57bfa88d25a41091}{initialize\+Texture()}}\+: Initialize the textures with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound()}}\+: Initialize the sound with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music()}}\+: Initialize the music with their path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font()}}\+: Initialize the font with their path. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map}} (std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$ map\+World)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a53fbb770fc5a0fe4dc4a14785a2fc345}{initialize\+World\+Map()}}\+: Initialize the world map. \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window()}}\+: Get the window. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window()}}\+: Set the window. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& \mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine()}}\+: Get the event engine. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \& \mbox{\hyperlink{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}{get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}{get\+Window()}}\+: Get the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& \mbox{\hyperlink{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}{get\+Event\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}{get\+Event\+Engine()}}\+: Get the event engine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}{set\+Current\+World}} (\mbox{\hyperlink{classWorld}{World}} $\ast$world)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a98e21c2a6c0286c52846788ad1852f6a}{set\+Current\+World()}}\+: Set \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classWorld}{World}} $\ast$ \mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World}} ()
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World}} (std\+::string name\+World, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ world)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World()}}\+: Add a world to the world map. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World}} (std\+::string name\+World)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World()}}\+: Get a world from the world map with its name. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ \mbox{\hyperlink{classGameEngine_a5b2b5e68a945ca91703dd685c1e92a75}{get\+Map\+Texture}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a5b2b5e68a945ca91703dd685c1e92a75}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. \end{DoxyCompactList}\item 
-std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ \mbox{\hyperlink{classGameEngine_a6ecd6da686703a866ffcfe33066fc410}{get\+World\+Map}} () const
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6ecd6da686703a866ffcfe33066fc410}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classWorld}{World}} $\ast$ \mbox{\hyperlink{classGameEngine_ab56c08178c33ee5ec6bf323d36755dff}{get\+Current\+World}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab56c08178c33ee5ec6bf323d36755dff}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_a6695abf57256022e045668fbeaa030eb}{add\+World}} (const std\+::string \&name\+World, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$ world)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6695abf57256022e045668fbeaa030eb}{add\+World()}}\+: Add a world to the world map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorld}{World}} \& \mbox{\hyperlink{classGameEngine_aeeda8a61e54108d685fdb16bc15da2c0}{get\+World}} (const std\+::string \&name\+World)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aeeda8a61e54108d685fdb16bc15da2c0}{get\+World()}}\+: Get a world from the world map with its name. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ \mbox{\hyperlink{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}{get\+Map\+Texture}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ \mbox{\hyperlink{classGameEngine_a67e960f53a048b11cc30796016d66fdc}{get\+World\+Map}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a67e960f53a048b11cc30796016d66fdc}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$ $>$ \mbox{\hyperlink{classGameEngine_ab9fd4e93d7e2126fd7d5e63035dbc464}{get\+Map\+Music}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab9fd4e93d7e2126fd7d5e63035dbc464}{get\+Map\+Music()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the music. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Sound\+Buffer $>$ $>$ \mbox{\hyperlink{classGameEngine_a55ac76b3b94971ee7d2de5af02420f95}{get\+Map\+Sound}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a55ac76b3b94971ee7d2de5af02420f95}{get\+Map\+Sound()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the sound. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Font $>$ $>$ \mbox{\hyperlink{classGameEngine_a6d83596d74a5eba7a1fa464b5f5f3b99}{get\+Map\+Font}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6d83596d74a5eba7a1fa464b5f5f3b99}{get\+Map\+Font()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the font. \end{DoxyCompactList}\item 
+sf\+::\+Clock \mbox{\hyperlink{classGameEngine_a12332fda5102086cecca8c284657c052}{get\+Clock}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a12332fda5102086cecca8c284657c052}{get\+Clock()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s clock. \end{DoxyCompactList}\item 
+sf\+::\+Time \mbox{\hyperlink{classGameEngine_ab3c6ced0ec4c8b23cc137cf325a425e2}{get\+Delta\+Time}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_ab3c6ced0ec4c8b23cc137cf325a425e2}{get\+Delta\+Time()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameEngine_aeffbf92c737ac724d55d81e6a8e46faf}{set\+Delta\+Time}} (sf\+::\+Time new\+Time\+Delta)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_aeffbf92c737ac724d55d81e6a8e46faf}{set\+Delta\+Time()}}\+: Set \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGameEngine_a6865676fe7fae2eb5f7879a8dac3bd91}{get\+Files\+Ressources}} (const std\+::string \&path\+Directory)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGameEngine_a6865676fe7fae2eb5f7879a8dac3bd91}{get\+Files\+Ressources()}}\+: Get all the ressources type files in the given directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -103,11 +128,11 @@ Default \mbox{\hyperlink{classGameEngine}{Game\+Engine}} constructor.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}\label{classGameEngine_a002b9b32901cc88ae06e3806d285cdbe}} 
+\mbox{\Hypertarget{classGameEngine_ac0e83afca4f289a44988215438b103fd}\label{classGameEngine_ac0e83afca4f289a44988215438b103fd}} 
 \index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
 \index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}\item[{sf\+::\+Video\+Mode}]{mode,  }\item[{std\+::string}]{type,  }\item[{sf\+::\+String}]{title,  }\item[{sf\+::\+Uint32}]{style = {\ttfamily sf\+:\+:Style\+:\+:Default},  }\item[{const sf\+::\+Context\+Settings \&}]{settings = {\ttfamily sf\+:\+:ContextSettings()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}\item[{sf\+::\+Video\+Mode}]{mode,  }\item[{const sf\+::\+String \&}]{title,  }\item[{sf\+::\+Uint32}]{style = {\ttfamily sf\+:\+:Style\+:\+:Default},  }\item[{const sf\+::\+Context\+Settings \&}]{settings = {\ttfamily sf\+:\+:ContextSettings()} }\end{DoxyParamCaption})}
 
 
 
@@ -129,11 +154,11 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a461ad53101f4b4711339ecb803254d21}\label{classGameEngine_a461ad53101f4b4711339ecb803254d21}} 
+\mbox{\Hypertarget{classGameEngine_ac4e49abc59ae4615a92a9a9da92f0423}\label{classGameEngine_ac4e49abc59ae4615a92a9a9da92f0423}} 
 \index{GameEngine@{GameEngine}!````~GameEngine@{$\sim$GameEngine}}
 \index{````~GameEngine@{$\sim$GameEngine}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{$\sim$GameEngine()}{~GameEngine()}}
-{\footnotesize\ttfamily Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+{\footnotesize\ttfamily Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
 
 
 
@@ -150,15 +175,15 @@ void
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}\label{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}} 
+\mbox{\Hypertarget{classGameEngine_a6695abf57256022e045668fbeaa030eb}\label{classGameEngine_a6695abf57256022e045668fbeaa030eb}} 
 \index{GameEngine@{GameEngine}!addWorld@{addWorld}}
 \index{addWorld@{addWorld}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{addWorld()}{addWorld()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::add\+World (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+World,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$}]{world }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::add\+World (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+World,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$}]{world }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a3d650a1e95edfa9484b38881d760f0bc}{add\+World()}}\+: Add a world to the world map. 
+\mbox{\hyperlink{classGameEngine_a6695abf57256022e045668fbeaa030eb}{add\+World()}}\+: Add a world to the world map. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -188,15 +213,33 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a6b528cce5285adca82d94077521dd114}\label{classGameEngine_a6b528cce5285adca82d94077521dd114}} 
+\mbox{\Hypertarget{classGameEngine_a12332fda5102086cecca8c284657c052}\label{classGameEngine_a12332fda5102086cecca8c284657c052}} 
+\index{GameEngine@{GameEngine}!getClock@{getClock}}
+\index{getClock@{getClock}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getClock()}{getClock()}}
+{\footnotesize\ttfamily sf\+::\+Clock Game\+Engine\+::get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_a12332fda5102086cecca8c284657c052}{get\+Clock()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Clock\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s clock. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ab56c08178c33ee5ec6bf323d36755dff}\label{classGameEngine_ab56c08178c33ee5ec6bf323d36755dff}} 
 \index{GameEngine@{GameEngine}!getCurrentWorld@{getCurrentWorld}}
 \index{getCurrentWorld@{getCurrentWorld}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getCurrentWorld()}{getCurrentWorld()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}}$\ast$ Game\+Engine\+::get\+Current\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} $\ast$ Game\+Engine\+::get\+Current\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classGameEngine_a6b528cce5285adca82d94077521dd114}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
+\mbox{\hyperlink{classGameEngine_ab56c08178c33ee5ec6bf323d36755dff}{get\+Current\+World()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -206,15 +249,33 @@ void
 \begin{DoxyReturn}{Returns}
 World$\ast$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s current world. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}\label{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}} 
+\mbox{\Hypertarget{classGameEngine_ab3c6ced0ec4c8b23cc137cf325a425e2}\label{classGameEngine_ab3c6ced0ec4c8b23cc137cf325a425e2}} 
+\index{GameEngine@{GameEngine}!getDeltaTime@{getDeltaTime}}
+\index{getDeltaTime@{getDeltaTime}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
+{\footnotesize\ttfamily sf\+::\+Time Game\+Engine\+::get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_ab3c6ced0ec4c8b23cc137cf325a425e2}{get\+Delta\+Time()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Time\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Times. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}\label{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}} 
 \index{GameEngine@{GameEngine}!getEventEngine@{getEventEngine}}
 \index{getEventEngine@{getEventEngine}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getEventEngine()}{getEventEngine()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classEventEngine}{Event\+Engine}}\& Game\+Engine\+::get\+Event\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEventEngine}{Event\+Engine}} \& Game\+Engine\+::get\+Event\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_ad7f0cb91e2ce39dec31278cd9bb39f0a}{get\+Event\+Engine()}}\+: Get the event engine. 
+\mbox{\hyperlink{classGameEngine_abb9936b15b3e337e9fe02d491a980d4e}{get\+Event\+Engine()}}\+: Get the event engine. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -224,15 +285,15 @@ World$\ast$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classEventEngine}{Event\+Engine}}\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s \mbox{\hyperlink{classEventEngine}{Event\+Engine}}. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_afc7d0047cd858c9d4573b7728663c72e}\label{classGameEngine_afc7d0047cd858c9d4573b7728663c72e}} 
-\index{GameEngine@{GameEngine}!getFilesTexture@{getFilesTexture}}
-\index{getFilesTexture@{getFilesTexture}!GameEngine@{GameEngine}}
-\doxysubsubsection{\texorpdfstring{getFilesTexture()}{getFilesTexture()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Game\+Engine\+::get\+Files\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{path\+Directory }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classGameEngine_a6865676fe7fae2eb5f7879a8dac3bd91}\label{classGameEngine_a6865676fe7fae2eb5f7879a8dac3bd91}} 
+\index{GameEngine@{GameEngine}!getFilesRessources@{getFilesRessources}}
+\index{getFilesRessources@{getFilesRessources}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getFilesRessources()}{getFilesRessources()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Game\+Engine\+::get\+Files\+Ressources (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+Directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-\mbox{\hyperlink{classGameEngine_afc7d0047cd858c9d4573b7728663c72e}{get\+Files\+Texture()}}\+: Get all the textures files in the given directory. 
+\mbox{\hyperlink{classGameEngine_a6865676fe7fae2eb5f7879a8dac3bd91}{get\+Files\+Ressources()}}\+: Get all the ressources type files in the given directory. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -240,17 +301,71 @@ World$\ast$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$std\+::string$>$\+: Vector of the textures files\textquotesingle{} names. 
+std\+::vector$<$std\+::string$>$\+: Vector of the ressources type files\textquotesingle{} names. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a5b2b5e68a945ca91703dd685c1e92a75}\label{classGameEngine_a5b2b5e68a945ca91703dd685c1e92a75}} 
+\mbox{\Hypertarget{classGameEngine_a6d83596d74a5eba7a1fa464b5f5f3b99}\label{classGameEngine_a6d83596d74a5eba7a1fa464b5f5f3b99}} 
+\index{GameEngine@{GameEngine}!getMapFont@{getMapFont}}
+\index{getMapFont@{getMapFont}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getMapFont()}{getMapFont()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Font $>$ $>$ Game\+Engine\+::get\+Map\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_a6d83596d74a5eba7a1fa464b5f5f3b99}{get\+Map\+Font()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Font$>$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the musics. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ab9fd4e93d7e2126fd7d5e63035dbc464}\label{classGameEngine_ab9fd4e93d7e2126fd7d5e63035dbc464}} 
+\index{GameEngine@{GameEngine}!getMapMusic@{getMapMusic}}
+\index{getMapMusic@{getMapMusic}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getMapMusic()}{getMapMusic()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Music $>$ $>$ Game\+Engine\+::get\+Map\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_ab9fd4e93d7e2126fd7d5e63035dbc464}{get\+Map\+Music()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Music$>$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the musics. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a55ac76b3b94971ee7d2de5af02420f95}\label{classGameEngine_a55ac76b3b94971ee7d2de5af02420f95}} 
+\index{GameEngine@{GameEngine}!getMapSound@{getMapSound}}
+\index{getMapSound@{getMapSound}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getMapSound()}{getMapSound()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Sound\+Buffer $>$ $>$ Game\+Engine\+::get\+Map\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_a55ac76b3b94971ee7d2de5af02420f95}{get\+Map\+Sound()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Sound\+Buffer$>$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the musics. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}\label{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}} 
 \index{GameEngine@{GameEngine}!getMapTexture@{getMapTexture}}
 \index{getMapTexture@{getMapTexture}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getMapTexture()}{getMapTexture()}}
-{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$ $>$ Game\+Engine\+::get\+Map\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ Game\+Engine\+::get\+Map\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classGameEngine_a5b2b5e68a945ca91703dd685c1e92a75}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. 
+\mbox{\hyperlink{classGameEngine_a088bc96d08de043fcd9cfa02b2098641}{get\+Map\+Texture()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -260,15 +375,15 @@ std\+::vector$<$std\+::string$>$\+: Vector of the textures files\textquotesingle
 \begin{DoxyReturn}{Returns}
 std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the textures. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_acec872604f070cb951cc1fc9de3b402b}\label{classGameEngine_acec872604f070cb951cc1fc9de3b402b}} 
+\mbox{\Hypertarget{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}\label{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}} 
 \index{GameEngine@{GameEngine}!getWindow@{getWindow}}
 \index{getWindow@{getWindow}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
-{\footnotesize\ttfamily const auto\& Game\+Engine\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window \& Game\+Engine\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_acec872604f070cb951cc1fc9de3b402b}{get\+Window()}}\+: Get the window. 
+\mbox{\hyperlink{classGameEngine_a0f84d99c310a5489a1605d15facd1e88}{get\+Window()}}\+: Get the window. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -276,17 +391,17 @@ std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<$sf\+::\+Texture$>$$>$\+: \m
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::variant$<$std\+::unique\+\_\+ptr$<$sf\+::\+Window$>$, std\+::unique\+\_\+ptr$<$sf\+::\+Render\+Window$>$$>$\+: The \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s window 
+sf\+::\+Render\+Window\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s window. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a148d156efc2779fab75d937883cd1a7b}\label{classGameEngine_a148d156efc2779fab75d937883cd1a7b}} 
+\mbox{\Hypertarget{classGameEngine_aeeda8a61e54108d685fdb16bc15da2c0}\label{classGameEngine_aeeda8a61e54108d685fdb16bc15da2c0}} 
 \index{GameEngine@{GameEngine}!getWorld@{getWorld}}
 \index{getWorld@{getWorld}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getWorld()}{getWorld()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::get\+World (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+World }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWorld}{World}} \& Game\+Engine\+::get\+World (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+World }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a148d156efc2779fab75d937883cd1a7b}{get\+World()}}\+: Get a world from the world map with its name. 
+\mbox{\hyperlink{classGameEngine_aeeda8a61e54108d685fdb16bc15da2c0}{get\+World()}}\+: Get a world from the world map with its name. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -296,15 +411,15 @@ std\+::variant$<$std\+::unique\+\_\+ptr$<$sf\+::\+Window$>$, std\+::unique\+\_\+
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classWorld}{World}}\&\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s world. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a6ecd6da686703a866ffcfe33066fc410}\label{classGameEngine_a6ecd6da686703a866ffcfe33066fc410}} 
+\mbox{\Hypertarget{classGameEngine_a67e960f53a048b11cc30796016d66fdc}\label{classGameEngine_a67e960f53a048b11cc30796016d66fdc}} 
 \index{GameEngine@{GameEngine}!getWorldMap@{getWorldMap}}
 \index{getWorldMap@{getWorldMap}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{getWorldMap()}{getWorldMap()}}
-{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$$>$ Game\+Engine\+::get\+World\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, \mbox{\hyperlink{classWorld}{World}} $\ast$ $>$ Game\+Engine\+::get\+World\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-\mbox{\hyperlink{classGameEngine_a6ecd6da686703a866ffcfe33066fc410}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
+\mbox{\hyperlink{classGameEngine_a67e960f53a048b11cc30796016d66fdc}{get\+World\+Map()}}\+: Get \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -314,15 +429,15 @@ std\+::variant$<$std\+::unique\+\_\+ptr$<$sf\+::\+Window$>$, std\+::unique\+\_\+
 \begin{DoxyReturn}{Returns}
 std\+::map$<$std\+::string, World$\ast$$>$\+: \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s map of the worlds. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_af7038136db2a69b4559248482e1512a9}\label{classGameEngine_af7038136db2a69b4559248482e1512a9}} 
+\mbox{\Hypertarget{classGameEngine_a277e9158a59480f03cb476508461f9a1}\label{classGameEngine_a277e9158a59480f03cb476508461f9a1}} 
 \index{GameEngine@{GameEngine}!initialize@{initialize}}
 \index{initialize@{initialize}!GameEngine@{GameEngine}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{path\+Ressources,  }\item[{std\+::string}]{first\+Scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_af7038136db2a69b4559248482e1512a9}{initialize()}}\+: Initialize the game engine. 
+\mbox{\hyperlink{classGameEngine_a277e9158a59480f03cb476508461f9a1}{initialize()}}\+: Initialize the game engine. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -336,15 +451,141 @@ std\+::map$<$std\+::string, World$\ast$$>$\+: \mbox{\hyperlink{classGameEngine}{
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}\label{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}} 
-\index{GameEngine@{GameEngine}!initializeSprite@{initializeSprite}}
-\index{initializeSprite@{initializeSprite}!GameEngine@{GameEngine}}
-\doxysubsubsection{\texorpdfstring{initializeSprite()}{initializeSprite()}}
-{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classGameEngine_a889f1abd73036277be74dac4d8364976}\label{classGameEngine_a889f1abd73036277be74dac4d8364976}} 
+\index{GameEngine@{GameEngine}!initializeAllFiles@{initializeAllFiles}}
+\index{initializeAllFiles@{initializeAllFiles}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeAllFiles()}{initializeAllFiles()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+All\+Files (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_aa6b038f3d98e29aef8b41251547410e3}{initialize\+Sprite()}}\+: Initialize the sprites. 
+\mbox{\hyperlink{classGameEngine_a889f1abd73036277be74dac4d8364976}{initialize\+All\+Files()}}\+: Initialize all the ressources files the engine need. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Ressources} & Map of the path of the ressources (assets). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}\label{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}} 
+\index{GameEngine@{GameEngine}!initializeFont@{initializeFont}}
+\index{initializeFont@{initializeFont}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeFont()}{initializeFont()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_aff9b84903f2b3896b2ea16a0eb71cc41}{initialize\+Font()}}\+: Initialize the font with their path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the font file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}\label{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}} 
+\index{GameEngine@{GameEngine}!initializeMusic@{initializeMusic}}
+\index{initializeMusic@{initializeMusic}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeMusic()}{initializeMusic()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Music (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_ac3dc9a2f6b1efb38888e80a0dd9cd9dc}{initialize\+Music()}}\+: Initialize the music with their path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the music file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}\label{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}} 
+\index{GameEngine@{GameEngine}!initializeMusicFunction@{initializeMusicFunction}}
+\index{initializeMusicFunction@{initializeMusicFunction}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeMusicFunction()}{initializeMusicFunction()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Music\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_a700816bc849faa7d8e9b932e2f625d7f}{initialize\+Music\+Function()}}\+: Initialize the music function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ae0f5aef6480f580a80066555a4a22673}\label{classGameEngine_ae0f5aef6480f580a80066555a4a22673}} 
+\index{GameEngine@{GameEngine}!initializeSound@{initializeSound}}
+\index{initializeSound@{initializeSound}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeSound()}{initializeSound()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sound (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGameEngine_ae0f5aef6480f580a80066555a4a22673}{initialize\+Sound()}}\+: Initialize the sound with their path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path of the sound file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_ab24556da97c10cf38088f60b22802b4f}\label{classGameEngine_ab24556da97c10cf38088f60b22802b4f}} 
+\index{GameEngine@{GameEngine}!initializeSoundFunction@{initializeSoundFunction}}
+\index{initializeSoundFunction@{initializeSoundFunction}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeSoundFunction()}{initializeSoundFunction()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sound\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_ab24556da97c10cf38088f60b22802b4f}{initialize\+Sound\+Function()}}\+: Initialize the sound function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}\label{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}} 
+\index{GameEngine@{GameEngine}!initializeSpriteFunction@{initializeSpriteFunction}}
+\index{initializeSpriteFunction@{initializeSpriteFunction}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeSpriteFunction()}{initializeSpriteFunction()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Sprite\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{classGameEngine_adfeeba5c87ec6f7877b7e00aed33ba76}{initialize\+Sprite\+Function()}}\+: Initialize the sprites function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameEngine_a5d848be1673757d1e7bb6e4ff29f7214}\label{classGameEngine_a5d848be1673757d1e7bb6e4ff29f7214}} 
+\index{GameEngine@{GameEngine}!initializeTextFunction@{initializeTextFunction}}
+\index{initializeTextFunction@{initializeTextFunction}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{initializeTextFunction()}{initializeTextFunction()}}
+{\footnotesize\ttfamily void Game\+Engine\+::initialize\+Text\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+initialize\+Font\+Function()\+: Initialize the font function. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -426,33 +667,15 @@ bool\+: True if the window is open, false otherwise.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}\label{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}} 
+\mbox{\Hypertarget{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}\label{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}} 
 \index{GameEngine@{GameEngine}!run@{run}}
 \index{run@{run}!GameEngine@{GameEngine}}
-\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{path\+Ressources,  }\item[{const std\+::string \&}]{first\+Scene }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (without parameters). 
-
-
-\begin{DoxyParams}{Parameters}
-{\em void} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}\label{classGameEngine_a90c373749cdee50bc071ce8a88db7f1a}} 
-\index{GameEngine@{GameEngine}!run@{run}}
-\index{run@{run}!GameEngine@{GameEngine}}
-\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWorld}{World}} $>$$>$}]{map\+World,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{path\+Ressources,  }\item[{std\+::string}]{first\+Scene }\end{DoxyParamCaption})}
-
-
-
-\mbox{\hyperlink{classGameEngine_ab01970da2c68fefbf48b98c59d5627ae}{run()}}\+: Run the game engine (with parameters). 
+\mbox{\hyperlink{classGameEngine_a1b31c0c9ad065cfcf70c38f9c43d7569}{run()}}\+: Run the game engine (with parameters). 
 
 
 \begin{DoxyParams}{Parameters}
@@ -484,19 +707,19 @@ void
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}\label{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}} 
-\index{GameEngine@{GameEngine}!setWindow@{setWindow}}
-\index{setWindow@{setWindow}!GameEngine@{GameEngine}}
-\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}}
-{\footnotesize\ttfamily void Game\+Engine\+::set\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classGameEngine_aeffbf92c737ac724d55d81e6a8e46faf}\label{classGameEngine_aeffbf92c737ac724d55d81e6a8e46faf}} 
+\index{GameEngine@{GameEngine}!setDeltaTime@{setDeltaTime}}
+\index{setDeltaTime@{setDeltaTime}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setDeltaTime()}{setDeltaTime()}}
+{\footnotesize\ttfamily void Game\+Engine\+::set\+Delta\+Time (\begin{DoxyParamCaption}\item[{sf\+::\+Time}]{new\+Time\+Delta }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classGameEngine_a6b402b77f19b5a7385f3d43f02ad0bf2}{set\+Window()}}\+: Set the window. 
+\mbox{\hyperlink{classGameEngine_aeffbf92c737ac724d55d81e6a8e46faf}{set\+Delta\+Time()}}\+: Set \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Time. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em void} & \\
+{\em new\+Time\+Delta} & New delta\+Time for \mbox{\hyperlink{classGameEngine}{Game\+Engine}}\textquotesingle{}s delta\+Time. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
