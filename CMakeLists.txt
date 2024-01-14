@@ -40,15 +40,19 @@ if(SFML_VERSION EQUAL 2.6.1)
     endif()
 
 else()
-    find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
 
-    if(NOT_SFML_FOUND)
+    if(NOT SFML_FOUND)
         message(STATUS "SFML couldn't be found. Attempting to install SFML...")
 
-        execute_process(
-            COMMAND bash -c "sudo apt install libsfml-dev"
-            RESULT_VARIABLE SFML_INSTALL_RESULT
-        )
+        if(UNIX AND NOT APPLE)
+            execute_process(
+                COMMAND bash -c "if type apt &>/dev/null; then sudo apt install libsfml-dev; elif type dnf &>/dev/null; then sudo dnf install SFML-devel; else echo 'Unsupported package manager'; fi"
+                RESULT_VARIABLE SFML_INSTALL_RESULT
+            )
+        else()
+            message(FATAL_ERROR "Unsupported operating system.")
+        endif()
 
         if(SFML_INSTALL_RESULT EQUAL 0)
             message(STATUS "SFML successfully installed.")
