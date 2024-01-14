@@ -37,3 +37,19 @@ TEST_F(TestVector2, TestVector2GetY) {
     vector2 = Vector2<float>(0, 1);
     ASSERT_EQ(vector2.getY(), 1);
 }
+
+TEST_F(TestVector2, TestVector2SetX) {
+    vector2.setX(1);
+    ASSERT_EQ(vector2.getX(), 1);
+
+    vector2.setX(0);
+    ASSERT_EQ(vector2.getX(), 0);
+}
+
+TEST_F(TestVector2, TestVector2SetY) {
+    vector2.setY(1);
+    ASSERT_EQ(vector2.getY(), 1);
+
+    vector2.setY(0);
+    ASSERT_EQ(vector2.getY(), 0);
+}
