@@ -246,57 +246,58 @@
 \contentsline {subsubsection}{\numberline {4.26.3.19}setText()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{105}{subsubsection.4.26.3.19}%
 \contentsline {subsubsection}{\numberline {4.26.3.20}setTransform()}{106}{subsubsection.4.26.3.20}%
 \contentsline {subsubsection}{\numberline {4.26.3.21}update()}{106}{subsubsection.4.26.3.21}%
-\contentsline {section}{\numberline {4.27}to\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML Class Reference}{106}{section.4.27}%
-\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{107}{subsection.4.27.1}%
-\contentsline {subsection}{\numberline {4.27.2}Constructor \& Destructor Documentation}{107}{subsection.4.27.2}%
-\contentsline {subsubsection}{\numberline {4.27.2.1}toSFML()}{107}{subsubsection.4.27.2.1}%
-\contentsline {subsubsection}{\numberline {4.27.2.2}$\sim $toSFML()}{108}{subsubsection.4.27.2.2}%
-\contentsline {subsection}{\numberline {4.27.3}Member Function Documentation}{108}{subsection.4.27.3}%
-\contentsline {subsubsection}{\numberline {4.27.3.1}toSFMLRect()}{108}{subsubsection.4.27.3.1}%
-\contentsline {section}{\numberline {4.28}Transform Class Reference}{109}{section.4.28}%
-\contentsline {subsection}{\numberline {4.28.1}Detailed Description}{110}{subsection.4.28.1}%
-\contentsline {subsection}{\numberline {4.28.2}Constructor \& Destructor Documentation}{110}{subsection.4.28.2}%
-\contentsline {subsubsection}{\numberline {4.28.2.1}Transform()}{110}{subsubsection.4.28.2.1}%
-\contentsline {subsubsection}{\numberline {4.28.2.2}$\sim $Transform()}{111}{subsubsection.4.28.2.2}%
-\contentsline {subsection}{\numberline {4.28.3}Member Function Documentation}{111}{subsection.4.28.3}%
-\contentsline {subsubsection}{\numberline {4.28.3.1}applyDeferredTransform()}{111}{subsubsection.4.28.3.1}%
-\contentsline {subsubsection}{\numberline {4.28.3.2}getBit()}{111}{subsubsection.4.28.3.2}%
-\contentsline {subsubsection}{\numberline {4.28.3.3}getPosition()}{112}{subsubsection.4.28.3.3}%
-\contentsline {subsubsection}{\numberline {4.28.3.4}getRotation()}{112}{subsubsection.4.28.3.4}%
-\contentsline {subsubsection}{\numberline {4.28.3.5}getScale()}{112}{subsubsection.4.28.3.5}%
-\contentsline {subsubsection}{\numberline {4.28.3.6}getTransform()}{113}{subsubsection.4.28.3.6}%
-\contentsline {subsubsection}{\numberline {4.28.3.7}init()}{113}{subsubsection.4.28.3.7}%
-\contentsline {subsubsection}{\numberline {4.28.3.8}setDeferredTransform()}{113}{subsubsection.4.28.3.8}%
-\contentsline {subsubsection}{\numberline {4.28.3.9}setPosition()}{114}{subsubsection.4.28.3.9}%
-\contentsline {subsubsection}{\numberline {4.28.3.10}setRotation()}{114}{subsubsection.4.28.3.10}%
-\contentsline {subsubsection}{\numberline {4.28.3.11}setScale()}{114}{subsubsection.4.28.3.11}%
-\contentsline {subsubsection}{\numberline {4.28.3.12}setTransform()}{116}{subsubsection.4.28.3.12}%
-\contentsline {subsubsection}{\numberline {4.28.3.13}update()}{116}{subsubsection.4.28.3.13}%
-\contentsline {section}{\numberline {4.29}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{117}{section.4.29}%
-\contentsline {section}{\numberline {4.30}Vector2$<$ T $>$ Class Template Reference}{118}{section.4.30}%
-\contentsline {subsection}{\numberline {4.30.1}Detailed Description}{118}{subsection.4.30.1}%
-\contentsline {subsection}{\numberline {4.30.2}Constructor \& Destructor Documentation}{118}{subsection.4.30.2}%
-\contentsline {subsubsection}{\numberline {4.30.2.1}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{118}{subsubsection.4.30.2.1}%
-\contentsline {subsubsection}{\numberline {4.30.2.2}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{119}{subsubsection.4.30.2.2}%
-\contentsline {subsubsection}{\numberline {4.30.2.3}$\sim $Vector2()}{119}{subsubsection.4.30.2.3}%
-\contentsline {subsection}{\numberline {4.30.3}Member Function Documentation}{120}{subsection.4.30.3}%
-\contentsline {subsubsection}{\numberline {4.30.3.1}getVector2Struct()}{120}{subsubsection.4.30.3.1}%
-\contentsline {subsubsection}{\numberline {4.30.3.2}getX()}{120}{subsubsection.4.30.3.2}%
-\contentsline {subsubsection}{\numberline {4.30.3.3}getY()}{121}{subsubsection.4.30.3.3}%
-\contentsline {subsubsection}{\numberline {4.30.3.4}setX()}{121}{subsubsection.4.30.3.4}%
-\contentsline {subsubsection}{\numberline {4.30.3.5}setY()}{121}{subsubsection.4.30.3.5}%
-\contentsline {section}{\numberline {4.31}World Class Reference}{122}{section.4.31}%
-\contentsline {subsection}{\numberline {4.31.1}Detailed Description}{124}{subsection.4.31.1}%
-\contentsline {subsection}{\numberline {4.31.2}Constructor \& Destructor Documentation}{124}{subsection.4.31.2}%
-\contentsline {subsubsection}{\numberline {4.31.2.1}World()}{124}{subsubsection.4.31.2.1}%
-\contentsline {subsubsection}{\numberline {4.31.2.2}$\sim $World()}{124}{subsubsection.4.31.2.2}%
-\contentsline {subsection}{\numberline {4.31.3}Member Function Documentation}{124}{subsection.4.31.3}%
-\contentsline {subsubsection}{\numberline {4.31.3.1}addEntityManager()}{125}{subsubsection.4.31.3.1}%
-\contentsline {subsubsection}{\numberline {4.31.3.2}createEntities()}{125}{subsubsection.4.31.3.2}%
-\contentsline {subsubsection}{\numberline {4.31.3.3}getEntitiesManager()}{125}{subsubsection.4.31.3.3}%
-\contentsline {subsubsection}{\numberline {4.31.3.4}getEntityManager()}{126}{subsubsection.4.31.3.4}%
-\contentsline {subsubsection}{\numberline {4.31.3.5}getEntityManagerMap()}{126}{subsubsection.4.31.3.5}%
-\contentsline {subsubsection}{\numberline {4.31.3.6}getNameWorld()}{126}{subsubsection.4.31.3.6}%
-\contentsline {subsubsection}{\numberline {4.31.3.7}init()}{127}{subsubsection.4.31.3.7}%
-\contentsline {subsubsection}{\numberline {4.31.3.8}setNameWorld()}{127}{subsubsection.4.31.3.8}%
-\contentsline {chapter}{Index}{129}{section*.93}%
+\contentsline {section}{\numberline {4.27}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{107}{section.4.27}%
+\contentsline {section}{\numberline {4.28}to\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML Class Reference}{108}{section.4.28}%
+\contentsline {subsection}{\numberline {4.28.1}Detailed Description}{108}{subsection.4.28.1}%
+\contentsline {subsection}{\numberline {4.28.2}Constructor \& Destructor Documentation}{108}{subsection.4.28.2}%
+\contentsline {subsubsection}{\numberline {4.28.2.1}toSFML()}{108}{subsubsection.4.28.2.1}%
+\contentsline {subsubsection}{\numberline {4.28.2.2}$\sim $toSFML()}{109}{subsubsection.4.28.2.2}%
+\contentsline {subsection}{\numberline {4.28.3}Member Function Documentation}{109}{subsection.4.28.3}%
+\contentsline {subsubsection}{\numberline {4.28.3.1}toSFMLRect()}{109}{subsubsection.4.28.3.1}%
+\contentsline {section}{\numberline {4.29}Transform Class Reference}{110}{section.4.29}%
+\contentsline {subsection}{\numberline {4.29.1}Detailed Description}{111}{subsection.4.29.1}%
+\contentsline {subsection}{\numberline {4.29.2}Constructor \& Destructor Documentation}{111}{subsection.4.29.2}%
+\contentsline {subsubsection}{\numberline {4.29.2.1}Transform()}{111}{subsubsection.4.29.2.1}%
+\contentsline {subsubsection}{\numberline {4.29.2.2}$\sim $Transform()}{112}{subsubsection.4.29.2.2}%
+\contentsline {subsection}{\numberline {4.29.3}Member Function Documentation}{112}{subsection.4.29.3}%
+\contentsline {subsubsection}{\numberline {4.29.3.1}applyDeferredTransform()}{112}{subsubsection.4.29.3.1}%
+\contentsline {subsubsection}{\numberline {4.29.3.2}getBit()}{112}{subsubsection.4.29.3.2}%
+\contentsline {subsubsection}{\numberline {4.29.3.3}getPosition()}{114}{subsubsection.4.29.3.3}%
+\contentsline {subsubsection}{\numberline {4.29.3.4}getRotation()}{114}{subsubsection.4.29.3.4}%
+\contentsline {subsubsection}{\numberline {4.29.3.5}getScale()}{114}{subsubsection.4.29.3.5}%
+\contentsline {subsubsection}{\numberline {4.29.3.6}getTransform()}{115}{subsubsection.4.29.3.6}%
+\contentsline {subsubsection}{\numberline {4.29.3.7}init()}{115}{subsubsection.4.29.3.7}%
+\contentsline {subsubsection}{\numberline {4.29.3.8}setDeferredTransform()}{115}{subsubsection.4.29.3.8}%
+\contentsline {subsubsection}{\numberline {4.29.3.9}setPosition()}{116}{subsubsection.4.29.3.9}%
+\contentsline {subsubsection}{\numberline {4.29.3.10}setRotation()}{116}{subsubsection.4.29.3.10}%
+\contentsline {subsubsection}{\numberline {4.29.3.11}setScale()}{116}{subsubsection.4.29.3.11}%
+\contentsline {subsubsection}{\numberline {4.29.3.12}setTransform()}{118}{subsubsection.4.29.3.12}%
+\contentsline {subsubsection}{\numberline {4.29.3.13}update()}{118}{subsubsection.4.29.3.13}%
+\contentsline {section}{\numberline {4.30}Transform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{119}{section.4.30}%
+\contentsline {section}{\numberline {4.31}Vector2$<$ T $>$ Class Template Reference}{120}{section.4.31}%
+\contentsline {subsection}{\numberline {4.31.1}Detailed Description}{120}{subsection.4.31.1}%
+\contentsline {subsection}{\numberline {4.31.2}Constructor \& Destructor Documentation}{120}{subsection.4.31.2}%
+\contentsline {subsubsection}{\numberline {4.31.2.1}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{120}{subsubsection.4.31.2.1}%
+\contentsline {subsubsection}{\numberline {4.31.2.2}Vector2()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{121}{subsubsection.4.31.2.2}%
+\contentsline {subsubsection}{\numberline {4.31.2.3}$\sim $Vector2()}{121}{subsubsection.4.31.2.3}%
+\contentsline {subsection}{\numberline {4.31.3}Member Function Documentation}{122}{subsection.4.31.3}%
+\contentsline {subsubsection}{\numberline {4.31.3.1}getVector2Struct()}{122}{subsubsection.4.31.3.1}%
+\contentsline {subsubsection}{\numberline {4.31.3.2}getX()}{122}{subsubsection.4.31.3.2}%
+\contentsline {subsubsection}{\numberline {4.31.3.3}getY()}{123}{subsubsection.4.31.3.3}%
+\contentsline {subsubsection}{\numberline {4.31.3.4}setX()}{123}{subsubsection.4.31.3.4}%
+\contentsline {subsubsection}{\numberline {4.31.3.5}setY()}{123}{subsubsection.4.31.3.5}%
+\contentsline {section}{\numberline {4.32}World Class Reference}{124}{section.4.32}%
+\contentsline {subsection}{\numberline {4.32.1}Detailed Description}{126}{subsection.4.32.1}%
+\contentsline {subsection}{\numberline {4.32.2}Constructor \& Destructor Documentation}{126}{subsection.4.32.2}%
+\contentsline {subsubsection}{\numberline {4.32.2.1}World()}{126}{subsubsection.4.32.2.1}%
+\contentsline {subsubsection}{\numberline {4.32.2.2}$\sim $World()}{126}{subsubsection.4.32.2.2}%
+\contentsline {subsection}{\numberline {4.32.3}Member Function Documentation}{126}{subsection.4.32.3}%
+\contentsline {subsubsection}{\numberline {4.32.3.1}addEntityManager()}{127}{subsubsection.4.32.3.1}%
+\contentsline {subsubsection}{\numberline {4.32.3.2}createEntities()}{127}{subsubsection.4.32.3.2}%
+\contentsline {subsubsection}{\numberline {4.32.3.3}getEntitiesManager()}{127}{subsubsection.4.32.3.3}%
+\contentsline {subsubsection}{\numberline {4.32.3.4}getEntityManager()}{128}{subsubsection.4.32.3.4}%
+\contentsline {subsubsection}{\numberline {4.32.3.5}getEntityManagerMap()}{128}{subsubsection.4.32.3.5}%
+\contentsline {subsubsection}{\numberline {4.32.3.6}getNameWorld()}{128}{subsubsection.4.32.3.6}%
+\contentsline {subsubsection}{\numberline {4.32.3.7}init()}{129}{subsubsection.4.32.3.7}%
+\contentsline {subsubsection}{\numberline {4.32.3.8}setNameWorld()}{129}{subsubsection.4.32.3.8}%
+\contentsline {chapter}{Index}{131}{section*.97}%

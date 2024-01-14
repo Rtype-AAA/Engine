@@ -60,7 +60,7 @@ public:
 
     /// @brief init(): Initialize the component.
     /// @param void
-    /// @return bool: true if the component is initialized, false otherwise
+    /// @return bool: true if the component is initialized, false otherwise. If no Transform is set, returns false.
     bool init() override;
 
     /// @brief Sets the text of the component.

@@ -1,0 +1,9 @@
+<map id="TextTest" name="TextTest">
+<area shape="rect" id="node1" title=" " alt="" coords="81,247,153,273"/>
+<area shape="rect" id="node2" title=" " alt="" coords="49,157,143,184"/>
+<area shape="rect" id="node3" href="$df/d53/classText.html" title="Text class: Text is a class that represents the text in the world." alt="" coords="167,157,214,184"/>
+<area shape="rect" id="node4" href="$db/daf/classTransform.html" title="Transform class: Transform is a class that represents the transform of a Component." alt="" coords="13,81,94,108"/>
+<area shape="rect" id="node5" href="$db/d46/classComponents.html" title="Components class: Components is a class that represents a component in the game." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node6" href="$d2/db3/classDrawableComponent.html" title="DrawableComponent class: DrawableComponent is a class that represents a drawable component in the gam..." alt="" coords="119,81,263,108"/>
+<area shape="rect" id="node7" href="$dc/d6c/classITransform.html" title="ITransform class: ITransform is a class that represents an interface of the Component Transform." alt="" coords="287,81,372,108"/>
+</map>
