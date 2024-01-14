@@ -12,6 +12,7 @@
 template <typename T>
 class Vector2 {
 private:
+    /// @brief Vector2Struct: Struct for using the vector.
     struct Vector2Struct {
         T x; /// < First value of the vector.
         T y; /// < Second value of the vector.
@@ -55,18 +56,16 @@ public:
     /// @return T: Depends of the Vector2
     [[nodiscard]] T getY() const;
 
-    /**
-     * @brief setX(): Set x of Vector2Struct.
-     * @tparam T: Type of the Vector2
-     * @param newX: The new value of x.
-     */
+    /// @brief setX(): Set x of Vector2Struct.
+    /// @tparam T: Type of the Vector2
+    /// @param newX: The new value of x.
+    /// @return void
     void setX(T newX);
 
-    /**
-     * @brief setY(): Set y of Vector2Struct.
-     * @tparam T: Type of the Vector2
-     * @param newY: The new value of y.
-     */
+    /// @brief setY(): Set y of Vector2Struct.
+    /// @tparam T: Type of the Vector2
+    /// @param newY: The new value of y.
+    /// @return void
     void setY(T newY);
 };
 
