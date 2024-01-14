@@ -19,21 +19,21 @@
   \item {$\sim$Music}
     \subitem {Music}, \hyperpage{63}
   \item {$\sim$Rect}
-    \subitem {Rect$<$ T $>$}, \hyperpage{70}
+    \subitem {Rect$<$ T $>$}, \hyperpage{71}
   \item {$\sim$Sound}
-    \subitem {Sound}, \hyperpage{76}
+    \subitem {Sound}, \hyperpage{77}
   \item {$\sim$Sprite}
-    \subitem {Sprite}, \hyperpage{85}
+    \subitem {Sprite}, \hyperpage{86}
   \item {$\sim$Text}
-    \subitem {Text}, \hyperpage{97}
+    \subitem {Text}, \hyperpage{98}
   \item {$\sim$Transform}
-    \subitem {Transform}, \hyperpage{109}
+    \subitem {Transform}, \hyperpage{110}
   \item {$\sim$Vector2}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{118}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{119}
   \item {$\sim$World}
-    \subitem {World}, \hyperpage{123}
+    \subitem {World}, \hyperpage{124}
   \item {$\sim$toSFML}
-    \subitem {toSFML}, \hyperpage{107}
+    \subitem {toSFML}, \hyperpage{108}
 
   \indexspace
 
@@ -44,7 +44,7 @@
   \item {addEntity}
     \subitem {EntityManager}, \hyperpage{31}
   \item {addEntityManager}
-    \subitem {World}, \hyperpage{123}
+    \subitem {World}, \hyperpage{124}
   \item {addKeyPressed}
     \subitem {EventEngine}, \hyperpage{37}
   \item {addMouseButtonPressed}
@@ -58,13 +58,13 @@
   \item {applyDeferredMusic}
     \subitem {Music}, \hyperpage{63}
   \item {applyDeferredSound}
-    \subitem {Sound}, \hyperpage{76}
+    \subitem {Sound}, \hyperpage{77}
   \item {applyDeferredSprite}
-    \subitem {Sprite}, \hyperpage{85}
+    \subitem {Sprite}, \hyperpage{86}
   \item {applyDeferredText}
-    \subitem {Text}, \hyperpage{97}
+    \subitem {Text}, \hyperpage{98}
   \item {applyDeferredTransform}
-    \subitem {Transform}, \hyperpage{110}
+    \subitem {Transform}, \hyperpage{111}
   \item {Archetypes}, \hyperpage{7}
 
   \indexspace
@@ -89,16 +89,16 @@
     \subitem {init}, \hyperpage{16}
     \subitem {update}, \hyperpage{16}
   \item {contains}
-    \subitem {Rect$<$ T $>$}, \hyperpage{71}
+    \subitem {Rect$<$ T $>$}, \hyperpage{72}
   \item {createEntities}
-    \subitem {World}, \hyperpage{124}
+    \subitem {World}, \hyperpage{125}
 
   \indexspace
 
   \item {draw}
     \subitem {DrawableComponent}, \hyperpage{18}
-    \subitem {Sprite}, \hyperpage{85}
-    \subitem {Text}, \hyperpage{98}
+    \subitem {Sprite}, \hyperpage{86}
+    \subitem {Text}, \hyperpage{99}
   \item {DrawableComponent}, \hyperpage{16}
     \subitem {$\sim$DrawableComponent}, \hyperpage{17}
     \subitem {draw}, \hyperpage{18}
@@ -205,18 +205,18 @@
     \subitem {Components}, \hyperpage{15}
     \subitem {Entity}, \hyperpage{23}
     \subitem {Music}, \hyperpage{64}
-    \subitem {Sound}, \hyperpage{76}
-    \subitem {Sprite}, \hyperpage{86}
-    \subitem {Text}, \hyperpage{98}
-    \subitem {Transform}, \hyperpage{110}
+    \subitem {Sound}, \hyperpage{77}
+    \subitem {Sprite}, \hyperpage{87}
+    \subitem {Text}, \hyperpage{99}
+    \subitem {Transform}, \hyperpage{111}
   \item {getBlue}
     \subitem {Color}, \hyperpage{10}
   \item {getClock}
     \subitem {GameEngine}, \hyperpage{47}
   \item {getColorFill}
-    \subitem {Text}, \hyperpage{98}
-  \item {getColorOutline}
     \subitem {Text}, \hyperpage{99}
+  \item {getColorOutline}
+    \subitem {Text}, \hyperpage{100}
   \item {getComponent}
     \subitem {Entity}, \hyperpage{24}
   \item {getComponentArrays}
@@ -234,13 +234,13 @@
   \item {getEntities}
     \subitem {EntityManager}, \hyperpage{31}
   \item {getEntitiesManager}
-    \subitem {World}, \hyperpage{124}
+    \subitem {World}, \hyperpage{125}
   \item {getEntity}
     \subitem {EntityManager}, \hyperpage{32}
   \item {getEntityManager}
-    \subitem {World}, \hyperpage{125}
+    \subitem {World}, \hyperpage{126}
   \item {getEntityManagerMap}
-    \subitem {World}, \hyperpage{125}
+    \subitem {World}, \hyperpage{126}
   \item {getEntityMap}
     \subitem {EntityManager}, \hyperpage{32}
   \item {getEvent}
@@ -250,20 +250,20 @@
   \item {getFilesRessources}
     \subitem {GameEngine}, \hyperpage{48}
   \item {getFont}
-    \subitem {Text}, \hyperpage{99}
+    \subitem {Text}, \hyperpage{100}
   \item {getGreen}
     \subitem {Color}, \hyperpage{11}
   \item {getHeight}
-    \subitem {Rect$<$ T $>$}, \hyperpage{71}
+    \subitem {Rect$<$ T $>$}, \hyperpage{72}
   \item {getKeyPressedMap}
     \subitem {EventEngine}, \hyperpage{39}
   \item {getKeyStatesMap}
     \subitem {EventEngine}, \hyperpage{39}
   \item {getLeft}
-    \subitem {Rect$<$ T $>$}, \hyperpage{72}
+    \subitem {Rect$<$ T $>$}, \hyperpage{73}
   \item {getLoop}
     \subitem {Music}, \hyperpage{64}
-    \subitem {Sound}, \hyperpage{77}
+    \subitem {Sound}, \hyperpage{78}
   \item {getMapFont}
     \subitem {GameEngine}, \hyperpage{49}
   \item {getMapMusic}
@@ -281,43 +281,43 @@
   \item {getName}
     \subitem {Entity}, \hyperpage{26}
   \item {getNameWorld}
-    \subitem {World}, \hyperpage{125}
+    \subitem {World}, \hyperpage{126}
   \item {getPosition}
-    \subitem {Transform}, \hyperpage{111}
+    \subitem {Transform}, \hyperpage{112}
   \item {getRect}
-    \subitem {Rect$<$ T $>$}, \hyperpage{72}
+    \subitem {Rect$<$ T $>$}, \hyperpage{73}
   \item {getRed}
     \subitem {Color}, \hyperpage{11}
   \item {getRotation}
-    \subitem {Transform}, \hyperpage{111}
+    \subitem {Transform}, \hyperpage{112}
   \item {getScale}
-    \subitem {Transform}, \hyperpage{111}
+    \subitem {Transform}, \hyperpage{112}
   \item {getSize}
-    \subitem {Text}, \hyperpage{99}
+    \subitem {Text}, \hyperpage{100}
   \item {getSound}
-    \subitem {Sound}, \hyperpage{77}
+    \subitem {Sound}, \hyperpage{78}
   \item {getSprite}
-    \subitem {Sprite}, \hyperpage{86}
+    \subitem {Sprite}, \hyperpage{87}
   \item {getStatus}
     \subitem {Music}, \hyperpage{65}
   \item {getStringText}
-    \subitem {Text}, \hyperpage{100}
+    \subitem {Text}, \hyperpage{101}
   \item {getText}
-    \subitem {Text}, \hyperpage{100}
+    \subitem {Text}, \hyperpage{101}
   \item {getTop}
-    \subitem {Rect$<$ T $>$}, \hyperpage{72}
+    \subitem {Rect$<$ T $>$}, \hyperpage{73}
   \item {getTransform}
     \subitem {ITransform}, \hyperpage{61}
-    \subitem {Sprite}, \hyperpage{86}
-    \subitem {Text}, \hyperpage{100}
-    \subitem {Transform}, \hyperpage{112}
+    \subitem {Sprite}, \hyperpage{87}
+    \subitem {Text}, \hyperpage{101}
+    \subitem {Transform}, \hyperpage{113}
   \item {getVector2Struct}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{119}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{120}
   \item {getVolume}
     \subitem {Music}, \hyperpage{65}
-    \subitem {Sound}, \hyperpage{77}
+    \subitem {Sound}, \hyperpage{78}
   \item {getWidth}
-    \subitem {Rect$<$ T $>$}, \hyperpage{73}
+    \subitem {Rect$<$ T $>$}, \hyperpage{74}
   \item {getWindow}
     \subitem {GameEngine}, \hyperpage{50}
   \item {getWorld}
@@ -325,9 +325,9 @@
   \item {getWorldMap}
     \subitem {GameEngine}, \hyperpage{51}
   \item {getX}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{119}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{120}
   \item {getY}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{119}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{120}
 
   \indexspace
 
@@ -336,11 +336,11 @@
     \subitem {Entity}, \hyperpage{26}
     \subitem {EntityManager}, \hyperpage{33}
     \subitem {Music}, \hyperpage{65}
-    \subitem {Sound}, \hyperpage{78}
-    \subitem {Sprite}, \hyperpage{87}
-    \subitem {Text}, \hyperpage{101}
-    \subitem {Transform}, \hyperpage{112}
-    \subitem {World}, \hyperpage{126}
+    \subitem {Sound}, \hyperpage{79}
+    \subitem {Sprite}, \hyperpage{88}
+    \subitem {Text}, \hyperpage{102}
+    \subitem {Transform}, \hyperpage{113}
+    \subitem {World}, \hyperpage{127}
   \item {initialize}
     \subitem {GameEngine}, \hyperpage{51}
   \item {initializeAllFiles}
@@ -364,7 +364,7 @@
   \item {initializeWorldMap}
     \subitem {GameEngine}, \hyperpage{54}
   \item {isPlaying}
-    \subitem {Sound}, \hyperpage{78}
+    \subitem {Sound}, \hyperpage{79}
   \item {isWindowOpen}
     \subitem {GameEngine}, \hyperpage{55}
   \item {ITransform}, \hyperpage{60}
@@ -391,6 +391,7 @@
     \subitem {setVolume}, \hyperpage{68}
     \subitem {stop}, \hyperpage{68}
     \subitem {update}, \hyperpage{68}
+  \item {MusicTests}, \hyperpage{69}
 
   \indexspace
 
@@ -401,24 +402,24 @@
 
   \item {pause}
     \subitem {Music}, \hyperpage{66}
-    \subitem {Sound}, \hyperpage{78}
+    \subitem {Sound}, \hyperpage{79}
   \item {play}
     \subitem {Music}, \hyperpage{66}
-    \subitem {Sound}, \hyperpage{79}
+    \subitem {Sound}, \hyperpage{80}
 
   \indexspace
 
   \item {Rect}
-    \subitem {Rect$<$ T $>$}, \hyperpage{70}
-  \item {Rect$<$ T $>$}, \hyperpage{69}
-    \subitem {$\sim$Rect}, \hyperpage{70}
-    \subitem {contains}, \hyperpage{71}
-    \subitem {getHeight}, \hyperpage{71}
-    \subitem {getLeft}, \hyperpage{72}
-    \subitem {getRect}, \hyperpage{72}
-    \subitem {getTop}, \hyperpage{72}
-    \subitem {getWidth}, \hyperpage{73}
-    \subitem {Rect}, \hyperpage{70}
+    \subitem {Rect$<$ T $>$}, \hyperpage{71}
+  \item {Rect$<$ T $>$}, \hyperpage{70}
+    \subitem {$\sim$Rect}, \hyperpage{71}
+    \subitem {contains}, \hyperpage{72}
+    \subitem {getHeight}, \hyperpage{72}
+    \subitem {getLeft}, \hyperpage{73}
+    \subitem {getRect}, \hyperpage{73}
+    \subitem {getTop}, \hyperpage{73}
+    \subitem {getWidth}, \hyperpage{74}
+    \subitem {Rect}, \hyperpage{71}
   \item {removeComponent}
     \subitem {Entity}, \hyperpage{26}
   \item {removeDrawable}
@@ -430,7 +431,7 @@
 
   \indexspace
 
-  \item {Script}, \hyperpage{73}
+  \item {Script}, \hyperpage{74}
   \item {setActive}
     \subitem {Entity}, \hyperpage{27}
   \item {setAlpha}
@@ -444,152 +445,152 @@
   \item {setDeferredMusic}
     \subitem {Music}, \hyperpage{66}
   \item {setDeferredSound}
-    \subitem {Sound}, \hyperpage{79}
+    \subitem {Sound}, \hyperpage{80}
   \item {setDeferredSprite}
-    \subitem {Sprite}, \hyperpage{87}
+    \subitem {Sprite}, \hyperpage{88}
   \item {setDeferredText}
-    \subitem {Text}, \hyperpage{101}
+    \subitem {Text}, \hyperpage{102}
   \item {setDeferredTransform}
-    \subitem {Transform}, \hyperpage{112}
+    \subitem {Transform}, \hyperpage{113}
   \item {setDeltaTime}
     \subitem {GameEngine}, \hyperpage{57}
   \item {setFillColor}
-    \subitem {Text}, \hyperpage{102}
+    \subitem {Text}, \hyperpage{103}
   \item {setFont}
-    \subitem {Text}, \hyperpage{102}
+    \subitem {Text}, \hyperpage{103}
   \item {setGreen}
     \subitem {Color}, \hyperpage{12}
   \item {setKeyStatesMap}
     \subitem {EventEngine}, \hyperpage{40}
   \item {setLoop}
     \subitem {Music}, \hyperpage{67}
-    \subitem {Sound}, \hyperpage{79}
+    \subitem {Sound}, \hyperpage{80}
   \item {setMusic}
     \subitem {Music}, \hyperpage{67}
   \item {setName}
     \subitem {Entity}, \hyperpage{28}
   \item {setNameWorld}
-    \subitem {World}, \hyperpage{126}
+    \subitem {World}, \hyperpage{127}
   \item {setOutlineColor}
-    \subitem {Text}, \hyperpage{102}
+    \subitem {Text}, \hyperpage{103}
   \item {setPosition}
-    \subitem {Transform}, \hyperpage{113}
+    \subitem {Transform}, \hyperpage{114}
   \item {setRed}
     \subitem {Color}, \hyperpage{13}
   \item {setRotation}
-    \subitem {Transform}, \hyperpage{113}
+    \subitem {Transform}, \hyperpage{114}
   \item {setScale}
-    \subitem {Transform}, \hyperpage{113}
+    \subitem {Transform}, \hyperpage{114}
   \item {setSize}
-    \subitem {Text}, \hyperpage{103}
-  \item {setSound}
-    \subitem {Sound}, \hyperpage{80}
-  \item {setSprite}
-    \subitem {Sprite}, \hyperpage{88}
-  \item {setString}
-    \subitem {Text}, \hyperpage{103}
-  \item {setText}
-    \subitem {Text}, \hyperpage{103, 104}
-  \item {setTransform}
-    \subitem {Sprite}, \hyperpage{88}
     \subitem {Text}, \hyperpage{104}
-    \subitem {Transform}, \hyperpage{115}
+  \item {setSound}
+    \subitem {Sound}, \hyperpage{81}
+  \item {setSprite}
+    \subitem {Sprite}, \hyperpage{89}
+  \item {setString}
+    \subitem {Text}, \hyperpage{104}
+  \item {setText}
+    \subitem {Text}, \hyperpage{104, 105}
+  \item {setTransform}
+    \subitem {Sprite}, \hyperpage{89}
+    \subitem {Text}, \hyperpage{105}
+    \subitem {Transform}, \hyperpage{116}
   \item {setVolume}
     \subitem {Music}, \hyperpage{68}
-    \subitem {Sound}, \hyperpage{80}
+    \subitem {Sound}, \hyperpage{81}
   \item {setX}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{120}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{121}
   \item {setY}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{120}
-  \item {Sound}, \hyperpage{74}
-    \subitem {$\sim$Sound}, \hyperpage{76}
-    \subitem {applyDeferredSound}, \hyperpage{76}
-    \subitem {getBit}, \hyperpage{76}
-    \subitem {getLoop}, \hyperpage{77}
-    \subitem {getSound}, \hyperpage{77}
-    \subitem {getVolume}, \hyperpage{77}
-    \subitem {init}, \hyperpage{78}
-    \subitem {isPlaying}, \hyperpage{78}
-    \subitem {pause}, \hyperpage{78}
-    \subitem {play}, \hyperpage{79}
-    \subitem {setDeferredSound}, \hyperpage{79}
-    \subitem {setLoop}, \hyperpage{79}
-    \subitem {setSound}, \hyperpage{80}
-    \subitem {setVolume}, \hyperpage{80}
-    \subitem {Sound}, \hyperpage{75}
-    \subitem {stop}, \hyperpage{81}
-    \subitem {update}, \hyperpage{81}
-  \item {SoundTest}, \hyperpage{82}
-  \item {Sprite}, \hyperpage{83}
-    \subitem {$\sim$Sprite}, \hyperpage{85}
-    \subitem {applyDeferredSprite}, \hyperpage{85}
-    \subitem {draw}, \hyperpage{85}
-    \subitem {getBit}, \hyperpage{86}
-    \subitem {getSprite}, \hyperpage{86}
-    \subitem {getTransform}, \hyperpage{86}
-    \subitem {init}, \hyperpage{87}
-    \subitem {setDeferredSprite}, \hyperpage{87}
-    \subitem {setSprite}, \hyperpage{88}
-    \subitem {setTransform}, \hyperpage{88}
-    \subitem {Sprite}, \hyperpage{84}
-    \subitem {update}, \hyperpage{89}
-  \item {SpriteTest}, \hyperpage{90}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{121}
+  \item {Sound}, \hyperpage{75}
+    \subitem {$\sim$Sound}, \hyperpage{77}
+    \subitem {applyDeferredSound}, \hyperpage{77}
+    \subitem {getBit}, \hyperpage{77}
+    \subitem {getLoop}, \hyperpage{78}
+    \subitem {getSound}, \hyperpage{78}
+    \subitem {getVolume}, \hyperpage{78}
+    \subitem {init}, \hyperpage{79}
+    \subitem {isPlaying}, \hyperpage{79}
+    \subitem {pause}, \hyperpage{79}
+    \subitem {play}, \hyperpage{80}
+    \subitem {setDeferredSound}, \hyperpage{80}
+    \subitem {setLoop}, \hyperpage{80}
+    \subitem {setSound}, \hyperpage{81}
+    \subitem {setVolume}, \hyperpage{81}
+    \subitem {Sound}, \hyperpage{76}
+    \subitem {stop}, \hyperpage{82}
+    \subitem {update}, \hyperpage{82}
+  \item {SoundTest}, \hyperpage{83}
+  \item {Sprite}, \hyperpage{84}
+    \subitem {$\sim$Sprite}, \hyperpage{86}
+    \subitem {applyDeferredSprite}, \hyperpage{86}
+    \subitem {draw}, \hyperpage{86}
+    \subitem {getBit}, \hyperpage{87}
+    \subitem {getSprite}, \hyperpage{87}
+    \subitem {getTransform}, \hyperpage{87}
+    \subitem {init}, \hyperpage{88}
+    \subitem {setDeferredSprite}, \hyperpage{88}
+    \subitem {setSprite}, \hyperpage{89}
+    \subitem {setTransform}, \hyperpage{89}
+    \subitem {Sprite}, \hyperpage{85}
+    \subitem {update}, \hyperpage{90}
+  \item {SpriteTest}, \hyperpage{91}
   \item {stop}
     \subitem {Music}, \hyperpage{68}
-    \subitem {Sound}, \hyperpage{81}
+    \subitem {Sound}, \hyperpage{82}
 
   \indexspace
 
-  \item {TestRect}, \hyperpage{91}
-  \item {TesttoSFML}, \hyperpage{92}
-  \item {TestVector2}, \hyperpage{93}
-  \item {TestWorld}, \hyperpage{94}
-  \item {Text}, \hyperpage{95}
-    \subitem {$\sim$Text}, \hyperpage{97}
-    \subitem {applyDeferredText}, \hyperpage{97}
-    \subitem {draw}, \hyperpage{98}
-    \subitem {getBit}, \hyperpage{98}
-    \subitem {getColorFill}, \hyperpage{98}
-    \subitem {getColorOutline}, \hyperpage{99}
-    \subitem {getFont}, \hyperpage{99}
-    \subitem {getSize}, \hyperpage{99}
-    \subitem {getStringText}, \hyperpage{100}
-    \subitem {getText}, \hyperpage{100}
-    \subitem {getTransform}, \hyperpage{100}
-    \subitem {init}, \hyperpage{101}
-    \subitem {setDeferredText}, \hyperpage{101}
-    \subitem {setFillColor}, \hyperpage{102}
-    \subitem {setFont}, \hyperpage{102}
-    \subitem {setOutlineColor}, \hyperpage{102}
-    \subitem {setSize}, \hyperpage{103}
-    \subitem {setString}, \hyperpage{103}
-    \subitem {setText}, \hyperpage{103, 104}
-    \subitem {setTransform}, \hyperpage{104}
-    \subitem {Text}, \hyperpage{97}
-    \subitem {update}, \hyperpage{105}
-  \item {toSFML}, \hyperpage{105}
-    \subitem {$\sim$toSFML}, \hyperpage{107}
-    \subitem {toSFML}, \hyperpage{106}
-    \subitem {toSFMLRect}, \hyperpage{107}
-  \item {toSFMLRect}
+  \item {TestRect}, \hyperpage{92}
+  \item {TesttoSFML}, \hyperpage{93}
+  \item {TestVector2}, \hyperpage{94}
+  \item {TestWorld}, \hyperpage{95}
+  \item {Text}, \hyperpage{96}
+    \subitem {$\sim$Text}, \hyperpage{98}
+    \subitem {applyDeferredText}, \hyperpage{98}
+    \subitem {draw}, \hyperpage{99}
+    \subitem {getBit}, \hyperpage{99}
+    \subitem {getColorFill}, \hyperpage{99}
+    \subitem {getColorOutline}, \hyperpage{100}
+    \subitem {getFont}, \hyperpage{100}
+    \subitem {getSize}, \hyperpage{100}
+    \subitem {getStringText}, \hyperpage{101}
+    \subitem {getText}, \hyperpage{101}
+    \subitem {getTransform}, \hyperpage{101}
+    \subitem {init}, \hyperpage{102}
+    \subitem {setDeferredText}, \hyperpage{102}
+    \subitem {setFillColor}, \hyperpage{103}
+    \subitem {setFont}, \hyperpage{103}
+    \subitem {setOutlineColor}, \hyperpage{103}
+    \subitem {setSize}, \hyperpage{104}
+    \subitem {setString}, \hyperpage{104}
+    \subitem {setText}, \hyperpage{104, 105}
+    \subitem {setTransform}, \hyperpage{105}
+    \subitem {Text}, \hyperpage{98}
+    \subitem {update}, \hyperpage{106}
+  \item {toSFML}, \hyperpage{106}
+    \subitem {$\sim$toSFML}, \hyperpage{108}
     \subitem {toSFML}, \hyperpage{107}
-  \item {Transform}, \hyperpage{108}
-    \subitem {$\sim$Transform}, \hyperpage{109}
-    \subitem {applyDeferredTransform}, \hyperpage{110}
-    \subitem {getBit}, \hyperpage{110}
-    \subitem {getPosition}, \hyperpage{111}
-    \subitem {getRotation}, \hyperpage{111}
-    \subitem {getScale}, \hyperpage{111}
-    \subitem {getTransform}, \hyperpage{112}
-    \subitem {init}, \hyperpage{112}
-    \subitem {setDeferredTransform}, \hyperpage{112}
-    \subitem {setPosition}, \hyperpage{113}
-    \subitem {setRotation}, \hyperpage{113}
-    \subitem {setScale}, \hyperpage{113}
-    \subitem {setTransform}, \hyperpage{115}
-    \subitem {Transform}, \hyperpage{109}
-    \subitem {update}, \hyperpage{115}
-  \item {TransformTest}, \hyperpage{116}
+    \subitem {toSFMLRect}, \hyperpage{108}
+  \item {toSFMLRect}
+    \subitem {toSFML}, \hyperpage{108}
+  \item {Transform}, \hyperpage{109}
+    \subitem {$\sim$Transform}, \hyperpage{110}
+    \subitem {applyDeferredTransform}, \hyperpage{111}
+    \subitem {getBit}, \hyperpage{111}
+    \subitem {getPosition}, \hyperpage{112}
+    \subitem {getRotation}, \hyperpage{112}
+    \subitem {getScale}, \hyperpage{112}
+    \subitem {getTransform}, \hyperpage{113}
+    \subitem {init}, \hyperpage{113}
+    \subitem {setDeferredTransform}, \hyperpage{113}
+    \subitem {setPosition}, \hyperpage{114}
+    \subitem {setRotation}, \hyperpage{114}
+    \subitem {setScale}, \hyperpage{114}
+    \subitem {setTransform}, \hyperpage{116}
+    \subitem {Transform}, \hyperpage{110}
+    \subitem {update}, \hyperpage{116}
+  \item {TransformTest}, \hyperpage{117}
 
   \indexspace
 
@@ -597,38 +598,38 @@
     \subitem {Components}, \hyperpage{16}
     \subitem {Entity}, \hyperpage{28}
     \subitem {Music}, \hyperpage{68}
-    \subitem {Sound}, \hyperpage{81}
-    \subitem {Sprite}, \hyperpage{89}
-    \subitem {Text}, \hyperpage{105}
-    \subitem {Transform}, \hyperpage{115}
+    \subitem {Sound}, \hyperpage{82}
+    \subitem {Sprite}, \hyperpage{90}
+    \subitem {Text}, \hyperpage{106}
+    \subitem {Transform}, \hyperpage{116}
   \item {updateGameEngine}
     \subitem {GameEngine}, \hyperpage{57}
 
   \indexspace
 
   \item {Vector2}
-    \subitem {Vector2$<$ T $>$}, \hyperpage{117, 118}
-  \item {Vector2$<$ T $>$}, \hyperpage{117}
-    \subitem {$\sim$Vector2}, \hyperpage{118}
-    \subitem {getVector2Struct}, \hyperpage{119}
-    \subitem {getX}, \hyperpage{119}
-    \subitem {getY}, \hyperpage{119}
-    \subitem {setX}, \hyperpage{120}
-    \subitem {setY}, \hyperpage{120}
-    \subitem {Vector2}, \hyperpage{117, 118}
+    \subitem {Vector2$<$ T $>$}, \hyperpage{118, 119}
+  \item {Vector2$<$ T $>$}, \hyperpage{118}
+    \subitem {$\sim$Vector2}, \hyperpage{119}
+    \subitem {getVector2Struct}, \hyperpage{120}
+    \subitem {getX}, \hyperpage{120}
+    \subitem {getY}, \hyperpage{120}
+    \subitem {setX}, \hyperpage{121}
+    \subitem {setY}, \hyperpage{121}
+    \subitem {Vector2}, \hyperpage{118, 119}
 
   \indexspace
 
-  \item {World}, \hyperpage{121}
-    \subitem {$\sim$World}, \hyperpage{123}
-    \subitem {addEntityManager}, \hyperpage{123}
-    \subitem {createEntities}, \hyperpage{124}
-    \subitem {getEntitiesManager}, \hyperpage{124}
-    \subitem {getEntityManager}, \hyperpage{125}
-    \subitem {getEntityManagerMap}, \hyperpage{125}
-    \subitem {getNameWorld}, \hyperpage{125}
-    \subitem {init}, \hyperpage{126}
-    \subitem {setNameWorld}, \hyperpage{126}
-    \subitem {World}, \hyperpage{123}
+  \item {World}, \hyperpage{122}
+    \subitem {$\sim$World}, \hyperpage{124}
+    \subitem {addEntityManager}, \hyperpage{124}
+    \subitem {createEntities}, \hyperpage{125}
+    \subitem {getEntitiesManager}, \hyperpage{125}
+    \subitem {getEntityManager}, \hyperpage{126}
+    \subitem {getEntityManagerMap}, \hyperpage{126}
+    \subitem {getNameWorld}, \hyperpage{126}
+    \subitem {init}, \hyperpage{127}
+    \subitem {setNameWorld}, \hyperpage{127}
+    \subitem {World}, \hyperpage{124}
 
 \end{theindex}

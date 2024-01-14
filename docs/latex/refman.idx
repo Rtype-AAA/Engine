@@ -238,215 +238,216 @@
 \indexentry{stop@{stop}!Music@{Music}|hyperpage}{68}
 \indexentry{Music@{Music}!update@{update}|hyperpage}{68}
 \indexentry{update@{update}!Music@{Music}|hyperpage}{68}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{69}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!Rect@{Rect}|hyperpage}{70}
-\indexentry{Rect@{Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{70}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!````~Rect@{$\sim$Rect}|hyperpage}{70}
-\indexentry{````~Rect@{$\sim$Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{70}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!contains@{contains}|hyperpage}{71}
-\indexentry{contains@{contains}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{71}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getHeight@{getHeight}|hyperpage}{71}
-\indexentry{getHeight@{getHeight}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{71}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getLeft@{getLeft}|hyperpage}{72}
-\indexentry{getLeft@{getLeft}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{72}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getRect@{getRect}|hyperpage}{72}
-\indexentry{getRect@{getRect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{72}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getTop@{getTop}|hyperpage}{72}
-\indexentry{getTop@{getTop}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{72}
-\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getWidth@{getWidth}|hyperpage}{73}
-\indexentry{getWidth@{getWidth}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{73}
-\indexentry{Script@{Script}|hyperpage}{73}
-\indexentry{Sound@{Sound}|hyperpage}{74}
-\indexentry{Sound@{Sound}!Sound@{Sound}|hyperpage}{75}
-\indexentry{Sound@{Sound}!Sound@{Sound}|hyperpage}{75}
-\indexentry{Sound@{Sound}!````~Sound@{$\sim$Sound}|hyperpage}{76}
-\indexentry{````~Sound@{$\sim$Sound}!Sound@{Sound}|hyperpage}{76}
-\indexentry{Sound@{Sound}!applyDeferredSound@{applyDeferredSound}|hyperpage}{76}
-\indexentry{applyDeferredSound@{applyDeferredSound}!Sound@{Sound}|hyperpage}{76}
-\indexentry{Sound@{Sound}!getBit@{getBit}|hyperpage}{76}
-\indexentry{getBit@{getBit}!Sound@{Sound}|hyperpage}{76}
-\indexentry{Sound@{Sound}!getLoop@{getLoop}|hyperpage}{77}
-\indexentry{getLoop@{getLoop}!Sound@{Sound}|hyperpage}{77}
-\indexentry{Sound@{Sound}!getSound@{getSound}|hyperpage}{77}
-\indexentry{getSound@{getSound}!Sound@{Sound}|hyperpage}{77}
-\indexentry{Sound@{Sound}!getVolume@{getVolume}|hyperpage}{77}
-\indexentry{getVolume@{getVolume}!Sound@{Sound}|hyperpage}{77}
-\indexentry{Sound@{Sound}!init@{init}|hyperpage}{78}
-\indexentry{init@{init}!Sound@{Sound}|hyperpage}{78}
-\indexentry{Sound@{Sound}!isPlaying@{isPlaying}|hyperpage}{78}
-\indexentry{isPlaying@{isPlaying}!Sound@{Sound}|hyperpage}{78}
-\indexentry{Sound@{Sound}!pause@{pause}|hyperpage}{78}
-\indexentry{pause@{pause}!Sound@{Sound}|hyperpage}{78}
-\indexentry{Sound@{Sound}!play@{play}|hyperpage}{79}
-\indexentry{play@{play}!Sound@{Sound}|hyperpage}{79}
-\indexentry{Sound@{Sound}!setDeferredSound@{setDeferredSound}|hyperpage}{79}
-\indexentry{setDeferredSound@{setDeferredSound}!Sound@{Sound}|hyperpage}{79}
-\indexentry{Sound@{Sound}!setLoop@{setLoop}|hyperpage}{79}
-\indexentry{setLoop@{setLoop}!Sound@{Sound}|hyperpage}{79}
-\indexentry{Sound@{Sound}!setSound@{setSound}|hyperpage}{80}
-\indexentry{setSound@{setSound}!Sound@{Sound}|hyperpage}{80}
-\indexentry{Sound@{Sound}!setSound@{setSound}|hyperpage}{80}
-\indexentry{setSound@{setSound}!Sound@{Sound}|hyperpage}{80}
-\indexentry{Sound@{Sound}!setVolume@{setVolume}|hyperpage}{80}
-\indexentry{setVolume@{setVolume}!Sound@{Sound}|hyperpage}{80}
-\indexentry{Sound@{Sound}!stop@{stop}|hyperpage}{81}
-\indexentry{stop@{stop}!Sound@{Sound}|hyperpage}{81}
-\indexentry{Sound@{Sound}!update@{update}|hyperpage}{81}
-\indexentry{update@{update}!Sound@{Sound}|hyperpage}{81}
-\indexentry{SoundTest@{SoundTest}|hyperpage}{82}
-\indexentry{Sprite@{Sprite}|hyperpage}{83}
-\indexentry{Sprite@{Sprite}!Sprite@{Sprite}|hyperpage}{84}
-\indexentry{Sprite@{Sprite}!Sprite@{Sprite}|hyperpage}{84}
-\indexentry{Sprite@{Sprite}!````~Sprite@{$\sim$Sprite}|hyperpage}{85}
-\indexentry{````~Sprite@{$\sim$Sprite}!Sprite@{Sprite}|hyperpage}{85}
-\indexentry{Sprite@{Sprite}!applyDeferredSprite@{applyDeferredSprite}|hyperpage}{85}
-\indexentry{applyDeferredSprite@{applyDeferredSprite}!Sprite@{Sprite}|hyperpage}{85}
-\indexentry{Sprite@{Sprite}!draw@{draw}|hyperpage}{85}
-\indexentry{draw@{draw}!Sprite@{Sprite}|hyperpage}{85}
-\indexentry{Sprite@{Sprite}!getBit@{getBit}|hyperpage}{86}
-\indexentry{getBit@{getBit}!Sprite@{Sprite}|hyperpage}{86}
-\indexentry{Sprite@{Sprite}!getSprite@{getSprite}|hyperpage}{86}
-\indexentry{getSprite@{getSprite}!Sprite@{Sprite}|hyperpage}{86}
-\indexentry{Sprite@{Sprite}!getTransform@{getTransform}|hyperpage}{86}
-\indexentry{getTransform@{getTransform}!Sprite@{Sprite}|hyperpage}{86}
-\indexentry{Sprite@{Sprite}!init@{init}|hyperpage}{87}
-\indexentry{init@{init}!Sprite@{Sprite}|hyperpage}{87}
-\indexentry{Sprite@{Sprite}!setDeferredSprite@{setDeferredSprite}|hyperpage}{87}
-\indexentry{setDeferredSprite@{setDeferredSprite}!Sprite@{Sprite}|hyperpage}{87}
-\indexentry{Sprite@{Sprite}!setSprite@{setSprite}|hyperpage}{88}
-\indexentry{setSprite@{setSprite}!Sprite@{Sprite}|hyperpage}{88}
-\indexentry{Sprite@{Sprite}!setSprite@{setSprite}|hyperpage}{88}
-\indexentry{setSprite@{setSprite}!Sprite@{Sprite}|hyperpage}{88}
-\indexentry{Sprite@{Sprite}!setTransform@{setTransform}|hyperpage}{88}
-\indexentry{setTransform@{setTransform}!Sprite@{Sprite}|hyperpage}{88}
-\indexentry{Sprite@{Sprite}!update@{update}|hyperpage}{89}
-\indexentry{update@{update}!Sprite@{Sprite}|hyperpage}{89}
-\indexentry{SpriteTest@{SpriteTest}|hyperpage}{90}
-\indexentry{TestRect@{TestRect}|hyperpage}{91}
-\indexentry{TesttoSFML@{TesttoSFML}|hyperpage}{92}
-\indexentry{TestVector2@{TestVector2}|hyperpage}{93}
-\indexentry{TestWorld@{TestWorld}|hyperpage}{94}
-\indexentry{Text@{Text}|hyperpage}{95}
-\indexentry{Text@{Text}!Text@{Text}|hyperpage}{97}
-\indexentry{Text@{Text}!Text@{Text}|hyperpage}{97}
-\indexentry{Text@{Text}!````~Text@{$\sim$Text}|hyperpage}{97}
-\indexentry{````~Text@{$\sim$Text}!Text@{Text}|hyperpage}{97}
-\indexentry{Text@{Text}!applyDeferredText@{applyDeferredText}|hyperpage}{97}
-\indexentry{applyDeferredText@{applyDeferredText}!Text@{Text}|hyperpage}{97}
-\indexentry{Text@{Text}!draw@{draw}|hyperpage}{98}
-\indexentry{draw@{draw}!Text@{Text}|hyperpage}{98}
-\indexentry{Text@{Text}!getBit@{getBit}|hyperpage}{98}
-\indexentry{getBit@{getBit}!Text@{Text}|hyperpage}{98}
-\indexentry{Text@{Text}!getColorFill@{getColorFill}|hyperpage}{98}
-\indexentry{getColorFill@{getColorFill}!Text@{Text}|hyperpage}{98}
-\indexentry{Text@{Text}!getColorOutline@{getColorOutline}|hyperpage}{99}
-\indexentry{getColorOutline@{getColorOutline}!Text@{Text}|hyperpage}{99}
-\indexentry{Text@{Text}!getFont@{getFont}|hyperpage}{99}
-\indexentry{getFont@{getFont}!Text@{Text}|hyperpage}{99}
-\indexentry{Text@{Text}!getSize@{getSize}|hyperpage}{99}
-\indexentry{getSize@{getSize}!Text@{Text}|hyperpage}{99}
-\indexentry{Text@{Text}!getStringText@{getStringText}|hyperpage}{100}
-\indexentry{getStringText@{getStringText}!Text@{Text}|hyperpage}{100}
-\indexentry{Text@{Text}!getText@{getText}|hyperpage}{100}
-\indexentry{getText@{getText}!Text@{Text}|hyperpage}{100}
-\indexentry{Text@{Text}!getTransform@{getTransform}|hyperpage}{100}
-\indexentry{getTransform@{getTransform}!Text@{Text}|hyperpage}{100}
-\indexentry{Text@{Text}!init@{init}|hyperpage}{101}
-\indexentry{init@{init}!Text@{Text}|hyperpage}{101}
-\indexentry{Text@{Text}!setDeferredText@{setDeferredText}|hyperpage}{101}
-\indexentry{setDeferredText@{setDeferredText}!Text@{Text}|hyperpage}{101}
-\indexentry{Text@{Text}!setFillColor@{setFillColor}|hyperpage}{102}
-\indexentry{setFillColor@{setFillColor}!Text@{Text}|hyperpage}{102}
-\indexentry{Text@{Text}!setFont@{setFont}|hyperpage}{102}
-\indexentry{setFont@{setFont}!Text@{Text}|hyperpage}{102}
-\indexentry{Text@{Text}!setOutlineColor@{setOutlineColor}|hyperpage}{102}
-\indexentry{setOutlineColor@{setOutlineColor}!Text@{Text}|hyperpage}{102}
-\indexentry{Text@{Text}!setSize@{setSize}|hyperpage}{103}
-\indexentry{setSize@{setSize}!Text@{Text}|hyperpage}{103}
-\indexentry{Text@{Text}!setString@{setString}|hyperpage}{103}
-\indexentry{setString@{setString}!Text@{Text}|hyperpage}{103}
-\indexentry{Text@{Text}!setText@{setText}|hyperpage}{103}
-\indexentry{setText@{setText}!Text@{Text}|hyperpage}{103}
+\indexentry{MusicTests@{MusicTests}|hyperpage}{69}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{70}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!Rect@{Rect}|hyperpage}{71}
+\indexentry{Rect@{Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{71}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!````~Rect@{$\sim$Rect}|hyperpage}{71}
+\indexentry{````~Rect@{$\sim$Rect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{71}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!contains@{contains}|hyperpage}{72}
+\indexentry{contains@{contains}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{72}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getHeight@{getHeight}|hyperpage}{72}
+\indexentry{getHeight@{getHeight}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{72}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getLeft@{getLeft}|hyperpage}{73}
+\indexentry{getLeft@{getLeft}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{73}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getRect@{getRect}|hyperpage}{73}
+\indexentry{getRect@{getRect}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{73}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getTop@{getTop}|hyperpage}{73}
+\indexentry{getTop@{getTop}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{73}
+\indexentry{Rect$<$ T $>$@{Rect$<$ T $>$}!getWidth@{getWidth}|hyperpage}{74}
+\indexentry{getWidth@{getWidth}!Rect$<$ T $>$@{Rect$<$ T $>$}|hyperpage}{74}
+\indexentry{Script@{Script}|hyperpage}{74}
+\indexentry{Sound@{Sound}|hyperpage}{75}
+\indexentry{Sound@{Sound}!Sound@{Sound}|hyperpage}{76}
+\indexentry{Sound@{Sound}!Sound@{Sound}|hyperpage}{76}
+\indexentry{Sound@{Sound}!````~Sound@{$\sim$Sound}|hyperpage}{77}
+\indexentry{````~Sound@{$\sim$Sound}!Sound@{Sound}|hyperpage}{77}
+\indexentry{Sound@{Sound}!applyDeferredSound@{applyDeferredSound}|hyperpage}{77}
+\indexentry{applyDeferredSound@{applyDeferredSound}!Sound@{Sound}|hyperpage}{77}
+\indexentry{Sound@{Sound}!getBit@{getBit}|hyperpage}{77}
+\indexentry{getBit@{getBit}!Sound@{Sound}|hyperpage}{77}
+\indexentry{Sound@{Sound}!getLoop@{getLoop}|hyperpage}{78}
+\indexentry{getLoop@{getLoop}!Sound@{Sound}|hyperpage}{78}
+\indexentry{Sound@{Sound}!getSound@{getSound}|hyperpage}{78}
+\indexentry{getSound@{getSound}!Sound@{Sound}|hyperpage}{78}
+\indexentry{Sound@{Sound}!getVolume@{getVolume}|hyperpage}{78}
+\indexentry{getVolume@{getVolume}!Sound@{Sound}|hyperpage}{78}
+\indexentry{Sound@{Sound}!init@{init}|hyperpage}{79}
+\indexentry{init@{init}!Sound@{Sound}|hyperpage}{79}
+\indexentry{Sound@{Sound}!isPlaying@{isPlaying}|hyperpage}{79}
+\indexentry{isPlaying@{isPlaying}!Sound@{Sound}|hyperpage}{79}
+\indexentry{Sound@{Sound}!pause@{pause}|hyperpage}{79}
+\indexentry{pause@{pause}!Sound@{Sound}|hyperpage}{79}
+\indexentry{Sound@{Sound}!play@{play}|hyperpage}{80}
+\indexentry{play@{play}!Sound@{Sound}|hyperpage}{80}
+\indexentry{Sound@{Sound}!setDeferredSound@{setDeferredSound}|hyperpage}{80}
+\indexentry{setDeferredSound@{setDeferredSound}!Sound@{Sound}|hyperpage}{80}
+\indexentry{Sound@{Sound}!setLoop@{setLoop}|hyperpage}{80}
+\indexentry{setLoop@{setLoop}!Sound@{Sound}|hyperpage}{80}
+\indexentry{Sound@{Sound}!setSound@{setSound}|hyperpage}{81}
+\indexentry{setSound@{setSound}!Sound@{Sound}|hyperpage}{81}
+\indexentry{Sound@{Sound}!setSound@{setSound}|hyperpage}{81}
+\indexentry{setSound@{setSound}!Sound@{Sound}|hyperpage}{81}
+\indexentry{Sound@{Sound}!setVolume@{setVolume}|hyperpage}{81}
+\indexentry{setVolume@{setVolume}!Sound@{Sound}|hyperpage}{81}
+\indexentry{Sound@{Sound}!stop@{stop}|hyperpage}{82}
+\indexentry{stop@{stop}!Sound@{Sound}|hyperpage}{82}
+\indexentry{Sound@{Sound}!update@{update}|hyperpage}{82}
+\indexentry{update@{update}!Sound@{Sound}|hyperpage}{82}
+\indexentry{SoundTest@{SoundTest}|hyperpage}{83}
+\indexentry{Sprite@{Sprite}|hyperpage}{84}
+\indexentry{Sprite@{Sprite}!Sprite@{Sprite}|hyperpage}{85}
+\indexentry{Sprite@{Sprite}!Sprite@{Sprite}|hyperpage}{85}
+\indexentry{Sprite@{Sprite}!````~Sprite@{$\sim$Sprite}|hyperpage}{86}
+\indexentry{````~Sprite@{$\sim$Sprite}!Sprite@{Sprite}|hyperpage}{86}
+\indexentry{Sprite@{Sprite}!applyDeferredSprite@{applyDeferredSprite}|hyperpage}{86}
+\indexentry{applyDeferredSprite@{applyDeferredSprite}!Sprite@{Sprite}|hyperpage}{86}
+\indexentry{Sprite@{Sprite}!draw@{draw}|hyperpage}{86}
+\indexentry{draw@{draw}!Sprite@{Sprite}|hyperpage}{86}
+\indexentry{Sprite@{Sprite}!getBit@{getBit}|hyperpage}{87}
+\indexentry{getBit@{getBit}!Sprite@{Sprite}|hyperpage}{87}
+\indexentry{Sprite@{Sprite}!getSprite@{getSprite}|hyperpage}{87}
+\indexentry{getSprite@{getSprite}!Sprite@{Sprite}|hyperpage}{87}
+\indexentry{Sprite@{Sprite}!getTransform@{getTransform}|hyperpage}{87}
+\indexentry{getTransform@{getTransform}!Sprite@{Sprite}|hyperpage}{87}
+\indexentry{Sprite@{Sprite}!init@{init}|hyperpage}{88}
+\indexentry{init@{init}!Sprite@{Sprite}|hyperpage}{88}
+\indexentry{Sprite@{Sprite}!setDeferredSprite@{setDeferredSprite}|hyperpage}{88}
+\indexentry{setDeferredSprite@{setDeferredSprite}!Sprite@{Sprite}|hyperpage}{88}
+\indexentry{Sprite@{Sprite}!setSprite@{setSprite}|hyperpage}{89}
+\indexentry{setSprite@{setSprite}!Sprite@{Sprite}|hyperpage}{89}
+\indexentry{Sprite@{Sprite}!setSprite@{setSprite}|hyperpage}{89}
+\indexentry{setSprite@{setSprite}!Sprite@{Sprite}|hyperpage}{89}
+\indexentry{Sprite@{Sprite}!setTransform@{setTransform}|hyperpage}{89}
+\indexentry{setTransform@{setTransform}!Sprite@{Sprite}|hyperpage}{89}
+\indexentry{Sprite@{Sprite}!update@{update}|hyperpage}{90}
+\indexentry{update@{update}!Sprite@{Sprite}|hyperpage}{90}
+\indexentry{SpriteTest@{SpriteTest}|hyperpage}{91}
+\indexentry{TestRect@{TestRect}|hyperpage}{92}
+\indexentry{TesttoSFML@{TesttoSFML}|hyperpage}{93}
+\indexentry{TestVector2@{TestVector2}|hyperpage}{94}
+\indexentry{TestWorld@{TestWorld}|hyperpage}{95}
+\indexentry{Text@{Text}|hyperpage}{96}
+\indexentry{Text@{Text}!Text@{Text}|hyperpage}{98}
+\indexentry{Text@{Text}!Text@{Text}|hyperpage}{98}
+\indexentry{Text@{Text}!````~Text@{$\sim$Text}|hyperpage}{98}
+\indexentry{````~Text@{$\sim$Text}!Text@{Text}|hyperpage}{98}
+\indexentry{Text@{Text}!applyDeferredText@{applyDeferredText}|hyperpage}{98}
+\indexentry{applyDeferredText@{applyDeferredText}!Text@{Text}|hyperpage}{98}
+\indexentry{Text@{Text}!draw@{draw}|hyperpage}{99}
+\indexentry{draw@{draw}!Text@{Text}|hyperpage}{99}
+\indexentry{Text@{Text}!getBit@{getBit}|hyperpage}{99}
+\indexentry{getBit@{getBit}!Text@{Text}|hyperpage}{99}
+\indexentry{Text@{Text}!getColorFill@{getColorFill}|hyperpage}{99}
+\indexentry{getColorFill@{getColorFill}!Text@{Text}|hyperpage}{99}
+\indexentry{Text@{Text}!getColorOutline@{getColorOutline}|hyperpage}{100}
+\indexentry{getColorOutline@{getColorOutline}!Text@{Text}|hyperpage}{100}
+\indexentry{Text@{Text}!getFont@{getFont}|hyperpage}{100}
+\indexentry{getFont@{getFont}!Text@{Text}|hyperpage}{100}
+\indexentry{Text@{Text}!getSize@{getSize}|hyperpage}{100}
+\indexentry{getSize@{getSize}!Text@{Text}|hyperpage}{100}
+\indexentry{Text@{Text}!getStringText@{getStringText}|hyperpage}{101}
+\indexentry{getStringText@{getStringText}!Text@{Text}|hyperpage}{101}
+\indexentry{Text@{Text}!getText@{getText}|hyperpage}{101}
+\indexentry{getText@{getText}!Text@{Text}|hyperpage}{101}
+\indexentry{Text@{Text}!getTransform@{getTransform}|hyperpage}{101}
+\indexentry{getTransform@{getTransform}!Text@{Text}|hyperpage}{101}
+\indexentry{Text@{Text}!init@{init}|hyperpage}{102}
+\indexentry{init@{init}!Text@{Text}|hyperpage}{102}
+\indexentry{Text@{Text}!setDeferredText@{setDeferredText}|hyperpage}{102}
+\indexentry{setDeferredText@{setDeferredText}!Text@{Text}|hyperpage}{102}
+\indexentry{Text@{Text}!setFillColor@{setFillColor}|hyperpage}{103}
+\indexentry{setFillColor@{setFillColor}!Text@{Text}|hyperpage}{103}
+\indexentry{Text@{Text}!setFont@{setFont}|hyperpage}{103}
+\indexentry{setFont@{setFont}!Text@{Text}|hyperpage}{103}
+\indexentry{Text@{Text}!setOutlineColor@{setOutlineColor}|hyperpage}{103}
+\indexentry{setOutlineColor@{setOutlineColor}!Text@{Text}|hyperpage}{103}
+\indexentry{Text@{Text}!setSize@{setSize}|hyperpage}{104}
+\indexentry{setSize@{setSize}!Text@{Text}|hyperpage}{104}
+\indexentry{Text@{Text}!setString@{setString}|hyperpage}{104}
+\indexentry{setString@{setString}!Text@{Text}|hyperpage}{104}
 \indexentry{Text@{Text}!setText@{setText}|hyperpage}{104}
 \indexentry{setText@{setText}!Text@{Text}|hyperpage}{104}
-\indexentry{Text@{Text}!setTransform@{setTransform}|hyperpage}{104}
-\indexentry{setTransform@{setTransform}!Text@{Text}|hyperpage}{104}
-\indexentry{Text@{Text}!update@{update}|hyperpage}{105}
-\indexentry{update@{update}!Text@{Text}|hyperpage}{105}
-\indexentry{toSFML@{toSFML}|hyperpage}{105}
-\indexentry{toSFML@{toSFML}!toSFML@{toSFML}|hyperpage}{106}
-\indexentry{toSFML@{toSFML}!toSFML@{toSFML}|hyperpage}{106}
-\indexentry{toSFML@{toSFML}!````~toSFML@{$\sim$toSFML}|hyperpage}{107}
-\indexentry{````~toSFML@{$\sim$toSFML}!toSFML@{toSFML}|hyperpage}{107}
-\indexentry{toSFML@{toSFML}!toSFMLRect@{toSFMLRect}|hyperpage}{107}
-\indexentry{toSFMLRect@{toSFMLRect}!toSFML@{toSFML}|hyperpage}{107}
-\indexentry{Transform@{Transform}|hyperpage}{108}
-\indexentry{Transform@{Transform}!Transform@{Transform}|hyperpage}{109}
-\indexentry{Transform@{Transform}!Transform@{Transform}|hyperpage}{109}
-\indexentry{Transform@{Transform}!````~Transform@{$\sim$Transform}|hyperpage}{109}
-\indexentry{````~Transform@{$\sim$Transform}!Transform@{Transform}|hyperpage}{109}
-\indexentry{Transform@{Transform}!applyDeferredTransform@{applyDeferredTransform}|hyperpage}{110}
-\indexentry{applyDeferredTransform@{applyDeferredTransform}!Transform@{Transform}|hyperpage}{110}
-\indexentry{Transform@{Transform}!getBit@{getBit}|hyperpage}{110}
-\indexentry{getBit@{getBit}!Transform@{Transform}|hyperpage}{110}
-\indexentry{Transform@{Transform}!getPosition@{getPosition}|hyperpage}{111}
-\indexentry{getPosition@{getPosition}!Transform@{Transform}|hyperpage}{111}
-\indexentry{Transform@{Transform}!getRotation@{getRotation}|hyperpage}{111}
-\indexentry{getRotation@{getRotation}!Transform@{Transform}|hyperpage}{111}
-\indexentry{Transform@{Transform}!getScale@{getScale}|hyperpage}{111}
-\indexentry{getScale@{getScale}!Transform@{Transform}|hyperpage}{111}
-\indexentry{Transform@{Transform}!getTransform@{getTransform}|hyperpage}{112}
-\indexentry{getTransform@{getTransform}!Transform@{Transform}|hyperpage}{112}
-\indexentry{Transform@{Transform}!init@{init}|hyperpage}{112}
-\indexentry{init@{init}!Transform@{Transform}|hyperpage}{112}
-\indexentry{Transform@{Transform}!setDeferredTransform@{setDeferredTransform}|hyperpage}{112}
-\indexentry{setDeferredTransform@{setDeferredTransform}!Transform@{Transform}|hyperpage}{112}
-\indexentry{Transform@{Transform}!setPosition@{setPosition}|hyperpage}{113}
-\indexentry{setPosition@{setPosition}!Transform@{Transform}|hyperpage}{113}
-\indexentry{Transform@{Transform}!setRotation@{setRotation}|hyperpage}{113}
-\indexentry{setRotation@{setRotation}!Transform@{Transform}|hyperpage}{113}
-\indexentry{Transform@{Transform}!setScale@{setScale}|hyperpage}{113}
-\indexentry{setScale@{setScale}!Transform@{Transform}|hyperpage}{113}
-\indexentry{Transform@{Transform}!setTransform@{setTransform}|hyperpage}{115}
-\indexentry{setTransform@{setTransform}!Transform@{Transform}|hyperpage}{115}
-\indexentry{Transform@{Transform}!update@{update}|hyperpage}{115}
-\indexentry{update@{update}!Transform@{Transform}|hyperpage}{115}
-\indexentry{TransformTest@{TransformTest}|hyperpage}{116}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{117}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!Vector2@{Vector2}|hyperpage}{117}
-\indexentry{Vector2@{Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{117}
+\indexentry{Text@{Text}!setText@{setText}|hyperpage}{105}
+\indexentry{setText@{setText}!Text@{Text}|hyperpage}{105}
+\indexentry{Text@{Text}!setTransform@{setTransform}|hyperpage}{105}
+\indexentry{setTransform@{setTransform}!Text@{Text}|hyperpage}{105}
+\indexentry{Text@{Text}!update@{update}|hyperpage}{106}
+\indexentry{update@{update}!Text@{Text}|hyperpage}{106}
+\indexentry{toSFML@{toSFML}|hyperpage}{106}
+\indexentry{toSFML@{toSFML}!toSFML@{toSFML}|hyperpage}{107}
+\indexentry{toSFML@{toSFML}!toSFML@{toSFML}|hyperpage}{107}
+\indexentry{toSFML@{toSFML}!````~toSFML@{$\sim$toSFML}|hyperpage}{108}
+\indexentry{````~toSFML@{$\sim$toSFML}!toSFML@{toSFML}|hyperpage}{108}
+\indexentry{toSFML@{toSFML}!toSFMLRect@{toSFMLRect}|hyperpage}{108}
+\indexentry{toSFMLRect@{toSFMLRect}!toSFML@{toSFML}|hyperpage}{108}
+\indexentry{Transform@{Transform}|hyperpage}{109}
+\indexentry{Transform@{Transform}!Transform@{Transform}|hyperpage}{110}
+\indexentry{Transform@{Transform}!Transform@{Transform}|hyperpage}{110}
+\indexentry{Transform@{Transform}!````~Transform@{$\sim$Transform}|hyperpage}{110}
+\indexentry{````~Transform@{$\sim$Transform}!Transform@{Transform}|hyperpage}{110}
+\indexentry{Transform@{Transform}!applyDeferredTransform@{applyDeferredTransform}|hyperpage}{111}
+\indexentry{applyDeferredTransform@{applyDeferredTransform}!Transform@{Transform}|hyperpage}{111}
+\indexentry{Transform@{Transform}!getBit@{getBit}|hyperpage}{111}
+\indexentry{getBit@{getBit}!Transform@{Transform}|hyperpage}{111}
+\indexentry{Transform@{Transform}!getPosition@{getPosition}|hyperpage}{112}
+\indexentry{getPosition@{getPosition}!Transform@{Transform}|hyperpage}{112}
+\indexentry{Transform@{Transform}!getRotation@{getRotation}|hyperpage}{112}
+\indexentry{getRotation@{getRotation}!Transform@{Transform}|hyperpage}{112}
+\indexentry{Transform@{Transform}!getScale@{getScale}|hyperpage}{112}
+\indexentry{getScale@{getScale}!Transform@{Transform}|hyperpage}{112}
+\indexentry{Transform@{Transform}!getTransform@{getTransform}|hyperpage}{113}
+\indexentry{getTransform@{getTransform}!Transform@{Transform}|hyperpage}{113}
+\indexentry{Transform@{Transform}!init@{init}|hyperpage}{113}
+\indexentry{init@{init}!Transform@{Transform}|hyperpage}{113}
+\indexentry{Transform@{Transform}!setDeferredTransform@{setDeferredTransform}|hyperpage}{113}
+\indexentry{setDeferredTransform@{setDeferredTransform}!Transform@{Transform}|hyperpage}{113}
+\indexentry{Transform@{Transform}!setPosition@{setPosition}|hyperpage}{114}
+\indexentry{setPosition@{setPosition}!Transform@{Transform}|hyperpage}{114}
+\indexentry{Transform@{Transform}!setRotation@{setRotation}|hyperpage}{114}
+\indexentry{setRotation@{setRotation}!Transform@{Transform}|hyperpage}{114}
+\indexentry{Transform@{Transform}!setScale@{setScale}|hyperpage}{114}
+\indexentry{setScale@{setScale}!Transform@{Transform}|hyperpage}{114}
+\indexentry{Transform@{Transform}!setTransform@{setTransform}|hyperpage}{116}
+\indexentry{setTransform@{setTransform}!Transform@{Transform}|hyperpage}{116}
+\indexentry{Transform@{Transform}!update@{update}|hyperpage}{116}
+\indexentry{update@{update}!Transform@{Transform}|hyperpage}{116}
+\indexentry{TransformTest@{TransformTest}|hyperpage}{117}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{118}
 \indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!Vector2@{Vector2}|hyperpage}{118}
 \indexentry{Vector2@{Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{118}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!````~Vector2@{$\sim$Vector2}|hyperpage}{118}
-\indexentry{````~Vector2@{$\sim$Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{118}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getVector2Struct@{getVector2Struct}|hyperpage}{119}
-\indexentry{getVector2Struct@{getVector2Struct}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{119}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getX@{getX}|hyperpage}{119}
-\indexentry{getX@{getX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{119}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getY@{getY}|hyperpage}{119}
-\indexentry{getY@{getY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{119}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setX@{setX}|hyperpage}{120}
-\indexentry{setX@{setX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{120}
-\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setY@{setY}|hyperpage}{120}
-\indexentry{setY@{setY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{120}
-\indexentry{World@{World}|hyperpage}{121}
-\indexentry{World@{World}!World@{World}|hyperpage}{123}
-\indexentry{World@{World}!World@{World}|hyperpage}{123}
-\indexentry{World@{World}!````~World@{$\sim$World}|hyperpage}{123}
-\indexentry{````~World@{$\sim$World}!World@{World}|hyperpage}{123}
-\indexentry{World@{World}!addEntityManager@{addEntityManager}|hyperpage}{123}
-\indexentry{addEntityManager@{addEntityManager}!World@{World}|hyperpage}{123}
-\indexentry{World@{World}!createEntities@{createEntities}|hyperpage}{124}
-\indexentry{createEntities@{createEntities}!World@{World}|hyperpage}{124}
-\indexentry{World@{World}!getEntitiesManager@{getEntitiesManager}|hyperpage}{124}
-\indexentry{getEntitiesManager@{getEntitiesManager}!World@{World}|hyperpage}{124}
-\indexentry{World@{World}!getEntityManager@{getEntityManager}|hyperpage}{125}
-\indexentry{getEntityManager@{getEntityManager}!World@{World}|hyperpage}{125}
-\indexentry{World@{World}!getEntityManagerMap@{getEntityManagerMap}|hyperpage}{125}
-\indexentry{getEntityManagerMap@{getEntityManagerMap}!World@{World}|hyperpage}{125}
-\indexentry{World@{World}!getNameWorld@{getNameWorld}|hyperpage}{125}
-\indexentry{getNameWorld@{getNameWorld}!World@{World}|hyperpage}{125}
-\indexentry{World@{World}!init@{init}|hyperpage}{126}
-\indexentry{init@{init}!World@{World}|hyperpage}{126}
-\indexentry{World@{World}!setNameWorld@{setNameWorld}|hyperpage}{126}
-\indexentry{setNameWorld@{setNameWorld}!World@{World}|hyperpage}{126}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!Vector2@{Vector2}|hyperpage}{119}
+\indexentry{Vector2@{Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{119}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!````~Vector2@{$\sim$Vector2}|hyperpage}{119}
+\indexentry{````~Vector2@{$\sim$Vector2}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{119}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getVector2Struct@{getVector2Struct}|hyperpage}{120}
+\indexentry{getVector2Struct@{getVector2Struct}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{120}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getX@{getX}|hyperpage}{120}
+\indexentry{getX@{getX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{120}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!getY@{getY}|hyperpage}{120}
+\indexentry{getY@{getY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{120}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setX@{setX}|hyperpage}{121}
+\indexentry{setX@{setX}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{121}
+\indexentry{Vector2$<$ T $>$@{Vector2$<$ T $>$}!setY@{setY}|hyperpage}{121}
+\indexentry{setY@{setY}!Vector2$<$ T $>$@{Vector2$<$ T $>$}|hyperpage}{121}
+\indexentry{World@{World}|hyperpage}{122}
+\indexentry{World@{World}!World@{World}|hyperpage}{124}
+\indexentry{World@{World}!World@{World}|hyperpage}{124}
+\indexentry{World@{World}!````~World@{$\sim$World}|hyperpage}{124}
+\indexentry{````~World@{$\sim$World}!World@{World}|hyperpage}{124}
+\indexentry{World@{World}!addEntityManager@{addEntityManager}|hyperpage}{124}
+\indexentry{addEntityManager@{addEntityManager}!World@{World}|hyperpage}{124}
+\indexentry{World@{World}!createEntities@{createEntities}|hyperpage}{125}
+\indexentry{createEntities@{createEntities}!World@{World}|hyperpage}{125}
+\indexentry{World@{World}!getEntitiesManager@{getEntitiesManager}|hyperpage}{125}
+\indexentry{getEntitiesManager@{getEntitiesManager}!World@{World}|hyperpage}{125}
+\indexentry{World@{World}!getEntityManager@{getEntityManager}|hyperpage}{126}
+\indexentry{getEntityManager@{getEntityManager}!World@{World}|hyperpage}{126}
+\indexentry{World@{World}!getEntityManagerMap@{getEntityManagerMap}|hyperpage}{126}
+\indexentry{getEntityManagerMap@{getEntityManagerMap}!World@{World}|hyperpage}{126}
+\indexentry{World@{World}!getNameWorld@{getNameWorld}|hyperpage}{126}
+\indexentry{getNameWorld@{getNameWorld}!World@{World}|hyperpage}{126}
+\indexentry{World@{World}!init@{init}|hyperpage}{127}
+\indexentry{init@{init}!World@{World}|hyperpage}{127}
+\indexentry{World@{World}!setNameWorld@{setNameWorld}|hyperpage}{127}
+\indexentry{setNameWorld@{setNameWorld}!World@{World}|hyperpage}{127}
