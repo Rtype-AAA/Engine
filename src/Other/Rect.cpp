@@ -5,11 +5,6 @@
 #include "Rect.h"
 
 template<typename T>
-typename Rect<T>::RectStruct  Rect<T>::getRect() const {
-    return rect;
-}
-
-template<typename T>
 T Rect<T>::getLeft() const {
     return rect.left;
 }

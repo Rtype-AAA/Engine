@@ -41,7 +41,7 @@ public:
     /// @brief getRect(): Get the using RectStruct.
     /// @param void
     /// @return Rect
-    [[nodiscard]] RectStruct getRect() const;
+    [[nodiscard]] RectStruct getRect() const {return rect;};
 
     /// @brief getLeft(): Get the using RectStruct left.
     /// @tparam T: Type of the rect.
