@@ -48,7 +48,7 @@ else()
         include(FetchContent)
         FetchContent_Declare(SFML
                 GIT_REPOSITORY https://github.com/SFML/SFML.git
-                GIT_TAG 2.5.1)
+                GIT_TAG 2.5.x)
         FetchContent_MakeAvailable(SFML)
 
         find_package(SFML 2.5.1 COMPONENTS system window graphics audio network REQUIRED)
