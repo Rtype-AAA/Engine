@@ -4213,9 +4213,15 @@ $(function() {
 <div class="line"><a name="l04182"></a><span class="lineno"> 4182</span>&#160;        <span class="keywordtype">char</span> tabChar;               <span class="comment">// If this char is seen the indent is changed to current pos</span></div>
 <div class="line"><a name="l04183"></a><span class="lineno"> 4183</span>&#160;    };</div>
 <div class="line"><a name="l04184"></a><span class="lineno"> 4184</span>&#160; </div>
+<<<<<<< HEAD
 <div class="line"><a name="l04185"></a><span class="lineno"> 4185</span>&#160;    <span class="keyword">class </span>Text {</div>
 <div class="line"><a name="l04186"></a><span class="lineno"> 4186</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l04187"></a><span class="lineno"> 4187</span>&#160;        Text( std::string <span class="keyword">const</span>&amp; _str, TextAttributes <span class="keyword">const</span>&amp; _attr = TextAttributes() )</div>
+=======
+<div class="line"><a name="l04185"></a><span class="lineno"> 4185</span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d53/classText.html">Text</a> {</div>
+<div class="line"><a name="l04186"></a><span class="lineno"> 4186</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l04187"></a><span class="lineno"> 4187</span>&#160;        <a class="code" href="../../df/d53/classText.html">Text</a>( std::string <span class="keyword">const</span>&amp; _str, TextAttributes <span class="keyword">const</span>&amp; _attr = TextAttributes() )</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l04188"></a><span class="lineno"> 4188</span>&#160;        : attr( _attr )</div>
 <div class="line"><a name="l04189"></a><span class="lineno"> 4189</span>&#160;        {</div>
 <div class="line"><a name="l04190"></a><span class="lineno"> 4190</span>&#160;            std::string wrappableChars = <span class="stringliteral">&quot; [({.,/|\\-&quot;</span>;</div>
@@ -4289,7 +4295,11 @@ $(function() {
 <div class="line"><a name="l04258"></a><span class="lineno"> 4258</span>&#160;            <span class="keywordflow">return</span> oss.str();</div>
 <div class="line"><a name="l04259"></a><span class="lineno"> 4259</span>&#160;        }</div>
 <div class="line"><a name="l04260"></a><span class="lineno"> 4260</span>&#160; </div>
+<<<<<<< HEAD
 <div class="line"><a name="l04261"></a><span class="lineno"> 4261</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt; ( std::ostream&amp; _stream, Text <span class="keyword">const</span>&amp; _text ) {</div>
+=======
+<div class="line"><a name="l04261"></a><span class="lineno"> 4261</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt; ( std::ostream&amp; _stream, <a class="code" href="../../df/d53/classText.html">Text</a> <span class="keyword">const</span>&amp; _text ) {</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l04262"></a><span class="lineno"> 4262</span>&#160;            <span class="keywordflow">for</span>( Text::const_iterator it = _text.begin(), itEnd = _text.end();</div>
 <div class="line"><a name="l04263"></a><span class="lineno"> 4263</span>&#160;                it != itEnd; ++it ) {</div>
 <div class="line"><a name="l04264"></a><span class="lineno"> 4264</span>&#160;                <span class="keywordflow">if</span>( it != _text.begin() )</div>
@@ -5453,9 +5463,15 @@ $(function() {
 <div class="line"><a name="l05425"></a><span class="lineno"> 5425</span>&#160;        std::size_t width;          <span class="comment">// maximum width of text, including indent. Longer text will wrap</span></div>
 <div class="line"><a name="l05426"></a><span class="lineno"> 5426</span>&#160;    };</div>
 <div class="line"><a name="l05427"></a><span class="lineno"> 5427</span>&#160; </div>
+<<<<<<< HEAD
 <div class="line"><a name="l05428"></a><span class="lineno"> 5428</span>&#160;    <span class="keyword">class </span>Text {</div>
 <div class="line"><a name="l05429"></a><span class="lineno"> 5429</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l05430"></a><span class="lineno"> 5430</span>&#160;        Text( std::string <span class="keyword">const</span>&amp; _str, TextAttributes <span class="keyword">const</span>&amp; _attr = TextAttributes() )</div>
+=======
+<div class="line"><a name="l05428"></a><span class="lineno"> 5428</span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d53/classText.html">Text</a> {</div>
+<div class="line"><a name="l05429"></a><span class="lineno"> 5429</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l05430"></a><span class="lineno"> 5430</span>&#160;        <a class="code" href="../../df/d53/classText.html">Text</a>( std::string <span class="keyword">const</span>&amp; _str, TextAttributes <span class="keyword">const</span>&amp; _attr = TextAttributes() )</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l05431"></a><span class="lineno"> 5431</span>&#160;        : attr( _attr )</div>
 <div class="line"><a name="l05432"></a><span class="lineno"> 5432</span>&#160;        {</div>
 <div class="line"><a name="l05433"></a><span class="lineno"> 5433</span>&#160;            <span class="keyword">const</span> std::string wrappableBeforeChars = <span class="stringliteral">&quot;[({&lt;\t&quot;</span>;</div>
@@ -5543,7 +5559,11 @@ $(function() {
 <div class="line"><a name="l05515"></a><span class="lineno"> 5515</span>&#160;            <span class="keywordflow">return</span> oss.str();</div>
 <div class="line"><a name="l05516"></a><span class="lineno"> 5516</span>&#160;        }</div>
 <div class="line"><a name="l05517"></a><span class="lineno"> 5517</span>&#160; </div>
+<<<<<<< HEAD
 <div class="line"><a name="l05518"></a><span class="lineno"> 5518</span>&#160;        <span class="keyword">inline</span> <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt; ( std::ostream&amp; _stream, Text <span class="keyword">const</span>&amp; _text ) {</div>
+=======
+<div class="line"><a name="l05518"></a><span class="lineno"> 5518</span>&#160;        <span class="keyword">inline</span> <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt; ( std::ostream&amp; _stream, <a class="code" href="../../df/d53/classText.html">Text</a> <span class="keyword">const</span>&amp; _text ) {</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l05519"></a><span class="lineno"> 5519</span>&#160;            <span class="keywordflow">for</span>( Text::const_iterator it = _text.begin(), itEnd = _text.end();</div>
 <div class="line"><a name="l05520"></a><span class="lineno"> 5520</span>&#160;                it != itEnd; ++it ) {</div>
 <div class="line"><a name="l05521"></a><span class="lineno"> 5521</span>&#160;                <span class="keywordflow">if</span>( it != _text.begin() )</div>
@@ -5918,16 +5938,27 @@ $(function() {
 <div class="line"><a name="l05890"></a><span class="lineno"> 5890</span>&#160;                : <a class="code" href="../../d2/df3/group__window.html#gga00319cf9896ddf15ebfe0c14ffbc8f60a8c35a9c8507559e455387fc4a83ce422">Colour::None</a>;</div>
 <div class="line"><a name="l05891"></a><span class="lineno"> 5891</span>&#160;            Colour colourGuard( colour );</div>
 <div class="line"><a name="l05892"></a><span class="lineno"> 5892</span>&#160; </div>
+<<<<<<< HEAD
 <div class="line"><a name="l05893"></a><span class="lineno"> 5893</span>&#160;            Catch::cout() &lt;&lt; Text( testCaseInfo.name, nameAttr ) &lt;&lt; std::endl;</div>
+=======
+<div class="line"><a name="l05893"></a><span class="lineno"> 5893</span>&#160;            Catch::cout() &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( testCaseInfo.name, nameAttr ) &lt;&lt; std::endl;</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l05894"></a><span class="lineno"> 5894</span>&#160;            <span class="keywordflow">if</span>( config.listExtraInfo() ) {</div>
 <div class="line"><a name="l05895"></a><span class="lineno"> 5895</span>&#160;                Catch::cout() &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; testCaseInfo.lineInfo &lt;&lt; std::endl;</div>
 <div class="line"><a name="l05896"></a><span class="lineno"> 5896</span>&#160;                std::string description = testCaseInfo.description;</div>
 <div class="line"><a name="l05897"></a><span class="lineno"> 5897</span>&#160;                <span class="keywordflow">if</span>( description.empty() )</div>
 <div class="line"><a name="l05898"></a><span class="lineno"> 5898</span>&#160;                    description = <span class="stringliteral">&quot;(NO DESCRIPTION)&quot;</span>;</div>
+<<<<<<< HEAD
 <div class="line"><a name="l05899"></a><span class="lineno"> 5899</span>&#160;                Catch::cout() &lt;&lt; Text( description, descAttr ) &lt;&lt; std::endl;</div>
 <div class="line"><a name="l05900"></a><span class="lineno"> 5900</span>&#160;            }</div>
 <div class="line"><a name="l05901"></a><span class="lineno"> 5901</span>&#160;            <span class="keywordflow">if</span>( !testCaseInfo.tags.empty() )</div>
 <div class="line"><a name="l05902"></a><span class="lineno"> 5902</span>&#160;                Catch::cout() &lt;&lt; Text( testCaseInfo.tagsAsString, tagsAttr ) &lt;&lt; std::endl;</div>
+=======
+<div class="line"><a name="l05899"></a><span class="lineno"> 5899</span>&#160;                Catch::cout() &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( description, descAttr ) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l05900"></a><span class="lineno"> 5900</span>&#160;            }</div>
+<div class="line"><a name="l05901"></a><span class="lineno"> 5901</span>&#160;            <span class="keywordflow">if</span>( !testCaseInfo.tags.empty() )</div>
+<div class="line"><a name="l05902"></a><span class="lineno"> 5902</span>&#160;                Catch::cout() &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( testCaseInfo.tagsAsString, tagsAttr ) &lt;&lt; std::endl;</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l05903"></a><span class="lineno"> 5903</span>&#160;        }</div>
 <div class="line"><a name="l05904"></a><span class="lineno"> 5904</span>&#160; </div>
 <div class="line"><a name="l05905"></a><span class="lineno"> 5905</span>&#160;        <span class="keywordflow">if</span>( !config.testSpec().hasFilters() )</div>
@@ -6011,7 +6042,11 @@ $(function() {
 <div class="line"><a name="l05983"></a><span class="lineno"> 5983</span>&#160;                ++countIt ) {</div>
 <div class="line"><a name="l05984"></a><span class="lineno"> 5984</span>&#160;            std::ostringstream oss;</div>
 <div class="line"><a name="l05985"></a><span class="lineno"> 5985</span>&#160;            oss &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; std::setw(2) &lt;&lt; countIt-&gt;second.count &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
+<<<<<<< HEAD
 <div class="line"><a name="l05986"></a><span class="lineno"> 5986</span>&#160;            Text wrapper( countIt-&gt;second.all(), TextAttributes()</div>
+=======
+<div class="line"><a name="l05986"></a><span class="lineno"> 5986</span>&#160;            <a class="code" href="../../df/d53/classText.html">Text</a> wrapper( countIt-&gt;second.all(), TextAttributes()</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l05987"></a><span class="lineno"> 5987</span>&#160;                                                    .setInitialIndent( 0 )</div>
 <div class="line"><a name="l05988"></a><span class="lineno"> 5988</span>&#160;                                                    .setIndent( oss.str().size() )</div>
 <div class="line"><a name="l05989"></a><span class="lineno"> 5989</span>&#160;                                                    .setWidth( CATCH_CONFIG_CONSOLE_WIDTH-10 ) );</div>
@@ -6030,7 +6065,11 @@ $(function() {
 <div class="line"><a name="l06002"></a><span class="lineno"> 6002</span>&#160;            maxNameLen = (std::max)( maxNameLen, it-&gt;first.size() );</div>
 <div class="line"><a name="l06003"></a><span class="lineno"> 6003</span>&#160; </div>
 <div class="line"><a name="l06004"></a><span class="lineno"> 6004</span>&#160;        <span class="keywordflow">for</span>(it = itBegin; it != itEnd; ++it ) {</div>
+<<<<<<< HEAD
 <div class="line"><a name="l06005"></a><span class="lineno"> 6005</span>&#160;            Text wrapper( it-&gt;second-&gt;getDescription(), TextAttributes()</div>
+=======
+<div class="line"><a name="l06005"></a><span class="lineno"> 6005</span>&#160;            <a class="code" href="../../df/d53/classText.html">Text</a> wrapper( it-&gt;second-&gt;getDescription(), TextAttributes()</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l06006"></a><span class="lineno"> 6006</span>&#160;                                                        .setInitialIndent( 0 )</div>
 <div class="line"><a name="l06007"></a><span class="lineno"> 6007</span>&#160;                                                        .setIndent( 7+maxNameLen )</div>
 <div class="line"><a name="l06008"></a><span class="lineno"> 6008</span>&#160;                                                        .setWidth( CATCH_CONFIG_CONSOLE_WIDTH - maxNameLen-8 ) );</div>
@@ -7318,7 +7357,11 @@ $(function() {
 <div class="line"><a name="l07293"></a><span class="lineno"> 7293</span>&#160;                    Colour colourGuard( Colour::Red );</div>
 <div class="line"><a name="l07294"></a><span class="lineno"> 7294</span>&#160;                    Catch::cerr()</div>
 <div class="line"><a name="l07295"></a><span class="lineno"> 7295</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;\nError(s) in input:\n&quot;</span></div>
+<<<<<<< HEAD
 <div class="line"><a name="l07296"></a><span class="lineno"> 7296</span>&#160;                        &lt;&lt; Text( ex.what(), TextAttributes().setIndent(2) )</div>
+=======
+<div class="line"><a name="l07296"></a><span class="lineno"> 7296</span>&#160;                        &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( ex.what(), TextAttributes().setIndent(2) )</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l07297"></a><span class="lineno"> 7297</span>&#160;                        &lt;&lt; <span class="stringliteral">&quot;\n\n&quot;</span>;</div>
 <div class="line"><a name="l07298"></a><span class="lineno"> 7298</span>&#160;                }</div>
 <div class="line"><a name="l07299"></a><span class="lineno"> 7299</span>&#160;                m_cli.usage( Catch::cout(), m_configData.processName );</div>
@@ -11015,7 +11058,11 @@ $(function() {
 <div class="line"><a name="l10997"></a><span class="lineno">10997</span>&#160;                <span class="keywordflow">if</span>( result.hasExpandedExpression() ) {</div>
 <div class="line"><a name="l10998"></a><span class="lineno">10998</span>&#160;                    stream &lt;&lt; <span class="stringliteral">&quot;with expansion:\n&quot;</span>;</div>
 <div class="line"><a name="l10999"></a><span class="lineno">10999</span>&#160;                    Colour colourGuard( Colour::ReconstructedExpression );</div>
+<<<<<<< HEAD
 <div class="line"><a name="l11000"></a><span class="lineno">11000</span>&#160;                    stream &lt;&lt; Text( result.getExpandedExpression(), TextAttributes().setIndent(2) ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+=======
+<div class="line"><a name="l11000"></a><span class="lineno">11000</span>&#160;                    stream &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( result.getExpandedExpression(), TextAttributes().setIndent(2) ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l11001"></a><span class="lineno">11001</span>&#160;                }</div>
 <div class="line"><a name="l11002"></a><span class="lineno">11002</span>&#160;            }</div>
 <div class="line"><a name="l11003"></a><span class="lineno">11003</span>&#160;            <span class="keywordtype">void</span> printMessage()<span class="keyword"> const </span>{</div>
@@ -11026,7 +11073,11 @@ $(function() {
 <div class="line"><a name="l11008"></a><span class="lineno">11008</span>&#160;                        ++it ) {</div>
 <div class="line"><a name="l11009"></a><span class="lineno">11009</span>&#160;                    <span class="comment">// If this assertion is a warning ignore any INFO messages</span></div>
 <div class="line"><a name="l11010"></a><span class="lineno">11010</span>&#160;                    <span class="keywordflow">if</span>( printInfoMessages || it-&gt;type != ResultWas::Info )</div>
+<<<<<<< HEAD
 <div class="line"><a name="l11011"></a><span class="lineno">11011</span>&#160;                        stream &lt;&lt; Text( it-&gt;message, TextAttributes().setIndent(2) ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+=======
+<div class="line"><a name="l11011"></a><span class="lineno">11011</span>&#160;                        stream &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( it-&gt;message, TextAttributes().setIndent(2) ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l11012"></a><span class="lineno">11012</span>&#160;                }</div>
 <div class="line"><a name="l11013"></a><span class="lineno">11013</span>&#160;            }</div>
 <div class="line"><a name="l11014"></a><span class="lineno">11014</span>&#160;            <span class="keywordtype">void</span> printSourceInfo()<span class="keyword"> const </span>{</div>
@@ -11119,7 +11170,11 @@ $(function() {
 <div class="line"><a name="l11101"></a><span class="lineno">11101</span>&#160;                i+=2;</div>
 <div class="line"><a name="l11102"></a><span class="lineno">11102</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l11103"></a><span class="lineno">11103</span>&#160;                i = 0;</div>
+<<<<<<< HEAD
 <div class="line"><a name="l11104"></a><span class="lineno">11104</span>&#160;            stream &lt;&lt; Text( _string, TextAttributes()</div>
+=======
+<div class="line"><a name="l11104"></a><span class="lineno">11104</span>&#160;            stream &lt;&lt; <a class="code" href="../../df/d53/classText.html">Text</a>( _string, TextAttributes()</div>
+>>>>>>> test_workflows
 <div class="line"><a name="l11105"></a><span class="lineno">11105</span>&#160;                                        .setIndent( indent+i)</div>
 <div class="line"><a name="l11106"></a><span class="lineno">11106</span>&#160;                                        .setInitialIndent( indent ) ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><a name="l11107"></a><span class="lineno">11107</span>&#160;        }</div>
@@ -11856,6 +11911,10 @@ $(function() {
 <div class="ttc" id="aclassCatch_1_1TestCase_html"><div class="ttname"><a href="../../d6/df4/classCatch_1_1TestCase.html">Catch::TestCase</a></div><div class="ttdef"><b>Definition:</b> catch.hpp:3288</div></div>
 <div class="ttc" id="aclassCatch_1_1Timer_html"><div class="ttname"><a href="../../d8/d44/classCatch_1_1Timer.html">Catch::Timer</a></div><div class="ttdef"><b>Definition:</b> catch.hpp:2457</div></div>
 <div class="ttc" id="aclassCatch_1_1ValuesGenerator_html"><div class="ttname"><a href="../../d2/d40/classCatch_1_1ValuesGenerator.html">Catch::ValuesGenerator</a></div><div class="ttdef"><b>Definition:</b> catch.hpp:2538</div></div>
+<<<<<<< HEAD
+=======
+<div class="ttc" id="aclassText_html"><div class="ttname"><a href="../../df/d53/classText.html">Text</a></div><div class="ttdef"><b>Definition:</b> Text.h:15</div></div>
+>>>>>>> test_workflows
 <div class="ttc" id="agroup__window_html_gga00319cf9896ddf15ebfe0c14ffbc8f60a8c35a9c8507559e455387fc4a83ce422"><div class="ttname"><a href="../../d2/df3/group__window.html#gga00319cf9896ddf15ebfe0c14ffbc8f60a8c35a9c8507559e455387fc4a83ce422">sf::Style::None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">No border / title bar (this flag and all others are mutually exclusive)</div><div class="ttdef"><b>Definition:</b> WindowStyle.hpp:40</div></div>
 <div class="ttc" id="astructCatch_1_1AssertionInfo_html"><div class="ttname"><a href="../../d2/d71/structCatch_1_1AssertionInfo.html">Catch::AssertionInfo</a></div><div class="ttdef"><b>Definition:</b> catch.hpp:941</div></div>
 <div class="ttc" id="astructCatch_1_1AssertionResultData_html"><div class="ttname"><a href="../../d7/ddc/structCatch_1_1AssertionResultData.html">Catch::AssertionResultData</a></div><div class="ttdef"><b>Definition:</b> catch.hpp:957</div></div>

@@ -109,24 +109,24 @@ public:
     template<typename T>
     T& getComponent();
 
-    /// @brief getComponentTypeID(): Get the ID of a component
+    /// @brief getComponentTypeID(): Get a component ID from the entity
     /// @tparam T: Type of the component
     /// @param void
-    /// @return std::size_t: ID of the component
+    /// @return std::size_t: id of the component
     template<typename T>
     std::size_t getComponentTypeID() noexcept;
 
-    /// @brief getComponentBitset(): Get the bitset of the components
+    /// @brief getComponentBitset(): Get all components bitset from the entity
     /// @param void
     /// @return std::bitset<6>: bitset of the components
     [[nodiscard]] std::bitset<6> getComponentBitset() const;
 
-    /// @brief getDrawableComponents(): Get the drawable components of the entity
+    /// @brief getDrawableComponents(): Get all the drawable components from the entity
     /// @param void
     /// @return std::vector<DrawableComponent*>: drawable components of the entity
     [[nodiscard]] std::vector<DrawableComponent*> getDrawableComponents() const;
 
-    /// @brief getComponentArrays(): Get the array of components
+    /// @brief getComponentArrays(): Get all the components from the entity
     /// @param void
     /// @return std::array<Components*, 6>: array of components
     [[nodiscard]] std::array<Components*, 6> getComponentArrays() const;

@@ -12,11 +12,31 @@ Storage for audio samples defining a sound.
 
 
 Inheritance diagram for sf\+::Sound\+Buffer\+:
+<<<<<<< HEAD
 % FIG 0
 
 
 Collaboration diagram for sf\+::Sound\+Buffer\+:
 % FIG 1
+=======
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{de/d8d/classsf_1_1SoundBuffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sf\+::Sound\+Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{d9/d58/classsf_1_1SoundBuffer__coll__graph}
+\end{center}
+\end{figure}
+>>>>>>> test_workflows
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -82,6 +102,7 @@ Usage example\+:
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Create a sound source and bind it to the buffer}}
 \DoxyCodeLine{\mbox{\hyperlink{classsf_1_1Sound}{sf::Sound}} sound1;}
+<<<<<<< HEAD
 \DoxyCodeLine{sound1.\mbox{\hyperlink{classsf_1_1Sound_a8b395e9713d0efa48a18628c8ec1972e}{setBuffer}}(buffer);}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Play the sound}}
@@ -94,6 +115,20 @@ Usage example\+:
 \DoxyCodeLine{\textcolor{comment}{// Play it with a higher pitch -\/-\/ the first sound remains unchanged}}
 \DoxyCodeLine{sound2.\mbox{\hyperlink{classsf_1_1SoundSource_a72a13695ed48b7f7b55e7cd4431f4bb6}{setPitch}}(2);}
 \DoxyCodeLine{sound2.\mbox{\hyperlink{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}{play}}();}
+=======
+\DoxyCodeLine{sound1.\mbox{\hyperlink{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}{setBuffer}}(buffer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Play the sound}}
+\DoxyCodeLine{sound1.\mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Create another sound source bound to the same buffer}}
+\DoxyCodeLine{\mbox{\hyperlink{classsf_1_1Sound}{sf::Sound}} sound2;}
+\DoxyCodeLine{sound2.\mbox{\hyperlink{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}{setBuffer}}(buffer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Play it with a higher pitch -\/-\/ the first sound remains unchanged}}
+\DoxyCodeLine{sound2.\mbox{\hyperlink{classsf_1_1SoundSource_a72a13695ed48b7f7b55e7cd4431f4bb6}{setPitch}}(2);}
+\DoxyCodeLine{sound2.\mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}();}
+>>>>>>> test_workflows
 
 \end{DoxyCode}
 

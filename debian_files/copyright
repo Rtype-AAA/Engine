@@ -1,0 +1,36 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: quantumvortex-engine
+Upstream-Contact: <preferred name and address to reach the upstream project>
+Source: <url://example.com>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     include/quantumvortex-engine/include/Archetypes.h
+           include/quantumvortex-engine/include/Audio.h
+           include/quantumvortex-engine/include/Components.h
+           include/quantumvortex-engine/include/DrawableComponent.h
+           include/quantumvortex-engine/include/Sprite.h
+           include/quantumvortex-engine/include/Transform.h
+           include/quantumvortex-engine/include/entity.h
+           include/quantumvortex-engine/include/entityManager.h
+           include/quantumvortex-engine/include/eventEngine.h
+           include/quantumvortex-engine/include/gameEngine.h
+           include/quantumvortex-engine/include/main.h
+           include/quantumvortex-engine/include/sfml.h
+           include/quantumvortex-engine/include/std.h
+           include/quantumvortex-engine/include/world.h
+           lib/cmake/quantumvortex-engine/quantumvortex-engineConfig.cmake
+           lib/cmake/quantumvortex-engine/quantumvortex-engineConfigVersion.cmake
+           lib/cmake/quantumvortex-engine/quantumvortex-engineTargets-debug.cmake
+           lib/cmake/quantumvortex-engine/quantumvortex-engineTargets.cmake
+           lib/libengine_lib.so
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   __NO_COPYRIGHT_NOR_LICENSE__
+
+#----------------------------------------------------------------------------
+# huge files   (skipped):
+#         lib/libengine_lib.so
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.

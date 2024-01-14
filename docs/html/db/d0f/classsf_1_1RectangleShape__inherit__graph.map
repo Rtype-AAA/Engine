@@ -1,0 +1,6 @@
+<map id="sf::RectangleShape" name="sf::RectangleShape">
+<area shape="rect" id="node1" title="Specialized shape representing a rectangle." alt="" coords="51,155,189,181"/>
+<area shape="rect" id="node2" href="$dd/d35/classsf_1_1Shape.html" title="Base class for textured shapes with outline." alt="" coords="81,80,159,107"/>
+<area shape="rect" id="node3" href="$d1/ddd/classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node4" href="$df/dc5/classsf_1_1Transformable.html" title="Decomposed transform defined by a position, a rotation and a scale." alt="" coords="126,5,250,32"/>
+</map>

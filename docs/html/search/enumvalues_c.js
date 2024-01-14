@@ -1,5 +1,6 @@
 var searchData=
 [
+<<<<<<< HEAD
   ['m_5103',['M',['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a9718de9940f723c956587dcb90450a0a',1,'sf::Keyboard::M()'],['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a5a8351cbbb24d61c47f146f414ef825d',1,'sf::Keyboard::Scan::M()']]],
   ['magnetometer_5104',['Magnetometer',['../d1/d23/classsf_1_1Sensor.html#a687375af3ab77b818fca73735bcaea84ae706bb678bde8d3c370e246ffde6a63d',1,'sf::Sensor']]],
   ['max_5105',['Max',['../df/dd4/structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a40ddfddfaafccc8b58478eeef52e4281',1,'sf::BlendMode']]],
@@ -23,4 +24,29 @@ var searchData=
   ['movedtemporarily_5123',['MovedTemporarily',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a05c50d7b17c844e0b909e5802d5f1587',1,'sf::Http::Response']]],
   ['multiplechoices_5124',['MultipleChoices',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8add95cbd8fa27516821f763488557f96b',1,'sf::Http::Response']]],
   ['multiply_5125',['Multiply',['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a10623ae71db8a6b5d97189fc21fb91ae',1,'sf::Keyboard']]]
+=======
+  ['m_5127',['M',['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a9718de9940f723c956587dcb90450a0a',1,'sf::Keyboard::M()'],['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a5a8351cbbb24d61c47f146f414ef825d',1,'sf::Keyboard::Scan::M()']]],
+  ['magnetometer_5128',['Magnetometer',['../d1/d23/classsf_1_1Sensor.html#a687375af3ab77b818fca73735bcaea84ae706bb678bde8d3c370e246ffde6a63d',1,'sf::Sensor']]],
+  ['max_5129',['Max',['../df/dd4/structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a40ddfddfaafccc8b58478eeef52e4281',1,'sf::BlendMode']]],
+  ['maxdatagramsize_5130',['MaxDatagramSize',['../db/d5b/classsf_1_1UdpSocket.html#a1c0274b34b5dbdf43399e39e1cc3cf8aa728a7d33027bee0d65f70f964dd9c9eb',1,'sf::UdpSocket']]],
+  ['medianexttrack_5131',['MediaNextTrack',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a08b48a760a2a550f21b3b6b184797742',1,'sf::Keyboard::Scan']]],
+  ['mediaplaypause_5132',['MediaPlayPause',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a421303fdaaa4cbcf571ff6905808b69b',1,'sf::Keyboard::Scan']]],
+  ['mediaprevioustrack_5133',['MediaPreviousTrack',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875ac2ac37264e076dcab002e24e54090dbc',1,'sf::Keyboard::Scan']]],
+  ['mediastop_5134',['MediaStop',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875a6afe82e357291a40a03c85773eae734d',1,'sf::Keyboard::Scan']]],
+  ['menu_5135',['Menu',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875ad74c4a46669c3bd59ef93154e4669632',1,'sf::Keyboard::Scan::Menu()'],['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a4aac50ce7c4923f96323fe84d592b139',1,'sf::Keyboard::Menu()']]],
+  ['middle_5136',['Middle',['../d0/d18/classsf_1_1Mouse.html#a4fb128be433f9aafe66bc0c605daaa90a2c353189c4b11cf216d7caddafcc609d',1,'sf::Mouse']]],
+  ['min_5137',['Min',['../df/dd4/structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32aaaac595afe61d785aa8fd4b401acffc5',1,'sf::BlendMode']]],
+  ['modechange_5138',['ModeChange',['../d0/d31/structsf_1_1Keyboard_1_1Scan.html#aa42fbf6954d6f81f7606e566c7abe875adbd3b55bd8d0f7c790f30d5a5bb6660c',1,'sf::Keyboard::Scan']]],
+  ['mousebuttonpressed_5139',['MouseButtonPressed',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa55a3dcc8bf6c40e37f9ff2cdf606481f',1,'sf::Event']]],
+  ['mousebuttonreleased_5140',['MouseButtonReleased',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa9be69ecc07e484467ebbb133182fe5c1',1,'sf::Event']]],
+  ['mouseentered_5141',['MouseEntered',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa50d98590a953e74c7ccf3dabadb22067',1,'sf::Event']]],
+  ['mouseleft_5142',['MouseLeft',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aaa90b8526b328e0246d04b026de17c6e7',1,'sf::Event']]],
+  ['mousemoved_5143',['MouseMoved',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa4ff4fc3b3dc857e3617a63feb54be209',1,'sf::Event']]],
+  ['mousewheelmoved_5144',['MouseWheelMoved',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa5cc9d3941af2a36049f4f9922c934a80',1,'sf::Event']]],
+  ['mousewheelscrolled_5145',['MouseWheelScrolled',['../df/d4f/classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa2fb6925eb3e7f3d468faf639dbd129ad',1,'sf::Event']]],
+  ['movedpermanently_5146',['MovedPermanently',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a2f91651db3a09628faf68cbcefa0810a',1,'sf::Http::Response']]],
+  ['movedtemporarily_5147',['MovedTemporarily',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8a05c50d7b17c844e0b909e5802d5f1587',1,'sf::Http::Response']]],
+  ['multiplechoices_5148',['MultipleChoices',['../d1/d8f/classsf_1_1Http_1_1Response.html#a663e071978e30fbbeb20ed045be874d8add95cbd8fa27516821f763488557f96b',1,'sf::Http::Response']]],
+  ['multiply_5149',['Multiply',['../df/dcb/classsf_1_1Keyboard.html#acb4cacd7cc5802dec45724cf3314a142a10623ae71db8a6b5d97189fc21fb91ae',1,'sf::Keyboard']]]
+>>>>>>> test_workflows
 ];

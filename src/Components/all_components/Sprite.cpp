@@ -70,6 +70,14 @@ void Sprite::setSprite(std::map<std::string, std::shared_ptr<sf::Texture>> mapTe
                 }
             }
         }
+//        auto position = mapTransform.find("Position");
+//        if (position != mapTransform.end()) {
+//            sprite.setPosition(position->second[0], position->second[1]);
+//        }
+//        auto scale = mapTransform.find("Scale");
+//        if (scale != mapTransform.end()) {
+//            sprite.setScale(scale->second[0], scale->second[1]);
+//        }
     }
 }
 

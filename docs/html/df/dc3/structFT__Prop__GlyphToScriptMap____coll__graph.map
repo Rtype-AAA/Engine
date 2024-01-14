@@ -1,0 +1,20 @@
+<map id="FT_Prop_GlyphToScriptMap_" name="FT_Prop_GlyphToScriptMap_">
+<area shape="rect" id="node1" title=" " alt="" coords="752,536,945,563"/>
+<area shape="rect" id="node2" href="$d8/d30/structFT__FaceRec__.html" title=" " alt="" coords="526,485,631,512"/>
+<area shape="rect" id="node6" href="$d9/ddf/structFT__CharMapRec__.html" title=" " alt="" coords="784,613,913,640"/>
+<area shape="rect" id="node11" href="$d9/dd2/structFT__SizeRec__.html" title=" " alt="" coords="797,423,900,449"/>
+<area shape="rect" id="node13" href="$d9/ded/structFT__GlyphSlotRec__.html" title=" " alt="" coords="782,172,915,199"/>
+<area shape="rect" id="node3" href="$d4/d5c/structFT__StreamRec__.html" title=" " alt="" coords="247,600,365,627"/>
+<area shape="rect" id="node4" href="$d2/d49/structFT__MemoryRec__.html" title=" " alt="" coords="8,508,131,535"/>
+<area shape="rect" id="node5" href="$d0/dfe/unionFT__StreamDesc__.html" title=" " alt="" coords="7,600,132,627"/>
+<area shape="rect" id="node7" href="$d2/df9/structFT__Bitmap__Size__.html" title=" " alt="" coords="243,651,369,677"/>
+<area shape="rect" id="node8" href="$d7/df2/structFT__ListRec__.html" title=" " alt="" coords="257,383,355,409"/>
+<area shape="rect" id="node9" href="$d6/d26/structFT__ListNodeRec__.html" title=" " alt="" coords="5,383,133,409"/>
+<area shape="rect" id="node10" href="$d3/d3f/structFT__Generic__.html" title=" " alt="" coords="257,275,355,301"/>
+<area shape="rect" id="node12" href="$da/d29/structFT__Size__Metrics__.html" title=" " alt="" coords="515,400,643,427"/>
+<area shape="rect" id="node14" href="$dc/d2d/structFT__Outline__.html" title=" " alt="" coords="532,59,625,85"/>
+<area shape="rect" id="node15" href="$da/d23/structFT__Vector__.html" title=" " alt="" coords="261,28,351,55"/>
+<area shape="rect" id="node16" href="$dd/d08/structFT__Bitmap__.html" title=" " alt="" coords="532,172,625,199"/>
+<area shape="rect" id="node17" href="$dc/d5c/structFT__Glyph__Metrics__.html" title=" " alt="" coords="511,223,647,249"/>
+<area shape="rect" id="node18" href="$d2/d52/structFT__BBox__.html" title=" " alt="" coords="264,433,348,460"/>
+</map>

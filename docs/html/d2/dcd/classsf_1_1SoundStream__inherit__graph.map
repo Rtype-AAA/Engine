@@ -1,0 +1,7 @@
+<map id="sf::SoundStream" name="sf::SoundStream">
+<area shape="rect" id="node1" title="Abstract base class for streamed audio sources." alt="" coords="87,155,207,181"/>
+<area shape="rect" id="node4" href="$d5/dfd/classNetworkAudioStream.html" title=" " alt="" coords="5,229,152,256"/>
+<area shape="rect" id="node5" href="$d4/df9/classsf_1_1Music.html" title="Streamed music played from an audio file." alt="" coords="177,229,253,256"/>
+<area shape="rect" id="node2" href="$d0/dbb/classsf_1_1SoundSource.html" title="Base class defining a sound&#39;s properties." alt="" coords="87,80,206,107"/>
+<area shape="rect" id="node3" href="$d9/d23/classsf_1_1AlResource.html" title="Base class for classes that require an OpenAL context." alt="" coords="92,5,201,32"/>
+</map>

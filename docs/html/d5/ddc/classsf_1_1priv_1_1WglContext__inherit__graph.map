@@ -1,0 +1,5 @@
+<map id="sf::priv::WglContext" name="sf::priv::WglContext">
+<area shape="rect" id="node1" title="Windows (WGL) implementation of OpenGL contexts." alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node2" href="$dd/d38/classsf_1_1priv_1_1GlContext.html" title="Abstract class representing an OpenGL context." alt="" coords="10,80,139,107"/>
+<area shape="rect" id="node3" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="15,5,135,32"/>
+</map>

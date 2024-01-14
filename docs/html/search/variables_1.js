@@ -1,5 +1,6 @@
 var searchData=
 [
+<<<<<<< HEAD
   ['b_4475',['b',['../da/def/classsf_1_1Color.html#a6707aedd0609c8920e12df5d7abc53cb',1,'sf::Color']]],
   ['bitrate_5fav_5fhi_4476',['bitrate_av_hi',['../d2/dbd/structovectl__ratemanage__arg.html#ac1e81b5a2e705022ca895f494718ded7',1,'ovectl_ratemanage_arg']]],
   ['bitrate_5fav_5flo_4477',['bitrate_av_lo',['../d2/dbd/structovectl__ratemanage__arg.html#ac241670a3a608f114acaf8f26fe4e913',1,'ovectl_ratemanage_arg']]],
@@ -31,4 +32,37 @@ var searchData=
   ['button_4503',['button',['../d8/d13/structsf_1_1Event_1_1MouseButtonEvent.html#a5f53725aa7b647705486eeb95f723024',1,'sf::Event::MouseButtonEvent::button()'],['../d9/d3c/structsf_1_1Event_1_1JoystickButtonEvent.html#a6412e698a2f7904c5aa875a0d1b34da4',1,'sf::Event::JoystickButtonEvent::button()']]],
   ['buttoncount_4504',['buttonCount',['../d6/d4a/structsf_1_1priv_1_1JoystickCaps.html#a710f0e3e97fd5137c3f936966f01cec0',1,'sf::priv::JoystickCaps']]],
   ['buttons_4505',['buttons',['../dd/d2e/structsf_1_1priv_1_1JoystickState.html#aeead12919cdd978ec915ac010091577f',1,'sf::priv::JoystickState']]]
+=======
+  ['b_4499',['b',['../da/def/classsf_1_1Color.html#a6707aedd0609c8920e12df5d7abc53cb',1,'sf::Color']]],
+  ['bitrate_5fav_5fhi_4500',['bitrate_av_hi',['../d2/dbd/structovectl__ratemanage__arg.html#ac1e81b5a2e705022ca895f494718ded7',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5fav_5flo_4501',['bitrate_av_lo',['../d2/dbd/structovectl__ratemanage__arg.html#ac241670a3a608f114acaf8f26fe4e913',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5fav_5fwindow_4502',['bitrate_av_window',['../d2/dbd/structovectl__ratemanage__arg.html#a1232e7296ae5e52f52039bed2560c505',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5fav_5fwindow_5fcenter_4503',['bitrate_av_window_center',['../d2/dbd/structovectl__ratemanage__arg.html#aad317d50fb4d072e2c55f0a60d1a83b2',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5faverage_5fdamping_4504',['bitrate_average_damping',['../de/d03/structovectl__ratemanage2__arg.html#a1069e148a884d8706928cd2e39870720',1,'ovectl_ratemanage2_arg']]],
+  ['bitrate_5faverage_5fkbps_4505',['bitrate_average_kbps',['../de/d03/structovectl__ratemanage2__arg.html#a1f6bab60d87143d5060dd6c59aad6e71',1,'ovectl_ratemanage2_arg']]],
+  ['bitrate_5fhard_5fmax_4506',['bitrate_hard_max',['../d2/dbd/structovectl__ratemanage__arg.html#a3620024b5a9e4b4df6d20deb6c125c92',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5fhard_5fmin_4507',['bitrate_hard_min',['../d2/dbd/structovectl__ratemanage__arg.html#a449d3ea8d0645742af859dd17b41fbfb',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5fhard_5fwindow_4508',['bitrate_hard_window',['../d2/dbd/structovectl__ratemanage__arg.html#a68caf36fc02a52199705fa331d118446',1,'ovectl_ratemanage_arg']]],
+  ['bitrate_5flimit_5fmax_5fkbps_4509',['bitrate_limit_max_kbps',['../de/d03/structovectl__ratemanage2__arg.html#a175691482003edd7d94592fa2bc993a9',1,'ovectl_ratemanage2_arg']]],
+  ['bitrate_5flimit_5fmin_5fkbps_4510',['bitrate_limit_min_kbps',['../de/d03/structovectl__ratemanage2__arg.html#aeb53a17fff14ec50d143602adfdeabeb',1,'ovectl_ratemanage2_arg']]],
+  ['bitrate_5flimit_5freservoir_5fbias_4511',['bitrate_limit_reservoir_bias',['../de/d03/structovectl__ratemanage2__arg.html#a5567fde1798b1e80e40a77565b4b44f4',1,'ovectl_ratemanage2_arg']]],
+  ['bitrate_5flimit_5freservoir_5fbits_4512',['bitrate_limit_reservoir_bits',['../de/d03/structovectl__ratemanage2__arg.html#a75e496acac882e156137de9d1200ebd7',1,'ovectl_ratemanage2_arg']]],
+  ['bits_5fper_5fsample_4513',['bits_per_sample',['../d1/d91/group__flac__format.html#gae1f4af58cbbb837adf670d12bc4e86f3',1,'FLAC__FrameHeader']]],
+  ['bitsperpixel_4514',['bitsPerPixel',['../d9/db3/classsf_1_1VideoMode.html#aa080f1ef96a1008d58b1920eceb189df',1,'sf::VideoMode']]],
+  ['black_4515',['Black',['../da/def/classsf_1_1Color.html#abfda8f6d25cb1b8ddbf029624bf879dd',1,'sf::Color']]],
+  ['blendadd_4516',['BlendAdd',['../d4/dd0/namespacesf.html#ac2ab8862d3ebcfa0a1d8bb66a0ac869a',1,'sf']]],
+  ['blendalpha_4517',['BlendAlpha',['../d4/dd0/namespacesf.html#a51d712b86fe1804b0b242ef02e9eaa79',1,'sf']]],
+  ['blendmax_4518',['BlendMax',['../d4/dd0/namespacesf.html#ac1e6a4e98b1ccc7f18573b9a05db483b',1,'sf']]],
+  ['blendmin_4519',['BlendMin',['../d4/dd0/namespacesf.html#aa755f1637ce938a977625d67041887ef',1,'sf']]],
+  ['blendmode_4520',['blendMode',['../de/d6c/classsf_1_1RenderStates.html#ad6ac87f1b5006dae7ebfee4b5d40f5a8',1,'sf::RenderStates']]],
+  ['blendmultiply_4521',['BlendMultiply',['../d4/dd0/namespacesf.html#aaa126a8074da2eab2bceaed5ab1062b2',1,'sf']]],
+  ['blendnone_4522',['BlendNone',['../d4/dd0/namespacesf.html#a97b1ee23d5c481faa0145ee5641e0bdd',1,'sf']]],
+  ['blocksize_4523',['blocksize',['../d1/d91/group__flac__format.html#gace760def6dcbbde3d9d140e5bfda34b3',1,'FLAC__FrameHeader']]],
+  ['blue_4524',['Blue',['../da/def/classsf_1_1Color.html#a662b7359238c900518fa4a5595c3b2d5',1,'sf::Color']]],
+  ['bounds_4525',['bounds',['../d6/ded/classsf_1_1Glyph.html#a6f3c892093167914adc31e52e5923f4b',1,'sf::Glyph']]],
+  ['broadcast_4526',['Broadcast',['../d7/d22/classsf_1_1IpAddress.html#aa93d1d57b65d243f2baf804b6035465c',1,'sf::IpAddress']]],
+  ['button_4527',['button',['../d8/d13/structsf_1_1Event_1_1MouseButtonEvent.html#a5f53725aa7b647705486eeb95f723024',1,'sf::Event::MouseButtonEvent::button()'],['../d9/d3c/structsf_1_1Event_1_1JoystickButtonEvent.html#a6412e698a2f7904c5aa875a0d1b34da4',1,'sf::Event::JoystickButtonEvent::button()']]],
+  ['buttoncount_4528',['buttonCount',['../d6/d4a/structsf_1_1priv_1_1JoystickCaps.html#a710f0e3e97fd5137c3f936966f01cec0',1,'sf::priv::JoystickCaps']]],
+  ['buttons_4529',['buttons',['../dd/d2e/structsf_1_1priv_1_1JoystickState.html#aeead12919cdd978ec915ac010091577f',1,'sf::priv::JoystickState']]]
+>>>>>>> test_workflows
 ];

@@ -2,10 +2,57 @@ cmake_minimum_required(VERSION 3.10)
 
 project(engine VERSION 1.0.0 DESCRIPTION "Moteur de jeu")
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 option(BUILD_TESTS "Build the test suite" OFF)
 
-set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build")
-find_package(SFML 2.6.1 COMPONENTS graphics window system audio CONFIG REQUIRED)
+if(WIN32)
+    set(SFML_VERSION 2.6.1)
+else()
+    set(SFML_VERSION 2.5.1)
+endif()
+
+if(SFML_VERSION EQUAL 2.6.1)
+    set(SFML_SYSTEM_LIB_PATH "/usr/local/lib/libsfml-system.so.2.6.1")
+
+    if(NOT EXISTS "${SFML_SYSTEM_LIB_PATH}")
+        message(STATUS "SFML system library not found. Attempting to install SFML...")
+
+        execute_process(
+            COMMAND bash -c "echo 'Installing SFML...\n' && cd ${CMAKE_CURRENT_SOURCE_DIR}/SFML && cmake -Bbuild && sudo cmake --build build --config Release --target install"
+            RESULT_VARIABLE SFML_INSTALL_RESULT
+        )
+
+        if(SFML_INSTALL_RESULT EQUAL 0 AND EXISTS "${SFML_SYSTEM_LIB_PATH}")
+            message(STATUS "SFML successfully installed.")
+            find_package(SFML 2.6.1 COMPONENTS system window graphics audio network REQUIRED)
+
+            if(NOT SFML_FOUND)
+                message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
+            else()
+                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
+            endif()
+
+        else()
+            message(FATAL_ERROR "Failed to install SFML.")
+        endif()
+    endif()
+
+else()
+    find_package(SFML 2.5.1 COMPONENTS system window graphics audio network QUIET)
+
+    if(NOT SFML_FOUND)
+        message(STATUS "SFML couldn't be found. Attempting to install SFML...")
+
+        include(FetchContent)
+        FetchContent_Declare(SFML
+                GIT_REPOSITORY https://github.com/SFML/SFML.git
+                GIT_TAG 2.5.1)
+        FetchContent_MakeAvailable(SFML)
+
+    endif()
+endif()
 
 file(GLOB HEADER_FILES
         "include/*.h"
@@ -70,9 +117,9 @@ if(BUILD_TESTS)
             "tests/Entity/*.cpp"
             "tests/Event/*.cpp"
             "tests/GameEngine/*.cpp"
-            "tests/World/*.cpp"
             "tests/Other/*.cpp"
             "tests/toSFML/*.cpp"
+            "tests/World/*.cpp"
     )
     add_executable(all_tests ${LIB_SRCS_TEST})
     target_include_directories(all_tests PRIVATE
@@ -107,11 +154,11 @@ set_target_properties(engine_lib PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CU
 set_target_properties(engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
 install(TARGETS engine_lib
-        EXPORT engineTargets
+        EXPORT quantumvortex-engineTargets
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include/engine)
+        INCLUDES DESTINATION include/quantumvortex-engine)
 
 install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -125,26 +172,26 @@ install(DIRECTORY
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Other/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/toSFML/include
         ${CMAKE_CURRENT_SOURCE_DIR}/src/Script/include
-        DESTINATION include/engine)
+        DESTINATION include/quantumvortex-engine)
 
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
-        "engineConfigVersion.cmake"
+        "quantumvortex-engineConfigVersion.cmake"
         VERSION 1.0
         COMPATIBILITY AnyNewerVersion
 )
 
-install(EXPORT engineTargets
-        FILE engineTargets.cmake
-        NAMESPACE engine::
-        DESTINATION lib/cmake/engine)
+install(EXPORT quantumvortex-engineTargets
+        FILE quantumvortex-engineTargets.cmake
+        NAMESPACE qtv::
+        DESTINATION lib/cmake/quantumvortex-engine)
 
 install(FILES
-        "${CMAKE_CURRENT_BINARY_DIR}/engineConfigVersion.cmake"
-        DESTINATION lib/cmake/engine)
+        "${CMAKE_CURRENT_BINARY_DIR}/quantumvortex-engineConfigVersion.cmake"
+        DESTINATION lib/cmake/quantumvortex-engine)
 
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/configPackage/engineConfig.cmake" DESTINATION lib/cmake/engine)
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/configPackage/quantumvortex-engineConfig.cmake" DESTINATION lib/cmake/quantumvortex-engine)
 
 set(CPACK_PACKAGE_NAME "QuantumVortex Engine")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})

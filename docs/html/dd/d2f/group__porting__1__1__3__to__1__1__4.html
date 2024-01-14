@@ -72,7 +72,14 @@ $(function() {
 Collaboration diagram for Porting from FLAC 1.1.3 to 1.1.4:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d2f/group__porting__1__1__3__to__1__1__4.png" border="0" usemap="#add_2d2f_2group____porting____1____1____3____to____1____1____4" alt=""/></div>
+<<<<<<< HEAD
 <!-- MAP 0 -->
+=======
+<map name="add_2d2f_2group____porting____1____1____3____to____1____1____4" id="add_2d2f_2group____porting____1____1____3____to____1____1____4">
+<area shape="rect" href="../../d7/d58/group__porting.html" title=" " alt="" coords="5,5,156,45"/>
+<area shape="rect" title="This module describes porting from FLAC 1.1.3 to FLAC 1.1.4." alt="" coords="204,5,368,45"/>
+</map>
+>>>>>>> test_workflows
 </div>
 <p>This module describes porting from FLAC 1.1.3 to FLAC 1.1.4. </p>
 <p>There were no changes to any of the interfaces from 1.1.3 to 1.1.4. There was a slight change in the implementation of <a class="el" href="../../d6/d4c/group__flac__stream__encoder.html#ga67b30b1a67a9274f7708a22154b225f6">FLAC__stream_encoder_set_metadata()</a>; the function now makes a copy of the <em>metadata</em> array of pointers so the client no longer needs to maintain it after the call. The objects themselves that are pointed to by the array are still not copied though and must be maintained until the call to <a class="el" href="../../d6/d4c/group__flac__stream__encoder.html#gab2c1e5477c1e3fe9ad0d722ff8eecda2">FLAC__stream_encoder_finish()</a>. </p>

@@ -66,8 +66,37 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
-Compilation</h1>
+Install package(s)</h1>
 <h2><a class="anchor" id="autotoc_md2"></a>
+Debian</h2>
+<ul>
+<li>Install the following zip file: <a href="../../packages/deb-package.zip">debian.zip</a></li>
+<li>Unzip the package</li>
+<li>Install the package with the following command:</li>
+</ul>
+<div class="fragment"><div class="line">cd deb-package</div>
+<div class="line">sudo dpkg -i quantumvortex-engine_1.0.0-1_amd64.deb</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Fedora 38</h2>
+<ul>
+<li>Install the following zip file: <a href="../../packages/rpm-package-fedora-38.zip">fedora.zip</a></li>
+<li>Unzip the package</li>
+<li>Install the package with the following command:</li>
+</ul>
+<div class="fragment"><div class="line">cd rpm-package-fedora-38</div>
+<div class="line">sudo dnf install quantumvortex-engine-fedora38.rpm</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+Fedora Latest</h2>
+<ul>
+<li>Install the following zip file: <a href="../../packages/rpm-package-fedora-latest.zip">fedora.zip</a></li>
+<li>Unzip the package</li>
+<li>Install the package with the following command:</li>
+</ul>
+<div class="fragment"><div class="line">cd rpm-package-fedora-latest</div>
+<div class="line">sudo dnf install quantumvortex-engine-fedora-latest.rpm</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Compilation</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Linux</h2>
 <p>Use the following command to compile the engine:</p>
 <div class="fragment"><div class="line">cmake -Bbuild</div>
@@ -78,7 +107,12 @@ Linux</h2>
 </div><!-- fragment --><p>Use the following command for create the package (.tgz or .zip) after compile:</p>
 <div class="fragment"><div class="line">cd build</div>
 <div class="line">cpack</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Documentation</h1>
+<h2><a class="anchor" id="autotoc_md8"></a>
+PDF</h2>
+<p>Here you can see the documentation in PDF format: <a href="../../docs/R-Type_Engine.pdf">R-Type_Engine</a> </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

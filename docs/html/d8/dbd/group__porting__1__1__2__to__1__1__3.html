@@ -72,7 +72,14 @@ $(function() {
 Collaboration diagram for Porting from FLAC 1.1.2 to 1.1.3:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/dbd/group__porting__1__1__2__to__1__1__3.png" border="0" usemap="#ad8_2dbd_2group____porting____1____1____2____to____1____1____3" alt=""/></div>
+<<<<<<< HEAD
 <!-- MAP 0 -->
+=======
+<map name="ad8_2dbd_2group____porting____1____1____2____to____1____1____3" id="ad8_2dbd_2group____porting____1____1____2____to____1____1____3">
+<area shape="rect" title="This module describes porting from FLAC 1.1.2 to FLAC 1.1.3." alt="" coords="204,5,368,45"/>
+<area shape="rect" href="../../d7/d58/group__porting.html" title=" " alt="" coords="5,5,156,45"/>
+</map>
+>>>>>>> test_workflows
 </div>
 <p>This module describes porting from FLAC 1.1.2 to FLAC 1.1.3. </p>
 <p>The main change between the APIs in 1.1.2 and 1.1.3 is that they have been simplified. First, libOggFLAC has been merged into libFLAC and libOggFLAC++ has been merged into libFLAC++. Second, both the three decoding layers and three encoding layers have been merged into a single stream decoder and stream encoder. That is, the functionality of FLAC__SeekableStreamDecoder and FLAC__FileDecoder has been merged into <a class="el" href="../../d8/dd2/structFLAC____StreamDecoder.html">FLAC__StreamDecoder</a>, and FLAC__SeekableStreamEncoder and FLAC__FileEncoder into <a class="el" href="../../d1/d3d/structFLAC____StreamEncoder.html">FLAC__StreamEncoder</a>. Only the <a class="el" href="../../d8/dd2/structFLAC____StreamDecoder.html">FLAC__StreamDecoder</a> and <a class="el" href="../../d1/d3d/structFLAC____StreamEncoder.html">FLAC__StreamEncoder</a> remain. What this means is there is now a single API that can be used to encode or decode streams to/from native FLAC or Ogg FLAC and the single API can work on both seekable and non-seekable streams.</p>

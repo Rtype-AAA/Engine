@@ -1,0 +1,9 @@
+<map id="SFView" name="SFView">
+<area shape="rect" id="node1" title="Our custom implementation of the window&#39;s view (supports OpenGL and reports events)" alt="" coords="113,260,181,287"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,171,71,197"/>
+<area shape="rect" id="node3" title=" " alt="" coords="95,171,199,197"/>
+<area shape="rect" id="node4" href="$d4/d0b/classsf_1_1priv_1_1EaglContext.html" title="iOS (EAGL) implementation of OpenGL contexts" alt="" coords="224,171,367,197"/>
+<area shape="rect" id="node5" href="$dd/d38/classsf_1_1priv_1_1GlContext.html" title="Abstract class representing an OpenGL context." alt="" coords="231,95,360,121"/>
+<area shape="rect" id="node6" href="$d0/da7/classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable." alt="" coords="159,5,279,32"/>
+<area shape="rect" id="node7" href="$de/db9/structsf_1_1ContextSettings.html" title="Structure defining the settings of the OpenGL context attached to a window." alt="" coords="304,5,439,32"/>
+</map>

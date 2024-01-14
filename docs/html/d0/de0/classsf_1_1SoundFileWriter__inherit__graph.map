@@ -1,0 +1,6 @@
+<map id="sf::SoundFileWriter" name="sf::SoundFileWriter">
+<area shape="rect" id="node1" title="Abstract base class for sound file encoding." alt="" coords="5,56,139,83"/>
+<area shape="rect" id="node2" href="$dc/dbe/classsf_1_1priv_1_1SoundFileWriterFlac.html" title="Implementation of sound file writer that handles FLAC files." alt="" coords="187,5,374,32"/>
+<area shape="rect" id="node3" href="$d9/dfc/classsf_1_1priv_1_1SoundFileWriterOgg.html" title="Implementation of sound file writer that handles OGG/Vorbis files." alt="" coords="187,56,374,83"/>
+<area shape="rect" id="node4" href="$d7/dab/classsf_1_1priv_1_1SoundFileWriterWav.html" title="Implementation of sound file writer that handles wav files." alt="" coords="187,107,375,133"/>
+</map>

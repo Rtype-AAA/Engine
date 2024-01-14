@@ -12,11 +12,31 @@ Base class for textured shapes with outline.
 
 
 Inheritance diagram for sf\+::Shape\+:
+<<<<<<< HEAD
 % FIG 0
 
 
 Collaboration diagram for sf\+::Shape\+:
 % FIG 1
+=======
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/db3/classsf_1_1Shape__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sf\+::Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{db/d36/classsf_1_1Shape__coll__graph}
+\end{center}
+\end{figure}
+>>>>>>> test_workflows
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,7 +89,11 @@ Base class for textured shapes with outline.
 In addition to the attributes provided by the specialized shape classes, a shape always has the following attributes\+: \begin{DoxyItemize}
 \item a texture \item a texture rectangle \item a fill color \item an outline color \item an outline thickness\end{DoxyItemize}
 Each feature is optional, and can be disabled easily\+: \begin{DoxyItemize}
+<<<<<<< HEAD
 \item the texture can be null \item the fill/outline colors can be \mbox{\hyperlink{classsf_1_1Color_a569b45471737f770656f50ae7bbac292}{sf\+::\+Color\+::\+Transparent}} \item the outline thickness can be zero\end{DoxyItemize}
+=======
+\item the texture can be null \item the fill/outline colors can be \mbox{\hyperlink{classsf_1_1Color_ab0826c48816176cd42b5226becebf69d}{sf\+::\+Color\+::\+Transparent}} \item the outline thickness can be zero\end{DoxyItemize}
+>>>>>>> test_workflows
 You can write your own derived shape class, there are only two virtual functions to override\+: \begin{DoxyItemize}
 \item get\+Point\+Count must return the number of points of the shape \item get\+Point must return the points of the shape\end{DoxyItemize}
 \begin{DoxySeeAlso}{See also}
@@ -249,7 +273,11 @@ Get the sub-\/rectangle of the texture displayed by the shape.
 
 Set the fill color of the shape. 
 
+<<<<<<< HEAD
 This color is modulated (multiplied) with the shape\textquotesingle{}s texture if any. It can be used to colorize the shape, or change its global opacity. You can use \mbox{\hyperlink{classsf_1_1Color_a569b45471737f770656f50ae7bbac292}{sf\+::\+Color\+::\+Transparent}} to make the inside of the shape transparent, and have the outline alone. By default, the shape\textquotesingle{}s fill color is opaque white.
+=======
+This color is modulated (multiplied) with the shape\textquotesingle{}s texture if any. It can be used to colorize the shape, or change its global opacity. You can use \mbox{\hyperlink{classsf_1_1Color_ab0826c48816176cd42b5226becebf69d}{sf\+::\+Color\+::\+Transparent}} to make the inside of the shape transparent, and have the outline alone. By default, the shape\textquotesingle{}s fill color is opaque white.
+>>>>>>> test_workflows
 
 
 \begin{DoxyParams}{Parameters}

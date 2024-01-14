@@ -1,0 +1,8 @@
+<map id="sf::Shape" name="sf::Shape">
+<area shape="rect" id="node1" title="Base class for textured shapes with outline." alt="" coords="163,80,242,107"/>
+<area shape="rect" id="node4" href="$d5/dfb/classsf_1_1CircleShape.html" title="Specialized shape representing a circle." alt="" coords="5,155,117,181"/>
+<area shape="rect" id="node5" href="$d4/dae/classsf_1_1ConvexShape.html" title="Specialized shape representing a convex polygon." alt="" coords="141,155,264,181"/>
+<area shape="rect" id="node6" href="$d2/dbd/classsf_1_1RectangleShape.html" title="Specialized shape representing a rectangle." alt="" coords="289,155,426,181"/>
+<area shape="rect" id="node2" href="$d1/ddd/classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target." alt="" coords="88,5,184,32"/>
+<area shape="rect" id="node3" href="$df/dc5/classsf_1_1Transformable.html" title="Decomposed transform defined by a position, a rotation and a scale." alt="" coords="209,5,333,32"/>
+</map>

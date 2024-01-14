@@ -12,6 +12,7 @@ Regular sound that can be played in the audio environment.
 
 
 Inheritance diagram for sf\+::Sound\+:
+<<<<<<< HEAD
 % FIG 0
 
 
@@ -53,6 +54,61 @@ bool \mbox{\hyperlink{classsf_1_1Sound_a054da07266ce8f39229495146e3041eb}{get\+L
 \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \& \mbox{\hyperlink{classsf_1_1Sound_a8eee9197359bfdf20d399544a894af8b}{operator=}} (const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&right)
 \begin{DoxyCompactList}\small\item\em Overload of assignment operator. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsf_1_1Sound_acb7289d45e06fb76b8292ac84beb82a7}{reset\+Buffer}} ()
+=======
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{de/d23/classsf_1_1Sound__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sf\+::Sound\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{d0/dca/classsf_1_1Sound__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsf_1_1Sound_a539c205cdf06fe2c621fd77c37bcfac9}\label{classsf_1_1Sound_a539c205cdf06fe2c621fd77c37bcfac9}} 
+\mbox{\hyperlink{classsf_1_1Sound_a539c205cdf06fe2c621fd77c37bcfac9}{Sound}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Sound_a6ec17e8d2161ca2120d01c045b8b1987}{Sound}} (const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Construct the sound with a buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Sound_a6d3c9d1358d17c19fc2f2160421b146f}{Sound}} (const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&copy)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsf_1_1Sound_a0907389078bf740be2a5763366ad3376}\label{classsf_1_1Sound_a0907389078bf740be2a5763366ad3376}} 
+\mbox{\hyperlink{classsf_1_1Sound_a0907389078bf740be2a5763366ad3376}{$\sim$\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}} ()
+\begin{DoxyCompactList}\small\item\em Start or resume playing the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Pause the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_a07c551ab56d2f83a861a2f7fd81b480a}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stop playing the sound \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}{set\+Buffer}} (const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Set the source buffer containing the audio data to play. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_acf5d181cebf64aa98b6e8a63ee2b2f96}{set\+Loop}} (bool loop)
+\begin{DoxyCompactList}\small\item\em Set whether or not the sound should loop after reaching the end. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_a5e3696db64a547615879d36e8e004895}{set\+Playing\+Offset}} (\mbox{\hyperlink{classsf_1_1Time}{Time}} time\+Offset)
+\begin{DoxyCompactList}\small\item\em Change the current playing position of the sound. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} $\ast$ \mbox{\hyperlink{classsf_1_1Sound_af59d7721247a0db4b2c4047d91d9957b}{get\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Get the audio buffer attached to the sound. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1Sound_a198d80759f1325173fcadc4a7f2fc1fa}{get\+Loop}} () const
+\begin{DoxyCompactList}\small\item\em Tell whether or not the sound is in loop mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Time}{Time}} \mbox{\hyperlink{classsf_1_1Sound_a1dfd91ff928212c48114dc561dace08f}{get\+Playing\+Offset}} () const
+\begin{DoxyCompactList}\small\item\em Get the current playing position of the sound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1SoundSource_ac43af72c98c077500b239bc75b812f03}{Status}} \mbox{\hyperlink{classsf_1_1Sound_a3044d7582463071668aca5a27466887f}{get\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Get the current status of the sound (stopped, paused, playing) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Sound}{Sound}} \& \mbox{\hyperlink{classsf_1_1Sound_ada1b7e21fbda4ada2487d576e10f972a}{operator=}} (const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&right)
+\begin{DoxyCompactList}\small\item\em Overload of assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Sound_a0d3d9aa9d78adaab8f687fc0ee5a0e75}{reset\+Buffer}} ()
+>>>>>>> test_workflows
 \begin{DoxyCompactList}\small\item\em Reset the internal buffer of the sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -64,7 +120,11 @@ Regular sound that can be played in the audio environment.
 \item Control (play, pause, stop) \item Ability to modify output parameters in real-\/time (pitch, volume, ...) \item 3D spatial features (position, attenuation, ...).\end{DoxyItemize}
 \mbox{\hyperlink{classsf_1_1Sound}{sf\+::\+Sound}} is perfect for playing short sounds that can fit in memory and require no latency, like foot steps or gun shots. For longer sounds, like background musics or long speeches, rather see \mbox{\hyperlink{classsf_1_1Music}{sf\+::\+Music}} (which is based on streaming).
 
+<<<<<<< HEAD
 In order to work, a sound must be given a buffer of audio data to play. \mbox{\hyperlink{classAudio}{Audio}} data (samples) is stored in \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}}, and attached to a sound with the \mbox{\hyperlink{classsf_1_1Sound_a8b395e9713d0efa48a18628c8ec1972e}{set\+Buffer()}} function. The buffer object attached to a sound must remain alive as long as the sound uses it. Note that multiple sounds can use the same sound buffer at the same time.
+=======
+In order to work, a sound must be given a buffer of audio data to play. Audio data (samples) is stored in \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}}, and attached to a sound with the \mbox{\hyperlink{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}{set\+Buffer()}} function. The buffer object attached to a sound must remain alive as long as the sound uses it. Note that multiple sounds can use the same sound buffer at the same time.
+>>>>>>> test_workflows
 
 Usage example\+: 
 \begin{DoxyCode}{0}
@@ -72,8 +132,13 @@ Usage example\+:
 \DoxyCodeLine{buffer.\mbox{\hyperlink{classsf_1_1SoundBuffer_a2be6a8025c97eb622a7dff6cf2594394}{loadFromFile}}(\textcolor{stringliteral}{"{}sound.wav"{}});}
 \DoxyCodeLine{}
 \DoxyCodeLine{\mbox{\hyperlink{classsf_1_1Sound}{sf::Sound}} sound;}
+<<<<<<< HEAD
 \DoxyCodeLine{sound.\mbox{\hyperlink{classsf_1_1Sound_a8b395e9713d0efa48a18628c8ec1972e}{setBuffer}}(buffer);}
 \DoxyCodeLine{sound.\mbox{\hyperlink{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}{play}}();}
+=======
+\DoxyCodeLine{sound.\mbox{\hyperlink{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}{setBuffer}}(buffer);}
+\DoxyCodeLine{sound.\mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}();}
+>>>>>>> test_workflows
 
 \end{DoxyCode}
 
@@ -84,11 +149,19 @@ Usage example\+:
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a3b1cfc19a856d4ff8c079ee41bb78e69}\label{classsf_1_1Sound_a3b1cfc19a856d4ff8c079ee41bb78e69}} 
 \index{sf::Sound@{sf::Sound}!Sound@{Sound}}
 \index{Sound@{Sound}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{Sound()}{Sound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily sf\+::\+Sound\+::\+Sound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_a6ec17e8d2161ca2120d01c045b8b1987}\label{classsf_1_1Sound_a6ec17e8d2161ca2120d01c045b8b1987}} 
+\index{sf::Sound@{sf::Sound}!Sound@{Sound}}
+\index{Sound@{Sound}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{Sound()}{Sound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sound\+::\+Sound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+>>>>>>> test_workflows
 
 
 
@@ -99,11 +172,19 @@ Construct the sound with a buffer.
 {\em buffer} & \mbox{\hyperlink{classsf_1_1Sound}{Sound}} buffer containing the audio data to play with the sound \\
 \hline
 \end{DoxyParams}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_ae05eeed6377932694d86b3011be366c0}\label{classsf_1_1Sound_ae05eeed6377932694d86b3011be366c0}} 
 \index{sf::Sound@{sf::Sound}!Sound@{Sound}}
 \index{Sound@{Sound}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{Sound()}{Sound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily sf\+::\+Sound\+::\+Sound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&}]{copy }\end{DoxyParamCaption})}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_a6d3c9d1358d17c19fc2f2160421b146f}\label{classsf_1_1Sound_a6d3c9d1358d17c19fc2f2160421b146f}} 
+\index{sf::Sound@{sf::Sound}!Sound@{Sound}}
+\index{Sound@{Sound}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{Sound()}{Sound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sound\+::\+Sound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&}]{copy }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -117,11 +198,19 @@ Copy constructor.
 
 
 \doxysubsection{Member Function Documentation}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a7c0f6033856909eeefa2e6696db96ef2}\label{classsf_1_1Sound_a7c0f6033856909eeefa2e6696db96ef2}} 
 \index{sf::Sound@{sf::Sound}!getBuffer@{getBuffer}}
 \index{getBuffer@{getBuffer}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} $\ast$ sf\+::\+Sound\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_af59d7721247a0db4b2c4047d91d9957b}\label{classsf_1_1Sound_af59d7721247a0db4b2c4047d91d9957b}} 
+\index{sf::Sound@{sf::Sound}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} $\ast$ Sound\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+>>>>>>> test_workflows
 
 
 
@@ -130,11 +219,19 @@ Get the audio buffer attached to the sound.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classsf_1_1Sound}{Sound}} buffer attached to the sound (can be NULL) 
 \end{DoxyReturn}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a054da07266ce8f39229495146e3041eb}\label{classsf_1_1Sound_a054da07266ce8f39229495146e3041eb}} 
 \index{sf::Sound@{sf::Sound}!getLoop@{getLoop}}
 \index{getLoop@{getLoop}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{getLoop()}{getLoop()}}
 {\footnotesize\ttfamily bool sf\+::\+Sound\+::get\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_a198d80759f1325173fcadc4a7f2fc1fa}\label{classsf_1_1Sound_a198d80759f1325173fcadc4a7f2fc1fa}} 
+\index{sf::Sound@{sf::Sound}!getLoop@{getLoop}}
+\index{getLoop@{getLoop}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{getLoop()}{getLoop()}}
+{\footnotesize\ttfamily bool Sound\+::get\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+>>>>>>> test_workflows
 
 
 
@@ -144,6 +241,7 @@ Tell whether or not the sound is in loop mode.
 True if the sound is looping, false otherwise
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_af23ab4f78f975bbabac031102321612b}{set\+Loop}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Sound_a559bc3aea581107bcb380fdbe523aa08}\label{classsf_1_1Sound_a559bc3aea581107bcb380fdbe523aa08}} 
@@ -151,6 +249,15 @@ True if the sound is looping, false otherwise
 \index{getPlayingOffset@{getPlayingOffset}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{getPlayingOffset()}{getPlayingOffset()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Time}{Time}} sf\+::\+Sound\+::get\+Playing\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+=======
+\mbox{\hyperlink{classsf_1_1Sound_acf5d181cebf64aa98b6e8a63ee2b2f96}{set\+Loop}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Sound_a1dfd91ff928212c48114dc561dace08f}\label{classsf_1_1Sound_a1dfd91ff928212c48114dc561dace08f}} 
+\index{sf::Sound@{sf::Sound}!getPlayingOffset@{getPlayingOffset}}
+\index{getPlayingOffset@{getPlayingOffset}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{getPlayingOffset()}{getPlayingOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Time}{Time}} Sound\+::get\+Playing\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+>>>>>>> test_workflows
 
 
 
@@ -160,6 +267,7 @@ Get the current playing position of the sound.
 Current playing position, from the beginning of the sound
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_ab905677846558042022dd6ab15cddff0}{set\+Playing\+Offset}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Sound_ab720bf34c4eb82c61af7b668e7485425}\label{classsf_1_1Sound_ab720bf34c4eb82c61af7b668e7485425}} 
@@ -167,6 +275,15 @@ Current playing position, from the beginning of the sound
 \index{getStatus@{getStatus}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1SoundSource_ac43af72c98c077500b239bc75b812f03}{Sound\+::\+Status}} sf\+::\+Sound\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+=======
+\mbox{\hyperlink{classsf_1_1Sound_a5e3696db64a547615879d36e8e004895}{set\+Playing\+Offset}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Sound_a3044d7582463071668aca5a27466887f}\label{classsf_1_1Sound_a3044d7582463071668aca5a27466887f}} 
+\index{sf::Sound@{sf::Sound}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1SoundSource_ac43af72c98c077500b239bc75b812f03}{Sound\+::\+Status}} Sound\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -179,11 +296,19 @@ Current status of the sound
 
 Reimplemented from \mbox{\hyperlink{classsf_1_1SoundSource_a50e869786f0df43ac6a70ce4241444cc}{sf\+::\+Sound\+Source}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a8eee9197359bfdf20d399544a894af8b}\label{classsf_1_1Sound_a8eee9197359bfdf20d399544a894af8b}} 
 \index{sf::Sound@{sf::Sound}!operator=@{operator=}}
 \index{operator=@{operator=}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \& sf\+::\+Sound\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&}]{right }\end{DoxyParamCaption})}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_ada1b7e21fbda4ada2487d576e10f972a}\label{classsf_1_1Sound_ada1b7e21fbda4ada2487d576e10f972a}} 
+\index{sf::Sound@{sf::Sound}!operator=@{operator=}}
+\index{operator=@{operator=}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \& Sound\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1Sound}{Sound}} \&}]{right }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -197,11 +322,19 @@ Overload of assignment operator.
 \begin{DoxyReturn}{Returns}
 Reference to self 
 \end{DoxyReturn}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a5eeb25815bfa8cdc4a6cc000b7b19ad5}\label{classsf_1_1Sound_a5eeb25815bfa8cdc4a6cc000b7b19ad5}} 
 \index{sf::Sound@{sf::Sound}!pause@{pause}}
 \index{pause@{pause}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{pause()}{pause()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}\label{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}} 
+\index{sf::Sound@{sf::Sound}!pause@{pause}}
+\index{pause@{pause}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Sound\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -210,17 +343,29 @@ Pause the sound.
 This function pauses the sound if it was playing, otherwise (sound already paused or stopped) it has no effect.
 
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}{play}}, \mbox{\hyperlink{classsf_1_1Sound_aa9c91c34f7c6d344d5ee9b997511f754}{stop}} 
+=======
+\mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}, \mbox{\hyperlink{classsf_1_1Sound_a07c551ab56d2f83a861a2f7fd81b480a}{stop}} 
+>>>>>>> test_workflows
 \end{DoxySeeAlso}
 
 
 Implements \mbox{\hyperlink{classsf_1_1SoundSource_a21553d4e8fcf136231dd8c7ad4630aba}{sf\+::\+Sound\+Source}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}\label{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}} 
 \index{sf::Sound@{sf::Sound}!play@{play}}
 \index{play@{play}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{play()}{play()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}\label{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}} 
+\index{sf::Sound@{sf::Sound}!play@{play}}
+\index{play@{play}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Sound\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -229,27 +374,47 @@ Start or resume playing the sound.
 This function starts the stream if it was stopped, resumes it if it was paused, and restarts it from beginning if it was it already playing. This function uses its own thread so that it doesn\textquotesingle{}t block the rest of the program while the sound is played.
 
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_a5eeb25815bfa8cdc4a6cc000b7b19ad5}{pause}}, \mbox{\hyperlink{classsf_1_1Sound_aa9c91c34f7c6d344d5ee9b997511f754}{stop}} 
+=======
+\mbox{\hyperlink{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}{pause}}, \mbox{\hyperlink{classsf_1_1Sound_a07c551ab56d2f83a861a2f7fd81b480a}{stop}} 
+>>>>>>> test_workflows
 \end{DoxySeeAlso}
 
 
 Implements \mbox{\hyperlink{classsf_1_1SoundSource_a6e1bbb1f247ed8743faf3b1ed6f2bc21}{sf\+::\+Sound\+Source}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Sound_acb7289d45e06fb76b8292ac84beb82a7}\label{classsf_1_1Sound_acb7289d45e06fb76b8292ac84beb82a7}} 
 \index{sf::Sound@{sf::Sound}!resetBuffer@{resetBuffer}}
 \index{resetBuffer@{resetBuffer}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{resetBuffer()}{resetBuffer()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::reset\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+=======
+\mbox{\Hypertarget{classsf_1_1Sound_a0d3d9aa9d78adaab8f687fc0ee5a0e75}\label{classsf_1_1Sound_a0d3d9aa9d78adaab8f687fc0ee5a0e75}} 
+\index{sf::Sound@{sf::Sound}!resetBuffer@{resetBuffer}}
+\index{resetBuffer@{resetBuffer}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{resetBuffer()}{resetBuffer()}}
+{\footnotesize\ttfamily void Sound\+::reset\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
 Reset the internal buffer of the sound. 
 
+<<<<<<< HEAD
 This function is for internal use only, you don\textquotesingle{}t have to use it. It is called by the \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} that this sound uses, when it is destroyed in order to prevent the sound from using a dead buffer. \mbox{\Hypertarget{classsf_1_1Sound_a8b395e9713d0efa48a18628c8ec1972e}\label{classsf_1_1Sound_a8b395e9713d0efa48a18628c8ec1972e}} 
 \index{sf::Sound@{sf::Sound}!setBuffer@{setBuffer}}
 \index{setBuffer@{setBuffer}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{setBuffer()}{setBuffer()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::set\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+=======
+This function is for internal use only, you don\textquotesingle{}t have to use it. It is called by the \mbox{\hyperlink{classsf_1_1SoundBuffer}{sf\+::\+Sound\+Buffer}} that this sound uses, when it is destroyed in order to prevent the sound from using a dead buffer. \mbox{\Hypertarget{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}\label{classsf_1_1Sound_a1d4e9f9f515923311df069696ca49a5e}} 
+\index{sf::Sound@{sf::Sound}!setBuffer@{setBuffer}}
+\index{setBuffer@{setBuffer}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{setBuffer()}{setBuffer()}}
+{\footnotesize\ttfamily void Sound\+::set\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1SoundBuffer}{Sound\+Buffer}} \&}]{buffer }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -263,6 +428,7 @@ It is important to note that the sound buffer is not copied, thus the \mbox{\hyp
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_a7c0f6033856909eeefa2e6696db96ef2}{get\+Buffer}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Sound_af23ab4f78f975bbabac031102321612b}\label{classsf_1_1Sound_af23ab4f78f975bbabac031102321612b}} 
@@ -270,6 +436,15 @@ It is important to note that the sound buffer is not copied, thus the \mbox{\hyp
 \index{setLoop@{setLoop}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{setLoop()}{setLoop()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::set\+Loop (\begin{DoxyParamCaption}\item[{bool}]{loop }\end{DoxyParamCaption})}
+=======
+\mbox{\hyperlink{classsf_1_1Sound_af59d7721247a0db4b2c4047d91d9957b}{get\+Buffer}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Sound_acf5d181cebf64aa98b6e8a63ee2b2f96}\label{classsf_1_1Sound_acf5d181cebf64aa98b6e8a63ee2b2f96}} 
+\index{sf::Sound@{sf::Sound}!setLoop@{setLoop}}
+\index{setLoop@{setLoop}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{setLoop()}{setLoop()}}
+{\footnotesize\ttfamily void Sound\+::set\+Loop (\begin{DoxyParamCaption}\item[{bool}]{loop }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -283,6 +458,7 @@ If set, the sound will restart from beginning after reaching the end and so on, 
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_a054da07266ce8f39229495146e3041eb}{get\+Loop}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Sound_ab905677846558042022dd6ab15cddff0}\label{classsf_1_1Sound_ab905677846558042022dd6ab15cddff0}} 
@@ -290,6 +466,15 @@ If set, the sound will restart from beginning after reaching the end and so on, 
 \index{setPlayingOffset@{setPlayingOffset}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{setPlayingOffset()}{setPlayingOffset()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::set\+Playing\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1Time}{Time}}}]{time\+Offset }\end{DoxyParamCaption})}
+=======
+\mbox{\hyperlink{classsf_1_1Sound_a198d80759f1325173fcadc4a7f2fc1fa}{get\+Loop}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Sound_a5e3696db64a547615879d36e8e004895}\label{classsf_1_1Sound_a5e3696db64a547615879d36e8e004895}} 
+\index{sf::Sound@{sf::Sound}!setPlayingOffset@{setPlayingOffset}}
+\index{setPlayingOffset@{setPlayingOffset}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{setPlayingOffset()}{setPlayingOffset()}}
+{\footnotesize\ttfamily void Sound\+::set\+Playing\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1Time}{Time}}}]{time\+Offset }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -303,6 +488,7 @@ The playing position can be changed when the sound is either paused or playing. 
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Sound_a559bc3aea581107bcb380fdbe523aa08}{get\+Playing\+Offset}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Sound_aa9c91c34f7c6d344d5ee9b997511f754}\label{classsf_1_1Sound_aa9c91c34f7c6d344d5ee9b997511f754}} 
@@ -310,15 +496,31 @@ The playing position can be changed when the sound is either paused or playing. 
 \index{stop@{stop}!sf::Sound@{sf::Sound}}
 \doxysubsubsection{\texorpdfstring{stop()}{stop()}}
 {\footnotesize\ttfamily void sf\+::\+Sound\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+=======
+\mbox{\hyperlink{classsf_1_1Sound_a1dfd91ff928212c48114dc561dace08f}{get\+Playing\+Offset}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Sound_a07c551ab56d2f83a861a2f7fd81b480a}\label{classsf_1_1Sound_a07c551ab56d2f83a861a2f7fd81b480a}} 
+\index{sf::Sound@{sf::Sound}!stop@{stop}}
+\index{stop@{stop}!sf::Sound@{sf::Sound}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Sound\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
 stop playing the sound 
 
+<<<<<<< HEAD
 This function stops the sound if it was playing or paused, and does nothing if it was already stopped. It also resets the playing position (unlike \mbox{\hyperlink{classsf_1_1Sound_a5eeb25815bfa8cdc4a6cc000b7b19ad5}{pause()}}).
 
 \begin{DoxySeeAlso}{See also}
 \mbox{\hyperlink{classsf_1_1Sound_a2953ffe632536e72e696fd880ced2532}{play}}, \mbox{\hyperlink{classsf_1_1Sound_a5eeb25815bfa8cdc4a6cc000b7b19ad5}{pause}} 
+=======
+This function stops the sound if it was playing or paused, and does nothing if it was already stopped. It also resets the playing position (unlike \mbox{\hyperlink{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}{pause()}}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1Sound_aad595b0dc5459e110b53a4e6b2adb0e4}{play}}, \mbox{\hyperlink{classsf_1_1Sound_a65b0f66e9123caed2809da366ac4d377}{pause}} 
+>>>>>>> test_workflows
 \end{DoxySeeAlso}
 
 

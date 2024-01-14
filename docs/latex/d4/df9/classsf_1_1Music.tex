@@ -12,11 +12,31 @@ Streamed music played from an audio file.
 
 
 Inheritance diagram for sf\+::Music\+:
+<<<<<<< HEAD
 % FIG 0
 
 
 Collaboration diagram for sf\+::Music\+:
 % FIG 1
+=======
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{d7/d49/classsf_1_1Music__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sf\+::Music\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{dd/d1d/classsf_1_1Music__coll__graph}
+\end{center}
+\end{figure}
+>>>>>>> test_workflows
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,6 +51,7 @@ typedef \mbox{\hyperlink{structsf_1_1Music_1_1Span}{Span}}$<$ \mbox{\hyperlink{c
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_a0bc787d8e022b3a9b89cf2c28befd42e}\label{classsf_1_1Music_a0bc787d8e022b3a9b89cf2c28befd42e}} 
 \mbox{\hyperlink{classsf_1_1Music_a0bc787d8e022b3a9b89cf2c28befd42e}{Music}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
@@ -48,15 +69,42 @@ bool \mbox{\hyperlink{classsf_1_1Music_a4e55d1910a26858b44778c26b237d673}{open\+
 \mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}} \mbox{\hyperlink{classsf_1_1Music_ac8bb666f2262554d3a9c4335dcef9ba2}{get\+Loop\+Points}} () const
 \begin{DoxyCompactList}\small\item\em Get the positions of the of the sound\textquotesingle{}s looping sequence. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+Loop\+Points}} (\mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}} time\+Points)
+=======
+\mbox{\Hypertarget{classsf_1_1Music_ab5143f67c021bc77894c8e91de2b916b}\label{classsf_1_1Music_ab5143f67c021bc77894c8e91de2b916b}} 
+\mbox{\hyperlink{classsf_1_1Music_ab5143f67c021bc77894c8e91de2b916b}{Music}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsf_1_1Music_a0b4f3b9a018207e0c08003505f1f87fe}\label{classsf_1_1Music_a0b4f3b9a018207e0c08003505f1f87fe}} 
+\mbox{\hyperlink{classsf_1_1Music_a0b4f3b9a018207e0c08003505f1f87fe}{$\sim$\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}{open\+From\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Open a music from an audio file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1Music_a385e9981b397427fef74851e1f07b539}{open\+From\+Memory}} (const void $\ast$data, std\+::size\+\_\+t size\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Open a music from an audio file in memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1Music_a8b6835681e4d2f0f6ae63e5095e334b0}{open\+From\+Stream}} (\mbox{\hyperlink{classsf_1_1InputStream}{Input\+Stream}} \&stream)
+\begin{DoxyCompactList}\small\item\em Open a music from an audio file in a custom stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1Time}{Time}} \mbox{\hyperlink{classsf_1_1Music_ae633a35e6f1cfcb1ece515bd9fee05be}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Get the total duration of the music. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}} \mbox{\hyperlink{classsf_1_1Music_af2f43eb1469cb1794d2f0ffca27e47bf}{get\+Loop\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Get the positions of the of the sound\textquotesingle{}s looping sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points}} (\mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}} time\+Points)
+>>>>>>> test_workflows
 \begin{DoxyCompactList}\small\item\em Sets the beginning and duration of the sound\textquotesingle{}s looping sequence using \mbox{\hyperlink{classsf_1_1Time}{sf\+::\+Time}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+<<<<<<< HEAD
 virtual bool \mbox{\hyperlink{classsf_1_1Music_a6d8c4c7cbca25f20628096781f220aa0}{on\+Get\+Data}} (\mbox{\hyperlink{structsf_1_1SoundStream_1_1Chunk}{Chunk}} \&data)
 \begin{DoxyCompactList}\small\item\em Request a new chunk of audio samples from the stream source. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classsf_1_1Music_a4a77582ab9c09082eaeb8153d01813a0}{on\+Seek}} (\mbox{\hyperlink{classsf_1_1Time}{Time}} time\+Offset)
 \begin{DoxyCompactList}\small\item\em Change the current playing position in the stream source. \end{DoxyCompactList}\item 
 virtual Int64 \mbox{\hyperlink{classsf_1_1Music_a67dd5131f1660f80e26bff778866a29e}{on\+Loop}} ()
+=======
+virtual bool \mbox{\hyperlink{classsf_1_1Music_a124f7cb16716564ff4ee997dde5d9c43}{on\+Get\+Data}} (\mbox{\hyperlink{structsf_1_1SoundStream_1_1Chunk}{Chunk}} \&data)
+\begin{DoxyCompactList}\small\item\em Request a new chunk of audio samples from the stream source. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1Music_a3fefb69c00dcdbea4e2f282ce47fd441}{on\+Seek}} (\mbox{\hyperlink{classsf_1_1Time}{Time}} time\+Offset)
+\begin{DoxyCompactList}\small\item\em Change the current playing position in the stream source. \end{DoxyCompactList}\item 
+virtual Int64 \mbox{\hyperlink{classsf_1_1Music_a38723d5f3d2079dc24bc33a6910294c1}{on\+Loop}} ()
+>>>>>>> test_workflows
 \begin{DoxyCompactList}\small\item\em Change the current playing position in the stream source to the loop offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -76,7 +124,11 @@ Usage example\+:
 \DoxyCodeLine{\mbox{\hyperlink{classsf_1_1Music}{sf::Music}} music;}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Open it from an audio file}}
+<<<<<<< HEAD
 \DoxyCodeLine{\textcolor{keywordflow}{if} (!music.\mbox{\hyperlink{classsf_1_1Music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}{openFromFile}}(\textcolor{stringliteral}{"{}music.ogg"{}}))}
+=======
+\DoxyCodeLine{\textcolor{keywordflow}{if} (!music.\mbox{\hyperlink{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}{openFromFile}}(\textcolor{stringliteral}{"{}music.ogg"{}}))}
+>>>>>>> test_workflows
 \DoxyCodeLine{\{}
 \DoxyCodeLine{    \textcolor{comment}{// error...}}
 \DoxyCodeLine{\}}
@@ -99,11 +151,19 @@ Usage example\+:
 
 
 \doxysubsection{Member Function Documentation}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_a288ef6f552a136b0e56952dcada3d672}\label{classsf_1_1Music_a288ef6f552a136b0e56952dcada3d672}} 
 \index{sf::Music@{sf::Music}!getDuration@{getDuration}}
 \index{getDuration@{getDuration}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Time}{Time}} sf\+::\+Music\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+=======
+\mbox{\Hypertarget{classsf_1_1Music_ae633a35e6f1cfcb1ece515bd9fee05be}\label{classsf_1_1Music_ae633a35e6f1cfcb1ece515bd9fee05be}} 
+\index{sf::Music@{sf::Music}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsf_1_1Time}{Time}} Music\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+>>>>>>> test_workflows
 
 
 
@@ -112,11 +172,19 @@ Get the total duration of the music.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classsf_1_1Music}{Music}} duration 
 \end{DoxyReturn}
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_ac8bb666f2262554d3a9c4335dcef9ba2}\label{classsf_1_1Music_ac8bb666f2262554d3a9c4335dcef9ba2}} 
 \index{sf::Music@{sf::Music}!getLoopPoints@{getLoopPoints}}
 \index{getLoopPoints@{getLoopPoints}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{getLoopPoints()}{getLoopPoints()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1Music_1_1Span}{Music\+::\+Time\+Span}} sf\+::\+Music\+::get\+Loop\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+=======
+\mbox{\Hypertarget{classsf_1_1Music_af2f43eb1469cb1794d2f0ffca27e47bf}\label{classsf_1_1Music_af2f43eb1469cb1794d2f0ffca27e47bf}} 
+\index{sf::Music@{sf::Music}!getLoopPoints@{getLoopPoints}}
+\index{getLoopPoints@{getLoopPoints}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{getLoopPoints()}{getLoopPoints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsf_1_1Music_1_1Span}{Music\+::\+Time\+Span}} Music\+::get\+Loop\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+>>>>>>> test_workflows
 
 
 
@@ -126,6 +194,7 @@ Get the positions of the of the sound\textquotesingle{}s looping sequence.
 Loop \mbox{\hyperlink{classsf_1_1Time}{Time}} position class.
 \end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
+<<<<<<< HEAD
 Since \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+Loop\+Points()}} performs some adjustments on the provided values and rounds them to internal samples, a call to \mbox{\hyperlink{classsf_1_1Music_ac8bb666f2262554d3a9c4335dcef9ba2}{get\+Loop\+Points()}} is not guaranteed to return the same times passed into a previous call to \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+Loop\+Points()}}. However, it is guaranteed to return times that will map to the valid internal samples of this \mbox{\hyperlink{classsf_1_1Music}{Music}} if they are later passed to \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+Loop\+Points()}}.
 \end{DoxyWarning}
 \begin{DoxySeeAlso}{See also}
@@ -136,6 +205,18 @@ Since \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+
 \index{onGetData@{onGetData}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{onGetData()}{onGetData()}}
 {\footnotesize\ttfamily bool sf\+::\+Music\+::on\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1SoundStream_1_1Chunk}{Sound\+Stream\+::\+Chunk}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+=======
+Since \mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points()}} performs some adjustments on the provided values and rounds them to internal samples, a call to \mbox{\hyperlink{classsf_1_1Music_af2f43eb1469cb1794d2f0ffca27e47bf}{get\+Loop\+Points()}} is not guaranteed to return the same times passed into a previous call to \mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points()}}. However, it is guaranteed to return times that will map to the valid internal samples of this \mbox{\hyperlink{classsf_1_1Music}{Music}} if they are later passed to \mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points()}}.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Music_a124f7cb16716564ff4ee997dde5d9c43}\label{classsf_1_1Music_a124f7cb16716564ff4ee997dde5d9c43}} 
+\index{sf::Music@{sf::Music}!onGetData@{onGetData}}
+\index{onGetData@{onGetData}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{onGetData()}{onGetData()}}
+{\footnotesize\ttfamily bool Music\+::on\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1SoundStream_1_1Chunk}{Sound\+Stream\+::\+Chunk}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -155,11 +236,19 @@ True to continue playback, false to stop
 
 Implements \mbox{\hyperlink{classsf_1_1SoundStream_a968ec024a6e45490962c8a1121cb7c5f}{sf\+::\+Sound\+Stream}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_a67dd5131f1660f80e26bff778866a29e}\label{classsf_1_1Music_a67dd5131f1660f80e26bff778866a29e}} 
 \index{sf::Music@{sf::Music}!onLoop@{onLoop}}
 \index{onLoop@{onLoop}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{onLoop()}{onLoop()}}
 {\footnotesize\ttfamily Int64 sf\+::\+Music\+::on\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+=======
+\mbox{\Hypertarget{classsf_1_1Music_a38723d5f3d2079dc24bc33a6910294c1}\label{classsf_1_1Music_a38723d5f3d2079dc24bc33a6910294c1}} 
+\index{sf::Music@{sf::Music}!onLoop@{onLoop}}
+\index{onLoop@{onLoop}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{onLoop()}{onLoop()}}
+{\footnotesize\ttfamily Int64 Music\+::on\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -174,11 +263,19 @@ The seek position after looping (or -\/1 if there\textquotesingle{}s no loop)
 
 Reimplemented from \mbox{\hyperlink{classsf_1_1SoundStream_a77d8fa90f6e415e7f6e6861404a40a92}{sf\+::\+Sound\+Stream}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_a4a77582ab9c09082eaeb8153d01813a0}\label{classsf_1_1Music_a4a77582ab9c09082eaeb8153d01813a0}} 
 \index{sf::Music@{sf::Music}!onSeek@{onSeek}}
 \index{onSeek@{onSeek}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{onSeek()}{onSeek()}}
 {\footnotesize\ttfamily void sf\+::\+Music\+::on\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1Time}{Time}}}]{time\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+=======
+\mbox{\Hypertarget{classsf_1_1Music_a3fefb69c00dcdbea4e2f282ce47fd441}\label{classsf_1_1Music_a3fefb69c00dcdbea4e2f282ce47fd441}} 
+\index{sf::Music@{sf::Music}!onSeek@{onSeek}}
+\index{onSeek@{onSeek}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{onSeek()}{onSeek()}}
+{\footnotesize\ttfamily void Music\+::on\+Seek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1Time}{Time}}}]{time\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+>>>>>>> test_workflows
 
 
 
@@ -193,11 +290,19 @@ Change the current playing position in the stream source.
 
 Implements \mbox{\hyperlink{classsf_1_1SoundStream_a907036dd2ca7d3af5ead316e54b75997}{sf\+::\+Sound\+Stream}}.
 
+<<<<<<< HEAD
 \mbox{\Hypertarget{classsf_1_1Music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}\label{classsf_1_1Music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}} 
 \index{sf::Music@{sf::Music}!openFromFile@{openFromFile}}
 \index{openFromFile@{openFromFile}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{openFromFile()}{openFromFile()}}
 {\footnotesize\ttfamily bool sf\+::\+Music\+::open\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+=======
+\mbox{\Hypertarget{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}\label{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}} 
+\index{sf::Music@{sf::Music}!openFromFile@{openFromFile}}
+\index{openFromFile@{openFromFile}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{openFromFile()}{openFromFile()}}
+{\footnotesize\ttfamily bool Music\+::open\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -217,6 +322,7 @@ Since the music is not loaded at once but rather streamed continuously, the file
 True if loading succeeded, false if it failed
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Music_ae93b21bcf28ff0b5fec458039111386e}{open\+From\+Memory}}, \mbox{\hyperlink{classsf_1_1Music_a4e55d1910a26858b44778c26b237d673}{open\+From\+Stream}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Music_ae93b21bcf28ff0b5fec458039111386e}\label{classsf_1_1Music_ae93b21bcf28ff0b5fec458039111386e}} 
@@ -224,6 +330,15 @@ True if loading succeeded, false if it failed
 \index{openFromMemory@{openFromMemory}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{openFromMemory()}{openFromMemory()}}
 {\footnotesize\ttfamily bool sf\+::\+Music\+::open\+From\+Memory (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{size\+In\+Bytes }\end{DoxyParamCaption})}
+=======
+\mbox{\hyperlink{classsf_1_1Music_a385e9981b397427fef74851e1f07b539}{open\+From\+Memory}}, \mbox{\hyperlink{classsf_1_1Music_a8b6835681e4d2f0f6ae63e5095e334b0}{open\+From\+Stream}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Music_a385e9981b397427fef74851e1f07b539}\label{classsf_1_1Music_a385e9981b397427fef74851e1f07b539}} 
+\index{sf::Music@{sf::Music}!openFromMemory@{openFromMemory}}
+\index{openFromMemory@{openFromMemory}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{openFromMemory()}{openFromMemory()}}
+{\footnotesize\ttfamily bool Music\+::open\+From\+Memory (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{size\+In\+Bytes }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -245,6 +360,7 @@ Since the music is not loaded at once but rather streamed continuously, the {\it
 True if loading succeeded, false if it failed
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}{open\+From\+File}}, \mbox{\hyperlink{classsf_1_1Music_a4e55d1910a26858b44778c26b237d673}{open\+From\+Stream}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Music_a4e55d1910a26858b44778c26b237d673}\label{classsf_1_1Music_a4e55d1910a26858b44778c26b237d673}} 
@@ -252,6 +368,15 @@ True if loading succeeded, false if it failed
 \index{openFromStream@{openFromStream}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{openFromStream()}{openFromStream()}}
 {\footnotesize\ttfamily bool sf\+::\+Music\+::open\+From\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1InputStream}{Input\+Stream}} \&}]{stream }\end{DoxyParamCaption})}
+=======
+\mbox{\hyperlink{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}{open\+From\+File}}, \mbox{\hyperlink{classsf_1_1Music_a8b6835681e4d2f0f6ae63e5095e334b0}{open\+From\+Stream}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Music_a8b6835681e4d2f0f6ae63e5095e334b0}\label{classsf_1_1Music_a8b6835681e4d2f0f6ae63e5095e334b0}} 
+\index{sf::Music@{sf::Music}!openFromStream@{openFromStream}}
+\index{openFromStream@{openFromStream}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{openFromStream()}{openFromStream()}}
+{\footnotesize\ttfamily bool Music\+::open\+From\+Stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1InputStream}{Input\+Stream}} \&}]{stream }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
@@ -271,6 +396,7 @@ Since the music is not loaded at once but rather streamed continuously, the {\it
 True if loading succeeded, false if it failed
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Music_a3edc66e5f5b3f11e84b90eaec9c7d7c0}{open\+From\+File}}, \mbox{\hyperlink{classsf_1_1Music_ae93b21bcf28ff0b5fec458039111386e}{open\+From\+Memory}} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}\label{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}} 
@@ -278,12 +404,25 @@ True if loading succeeded, false if it failed
 \index{setLoopPoints@{setLoopPoints}!sf::Music@{sf::Music}}
 \doxysubsubsection{\texorpdfstring{setLoopPoints()}{setLoopPoints()}}
 {\footnotesize\ttfamily void sf\+::\+Music\+::set\+Loop\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}}}]{time\+Points }\end{DoxyParamCaption})}
+=======
+\mbox{\hyperlink{classsf_1_1Music_a39cb71f55012b61c51eca38475f6dd75}{open\+From\+File}}, \mbox{\hyperlink{classsf_1_1Music_a385e9981b397427fef74851e1f07b539}{open\+From\+Memory}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}\label{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}} 
+\index{sf::Music@{sf::Music}!setLoopPoints@{setLoopPoints}}
+\index{setLoopPoints@{setLoopPoints}!sf::Music@{sf::Music}}
+\doxysubsubsection{\texorpdfstring{setLoopPoints()}{setLoopPoints()}}
+{\footnotesize\ttfamily void Music\+::set\+Loop\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsf_1_1Music_1_1Span}{Time\+Span}}}]{time\+Points }\end{DoxyParamCaption})}
+>>>>>>> test_workflows
 
 
 
 Sets the beginning and duration of the sound\textquotesingle{}s looping sequence using \mbox{\hyperlink{classsf_1_1Time}{sf\+::\+Time}}. 
 
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Music_ae7b339f0a957dfad045f3f28083a015e}{set\+Loop\+Points()}} allows for specifying the beginning offset and the duration of the loop such that, when the music is enabled for looping, it will seamlessly seek to the beginning whenever it encounters the end of the duration. Valid ranges for time\+Points.\+offset and time\+Points.\+length are \mbox{[}0, Dur) and (0, Dur-\/offset\mbox{]} respectively, where Dur is the value returned by \mbox{\hyperlink{classsf_1_1Music_a288ef6f552a136b0e56952dcada3d672}{get\+Duration()}}. Note that the EOF \char`\"{}loop point\char`\"{} from the end to the beginning of the stream is still honored, in case the caller seeks to a point after the end of the loop range. This function can be safely called at any point after a stream is opened, and will be applied to a playing sound without affecting the current playing offset.
+=======
+\mbox{\hyperlink{classsf_1_1Music_a1b042b684e190f372aa8929003f420b8}{set\+Loop\+Points()}} allows for specifying the beginning offset and the duration of the loop such that, when the music is enabled for looping, it will seamlessly seek to the beginning whenever it encounters the end of the duration. Valid ranges for time\+Points.\+offset and time\+Points.\+length are \mbox{[}0, Dur) and (0, Dur-\/offset\mbox{]} respectively, where Dur is the value returned by \mbox{\hyperlink{classsf_1_1Music_ae633a35e6f1cfcb1ece515bd9fee05be}{get\+Duration()}}. Note that the EOF \char`\"{}loop point\char`\"{} from the end to the beginning of the stream is still honored, in case the caller seeks to a point after the end of the loop range. This function can be safely called at any point after a stream is opened, and will be applied to a playing sound without affecting the current playing offset.
+>>>>>>> test_workflows
 
 \begin{DoxyWarning}{Warning}
 Setting the loop points while the stream\textquotesingle{}s status is Paused will set its status to Stopped. The playing offset will be unaffected.
@@ -294,7 +433,11 @@ Setting the loop points while the stream\textquotesingle{}s status is Paused wil
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
+<<<<<<< HEAD
 \mbox{\hyperlink{classsf_1_1Music_ac8bb666f2262554d3a9c4335dcef9ba2}{get\+Loop\+Points}} 
+=======
+\mbox{\hyperlink{classsf_1_1Music_af2f43eb1469cb1794d2f0ffca27e47bf}{get\+Loop\+Points}} 
+>>>>>>> test_workflows
 \end{DoxySeeAlso}
 
 

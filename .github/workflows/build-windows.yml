@@ -2,7 +2,7 @@ name: Build Windows Package
 on:
   push:
     branches:
-      - main
+      - Issue#2
 
 jobs:
   build:
@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         run: |
@@ -19,6 +19,17 @@ jobs:
           .\vcpkg\bootstrap-vcpkg.bat
           .\vcpkg\vcpkg integrate install
           .\vcpkg\vcpkg install sfml
+
+      - name: Build DLL
+        run: |
+          $env:SFML_DIR="${{ github.workspace }}\vcpkg\installed\x64-windows"
+          cmake -B build -S .
+          cmake --build build
+
+
+      - name: Prepare for NSIS
+        run: |
+          copy build\NomDeVotreDLL.dll chemin\attendu\pour\NSIS\
 
       - name: Build installer with NSIS
         run: |
