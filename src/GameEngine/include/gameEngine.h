@@ -116,7 +116,7 @@ public:
     void initializeTextFunction() const;
 
     /// @brief initializeAllFiles(): Initialize all the ressources files the engine need.
-    /// @param void
+    /// @param pathRessources: Map of the path of the ressources (assets).
     /// @return void
     void initializeAllFiles(const std::map<std::string, std::string>& pathRessources);
 
@@ -126,17 +126,17 @@ public:
     void initializeTexture(std::string path);
 
     /// @brief initializeSound(): Initialize the sound with their path.
-    /// @param path: Path of the texture.
+    /// @param path: Path of the sound file.
     /// @return void
     void initializeSound(std::string path);
 
     /// @brief initializeMusic(): Initialize the music with their path.
-    /// @param path: Path of the texture.
+    /// @param path: Path of the music file.
     /// @return void
     void initializeMusic(std::string path);
 
-    /// @brief initializeMusic(): Initialize the font with their path.
-    /// @param path: Path of the texture.
+    /// @brief initializeFont(): Initialize the font with their path.
+    /// @param path: Path of the font file.
     /// @return void
     void initializeFont(std::string path);
 
@@ -147,7 +147,7 @@ public:
 
     /// @brief getWindow(): Get the window.
     /// @param void
-    /// @return std::variant<std::unique_ptr<sf::Window>, std::unique_ptr<sf::RenderWindow>>: The GameEngine's window
+    /// @return sf::RenderWindow&: GameEngine's window.
     sf::RenderWindow &getWindow();
 
     /// @brief getEventEngine(): Get the event engine.
