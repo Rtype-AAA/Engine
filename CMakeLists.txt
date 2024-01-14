@@ -15,35 +15,6 @@ if(WIN32)
     list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/installed/x86-windows/share/sfml")
 else()
     set(SFML_VERSION 2.5.1)
-endif()
-
-if(SFML_VERSION EQUAL 2.6.1)
-    set(SFML_SYSTEM_LIB_PATH "/usr/local/lib/libsfml-system.so.2.6.1")
-
-    if(NOT EXISTS "${SFML_SYSTEM_LIB_PATH}")
-        message(STATUS "SFML system library not found. Attempting to install SFML...")
-
-        execute_process(
-            COMMAND bash -c "echo 'Installing SFML...\n' && cd ${CMAKE_CURRENT_SOURCE_DIR}/SFML && cmake -Bbuild && sudo cmake --build build --config Release --target install"
-            RESULT_VARIABLE SFML_INSTALL_RESULT
-        )
-
-        if(SFML_INSTALL_RESULT EQUAL 0 AND EXISTS "${SFML_SYSTEM_LIB_PATH}")
-            message(STATUS "SFML successfully installed.")
-            find_package(SFML 2.6.1 COMPONENTS system window graphics audio network REQUIRED)
-
-            if(NOT SFML_FOUND)
-                message(FATAL_ERROR "SFML couldn't be located! Please make sure to install SFML or specify the correct SFML_DIR in your CMake configuration.")
-            else()
-                set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/SFML/build/lib")
-            endif()
-
-        else()
-            message(FATAL_ERROR "Failed to install SFML.")
-        endif()
-    endif()
-
-else()
     find_package(SFML 2.5.1 COMPONENTS system window graphics audio network QUIET)
 
     if(NOT SFML_FOUND)
