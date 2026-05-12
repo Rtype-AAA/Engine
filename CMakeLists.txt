@@ -7,27 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_TESTS "Build the test suite" OFF)
 
-if(WIN32)
-    set(SFML_VERSION 2.6.1)
-
-    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
-
-    list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/installed/x86-windows/share/sfml")
-else()
-    set(SFML_VERSION 2.5.1)
-    find_package(SFML 2.5.1 COMPONENTS system window graphics audio network QUIET)
-
-    if(NOT SFML_FOUND)
-        message(STATUS "SFML couldn't be found. Attempting to install SFML...")
-
-        include(FetchContent)
-        FetchContent_Declare(SFML
-                GIT_REPOSITORY https://github.com/SFML/SFML.git
-                GIT_TAG 2.5.1)
-        FetchContent_MakeAvailable(SFML)
-
-    endif()
-endif()
+find_package(SFML 2.6 COMPONENTS system window graphics audio network REQUIRED)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/Ressources)
 
