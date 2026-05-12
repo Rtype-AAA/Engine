@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      # - test_workflows
 
 jobs:
   build-fedora-38:
@@ -13,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies and compilers for Fedora 38
         run: |
@@ -33,7 +32,7 @@ jobs:
           echo "rpm_file=build/quantumvortex-engine-fedora38.rpm" >> $GITHUB_ENV
 
       - name: Upload RPM package for Fedora 38
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rpm-package-fedora-38
           path: ${{ env.rpm_file }}
@@ -44,7 +43,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies and compilers for Fedora Latest
         run: |
@@ -64,7 +63,7 @@ jobs:
           echo "rpm_file=build/quantumvortex-engine-fedora-latest.rpm" >> $GITHUB_ENV
 
       - name: Upload RPM package for Fedora Latest
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rpm-package-fedora-latest
           path: ${{ env.rpm_file }}
