@@ -1,0 +1,34 @@
+name: Build Linux Engine
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake build-essential libsfml-dev
+
+      - name: Build
+        run: |
+          cmake -Bbuild
+          cmake --build build --config Release
+
+      - name: Package
+        run: |
+          cd build
+          cpack
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-build
+          path: build/*.tar.gz

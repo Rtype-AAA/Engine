@@ -1,36 +1,33 @@
-name: Build Windows Package
+name: Build Windows Engine
+
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
-          choco install nsis
-          git clone https://github.com/Microsoft/vcpkg.git
-          .\vcpkg\bootstrap-vcpkg.bat
-          .\vcpkg\vcpkg integrate install
-          .\vcpkg\vcpkg install sfml
+          choco install cmake -y
+          choco install nsis -y
 
-      - name: Build DLL
-        run: |
-          $env:SFML_DIR="${{ github.workspace }}\vcpkg\installed\x64-windows"
-          cmake -B build -S .
-          cmake --build build
+      - name: Configure
+        run: cmake -B build -S .
 
+      - name: Build
+        run: cmake --build build --config Release
 
-      - name: Prepare for NSIS
-        run: |
-          copy build\NomDeVotreDLL.dll chemin\attendu\pour\NSIS\
+      - name: Package
+        run: makensis scripts/build-windows-engine.nsi
 
-      - name: Build installer with NSIS
-        run: |
-          makensis ./scripts/build-windows-engine.nsi
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: "*.exe"
